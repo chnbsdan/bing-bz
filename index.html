@@ -5,19 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>必应壁纸 · 每日精选</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             background: #0d0d1a;
             min-height: 100vh;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             padding: 20px;
         }
-
-        /* 头部 */
         .header {
             max-width: 1400px;
             margin: 0 auto 30px;
@@ -26,9 +20,8 @@
             gap: 30px;
             flex-wrap: wrap;
             padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.04);
+            background: rgba(255,255,255,0.04);
             border-radius: 16px;
-            backdrop-filter: blur(10px);
         }
         .header h1 {
             color: #fff;
@@ -36,39 +29,12 @@
             font-size: 22px;
             letter-spacing: 2px;
         }
-        .header h1 span {
-            color: #4fc3f7;
-            font-weight: 600;
-        }
-        .header .search-box {
-            flex: 1;
-            min-width: 200px;
-            display: flex;
-            gap: 10px;
-        }
-        .header .search-box input {
-            flex: 1;
-            padding: 8px 16px;
-            border: none;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.08);
-            color: #fff;
-            font-size: 14px;
-            outline: none;
-            transition: 0.2s;
-        }
-        .header .search-box input:focus {
-            background: rgba(255, 255, 255, 0.15);
-        }
-        .header .search-box input::placeholder {
-            color: rgba(255, 255, 255, 0.35);
-        }
+        .header h1 span { color: #4fc3f7; font-weight: 600; }
         .header .info-badge {
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255,255,255,0.5);
             font-size: 13px;
+            margin-left: auto;
         }
-
-        /* 壁纸网格 - 一排7列 */
         .grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
@@ -76,11 +42,9 @@
             max-width: 1400px;
             margin: 0 auto;
         }
-
-        /* 每个卡片 */
         .card {
             position: relative;
-            aspect-ratio: 16 / 9;
+            aspect-ratio: 16/9;
             background: #1a1a2e;
             border-radius: 10px;
             overflow: hidden;
@@ -90,7 +54,7 @@
         .card:hover {
             transform: scale(1.04);
             z-index: 10;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.8);
         }
         .card img {
             width: 100%;
@@ -98,15 +62,13 @@
             object-fit: cover;
             display: block;
         }
-
-        /* 悬停显示的信息浮层 */
         .card .info {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
             padding: 16px 14px 12px;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
             color: #fff;
             opacity: 0;
             transform: translateY(10px);
@@ -119,7 +81,7 @@
         }
         .card .info .date {
             font-size: 12px;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255,255,255,0.6);
             font-weight: 300;
         }
         .card .info .title {
@@ -132,14 +94,12 @@
         }
         .card .info .copyright {
             font-size: 11px;
-            color: rgba(255, 255, 255, 0.45);
+            color: rgba(255,255,255,0.45);
             margin-top: 2px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
-        /* 第一张卡片特殊处理：放网站标题 */
         .card.featured {
             background: linear-gradient(135deg, #1a1a3e, #0d0d2b);
             display: flex;
@@ -150,81 +110,55 @@
             color: #fff;
             padding: 20px;
             cursor: default;
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255,255,255,0.06);
         }
-        .card.featured:hover {
-            transform: none;
-            box-shadow: none;
-        }
+        .card.featured:hover { transform: none; box-shadow: none; }
         .card.featured .logo {
             font-size: 36px;
             font-weight: 300;
             letter-spacing: 4px;
         }
-        .card.featured .logo span {
-            color: #4fc3f7;
-            font-weight: 600;
-        }
+        .card.featured .logo span { color: #4fc3f7; font-weight: 600; }
         .card.featured .sub {
             font-size: 13px;
-            color: rgba(255, 255, 255, 0.3);
+            color: rgba(255,255,255,0.3);
             margin-top: 6px;
             letter-spacing: 6px;
         }
         .card.featured .count {
             font-size: 12px;
-            color: rgba(255, 255, 255, 0.2);
+            color: rgba(255,255,255,0.2);
             margin-top: 12px;
         }
-
-        /* 加载指示器 */
         .loader {
-            grid-column: 1 / -1;
+            grid-column: 1/-1;
             text-align: center;
             padding: 30px 0;
-            color: rgba(255, 255, 255, 0.3);
+            color: rgba(255,255,255,0.3);
             font-size: 14px;
-            letter-spacing: 2px;
         }
-        .loader .spinner {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            border-top: 2px solid #4fc3f7;
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-            vertical-align: middle;
-            margin-right: 10px;
+        .empty {
+            grid-column: 1/-1;
+            text-align: center;
+            padding: 80px 20px;
+            color: rgba(255,255,255,0.3);
         }
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        /* 全屏预览 */
+        .empty .icon { font-size: 48px; margin-bottom: 16px; }
         .overlay {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.94);
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.94);
             z-index: 999;
             justify-content: center;
             align-items: center;
             padding: 40px;
             cursor: pointer;
         }
-        .overlay.active {
-            display: flex;
-        }
+        .overlay.active { display: flex; }
         .overlay .close {
             position: absolute;
-            top: 30px;
-            right: 40px;
+            top: 30px; right: 40px;
             color: #fff;
             font-size: 36px;
             cursor: pointer;
@@ -232,87 +166,53 @@
             transition: 0.2s;
             z-index: 10;
         }
-        .overlay .close:hover {
-            opacity: 1;
-        }
+        .overlay .close:hover { opacity: 1; }
         .overlay img {
             max-width: 95%;
             max-height: 85vh;
             border-radius: 8px;
             object-fit: contain;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
         }
         .overlay .meta {
             position: absolute;
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255,255,255,0.7);
             font-size: 14px;
             text-align: center;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0,0,0,0.6);
             padding: 10px 24px;
             border-radius: 24px;
             max-width: 80%;
             pointer-events: none;
         }
-        .overlay .meta .date {
-            font-size: 12px;
-            opacity: 0.6;
-        }
-
-        @media (max-width: 1200px) {
-            .grid {
-                grid-template-columns: repeat(5, 1fr);
-            }
-        }
+        /* 响应式 */
+        @media (max-width: 1200px) { .grid { grid-template-columns: repeat(5, 1fr); } }
         @media (max-width: 900px) {
-            .grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .header {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 12px;
-            }
+            .grid { grid-template-columns: repeat(3, 1fr); }
+            .header { flex-direction: column; align-items: stretch; gap: 12px; }
+            .header .info-badge { margin-left: 0; }
         }
-        @media (max-width: 500px) {
-            .grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 8px;
-            }
-            .card .info .title {
-                font-size: 11px;
-            }
-            .overlay {
-                padding: 16px;
-            }
-        }
+        @media (max-width: 500px) { .grid { grid-template-columns: repeat(2, 1fr); gap: 8px; } }
     </style>
 </head>
 <body>
 
-    <!-- 头部 -->
     <header class="header">
         <h1>🌅 <span>必应</span>壁纸</h1>
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="搜索壁纸 (标题/版权)..." />
-        </div>
         <span class="info-badge" id="infoBadge">加载中...</span>
     </header>
 
-    <!-- 壁纸网格 -->
     <div class="grid" id="grid">
-        <!-- 第一个卡片：特色占位 -->
         <div class="card featured">
             <div class="logo">Bing <span>Wallpaper</span></div>
-            <div class="sub">每日精选 · 版权可商用</div>
-            <div class="count" id="totalCount">共 0 张</div>
+            <div class="sub">每日精选</div>
+            <div class="count" id="totalCount">加载中...</div>
         </div>
-        <!-- 其他卡片由 JS 动态生成 -->
     </div>
 
-    <!-- 全屏预览 -->
     <div class="overlay" id="overlay" onclick="closeOverlay()">
         <span class="close">&times;</span>
         <img id="previewImg" src="" alt="预览" />
@@ -320,31 +220,74 @@
     </div>
 
     <script>
-        // ----- 数据加载与渲染 -----
+        // ============================================================
+        // 1. 自动适配部署路径（关键修复）
+        // ============================================================
+        function getBasePath() {
+            const path = window.location.pathname; // 例如: "/bing-img/" 或 "/bing-img/index.html"
+            // 如果路径以 .html 结尾，去掉文件名
+            if (path.endsWith('.html')) {
+                return path.substring(0, path.lastIndexOf('/'));
+            }
+            // 去掉末尾的斜杠
+            return path.replace(/\/$/, '');
+        }
+
+        const BASE_PATH = getBasePath(); // 结果会是 "/bing-img" 或空字符串
+        console.log('📁 部署路径:', BASE_PATH || '/');
+
+        // ============================================================
+        // 2. 数据加载与渲染
+        // ============================================================
         let allData = [];
         let currentPage = 0;
-        const PAGE_SIZE = 28; // 每次加载28张 (4行)
+        const PAGE_SIZE = 28;
         let isLoading = false;
         let hasMore = true;
+        const grid = document.getElementById('grid');
 
         async function loadData() {
             try {
-                const res = await fetch('/data/wallpapers.json');
-                if (!res.ok) throw new Error('数据加载失败');
+                // 关键修改：使用 BASE_PATH 拼接完整路径
+                const url = `${BASE_PATH}/data/wallpapers.json`;
+                console.log('📡 请求数据:', url);
+                const res = await fetch(url);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 allData = await res.json();
+                if (!Array.isArray(allData) || allData.length === 0) {
+                    showEmpty();
+                    return;
+                }
                 document.getElementById('totalCount').textContent = `共 ${allData.length} 张`;
                 document.getElementById('infoBadge').textContent = `📸 ${allData.length} 张壁纸`;
-                hasMore = allData.length > 0;
+                hasMore = true;
                 currentPage = 0;
                 renderMore();
             } catch (err) {
-                console.error(err);
+                console.error('❌ 加载失败:', err);
                 document.getElementById('infoBadge').textContent = '⚠️ 加载失败';
+                showEmpty();
             }
         }
 
+        function showEmpty() {
+            document.getElementById('totalCount').textContent = '暂无壁纸';
+            const loader = grid.querySelector('.loader');
+            if (loader) loader.remove();
+            const empty = document.createElement('div');
+            empty.className = 'empty';
+            empty.innerHTML = `
+                <div class="icon">🖼️</div>
+                <div>还没有壁纸数据</div>
+                <div style="font-size:13px;color:rgba(255,255,255,0.2);margin-top:8px;">
+                    请运行 <code>npm run fetch</code> 抓取壁纸
+                </div>
+            `;
+            grid.appendChild(empty);
+        }
+
         function renderMore() {
-            if (isLoading || !hasMore) return;
+            if (isLoading || !hasMore || allData.length === 0) return;
             isLoading = true;
 
             const start = currentPage * PAGE_SIZE;
@@ -357,78 +300,62 @@
                 return;
             }
 
-            const grid = document.getElementById('grid');
-            // 移除加载提示（如果存在）
-            const existingLoader = grid.querySelector('.loader');
-            if (existingLoader) existingLoader.remove();
+            const loader = grid.querySelector('.loader');
+            if (loader) loader.remove();
 
             slice.forEach(item => {
                 const card = document.createElement('div');
                 card.className = 'card';
-                card.setAttribute('data-date', item.date);
-                card.setAttribute('data-title', (item.title || item.copyright || '').toLowerCase());
-
-                // 使用 webp 加载更快，降级为 jpg
-                const imgSrc = item.webp || item.jpg;
+                // 优先使用 webp
+                const imgSrc = item.webp || item.jpg || '';
+                if (!imgSrc) return;
                 card.innerHTML = `
-                    <img src="${imgSrc}" alt="${item.copyright || item.date}" loading="lazy" />
+                    <img src="${imgSrc}" alt="${item.copyright || item.date}" loading="lazy" 
+                         onerror="this.src='${item.jpg || ''}'" />
                     <div class="info">
                         <div class="date">${item.date}</div>
                         <div class="title">${item.title || item.copyright || '无标题'}</div>
                         <div class="copyright">${item.copyright || ''}</div>
                     </div>
                 `;
-                // 点击打开大图
-                card.addEventListener('click', () => openPreview(item.jpg, item));
+                card.addEventListener('click', () => {
+                    const fullImg = item.jpg || item.webp || imgSrc;
+                    openPreview(fullImg, item);
+                });
                 grid.appendChild(card);
             });
 
             currentPage++;
             isLoading = false;
 
-            // 检查是否还有更多数据
             if (end >= allData.length) {
                 hasMore = false;
             } else {
-                // 添加底部加载提示
                 const loader = document.createElement('div');
                 loader.className = 'loader';
-                loader.id = 'bottomLoader';
-                loader.innerHTML = `<span class="spinner"></span> 加载中...`;
+                loader.innerHTML = `⏳ 加载中...`;
                 grid.appendChild(loader);
             }
         }
 
-        // 滚动加载
         function handleScroll() {
             const scrollY = window.scrollY;
             const windowHeight = window.innerHeight;
             const documentHeight = document.documentElement.scrollHeight;
-
-            if (scrollY + windowHeight >= documentHeight - 200) {
+            if (scrollY + windowHeight >= documentHeight - 300) {
                 renderMore();
             }
         }
 
-        // 搜索过滤
-        document.getElementById('searchInput').addEventListener('input', function() {
-            const keyword = this.value.toLowerCase().trim();
-            const cards = document.querySelectorAll('.card:not(.featured)');
-            cards.forEach(card => {
-                const title = card.getAttribute('data-title') || '';
-                const match = title.includes(keyword);
-                card.style.display = match ? '' : 'none';
-            });
-            // 搜索时不触发滚动加载
-        });
-
-        // 全屏预览
+        // ============================================================
+        // 3. 全屏预览
+        // ============================================================
         function openPreview(src, meta) {
             const overlay = document.getElementById('overlay');
             document.getElementById('previewImg').src = src;
             document.getElementById('previewMeta').innerHTML = `
                 ${meta.title || meta.copyright || ''} 
-                <span class="date"> · ${meta.date}</span>
+                <span style="opacity:0.6;font-size:12px;"> · ${meta.date}</span>
             `;
             overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -443,7 +370,9 @@
             if (e.key === 'Escape') closeOverlay();
         });
 
-        // ----- 启动 -----
+        // ============================================================
+        // 4. 启动
+        // ============================================================
         window.addEventListener('scroll', handleScroll);
         loadData();
     </script>
