@@ -1,5 +1,4 @@
-// scripts/fetch.js
-// 完全重写：模拟 bing.ioliu.cn 的多地区抓取策略
+// scripts/fetch.js - 纯净版，只依赖 axios 和 sharp
 
 const fs = require('fs');
 const path = require('path');
@@ -7,13 +6,12 @@ const axios = require('axios');
 const sharp = require('sharp');
 
 // --- 配置 ---
-// 目标地区列表 (对应必应API的 mkt 参数)
+// 目标地区列表
 const REGIONS = [
     'zh-CN', 'en-US', 'ja-JP', 'de-DE', 'fr-FR', 
     'es-ES', 'it-IT', 'pt-BR', 'en-IN', 'fr-CA'
 ];
 const BING_API = 'https://cn.bing.com/HPImageArchive.aspx';
-// 图片存储目录
 const PICTURE_DIR = path.join(__dirname, '../picture');
 const WEBP_DIR = path.join(__dirname, '../webp');
 const DATA_DIR = path.join(__dirname, '../data');
@@ -24,19 +22,29 @@ const DATA_FILE = path.join(DATA_DIR, 'wallpapers.json');
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 });
 
-// --- 工具函数 ---
+// --- 核心函数 ---
 
 /**
- * 从必应API获取指定地区的图片列表
- * @param {string} mkt - 地区代码，如 'zh-CN'
- * @param {number} n - 获取数量，最大8
- * @returns {Promise<Array>} 图片信息数组
+ * 获取图片唯一ID (基于 urlbase，这是必应图片的全球唯一标识)
+ */
+function getImageId(image) {
+    if (image.urlbase) {
+        // urlbase 格式: /th?id=OHR.xxxxx_1920x1080
+        return image.urlbase.replace('/th?id=OHR.', '').replace(/_\d+x\d+$/, '');
+    }
+    // 备选方案
+    const url = image.url || '';
+    const match = url.match(/id=OHR\.([^_&]+)/);
+    return match ? match[1] : url.split('/').pop().split('_')[0];
+}
+
+/**
+ * 获取指定地区的图片列表
  */
 async function fetchRegionImages(mkt, n = 8) {
     try {
         const url = `${BING_API}?format=js&n=${n}&mkt=${mkt}`;
         const response = await axios.get(url, { timeout: 10000 });
-        // 为每张图片标记来源地区
         return (response.data.images || []).map(img => ({
             ...img,
             region: mkt
@@ -48,23 +56,23 @@ async function fetchRegionImages(mkt, n = 8) {
 }
 
 /**
- * 下载单张图片并保存为 jpg 和 webp
+ * 下载并保存单张图片
+ * 返回 null 表示已存在或下载失败
  */
-async function downloadAndConvert(imageInfo) {
-    // 使用 startdate 作为文件名，如果同一天有多个地区，用地区后缀区分
-    const dateStr = imageInfo.startdate; // 格式: 20260726
-    const region = imageInfo.region || 'zh-CN';
-    const baseFileName = `${dateStr}_${region}`;
+async function downloadAndSave(imageInfo) {
+    const dateStr = imageInfo.startdate;
     const formattedDate = `${dateStr.slice(0,4)}-${dateStr.slice(4,6)}-${dateStr.slice(6,8)}`;
-    
     const imageUrl = `https://cn.bing.com${imageInfo.url}`;
+    const id = getImageId(imageInfo);
     
+    // 文件名: 日期_ID.jpg
+    const baseFileName = `${dateStr}_${id}`;
     const jpgPath = path.join(PICTURE_DIR, `${baseFileName}.jpg`);
     const webpPath = path.join(WEBP_DIR, `${baseFileName}.webp`);
 
     // 如果已存在则跳过
     if (fs.existsSync(jpgPath) && fs.existsSync(webpPath)) {
-        return null; // 返回 null 表示跳过
+        return null;
     }
 
     try {
@@ -76,18 +84,16 @@ async function downloadAndConvert(imageInfo) {
         });
         const imageBuffer = Buffer.from(response.data);
 
-        // 并发处理 jpg 和 webp
         await Promise.all([
             sharp(imageBuffer).jpeg({ quality: 88, progressive: true }).toFile(jpgPath),
             sharp(imageBuffer).webp({ quality: 82 }).toFile(webpPath)
         ]);
 
-        console.log(`✅ 已保存: ${baseFileName} (${formattedDate})`);
-
-        return {
+        const result = {
             date: formattedDate,
             dateRaw: dateStr,
-            region: region,
+            id: id,
+            region: imageInfo.region || 'unknown',
             url: imageUrl,
             copyright: imageInfo.copyright || '',
             copyrightLink: imageInfo.copyrightlink || '',
@@ -97,8 +103,11 @@ async function downloadAndConvert(imageInfo) {
             webp: `/webp/${baseFileName}.webp`
         };
 
+        console.log(`✅ 已保存: ${formattedDate} [${imageInfo.region}] - ${id}`);
+        return result;
+
     } catch (error) {
-        console.error(`❌ 下载失败 ${baseFileName}:`, error.message);
+        console.error(`❌ 下载失败 ${formattedDate}:`, error.message);
         return null;
     }
 }
@@ -106,28 +115,43 @@ async function downloadAndConvert(imageInfo) {
 // --- 主流程 ---
 
 async function main() {
-    console.log('🚀 开始多地区抓取必应壁纸...');
+    console.log('🚀 开始抓取必应壁纸...');
+    console.log(`📡 目标地区: ${REGIONS.join(', ')}`);
 
-    // 1. 并发获取所有地区的图片列表
+    // 1. 获取所有地区的图片列表
     const regionPromises = REGIONS.map(mkt => fetchRegionImages(mkt, 8));
     const results = await Promise.all(regionPromises);
     const allImages = results.flat();
 
     if (allImages.length === 0) {
-        console.error('❌ 未获取到任何图片，请检查网络或API');
+        console.error('❌ 未获取到任何图片');
         return;
     }
 
-    console.log(`📊 共获取到 ${allImages.length} 张壁纸信息（来自 ${REGIONS.length} 个地区）`);
+    console.log(`📊 原始获取: ${allImages.length} 张`);
 
-    // 2. 下载并转换所有图片
-    const downloadPromises = allImages.map(img => downloadAndConvert(img));
-    const downloadResults = await Promise.all(downloadPromises);
-    const newData = downloadResults.filter(item => item !== null);
+    // 2. 按 id 去重 (保留第一次出现的)
+    const uniqueMap = new Map();
+    for (const img of allImages) {
+        const id = getImageId(img);
+        if (!uniqueMap.has(id)) {
+            uniqueMap.set(id, img);
+        }
+    }
+    const uniqueImages = Array.from(uniqueMap.values());
+    console.log(`🔄 去重后: ${uniqueImages.length} 张唯一图片`);
 
-    console.log(`💾 成功下载并转换 ${newData.length} 张新图片`);
+    // 3. 下载并转换
+    let successCount = 0;
+    for (const img of uniqueImages) {
+        const result = await downloadAndSave(img);
+        if (result) successCount++;
+        // 避免请求过快
+        await new Promise(r => setTimeout(r, 200));
+    }
+    console.log(`💾 成功下载: ${successCount} 张新图片`);
 
-    // 3. 合并到总数据文件
+    // 4. 读取已有数据，合并去重
     let existingData = [];
     if (fs.existsSync(DATA_FILE)) {
         try {
@@ -137,26 +161,44 @@ async function main() {
         }
     }
 
-    // 使用 Map 去重 (基于 date + region)
+    // 用 id 作为 key，新数据覆盖旧数据
     const dataMap = new Map();
-    existingData.forEach(item => dataMap.set(`${item.date}_${item.region}`, item));
-    newData.forEach(item => dataMap.set(`${item.date}_${item.region}`, item));
+    existingData.forEach(item => dataMap.set(item.id, item));
+    // 把新下载成功的图片加入
+    for (const img of uniqueImages) {
+        const id = getImageId(img);
+        const jpgPath = path.join(PICTURE_DIR, `${img.startdate}_${id}.jpg`);
+        if (fs.existsSync(jpgPath)) {
+            const formattedDate = `${img.startdate.slice(0,4)}-${img.startdate.slice(4,6)}-${img.startdate.slice(6,8)}`;
+            dataMap.set(id, {
+                date: formattedDate,
+                dateRaw: img.startdate,
+                id: id,
+                region: img.region || 'unknown',
+                url: `https://cn.bing.com${img.url}`,
+                copyright: img.copyright || '',
+                copyrightLink: img.copyrightlink || '',
+                title: img.title || '',
+                description: img.description || '',
+                jpg: `/picture/${img.startdate}_${id}.jpg`,
+                webp: `/webp/${img.startdate}_${id}.webp`
+            });
+        }
+    }
 
-    // 按日期排序（最新在前，同日期按地区排序）
     const finalData = Array.from(dataMap.values())
-        .sort((a, b) => b.date.localeCompare(a.date) || a.region.localeCompare(b.region));
+        .sort((a, b) => b.date.localeCompare(a.date));
 
     fs.writeFileSync(DATA_FILE, JSON.stringify(finalData, null, 2));
     console.log(`📝 元数据已更新，共 ${finalData.length} 条记录`);
 
-    // 4. 统计
+    // 5. 统计
     const jpgCount = fs.readdirSync(PICTURE_DIR).filter(f => f.endsWith('.jpg')).length;
     const webpCount = fs.readdirSync(WEBP_DIR).filter(f => f.endsWith('.webp')).length;
     console.log(`📁 总计: 原图 ${jpgCount} 张, WebP ${webpCount} 张`);
     console.log('✅ 全部完成!');
 }
 
-// 执行
 main().catch(error => {
     console.error('💥 程序异常:', error);
     process.exit(1);
