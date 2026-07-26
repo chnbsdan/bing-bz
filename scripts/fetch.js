@@ -1,32 +1,52 @@
-// scripts/fetch.js - 简洁版：每天只存一张图
+// scripts/fetch.js - 修正日期偏移
 
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 const sharp = require('sharp');
 
-const BING_API = 'https://cn.bing.com/HPImageArchive.aspx?format=js&n=1&mkt=zh-CN';
 const PICTURE_DIR = path.join(__dirname, '../picture');
 const WEBP_DIR = path.join(__dirname, '../webp');
 const DATA_DIR = path.join(__dirname, '../data');
 const DATA_FILE = path.join(DATA_DIR, 'wallpapers.json');
 
-// 确保目录存在
 [PICTURE_DIR, WEBP_DIR, DATA_DIR].forEach(dir => {
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 });
 
 /**
- * 获取指定日期的壁纸
- * @param {number} idx 0=今天, -1=明天, 1=昨天...
+ * 根据偏移量计算目标日期
+ * 修正：offset 和日期的对应关系
+ *   offset=0  → 今天 (7月26日)
+ *   offset=-1 → 明天 (7月27日)
+ *   offset=1  → 昨天 (7月25日)
  */
-async function fetchWallpaper(idx = 0) {
+function getTargetDate(offset) {
+    const now = new Date();
+    // 注意：必应API的idx，正数=过去，负数=未来
+    // 但我们传参时：正数偏移表示未来几天，负数表示过去几天
+    // 所以这里要反过来
+    const daysToAdd = -offset;  // 关键修正：取反
+    now.setDate(now.getDate() + daysToAdd);
+    const y = now.getFullYear();
+    const m = String(now.getMonth() + 1).padStart(2, '0');
+    const d = String(now.getDate()).padStart(2, '0');
+    return `${y}-${m}-${d}`;
+}
+
+/**
+ * 获取指定偏移量的壁纸
+ * @param {number} offset 正数=未来, 负数=过去
+ */
+async function fetchWallpaper(offset) {
+    // 必应API的idx：正数=过去，负数=未来
+    // 所以传参时取反
+    const idx = -offset;
     const url = `https://cn.bing.com/HPImageArchive.aspx?format=js&n=1&idx=${idx}&mkt=zh-CN`;
     const response = await axios.get(url, { timeout: 10000 });
     const image = response.data.images[0];
     if (!image) return null;
     return {
-        date: image.startdate,
         url: `https://cn.bing.com${image.url}`,
         copyright: image.copyright || '',
         copyrightLink: image.copyrightlink || '',
@@ -35,16 +55,10 @@ async function fetchWallpaper(idx = 0) {
     };
 }
 
-/**
- * 下载并保存图片
- */
-async function downloadWallpaper(wallpaper) {
-    const dateStr = wallpaper.date;
-    const formattedDate = `${dateStr.slice(0,4)}-${dateStr.slice(4,6)}-${dateStr.slice(6,8)}`;
-    const jpgPath = path.join(PICTURE_DIR, `${formattedDate}.jpg`);
-    const webpPath = path.join(WEBP_DIR, `${formattedDate}.webp`);
+async function downloadWallpaper(wallpaper, dateStr) {
+    const jpgPath = path.join(PICTURE_DIR, `${dateStr}.jpg`);
+    const webpPath = path.join(WEBP_DIR, `${dateStr}.webp`);
 
-    // 已存在则跳过
     if (fs.existsSync(jpgPath) && fs.existsSync(webpPath)) {
         return null;
     }
@@ -63,48 +77,49 @@ async function downloadWallpaper(wallpaper) {
     ]);
 
     return {
-        date: formattedDate,
+        date: dateStr,
         copyright: wallpaper.copyright,
         copyrightLink: wallpaper.copyrightLink,
         title: wallpaper.title,
         description: wallpaper.description,
-        jpg: `/picture/${formattedDate}.jpg`,
-        webp: `/webp/${formattedDate}.webp`
+        jpg: `/picture/${dateStr}.jpg`,
+        webp: `/webp/${dateStr}.webp`
     };
 }
 
 async function main() {
     console.log('🚀 开始抓取必应壁纸...');
+    console.log(`📅 今天是: ${getTargetDate(0)}`);
 
-    // 要抓取的天数：未来7天 + 过去30天
-    const dates = [];
-    for (let i = -7; i <= 30; i++) {
-        dates.push(i);
-    }
+    // 未来7天 (offset: 1~7) + 今天 (offset: 0) + 过去30天 (offset: -1 ~ -30)
+    const offsets = [];
+    for (let i = 7; i >= 1; i--) offsets.push(i);
+    offsets.push(0);
+    for (let i = -1; i >= -30; i--) offsets.push(i);
 
     const results = [];
-    for (const idx of dates) {
+    for (const offset of offsets) {
         try {
-            const wallpaper = await fetchWallpaper(idx);
+            const dateStr = getTargetDate(offset);
+            const wallpaper = await fetchWallpaper(offset);
             if (!wallpaper) {
-                console.log(`⏭️ idx=${idx} 无数据`);
+                console.log(`⏭️ offset=${offset} 无数据`);
                 continue;
             }
-            const saved = await downloadWallpaper(wallpaper);
+            const saved = await downloadWallpaper(wallpaper, dateStr);
             if (saved) {
                 results.push(saved);
-                console.log(`✅ ${saved.date}`);
+                console.log(`✅ ${dateStr} (offset=${offset})`);
             } else {
-                console.log(`⏭️ ${wallpaper.date} 已存在`);
+                console.log(`⏭️ ${dateStr} 已存在`);
             }
-            // 慢一点，别被ban
             await new Promise(r => setTimeout(r, 500));
         } catch (err) {
-            console.warn(`⚠️ idx=${idx} 失败:`, err.message);
+            console.warn(`⚠️ offset=${offset} 失败:`, err.message);
         }
     }
 
-    // 读取旧数据，合并
+    // 合并数据
     let allData = [];
     if (fs.existsSync(DATA_FILE)) {
         try {
@@ -112,7 +127,6 @@ async function main() {
         } catch (e) {}
     }
 
-    // 用日期去重
     const map = new Map();
     allData.forEach(item => map.set(item.date, item));
     results.forEach(item => map.set(item.date, item));
