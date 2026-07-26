@@ -1,6 +1,7 @@
 {
   "name": "bing-wallpaper",
   "version": "1.0.0",
+  "description": "必应壁纸自动抓取与展示",
   "scripts": {
     "fetch": "node scripts/fetch.js"
   },
