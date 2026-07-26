@@ -2,64 +2,32 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>必应壁纸 · 每日精选</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>必应壁纸</title>
     <style>
-        /* ===== 全局重置 ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html,
         body {
+            width: 100%;
+            min-height: 100vh;
             background: #0d0d1a;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            min-height: 100vh;
-            padding: 16px;
+            overflow: hidden;
         }
 
-        /* ===== 顶部导航 ===== */
-        .header {
-            max-width: 100%;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            padding: 10px 18px;
-            background: rgba(255, 255, 255, 0.04);
-            border-radius: 12px;
-            backdrop-filter: blur(8px);
-        }
-
-        .header h1 {
-            color: #fff;
-            font-weight: 400;
-            font-size: 20px;
-            letter-spacing: 2px;
-            white-space: nowrap;
-        }
-
-        .header h1 span {
-            color: #4fc3f7;
-            font-weight: 600;
-        }
-
-        .header .info-badge {
-            color: rgba(255, 255, 255, 0.4);
-            font-size: 13px;
-            margin-left: auto;
-            white-space: nowrap;
-        }
-
-        /* ===== 图片网格：7列，填满屏幕 ===== */
+        /* ===== 网格：7列，完全无间隙 ===== */
         .grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 10px;
-            max-width: 100%;
-            min-height: calc(100vh - 120px);
+            gap: 0;
+            width: 100%;
+            height: 100vh;
+            overflow-y: auto;
             align-content: start;
         }
 
@@ -67,17 +35,9 @@
         .card {
             position: relative;
             aspect-ratio: 16 / 9;
-            background: #1a1a2e;
-            border-radius: 8px;
+            background: #0d0d1a;
             overflow: hidden;
             cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .card:hover {
-            transform: scale(1.04);
-            z-index: 10;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
         }
 
         .card img {
@@ -93,18 +53,16 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 14px 12px 10px;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+            padding: 12px 10px 8px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
             color: #fff;
             opacity: 0;
-            transform: translateY(8px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            transition: opacity 0.25s ease;
             pointer-events: none;
         }
 
         .card:hover .info {
             opacity: 1;
-            transform: translateY(0);
         }
 
         .card .info .date {
@@ -116,7 +74,7 @@
         .card .info .title {
             font-size: 13px;
             font-weight: 500;
-            margin-top: 2px;
+            margin-top: 1px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -124,8 +82,8 @@
 
         .card .info .copyright {
             font-size: 10px;
-            color: rgba(255, 255, 255, 0.4);
-            margin-top: 2px;
+            color: rgba(255, 255, 255, 0.35);
+            margin-top: 1px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -142,18 +100,16 @@
             color: #fff;
             padding: 16px;
             cursor: default;
-            border: 1px solid rgba(255, 255, 255, 0.06);
         }
 
-        .card.featured:hover {
-            transform: none;
-            box-shadow: none;
+        .card.featured:hover .info {
+            opacity: 0;
         }
 
         .card.featured .logo {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 300;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
         }
 
         .card.featured .logo span {
@@ -162,44 +118,10 @@
         }
 
         .card.featured .sub {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.25);
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.2);
             margin-top: 4px;
             letter-spacing: 4px;
-        }
-
-        .card.featured .count {
-            font-size: 11px;
-            color: rgba(255, 255, 255, 0.15);
-            margin-top: 10px;
-        }
-
-        /* ===== 加载更多指示器 ===== */
-        .loader {
-            grid-column: 1 / -1;
-            text-align: center;
-            padding: 20px 0;
-            color: rgba(255, 255, 255, 0.2);
-            font-size: 13px;
-            letter-spacing: 2px;
-        }
-
-        .loader .spinner {
-            display: inline-block;
-            width: 18px;
-            height: 18px;
-            border: 2px solid rgba(255, 255, 255, 0.08);
-            border-top-color: #4fc3f7;
-            border-radius: 50%;
-            animation: spin 0.7s linear infinite;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
         }
 
         /* ===== 空状态 ===== */
@@ -207,15 +129,17 @@
             grid-column: 1 / -1;
             text-align: center;
             padding: 80px 20px;
-            color: rgba(255, 255, 255, 0.25);
+            color: rgba(255, 255, 255, 0.2);
         }
 
         .empty .icon {
-            font-size: 48px;
-            margin-bottom: 12px;
+            font-size: 40px;
+            margin-bottom: 10px;
         }
 
-        /* ===== 全屏预览遮罩 ===== */
+        /* ============================================================
+           全屏预览遮罩（缩放版）
+           ============================================================ */
         .overlay {
             display: none;
             position: fixed;
@@ -223,85 +147,148 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.94);
+            background: rgba(0, 0, 0, 0.95);
             z-index: 999;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            cursor: pointer;
+            overflow: hidden;
             user-select: none;
         }
 
         .overlay.active {
-            display: flex;
+            display: block;
         }
 
         /* ===== 关闭按钮 ===== */
         .overlay .close {
-            position: absolute;
-            top: 24px;
-            right: 30px;
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 32px;
+            position: fixed;
+            top: 20px;
+            right: 28px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 36px;
             cursor: pointer;
-            transition: 0.2s;
-            z-index: 10;
+            z-index: 100;
             font-family: serif;
             line-height: 1;
+            transition: 0.2s;
         }
 
         .overlay .close:hover {
             color: #fff;
-            transform: rotate(90deg);
         }
 
-        /* ===== 大图 ===== */
+        /* ===== 缩放控制按钮 ===== */
+        .overlay .zoom-controls {
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 8px 16px;
+            border-radius: 30px;
+            backdrop-filter: blur(8px);
+        }
+
+        .overlay .zoom-controls button {
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 22px;
+            cursor: pointer;
+            padding: 4px 12px;
+            border-radius: 4px;
+            transition: 0.2s;
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .overlay .zoom-controls button:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .overlay .zoom-controls .zoom-level {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 13px;
+            min-width: 44px;
+            text-align: center;
+            line-height: 32px;
+            font-family: sans-serif;
+        }
+
+        /* ===== 图片容器 ===== */
+        .overlay .image-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: grab;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .overlay .image-container:active {
+            cursor: grabbing;
+        }
+
         .overlay .preview-image {
-            max-width: 92%;
-            max-height: 85vh;
-            border-radius: 8px;
-            object-fit: contain;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            display: block;
+            max-width: none;
+            max-height: none;
             pointer-events: none;
+            transform-origin: center center;
+            transition: none;
+            will-change: transform;
+            /* 初始适应屏幕 */
+            width: auto;
+            height: auto;
+            max-width: 95vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 4px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
         }
 
         /* ===== 大图底部信息 ===== */
         .overlay .meta {
-            position: absolute;
+            position: fixed;
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 13px;
             text-align: center;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 10px 22px;
-            border-radius: 24px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 6px 18px;
+            border-radius: 20px;
             max-width: 80%;
             pointer-events: none;
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(4px);
+            z-index: 50;
         }
 
         .overlay .meta .date {
-            font-size: 12px;
+            font-size: 11px;
             opacity: 0.5;
             display: block;
         }
 
         /* ===== 左右箭头 ===== */
         .overlay .arrow {
-            position: absolute;
+            position: fixed;
             top: 50%;
             transform: translateY(-50%);
-            color: rgba(255, 255, 255, 0.4);
+            color: rgba(255, 255, 255, 0.2);
             font-size: 48px;
             cursor: pointer;
-            padding: 20px 16px;
-            transition: 0.2s;
-            z-index: 10;
+            padding: 20px 12px;
+            z-index: 50;
             font-family: serif;
             line-height: 1;
             user-select: none;
+            transition: 0.2s;
             background: rgba(0, 0, 0, 0.2);
             border-radius: 8px;
         }
@@ -312,14 +299,16 @@
         }
 
         .overlay .arrow-left {
-            left: 20px;
+            left: 10px;
         }
 
         .overlay .arrow-right {
-            right: 20px;
+            right: 10px;
         }
 
-        /* ===== 响应式 ===== */
+        /* ============================================================
+           响应式
+           ============================================================ */
         @media (max-width: 1200px) {
             .grid {
                 grid-template-columns: repeat(5, 1fr);
@@ -330,79 +319,69 @@
             .grid {
                 grid-template-columns: repeat(3, 1fr);
             }
-            .header {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 8px;
-            }
-            .header .info-badge {
-                margin-left: 0;
-            }
-            .overlay .arrow {
-                font-size: 32px;
-                padding: 12px 10px;
-            }
-            .overlay .arrow-left {
-                left: 6px;
-            }
-            .overlay .arrow-right {
-                right: 6px;
-            }
         }
 
         @media (max-width: 500px) {
             .grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 6px;
-            }
-            body {
-                padding: 8px;
-            }
-            .header h1 {
-                font-size: 16px;
-            }
-            .card .info .title {
-                font-size: 11px;
             }
             .card.featured .logo {
                 font-size: 18px;
             }
-            .overlay .preview-image {
-                max-width: 98%;
-                max-height: 70vh;
-            }
-            .overlay .meta {
-                font-size: 12px;
-                padding: 6px 14px;
-                bottom: 16px;
+            .card.featured .sub {
+                font-size: 9px;
             }
             .overlay .arrow {
-                font-size: 24px;
-                padding: 8px 6px;
+                font-size: 28px;
+                padding: 10px 4px;
+            }
+            .overlay .arrow-left {
+                left: 2px;
+            }
+            .overlay .arrow-right {
+                right: 2px;
             }
             .overlay .close {
-                top: 14px;
-                right: 18px;
-                font-size: 24px;
+                font-size: 28px;
+                top: 12px;
+                right: 16px;
             }
+            .overlay .zoom-controls {
+                bottom: 70px;
+                padding: 4px 12px;
+                gap: 6px;
+            }
+            .overlay .zoom-controls button {
+                font-size: 18px;
+                padding: 2px 8px;
+            }
+            .overlay .meta {
+                font-size: 11px;
+                padding: 4px 12px;
+                bottom: 20px;
+            }
+        }
+
+        /* 滚动条美化 */
+        .grid::-webkit-scrollbar {
+            width: 4px;
+        }
+        .grid::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .grid::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
 
-    <!-- ===== 顶部导航 ===== -->
-    <header class="header">
-        <h1>🌅 <span>必应</span>壁纸</h1>
-        <span class="info-badge" id="infoBadge">加载中...</span>
-    </header>
-
     <!-- ===== 图片网格 ===== -->
     <div class="grid" id="grid">
-        <!-- 第一个卡片：网站标识 -->
         <div class="card featured">
             <div class="logo">Bing <span>Wallpaper</span></div>
             <div class="sub">每日精选</div>
-            <div class="count" id="totalCount">加载中...</div>
         </div>
     </div>
 
@@ -413,7 +392,16 @@
         <span class="arrow arrow-left" id="prevBtn">‹</span>
         <span class="arrow arrow-right" id="nextBtn">›</span>
 
-        <img class="preview-image" id="previewImg" src="" alt="预览" />
+        <div class="image-container" id="imageContainer">
+            <img class="preview-image" id="previewImg" src="" alt="预览" />
+        </div>
+
+        <div class="zoom-controls">
+            <button id="zoomOutBtn">−</button>
+            <span class="zoom-level" id="zoomLevel">100%</span>
+            <button id="zoomInBtn">+</button>
+            <button id="zoomResetBtn" style="font-size:16px;">⟲</button>
+        </div>
 
         <div class="meta" id="previewMeta">
             <span id="previewTitle"></span>
@@ -423,7 +411,7 @@
 
     <script>
         // ============================================================
-        // 1. 自动适配部署路径
+        // 1. 路径适配
         // ============================================================
         function getBasePath() {
             const path = window.location.pathname;
@@ -434,9 +422,6 @@
         }
         const BASE_PATH = getBasePath();
 
-        // ============================================================
-        // 2. 修正图片路径
-        // ============================================================
         function fixImagePath(url) {
             if (!url) return '';
             if (url.startsWith('http://') || url.startsWith('https://')) return url;
@@ -448,15 +433,29 @@
         }
 
         // ============================================================
-        // 3. 主逻辑
+        // 2. 数据加载
         // ============================================================
         let allData = [];
         let currentPreviewIndex = 0;
         const grid = document.getElementById('grid');
         const overlay = document.getElementById('overlay');
+        const imageContainer = document.getElementById('imageContainer');
         const previewImg = document.getElementById('previewImg');
         const previewTitle = document.getElementById('previewTitle');
         const previewDate = document.getElementById('previewDate');
+        const zoomLevel = document.getElementById('zoomLevel');
+
+        // ===== 缩放状态 =====
+        let scale = 1;
+        let minScale = 0.3;
+        let maxScale = 5;
+        let translateX = 0;
+        let translateY = 0;
+        let isDragging = false;
+        let startX = 0;
+        let startY = 0;
+        let lastTranslateX = 0;
+        let lastTranslateY = 0;
 
         // ===== 加载数据 =====
         async function loadData() {
@@ -469,23 +468,18 @@
                     showEmpty();
                     return;
                 }
-                document.getElementById('totalCount').textContent = `共 ${allData.length} 张`;
-                document.getElementById('infoBadge').textContent = `📸 ${allData.length} 张壁纸`;
                 renderAll();
             } catch (err) {
                 console.error('加载失败:', err);
-                document.getElementById('infoBadge').textContent = '⚠️ 加载失败';
                 showEmpty();
             }
         }
 
-        // ===== 渲染所有卡片 =====
+        // ===== 渲染卡片 =====
         function renderAll() {
-            // 移除旧的卡片（保留第一个 featured）
             const existingCards = grid.querySelectorAll('.card:not(.featured)');
             existingCards.forEach(el => el.remove());
 
-            // 按日期排序（最新在前）
             const sorted = [...allData].sort((a, b) => b.date.localeCompare(a.date));
 
             sorted.forEach((item, index) => {
@@ -512,27 +506,23 @@
             });
         }
 
-        // ===== 空状态 =====
         function showEmpty() {
-            document.getElementById('totalCount').textContent = '暂无壁纸';
             const empty = document.createElement('div');
             empty.className = 'empty';
             empty.innerHTML = `
                 <div class="icon">🖼️</div>
-                <div>还没有壁纸数据</div>
-                <div style="font-size:13px;color:rgba(255,255,255,0.2);margin-top:6px;">
-                    请运行 <code>npm run fetch</code> 抓取壁纸
-                </div>
+                <div>暂无壁纸数据</div>
             `;
             grid.appendChild(empty);
         }
 
         // ============================================================
-        // 4. 全屏预览
+        // 3. 全屏预览（带缩放拖拽）
         // ============================================================
         function openPreview(index) {
             if (allData.length === 0) return;
             currentPreviewIndex = index;
+            resetZoom();
             showPreview(currentPreviewIndex);
             overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -545,11 +535,13 @@
             currentPreviewIndex = index;
 
             const item = allData[currentPreviewIndex];
-            // 预览优先用 jpg（更清晰），降级 webp
             const imgSrc = fixImagePath(item.jpg || item.webp || '');
             previewImg.src = imgSrc;
             previewTitle.textContent = item.title || item.copyright || '';
             previewDate.textContent = item.date || '';
+
+            // 重置缩放
+            resetZoom();
         }
 
         function closePreview() {
@@ -557,32 +549,133 @@
             document.body.style.overflow = 'auto';
         }
 
-        function prevImage(e) {
+        // ===== 缩放函数 =====
+        function updateTransform() {
+            previewImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+            zoomLevel.textContent = `${Math.round(scale * 100)}%`;
+        }
+
+        function resetZoom() {
+            scale = 1;
+            translateX = 0;
+            translateY = 0;
+            // 重置图片尺寸适应屏幕
+            previewImg.style.width = 'auto';
+            previewImg.style.height = 'auto';
+            previewImg.style.maxWidth = '95vw';
+            previewImg.style.maxHeight = '90vh';
+            updateTransform();
+        }
+
+        function zoomIn() {
+            if (scale >= maxScale) return;
+            // 放大时移除尺寸限制
+            previewImg.style.maxWidth = 'none';
+            previewImg.style.maxHeight = 'none';
+            scale = Math.min(scale + 0.2, maxScale);
+            updateTransform();
+        }
+
+        function zoomOut() {
+            if (scale <= minScale) return;
+            scale = Math.max(scale - 0.2, minScale);
+            if (scale <= 1) {
+                // 缩到1以下时恢复适应屏幕
+                previewImg.style.maxWidth = '95vw';
+                previewImg.style.maxHeight = '90vh';
+            }
+            updateTransform();
+        }
+
+        // ===== 拖拽 =====
+        function startDrag(e) {
+            if (scale <= 1) return;
+            isDragging = true;
+            const pos = e.type === 'mousedown' ? e : e.touches[0];
+            startX = pos.clientX;
+            startY = pos.clientY;
+            lastTranslateX = translateX;
+            lastTranslateY = translateY;
+            imageContainer.style.cursor = 'grabbing';
+        }
+
+        function moveDrag(e) {
+            if (!isDragging) return;
+            e.preventDefault();
+            const pos = e.type === 'mousemove' ? e : e.touches[0];
+            const dx = pos.clientX - startX;
+            const dy = pos.clientY - startY;
+            translateX = lastTranslateX + dx;
+            translateY = lastTranslateY + dy;
+            updateTransform();
+        }
+
+        function endDrag() {
+            isDragging = false;
+            imageContainer.style.cursor = 'grab';
+        }
+
+        // ===== 滚轮缩放 =====
+        function wheelZoom(e) {
+            e.preventDefault();
+            const delta = e.deltaY > 0 ? -0.15 : 0.15;
+            const newScale = Math.min(Math.max(scale + delta, minScale), maxScale);
+            if (newScale > 1) {
+                previewImg.style.maxWidth = 'none';
+                previewImg.style.maxHeight = 'none';
+            } else {
+                previewImg.style.maxWidth = '95vw';
+                previewImg.style.maxHeight = '90vh';
+                translateX = 0;
+                translateY = 0;
+            }
+            scale = newScale;
+            updateTransform();
+        }
+
+        // ============================================================
+        // 4. 事件绑定
+        // ============================================================
+        document.getElementById('closeBtn').addEventListener('click', closePreview);
+        document.getElementById('prevBtn').addEventListener('click', (e) => {
             e.stopPropagation();
             showPreview(currentPreviewIndex - 1);
-        }
-
-        function nextImage(e) {
+        });
+        document.getElementById('nextBtn').addEventListener('click', (e) => {
             e.stopPropagation();
             showPreview(currentPreviewIndex + 1);
-        }
+        });
+        document.getElementById('zoomInBtn').addEventListener('click', zoomIn);
+        document.getElementById('zoomOutBtn').addEventListener('click', zoomOut);
+        document.getElementById('zoomResetBtn').addEventListener('click', resetZoom);
 
-        // ===== 绑定事件 =====
-        document.getElementById('closeBtn').addEventListener('click', closePreview);
-        document.getElementById('prevBtn').addEventListener('click', prevImage);
-        document.getElementById('nextBtn').addEventListener('click', nextImage);
+        // 鼠标拖拽
+        imageContainer.addEventListener('mousedown', startDrag);
+        document.addEventListener('mousemove', moveDrag);
+        document.addEventListener('mouseup', endDrag);
 
-        // 点击遮罩背景关闭
+        // 触摸拖拽
+        imageContainer.addEventListener('touchstart', startDrag, { passive: true });
+        document.addEventListener('touchmove', moveDrag, { passive: false });
+        document.addEventListener('touchend', endDrag, { passive: true });
+
+        // 滚轮缩放
+        imageContainer.addEventListener('wheel', wheelZoom, { passive: false });
+
+        // 点击背景关闭
         overlay.addEventListener('click', (e) => {
             if (e.target === overlay) closePreview();
         });
 
-        // 键盘事件
+        // 键盘
         document.addEventListener('keydown', (e) => {
             if (!overlay.classList.contains('active')) return;
             if (e.key === 'Escape') closePreview();
             if (e.key === 'ArrowLeft') showPreview(currentPreviewIndex - 1);
             if (e.key === 'ArrowRight') showPreview(currentPreviewIndex + 1);
+            if (e.key === '+' || e.key === '=') zoomIn();
+            if (e.key === '-') zoomOut();
+            if (e.key === '0') resetZoom();
         });
 
         // ============================================================
