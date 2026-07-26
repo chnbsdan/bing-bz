@@ -24,7 +24,7 @@ jobs:
           node-version: '20'
 
       - name: 安装依赖
-        run: npm install   # 把 npm ci 改成 npm install
+        run: npm install
 
       - name: 抓取壁纸
         run: npm run fetch
