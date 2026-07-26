@@ -1,17 +1,11 @@
-// scripts/fetch.js - 纯净版，只依赖 axios 和 sharp
+// scripts/fetch.js - 简洁版：每天只存一张图
 
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 const sharp = require('sharp');
 
-// --- 配置 ---
-// 目标地区列表
-const REGIONS = [
-    'zh-CN', 'en-US', 'ja-JP', 'de-DE', 'fr-FR', 
-    'es-ES', 'it-IT', 'pt-BR', 'en-IN', 'fr-CA'
-];
-const BING_API = 'https://cn.bing.com/HPImageArchive.aspx';
+const BING_API = 'https://cn.bing.com/HPImageArchive.aspx?format=js&n=1&mkt=zh-CN';
 const PICTURE_DIR = path.join(__dirname, '../picture');
 const WEBP_DIR = path.join(__dirname, '../webp');
 const DATA_DIR = path.join(__dirname, '../data');
@@ -22,184 +16,114 @@ const DATA_FILE = path.join(DATA_DIR, 'wallpapers.json');
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 });
 
-// --- 核心函数 ---
-
 /**
- * 获取图片唯一ID (基于 urlbase，这是必应图片的全球唯一标识)
+ * 获取指定日期的壁纸
+ * @param {number} idx 0=今天, -1=明天, 1=昨天...
  */
-function getImageId(image) {
-    if (image.urlbase) {
-        // urlbase 格式: /th?id=OHR.xxxxx_1920x1080
-        return image.urlbase.replace('/th?id=OHR.', '').replace(/_\d+x\d+$/, '');
-    }
-    // 备选方案
-    const url = image.url || '';
-    const match = url.match(/id=OHR\.([^_&]+)/);
-    return match ? match[1] : url.split('/').pop().split('_')[0];
+async function fetchWallpaper(idx = 0) {
+    const url = `https://cn.bing.com/HPImageArchive.aspx?format=js&n=1&idx=${idx}&mkt=zh-CN`;
+    const response = await axios.get(url, { timeout: 10000 });
+    const image = response.data.images[0];
+    if (!image) return null;
+    return {
+        date: image.startdate,
+        url: `https://cn.bing.com${image.url}`,
+        copyright: image.copyright || '',
+        copyrightLink: image.copyrightlink || '',
+        title: image.title || '',
+        description: image.description || ''
+    };
 }
 
 /**
- * 获取指定地区的图片列表
+ * 下载并保存图片
  */
-async function fetchRegionImages(mkt, n = 8) {
-    try {
-        const url = `${BING_API}?format=js&n=${n}&mkt=${mkt}`;
-        const response = await axios.get(url, { timeout: 10000 });
-        return (response.data.images || []).map(img => ({
-            ...img,
-            region: mkt
-        }));
-    } catch (error) {
-        console.warn(`⚠️ 获取地区 ${mkt} 失败:`, error.message);
-        return [];
-    }
-}
-
-/**
- * 下载并保存单张图片
- * 返回 null 表示已存在或下载失败
- */
-async function downloadAndSave(imageInfo) {
-    const dateStr = imageInfo.startdate;
+async function downloadWallpaper(wallpaper) {
+    const dateStr = wallpaper.date;
     const formattedDate = `${dateStr.slice(0,4)}-${dateStr.slice(4,6)}-${dateStr.slice(6,8)}`;
-    const imageUrl = `https://cn.bing.com${imageInfo.url}`;
-    const id = getImageId(imageInfo);
-    
-    // 文件名: 日期_ID.jpg
-    const baseFileName = `${dateStr}_${id}`;
-    const jpgPath = path.join(PICTURE_DIR, `${baseFileName}.jpg`);
-    const webpPath = path.join(WEBP_DIR, `${baseFileName}.webp`);
+    const jpgPath = path.join(PICTURE_DIR, `${formattedDate}.jpg`);
+    const webpPath = path.join(WEBP_DIR, `${formattedDate}.webp`);
 
-    // 如果已存在则跳过
+    // 已存在则跳过
     if (fs.existsSync(jpgPath) && fs.existsSync(webpPath)) {
         return null;
     }
 
-    try {
-        const response = await axios({
-            url: imageUrl,
-            method: 'GET',
-            responseType: 'arraybuffer',
-            timeout: 15000
-        });
-        const imageBuffer = Buffer.from(response.data);
+    const response = await axios({
+        url: wallpaper.url,
+        method: 'GET',
+        responseType: 'arraybuffer',
+        timeout: 15000
+    });
+    const buffer = Buffer.from(response.data);
 
-        await Promise.all([
-            sharp(imageBuffer).jpeg({ quality: 88, progressive: true }).toFile(jpgPath),
-            sharp(imageBuffer).webp({ quality: 82 }).toFile(webpPath)
-        ]);
+    await Promise.all([
+        sharp(buffer).jpeg({ quality: 88 }).toFile(jpgPath),
+        sharp(buffer).webp({ quality: 82 }).toFile(webpPath)
+    ]);
 
-        const result = {
-            date: formattedDate,
-            dateRaw: dateStr,
-            id: id,
-            region: imageInfo.region || 'unknown',
-            url: imageUrl,
-            copyright: imageInfo.copyright || '',
-            copyrightLink: imageInfo.copyrightlink || '',
-            title: imageInfo.title || '',
-            description: imageInfo.description || '',
-            jpg: `/picture/${baseFileName}.jpg`,
-            webp: `/webp/${baseFileName}.webp`
-        };
-
-        console.log(`✅ 已保存: ${formattedDate} [${imageInfo.region}] - ${id}`);
-        return result;
-
-    } catch (error) {
-        console.error(`❌ 下载失败 ${formattedDate}:`, error.message);
-        return null;
-    }
+    return {
+        date: formattedDate,
+        copyright: wallpaper.copyright,
+        copyrightLink: wallpaper.copyrightLink,
+        title: wallpaper.title,
+        description: wallpaper.description,
+        jpg: `/picture/${formattedDate}.jpg`,
+        webp: `/webp/${formattedDate}.webp`
+    };
 }
-
-// --- 主流程 ---
 
 async function main() {
     console.log('🚀 开始抓取必应壁纸...');
-    console.log(`📡 目标地区: ${REGIONS.join(', ')}`);
 
-    // 1. 获取所有地区的图片列表
-    const regionPromises = REGIONS.map(mkt => fetchRegionImages(mkt, 8));
-    const results = await Promise.all(regionPromises);
-    const allImages = results.flat();
-
-    if (allImages.length === 0) {
-        console.error('❌ 未获取到任何图片');
-        return;
+    // 要抓取的天数：未来7天 + 过去30天
+    const dates = [];
+    for (let i = -7; i <= 30; i++) {
+        dates.push(i);
     }
 
-    console.log(`📊 原始获取: ${allImages.length} 张`);
-
-    // 2. 按 id 去重 (保留第一次出现的)
-    const uniqueMap = new Map();
-    for (const img of allImages) {
-        const id = getImageId(img);
-        if (!uniqueMap.has(id)) {
-            uniqueMap.set(id, img);
+    const results = [];
+    for (const idx of dates) {
+        try {
+            const wallpaper = await fetchWallpaper(idx);
+            if (!wallpaper) {
+                console.log(`⏭️ idx=${idx} 无数据`);
+                continue;
+            }
+            const saved = await downloadWallpaper(wallpaper);
+            if (saved) {
+                results.push(saved);
+                console.log(`✅ ${saved.date}`);
+            } else {
+                console.log(`⏭️ ${wallpaper.date} 已存在`);
+            }
+            // 慢一点，别被ban
+            await new Promise(r => setTimeout(r, 500));
+        } catch (err) {
+            console.warn(`⚠️ idx=${idx} 失败:`, err.message);
         }
     }
-    const uniqueImages = Array.from(uniqueMap.values());
-    console.log(`🔄 去重后: ${uniqueImages.length} 张唯一图片`);
 
-    // 3. 下载并转换
-    let successCount = 0;
-    for (const img of uniqueImages) {
-        const result = await downloadAndSave(img);
-        if (result) successCount++;
-        // 避免请求过快
-        await new Promise(r => setTimeout(r, 200));
-    }
-    console.log(`💾 成功下载: ${successCount} 张新图片`);
-
-    // 4. 读取已有数据，合并去重
-    let existingData = [];
+    // 读取旧数据，合并
+    let allData = [];
     if (fs.existsSync(DATA_FILE)) {
         try {
-            existingData = JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'));
-        } catch (e) {
-            console.warn('读取旧数据失败，将重建');
-        }
+            allData = JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'));
+        } catch (e) {}
     }
 
-    // 用 id 作为 key，新数据覆盖旧数据
-    const dataMap = new Map();
-    existingData.forEach(item => dataMap.set(item.id, item));
-    // 把新下载成功的图片加入
-    for (const img of uniqueImages) {
-        const id = getImageId(img);
-        const jpgPath = path.join(PICTURE_DIR, `${img.startdate}_${id}.jpg`);
-        if (fs.existsSync(jpgPath)) {
-            const formattedDate = `${img.startdate.slice(0,4)}-${img.startdate.slice(4,6)}-${img.startdate.slice(6,8)}`;
-            dataMap.set(id, {
-                date: formattedDate,
-                dateRaw: img.startdate,
-                id: id,
-                region: img.region || 'unknown',
-                url: `https://cn.bing.com${img.url}`,
-                copyright: img.copyright || '',
-                copyrightLink: img.copyrightlink || '',
-                title: img.title || '',
-                description: img.description || '',
-                jpg: `/picture/${img.startdate}_${id}.jpg`,
-                webp: `/webp/${img.startdate}_${id}.webp`
-            });
-        }
-    }
+    // 用日期去重
+    const map = new Map();
+    allData.forEach(item => map.set(item.date, item));
+    results.forEach(item => map.set(item.date, item));
 
-    const finalData = Array.from(dataMap.values())
+    const finalData = Array.from(map.values())
         .sort((a, b) => b.date.localeCompare(a.date));
 
     fs.writeFileSync(DATA_FILE, JSON.stringify(finalData, null, 2));
-    console.log(`📝 元数据已更新，共 ${finalData.length} 条记录`);
 
-    // 5. 统计
-    const jpgCount = fs.readdirSync(PICTURE_DIR).filter(f => f.endsWith('.jpg')).length;
-    const webpCount = fs.readdirSync(WEBP_DIR).filter(f => f.endsWith('.webp')).length;
-    console.log(`📁 总计: 原图 ${jpgCount} 张, WebP ${webpCount} 张`);
-    console.log('✅ 全部完成!');
+    console.log(`📝 共 ${finalData.length} 条记录`);
+    console.log('✅ 完成!');
 }
 
-main().catch(error => {
-    console.error('💥 程序异常:', error);
-    process.exit(1);
-});
+main().catch(console.error);
