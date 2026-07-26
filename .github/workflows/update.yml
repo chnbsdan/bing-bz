@@ -2,8 +2,8 @@ name: 每日更新壁纸
 
 on:
   schedule:
-    - cron: '0 1 * * *'   # 每天UTC 1点（北京时间9点）
-  workflow_dispatch:       # 手动触发
+    - cron: '0 1 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -24,7 +24,7 @@ jobs:
           node-version: '20'
 
       - name: 安装依赖
-        run: npm ci
+        run: npm install   # 把 npm ci 改成 npm install
 
       - name: 抓取壁纸
         run: npm run fetch
