@@ -1,5 +1,5 @@
 // functions/api/index.js
-export default async function onRequest(context) {
+export async function onRequest(context) {
   const { request } = context;
   const url = new URL(request.url);
   const base = `${url.protocol}//${url.host}`;
