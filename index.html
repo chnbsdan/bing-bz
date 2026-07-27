@@ -32,7 +32,8 @@
 
         .card {
             position: relative;
-            aspect-ratio: 16 / 9;
+            aspect-ratio: 16 / 14;
+            /* 调高：从 16/9 改为 16/10 */
             background: #0d0d1a;
             overflow: hidden;
             cursor: pointer;
@@ -341,6 +342,9 @@
             .grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+            .card {
+                aspect-ratio: 16 / 11;
+            }
             .card.featured .logo {
                 font-size: 18px;
             }
@@ -452,6 +456,7 @@
         const PAGE_SIZE = 42;
         let isLoading = false;
         let hasMore = true;
+        let isAllLoaded = false;
 
         const grid = document.getElementById('grid');
         const overlay = document.getElementById('overlay');
@@ -485,8 +490,12 @@
                     return;
                 }
                 allData.sort((a, b) => b.date.localeCompare(a.date));
-                hasMore = allData.length > 0;
+                hasMore = true;
+                isAllLoaded = false;
                 currentPage = 0;
+                // 移除可能存在的旧loader
+                const oldLoader = grid.querySelector('.loader');
+                if (oldLoader) oldLoader.remove();
                 renderMore();
             } catch (err) {
                 console.error('加载失败:', err);
@@ -496,21 +505,33 @@
 
         // ===== 分页渲染 =====
         function renderMore() {
-            if (isLoading || !hasMore) return;
-            isLoading = true;
+            if (isLoading) return;
+            if (isAllLoaded) {
+                removeLoader();
+                return;
+            }
 
             const start = currentPage * PAGE_SIZE;
+            if (start >= allData.length) {
+                isAllLoaded = true;
+                removeLoader();
+                return;
+            }
+
+            isLoading = true;
+
             const end = Math.min(start + PAGE_SIZE, allData.length);
             const slice = allData.slice(start, end);
 
             if (slice.length === 0) {
-                hasMore = false;
+                isAllLoaded = true;
                 isLoading = false;
+                removeLoader();
                 return;
             }
 
-            const existingLoader = grid.querySelector('.loader');
-            if (existingLoader) existingLoader.remove();
+            // 移除加载指示器
+            removeLoader();
 
             slice.forEach((item, index) => {
                 const realIndex = start + index;
@@ -547,9 +568,11 @@
             currentPage++;
             isLoading = false;
 
-            if (end >= allData.length) {
-                hasMore = false;
+            // 检查是否还有更多
+            if (currentPage * PAGE_SIZE >= allData.length) {
+                isAllLoaded = true;
             } else {
+                // 添加底部加载指示器
                 const loader = document.createElement('div');
                 loader.className = 'loader';
                 loader.id = 'bottomLoader';
@@ -558,18 +581,31 @@
             }
         }
 
+        function removeLoader() {
+            const loader = grid.querySelector('.loader');
+            if (loader) loader.remove();
+        }
+
         // ===== 滚动监听 =====
+        let scrollTimer = null;
+
         function handleScroll() {
-            const scrollY = window.scrollY;
-            const windowHeight = window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight;
-            if (scrollY + windowHeight >= documentHeight - 300) {
-                renderMore();
-            }
+            if (scrollTimer) return;
+            scrollTimer = setTimeout(() => {
+                scrollTimer = null;
+                const scrollY = window.scrollY;
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight;
+
+                if (scrollY + windowHeight >= documentHeight - 400) {
+                    renderMore();
+                }
+            }, 100);
         }
 
         // ===== 空状态 =====
         function showEmpty() {
+            removeLoader();
             const empty = document.createElement('div');
             empty.className = 'empty';
             empty.innerHTML = `
@@ -641,6 +677,8 @@
             if (scale <= 1) {
                 previewImg.style.maxWidth = '95vw';
                 previewImg.style.maxHeight = '90vh';
+                translateX = 0;
+                translateY = 0;
             }
             updateTransform();
         }
@@ -732,6 +770,10 @@
         });
 
         window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', () => {
+            // 窗口变化时重新检查滚动
+            setTimeout(handleScroll, 200);
+        });
 
         // ============================================================
         // 5. 启动
