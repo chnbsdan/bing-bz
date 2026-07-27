@@ -1,4 +1,4 @@
-// scripts/fetch.js - 完整版
+// scripts/fetch.js - 完整版（统一 UHD 格式 + 累加到 urls.txt 和 copyrights.txt）
 
 const fs = require('fs');
 const path = require('path');
@@ -66,6 +66,22 @@ function daysDiff(dateStr) {
     return Math.floor((today - target) / (1000 * 60 * 60 * 24));
 }
 
+// ============ 链接格式化：统一转成 UHD ============
+
+function formatToUHD(url) {
+    if (!url) return url;
+    // 如果已经是 UHD，直接返回
+    if (url.includes('_UHD.jpg')) return url;
+    
+    // 替换 _1920x1080 或 _1366x768 等为 _UHD
+    let formatted = url.replace(/_\d+x\d+\.jpg/, '_UHD.jpg');
+    
+    // 去掉 &rf=...&pid=hp 等额外参数
+    formatted = formatted.split('&')[0];
+    
+    return formatted;
+}
+
 // ============ API 请求 ============
 
 async function fetchBingWallpaper(offset) {
@@ -82,6 +98,9 @@ async function fetchBingWallpaper(offset) {
         const apiDate = parseApiDate(image.startdate);
         let imageUrl = `https://cn.bing.com${image.url}`;
         
+        // ★★★ 统一转成 UHD 格式 ★★★
+        imageUrl = formatToUHD(imageUrl);
+        
         if (!imageUrl.includes('th?id=OHR.')) {
             console.log(`⏭️ offset=${offset} 图片URL异常，跳过`);
             return { valid: false, data: null, date: expectedDate };
@@ -91,6 +110,14 @@ async function fetchBingWallpaper(offset) {
             const diff = getDateDiff(expectedDate, apiDate);
             if (diff > 1) {
                 console.log(`⏭️ offset=${offset} 日期不匹配: 期望 ${expectedDate}, 实际 ${apiDate}, 跳过`);
+                return { valid: false, data: null, date: expectedDate };
+            }
+        }
+
+        if (offset > 0 && apiDate) {
+            const today = getTargetDate(0);
+            if (apiDate < today) {
+                console.log(`⏭️ offset=${offset} 返回的图片日期 ${apiDate} 比今天还早，跳过`);
                 return { valid: false, data: null, date: expectedDate };
             }
         }
@@ -203,6 +230,7 @@ function loadHistoricalData() {
 // ============ 清理过期本地图片 ============
 
 function cleanOldImages() {
+    if (!fs.existsSync(PICTURE_DIR)) return;
     const jpgFiles = fs.readdirSync(PICTURE_DIR).filter(f => f.endsWith('.jpg'));
     const webpFiles = fs.readdirSync(WEBP_DIR).filter(f => f.endsWith('.webp'));
     let deleted = 0;
@@ -256,6 +284,8 @@ async function main() {
             const copyrightAdded = prependToFile(COPYRIGHTS_FILE, data.copyright);
             if (urlAdded && copyrightAdded) {
                 console.log(`   📝 已添加到 urls.txt 和 copyrights.txt`);
+            } else {
+                console.log(`   ⏭️ 已存在，跳过添加`);
             }
         }
         await new Promise(r => setTimeout(r, 300));
@@ -268,12 +298,10 @@ async function main() {
     // ===== 3. 合并数据（历史 + 新抓取） =====
     const dataMap = new Map();
     
-    // 先加历史数据
     historicalData.forEach(item => {
         if (item.date) dataMap.set(item.date, item);
     });
     
-    // 新数据覆盖（确保最新）
     newResults.forEach(item => {
         if (item.date) dataMap.set(item.date, item);
     });
@@ -291,12 +319,13 @@ async function main() {
     cleanOldImages();
 
     // ===== 6. 统计 =====
-    const jpgCount = fs.readdirSync(PICTURE_DIR).filter(f => f.endsWith('.jpg')).length;
-    const webpCount = fs.readdirSync(WEBP_DIR).filter(f => f.endsWith('.webp')).length;
+    const jpgCount = fs.existsSync(PICTURE_DIR) ? fs.readdirSync(PICTURE_DIR).filter(f => f.endsWith('.jpg')).length : 0;
+    const webpCount = fs.existsSync(WEBP_DIR) ? fs.readdirSync(WEBP_DIR).filter(f => f.endsWith('.webp')).length : 0;
     console.log(`📁 本地图片: ${jpgCount} 张 jpg, ${webpCount} 张 webp`);
     console.log('✅ 完成!');
 }
 
+// ============ 执行 ============
 main().catch(error => {
     console.error('💥 程序异常:', error);
     process.exit(1);
