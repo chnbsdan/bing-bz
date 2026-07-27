@@ -1041,7 +1041,7 @@
                          loading="lazy" />
                     <div class="info">
                         <div class="date">${item.date}</div>
-                        <div class="title">${item.title || item.copyright || '无标题'}</div>
+                        <div class="title">${item.copyright || '无标题'}</div>
                         <div class="copyright">${item.copyright || ''}</div>
                     </div>
                 `;
@@ -1124,7 +1124,7 @@
             }
 
             filteredData = allData.filter(item => {
-                const title = (item.title || '').toLowerCase();
+                const title = (item.copyright || '').toLowerCase();
                 const copyright = (item.copyright || '').toLowerCase();
                 const date = item.date || '';
                 const dateClean = date.replace(/-/g, '');
@@ -1204,7 +1204,7 @@
 
             const imgSrc = getImageUrl(currentPreviewItem.jpg || currentPreviewItem.webp || '');
             previewImg.src = imgSrc;
-            previewTitle.textContent = currentPreviewItem.title || currentPreviewItem.copyright || '';
+            previewTitle.textContent = currentPreviewItem.copyright || '';
             previewDate.textContent = currentPreviewItem.date || '';
             updateActionButtons();
             resetZoom();
