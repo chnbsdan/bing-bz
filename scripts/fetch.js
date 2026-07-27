@@ -1,4 +1,4 @@
-// scripts/fetch.js - 完整版（60天内本地路径，60天外CDN链接）
+// scripts/fetch.js - 完整版（本地存图片，但 wallpapers.json 全部用 CDN 链接）
 
 const fs = require('fs');
 const path = require('path');
@@ -9,7 +9,7 @@ const sharp = require('sharp');
 const PICTURE_DIR = path.join(__dirname, '../picture');
 const WEBP_DIR = path.join(__dirname, '../webp');
 const DATA_DIR = path.join(__dirname, '../data');
-const PAGES_DIR = path.join(DATA_DIR, 'pages');      // ← 新增
+const PAGES_DIR = path.join(DATA_DIR, 'pages');
 const DATA_FILE = path.join(DATA_DIR, 'wallpapers.json');
 const URLS_FILE = path.join(__dirname, '../urls.txt');
 const COPYRIGHTS_FILE = path.join(__dirname, '../copyrights.txt');
@@ -18,7 +18,7 @@ const KEEP_DAYS = 60;
 const PAGE_SIZE = 42;
 
 // 确保目录存在
-[PICTURE_DIR, WEBP_DIR, DATA_DIR].forEach(dir => {
+[PICTURE_DIR, WEBP_DIR, DATA_DIR, PAGES_DIR].forEach(dir => {
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 });
 
@@ -123,23 +123,15 @@ async function fetchBingWallpaper(offset) {
     }
 }
 
-// ============ 下载并保存壁纸 ============
+// ============ 下载并保存壁纸到本地 ============
 
 async function downloadWallpaper(wallpaper, dateStr) {
     const jpgPath = path.join(PICTURE_DIR, `${dateStr}.jpg`);
     const webpPath = path.join(WEBP_DIR, `${dateStr}.webp`);
 
-    // 如果已存在则跳过，但返回本地路径
+    // 如果已存在则跳过
     if (fs.existsSync(jpgPath) && fs.existsSync(webpPath)) {
-        return {
-            date: dateStr,
-            copyright: wallpaper.copyright,
-            copyrightLink: wallpaper.copyrightLink,
-            title: wallpaper.title,
-            description: wallpaper.description,
-            jpg: `/picture/${dateStr}.jpg`,
-            webp: `/webp/${dateStr}.webp`
-        };
+        return true; // 返回 true 表示已存在
     }
 
     try {
@@ -156,20 +148,11 @@ async function downloadWallpaper(wallpaper, dateStr) {
             sharp(buffer).webp({ quality: 82 }).toFile(webpPath)
         ]);
 
-        // ★★★ 返回本地路径 ★★★
-        return {
-            date: dateStr,
-            copyright: wallpaper.copyright,
-            copyrightLink: wallpaper.copyrightLink,
-            title: wallpaper.title,
-            description: wallpaper.description,
-            jpg: `/picture/${dateStr}.jpg`,
-            webp: `/webp/${dateStr}.webp`
-        };
+        return true;
 
     } catch (error) {
         console.error(`❌ 下载失败 ${dateStr}:`, error.message);
-        return null;
+        return false;
     }
 }
 
@@ -200,10 +183,10 @@ function loadHistoricalData() {
         const m = String(d.getMonth() + 1).padStart(2, '0');
         const day = String(d.getDate()).padStart(2, '0');
         const dateStr = `${y}-${m}-${day}`;
-        const title = item.copyright.split('©')[0].trim() || '';
+        const title = item.copyright || '';
         const copyrightLink = `https://www.bing.com/search?q=${encodeURIComponent(title)}&form=hpcapt&mkt=zh-cn`;
         
-        // ★★★ 先默认用CDN链接，后续合并时会根据日期替换 ★★★
+        // ★★★ 全部用 CDN 链接 ★★★
         return {
             date: dateStr,
             copyright: item.copyright,
@@ -285,7 +268,7 @@ async function main() {
     console.log(`📅 今天是: ${getTargetDate(0)}`);
     console.log('');
 
-    // 1. 抓取今天和明天
+    // 1. 抓取今天和明天（正常下载图片到本地）
     const offsets = [0, 1];
     const newResults = [];
 
@@ -293,9 +276,20 @@ async function main() {
         const { valid, data, date } = await fetchBingWallpaper(offset);
         if (!valid || !data) continue;
 
-        const saved = await downloadWallpaper(data, date);
-        if (saved) {
-            newResults.push(saved);
+        // ★★★ 正常下载图片到本地 ★★★
+        const downloaded = await downloadWallpaper(data, date);
+        if (downloaded) {
+            // ★★★ 存入 wallpapers.json 时，强制用 CDN 链接 ★★★
+            const cdnEntry = {
+                date: date,
+                copyright: data.copyright,
+                copyrightLink: data.copyrightLink,
+                title: data.copyright || '',
+                description: data.description || '',
+                jpg: data.url,      // ← CDN 链接
+                webp: data.url      // ← CDN 链接
+            };
+            newResults.push(cdnEntry);
             console.log(`✅ ${date}`);
             prependToFile(URLS_FILE, data.url);
             prependToFile(COPYRIGHTS_FILE, data.copyright);
@@ -307,35 +301,13 @@ async function main() {
     const historicalData = loadHistoricalData();
     console.log(`📂 历史数据: ${historicalData.length} 条`);
 
-    // ★★★ 3. 合并数据：60天内的用本地路径 ★★★
-    const today = new Date();
+    // ★★★ 3. 合并数据：全部用 CDN 链接 ★★★
     const dataMap = new Map();
     
-    // 先处理历史数据
     historicalData.forEach(item => {
-        if (!item.date) return;
-        const dateObj = new Date(item.date);
-        const diffDays = Math.floor((today - dateObj) / (1000 * 60 * 60 * 24));
-        
-        // 如果在60天内，检查本地文件是否存在
-        if (diffDays <= KEEP_DAYS) {
-            const jpgPath = path.join(PICTURE_DIR, `${item.date}.jpg`);
-            const webpPath = path.join(WEBP_DIR, `${item.date}.webp`);
-            if (fs.existsSync(jpgPath) && fs.existsSync(webpPath)) {
-                // ★★★ 本地存在 → 用本地路径 ★★★
-                dataMap.set(item.date, {
-                    ...item,
-                    jpg: `/picture/${item.date}.jpg`,
-                    webp: `/webp/${item.date}.webp`
-                });
-                return;
-            }
-        }
-        // 超过60天或本地不存在 → 保持CDN链接
-        dataMap.set(item.date, item);
+        if (item.date) dataMap.set(item.date, item);
     });
     
-    // 新数据覆盖（新数据都是本地路径）
     newResults.forEach(item => {
         if (item.date) dataMap.set(item.date, item);
     });
@@ -349,7 +321,7 @@ async function main() {
     fs.writeFileSync(DATA_FILE, JSON.stringify(finalData, null, 2));
     console.log(`📝 wallpapers.json 已保存`);
 
-    // 5. 清理过期图片
+    // 5. 清理过期图片（保留60天）
     cleanOldImages();
 
     // 6. 生成分页 JSON
@@ -359,6 +331,7 @@ async function main() {
     const jpgCount = fs.existsSync(PICTURE_DIR) ? fs.readdirSync(PICTURE_DIR).filter(f => f.endsWith('.jpg')).length : 0;
     const webpCount = fs.existsSync(WEBP_DIR) ? fs.readdirSync(WEBP_DIR).filter(f => f.endsWith('.webp')).length : 0;
     console.log(`📁 本地图片: ${jpgCount} 张 jpg, ${webpCount} 张 webp`);
+    console.log(`📁 wallpapers.json 全部使用 CDN 链接，共 ${finalData.length} 张`);
     console.log('✅ 完成!');
 }
 
