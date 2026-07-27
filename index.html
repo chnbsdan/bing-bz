@@ -17,26 +17,34 @@
             min-height: 100vh;
             background: #0d0d1a;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            overflow: hidden;
         }
 
+        /* ===== 网格容器 ===== */
+        .app {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        /* ===== 网格：7列 ===== */
         .grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 0;
-            width: 100%;
-            height: 100vh;
-            overflow-y: auto;
+            gap: 6px;
+            flex: 1;
             align-content: start;
+            overflow: hidden;
         }
 
         .card {
             position: relative;
-            aspect-ratio: 16 / 14;
-            /* 调高：从 16/9 改为 16/10 */
-            background: #0d0d1a;
+            aspect-ratio: 16 / 11;
+            background: #1a1a2e;
             overflow: hidden;
             cursor: pointer;
+            border-radius: 4px;
         }
 
         .card img {
@@ -44,12 +52,6 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .card img.loaded {
-            opacity: 1;
         }
 
         .card .info {
@@ -57,8 +59,8 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 12px 10px 8px;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+            padding: 10px 8px 6px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
             color: #fff;
             opacity: 0;
             transition: opacity 0.25s ease;
@@ -70,29 +72,27 @@
         }
 
         .card .info .date {
-            font-size: 11px;
+            font-size: 10px;
             color: rgba(255, 255, 255, 0.5);
-            font-weight: 300;
         }
 
         .card .info .title {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 500;
-            margin-top: 1px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
 
         .card .info .copyright {
-            font-size: 10px;
+            font-size: 9px;
             color: rgba(255, 255, 255, 0.35);
-            margin-top: 1px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
 
+        /* ===== 第一个卡片：网站标识 ===== */
         .card.featured {
             background: linear-gradient(135deg, #1a1a3e, #0d0d2b);
             display: flex;
@@ -101,8 +101,9 @@
             justify-content: center;
             text-align: center;
             color: #fff;
-            padding: 16px;
+            padding: 12px;
             cursor: default;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .card.featured:hover .info {
@@ -110,7 +111,7 @@
         }
 
         .card.featured .logo {
-            font-size: 26px;
+            font-size: 22px;
             font-weight: 300;
             letter-spacing: 2px;
         }
@@ -121,12 +122,59 @@
         }
 
         .card.featured .sub {
-            font-size: 11px;
+            font-size: 10px;
             color: rgba(255, 255, 255, 0.2);
-            margin-top: 4px;
-            letter-spacing: 4px;
+            margin-top: 2px;
+            letter-spacing: 3px;
         }
 
+        /* ===== 分页控制栏 ===== */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            padding: 10px 0;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .pagination button {
+            background: rgba(255, 255, 255, 0.08);
+            border: none;
+            color: #e0e0e0;
+            padding: 8px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.2s;
+            min-width: 80px;
+        }
+
+        .pagination button:hover:not(:disabled) {
+            background: rgba(79, 195, 247, 0.25);
+            color: #4fc3f7;
+        }
+
+        .pagination button:disabled {
+            opacity: 0.2;
+            cursor: not-allowed;
+        }
+
+        .pagination .page-info {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 14px;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        .pagination .total-info {
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 12px;
+        }
+
+        /* ===== 空状态 ===== */
         .empty {
             grid-column: 1 / -1;
             text-align: center;
@@ -139,33 +187,7 @@
             margin-bottom: 10px;
         }
 
-        .loader {
-            grid-column: 1 / -1;
-            text-align: center;
-            padding: 20px 0;
-            color: rgba(255, 255, 255, 0.2);
-            font-size: 13px;
-            letter-spacing: 2px;
-        }
-
-        .loader .spinner {
-            display: inline-block;
-            width: 18px;
-            height: 18px;
-            border: 2px solid rgba(255, 255, 255, 0.08);
-            border-top-color: #4fc3f7;
-            border-radius: 50%;
-            animation: spin 0.7s linear infinite;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
+        /* ===== 全屏预览遮罩（保持不变） ===== */
         .overlay {
             display: none;
             position: fixed;
@@ -326,6 +348,7 @@
             right: 10px;
         }
 
+        /* ===== 响应式 ===== */
         @media (max-width: 1200px) {
             .grid {
                 grid-template-columns: repeat(5, 1fr);
@@ -341,15 +364,29 @@
         @media (max-width: 500px) {
             .grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 4px;
             }
             .card {
-                aspect-ratio: 16 / 11;
+                aspect-ratio: 16 / 12;
             }
             .card.featured .logo {
-                font-size: 18px;
+                font-size: 16px;
             }
             .card.featured .sub {
-                font-size: 9px;
+                font-size: 8px;
+            }
+            .pagination {
+                gap: 8px;
+                flex-wrap: wrap;
+            }
+            .pagination button {
+                padding: 6px 12px;
+                font-size: 12px;
+                min-width: 60px;
+            }
+            .pagination .page-info {
+                font-size: 12px;
+                min-width: 80px;
             }
             .overlay .arrow {
                 font-size: 28px;
@@ -381,34 +418,33 @@
                 bottom: 20px;
             }
         }
-
-        .grid::-webkit-scrollbar {
-            width: 4px;
-        }
-        .grid::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        .grid::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 4px;
-        }
     </style>
 </head>
 <body>
 
-    <!-- ===== 图片网格 ===== -->
-    <div class="grid" id="grid">
-        <div class="card featured">
-            <div class="logo">Bing <span>Wallpaper</span></div>
-            <div class="sub">每日精选</div>
+    <div class="app">
+        <!-- ===== 图片网格 ===== -->
+        <div class="grid" id="grid">
+            <div class="card featured">
+                <div class="logo">Bing <span>Wallpaper</span></div>
+                <div class="sub">每日精选</div>
+            </div>
+        </div>
+
+        <!-- ===== 分页控制栏 ===== -->
+        <div class="pagination">
+            <button id="prevBtn" disabled>‹ 上一页</button>
+            <span class="page-info" id="pageInfo">第 1 / 1 页</span>
+            <span class="total-info" id="totalInfo">共 0 张</span>
+            <button id="nextBtn">下一页 ›</button>
         </div>
     </div>
 
     <!-- ===== 全屏预览遮罩 ===== -->
     <div class="overlay" id="overlay">
         <span class="close" id="closeBtn">&times;</span>
-        <span class="arrow arrow-left" id="prevBtn">‹</span>
-        <span class="arrow arrow-right" id="nextBtn">›</span>
+        <span class="arrow arrow-left" id="prevPreviewBtn">‹</span>
+        <span class="arrow arrow-right" id="nextPreviewBtn">›</span>
         <div class="image-container" id="imageContainer">
             <img class="preview-image" id="previewImg" src="" alt="预览" />
         </div>
@@ -426,7 +462,7 @@
 
     <script>
         // ============================================================
-        // 1. 路径适配（CF 上用不到，但保留无害）
+        // 1. 路径适配
         // ============================================================
         function getBasePath() {
             const path = window.location.pathname;
@@ -451,11 +487,9 @@
         // 2. 数据 + 分页
         // ============================================================
         let allData = [];
-        let currentPreviewIndex = 0;
         let currentPage = 0;
-        const PAGE_SIZE = 42;
-        let isLoading = false;
-        let isAllLoaded = false;
+        const PAGE_SIZE = 42; // 7列 × 6行
+        let currentPreviewIndex = 0;
 
         const grid = document.getElementById('grid');
         const overlay = document.getElementById('overlay');
@@ -464,6 +498,10 @@
         const previewTitle = document.getElementById('previewTitle');
         const previewDate = document.getElementById('previewDate');
         const zoomLevel = document.getElementById('zoomLevel');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const pageInfo = document.getElementById('pageInfo');
+        const totalInfo = document.getElementById('totalInfo');
 
         // 缩放状态
         let scale = 1;
@@ -489,43 +527,36 @@
                     return;
                 }
                 allData.sort((a, b) => b.date.localeCompare(a.date));
-                isAllLoaded = false;
+                totalInfo.textContent = `共 ${allData.length} 张`;
                 currentPage = 0;
-                removeLoader();
-                renderMore();
+                renderPage(0);
             } catch (err) {
                 console.error('加载失败:', err);
                 showEmpty();
             }
         }
 
-        // ===== 分页渲染 =====
-        function renderMore() {
-            if (isLoading) return;
-            if (isAllLoaded) {
-                removeLoader();
-                return;
-            }
+        // ===== 渲染指定页 =====
+        function renderPage(page) {
+            const totalPages = Math.ceil(allData.length / PAGE_SIZE);
+            if (page < 0) page = 0;
+            if (page >= totalPages) page = totalPages - 1;
+            if (page < 0 || totalPages === 0) return;
 
-            const start = currentPage * PAGE_SIZE;
-            if (start >= allData.length) {
-                isAllLoaded = true;
-                removeLoader();
-                return;
-            }
-
-            isLoading = true;
+            currentPage = page;
+            const start = page * PAGE_SIZE;
             const end = Math.min(start + PAGE_SIZE, allData.length);
             const slice = allData.slice(start, end);
 
+            // 移除旧的卡片（保留第一个 featured）
+            const oldCards = grid.querySelectorAll('.card:not(.featured)');
+            oldCards.forEach(el => el.remove());
+
+            // 如果当前页没有数据，显示空状态
             if (slice.length === 0) {
-                isAllLoaded = true;
-                isLoading = false;
-                removeLoader();
+                showEmpty();
                 return;
             }
-
-            removeLoader();
 
             slice.forEach((item, index) => {
                 const realIndex = start + index;
@@ -544,14 +575,6 @@
                     </div>
                 `;
 
-                const img = card.querySelector('img');
-                img.addEventListener('load', () => {
-                    img.classList.add('loaded');
-                });
-                if (img.complete) {
-                    img.classList.add('loaded');
-                }
-
                 card.addEventListener('click', () => {
                     openPreview(realIndex);
                 });
@@ -559,42 +582,26 @@
                 grid.appendChild(card);
             });
 
-            currentPage++;
-            isLoading = false;
-
-            if (currentPage * PAGE_SIZE >= allData.length) {
-                isAllLoaded = true;
-            } else {
-                const loader = document.createElement('div');
-                loader.className = 'loader';
-                loader.id = 'bottomLoader';
-                loader.innerHTML = `<span class="spinner"></span> 加载更多...`;
-                grid.appendChild(loader);
-            }
+            // 更新分页按钮状态
+            prevBtn.disabled = currentPage === 0;
+            nextBtn.disabled = currentPage >= totalPages - 1;
+            pageInfo.textContent = `第 ${currentPage + 1} / ${totalPages} 页`;
         }
 
-        function removeLoader() {
-            const loader = grid.querySelector('.loader');
-            if (loader) loader.remove();
-        }
+        // ===== 分页按钮事件 =====
+        prevBtn.addEventListener('click', () => {
+            if (currentPage > 0) renderPage(currentPage - 1);
+        });
 
-        // ===== ★★★ 核心修复：监听 .grid 的滚动事件 ★★★ =====
-        function handleGridScroll() {
-            if (isLoading || isAllLoaded) return;
-
-            const scrollTop = grid.scrollTop;
-            const clientHeight = grid.clientHeight;
-            const scrollHeight = grid.scrollHeight;
-
-            // 滚动到距离底部 400px 时触发加载
-            if (scrollTop + clientHeight >= scrollHeight - 400) {
-                renderMore();
-            }
-        }
+        nextBtn.addEventListener('click', () => {
+            const totalPages = Math.ceil(allData.length / PAGE_SIZE);
+            if (currentPage < totalPages - 1) renderPage(currentPage + 1);
+        });
 
         // ===== 空状态 =====
         function showEmpty() {
-            removeLoader();
+            const oldCards = grid.querySelectorAll('.card:not(.featured)');
+            oldCards.forEach(el => el.remove());
             const empty = document.createElement('div');
             empty.className = 'empty';
             empty.innerHTML = `
@@ -602,10 +609,14 @@
                 <div>暂无壁纸数据</div>
             `;
             grid.appendChild(empty);
+            prevBtn.disabled = true;
+            nextBtn.disabled = true;
+            pageInfo.textContent = '第 0 / 0 页';
+            totalInfo.textContent = '共 0 张';
         }
 
         // ============================================================
-        // 3. 全屏预览（保持不变）
+        // 3. 全屏预览
         // ============================================================
         function openPreview(index) {
             if (allData.length === 0) return;
@@ -721,11 +732,11 @@
         // 4. 事件绑定
         // ============================================================
         document.getElementById('closeBtn').addEventListener('click', closePreview);
-        document.getElementById('prevBtn').addEventListener('click', (e) => {
+        document.getElementById('prevPreviewBtn').addEventListener('click', (e) => {
             e.stopPropagation();
             showPreview(currentPreviewIndex - 1);
         });
-        document.getElementById('nextBtn').addEventListener('click', (e) => {
+        document.getElementById('nextPreviewBtn').addEventListener('click', (e) => {
             e.stopPropagation();
             showPreview(currentPreviewIndex + 1);
         });
@@ -755,14 +766,6 @@
             if (e.key === '+' || e.key === '=') zoomIn();
             if (e.key === '-') zoomOut();
             if (e.key === '0') resetZoom();
-        });
-
-        // ===== ★★★ 核心修复：监听 .grid 容器的滚动事件 ★★★ =====
-        grid.addEventListener('scroll', handleGridScroll);
-
-        // 也监听窗口变化，重新检查
-        window.addEventListener('resize', () => {
-            setTimeout(handleGridScroll, 200);
         });
 
         // ============================================================
