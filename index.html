@@ -247,7 +247,7 @@
             overflow: hidden;
         }
 
-        /* ===== 网格：7列，4px间隙（对标 bing.ioliu.cn） ===== */
+        /* ===== 网格：7列，4px间隙 ===== */
         .grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
@@ -258,9 +258,11 @@
             padding: 4px;
             padding-bottom: 60px;
             scroll-behavior: smooth;
+            /* ★★★ 关键修复：防止 flex 子项溢出 ★★★ */
+            min-height: 0;
         }
 
-        /* ===== 卡片：16:9（对标 bing.ioliu.cn） ===== */
+        /* ===== 卡片：16:9 ===== */
         .card {
             position: relative;
             border-radius: 4px;
@@ -278,7 +280,7 @@
             transition: filter 0.5s ease, transform 0.5s ease;
         }
 
-        /* ===== 占位图模糊（对标 bing.ioliu.cn） ===== */
+        /* ===== 占位图模糊 ===== */
         .card img.placeholder {
             filter: blur(8px) brightness(0.8);
             transform: scale(1.04);
@@ -289,7 +291,7 @@
             transform: scale(1);
         }
 
-        /* ===== 悬停信息（对标 bing.ioliu.cn） ===== */
+        /* ===== 悬停信息 ===== */
         .card .info {
             position: absolute;
             bottom: 0;
@@ -836,7 +838,7 @@
         });
 
         // ============================================================
-        // 5. 数据加载 + 滚动追加（对标 bing.ioliu.cn）
+        // 5. 数据加载 + 滚动追加
         // ============================================================
         let allData = [];
         let filteredData = [];
@@ -909,6 +911,7 @@
             if (isLoading) return;
             const data = filteredData.length > 0 ? filteredData : allData;
             const totalPages = Math.ceil(data.length / PAGE_SIZE);
+            
             if (currentPage >= totalPages) {
                 hasMore = false;
                 updateLoader();
@@ -920,9 +923,16 @@
             const end = Math.min(start + PAGE_SIZE, data.length);
             const items = data.slice(start, end);
 
-            // 移除 loader
+            // 移除旧的 loader
             const oldLoader = grid.querySelector('.loader');
             if (oldLoader) oldLoader.remove();
+
+            if (items.length === 0) {
+                hasMore = false;
+                isLoading = false;
+                updateLoader();
+                return;
+            }
 
             items.forEach((item, index) => {
                 const realIndex = start + index;
@@ -930,8 +940,6 @@
                 card.className = 'card';
                 const imgSrc = fixImagePath(item.webp || item.jpg || '');
                 const fallback = fixImagePath(item.jpg || '');
-
-                // ★★★ 占位图：用压缩图（对标 bing.ioliu.cn） ★★★
                 const placeholderSrc = imgSrc.includes('?') ?
                     `${imgSrc}&w=400&q=30` :
                     `${imgSrc}?w=400&q=30`;
@@ -949,7 +957,6 @@
                     </div>
                 `;
 
-                // ★★★ 加载高清图（对标 bing.ioliu.cn） ★★★
                 const img = card.querySelector('img');
                 const highResImg = new Image();
                 highResImg.onload = function() {
@@ -971,7 +978,6 @@
                         img.classList.add('loaded');
                     }
                 };
-                // 延迟加载高清图，让占位图先显示
                 setTimeout(() => {
                     highResImg.src = imgSrc;
                 }, 100);
@@ -992,6 +998,18 @@
             isLoading = false;
             hasMore = currentPage < totalPages;
             updateLoader();
+            
+            // 如果还有更多数据，主动检查是否需要继续加载
+            if (hasMore) {
+                setTimeout(() => {
+                    const scrollTop = gridEl.scrollTop;
+                    const clientHeight = gridEl.clientHeight;
+                    const scrollHeight = gridEl.scrollHeight;
+                    if (scrollTop + clientHeight >= scrollHeight - 200) {
+                        loadMore();
+                    }
+                }, 200);
+            }
         }
 
         // ============================================================
@@ -1033,10 +1051,10 @@
                 const clientHeight = gridEl.clientHeight;
                 const scrollHeight = gridEl.scrollHeight;
 
-                if (scrollTop + clientHeight >= scrollHeight - 400) {
+                if (hasMore && scrollTop + clientHeight >= scrollHeight - 200) {
                     loadMore();
                 }
-            }, 100);
+            }, 150);
         }
 
         gridEl.addEventListener('scroll', handleScroll);
