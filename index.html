@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>必应壁纸</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>" />
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
         * {
             margin: 0;
@@ -34,7 +36,7 @@
             box-shadow: 0 0 12px rgba(79, 195, 247, 0.4);
         }
 
-        /* ===== 导航栏触发按钮（独立在左上角，始终可见） ===== */
+        /* ===== ☰ 按钮 ===== */
         .nav-toggle {
             position: fixed;
             top: 12px;
@@ -57,7 +59,7 @@
             border-color: rgba(79, 195, 247, 0.2);
         }
 
-        /* ===== 导航栏（只有一个关闭方式：点击左上角的 ☰/✕） ===== */
+        /* ===== 导航栏 ===== */
         .navbar {
             position: fixed;
             top: 12px;
@@ -99,7 +101,7 @@
             font-weight: 300;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
         .navbar .logo .icon {
@@ -167,8 +169,10 @@
             display: flex;
             gap: 6px;
             flex-wrap: wrap;
+            align-items: center;
         }
 
+        .navbar .nav-actions a,
         .navbar .nav-actions button {
             background: rgba(255, 255, 255, 0.04);
             border: none;
@@ -178,11 +182,21 @@
             cursor: pointer;
             font-size: 13px;
             transition: 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
 
+        .navbar .nav-actions a:hover,
         .navbar .nav-actions button:hover {
             background: rgba(255, 255, 255, 0.08);
             color: #fff;
+        }
+
+        .navbar .nav-actions a i,
+        .navbar .nav-actions button i {
+            font-size: 14px;
         }
 
         /* ===== 应用容器 ===== */
@@ -340,6 +354,9 @@
             font-size: 13px;
             transition: 0.2s;
             white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .pagination button:hover:not(:disabled) {
@@ -350,6 +367,10 @@
         .pagination button:disabled {
             opacity: 0.2;
             cursor: not-allowed;
+        }
+
+        .pagination button i {
+            font-size: 14px;
         }
 
         .pagination .page-info {
@@ -405,6 +426,9 @@
             cursor: pointer;
             font-size: 13px;
             transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
         }
 
         .pagination .goto-box .goto-btn:hover {
@@ -449,11 +473,9 @@
             top: 16px;
             right: 24px;
             color: rgba(255, 255, 255, 0.25);
-            font-size: 34px;
+            font-size: 28px;
             cursor: pointer;
             z-index: 100;
-            font-family: serif;
-            line-height: 1;
             transition: 0.2s;
             background: transparent;
             border: none;
@@ -494,6 +516,9 @@
             cursor: pointer;
             font-family: inherit;
             backdrop-filter: blur(4px);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .overlay .action-buttons a:hover,
@@ -582,12 +607,10 @@
             top: 50%;
             transform: translateY(-50%);
             color: rgba(255, 255, 255, 0.1);
-            font-size: 44px;
+            font-size: 32px;
             cursor: pointer;
             padding: 16px 10px;
             z-index: 50;
-            font-family: serif;
-            line-height: 1;
             user-select: none;
             transition: 0.2s;
             background: transparent;
@@ -626,13 +649,10 @@
                 grid-template-columns: repeat(3, 1fr);
             }
             .navbar {
+                left: 52px;
                 min-width: 160px;
                 padding: 12px 14px;
                 top: 10px;
-                left: 10px;
-            }
-            .navbar .logo {
-                font-size: 15px;
             }
             .nav-toggle {
                 font-size: 18px;
@@ -667,10 +687,10 @@
                 aspect-ratio: 16 / 10;
             }
             .navbar {
+                left: 48px;
                 min-width: 140px;
                 padding: 10px 12px;
                 top: 8px;
-                left: 8px;
             }
             .navbar .logo {
                 font-size: 14px;
@@ -686,6 +706,7 @@
                 font-size: 12px;
                 padding: 4px 8px;
             }
+            .navbar .nav-actions a,
             .navbar .nav-actions button {
                 font-size: 12px;
                 padding: 4px 8px;
@@ -766,24 +787,28 @@
     <!-- ===== 进度条 ===== -->
     <div id="progress-bar"></div>
 
-    <!-- ===== 导航栏触发按钮（独立在左上角，始终可见） ===== -->
-    <button class="nav-toggle" id="navToggle" aria-label="切换导航">☰</button>
+    <!-- ===== ☰ 按钮 ===== -->
+    <button class="nav-toggle" id="navToggle" aria-label="切换导航">
+        <i class="fas fa-bars"></i>
+    </button>
 
-    <!-- ===== 浮动导航栏（没有右上角关闭按钮） ===== -->
+    <!-- ===== 导航栏 ===== -->
     <div class="navbar" id="navbar">
         <div class="navbar-header">
             <div class="logo">
-                <span class="icon">🌅</span>
+                <i class="fas fa-image icon"></i>
                 Bing <span>Wallpaper</span>
             </div>
         </div>
-        <div class="badge"><span id="totalNavCount">0</span> 张</div>
+        <div class="badge"><i class="fas fa-images"></i> <span id="totalNavCount">0</span> 张</div>
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="搜索年份/关键词..." />
-            <button class="search-btn" id="searchBtn">搜索</button>
+            <button class="search-btn" id="searchBtn"><i class="fas fa-search"></i></button>
         </div>
         <div class="nav-actions">
-            <button id="homeBtn">🏠 首页</button>
+            <button id="homeBtn"><i class="fas fa-home"></i> 首页</button>
+            <a href="/api" target="_blank"><i class="fas fa-code"></i> API</a>
+            <a href="https://aoso.hangdn.com" target="_blank" rel="noopener"><i class="fas fa-blog"></i> 博客</a>
         </div>
     </div>
 
@@ -794,29 +819,32 @@
 
     <!-- ===== 分页控制栏 ===== -->
     <div class="pagination" id="pagination">
-        <button id="prevBtn" disabled>‹ 上一页</button>
+        <button id="prevBtn" disabled><i class="fas fa-chevron-left"></i> 上一页</button>
         <span class="page-info" id="pageInfo">第 1 / 1 页</span>
-        <span class="total-info" id="totalInfo">共 0 张</span>
-        <button id="nextBtn">下一页 ›</button>
+        <span class="total-info" id="totalInfo"><i class="fas fa-images"></i> 共 0 张</span>
+        <button id="nextBtn">下一页 <i class="fas fa-chevron-right"></i></button>
 
         <div class="goto-box">
             <input type="number" id="gotoInput" min="1" placeholder="页" />
-            <button class="goto-btn" id="gotoBtn">跳转</button>
+            <button class="goto-btn" id="gotoBtn"><i class="fas fa-arrow-right"></i> 跳转</button>
         </div>
     </div>
 
     <!-- ===== 全屏预览遮罩 ===== -->
     <div class="overlay" id="overlay">
-        <button class="close" id="closeBtn">&times;</button>
-        <button class="arrow arrow-left" id="prevPreviewBtn">‹</button>
-        <button class="arrow arrow-right" id="nextPreviewBtn">›</button>
+        <button class="close" id="closeBtn"><i class="fas fa-times"></i></button>
+        <button class="arrow arrow-left" id="prevPreviewBtn"><i class="fas fa-chevron-left"></i></button>
+        <button class="arrow arrow-right" id="nextPreviewBtn"><i class="fas fa-chevron-right"></i></button>
+
         <div class="image-container" id="imageContainer">
             <img class="preview-image" id="previewImg" src="" alt="预览" />
         </div>
+
         <div class="action-buttons">
-            <a href="#" id="openLinkBtn" target="_blank" rel="noopener">🔗 打开链接</a>
-            <button class="btn-download" id="downloadBtn">⬇️ 下载4K图片</button>
+            <a href="#" id="openLinkBtn" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 打开链接</a>
+            <button class="btn-download" id="downloadBtn"><i class="fas fa-download"></i> 下载4K图片</button>
         </div>
+
         <div class="meta" id="previewMeta">
             <span id="previewTitle"></span>
             <span class="date" id="previewDate"></span>
@@ -868,7 +896,7 @@
         }
 
         // ============================================================
-        // 3. ★★★ 导航栏 ★★★
+        // 3. 导航栏
         // ============================================================
         const navToggle = document.getElementById('navToggle');
         const navbar = document.getElementById('navbar');
@@ -877,7 +905,7 @@
         function toggleNav(open) {
             navOpen = open !== undefined ? open : !navOpen;
             navbar.classList.toggle('open', navOpen);
-            navToggle.textContent = navOpen ? '✕' : '☰';
+            navToggle.innerHTML = navOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
         }
 
         navToggle.addEventListener('click', (e) => {
@@ -885,7 +913,6 @@
             toggleNav();
         });
 
-        // 点击页面其他地方关闭导航
         document.addEventListener('click', (e) => {
             if (navOpen && !navbar.contains(e.target) && e.target !== navToggle) {
                 toggleNav(false);
@@ -893,7 +920,7 @@
         });
 
         // ============================================================
-        // 4. ★★★ 分页数据加载 ★★★
+        // 4. 分页数据加载
         // ============================================================
         let allData = [];
         let filteredData = [];
@@ -952,7 +979,7 @@
                 allData.sort((a, b) => b.date.localeCompare(a.date));
                 filteredData = [];
                 totalNavCount.textContent = allData.length;
-                totalInfo.textContent = `共 ${allData.length} 张`;
+                totalInfo.innerHTML = `<i class="fas fa-images"></i> 共 ${allData.length} 张`;
                 currentPage = 1;
                 renderPage(1);
                 hideProgress();
@@ -1083,7 +1110,7 @@
         });
 
         // ============================================================
-        // 4.4 ★★★ 搜索（支持 202607 格式） ★★★
+        // 4.4 搜索
         // ============================================================
         function doSearch() {
             const keyword = searchInput.value.trim().toLowerCase();
@@ -1097,18 +1124,15 @@
                 const title = (item.title || '').toLowerCase();
                 const copyright = (item.copyright || '').toLowerCase();
                 const date = item.date || '';
-
-                // ★★★ 支持 202607 格式匹配 2026-07-xx ★★★
                 const dateClean = date.replace(/-/g, '');
                 const dateMatch = date.includes(keyword) || dateClean.includes(keyword);
-
                 return title.includes(keyword) || copyright.includes(keyword) || dateMatch;
             });
 
             if (filteredData.length === 0) {
                 grid.innerHTML = `
                     <div class="empty">
-                        <div class="icon">🔍</div>
+                        <div class="icon"><i class="fas fa-search"></i></div>
                         <div>没有匹配"${keyword}"的壁纸</div>
                     </div>
                 `;
@@ -1141,14 +1165,14 @@
         function showEmpty() {
             grid.innerHTML = `
                 <div class="empty">
-                    <div class="icon">🖼️</div>
+                    <div class="icon"><i class="fas fa-image"></i></div>
                     <div>暂无壁纸数据</div>
                 </div>
             `;
             prevBtn.disabled = true;
             nextBtn.disabled = true;
             pageInfo.textContent = '第 0 / 0 页';
-            totalInfo.textContent = '共 0 张';
+            totalInfo.innerHTML = '<i class="fas fa-images"></i> 共 0 张';
             totalNavCount.textContent = '0';
         }
 
