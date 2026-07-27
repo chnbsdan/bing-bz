@@ -30,7 +30,7 @@
             background: linear-gradient(90deg, #4fc3f7, #00e5ff);
             width: 0%;
             z-index: 9999;
-            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: width 0.3s ease;
             box-shadow: 0 0 12px rgba(79, 195, 247, 0.4);
         }
 
@@ -41,11 +41,11 @@
             right: 20px;
             z-index: 100;
             background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             width: 44px;
             height: 44px;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.5);
             font-size: 22px;
             cursor: pointer;
             opacity: 0;
@@ -65,8 +65,8 @@
         }
 
         #scrollTopBtn:hover {
-            background: rgba(79, 195, 247, 0.2);
-            border-color: rgba(79, 195, 247, 0.3);
+            background: rgba(79, 195, 247, 0.15);
+            border-color: rgba(79, 195, 247, 0.25);
             color: #fff;
         }
 
@@ -89,7 +89,7 @@
         }
 
         .nav-toggle:hover {
-            background: rgba(79, 195, 247, 0.15);
+            background: rgba(79, 195, 247, 0.12);
             border-color: rgba(79, 195, 247, 0.2);
         }
 
@@ -211,7 +211,7 @@
         }
 
         .navbar .search-box .search-btn:hover {
-            background: rgba(79, 195, 247, 0.25);
+            background: rgba(79, 195, 247, 0.2);
             color: #fff;
         }
 
@@ -247,23 +247,26 @@
             overflow: hidden;
         }
 
-        /* ===== 网格 ===== */
+        /* ===== 网格：7列，4px间隙（对标 bing.ioliu.cn） ===== */
         .grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 0;
+            gap: 4px;
             flex: 1;
             align-content: start;
             overflow-y: auto;
+            padding: 4px;
             padding-bottom: 60px;
             scroll-behavior: smooth;
         }
 
+        /* ===== 卡片：16:9（对标 bing.ioliu.cn） ===== */
         .card {
             position: relative;
-            aspect-ratio: 16 / 11;
-            background: #0d0d1a;
+            border-radius: 4px;
             overflow: hidden;
+            background: #1a1a2e;
+            aspect-ratio: 16 / 9;
             cursor: pointer;
         }
 
@@ -272,11 +275,12 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
+            transition: filter 0.5s ease, transform 0.5s ease;
         }
 
+        /* ===== 占位图模糊（对标 bing.ioliu.cn） ===== */
         .card img.placeholder {
-            filter: blur(12px) brightness(0.6);
+            filter: blur(8px) brightness(0.8);
             transform: scale(1.04);
         }
 
@@ -285,12 +289,13 @@
             transform: scale(1);
         }
 
+        /* ===== 悬停信息（对标 bing.ioliu.cn） ===== */
         .card .info {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 12px 10px 8px;
+            padding: 16px 12px 12px;
             background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
             color: #fff;
             opacity: 0;
@@ -304,11 +309,11 @@
 
         .card .info .date {
             font-size: 11px;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.4);
         }
 
         .card .info .title {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 500;
             white-space: nowrap;
             overflow: hidden;
@@ -316,18 +321,18 @@
         }
 
         .card .info .copyright {
-            font-size: 10px;
-            color: rgba(255, 255, 255, 0.35);
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
 
-        /* ===== 加载更多 ===== */
+        /* ===== 加载更多指示器 ===== */
         .loader {
             grid-column: 1 / -1;
             text-align: center;
-            padding: 24px 0;
+            padding: 20px 0;
             color: rgba(255, 255, 255, 0.15);
             font-size: 13px;
             letter-spacing: 2px;
@@ -354,7 +359,7 @@
         .no-more {
             grid-column: 1 / -1;
             text-align: center;
-            padding: 20px 0;
+            padding: 16px 0;
             color: rgba(255, 255, 255, 0.06);
             font-size: 12px;
             letter-spacing: 3px;
@@ -611,7 +616,7 @@
                 padding-bottom: 70px;
             }
             .card {
-                aspect-ratio: 16 / 12;
+                aspect-ratio: 16 / 10;
             }
             .navbar {
                 min-width: 140px;
@@ -774,8 +779,8 @@
         const progressBar = document.getElementById('progress-bar');
 
         function showProgress() {
-            progressBar.style.width = '35%';
-            setTimeout(() => { progressBar.style.width = '70%'; }, 150);
+            progressBar.style.width = '30%';
+            setTimeout(() => { progressBar.style.width = '60%'; }, 150);
         }
 
         function hideProgress() {
@@ -831,13 +836,12 @@
         });
 
         // ============================================================
-        // 5. ★★★ 数据加载（直接加载 wallpapers.json，前端分页） ★★★
+        // 5. 数据加载 + 滚动追加（对标 bing.ioliu.cn）
         // ============================================================
         let allData = [];
         let filteredData = [];
-        let currentPage = 1;
-        const PAGE_SIZE = 42;
-        let totalCount = 0;
+        let currentPage = 0;
+        const PAGE_SIZE = 28;
         let isLoading = false;
         let hasMore = true;
         let currentPreviewIndex = 0;
@@ -868,7 +872,9 @@
         let lastTranslateX = 0;
         let lastTranslateY = 0;
 
-        // ===== 5.1 加载数据 =====
+        // ============================================================
+        // 5.1 加载数据
+        // ============================================================
         async function loadData() {
             showProgress();
             try {
@@ -882,11 +888,12 @@
                     return;
                 }
                 allData.sort((a, b) => b.date.localeCompare(a.date));
-                totalCount = allData.length;
-                totalNavCount.textContent = totalCount;
-                currentPage = 1;
+                totalNavCount.textContent = allData.length;
                 filteredData = [];
-                renderPage(1);
+                currentPage = 0;
+                hasMore = true;
+                grid.innerHTML = '';
+                loadMore();
                 hideProgress();
             } catch (err) {
                 console.error('加载失败:', err);
@@ -895,43 +902,39 @@
             }
         }
 
-        // ===== 5.2 渲染页面（前端分页） =====
-        function renderPage(page) {
+        // ============================================================
+        // 5.2 加载更多（滚动追加）
+        // ============================================================
+        function loadMore() {
+            if (isLoading) return;
             const data = filteredData.length > 0 ? filteredData : allData;
             const totalPages = Math.ceil(data.length / PAGE_SIZE);
-            if (page < 1) page = 1;
-            if (page > totalPages) page = totalPages;
-            if (totalPages === 0) {
-                showEmpty();
+            if (currentPage >= totalPages) {
+                hasMore = false;
+                updateLoader();
                 return;
             }
 
-            currentPage = page;
-            const start = (page - 1) * PAGE_SIZE;
+            isLoading = true;
+            const start = currentPage * PAGE_SIZE;
             const end = Math.min(start + PAGE_SIZE, data.length);
             const items = data.slice(start, end);
-            hasMore = page < totalPages;
 
-            // 移除所有卡片
-            const cards = grid.querySelectorAll('.card');
-            cards.forEach(el => el.remove());
-
-            if (items.length === 0) {
-                showEmpty();
-                return;
-            }
+            // 移除 loader
+            const oldLoader = grid.querySelector('.loader');
+            if (oldLoader) oldLoader.remove();
 
             items.forEach((item, index) => {
-                const realIndex = (page - 1) * PAGE_SIZE + index;
+                const realIndex = start + index;
                 const card = document.createElement('div');
                 card.className = 'card';
                 const imgSrc = fixImagePath(item.webp || item.jpg || '');
                 const fallback = fixImagePath(item.jpg || '');
 
-                // 占位图
+                // ★★★ 占位图：用压缩图（对标 bing.ioliu.cn） ★★★
                 const placeholderSrc = imgSrc.includes('?') ?
-                    `${imgSrc}&w=200&q=20` :
-                    `${imgSrc}?w=200&q=20`;
+                    `${imgSrc}&w=400&q=30` :
+                    `${imgSrc}?w=400&q=30`;
 
                 card.innerHTML = `
                     <img src="${placeholderSrc}" 
@@ -946,7 +949,7 @@
                     </div>
                 `;
 
-                // 加载高清图
+                // ★★★ 加载高清图（对标 bing.ioliu.cn） ★★★
                 const img = card.querySelector('img');
                 const highResImg = new Image();
                 highResImg.onload = function() {
@@ -968,7 +971,10 @@
                         img.classList.add('loaded');
                     }
                 };
-                highResImg.src = imgSrc;
+                // 延迟加载高清图，让占位图先显示
+                setTimeout(() => {
+                    highResImg.src = imgSrc;
+                }, 100);
 
                 card.addEventListener('click', () => {
                     let targetIndex = realIndex;
@@ -982,10 +988,15 @@
                 grid.appendChild(card);
             });
 
+            currentPage++;
+            isLoading = false;
+            hasMore = currentPage < totalPages;
             updateLoader();
         }
 
-        // ===== 5.3 更新加载更多指示器 =====
+        // ============================================================
+        // 5.3 更新加载指示器
+        // ============================================================
         function updateLoader() {
             const oldLoader = grid.querySelector('.loader');
             if (oldLoader) oldLoader.remove();
@@ -995,7 +1006,7 @@
             const data = filteredData.length > 0 ? filteredData : allData;
             const totalPages = Math.ceil(data.length / PAGE_SIZE);
 
-            if (currentPage >= totalPages || totalPages === 0) {
+            if (!hasMore || currentPage >= totalPages || data.length === 0) {
                 const noMore = document.createElement('div');
                 noMore.className = 'no-more';
                 noMore.textContent = `— 共 ${data.length} 张 —`;
@@ -1009,23 +1020,9 @@
             }
         }
 
-        // ===== 5.4 加载更多（滚动触发） =====
-        function loadMore() {
-            if (isLoading) return;
-            const data = filteredData.length > 0 ? filteredData : allData;
-            const totalPages = Math.ceil(data.length / PAGE_SIZE);
-            if (currentPage < totalPages) {
-                isLoading = true;
-                showProgress();
-                setTimeout(() => {
-                    renderPage(currentPage + 1);
-                    isLoading = false;
-                    hideProgress();
-                }, 200);
-            }
-        }
-
-        // ===== 5.5 滚动监听 =====
+        // ============================================================
+        // 5.4 滚动监听
+        // ============================================================
         let scrollTimeout = null;
 
         function handleScroll() {
@@ -1036,7 +1033,7 @@
                 const clientHeight = gridEl.clientHeight;
                 const scrollHeight = gridEl.scrollHeight;
 
-                if (scrollTop + clientHeight >= scrollHeight - 300) {
+                if (scrollTop + clientHeight >= scrollHeight - 400) {
                     loadMore();
                 }
             }, 100);
@@ -1047,12 +1044,17 @@
             setTimeout(handleScroll, 200);
         });
 
-        // ===== 5.6 搜索 =====
+        // ============================================================
+        // 5.5 搜索
+        // ============================================================
         function doSearch() {
             const keyword = searchInput.value.trim().toLowerCase();
             if (!keyword) {
                 filteredData = [];
-                renderPage(1);
+                currentPage = 0;
+                hasMore = true;
+                grid.innerHTML = '';
+                loadMore();
                 return;
             }
             filteredData = allData.filter(item => {
@@ -1070,7 +1072,10 @@
                 `;
                 return;
             }
-            renderPage(1);
+            currentPage = 0;
+            hasMore = true;
+            grid.innerHTML = '';
+            loadMore();
         }
 
         searchBtn.addEventListener('click', doSearch);
@@ -1078,15 +1083,22 @@
             if (e.key === 'Enter') doSearch();
         });
 
-        // ===== 5.7 首页 =====
+        // ============================================================
+        // 5.6 首页
+        // ============================================================
         homeBtn.addEventListener('click', () => {
             searchInput.value = '';
             filteredData = [];
-            renderPage(1);
+            currentPage = 0;
+            hasMore = true;
+            grid.innerHTML = '';
+            loadMore();
             toggleNav(false);
         });
 
-        // ===== 5.8 空状态 =====
+        // ============================================================
+        // 5.7 空状态
+        // ============================================================
         function showEmpty() {
             grid.innerHTML = `
                 <div class="empty">
