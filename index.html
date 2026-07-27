@@ -34,42 +34,6 @@
             box-shadow: 0 0 12px rgba(79, 195, 247, 0.4);
         }
 
-        /* ===== 回顶部按钮 ===== */
-        #scrollTopBtn {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            z-index: 100;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            width: 44px;
-            height: 44px;
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 22px;
-            cursor: pointer;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            user-select: none;
-        }
-
-        #scrollTopBtn.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        #scrollTopBtn:hover {
-            background: rgba(79, 195, 247, 0.15);
-            border-color: rgba(79, 195, 247, 0.25);
-            color: #fff;
-        }
-
         /* ===== 导航栏触发按钮 ===== */
         .nav-toggle {
             position: fixed;
@@ -248,7 +212,7 @@
             overflow: hidden;
         }
 
-        /* ===== 网格：7列 ===== */
+        /* ===== 网格 ===== */
         .grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
@@ -257,7 +221,7 @@
             align-content: start;
             overflow-y: auto;
             padding: 4px;
-            padding-bottom: 60px;
+            padding-bottom: 70px;
             scroll-behavior: smooth;
             min-height: 0;
         }
@@ -279,7 +243,7 @@
             background: rgba(255, 255, 255, 0.25);
         }
 
-        /* ===== 卡片：16:9 ===== */
+        /* ===== 卡片 ===== */
         .card {
             position: relative;
             border-radius: 4px;
@@ -304,7 +268,6 @@
             opacity: 1;
         }
 
-        /* ★★★ 占位图背景 ★★★ */
         .card .placeholder-bg {
             position: absolute;
             top: 0;
@@ -363,32 +326,107 @@
             text-overflow: ellipsis;
         }
 
-        /* ===== 加载更多 ===== */
-        .loader {
-            grid-column: 1 / -1;
-            text-align: center;
-            padding: 20px 0;
-            color: rgba(255, 255, 255, 0.15);
+        /* ===== 分页控制栏（浮动在底部） ===== */
+        .pagination {
+            position: fixed;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 16px;
+            background: rgba(13, 13, 26, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            z-index: 100;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 95vw;
+        }
+
+        .pagination button {
+            background: rgba(255, 255, 255, 0.06);
+            border: none;
+            color: #e0e0e0;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
             font-size: 13px;
-            letter-spacing: 2px;
+            transition: 0.2s;
+            white-space: nowrap;
         }
 
-        .loader .spinner {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 2px solid rgba(255, 255, 255, 0.06);
-            border-top-color: #4fc3f7;
-            border-radius: 50%;
-            animation: spin 0.7s linear infinite;
-            vertical-align: middle;
-            margin-right: 10px;
+        .pagination button:hover:not(:disabled) {
+            background: rgba(79, 195, 247, 0.2);
+            color: #4fc3f7;
         }
 
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
+        .pagination button:disabled {
+            opacity: 0.2;
+            cursor: not-allowed;
+        }
+
+        .pagination .page-info {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .pagination .total-info {
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .pagination .goto-box {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .pagination .goto-box input {
+            width: 48px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 4px;
+            padding: 4px 6px;
+            color: #fff;
+            font-size: 13px;
+            text-align: center;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .pagination .goto-box input:focus {
+            border-color: #4fc3f7;
+        }
+
+        .pagination .goto-box input::-webkit-outer-spin-button,
+        .pagination .goto-box input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .pagination .goto-box input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        .pagination .goto-box .goto-btn {
+            background: rgba(79, 195, 247, 0.15);
+            border: none;
+            color: #4fc3f7;
+            padding: 4px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: 0.2s;
+        }
+
+        .pagination .goto-box .goto-btn:hover {
+            background: rgba(79, 195, 247, 0.3);
+            color: #fff;
         }
 
         .no-more {
@@ -628,19 +666,28 @@
                 top: 10px;
                 left: 10px;
             }
-            #scrollTopBtn {
-                bottom: 70px;
-                right: 14px;
-                width: 38px;
-                height: 38px;
-                font-size: 18px;
+            .pagination {
+                padding: 6px 12px;
+                gap: 6px;
+                bottom: 12px;
+            }
+            .pagination button {
+                font-size: 12px;
+                padding: 4px 10px;
+            }
+            .pagination .page-info {
+                font-size: 12px;
+            }
+            .pagination .goto-box input {
+                width: 40px;
+                font-size: 12px;
             }
         }
 
         @media (max-width: 500px) {
             .grid {
                 grid-template-columns: repeat(2, 1fr);
-                padding-bottom: 70px;
+                padding-bottom: 80px;
             }
             .card {
                 aspect-ratio: 16 / 10;
@@ -679,12 +726,32 @@
                 top: 8px;
                 left: 8px;
             }
-            #scrollTopBtn {
-                bottom: 60px;
-                right: 10px;
+            .pagination {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 6px 10px;
+                gap: 4px;
+                max-width: 98vw;
+                bottom: 8px;
+            }
+            .pagination button {
+                font-size: 11px;
+                padding: 3px 8px;
+            }
+            .pagination .page-info {
+                font-size: 11px;
+            }
+            .pagination .total-info {
+                font-size: 10px;
+            }
+            .pagination .goto-box input {
                 width: 34px;
-                height: 34px;
-                font-size: 16px;
+                font-size: 11px;
+                padding: 2px 4px;
+            }
+            .pagination .goto-box .goto-btn {
+                font-size: 11px;
+                padding: 2px 8px;
             }
             .overlay .arrow {
                 font-size: 26px;
@@ -756,8 +823,18 @@
         <div class="grid" id="grid"></div>
     </div>
 
-    <!-- ===== 回顶部按钮 ===== -->
-    <button id="scrollTopBtn" aria-label="回到顶部">↑</button>
+    <!-- ===== 分页控制栏 ===== -->
+    <div class="pagination" id="pagination">
+        <button id="prevBtn" disabled>‹ 上一页</button>
+        <span class="page-info" id="pageInfo">第 1 / 1 页</span>
+        <span class="total-info" id="totalInfo">共 0 张</span>
+        <button id="nextBtn">下一页 ›</button>
+
+        <div class="goto-box">
+            <input type="number" id="gotoInput" min="1" placeholder="页" />
+            <button class="goto-btn" id="gotoBtn">跳转</button>
+        </div>
+    </div>
 
     <!-- ===== 全屏预览遮罩 ===== -->
     <div class="overlay" id="overlay">
@@ -800,15 +877,10 @@
             return url;
         }
 
-        // ★★★ 不用缩放参数，直接返回原图 ★★★
         function getImageUrl(url) {
             if (!url) return '';
-            // 如果是本地路径，修复
-            if (url.startsWith('/')) {
-                return fixImagePath(url);
-            }
-            // 外部链接直接返回
-            return url;
+            if (url.startsWith('http://') || url.startsWith('https://')) return url;
+            return fixImagePath(url);
         }
 
         // ============================================================
@@ -856,32 +928,13 @@
         });
 
         // ============================================================
-        // 4. 回顶部按钮
-        // ============================================================
-        const scrollBtn = document.getElementById('scrollTopBtn');
-        const gridEl = document.getElementById('grid');
-
-        gridEl.addEventListener('scroll', () => {
-            if (gridEl.scrollTop > 400) {
-                scrollBtn.classList.add('visible');
-            } else {
-                scrollBtn.classList.remove('visible');
-            }
-        });
-
-        scrollBtn.addEventListener('click', () => {
-            gridEl.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // ============================================================
-        // 5. 数据加载 + 滚动追加
+        // 4. ★★★ 分页数据加载 ★★★
         // ============================================================
         let allData = [];
         let filteredData = [];
-        let currentPage = 0;
-        const PAGE_SIZE = 28;
-        let isLoading = false;
-        let hasMore = true;
+        let currentPage = 1;
+        const PAGE_SIZE = 42;
+        let totalPages = 1;
         let currentPreviewIndex = 0;
         let currentPreviewItem = null;
 
@@ -897,6 +950,12 @@
         const searchInput = document.getElementById('searchInput');
         const searchBtn = document.getElementById('searchBtn');
         const homeBtn = document.getElementById('homeBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const pageInfo = document.getElementById('pageInfo');
+        const totalInfo = document.getElementById('totalInfo');
+        const gotoInput = document.getElementById('gotoInput');
+        const gotoBtn = document.getElementById('gotoBtn');
 
         // 缩放状态
         let scale = 1;
@@ -911,7 +970,7 @@
         let lastTranslateY = 0;
 
         // ============================================================
-        // 5.1 加载数据
+        // 4.1 加载数据
         // ============================================================
         async function loadData() {
             showProgress();
@@ -926,12 +985,11 @@
                     return;
                 }
                 allData.sort((a, b) => b.date.localeCompare(a.date));
-                totalNavCount.textContent = allData.length;
                 filteredData = [];
-                currentPage = 0;
-                hasMore = true;
-                grid.innerHTML = '';
-                loadMore();
+                totalNavCount.textContent = allData.length;
+                totalInfo.textContent = `共 ${allData.length} 张`;
+                currentPage = 1;
+                renderPage(1);
                 hideProgress();
             } catch (err) {
                 console.error('加载失败:', err);
@@ -941,32 +999,29 @@
         }
 
         // ============================================================
-        // 5.2 加载更多（滚动追加）
+        // 4.2 渲染页面
         // ============================================================
-        function loadMore() {
-            if (isLoading) return;
+        function renderPage(page) {
             const data = filteredData.length > 0 ? filteredData : allData;
-            const totalPages = Math.ceil(data.length / PAGE_SIZE);
+            totalPages = Math.ceil(data.length / PAGE_SIZE);
 
-            if (currentPage >= totalPages) {
-                hasMore = false;
-                updateLoader();
+            if (page < 1) page = 1;
+            if (page > totalPages) page = totalPages;
+            if (totalPages === 0) {
+                showEmpty();
                 return;
             }
 
-            isLoading = true;
-            const start = currentPage * PAGE_SIZE;
+            currentPage = page;
+            const start = (page - 1) * PAGE_SIZE;
             const end = Math.min(start + PAGE_SIZE, data.length);
             const items = data.slice(start, end);
 
-            // 移除旧的 loader
-            const oldLoader = grid.querySelector('.loader');
-            if (oldLoader) oldLoader.remove();
+            // 清空网格
+            grid.innerHTML = '';
 
             if (items.length === 0) {
-                hasMore = false;
-                isLoading = false;
-                updateLoader();
+                showEmpty();
                 return;
             }
 
@@ -978,7 +1033,7 @@
                 const imgSrc = getImageUrl(item.webp || item.jpg || '');
                 const fallback = getImageUrl(item.jpg || '');
 
-                // ★★★ 占位图：用低分辨率（加 w=200 参数，必应支持） ★★★
+                // 占位图
                 let placeholderSrc = imgSrc;
                 if (imgSrc.includes('th?id=')) {
                     placeholderSrc = imgSrc.includes('?') ?
@@ -1001,19 +1056,16 @@
                 const img = card.querySelector('img');
                 const placeholderBg = card.querySelector('.placeholder-bg');
 
-                // 图片加载完成后隐藏占位图
                 img.addEventListener('load', () => {
                     img.classList.add('loaded');
                     placeholderBg.classList.add('hidden');
                 });
 
-                // 如果图片已缓存，直接显示
                 if (img.complete) {
                     img.classList.add('loaded');
                     placeholderBg.classList.add('hidden');
                 }
 
-                // 加载失败时用 fallback
                 img.addEventListener('error', () => {
                     if (fallback && fallback !== imgSrc) {
                         img.src = fallback;
@@ -1035,85 +1087,48 @@
                 grid.appendChild(card);
             });
 
-            currentPage++;
-            isLoading = false;
-            hasMore = currentPage < totalPages;
-            updateLoader();
+            // 更新分页按钮
+            prevBtn.disabled = currentPage <= 1;
+            nextBtn.disabled = currentPage >= totalPages;
+            pageInfo.textContent = `第 ${currentPage} / ${totalPages} 页`;
+            gotoInput.max = totalPages;
+            gotoInput.placeholder = `1-${totalPages}`;
 
-            // 如果还有更多数据，主动检查是否需要继续加载
-            if (hasMore) {
-                setTimeout(() => {
-                    const scrollTop = gridEl.scrollTop;
-                    const clientHeight = gridEl.clientHeight;
-                    const scrollHeight = gridEl.scrollHeight;
-                    if (scrollTop + clientHeight >= scrollHeight - 200) {
-                        loadMore();
-                    }
-                }, 200);
+            // 滚动到顶部
+            grid.scrollTop = 0;
+        }
+
+        // ============================================================
+        // 4.3 分页事件
+        // ============================================================
+        prevBtn.addEventListener('click', () => {
+            if (currentPage > 1) renderPage(currentPage - 1);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentPage < totalPages) renderPage(currentPage + 1);
+        });
+
+        gotoBtn.addEventListener('click', () => {
+            const val = parseInt(gotoInput.value);
+            if (!isNaN(val) && val >= 1 && val <= totalPages) {
+                renderPage(val);
             }
-        }
+            gotoInput.value = '';
+        });
 
-        // ============================================================
-        // 5.3 更新加载指示器
-        // ============================================================
-        function updateLoader() {
-            const oldLoader = grid.querySelector('.loader');
-            if (oldLoader) oldLoader.remove();
-            const oldNoMore = grid.querySelector('.no-more');
-            if (oldNoMore) oldNoMore.remove();
-
-            const data = filteredData.length > 0 ? filteredData : allData;
-            const totalPages = Math.ceil(data.length / PAGE_SIZE);
-
-            if (!hasMore || currentPage >= totalPages || data.length === 0) {
-                const noMore = document.createElement('div');
-                noMore.className = 'no-more';
-                noMore.textContent = `— 共 ${data.length} 张 —`;
-                grid.appendChild(noMore);
-            } else {
-                const loader = document.createElement('div');
-                loader.className = 'loader';
-                loader.id = 'scrollLoader';
-                loader.innerHTML = `<span class="spinner"></span> 加载更多...`;
-                grid.appendChild(loader);
-            }
-        }
-
-        // ============================================================
-        // 5.4 滚动监听
-        // ============================================================
-        let scrollTimeout = null;
-
-        function handleScroll() {
-            if (scrollTimeout) return;
-            scrollTimeout = setTimeout(() => {
-                scrollTimeout = null;
-                const scrollTop = gridEl.scrollTop;
-                const clientHeight = gridEl.clientHeight;
-                const scrollHeight = gridEl.scrollHeight;
-
-                if (hasMore && scrollTop + clientHeight >= scrollHeight - 200) {
-                    loadMore();
-                }
-            }, 150);
-        }
-
-        gridEl.addEventListener('scroll', handleScroll);
-        window.addEventListener('resize', () => {
-            setTimeout(handleScroll, 200);
+        gotoInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') gotoBtn.click();
         });
 
         // ============================================================
-        // 5.5 搜索
+        // 4.4 搜索
         // ============================================================
         function doSearch() {
             const keyword = searchInput.value.trim().toLowerCase();
             if (!keyword) {
                 filteredData = [];
-                currentPage = 0;
-                hasMore = true;
-                grid.innerHTML = '';
-                loadMore();
+                renderPage(1);
                 return;
             }
             filteredData = allData.filter(item => {
@@ -1129,12 +1144,12 @@
                         <div>没有匹配"${keyword}"的壁纸</div>
                     </div>
                 `;
+                prevBtn.disabled = true;
+                nextBtn.disabled = true;
+                pageInfo.textContent = '第 0 / 0 页';
                 return;
             }
-            currentPage = 0;
-            hasMore = true;
-            grid.innerHTML = '';
-            loadMore();
+            renderPage(1);
         }
 
         searchBtn.addEventListener('click', doSearch);
@@ -1143,20 +1158,17 @@
         });
 
         // ============================================================
-        // 5.6 首页
+        // 4.5 首页
         // ============================================================
         homeBtn.addEventListener('click', () => {
             searchInput.value = '';
             filteredData = [];
-            currentPage = 0;
-            hasMore = true;
-            grid.innerHTML = '';
-            loadMore();
+            renderPage(1);
             toggleNav(false);
         });
 
         // ============================================================
-        // 5.7 空状态
+        // 4.6 空状态
         // ============================================================
         function showEmpty() {
             grid.innerHTML = `
@@ -1165,10 +1177,15 @@
                     <div>暂无壁纸数据</div>
                 </div>
             `;
+            prevBtn.disabled = true;
+            nextBtn.disabled = true;
+            pageInfo.textContent = '第 0 / 0 页';
+            totalInfo.textContent = '共 0 张';
+            totalNavCount.textContent = '0';
         }
 
         // ============================================================
-        // 6. 全屏预览
+        // 5. 全屏预览
         // ============================================================
         function openPreview(index) {
             if (allData.length === 0) return;
@@ -1293,7 +1310,7 @@
         }
 
         // ============================================================
-        // 7. 事件绑定
+        // 6. 事件绑定
         // ============================================================
         document.getElementById('closeBtn').addEventListener('click', closePreview);
         document.getElementById('prevPreviewBtn').addEventListener('click', (e) => {
@@ -1327,7 +1344,7 @@
         });
 
         // ============================================================
-        // 8. 启动
+        // 7. 启动
         // ============================================================
         loadData();
     </script>
