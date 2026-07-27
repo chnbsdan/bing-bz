@@ -34,30 +34,7 @@
             box-shadow: 0 0 12px rgba(79, 195, 247, 0.4);
         }
 
-        /* ===== 导航栏触发按钮 ===== */
-        .nav-toggle {
-            position: fixed;
-            top: 12px;
-            left: 12px;
-            z-index: 1001;
-            background: rgba(13, 13, 26, 0.7);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 8px;
-            color: #fff;
-            font-size: 20px;
-            padding: 6px 12px;
-            cursor: pointer;
-            transition: 0.2s;
-            line-height: 1;
-        }
-
-        .nav-toggle:hover {
-            background: rgba(79, 195, 247, 0.12);
-            border-color: rgba(79, 195, 247, 0.2);
-        }
-
-        /* ===== 导航栏（只有一个关闭按钮） ===== */
+        /* ===== 导航栏 ===== */
         .navbar {
             position: fixed;
             top: 12px;
@@ -88,9 +65,27 @@
 
         .navbar-header {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            gap: 10px;
             width: 100%;
+        }
+
+        /* ★★★ 开关按钮放在导航栏内部 ★★★ */
+        .nav-toggle {
+            background: rgba(255, 255, 255, 0.05);
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: 0.2s;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .nav-toggle:hover {
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .navbar .logo {
@@ -109,24 +104,6 @@
         .navbar .logo span {
             color: #4fc3f7;
             font-weight: 600;
-        }
-
-        /* ★★★ 只有一个关闭按钮 ★★★ */
-        .navbar-close {
-            background: rgba(255, 255, 255, 0.05);
-            border: none;
-            color: rgba(255, 255, 255, 0.3);
-            font-size: 18px;
-            cursor: pointer;
-            padding: 2px 8px;
-            border-radius: 4px;
-            transition: 0.2s;
-            line-height: 1.4;
-        }
-
-        .navbar-close:hover {
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
         }
 
         .navbar .badge {
@@ -652,12 +629,6 @@
             .navbar .logo {
                 font-size: 15px;
             }
-            .nav-toggle {
-                font-size: 18px;
-                padding: 5px 10px;
-                top: 10px;
-                left: 10px;
-            }
             .pagination {
                 padding: 6px 12px;
                 gap: 6px;
@@ -708,15 +679,9 @@
                 font-size: 12px;
                 padding: 4px 8px;
             }
-            .navbar-close {
-                font-size: 16px;
-                padding: 0 6px;
-            }
             .nav-toggle {
-                font-size: 16px;
-                padding: 4px 8px;
-                top: 8px;
-                left: 8px;
+                font-size: 18px;
+                padding: 2px 6px;
             }
             .pagination {
                 flex-wrap: wrap;
@@ -788,18 +753,14 @@
     <!-- ===== 进度条 ===== -->
     <div id="progress-bar"></div>
 
-    <!-- ===== 导航栏触发按钮 ===== -->
-    <button class="nav-toggle" id="navToggle" aria-label="切换导航">☰</button>
-
-    <!-- ===== 浮动导航栏 ===== -->
+    <!-- ===== 导航栏（开关在内部） ===== -->
     <div class="navbar" id="navbar">
         <div class="navbar-header">
+            <button class="nav-toggle" id="navToggle">☰</button>
             <div class="logo">
                 <span class="icon">🌅</span>
                 Bing <span>Wallpaper</span>
             </div>
-            <!-- ★★★ 只有一个关闭按钮 ★★★ -->
-            <button class="navbar-close" id="navClose">✕</button>
         </div>
         <div class="badge"><span id="totalNavCount">0</span> 张</div>
         <div class="search-box">
@@ -892,11 +853,10 @@
         }
 
         // ============================================================
-        // 3. 导航栏
+        // 3. ★★★ 导航栏（开关在内部） ★★★
         // ============================================================
         const navToggle = document.getElementById('navToggle');
         const navbar = document.getElementById('navbar');
-        const navClose = document.getElementById('navClose');
         let navOpen = false;
 
         function toggleNav(open) {
@@ -910,12 +870,9 @@
             toggleNav();
         });
 
-        navClose.addEventListener('click', () => {
-            toggleNav(false);
-        });
-
+        // 点击页面其他地方关闭导航
         document.addEventListener('click', (e) => {
-            if (navOpen && !navbar.contains(e.target) && e.target !== navToggle) {
+            if (navOpen && !navbar.contains(e.target)) {
                 toggleNav(false);
             }
         });
