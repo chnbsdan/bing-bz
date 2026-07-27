@@ -93,7 +93,7 @@
             border-color: rgba(79, 195, 247, 0.2);
         }
 
-        /* ===== 导航栏（只有一个关闭按钮） ===== */
+        /* ===== 导航栏 ===== */
         .navbar {
             position: fixed;
             top: 12px;
@@ -147,7 +147,6 @@
             font-weight: 600;
         }
 
-        /* ★★★ 只有一个关闭按钮 ★★★ */
         .navbar-close {
             background: rgba(255, 255, 255, 0.05);
             border: none;
@@ -249,7 +248,7 @@
             overflow: hidden;
         }
 
-        /* ===== 网格：7列，滚动在 grid 本身 ===== */
+        /* ===== 网格：7列 ===== */
         .grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
@@ -263,7 +262,6 @@
             min-height: 0;
         }
 
-        /* ★★★ 滚动条样式 ★★★ */
         .grid::-webkit-scrollbar {
             width: 6px;
         }
@@ -296,29 +294,6 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            transition: filter 0.5s ease, transform 0.5s ease;
-        }
-
-        /* ★★★ 占位图（低分辨率背景图） ★★★ */
-        .card .placeholder-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            filter: blur(8px) brightness(0.7);
-            transform: scale(1.04);
-            transition: opacity 0.5s ease;
-            z-index: 1;
-        }
-
-        .card .placeholder-bg.hidden {
-            opacity: 0;
-        }
-
-        .card img {
             position: relative;
             z-index: 2;
             opacity: 0;
@@ -327,6 +302,25 @@
 
         .card img.loaded {
             opacity: 1;
+        }
+
+        /* ★★★ 占位图背景 ★★★ */
+        .card .placeholder-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px) brightness(0.7);
+            transform: scale(1.05);
+            transition: opacity 0.6s ease;
+            z-index: 1;
+        }
+
+        .card .placeholder-bg.hidden {
+            opacity: 0;
         }
 
         /* ===== 悬停信息 ===== */
@@ -369,7 +363,7 @@
             text-overflow: ellipsis;
         }
 
-        /* ===== 加载更多指示器 ===== */
+        /* ===== 加载更多 ===== */
         .loader {
             grid-column: 1 / -1;
             text-align: center;
@@ -419,7 +413,7 @@
         }
 
         /* ============================================================
-           全屏预览遮罩
+           全屏预览遮罩（保持不变）
            ============================================================ */
         .overlay {
             display: none;
@@ -634,14 +628,6 @@
                 top: 10px;
                 left: 10px;
             }
-            .overlay .meta {
-                font-size: 15px;
-                padding: 6px 16px;
-                bottom: 110px;
-            }
-            .overlay .meta .date {
-                font-size: 12px;
-            }
             #scrollTopBtn {
                 bottom: 70px;
                 right: 14px;
@@ -753,7 +739,6 @@
                 <span class="icon">🌅</span>
                 Bing <span>Wallpaper</span>
             </div>
-            <!-- ★★★ 只有一个关闭按钮 ★★★ -->
             <button class="navbar-close" id="navClose">✕</button>
         </div>
         <div class="badge"><span id="totalNavCount">0</span> 张</div>
@@ -815,15 +800,15 @@
             return url;
         }
 
-        // ★★★ 生成带缩放参数的图片URL ★★★
-        function getOptimizedImageUrl(url, width, height) {
+        // ★★★ 不用缩放参数，直接返回原图 ★★★
+        function getImageUrl(url) {
             if (!url) return '';
-            if (url.startsWith('http://') || url.startsWith('https://')) {
-                // 外部图片，尝试添加缩放参数
-                const separator = url.includes('?') ? '&' : '?';
-                return `${url}${separator}w=${width}&h=${height}`;
+            // 如果是本地路径，修复
+            if (url.startsWith('/')) {
+                return fixImagePath(url);
             }
-            return fixImagePath(url);
+            // 外部链接直接返回
+            return url;
         }
 
         // ============================================================
@@ -990,20 +975,20 @@
                 const card = document.createElement('div');
                 card.className = 'card';
 
-                const imgSrc = fixImagePath(item.webp || item.jpg || '');
-                const fallback = fixImagePath(item.jpg || '');
+                const imgSrc = getImageUrl(item.webp || item.jpg || '');
+                const fallback = getImageUrl(item.jpg || '');
 
-                // ★★★ 占位图：用低分辨率背景图 ★★★
-                const placeholderSrc = imgSrc.includes('?') ?
-                    `${imgSrc}&w=400&q=20` :
-                    `${imgSrc}?w=400&q=20`;
-
-                // ★★★ 主图：用 800x450 缩放 ★★★
-                const mainSrc = getOptimizedImageUrl(imgSrc, 800, 450);
+                // ★★★ 占位图：用低分辨率（加 w=200 参数，必应支持） ★★★
+                let placeholderSrc = imgSrc;
+                if (imgSrc.includes('th?id=')) {
+                    placeholderSrc = imgSrc.includes('?') ?
+                        `${imgSrc}&w=200` :
+                        `${imgSrc}?w=200`;
+                }
 
                 card.innerHTML = `
                     <div class="placeholder-bg" style="background-image: url('${placeholderSrc}');"></div>
-                    <img src="${mainSrc}" 
+                    <img src="${imgSrc}" 
                          alt="${item.copyright || item.date}" 
                          loading="lazy" />
                     <div class="info">
@@ -1013,10 +998,10 @@
                     </div>
                 `;
 
-                // ★★★ 图片加载完成后隐藏占位图 ★★★
                 const img = card.querySelector('img');
                 const placeholderBg = card.querySelector('.placeholder-bg');
 
+                // 图片加载完成后隐藏占位图
                 img.addEventListener('load', () => {
                     img.classList.add('loaded');
                     placeholderBg.classList.add('hidden');
@@ -1031,8 +1016,7 @@
                 // 加载失败时用 fallback
                 img.addEventListener('error', () => {
                     if (fallback && fallback !== imgSrc) {
-                        const fallbackSrc = getOptimizedImageUrl(fallback, 800, 450);
-                        img.src = fallbackSrc;
+                        img.src = fallback;
                     } else {
                         img.classList.add('loaded');
                         placeholderBg.classList.add('hidden');
@@ -1206,7 +1190,7 @@
             currentPreviewIndex = index;
             currentPreviewItem = allData[currentPreviewIndex];
 
-            const imgSrc = fixImagePath(currentPreviewItem.jpg || currentPreviewItem.webp || '');
+            const imgSrc = getImageUrl(currentPreviewItem.jpg || currentPreviewItem.webp || '');
             previewImg.src = imgSrc;
             previewTitle.textContent = currentPreviewItem.title || currentPreviewItem.copyright || '';
             previewDate.textContent = currentPreviewItem.date || '';
@@ -1216,12 +1200,11 @@
 
         function updateActionButtons() {
             if (!currentPreviewItem) return;
-            const url = currentPreviewItem.jpg || currentPreviewItem.webp || '';
-            const fullUrl = fixImagePath(url);
-            openLinkBtn.href = fullUrl;
+            const url = getImageUrl(currentPreviewItem.jpg || currentPreviewItem.webp || '');
+            openLinkBtn.href = url;
             downloadBtn.onclick = function(e) {
                 e.preventDefault();
-                downloadImage(fullUrl);
+                downloadImage(url);
             };
         }
 
