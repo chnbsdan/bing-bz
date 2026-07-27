@@ -9,6 +9,7 @@ const sharp = require('sharp');
 const PICTURE_DIR = path.join(__dirname, '../picture');
 const WEBP_DIR = path.join(__dirname, '../webp');
 const DATA_DIR = path.join(__dirname, '../data');
+const PAGES_DIR = path.join(DATA_DIR, 'pages');      // ← 新增
 const DATA_FILE = path.join(DATA_DIR, 'wallpapers.json');
 const URLS_FILE = path.join(__dirname, '../urls.txt');
 const COPYRIGHTS_FILE = path.join(__dirname, '../copyrights.txt');
