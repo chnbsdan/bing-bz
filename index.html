@@ -15,13 +15,13 @@
         html,
         body {
             width: 100%;
-            height: 100%;
+            min-height: 100vh;
             background: #0d0d1a;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             overflow: hidden;
         }
 
-        /* ===== 导航栏触发按钮（左上角固定） ===== */
+        /* ===== 导航栏触发按钮 ===== */
         .nav-toggle {
             position: fixed;
             top: 12px;
@@ -44,7 +44,7 @@
             border-color: rgba(79, 195, 247, 0.3);
         }
 
-        /* ===== 顶部浮动导航栏 ===== */
+        /* ===== 导航栏 ===== */
         .navbar {
             position: fixed;
             top: 12px;
@@ -52,7 +52,6 @@
             z-index: 1000;
             background: rgba(13, 13, 26, 0.92);
             backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 12px;
             padding: 14px 16px;
@@ -74,7 +73,6 @@
             pointer-events: auto;
         }
 
-        /* 导航栏头部（LOGO + 关闭按钮） */
         .navbar-header {
             display: flex;
             justify-content: space-between;
@@ -86,7 +84,6 @@
             color: #fff;
             font-size: 18px;
             font-weight: 300;
-            letter-spacing: 1px;
             display: flex;
             align-items: center;
             gap: 6px;
@@ -101,7 +98,6 @@
             font-weight: 600;
         }
 
-        /* 导航栏关闭按钮（右上角） */
         .navbar-close {
             background: rgba(255, 255, 255, 0.06);
             border: none;
@@ -111,7 +107,6 @@
             padding: 2px 8px;
             border-radius: 4px;
             transition: 0.2s;
-            line-height: 1.4;
         }
 
         .navbar-close:hover {
@@ -122,7 +117,6 @@
         .navbar .badge {
             color: rgba(255, 255, 255, 0.3);
             font-size: 12px;
-            margin-top: -2px;
         }
 
         .navbar .badge span {
@@ -145,7 +139,6 @@
             font-size: 13px;
             outline: none;
             transition: 0.2s;
-            min-width: 60px;
         }
 
         .navbar .search-box input:focus {
@@ -166,7 +159,6 @@
             cursor: pointer;
             font-size: 13px;
             transition: 0.2s;
-            white-space: nowrap;
         }
 
         .navbar .search-box .search-btn:hover {
@@ -189,7 +181,6 @@
             cursor: pointer;
             font-size: 13px;
             transition: 0.2s;
-            white-space: nowrap;
         }
 
         .navbar .nav-actions button:hover {
@@ -207,15 +198,16 @@
             overflow: hidden;
         }
 
-        /* ===== 网格：7列，无间隙，无边框 ===== */
+        /* ===== 网格 ===== */
         .grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             gap: 0;
             flex: 1;
             align-content: start;
-            overflow: hidden;
+            overflow-y: auto;
             padding-bottom: 60px;
+            scroll-behavior: smooth;
         }
 
         .card {
@@ -231,6 +223,19 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            transition: opacity 0.3s ease;
+        }
+
+        /* ★★★ 占位图模糊效果 ★★★ */
+        .card img.placeholder {
+            filter: blur(8px) brightness(0.8);
+            transform: scale(1.05);
+            transition: filter 0.4s ease, transform 0.4s ease;
+        }
+
+        .card img.loaded {
+            filter: blur(0) brightness(1);
+            transform: scale(1);
         }
 
         .card .info {
@@ -271,6 +276,47 @@
             text-overflow: ellipsis;
         }
 
+        /* ===== 加载更多指示器 ===== */
+        .loader {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 20px 0;
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        .loader .spinner {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            border-top-color: #4fc3f7;
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ===== 空状态 ===== */
+        .empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 80px 20px;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .empty .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
         /* ===== 浮动分页控制栏 ===== */
         .pagination {
             position: fixed;
@@ -283,7 +329,6 @@
             padding: 6px 14px;
             background: rgba(13, 13, 26, 0.85);
             backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 12px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
@@ -302,7 +347,6 @@
             cursor: pointer;
             font-size: 12px;
             transition: 0.2s;
-            white-space: nowrap;
         }
 
         .pagination button:hover:not(:disabled) {
@@ -318,13 +362,11 @@
         .pagination .page-info {
             color: rgba(255, 255, 255, 0.4);
             font-size: 12px;
-            white-space: nowrap;
         }
 
         .pagination .total-info {
             color: rgba(255, 255, 255, 0.2);
             font-size: 11px;
-            white-space: nowrap;
         }
 
         .pagination .goto-box {
@@ -343,7 +385,6 @@
             font-size: 12px;
             text-align: center;
             outline: none;
-            transition: 0.2s;
         }
 
         .pagination .goto-box input:focus {
@@ -373,19 +414,6 @@
         .pagination .goto-box .goto-btn:hover {
             background: rgba(79, 195, 247, 0.3);
             color: #fff;
-        }
-
-        /* ===== 空状态 ===== */
-        .empty {
-            grid-column: 1 / -1;
-            text-align: center;
-            padding: 80px 20px;
-            color: rgba(255, 255, 255, 0.2);
-        }
-
-        .empty .icon {
-            font-size: 40px;
-            margin-bottom: 10px;
         }
 
         /* ============================================================
@@ -817,7 +845,7 @@
         }
 
         // ============================================================
-        // 2. 导航栏：点击按钮切换
+        // 2. 导航栏
         // ============================================================
         const navToggle = document.getElementById('navToggle');
         const navbar = document.getElementById('navbar');
@@ -839,7 +867,6 @@
             toggleNav(false);
         });
 
-        // 点击页面其他地方关闭导航
         document.addEventListener('click', (e) => {
             if (navOpen && !navbar.contains(e.target) && e.target !== navToggle) {
                 toggleNav(false);
@@ -847,7 +874,7 @@
         });
 
         // ============================================================
-        // 3. 数据 + 分页
+        // 3. 数据 + 分页（模拟 bing.ioliu.cn 的分页加载）
         // ============================================================
         let allData = [];
         let filteredData = [];
@@ -855,6 +882,8 @@
         const PAGE_SIZE = 42;
         let currentPreviewIndex = 0;
         let currentPreviewItem = null;
+        let totalCount = 0;
+        let totalPages = 0;
 
         const grid = document.getElementById('grid');
         const overlay = document.getElementById('overlay');
@@ -887,10 +916,12 @@
         let lastTranslateX = 0;
         let lastTranslateY = 0;
 
+        // ===== 获取当前显示的数据 =====
         function getCurrentData() {
             return filteredData.length > 0 ? filteredData : allData;
         }
 
+        // ===== 加载数据（一次性加载全部，但分页渲染） =====
         async function loadData() {
             try {
                 const url = `${BASE_PATH}/data/wallpapers.json`;
@@ -903,8 +934,10 @@
                 }
                 allData.sort((a, b) => b.date.localeCompare(a.date));
                 filteredData = [];
-                totalInfo.textContent = `共 ${allData.length} 张`;
-                totalNavCount.textContent = allData.length;
+                totalCount = allData.length;
+                totalPages = Math.ceil(totalCount / PAGE_SIZE);
+                totalInfo.textContent = `共 ${totalCount} 张`;
+                totalNavCount.textContent = totalCount;
                 currentPage = 0;
                 renderPage(0);
             } catch (err) {
@@ -913,6 +946,7 @@
             }
         }
 
+        // ===== ★★★ 核心：渲染指定页（带占位图） ★★★ =====
         function renderPage(page) {
             const data = getCurrentData();
             const totalPages = Math.ceil(data.length / PAGE_SIZE);
@@ -936,6 +970,7 @@
             const end = Math.min(start + PAGE_SIZE, data.length);
             const slice = data.slice(start, end);
 
+            // 清空网格，保留滚动位置
             grid.innerHTML = '';
 
             slice.forEach((item, index) => {
@@ -945,15 +980,51 @@
                 const imgSrc = fixImagePath(item.webp || item.jpg || '');
                 const fallback = fixImagePath(item.jpg || '');
 
+                // ★★★ 占位图：先用压缩版，加载完成后替换 ★★★
+                // 如果 CDN 支持尺寸参数，用 &w=200 生成小图作为占位
+                const placeholderSrc = imgSrc.includes('?') 
+                    ? `${imgSrc}&w=200` 
+                    : `${imgSrc}?w=200`;
+
                 card.innerHTML = `
-                    <img src="${imgSrc}" alt="${item.copyright || item.date}" loading="lazy" 
-                         onerror="this.src='${fallback}'" />
+                    <img src="${placeholderSrc}" 
+                         data-src="${imgSrc}" 
+                         alt="${item.copyright || item.date}" 
+                         loading="lazy"
+                         class="placeholder" />
                     <div class="info">
                         <div class="date">${item.date}</div>
                         <div class="title">${item.title || item.copyright || '无标题'}</div>
                         <div class="copyright">${item.copyright || ''}</div>
                     </div>
                 `;
+
+                // ★★★ 图片加载完成后切换为高清图 ★★★
+                const img = card.querySelector('img');
+                
+                // 先尝试加载高清图
+                const highResImg = new Image();
+                highResImg.onload = function() {
+                    img.src = highResImg.src;
+                    img.classList.remove('placeholder');
+                    img.classList.add('loaded');
+                };
+                highResImg.onerror = function() {
+                    // 如果高清图加载失败，用 fallback
+                    if (fallback && fallback !== imgSrc) {
+                        const fallbackImg = new Image();
+                        fallbackImg.onload = function() {
+                            img.src = fallbackImg.src;
+                            img.classList.remove('placeholder');
+                            img.classList.add('loaded');
+                        };
+                        fallbackImg.src = fallback;
+                    } else {
+                        img.classList.remove('placeholder');
+                        img.classList.add('loaded');
+                    }
+                };
+                highResImg.src = imgSrc;
 
                 card.addEventListener('click', () => {
                     const originalIndex = allData.indexOf(item);
@@ -963,6 +1034,7 @@
                 grid.appendChild(card);
             });
 
+            // 更新分页控制
             prevBtn.disabled = currentPage === 0;
             nextBtn.disabled = currentPage >= totalPages - 1;
             pageInfo.textContent = `第 ${currentPage + 1} / ${totalPages} 页`;
@@ -970,6 +1042,7 @@
             gotoInput.placeholder = `1-${totalPages}`;
         }
 
+        // ===== 分页按钮事件 =====
         prevBtn.addEventListener('click', () => {
             if (currentPage > 0) renderPage(currentPage - 1);
         });
@@ -980,6 +1053,7 @@
             if (currentPage < totalPages - 1) renderPage(currentPage + 1);
         });
 
+        // ===== 跳转 =====
         gotoBtn.addEventListener('click', () => {
             const data = getCurrentData();
             const totalPages = Math.ceil(data.length / PAGE_SIZE);
@@ -994,6 +1068,7 @@
             if (e.key === 'Enter') gotoBtn.click();
         });
 
+        // ===== 搜索 =====
         function doSearch() {
             const keyword = searchInput.value.trim().toLowerCase();
             if (!keyword) {
@@ -1027,6 +1102,7 @@
             if (e.key === 'Enter') doSearch();
         });
 
+        // ===== 首页 =====
         homeBtn.addEventListener('click', () => {
             searchInput.value = '';
             filteredData = [];
@@ -1034,6 +1110,7 @@
             toggleNav(false);
         });
 
+        // ===== 空状态 =====
         function showEmpty() {
             grid.innerHTML = `
                 <div class="empty">
@@ -1113,6 +1190,7 @@
             document.body.style.overflow = 'auto';
         }
 
+        // ===== 缩放 =====
         function updateTransform() {
             previewImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
         }
@@ -1128,6 +1206,7 @@
             updateTransform();
         }
 
+        // ===== 拖拽 =====
         function startDrag(e) {
             if (scale <= 1) return;
             isDragging = true;
