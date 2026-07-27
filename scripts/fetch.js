@@ -1,4 +1,4 @@
-// scripts/fetch.js - 完整版（抓取 + 累加到 urls.txt 和 copyrights.txt）
+// scripts/fetch.js - 完整版
 
 const fs = require('fs');
 const path = require('path');
@@ -13,10 +13,30 @@ const DATA_FILE = path.join(DATA_DIR, 'wallpapers.json');
 const URLS_FILE = path.join(__dirname, '../urls.txt');
 const COPYRIGHTS_FILE = path.join(__dirname, '../copyrights.txt');
 
+const KEEP_DAYS = 60; // 保留最近60天的本地图片
+
 // 确保目录存在
 [PICTURE_DIR, WEBP_DIR, DATA_DIR].forEach(dir => {
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 });
+
+// ============ 文件操作 ============
+
+function readLines(filePath) {
+    if (!fs.existsSync(filePath)) return [];
+    const content = fs.readFileSync(filePath, 'utf-8');
+    return content.split('\n')
+        .map(line => line.trim())
+        .filter(line => line.length > 0 && !line.startsWith('#'));
+}
+
+function prependToFile(filePath, newLine) {
+    const existing = readLines(filePath);
+    if (existing.some(line => line === newLine)) return false;
+    const allLines = [newLine, ...existing];
+    fs.writeFileSync(filePath, allLines.join('\n') + '\n');
+    return true;
+}
 
 // ============ 日期工具 ============
 
@@ -40,30 +60,15 @@ function getDateDiff(date1, date2) {
     return Math.abs((d1 - d2) / (1000 * 60 * 60 * 24));
 }
 
-// ============ 文件操作：读取/写入 urls.txt 和 copyrights.txt ============
-
-function readLines(filePath) {
-    if (!fs.existsSync(filePath)) return [];
-    const content = fs.readFileSync(filePath, 'utf-8');
-    return content.split('\n')
-        .map(line => line.trim())
-        .filter(line => line.length > 0 && !line.startsWith('#'));
-}
-
-function prependToFile(filePath, newLine) {
-    const existing = readLines(filePath);
-    // 检查是否已存在（防止重复）
-    if (existing.some(line => line === newLine)) {
-        return false;
-    }
-    const allLines = [newLine, ...existing];
-    fs.writeFileSync(filePath, allLines.join('\n') + '\n');
-    return true;
+function daysDiff(dateStr) {
+    const today = new Date();
+    const target = new Date(dateStr);
+    return Math.floor((today - target) / (1000 * 60 * 60 * 24));
 }
 
 // ============ API 请求 ============
 
-async function fetchAndValidateWallpaper(offset) {
+async function fetchBingWallpaper(offset) {
     const idx = -offset;
     const url = `https://cn.bing.com/HPImageArchive.aspx?format=js&n=1&idx=${idx}&mkt=zh-CN`;
     const expectedDate = getTargetDate(offset);
@@ -72,31 +77,21 @@ async function fetchAndValidateWallpaper(offset) {
         const response = await axios.get(url, { timeout: 10000 });
         const image = response.data.images[0];
         
-        if (!image) {
-            return { valid: false, data: null, date: expectedDate, apiDate: null };
-        }
+        if (!image) return { valid: false, data: null, date: expectedDate };
 
         const apiDate = parseApiDate(image.startdate);
-        const imageUrl = `https://cn.bing.com${image.url}`;
+        let imageUrl = `https://cn.bing.com${image.url}`;
         
         if (!imageUrl.includes('th?id=OHR.')) {
             console.log(`⏭️ offset=${offset} 图片URL异常，跳过`);
-            return { valid: false, data: null, date: expectedDate, apiDate };
+            return { valid: false, data: null, date: expectedDate };
         }
 
         if (apiDate) {
             const diff = getDateDiff(expectedDate, apiDate);
             if (diff > 1) {
                 console.log(`⏭️ offset=${offset} 日期不匹配: 期望 ${expectedDate}, 实际 ${apiDate}, 跳过`);
-                return { valid: false, data: null, date: expectedDate, apiDate };
-            }
-        }
-
-        if (offset > 0 && apiDate) {
-            const today = getTargetDate(0);
-            if (apiDate < today) {
-                console.log(`⏭️ offset=${offset} 返回的图片日期 ${apiDate} 比今天还早，跳过`);
-                return { valid: false, data: null, date: expectedDate, apiDate };
+                return { valid: false, data: null, date: expectedDate };
             }
         }
 
@@ -115,11 +110,11 @@ async function fetchAndValidateWallpaper(offset) {
 
     } catch (error) {
         console.warn(`⚠️ 请求失败 offset=${offset}:`, error.message);
-        return { valid: false, data: null, date: expectedDate, apiDate: null };
+        return { valid: false, data: null, date: expectedDate };
     }
 }
 
-// ============ 下载与保存 ============
+// ============ 下载图片 ============
 
 async function downloadWallpaper(wallpaper, dateStr) {
     const jpgPath = path.join(PICTURE_DIR, `${dateStr}.jpg`);
@@ -159,108 +154,149 @@ async function downloadWallpaper(wallpaper, dateStr) {
     }
 }
 
-// ============ 数据持久化 ============
+// ============ 从 urls.txt 读取历史数据 ============
 
-function loadExistingData() {
-    if (!fs.existsSync(DATA_FILE)) return [];
-    try {
-        const content = fs.readFileSync(DATA_FILE, 'utf-8');
-        const data = JSON.parse(content);
-        return Array.isArray(data) ? data : [];
-    } catch (e) {
-        console.warn('⚠️ 读取旧数据失败，将重建');
-        return [];
+function loadHistoricalData() {
+    const urls = readLines(URLS_FILE);
+    const copyrights = readLines(COPYRIGHTS_FILE);
+    
+    if (urls.length === 0) return [];
+
+    const pairedData = [];
+    const maxLen = Math.max(urls.length, copyrights.length);
+    
+    for (let i = 0; i < maxLen; i++) {
+        const url = urls[i] || '';
+        const copyright = copyrights[i] || '';
+        if (url) {
+            pairedData.push({ url, copyright });
+        }
     }
+
+    // 从今天开始倒推日期
+    const today = new Date();
+    const result = pairedData.map((item, index) => {
+        const d = new Date(today);
+        d.setDate(d.getDate() - index);
+        const y = d.getFullYear();
+        const m = String(d.getMonth() + 1).padStart(2, '0');
+        const day = String(d.getDate()).padStart(2, '0');
+        const dateStr = `${y}-${m}-${day}`;
+        
+        const title = item.copyright.split('©')[0].trim() || '';
+        const copyrightLink = `https://www.bing.com/search?q=${encodeURIComponent(title)}&form=hpcapt&mkt=zh-cn`;
+        
+        return {
+            date: dateStr,
+            copyright: item.copyright,
+            copyrightLink: copyrightLink,
+            title: title,
+            description: '',
+            jpg: item.url,
+            webp: item.url
+        };
+    });
+
+    return result;
 }
 
-function saveData(data) {
-    const sorted = data.sort((a, b) => b.date.localeCompare(a.date));
-    fs.writeFileSync(DATA_FILE, JSON.stringify(sorted, null, 2));
+// ============ 清理过期本地图片 ============
+
+function cleanOldImages() {
+    const jpgFiles = fs.readdirSync(PICTURE_DIR).filter(f => f.endsWith('.jpg'));
+    const webpFiles = fs.readdirSync(WEBP_DIR).filter(f => f.endsWith('.webp'));
+    let deleted = 0;
+
+    [...jpgFiles, ...webpFiles].forEach(file => {
+        const dateStr = file.replace('.jpg', '').replace('.webp', '');
+        const diff = daysDiff(dateStr);
+        if (diff > KEEP_DAYS) {
+            const filePath = path.join(
+                file.endsWith('.jpg') ? PICTURE_DIR : WEBP_DIR,
+                file
+            );
+            try {
+                fs.unlinkSync(filePath);
+                deleted++;
+            } catch (e) {}
+        }
+    });
+
+    if (deleted > 0) {
+        console.log(`🗑️ 已删除 ${deleted} 张过期本地图片（超过 ${KEEP_DAYS} 天）`);
+    }
 }
 
 // ============ 主流程 ============
 
 async function main() {
-    console.log('🚀 开始验证并抓取必应壁纸...');
+    console.log('🚀 开始处理壁纸...');
     console.log(`📅 今天是: ${getTargetDate(0)}`);
     console.log('');
 
-    // ===== 1. 确定抓取范围 =====
-    // 只抓取今天 (offset: 0) + 未来1天 (offset: 1) 以防明天图片已准备好
-    const offsets = [];
-    offsets.push(1);  // 明天（如果有）
-    offsets.push(0);  // 今天
-
-    console.log(`📋 计划检查 ${offsets.length} 个日期`);
-    console.log(`   未来: ${getTargetDate(1)}`);
-    console.log(`   今天: ${getTargetDate(0)}`);
-    console.log('');
-
-    // ===== 2. 逐个获取并验证 =====
-    const results = [];
-    let validCount = 0;
-    let skipCount = 0;
+    // ===== 1. 抓取今天和明天的数据 =====
+    const offsets = [0, 1];
+    const newResults = [];
 
     for (const offset of offsets) {
-        const { valid, data, date, apiDate } = await fetchAndValidateWallpaper(offset);
+        const { valid, data, date } = await fetchBingWallpaper(offset);
         
         if (!valid || !data) {
-            skipCount++;
             continue;
         }
 
         // 下载图片
         const saved = await downloadWallpaper(data, date);
         if (saved) {
-            results.push(saved);
-            validCount++;
-            const apiInfo = apiDate ? `(API日期: ${apiDate})` : '';
-            console.log(`✅ ${date} ${apiInfo}`);
+            newResults.push(saved);
+            console.log(`✅ ${date}`);
             
-            // ===== ★★★ 累加到 urls.txt 和 copyrights.txt ★★★ =====
+            // 累加到 urls.txt 和 copyrights.txt
             const urlAdded = prependToFile(URLS_FILE, data.url);
             const copyrightAdded = prependToFile(COPYRIGHTS_FILE, data.copyright);
             if (urlAdded && copyrightAdded) {
                 console.log(`   📝 已添加到 urls.txt 和 copyrights.txt`);
-            } else {
-                console.log(`   ⏭️ 已存在，跳过添加`);
             }
-        } else {
-            console.log(`⏭️ ${date} 已存在`);
         }
-
         await new Promise(r => setTimeout(r, 300));
     }
 
-    console.log('');
-    console.log(`📊 统计: 有效 ${validCount} 张, 跳过 ${skipCount} 张`);
+    // ===== 2. 读取历史数据 =====
+    const historicalData = loadHistoricalData();
+    console.log(`📂 历史数据: ${historicalData.length} 条`);
 
-    // ===== 3. 合并数据到 wallpapers.json =====
-    const existingData = loadExistingData();
-    const map = new Map();
-    existingData.forEach(item => map.set(item.date, item));
-    results.forEach(item => map.set(item.date, item));
+    // ===== 3. 合并数据（历史 + 新抓取） =====
+    const dataMap = new Map();
+    
+    // 先加历史数据
+    historicalData.forEach(item => {
+        if (item.date) dataMap.set(item.date, item);
+    });
+    
+    // 新数据覆盖（确保最新）
+    newResults.forEach(item => {
+        if (item.date) dataMap.set(item.date, item);
+    });
 
-    const finalData = Array.from(map.values());
-    saveData(finalData);
+    const finalData = Array.from(dataMap.values())
+        .sort((a, b) => b.date.localeCompare(a.date));
 
-    console.log(`📝 wallpapers.json 已保存，共 ${finalData.length} 条记录`);
+    console.log(`📊 合并后共 ${finalData.length} 条记录`);
 
-    // ===== 4. 统计文件 =====
+    // ===== 4. 保存 wallpapers.json =====
+    fs.writeFileSync(DATA_FILE, JSON.stringify(finalData, null, 2));
+    console.log(`📝 wallpapers.json 已保存`);
+
+    // ===== 5. 清理过期图片 =====
+    cleanOldImages();
+
+    // ===== 6. 统计 =====
     const jpgCount = fs.readdirSync(PICTURE_DIR).filter(f => f.endsWith('.jpg')).length;
     const webpCount = fs.readdirSync(WEBP_DIR).filter(f => f.endsWith('.webp')).length;
-    console.log(`📁 原图: ${jpgCount} 张, WebP: ${webpCount} 张`);
-
-    // ===== 5. 统计 txt 文件 =====
-    const urlCount = readLines(URLS_FILE).length;
-    const copyrightCount = readLines(COPYRIGHTS_FILE).length;
-    console.log(`📁 urls.txt: ${urlCount} 条, copyrights.txt: ${copyrightCount} 条`);
-
-    console.log('');
-    console.log('✅ 全部完成!');
+    console.log(`📁 本地图片: ${jpgCount} 张 jpg, ${webpCount} 张 webp`);
+    console.log('✅ 完成!');
 }
 
-// ============ 执行 ============
 main().catch(error => {
     console.error('💥 程序异常:', error);
     process.exit(1);
