@@ -21,6 +21,55 @@
             overflow: hidden;
         }
 
+        /* ===== 进度条 ===== */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2.5px;
+            background: linear-gradient(90deg, #4fc3f7, #00e5ff);
+            width: 0%;
+            z-index: 9999;
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 12px rgba(79, 195, 247, 0.4);
+        }
+
+        /* ===== 回顶部按钮 ===== */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 22px;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+        }
+
+        #scrollTopBtn.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #scrollTopBtn:hover {
+            background: rgba(79, 195, 247, 0.2);
+            border-color: rgba(79, 195, 247, 0.3);
+            color: #fff;
+        }
+
         /* ===== 导航栏触发按钮 ===== */
         .nav-toggle {
             position: fixed;
@@ -29,7 +78,7 @@
             z-index: 1001;
             background: rgba(13, 13, 26, 0.7);
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 8px;
             color: #fff;
             font-size: 20px;
@@ -40,8 +89,8 @@
         }
 
         .nav-toggle:hover {
-            background: rgba(79, 195, 247, 0.2);
-            border-color: rgba(79, 195, 247, 0.3);
+            background: rgba(79, 195, 247, 0.15);
+            border-color: rgba(79, 195, 247, 0.2);
         }
 
         /* ===== 导航栏 ===== */
@@ -52,7 +101,7 @@
             z-index: 1000;
             background: rgba(13, 13, 26, 0.92);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 12px;
             padding: 14px 16px;
             display: flex;
@@ -63,7 +112,7 @@
             transform: translateY(-10px) scale(0.95);
             transition: opacity 0.25s ease, transform 0.25s ease;
             pointer-events: none;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
             max-width: 90vw;
         }
 
@@ -82,7 +131,7 @@
 
         .navbar .logo {
             color: #fff;
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 300;
             display: flex;
             align-items: center;
@@ -90,7 +139,7 @@
         }
 
         .navbar .logo .icon {
-            font-size: 22px;
+            font-size: 20px;
         }
 
         .navbar .logo span {
@@ -99,9 +148,9 @@
         }
 
         .navbar-close {
-            background: rgba(255, 255, 255, 0.06);
+            background: rgba(255, 255, 255, 0.05);
             border: none;
-            color: rgba(255, 255, 255, 0.4);
+            color: rgba(255, 255, 255, 0.3);
             font-size: 18px;
             cursor: pointer;
             padding: 2px 8px;
@@ -110,17 +159,17 @@
         }
 
         .navbar-close:hover {
-            background: rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.1);
             color: #fff;
         }
 
         .navbar .badge {
-            color: rgba(255, 255, 255, 0.3);
+            color: rgba(255, 255, 255, 0.25);
             font-size: 12px;
         }
 
         .navbar .badge span {
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.4);
         }
 
         .navbar .search-box {
@@ -131,8 +180,8 @@
 
         .navbar .search-box input {
             flex: 1;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 6px;
             padding: 5px 10px;
             color: #fff;
@@ -143,15 +192,15 @@
 
         .navbar .search-box input:focus {
             border-color: #4fc3f7;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
         }
 
         .navbar .search-box input::placeholder {
-            color: rgba(255, 255, 255, 0.25);
+            color: rgba(255, 255, 255, 0.2);
         }
 
         .navbar .search-box .search-btn {
-            background: rgba(79, 195, 247, 0.15);
+            background: rgba(79, 195, 247, 0.12);
             border: none;
             color: #4fc3f7;
             padding: 5px 12px;
@@ -162,20 +211,20 @@
         }
 
         .navbar .search-box .search-btn:hover {
-            background: rgba(79, 195, 247, 0.3);
+            background: rgba(79, 195, 247, 0.25);
             color: #fff;
         }
 
         .navbar .nav-actions {
             display: flex;
-            gap: 8px;
+            gap: 6px;
             flex-wrap: wrap;
         }
 
         .navbar .nav-actions button {
-            background: rgba(255, 255, 255, 0.06);
+            background: rgba(255, 255, 255, 0.04);
             border: none;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.4);
             padding: 5px 12px;
             border-radius: 6px;
             cursor: pointer;
@@ -184,7 +233,7 @@
         }
 
         .navbar .nav-actions button:hover {
-            background: rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.08);
             color: #fff;
         }
 
@@ -223,13 +272,12 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            transition: opacity 0.4s ease, filter 0.4s ease, transform 0.4s ease;
+            transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
         }
 
-        /* ★★★ 占位图模糊效果 ★★★ */
         .card img.placeholder {
-            filter: blur(10px) brightness(0.7);
-            transform: scale(1.05);
+            filter: blur(12px) brightness(0.6);
+            transform: scale(1.04);
         }
 
         .card img.loaded {
@@ -275,21 +323,21 @@
             text-overflow: ellipsis;
         }
 
-        /* ===== 加载更多指示器 ===== */
+        /* ===== 加载更多 ===== */
         .loader {
             grid-column: 1 / -1;
             text-align: center;
-            padding: 20px 0;
-            color: rgba(255, 255, 255, 0.2);
+            padding: 24px 0;
+            color: rgba(255, 255, 255, 0.15);
             font-size: 13px;
             letter-spacing: 2px;
         }
 
         .loader .spinner {
             display: inline-block;
-            width: 18px;
-            height: 18px;
-            border: 2px solid rgba(255, 255, 255, 0.08);
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.06);
             border-top-color: #4fc3f7;
             border-radius: 50%;
             animation: spin 0.7s linear infinite;
@@ -307,17 +355,16 @@
             grid-column: 1 / -1;
             text-align: center;
             padding: 20px 0;
-            color: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.06);
             font-size: 12px;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
-        /* ===== 空状态 ===== */
         .empty {
             grid-column: 1 / -1;
             text-align: center;
             padding: 80px 20px;
-            color: rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.15);
         }
 
         .empty .icon {
@@ -349,7 +396,7 @@
             position: fixed;
             top: 16px;
             right: 24px;
-            color: rgba(255, 255, 255, 0.3);
+            color: rgba(255, 255, 255, 0.25);
             font-size: 34px;
             cursor: pointer;
             z-index: 100;
@@ -384,14 +431,14 @@
 
         .overlay .action-buttons a,
         .overlay .action-buttons button {
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.4);
             text-decoration: none;
             font-size: 13px;
             padding: 5px 16px;
             border-radius: 6px;
             transition: 0.2s;
             background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             cursor: pointer;
             font-family: inherit;
             backdrop-filter: blur(4px);
@@ -400,19 +447,19 @@
         .overlay .action-buttons a:hover,
         .overlay .action-buttons button:hover {
             color: #fff;
-            border-color: rgba(255, 255, 255, 0.3);
-            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.04);
         }
 
         .overlay .action-buttons .btn-download {
             color: #4fc3f7;
-            border-color: rgba(79, 195, 247, 0.2);
+            border-color: rgba(79, 195, 247, 0.15);
         }
 
         .overlay .action-buttons .btn-download:hover {
             color: #fff;
             border-color: #4fc3f7;
-            background: rgba(79, 195, 247, 0.1);
+            background: rgba(79, 195, 247, 0.08);
         }
 
         .overlay .image-container {
@@ -452,10 +499,10 @@
             bottom: 130px;
             left: 50%;
             transform: translateX(-50%);
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.6);
             font-size: 17px;
             text-align: center;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.2);
             padding: 8px 20px;
             border-radius: 10px;
             max-width: 80%;
@@ -464,7 +511,7 @@
             opacity: 0;
             transition: opacity 0.3s ease;
             backdrop-filter: blur(4px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.03);
         }
 
         .overlay:hover .meta {
@@ -473,7 +520,7 @@
 
         .overlay .meta .date {
             font-size: 13px;
-            opacity: 0.5;
+            opacity: 0.4;
             display: block;
             margin-top: 2px;
         }
@@ -482,7 +529,7 @@
             position: fixed;
             top: 50%;
             transform: translateY(-50%);
-            color: rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.1);
             font-size: 44px;
             cursor: pointer;
             padding: 16px 10px;
@@ -527,13 +574,13 @@
                 grid-template-columns: repeat(3, 1fr);
             }
             .navbar {
-                min-width: 170px;
+                min-width: 160px;
                 padding: 12px 14px;
                 top: 10px;
                 left: 10px;
             }
             .navbar .logo {
-                font-size: 16px;
+                font-size: 15px;
             }
             .nav-toggle {
                 font-size: 18px;
@@ -549,6 +596,13 @@
             .overlay .meta .date {
                 font-size: 12px;
             }
+            #scrollTopBtn {
+                bottom: 70px;
+                right: 14px;
+                width: 38px;
+                height: 38px;
+                font-size: 18px;
+            }
         }
 
         @media (max-width: 500px) {
@@ -560,7 +614,7 @@
                 aspect-ratio: 16 / 12;
             }
             .navbar {
-                min-width: 150px;
+                min-width: 140px;
                 padding: 10px 12px;
                 top: 8px;
                 left: 8px;
@@ -592,6 +646,13 @@
                 padding: 4px 8px;
                 top: 8px;
                 left: 8px;
+            }
+            #scrollTopBtn {
+                bottom: 60px;
+                right: 10px;
+                width: 34px;
+                height: 34px;
+                font-size: 16px;
             }
             .overlay .arrow {
                 font-size: 26px;
@@ -633,6 +694,9 @@
 </head>
 <body>
 
+    <!-- ===== 进度条 ===== -->
+    <div id="progress-bar"></div>
+
     <!-- ===== 导航栏触发按钮 ===== -->
     <button class="nav-toggle" id="navToggle" aria-label="切换导航">☰</button>
 
@@ -646,12 +710,10 @@
             <button class="navbar-close" id="navClose">✕</button>
         </div>
         <div class="badge"><span id="totalNavCount">0</span> 张</div>
-
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="搜索年份/关键词..." />
             <button class="search-btn" id="searchBtn">搜索</button>
         </div>
-
         <div class="nav-actions">
             <button id="homeBtn">🏠 首页</button>
         </div>
@@ -662,21 +724,21 @@
         <div class="grid" id="grid"></div>
     </div>
 
+    <!-- ===== 回顶部按钮 ===== -->
+    <button id="scrollTopBtn" aria-label="回到顶部">↑</button>
+
     <!-- ===== 全屏预览遮罩 ===== -->
     <div class="overlay" id="overlay">
         <button class="close" id="closeBtn">&times;</button>
         <button class="arrow arrow-left" id="prevPreviewBtn">‹</button>
         <button class="arrow arrow-right" id="nextPreviewBtn">›</button>
-
         <div class="image-container" id="imageContainer">
             <img class="preview-image" id="previewImg" src="" alt="预览" />
         </div>
-
         <div class="action-buttons">
             <a href="#" id="openLinkBtn" target="_blank" rel="noopener">🔗 打开链接</a>
             <button class="btn-download" id="downloadBtn">⬇️ 下载4K图片</button>
         </div>
-
         <div class="meta" id="previewMeta">
             <span id="previewTitle"></span>
             <span class="date" id="previewDate"></span>
@@ -707,7 +769,22 @@
         }
 
         // ============================================================
-        // 2. 导航栏
+        // 2. 进度条
+        // ============================================================
+        const progressBar = document.getElementById('progress-bar');
+
+        function showProgress() {
+            progressBar.style.width = '35%';
+            setTimeout(() => { progressBar.style.width = '70%'; }, 150);
+        }
+
+        function hideProgress() {
+            progressBar.style.width = '100%';
+            setTimeout(() => { progressBar.style.width = '0%'; }, 350);
+        }
+
+        // ============================================================
+        // 3. 导航栏
         // ============================================================
         const navToggle = document.getElementById('navToggle');
         const navbar = document.getElementById('navbar');
@@ -736,19 +813,36 @@
         });
 
         // ============================================================
-        // 3. ★★★ 分页加载 + 滚动加载 ★★★
+        // 4. 回顶部按钮
+        // ============================================================
+        const scrollBtn = document.getElementById('scrollTopBtn');
+        const gridEl = document.getElementById('grid');
+
+        gridEl.addEventListener('scroll', () => {
+            if (gridEl.scrollTop > 400) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+
+        scrollBtn.addEventListener('click', () => {
+            gridEl.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ============================================================
+        // 5. ★★★ 数据加载（直接加载 wallpapers.json，前端分页） ★★★
         // ============================================================
         let allData = [];
         let filteredData = [];
         let currentPage = 1;
-        let totalPages = 1;
+        const PAGE_SIZE = 42;
         let totalCount = 0;
         let isLoading = false;
         let hasMore = true;
         let currentPreviewIndex = 0;
         let currentPreviewItem = null;
 
-        // DOM 引用
         const grid = document.getElementById('grid');
         const overlay = document.getElementById('overlay');
         const imageContainer = document.getElementById('imageContainer');
@@ -774,86 +868,70 @@
         let lastTranslateX = 0;
         let lastTranslateY = 0;
 
-        // ============================================================
-        // 3.1 加载分页数据
-        // ============================================================
-        async function loadPage(page) {
-            if (isLoading) return;
-            isLoading = true;
-
+        // ===== 5.1 加载数据 =====
+        async function loadData() {
+            showProgress();
             try {
-                // 如果有搜索过滤，不走分页，直接全量搜索
-                if (filteredData.length > 0) {
-                    renderFilteredPage(page);
-                    isLoading = false;
-                    return;
-                }
-
-                const url = `${BASE_PATH}/data/pages/page-${page}.json`;
+                const url = `${BASE_PATH}/data/wallpapers.json`;
                 const res = await fetch(url);
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                const pageData = await res.json();
-
-                allData = pageData.items;
-                totalCount = pageData.total;
-                totalPages = pageData.totalPages;
-                hasMore = pageData.hasMore;
-                currentPage = page;
-
+                allData = await res.json();
+                if (!Array.isArray(allData) || allData.length === 0) {
+                    showEmpty();
+                    hideProgress();
+                    return;
+                }
+                allData.sort((a, b) => b.date.localeCompare(a.date));
+                totalCount = allData.length;
                 totalNavCount.textContent = totalCount;
-                renderPage(pageData.items, page);
-                updateLoader();
-
+                currentPage = 1;
+                filteredData = [];
+                renderPage(1);
+                hideProgress();
             } catch (err) {
                 console.error('加载失败:', err);
-                // 降级：尝试加载完整 wallpapers.json
-                try {
-                    const fallbackUrl = `${BASE_PATH}/data/wallpapers.json`;
-                    const res = await fetch(fallbackUrl);
-                    if (!res.ok) throw new Error('Fallback failed');
-                    const data = await res.json();
-                    allData = data;
-                    totalCount = data.length;
-                    totalPages = Math.ceil(totalCount / 42);
-                    const start = (page - 1) * 42;
-                    const end = Math.min(start + 42, data.length);
-                    renderPage(data.slice(start, end), page);
-                } catch (e) {
-                    showEmpty();
-                }
+                showEmpty();
+                hideProgress();
             }
-
-            isLoading = false;
         }
 
-        // ============================================================
-        // 3.2 渲染页面
-        // ============================================================
-        function renderPage(items, page) {
-            // 保留导航栏和加载指示器
-            const loader = grid.querySelector('.loader');
-            const noMore = grid.querySelector('.no-more');
+        // ===== 5.2 渲染页面（前端分页） =====
+        function renderPage(page) {
+            const data = filteredData.length > 0 ? filteredData : allData;
+            const totalPages = Math.ceil(data.length / PAGE_SIZE);
+            if (page < 1) page = 1;
+            if (page > totalPages) page = totalPages;
+            if (totalPages === 0) {
+                showEmpty();
+                return;
+            }
 
-            // 移除所有卡片（保留 loader 和 no-more）
+            currentPage = page;
+            const start = (page - 1) * PAGE_SIZE;
+            const end = Math.min(start + PAGE_SIZE, data.length);
+            const items = data.slice(start, end);
+            hasMore = page < totalPages;
+
+            // 移除所有卡片
             const cards = grid.querySelectorAll('.card');
             cards.forEach(el => el.remove());
 
-            if (!items || items.length === 0) {
+            if (items.length === 0) {
                 showEmpty();
                 return;
             }
 
             items.forEach((item, index) => {
-                const realIndex = (page - 1) * 42 + index;
+                const realIndex = (page - 1) * PAGE_SIZE + index;
                 const card = document.createElement('div');
                 card.className = 'card';
                 const imgSrc = fixImagePath(item.webp || item.jpg || '');
                 const fallback = fixImagePath(item.jpg || '');
 
-                // ★★★ 占位图：用压缩图 ★★★
+                // 占位图
                 const placeholderSrc = imgSrc.includes('?') ?
-                    `${imgSrc}&w=200&q=30` :
-                    `${imgSrc}?w=200&q=30`;
+                    `${imgSrc}&w=200&q=20` :
+                    `${imgSrc}?w=200&q=20`;
 
                 card.innerHTML = `
                     <img src="${placeholderSrc}" 
@@ -868,7 +946,7 @@
                     </div>
                 `;
 
-                // ★★★ 图片加载完成后切换为高清图 ★★★
+                // 加载高清图
                 const img = card.querySelector('img');
                 const highResImg = new Image();
                 highResImg.onload = function() {
@@ -893,7 +971,6 @@
                 highResImg.src = imgSrc;
 
                 card.addEventListener('click', () => {
-                    // 在全部数据中查找
                     let targetIndex = realIndex;
                     if (allData.length > 0) {
                         const found = allData.findIndex(d => d.date === item.date);
@@ -905,120 +982,23 @@
                 grid.appendChild(card);
             });
 
-            // 恢复 loader 或 no-more
-            if (loader) grid.appendChild(loader);
-            if (noMore) grid.appendChild(noMore);
+            updateLoader();
         }
 
-        // ============================================================
-        // 3.3 搜索过滤
-        // ============================================================
-        function renderFilteredPage(page) {
-            const start = (page - 1) * 42;
-            const end = Math.min(start + 42, filteredData.length);
-            const items = filteredData.slice(start, end);
-
-            const cards = grid.querySelectorAll('.card');
-            cards.forEach(el => el.remove());
-
-            if (items.length === 0) {
-                const empty = document.createElement('div');
-                empty.className = 'empty';
-                empty.innerHTML = `
-                    <div class="icon">🔍</div>
-                    <div>没有匹配的壁纸</div>
-                `;
-                grid.appendChild(empty);
-                return;
-            }
-
-            items.forEach((item, index) => {
-                const card = document.createElement('div');
-                card.className = 'card';
-                const imgSrc = fixImagePath(item.webp || item.jpg || '');
-                const fallback = fixImagePath(item.jpg || '');
-                const placeholderSrc = imgSrc.includes('?') ?
-                    `${imgSrc}&w=200&q=30` :
-                    `${imgSrc}?w=200&q=30`;
-
-                card.innerHTML = `
-                    <img src="${placeholderSrc}" 
-                         data-src="${imgSrc}" 
-                         alt="${item.copyright || item.date}" 
-                         loading="lazy"
-                         class="placeholder" />
-                    <div class="info">
-                        <div class="date">${item.date}</div>
-                        <div class="title">${item.title || item.copyright || '无标题'}</div>
-                        <div class="copyright">${item.copyright || ''}</div>
-                    </div>
-                `;
-
-                const img = card.querySelector('img');
-                const highResImg = new Image();
-                highResImg.onload = function() {
-                    img.src = highResImg.src;
-                    img.classList.remove('placeholder');
-                    img.classList.add('loaded');
-                };
-                highResImg.onerror = function() {
-                    if (fallback && fallback !== imgSrc) {
-                        const fbImg = new Image();
-                        fbImg.onload = function() {
-                            img.src = fbImg.src;
-                            img.classList.remove('placeholder');
-                            img.classList.add('loaded');
-                        };
-                        fbImg.src = fallback;
-                    } else {
-                        img.classList.remove('placeholder');
-                        img.classList.add('loaded');
-                    }
-                };
-                highResImg.src = imgSrc;
-
-                const targetIndex = allData.findIndex(d => d.date === item.date);
-                card.addEventListener('click', () => {
-                    openPreview(targetIndex >= 0 ? targetIndex : index);
-                });
-
-                grid.appendChild(card);
-            });
-        }
-
-        // ============================================================
-        // 3.4 加载更多（滚动触发）
-        // ============================================================
+        // ===== 5.3 更新加载更多指示器 =====
         function updateLoader() {
-            // 移除旧的 loader
             const oldLoader = grid.querySelector('.loader');
             if (oldLoader) oldLoader.remove();
             const oldNoMore = grid.querySelector('.no-more');
             if (oldNoMore) oldNoMore.remove();
 
-            if (filteredData.length > 0) {
-                // 搜索模式下显示已加载数量
-                const totalFiltered = filteredData.length;
-                const loaded = Math.min(currentPage * 42, totalFiltered);
-                if (loaded >= totalFiltered) {
-                    const noMore = document.createElement('div');
-                    noMore.className = 'no-more';
-                    noMore.textContent = `— 共 ${totalFiltered} 张 —`;
-                    grid.appendChild(noMore);
-                } else {
-                    const loader = document.createElement('div');
-                    loader.className = 'loader';
-                    loader.innerHTML = `<span class="spinner"></span> 加载更多...`;
-                    grid.appendChild(loader);
-                }
-                return;
-            }
+            const data = filteredData.length > 0 ? filteredData : allData;
+            const totalPages = Math.ceil(data.length / PAGE_SIZE);
 
-            // 正常分页模式
-            if (!hasMore || currentPage >= totalPages) {
+            if (currentPage >= totalPages || totalPages === 0) {
                 const noMore = document.createElement('div');
                 noMore.className = 'no-more';
-                noMore.textContent = `— 共 ${totalCount} 张 —`;
+                noMore.textContent = `— 共 ${data.length} 张 —`;
                 grid.appendChild(noMore);
             } else {
                 const loader = document.createElement('div');
@@ -1029,62 +1009,50 @@
             }
         }
 
-        // ============================================================
-        // 3.5 滚动监听
-        // ============================================================
+        // ===== 5.4 加载更多（滚动触发） =====
+        function loadMore() {
+            if (isLoading) return;
+            const data = filteredData.length > 0 ? filteredData : allData;
+            const totalPages = Math.ceil(data.length / PAGE_SIZE);
+            if (currentPage < totalPages) {
+                isLoading = true;
+                showProgress();
+                setTimeout(() => {
+                    renderPage(currentPage + 1);
+                    isLoading = false;
+                    hideProgress();
+                }, 200);
+            }
+        }
+
+        // ===== 5.5 滚动监听 =====
         let scrollTimeout = null;
 
         function handleScroll() {
             if (scrollTimeout) return;
             scrollTimeout = setTimeout(() => {
                 scrollTimeout = null;
-                const gridEl = document.getElementById('grid');
                 const scrollTop = gridEl.scrollTop;
                 const clientHeight = gridEl.clientHeight;
                 const scrollHeight = gridEl.scrollHeight;
 
                 if (scrollTop + clientHeight >= scrollHeight - 300) {
-                    if (filteredData.length > 0) {
-                        // 搜索模式加载更多
-                        const totalFiltered = filteredData.length;
-                        const loaded = currentPage * 42;
-                        if (loaded < totalFiltered) {
-                            currentPage++;
-                            renderFilteredPage(currentPage);
-                            updateLoader();
-                        }
-                    } else if (hasMore && currentPage < totalPages) {
-                        currentPage++;
-                        loadPage(currentPage);
-                    }
+                    loadMore();
                 }
             }, 100);
         }
 
-        // ============================================================
-        // 3.6 搜索功能
-        // ============================================================
+        gridEl.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', () => {
+            setTimeout(handleScroll, 200);
+        });
+
+        // ===== 5.6 搜索 =====
         function doSearch() {
             const keyword = searchInput.value.trim().toLowerCase();
             if (!keyword) {
                 filteredData = [];
-                currentPage = 1;
-                loadPage(1);
-                return;
-            }
-            // 如果 allData 为空，先加载第一页数据再搜索
-            if (allData.length === 0) {
-                loadPage(1).then(() => {
-                    filteredData = allData.filter(item => {
-                        const title = (item.title || '').toLowerCase();
-                        const copyright = (item.copyright || '').toLowerCase();
-                        const date = item.date || '';
-                        return title.includes(keyword) || copyright.includes(keyword) || date.includes(keyword);
-                    });
-                    currentPage = 1;
-                    renderFilteredPage(1);
-                    updateLoader();
-                });
+                renderPage(1);
                 return;
             }
             filteredData = allData.filter(item => {
@@ -1093,9 +1061,16 @@
                 const date = item.date || '';
                 return title.includes(keyword) || copyright.includes(keyword) || date.includes(keyword);
             });
-            currentPage = 1;
-            renderFilteredPage(1);
-            updateLoader();
+            if (filteredData.length === 0) {
+                grid.innerHTML = `
+                    <div class="empty">
+                        <div class="icon">🔍</div>
+                        <div>没有匹配"${keyword}"的壁纸</div>
+                    </div>
+                `;
+                return;
+            }
+            renderPage(1);
         }
 
         searchBtn.addEventListener('click', doSearch);
@@ -1103,20 +1078,15 @@
             if (e.key === 'Enter') doSearch();
         });
 
-        // ============================================================
-        // 3.7 首页按钮
-        // ============================================================
+        // ===== 5.7 首页 =====
         homeBtn.addEventListener('click', () => {
             searchInput.value = '';
             filteredData = [];
-            currentPage = 1;
-            loadPage(1);
+            renderPage(1);
             toggleNav(false);
         });
 
-        // ============================================================
-        // 3.8 空状态
-        // ============================================================
+        // ===== 5.8 空状态 =====
         function showEmpty() {
             grid.innerHTML = `
                 <div class="empty">
@@ -1127,17 +1097,10 @@
         }
 
         // ============================================================
-        // 4. 全屏预览
+        // 6. 全屏预览
         // ============================================================
         function openPreview(index) {
-            if (allData.length === 0) {
-                // 尝试从已加载的数据中找
-                const cards = grid.querySelectorAll('.card');
-                if (cards.length > 0 && index < cards.length) {
-                    // 粗略处理
-                }
-                return;
-            }
+            if (allData.length === 0) return;
             if (index < 0) index = 0;
             if (index >= allData.length) index = allData.length - 1;
             currentPreviewIndex = index;
@@ -1260,7 +1223,7 @@
         }
 
         // ============================================================
-        // 5. 事件绑定
+        // 7. 事件绑定
         // ============================================================
         document.getElementById('closeBtn').addEventListener('click', closePreview);
         document.getElementById('prevPreviewBtn').addEventListener('click', (e) => {
@@ -1293,17 +1256,10 @@
             if (e.key === 'ArrowRight') showPreview(currentPreviewIndex + 1);
         });
 
-        // ★★★ 滚动监听 ★★★
-        const gridElement = document.getElementById('grid');
-        gridElement.addEventListener('scroll', handleScroll);
-        window.addEventListener('resize', () => {
-            setTimeout(handleScroll, 200);
-        });
-
         // ============================================================
-        // 6. 启动
+        // 8. 启动
         // ============================================================
-        loadPage(1);
+        loadData();
     </script>
 
 </body>
