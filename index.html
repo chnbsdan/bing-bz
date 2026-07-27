@@ -18,46 +18,60 @@
             min-height: 100vh;
             background: #0d0d1a;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            overflow: hidden;
         }
 
-        /* ===== 顶部浮动导航栏（左上角，默认隐藏） ===== */
+        /* ===== 导航栏触发按钮（左上角固定） ===== */
+        .nav-toggle {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 1001;
+            background: rgba(13, 13, 26, 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 22px;
+            padding: 8px 14px;
+            cursor: pointer;
+            transition: 0.2s;
+            line-height: 1;
+        }
+
+        .nav-toggle:hover {
+            background: rgba(79, 195, 247, 0.2);
+            border-color: rgba(79, 195, 247, 0.3);
+        }
+
+        /* ===== 顶部浮动导航栏 ===== */
         .navbar {
             position: fixed;
             top: 16px;
             left: 16px;
             z-index: 1000;
-            background: rgba(13, 13, 26, 0.85);
+            background: rgba(13, 13, 26, 0.92);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 14px;
-            padding: 10px 16px;
+            padding: 14px 18px;
             display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 10px;
+            min-width: 220px;
             opacity: 0;
-            transform: translateY(-10px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(-10px) scale(0.95);
+            transition: opacity 0.25s ease, transform 0.25s ease;
             pointer-events: none;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
             max-width: 90vw;
         }
 
-        .navbar.show {
+        .navbar.open {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0) scale(1);
             pointer-events: auto;
-        }
-
-        .navbar-trigger {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 140px;
-            height: 80px;
-            z-index: 999;
-            cursor: default;
         }
 
         .navbar .logo {
@@ -65,10 +79,9 @@
             font-size: 20px;
             font-weight: 300;
             letter-spacing: 1px;
-            white-space: nowrap;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
         .navbar .logo .icon {
@@ -83,32 +96,30 @@
         .navbar .badge {
             color: rgba(255, 255, 255, 0.3);
             font-size: 12px;
-            white-space: nowrap;
+            margin-top: -4px;
         }
 
         .navbar .badge span {
             color: rgba(255, 255, 255, 0.5);
         }
 
-        /* ===== 导航栏搜索框 ===== */
         .navbar .search-box {
             display: flex;
-            align-items: center;
             gap: 6px;
-            flex: 1;
-            min-width: 120px;
+            width: 100%;
         }
 
         .navbar .search-box input {
+            flex: 1;
             background: rgba(255, 255, 255, 0.06);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 6px;
-            padding: 4px 10px;
+            padding: 6px 12px;
             color: #fff;
             font-size: 13px;
             outline: none;
-            width: 140px;
             transition: 0.2s;
+            min-width: 60px;
         }
 
         .navbar .search-box input:focus {
@@ -124,7 +135,7 @@
             background: rgba(79, 195, 247, 0.15);
             border: none;
             color: #4fc3f7;
-            padding: 4px 12px;
+            padding: 6px 14px;
             border-radius: 6px;
             cursor: pointer;
             font-size: 13px;
@@ -137,12 +148,17 @@
             color: #fff;
         }
 
-        /* ===== 导航栏首页按钮 ===== */
-        .navbar .home-btn {
+        .navbar .nav-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .navbar .nav-actions button {
             background: rgba(255, 255, 255, 0.06);
             border: none;
             color: rgba(255, 255, 255, 0.5);
-            padding: 4px 12px;
+            padding: 6px 14px;
             border-radius: 6px;
             cursor: pointer;
             font-size: 13px;
@@ -150,7 +166,7 @@
             white-space: nowrap;
         }
 
-        .navbar .home-btn:hover {
+        .navbar .nav-actions button:hover {
             background: rgba(255, 255, 255, 0.12);
             color: #fff;
         }
@@ -163,7 +179,7 @@
             padding: 10px;
         }
 
-        /* ===== 网格：7列，无间隙 ===== */
+        /* ===== 网格：7列，无间隙，固定高度 ===== */
         .grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
@@ -194,7 +210,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 10px 8px 6px;
+            padding: 12px 10px 8px;
             background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
             color: #fff;
             opacity: 0;
@@ -207,12 +223,12 @@
         }
 
         .card .info .date {
-            font-size: 10px;
+            font-size: 11px;
             color: rgba(255, 255, 255, 0.5);
         }
 
         .card .info .title {
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 500;
             white-space: nowrap;
             overflow: hidden;
@@ -220,14 +236,14 @@
         }
 
         .card .info .copyright {
-            font-size: 9px;
+            font-size: 10px;
             color: rgba(255, 255, 255, 0.35);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
 
-        /* ===== 浮动分页控制栏（底部居中） ===== */
+        /* ===== 浮动分页控制栏 ===== */
         .pagination {
             position: fixed;
             bottom: 20px;
@@ -383,7 +399,6 @@
             color: #fff;
         }
 
-        /* ===== 操作按钮：无背景，默认隐藏，悬停显示 ===== */
         .overlay .action-buttons {
             position: fixed;
             bottom: 80px;
@@ -467,27 +482,39 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
         }
 
+        /* ===== 大图版权信息：默认隐藏，鼠标移入显示，字体放大 ===== */
         .overlay .meta {
             position: fixed;
             bottom: 150px;
             left: 50%;
             transform: translateX(-50%);
-            color: rgba(255, 255, 255, 0.3);
-            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 18px;
             text-align: center;
-            background: transparent;
-            padding: 6px 18px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px 24px;
+            border-radius: 12px;
             max-width: 80%;
             pointer-events: none;
             z-index: 50;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .overlay:hover .meta {
+            opacity: 1;
         }
 
         .overlay .meta .date {
-            font-size: 11px;
-            opacity: 0.4;
+            font-size: 14px;
+            opacity: 0.5;
             display: block;
+            margin-top: 2px;
         }
 
+        /* ===== 大图左右箭头 ===== */
         .overlay .arrow {
             position: fixed;
             top: 50%;
@@ -537,42 +564,30 @@
                 grid-template-columns: repeat(3, 1fr);
             }
             .navbar {
-                padding: 8px 12px;
-                gap: 8px;
-                top: 10px;
-                left: 10px;
+                min-width: 180px;
+                padding: 12px 14px;
             }
             .navbar .logo {
-                font-size: 16px;
+                font-size: 17px;
             }
-            .navbar .logo .icon {
-                font-size: 20px;
-            }
-            .navbar .badge {
-                font-size: 10px;
-            }
-            .navbar .search-box input {
-                width: 100px;
-                font-size: 12px;
-            }
-            .navbar-trigger {
-                width: 100px;
-                height: 60px;
+            .nav-toggle {
+                font-size: 18px;
+                padding: 6px 12px;
             }
             .pagination {
                 padding: 6px 12px;
                 gap: 6px;
-                bottom: 12px;
             }
             .pagination button {
                 font-size: 12px;
                 padding: 4px 10px;
             }
-            .pagination .page-info {
-                font-size: 12px;
+            .overlay .meta {
+                font-size: 15px;
+                padding: 8px 18px;
+                bottom: 130px;
             }
-            .pagination .goto-box input {
-                width: 40px;
+            .overlay .meta .date {
                 font-size: 12px;
             }
         }
@@ -585,8 +600,35 @@
             .card {
                 aspect-ratio: 16 / 12;
             }
+            .navbar {
+                min-width: 150px;
+                padding: 10px 12px;
+                top: 10px;
+                left: 10px;
+            }
+            .navbar .logo {
+                font-size: 15px;
+            }
+            .navbar .logo .icon {
+                font-size: 18px;
+            }
             .navbar .search-box input {
-                width: 80px;
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+            .navbar .search-box .search-btn {
+                font-size: 12px;
+                padding: 4px 10px;
+            }
+            .navbar .nav-actions button {
+                font-size: 12px;
+                padding: 4px 10px;
+            }
+            .nav-toggle {
+                font-size: 16px;
+                padding: 5px 10px;
+                top: 10px;
+                left: 10px;
             }
             .pagination {
                 flex-wrap: wrap;
@@ -642,17 +684,23 @@
                 padding: 4px 12px;
             }
             .overlay .meta {
+                font-size: 13px;
+                padding: 6px 14px;
+                bottom: 120px;
+                max-width: 90%;
+            }
+            .overlay .meta .date {
                 font-size: 11px;
-                padding: 4px 12px;
-                bottom: 130px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- ===== 左上角浮动导航栏 ===== -->
-    <div class="navbar-trigger" id="navbarTrigger"></div>
+    <!-- ===== 导航栏触发按钮 ===== -->
+    <button class="nav-toggle" id="navToggle" aria-label="切换导航">☰</button>
+
+    <!-- ===== 浮动导航栏 ===== -->
     <div class="navbar" id="navbar">
         <div class="logo">
             <span class="icon">🌅</span>
@@ -665,7 +713,9 @@
             <button class="search-btn" id="searchBtn">搜索</button>
         </div>
 
-        <button class="home-btn" id="homeBtn">🏠 首页</button>
+        <div class="nav-actions">
+            <button id="homeBtn">🏠 首页</button>
+        </div>
     </div>
 
     <!-- ===== 应用容器 ===== -->
@@ -731,31 +781,26 @@
         }
 
         // ============================================================
-        // 2. 导航栏交互
+        // 2. 导航栏：点击按钮切换
         // ============================================================
+        const navToggle = document.getElementById('navToggle');
         const navbar = document.getElementById('navbar');
-        const navbarTrigger = document.getElementById('navbarTrigger');
-        let navTimeout = null;
+        let navOpen = false;
 
-        navbarTrigger.addEventListener('mouseenter', () => {
-            navbar.classList.add('show');
-            clearTimeout(navTimeout);
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navOpen = !navOpen;
+            navbar.classList.toggle('open', navOpen);
+            navToggle.textContent = navOpen ? '✕' : '☰';
         });
 
-        navbarTrigger.addEventListener('mouseleave', () => {
-            navTimeout = setTimeout(() => {
-                if (!navbar.matches(':hover')) {
-                    navbar.classList.remove('show');
-                }
-            }, 200);
-        });
-
-        navbar.addEventListener('mouseenter', () => {
-            clearTimeout(navTimeout);
-        });
-
-        navbar.addEventListener('mouseleave', () => {
-            navbar.classList.remove('show');
+        // 点击页面其他地方关闭导航
+        document.addEventListener('click', (e) => {
+            if (navOpen && !navbar.contains(e.target) && e.target !== navToggle) {
+                navOpen = false;
+                navbar.classList.remove('open');
+                navToggle.textContent = '☰';
+            }
         });
 
         // ============================================================
@@ -896,7 +941,7 @@
             if (currentPage < totalPages - 1) renderPage(currentPage + 1);
         });
 
-        // ===== 跳转到指定页 =====
+        // ===== 跳转 =====
         gotoBtn.addEventListener('click', () => {
             const data = getCurrentData();
             const totalPages = Math.ceil(data.length / PAGE_SIZE);
@@ -911,7 +956,7 @@
             if (e.key === 'Enter') gotoBtn.click();
         });
 
-        // ===== 搜索功能（支持年份如"2023"） =====
+        // ===== 搜索 =====
         function doSearch() {
             const keyword = searchInput.value.trim().toLowerCase();
             if (!keyword) {
@@ -923,9 +968,7 @@
                 const title = (item.title || '').toLowerCase();
                 const copyright = (item.copyright || '').toLowerCase();
                 const date = item.date || '';
-                // 支持搜索年份（如"2023"）
-                const yearMatch = date.includes(keyword);
-                return title.includes(keyword) || copyright.includes(keyword) || yearMatch;
+                return title.includes(keyword) || copyright.includes(keyword) || date.includes(keyword);
             });
             if (filteredData.length === 0) {
                 grid.innerHTML = `
@@ -947,11 +990,15 @@
             if (e.key === 'Enter') doSearch();
         });
 
-        // ===== 首页按钮 =====
+        // ===== 首页 =====
         homeBtn.addEventListener('click', () => {
             searchInput.value = '';
             filteredData = [];
             renderPage(0);
+            // 关闭导航
+            navOpen = false;
+            navbar.classList.remove('open');
+            navToggle.textContent = '☰';
         });
 
         // ===== 空状态 =====
@@ -1011,7 +1058,7 @@
             };
         }
 
-        // ===== 下载功能 =====
+        // ===== 下载 =====
         async function downloadImage(url) {
             try {
                 const response = await fetch(url);
