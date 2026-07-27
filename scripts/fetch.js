@@ -315,6 +315,38 @@ async function main() {
     fs.writeFileSync(DATA_FILE, JSON.stringify(finalData, null, 2));
     console.log(`📝 wallpapers.json 已保存`);
 
+    // ===== 生成分页 JSON =====
+function generatePagination(data, pageSize = 42) {
+    const totalPages = Math.ceil(data.length / pageSize);
+    const paginatedData = {};
+    
+    for (let i = 0; i < totalPages; i++) {
+        const start = i * pageSize;
+        const end = Math.min(start + pageSize, data.length);
+        paginatedData[`page-${i+1}.json`] = data.slice(start, end);
+    }
+    
+    // 保存分页文件
+    const PAGES_DIR = path.join(__dirname, '../data/pages');
+    if (!fs.existsSync(PAGES_DIR)) fs.mkdirSync(PAGES_DIR, { recursive: true });
+    
+    for (const [fileName, pageData] of Object.entries(paginatedData)) {
+        fs.writeFileSync(
+            path.join(PAGES_DIR, fileName),
+            JSON.stringify({
+                items: pageData,
+                page: parseInt(fileName.match(/\d+/)[0]),
+                pageSize: pageSize,
+                total: data.length,
+                totalPages: totalPages,
+                hasMore: parseInt(fileName.match(/\d+/)[0]) < totalPages
+            }, null, 2)
+        );
+    }
+    
+    console.log(`📄 生成 ${totalPages} 个分页文件`);
+}
+
     // ===== 5. 清理过期图片 =====
     cleanOldImages();
 
