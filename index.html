@@ -19,26 +19,28 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
-        /* ===== 顶部浮动导航（左上角，默认隐藏） ===== */
+        /* ===== 顶部浮动导航栏（左上角，默认隐藏） ===== */
         .navbar {
             position: fixed;
             top: 16px;
             left: 16px;
             z-index: 1000;
-            background: rgba(13, 13, 26, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(13, 13, 26, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 14px;
-            padding: 8px 16px;
+            padding: 10px 16px;
             display: flex;
             align-items: center;
             gap: 12px;
+            flex-wrap: wrap;
             opacity: 0;
             transform: translateY(-10px);
             transition: opacity 0.3s ease, transform 0.3s ease;
             pointer-events: none;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            max-width: 90vw;
         }
 
         .navbar.show {
@@ -47,12 +49,11 @@
             pointer-events: auto;
         }
 
-        /* 触发区域：左上角一小块不可见区域，鼠标经过时显示导航 */
         .navbar-trigger {
             position: fixed;
             top: 0;
             left: 0;
-            width: 120px;
+            width: 140px;
             height: 80px;
             z-index: 999;
             cursor: default;
@@ -60,7 +61,7 @@
 
         .navbar .logo {
             color: #fff;
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 300;
             letter-spacing: 1px;
             white-space: nowrap;
@@ -81,13 +82,77 @@
             color: rgba(255, 255, 255, 0.5);
         }
 
+        /* ===== 导航栏搜索框 ===== */
+        .navbar .search-box {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .navbar .search-box input {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 6px;
+            padding: 4px 10px;
+            color: #fff;
+            font-size: 13px;
+            outline: none;
+            width: 140px;
+            transition: 0.2s;
+        }
+
+        .navbar .search-box input:focus {
+            border-color: #4fc3f7;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar .search-box input::placeholder {
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+        .navbar .search-box .search-btn {
+            background: rgba(79, 195, 247, 0.15);
+            border: none;
+            color: #4fc3f7;
+            padding: 4px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: 0.2s;
+            white-space: nowrap;
+        }
+
+        .navbar .search-box .search-btn:hover {
+            background: rgba(79, 195, 247, 0.3);
+            color: #fff;
+        }
+
+        /* ===== 导航栏首页按钮 ===== */
+        .navbar .home-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: none;
+            color: rgba(255, 255, 255, 0.5);
+            padding: 4px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: 0.2s;
+            white-space: nowrap;
+        }
+
+        .navbar .home-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+        }
+
         /* ===== 应用容器 ===== */
         .app {
             display: flex;
             flex-direction: column;
             height: 100vh;
             padding: 10px;
-            gap: 10px;
         }
 
         /* ===== 网格：7列 ===== */
@@ -98,6 +163,8 @@
             flex: 1;
             align-content: start;
             overflow: hidden;
+            padding-bottom: 70px;
+            /* 给浮动的控制栏留空间 */;
         }
 
         .card {
@@ -154,32 +221,42 @@
             text-overflow: ellipsis;
         }
 
-        /* ===== 分页控制栏 ===== */
+        /* ===== 浮动分页控制栏（底部居中） ===== */
         .pagination {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
-            justify-content: center;
             align-items: center;
-            gap: 16px;
-            padding: 10px 0;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 8px;
-            flex-shrink: 0;
+            gap: 10px;
+            padding: 8px 16px;
+            background: rgba(13, 13, 26, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            z-index: 100;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 95vw;
         }
 
         .pagination button {
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.06);
             border: none;
             color: #e0e0e0;
-            padding: 8px 20px;
+            padding: 6px 14px;
             border-radius: 6px;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 13px;
             transition: 0.2s;
-            min-width: 80px;
+            white-space: nowrap;
         }
 
         .pagination button:hover:not(:disabled) {
-            background: rgba(79, 195, 247, 0.25);
+            background: rgba(79, 195, 247, 0.2);
             color: #4fc3f7;
         }
 
@@ -190,14 +267,63 @@
 
         .pagination .page-info {
             color: rgba(255, 255, 255, 0.4);
-            font-size: 14px;
-            min-width: 120px;
-            text-align: center;
+            font-size: 13px;
+            white-space: nowrap;
         }
 
         .pagination .total-info {
             color: rgba(255, 255, 255, 0.2);
             font-size: 12px;
+            white-space: nowrap;
+        }
+
+        /* ===== 跳转输入框 ===== */
+        .pagination .goto-box {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .pagination .goto-box input {
+            width: 50px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 4px;
+            padding: 4px 6px;
+            color: #fff;
+            font-size: 13px;
+            text-align: center;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .pagination .goto-box input:focus {
+            border-color: #4fc3f7;
+        }
+
+        .pagination .goto-box input::-webkit-outer-spin-button,
+        .pagination .goto-box input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .pagination .goto-box input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        .pagination .goto-box .goto-btn {
+            background: rgba(79, 195, 247, 0.15);
+            border: none;
+            color: #4fc3f7;
+            padding: 4px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: 0.2s;
+        }
+
+        .pagination .goto-box .goto-btn:hover {
+            background: rgba(79, 195, 247, 0.3);
+            color: #fff;
         }
 
         /* ===== 空状态 ===== */
@@ -250,7 +376,6 @@
             color: #fff;
         }
 
-        /* ===== 预览底部操作按钮 ===== */
         .overlay .action-buttons {
             position: fixed;
             bottom: 80px;
@@ -265,7 +390,8 @@
             backdrop-filter: blur(8px);
         }
 
-        .overlay .action-buttons a {
+        .overlay .action-buttons a,
+        .overlay .action-buttons button {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             font-size: 14px;
@@ -274,9 +400,12 @@
             transition: 0.2s;
             background: rgba(255, 255, 255, 0.06);
             border: 1px solid rgba(255, 255, 255, 0.08);
+            cursor: pointer;
+            font-family: inherit;
         }
 
-        .overlay .action-buttons a:hover {
+        .overlay .action-buttons a:hover,
+        .overlay .action-buttons button:hover {
             background: rgba(79, 195, 247, 0.2);
             color: #4fc3f7;
             border-color: rgba(79, 195, 247, 0.3);
@@ -378,7 +507,9 @@
             right: 10px;
         }
 
-        /* ===== 响应式 ===== */
+        /* ============================================================
+           响应式
+           ============================================================ */
         @media (max-width: 1200px) {
             .grid {
                 grid-template-columns: repeat(5, 1fr);
@@ -390,18 +521,40 @@
                 grid-template-columns: repeat(3, 1fr);
             }
             .navbar {
-                padding: 6px 12px;
+                padding: 8px 12px;
                 gap: 8px;
+                top: 10px;
+                left: 10px;
             }
             .navbar .logo {
-                font-size: 15px;
+                font-size: 14px;
             }
             .navbar .badge {
                 font-size: 10px;
             }
+            .navbar .search-box input {
+                width: 100px;
+                font-size: 12px;
+            }
             .navbar-trigger {
-                width: 80px;
+                width: 100px;
                 height: 60px;
+            }
+            .pagination {
+                padding: 6px 12px;
+                gap: 6px;
+                bottom: 12px;
+            }
+            .pagination button {
+                font-size: 12px;
+                padding: 4px 10px;
+            }
+            .pagination .page-info {
+                font-size: 12px;
+            }
+            .pagination .goto-box input {
+                width: 40px;
+                font-size: 12px;
             }
         }
 
@@ -409,22 +562,40 @@
             .grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 4px;
+                padding-bottom: 80px;
             }
             .card {
                 aspect-ratio: 16 / 12;
             }
+            .navbar .search-box input {
+                width: 80px;
+            }
             .pagination {
-                gap: 8px;
                 flex-wrap: wrap;
+                justify-content: center;
+                padding: 6px 10px;
+                gap: 4px;
+                max-width: 98vw;
+                bottom: 8px;
             }
             .pagination button {
-                padding: 6px 12px;
-                font-size: 12px;
-                min-width: 60px;
+                font-size: 11px;
+                padding: 3px 8px;
             }
             .pagination .page-info {
-                font-size: 12px;
-                min-width: 80px;
+                font-size: 11px;
+            }
+            .pagination .total-info {
+                font-size: 10px;
+            }
+            .pagination .goto-box input {
+                width: 34px;
+                font-size: 11px;
+                padding: 2px 4px;
+            }
+            .pagination .goto-box .goto-btn {
+                font-size: 11px;
+                padding: 2px 8px;
             }
             .overlay .arrow {
                 font-size: 28px;
@@ -448,7 +619,8 @@
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            .overlay .action-buttons a {
+            .overlay .action-buttons a,
+            .overlay .action-buttons button {
                 font-size: 12px;
                 padding: 4px 12px;
             }
@@ -462,24 +634,35 @@
 </head>
 <body>
 
-    <!-- ===== 左上角浮动导航栏（默认隐藏，鼠标经过左上角出现） ===== -->
+    <!-- ===== 左上角浮动导航栏 ===== -->
     <div class="navbar-trigger" id="navbarTrigger"></div>
     <div class="navbar" id="navbar">
         <div class="logo">Bing <span>Wallpaper</span></div>
         <div class="badge"><span id="totalNavCount">0</span> 张</div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="搜索壁纸..." />
+            <button class="search-btn" id="searchBtn">搜索</button>
+        </div>
+
+        <button class="home-btn" id="homeBtn">🏠 首页</button>
     </div>
 
     <!-- ===== 应用容器 ===== -->
     <div class="app">
-        <!-- ===== 图片网格 ===== -->
         <div class="grid" id="grid"></div>
+    </div>
 
-        <!-- ===== 分页控制栏 ===== -->
-        <div class="pagination">
-            <button id="prevBtn" disabled>‹ 上一页</button>
-            <span class="page-info" id="pageInfo">第 1 / 1 页</span>
-            <span class="total-info" id="totalInfo">共 0 张</span>
-            <button id="nextBtn">下一页 ›</button>
+    <!-- ===== 浮动分页控制栏 ===== -->
+    <div class="pagination" id="pagination">
+        <button id="prevBtn" disabled>‹ 上一页</button>
+        <span class="page-info" id="pageInfo">第 1 / 1 页</span>
+        <span class="total-info" id="totalInfo">共 0 张</span>
+        <button id="nextBtn">下一页 ›</button>
+
+        <div class="goto-box">
+            <input type="number" id="gotoInput" min="1" placeholder="页" />
+            <button class="goto-btn" id="gotoBtn">跳转</button>
         </div>
     </div>
 
@@ -493,10 +676,9 @@
             <img class="preview-image" id="previewImg" src="" alt="预览" />
         </div>
 
-        <!-- ===== 底部操作按钮（打开链接 + 下载4K） ===== -->
         <div class="action-buttons">
             <a href="#" id="openLinkBtn" target="_blank" rel="noopener">🔗 打开链接</a>
-            <a href="#" id="downloadBtn" class="btn-download" download>⬇️ 下载4K图片</a>
+            <button class="btn-download" id="downloadBtn">⬇️ 下载4K图片</button>
         </div>
 
         <div class="meta" id="previewMeta">
@@ -529,21 +711,17 @@
         }
 
         // ============================================================
-        // 2. 导航栏：鼠标经过左上角区域显示
+        // 2. 导航栏交互
         // ============================================================
         const navbar = document.getElementById('navbar');
         const navbarTrigger = document.getElementById('navbarTrigger');
+        let navTimeout = null;
 
         navbarTrigger.addEventListener('mouseenter', () => {
             navbar.classList.add('show');
+            clearTimeout(navTimeout);
         });
 
-        navbar.addEventListener('mouseleave', () => {
-            navbar.classList.remove('show');
-        });
-
-        // 鼠标离开触发区域和导航栏时隐藏（如果鼠标进入导航栏则保持显示）
-        let navTimeout = null;
         navbarTrigger.addEventListener('mouseleave', () => {
             navTimeout = setTimeout(() => {
                 if (!navbar.matches(':hover')) {
@@ -556,14 +734,19 @@
             clearTimeout(navTimeout);
         });
 
+        navbar.addEventListener('mouseleave', () => {
+            navbar.classList.remove('show');
+        });
+
         // ============================================================
         // 3. 数据 + 分页
         // ============================================================
         let allData = [];
+        let filteredData = [];
         let currentPage = 0;
         const PAGE_SIZE = 42;
         let currentPreviewIndex = 0;
-        let currentPreviewItem = null; // 保存当前预览的图片数据，用于下载和打开链接
+        let currentPreviewItem = null;
 
         const grid = document.getElementById('grid');
         const overlay = document.getElementById('overlay');
@@ -578,6 +761,11 @@
         const totalNavCount = document.getElementById('totalNavCount');
         const openLinkBtn = document.getElementById('openLinkBtn');
         const downloadBtn = document.getElementById('downloadBtn');
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+        const homeBtn = document.getElementById('homeBtn');
+        const gotoInput = document.getElementById('gotoInput');
+        const gotoBtn = document.getElementById('gotoBtn');
 
         // 缩放状态
         let scale = 1;
@@ -591,6 +779,11 @@
         let lastTranslateX = 0;
         let lastTranslateY = 0;
 
+        // ===== 获取当前显示的数据（原始或搜索结果） =====
+        function getCurrentData() {
+            return filteredData.length > 0 ? filteredData : allData;
+        }
+
         // ===== 加载数据 =====
         async function loadData() {
             try {
@@ -603,6 +796,7 @@
                     return;
                 }
                 allData.sort((a, b) => b.date.localeCompare(a.date));
+                filteredData = [];
                 totalInfo.textContent = `共 ${allData.length} 张`;
                 totalNavCount.textContent = allData.length;
                 currentPage = 0;
@@ -615,22 +809,29 @@
 
         // ===== 渲染指定页 =====
         function renderPage(page) {
-            const totalPages = Math.ceil(allData.length / PAGE_SIZE);
+            const data = getCurrentData();
+            const totalPages = Math.ceil(data.length / PAGE_SIZE);
             if (page < 0) page = 0;
             if (page >= totalPages) page = totalPages - 1;
-            if (page < 0 || totalPages === 0) return;
+            if (page < 0 || totalPages === 0) {
+                grid.innerHTML = `
+                    <div class="empty">
+                        <div class="icon">🔍</div>
+                        <div>没有匹配的壁纸</div>
+                    </div>
+                `;
+                prevBtn.disabled = true;
+                nextBtn.disabled = true;
+                pageInfo.textContent = '第 0 / 0 页';
+                return;
+            }
 
             currentPage = page;
             const start = page * PAGE_SIZE;
-            const end = Math.min(start + PAGE_SIZE, allData.length);
-            const slice = allData.slice(start, end);
+            const end = Math.min(start + PAGE_SIZE, data.length);
+            const slice = data.slice(start, end);
 
             grid.innerHTML = '';
-
-            if (slice.length === 0) {
-                showEmpty();
-                return;
-            }
 
             slice.forEach((item, index) => {
                 const realIndex = start + index;
@@ -650,7 +851,9 @@
                 `;
 
                 card.addEventListener('click', () => {
-                    openPreview(realIndex);
+                    // 计算在原始数据中的索引
+                    const originalIndex = allData.indexOf(item);
+                    openPreview(originalIndex >= 0 ? originalIndex : realIndex);
                 });
 
                 grid.appendChild(card);
@@ -659,6 +862,8 @@
             prevBtn.disabled = currentPage === 0;
             nextBtn.disabled = currentPage >= totalPages - 1;
             pageInfo.textContent = `第 ${currentPage + 1} / ${totalPages} 页`;
+            gotoInput.max = totalPages;
+            gotoInput.placeholder = `1-${totalPages}`;
         }
 
         // ===== 分页按钮事件 =====
@@ -667,8 +872,64 @@
         });
 
         nextBtn.addEventListener('click', () => {
-            const totalPages = Math.ceil(allData.length / PAGE_SIZE);
+            const data = getCurrentData();
+            const totalPages = Math.ceil(data.length / PAGE_SIZE);
             if (currentPage < totalPages - 1) renderPage(currentPage + 1);
+        });
+
+        // ===== 跳转到指定页 =====
+        gotoBtn.addEventListener('click', () => {
+            const data = getCurrentData();
+            const totalPages = Math.ceil(data.length / PAGE_SIZE);
+            const val = parseInt(gotoInput.value);
+            if (!isNaN(val) && val >= 1 && val <= totalPages) {
+                renderPage(val - 1);
+            }
+            gotoInput.value = '';
+        });
+
+        gotoInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') gotoBtn.click();
+        });
+
+        // ===== 搜索功能 =====
+        function doSearch() {
+            const keyword = searchInput.value.trim().toLowerCase();
+            if (!keyword) {
+                filteredData = [];
+                renderPage(0);
+                return;
+            }
+            filteredData = allData.filter(item => {
+                const title = (item.title || '').toLowerCase();
+                const copyright = (item.copyright || '').toLowerCase();
+                return title.includes(keyword) || copyright.includes(keyword);
+            });
+            if (filteredData.length === 0) {
+                grid.innerHTML = `
+                    <div class="empty">
+                        <div class="icon">🔍</div>
+                        <div>没有匹配"${keyword}"的壁纸</div>
+                    </div>
+                `;
+                prevBtn.disabled = true;
+                nextBtn.disabled = true;
+                pageInfo.textContent = '第 0 / 0 页';
+                return;
+            }
+            renderPage(0);
+        }
+
+        searchBtn.addEventListener('click', doSearch);
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') doSearch();
+        });
+
+        // ===== 首页按钮 =====
+        homeBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            filteredData = [];
+            renderPage(0);
         });
 
         // ===== 空状态 =====
@@ -691,6 +952,8 @@
         // ============================================================
         function openPreview(index) {
             if (allData.length === 0) return;
+            if (index < 0) index = 0;
+            if (index >= allData.length) index = allData.length - 1;
             currentPreviewIndex = index;
             currentPreviewItem = allData[currentPreviewIndex];
             resetZoom();
@@ -719,14 +982,32 @@
             if (!currentPreviewItem) return;
             const url = currentPreviewItem.jpg || currentPreviewItem.webp || '';
             const fullUrl = fixImagePath(url);
-            // 打开链接：用图片的完整URL
             openLinkBtn.href = fullUrl;
-            openLinkBtn.target = '_blank';
-            // 下载链接
-            downloadBtn.href = fullUrl;
-            // 提取文件名
-            const fileName = fullUrl.split('/').pop().split('?')[0] || 'wallpaper.jpg';
-            downloadBtn.download = fileName;
+            // 下载功能：使用 fetch 获取图片并下载
+            downloadBtn.onclick = function(e) {
+                e.preventDefault();
+                downloadImage(fullUrl);
+            };
+        }
+
+        // ===== 下载功能（直接下载文件） =====
+        async function downloadImage(url) {
+            try {
+                const response = await fetch(url);
+                const blob = await response.blob();
+                const blobUrl = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = blobUrl;
+                const fileName = url.split('/').pop().split('?')[0] || 'wallpaper.jpg';
+                a.download = fileName;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(blobUrl);
+            } catch (err) {
+                // 降级方案：直接打开链接
+                window.open(url, '_blank');
+            }
         }
 
         function closePreview() {
