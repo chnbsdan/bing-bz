@@ -20,7 +20,6 @@
             overflow: hidden;
         }
 
-        /* ===== 网格：7列，完全无间隙 ===== */
         .grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
@@ -31,7 +30,6 @@
             align-content: start;
         }
 
-        /* ===== 每个卡片 ===== */
         .card {
             position: relative;
             aspect-ratio: 16 / 9;
@@ -45,9 +43,14 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
 
-        /* ===== 悬停信息浮层 ===== */
+        .card img.loaded {
+            opacity: 1;
+        }
+
         .card .info {
             position: absolute;
             bottom: 0;
@@ -89,7 +92,6 @@
             text-overflow: ellipsis;
         }
 
-        /* ===== 第一个卡片：网站标识 ===== */
         .card.featured {
             background: linear-gradient(135deg, #1a1a3e, #0d0d2b);
             display: flex;
@@ -124,7 +126,6 @@
             letter-spacing: 4px;
         }
 
-        /* ===== 空状态 ===== */
         .empty {
             grid-column: 1 / -1;
             text-align: center;
@@ -137,9 +138,33 @@
             margin-bottom: 10px;
         }
 
-        /* ============================================================
-           全屏预览遮罩（缩放版）
-           ============================================================ */
+        .loader {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 20px 0;
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        .loader .spinner {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            border-top-color: #4fc3f7;
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
         .overlay {
             display: none;
             position: fixed;
@@ -157,7 +182,6 @@
             display: block;
         }
 
-        /* ===== 关闭按钮 ===== */
         .overlay .close {
             position: fixed;
             top: 20px;
@@ -175,7 +199,6 @@
             color: #fff;
         }
 
-        /* ===== 缩放控制按钮 ===== */
         .overlay .zoom-controls {
             position: fixed;
             bottom: 80px;
@@ -217,7 +240,6 @@
             font-family: sans-serif;
         }
 
-        /* ===== 图片容器 ===== */
         .overlay .image-container {
             width: 100%;
             height: 100%;
@@ -241,7 +263,6 @@
             transform-origin: center center;
             transition: none;
             will-change: transform;
-            /* 初始适应屏幕 */
             width: auto;
             height: auto;
             max-width: 95vw;
@@ -251,7 +272,6 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
         }
 
-        /* ===== 大图底部信息 ===== */
         .overlay .meta {
             position: fixed;
             bottom: 30px;
@@ -275,7 +295,6 @@
             display: block;
         }
 
-        /* ===== 左右箭头 ===== */
         .overlay .arrow {
             position: fixed;
             top: 50%;
@@ -306,9 +325,6 @@
             right: 10px;
         }
 
-        /* ============================================================
-           响应式
-           ============================================================ */
         @media (max-width: 1200px) {
             .grid {
                 grid-template-columns: repeat(5, 1fr);
@@ -362,7 +378,6 @@
             }
         }
 
-        /* 滚动条美化 */
         .grid::-webkit-scrollbar {
             width: 4px;
         }
@@ -388,21 +403,17 @@
     <!-- ===== 全屏预览遮罩 ===== -->
     <div class="overlay" id="overlay">
         <span class="close" id="closeBtn">&times;</span>
-
         <span class="arrow arrow-left" id="prevBtn">‹</span>
         <span class="arrow arrow-right" id="nextBtn">›</span>
-
         <div class="image-container" id="imageContainer">
             <img class="preview-image" id="previewImg" src="" alt="预览" />
         </div>
-
         <div class="zoom-controls">
             <button id="zoomOutBtn">−</button>
             <span class="zoom-level" id="zoomLevel">100%</span>
             <button id="zoomInBtn">+</button>
             <button id="zoomResetBtn" style="font-size:16px;">⟲</button>
         </div>
-
         <div class="meta" id="previewMeta">
             <span id="previewTitle"></span>
             <span class="date" id="previewDate"></span>
@@ -433,10 +444,15 @@
         }
 
         // ============================================================
-        // 2. 数据加载
+        // 2. 数据加载 + 分页渲染（无限滚动）
         // ============================================================
         let allData = [];
         let currentPreviewIndex = 0;
+        let currentPage = 0;
+        const PAGE_SIZE = 42;
+        let isLoading = false;
+        let hasMore = true;
+
         const grid = document.getElementById('grid');
         const overlay = document.getElementById('overlay');
         const imageContainer = document.getElementById('imageContainer');
@@ -445,7 +461,7 @@
         const previewDate = document.getElementById('previewDate');
         const zoomLevel = document.getElementById('zoomLevel');
 
-        // ===== 缩放状态 =====
+        // 缩放状态
         let scale = 1;
         let minScale = 0.3;
         let maxScale = 5;
@@ -468,21 +484,36 @@
                     showEmpty();
                     return;
                 }
-                renderAll();
+                allData.sort((a, b) => b.date.localeCompare(a.date));
+                hasMore = allData.length > 0;
+                currentPage = 0;
+                renderMore();
             } catch (err) {
                 console.error('加载失败:', err);
                 showEmpty();
             }
         }
 
-        // ===== 渲染卡片 =====
-        function renderAll() {
-            const existingCards = grid.querySelectorAll('.card:not(.featured)');
-            existingCards.forEach(el => el.remove());
+        // ===== 分页渲染 =====
+        function renderMore() {
+            if (isLoading || !hasMore) return;
+            isLoading = true;
 
-            const sorted = [...allData].sort((a, b) => b.date.localeCompare(a.date));
+            const start = currentPage * PAGE_SIZE;
+            const end = Math.min(start + PAGE_SIZE, allData.length);
+            const slice = allData.slice(start, end);
 
-            sorted.forEach((item, index) => {
+            if (slice.length === 0) {
+                hasMore = false;
+                isLoading = false;
+                return;
+            }
+
+            const existingLoader = grid.querySelector('.loader');
+            if (existingLoader) existingLoader.remove();
+
+            slice.forEach((item, index) => {
+                const realIndex = start + index;
                 const card = document.createElement('div');
                 card.className = 'card';
                 const imgSrc = fixImagePath(item.webp || item.jpg || '');
@@ -498,14 +529,46 @@
                     </div>
                 `;
 
+                const img = card.querySelector('img');
+                img.addEventListener('load', () => {
+                    img.classList.add('loaded');
+                });
+                if (img.complete) {
+                    img.classList.add('loaded');
+                }
+
                 card.addEventListener('click', () => {
-                    openPreview(index);
+                    openPreview(realIndex);
                 });
 
                 grid.appendChild(card);
             });
+
+            currentPage++;
+            isLoading = false;
+
+            if (end >= allData.length) {
+                hasMore = false;
+            } else {
+                const loader = document.createElement('div');
+                loader.className = 'loader';
+                loader.id = 'bottomLoader';
+                loader.innerHTML = `<span class="spinner"></span> 加载更多...`;
+                grid.appendChild(loader);
+            }
         }
 
+        // ===== 滚动监听 =====
+        function handleScroll() {
+            const scrollY = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            if (scrollY + windowHeight >= documentHeight - 300) {
+                renderMore();
+            }
+        }
+
+        // ===== 空状态 =====
         function showEmpty() {
             const empty = document.createElement('div');
             empty.className = 'empty';
@@ -517,7 +580,7 @@
         }
 
         // ============================================================
-        // 3. 全屏预览（带缩放拖拽）
+        // 3. 全屏预览
         // ============================================================
         function openPreview(index) {
             if (allData.length === 0) return;
@@ -539,8 +602,6 @@
             previewImg.src = imgSrc;
             previewTitle.textContent = item.title || item.copyright || '';
             previewDate.textContent = item.date || '';
-
-            // 重置缩放
             resetZoom();
         }
 
@@ -549,7 +610,7 @@
             document.body.style.overflow = 'auto';
         }
 
-        // ===== 缩放函数 =====
+        // ===== 缩放 =====
         function updateTransform() {
             previewImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
             zoomLevel.textContent = `${Math.round(scale * 100)}%`;
@@ -559,7 +620,6 @@
             scale = 1;
             translateX = 0;
             translateY = 0;
-            // 重置图片尺寸适应屏幕
             previewImg.style.width = 'auto';
             previewImg.style.height = 'auto';
             previewImg.style.maxWidth = '95vw';
@@ -569,7 +629,6 @@
 
         function zoomIn() {
             if (scale >= maxScale) return;
-            // 放大时移除尺寸限制
             previewImg.style.maxWidth = 'none';
             previewImg.style.maxHeight = 'none';
             scale = Math.min(scale + 0.2, maxScale);
@@ -580,7 +639,6 @@
             if (scale <= minScale) return;
             scale = Math.max(scale - 0.2, minScale);
             if (scale <= 1) {
-                // 缩到1以下时恢复适应屏幕
                 previewImg.style.maxWidth = '95vw';
                 previewImg.style.maxHeight = '90vh';
             }
@@ -649,25 +707,20 @@
         document.getElementById('zoomOutBtn').addEventListener('click', zoomOut);
         document.getElementById('zoomResetBtn').addEventListener('click', resetZoom);
 
-        // 鼠标拖拽
         imageContainer.addEventListener('mousedown', startDrag);
         document.addEventListener('mousemove', moveDrag);
         document.addEventListener('mouseup', endDrag);
 
-        // 触摸拖拽
         imageContainer.addEventListener('touchstart', startDrag, { passive: true });
         document.addEventListener('touchmove', moveDrag, { passive: false });
         document.addEventListener('touchend', endDrag, { passive: true });
 
-        // 滚轮缩放
         imageContainer.addEventListener('wheel', wheelZoom, { passive: false });
 
-        // 点击背景关闭
         overlay.addEventListener('click', (e) => {
             if (e.target === overlay) closePreview();
         });
 
-        // 键盘
         document.addEventListener('keydown', (e) => {
             if (!overlay.classList.contains('active')) return;
             if (e.key === 'Escape') closePreview();
@@ -677,6 +730,8 @@
             if (e.key === '-') zoomOut();
             if (e.key === '0') resetZoom();
         });
+
+        window.addEventListener('scroll', handleScroll);
 
         // ============================================================
         // 5. 启动
