@@ -1,4 +1,4 @@
-// scripts/fetch.js - 完整版（统一 UHD 格式 + 累加到 urls.txt 和 copyrights.txt）
+// scripts/fetch.js - 完整版（生成 wallpapers.json + 分页 JSON）
 
 const fs = require('fs');
 const path = require('path');
@@ -9,14 +9,16 @@ const sharp = require('sharp');
 const PICTURE_DIR = path.join(__dirname, '../picture');
 const WEBP_DIR = path.join(__dirname, '../webp');
 const DATA_DIR = path.join(__dirname, '../data');
+const PAGES_DIR = path.join(DATA_DIR, 'pages');
 const DATA_FILE = path.join(DATA_DIR, 'wallpapers.json');
 const URLS_FILE = path.join(__dirname, '../urls.txt');
 const COPYRIGHTS_FILE = path.join(__dirname, '../copyrights.txt');
 
-const KEEP_DAYS = 60; // 保留最近60天的本地图片
+const KEEP_DAYS = 60;
+const PAGE_SIZE = 42;
 
 // 确保目录存在
-[PICTURE_DIR, WEBP_DIR, DATA_DIR].forEach(dir => {
+[PICTURE_DIR, WEBP_DIR, DATA_DIR, PAGES_DIR].forEach(dir => {
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 });
 
@@ -66,19 +68,13 @@ function daysDiff(dateStr) {
     return Math.floor((today - target) / (1000 * 60 * 60 * 24));
 }
 
-// ============ 链接格式化：统一转成 UHD ============
+// ============ 链接格式化 ============
 
 function formatToUHD(url) {
     if (!url) return url;
-    // 如果已经是 UHD，直接返回
     if (url.includes('_UHD.jpg')) return url;
-    
-    // 替换 _1920x1080 或 _1366x768 等为 _UHD
     let formatted = url.replace(/_\d+x\d+\.jpg/, '_UHD.jpg');
-    
-    // 去掉 &rf=...&pid=hp 等额外参数
     formatted = formatted.split('&')[0];
-    
     return formatted;
 }
 
@@ -92,32 +88,19 @@ async function fetchBingWallpaper(offset) {
     try {
         const response = await axios.get(url, { timeout: 10000 });
         const image = response.data.images[0];
-        
         if (!image) return { valid: false, data: null, date: expectedDate };
 
         const apiDate = parseApiDate(image.startdate);
         let imageUrl = `https://cn.bing.com${image.url}`;
-        
-        // ★★★ 统一转成 UHD 格式 ★★★
         imageUrl = formatToUHD(imageUrl);
         
         if (!imageUrl.includes('th?id=OHR.')) {
-            console.log(`⏭️ offset=${offset} 图片URL异常，跳过`);
             return { valid: false, data: null, date: expectedDate };
         }
 
         if (apiDate) {
             const diff = getDateDiff(expectedDate, apiDate);
             if (diff > 1) {
-                console.log(`⏭️ offset=${offset} 日期不匹配: 期望 ${expectedDate}, 实际 ${apiDate}, 跳过`);
-                return { valid: false, data: null, date: expectedDate };
-            }
-        }
-
-        if (offset > 0 && apiDate) {
-            const today = getTargetDate(0);
-            if (apiDate < today) {
-                console.log(`⏭️ offset=${offset} 返回的图片日期 ${apiDate} 比今天还早，跳过`);
                 return { valid: false, data: null, date: expectedDate };
             }
         }
@@ -136,7 +119,6 @@ async function fetchBingWallpaper(offset) {
         };
 
     } catch (error) {
-        console.warn(`⚠️ 请求失败 offset=${offset}:`, error.message);
         return { valid: false, data: null, date: expectedDate };
     }
 }
@@ -200,16 +182,14 @@ function loadHistoricalData() {
         }
     }
 
-    // 从今天开始倒推日期
     const today = new Date();
-    const result = pairedData.map((item, index) => {
+    return pairedData.map((item, index) => {
         const d = new Date(today);
         d.setDate(d.getDate() - index);
         const y = d.getFullYear();
         const m = String(d.getMonth() + 1).padStart(2, '0');
         const day = String(d.getDate()).padStart(2, '0');
         const dateStr = `${y}-${m}-${day}`;
-        
         const title = item.copyright.split('©')[0].trim() || '';
         const copyrightLink = `https://www.bing.com/search?q=${encodeURIComponent(title)}&form=hpcapt&mkt=zh-cn`;
         
@@ -223,11 +203,9 @@ function loadHistoricalData() {
             webp: item.url
         };
     });
-
-    return result;
 }
 
-// ============ 清理过期本地图片 ============
+// ============ 清理过期图片 ============
 
 function cleanOldImages() {
     if (!fs.existsSync(PICTURE_DIR)) return;
@@ -255,6 +233,44 @@ function cleanOldImages() {
     }
 }
 
+// ============ ★★★ 生成分页 JSON ★★★ ============
+
+function generatePagination(data) {
+    // 清空 pages 目录
+    const files = fs.readdirSync(PAGES_DIR);
+    files.forEach(file => {
+        if (file.endsWith('.json')) {
+            fs.unlinkSync(path.join(PAGES_DIR, file));
+        }
+    });
+
+    const totalPages = Math.ceil(data.length / PAGE_SIZE);
+    const paginatedData = {};
+    
+    for (let i = 0; i < totalPages; i++) {
+        const start = i * PAGE_SIZE;
+        const end = Math.min(start + PAGE_SIZE, data.length);
+        const pageData = {
+            items: data.slice(start, end),
+            page: i + 1,
+            pageSize: PAGE_SIZE,
+            total: data.length,
+            totalPages: totalPages,
+            hasMore: i + 1 < totalPages
+        };
+        
+        const fileName = `page-${i + 1}.json`;
+        fs.writeFileSync(
+            path.join(PAGES_DIR, fileName),
+            JSON.stringify(pageData, null, 2)
+        );
+        paginatedData[fileName] = pageData;
+    }
+    
+    console.log(`📄 生成 ${totalPages} 个分页文件 (每页 ${PAGE_SIZE} 条)`);
+    return paginatedData;
+}
+
 // ============ 主流程 ============
 
 async function main() {
@@ -262,46 +278,33 @@ async function main() {
     console.log(`📅 今天是: ${getTargetDate(0)}`);
     console.log('');
 
-    // ===== 1. 抓取今天和明天的数据 =====
+    // 1. 抓取今天和明天
     const offsets = [0, 1];
     const newResults = [];
 
     for (const offset of offsets) {
         const { valid, data, date } = await fetchBingWallpaper(offset);
-        
-        if (!valid || !data) {
-            continue;
-        }
+        if (!valid || !data) continue;
 
-        // 下载图片
         const saved = await downloadWallpaper(data, date);
         if (saved) {
             newResults.push(saved);
             console.log(`✅ ${date}`);
-            
-            // 累加到 urls.txt 和 copyrights.txt
-            const urlAdded = prependToFile(URLS_FILE, data.url);
-            const copyrightAdded = prependToFile(COPYRIGHTS_FILE, data.copyright);
-            if (urlAdded && copyrightAdded) {
-                console.log(`   📝 已添加到 urls.txt 和 copyrights.txt`);
-            } else {
-                console.log(`   ⏭️ 已存在，跳过添加`);
-            }
+            prependToFile(URLS_FILE, data.url);
+            prependToFile(COPYRIGHTS_FILE, data.copyright);
         }
         await new Promise(r => setTimeout(r, 300));
     }
 
-    // ===== 2. 读取历史数据 =====
+    // 2. 读取历史数据
     const historicalData = loadHistoricalData();
     console.log(`📂 历史数据: ${historicalData.length} 条`);
 
-    // ===== 3. 合并数据（历史 + 新抓取） =====
+    // 3. 合并
     const dataMap = new Map();
-    
     historicalData.forEach(item => {
         if (item.date) dataMap.set(item.date, item);
     });
-    
     newResults.forEach(item => {
         if (item.date) dataMap.set(item.date, item);
     });
@@ -311,53 +314,23 @@ async function main() {
 
     console.log(`📊 合并后共 ${finalData.length} 条记录`);
 
-    // ===== 4. 保存 wallpapers.json =====
+    // 4. 保存完整 wallpapers.json
     fs.writeFileSync(DATA_FILE, JSON.stringify(finalData, null, 2));
     console.log(`📝 wallpapers.json 已保存`);
 
-    // ===== 生成分页 JSON =====
-function generatePagination(data, pageSize = 42) {
-    const totalPages = Math.ceil(data.length / pageSize);
-    const paginatedData = {};
-    
-    for (let i = 0; i < totalPages; i++) {
-        const start = i * pageSize;
-        const end = Math.min(start + pageSize, data.length);
-        paginatedData[`page-${i+1}.json`] = data.slice(start, end);
-    }
-    
-    // 保存分页文件
-    const PAGES_DIR = path.join(__dirname, '../data/pages');
-    if (!fs.existsSync(PAGES_DIR)) fs.mkdirSync(PAGES_DIR, { recursive: true });
-    
-    for (const [fileName, pageData] of Object.entries(paginatedData)) {
-        fs.writeFileSync(
-            path.join(PAGES_DIR, fileName),
-            JSON.stringify({
-                items: pageData,
-                page: parseInt(fileName.match(/\d+/)[0]),
-                pageSize: pageSize,
-                total: data.length,
-                totalPages: totalPages,
-                hasMore: parseInt(fileName.match(/\d+/)[0]) < totalPages
-            }, null, 2)
-        );
-    }
-    
-    console.log(`📄 生成 ${totalPages} 个分页文件`);
-}
+    // 5. ★★★ 生成分页 JSON ★★★
+    generatePagination(finalData);
 
-    // ===== 5. 清理过期图片 =====
+    // 6. 清理过期图片
     cleanOldImages();
 
-    // ===== 6. 统计 =====
+    // 7. 统计
     const jpgCount = fs.existsSync(PICTURE_DIR) ? fs.readdirSync(PICTURE_DIR).filter(f => f.endsWith('.jpg')).length : 0;
     const webpCount = fs.existsSync(WEBP_DIR) ? fs.readdirSync(WEBP_DIR).filter(f => f.endsWith('.webp')).length : 0;
     console.log(`📁 本地图片: ${jpgCount} 张 jpg, ${webpCount} 张 webp`);
     console.log('✅ 完成!');
 }
 
-// ============ 执行 ============
 main().catch(error => {
     console.error('💥 程序异常:', error);
     process.exit(1);
