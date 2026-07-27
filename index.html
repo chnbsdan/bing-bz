@@ -426,7 +426,7 @@
 
     <script>
         // ============================================================
-        // 1. 路径适配
+        // 1. 路径适配（CF 上用不到，但保留无害）
         // ============================================================
         function getBasePath() {
             const path = window.location.pathname;
@@ -448,14 +448,13 @@
         }
 
         // ============================================================
-        // 2. 数据加载 + 分页渲染（无限滚动）
+        // 2. 数据 + 分页
         // ============================================================
         let allData = [];
         let currentPreviewIndex = 0;
         let currentPage = 0;
         const PAGE_SIZE = 42;
         let isLoading = false;
-        let hasMore = true;
         let isAllLoaded = false;
 
         const grid = document.getElementById('grid');
@@ -490,12 +489,9 @@
                     return;
                 }
                 allData.sort((a, b) => b.date.localeCompare(a.date));
-                hasMore = true;
                 isAllLoaded = false;
                 currentPage = 0;
-                // 移除可能存在的旧loader
-                const oldLoader = grid.querySelector('.loader');
-                if (oldLoader) oldLoader.remove();
+                removeLoader();
                 renderMore();
             } catch (err) {
                 console.error('加载失败:', err);
@@ -519,7 +515,6 @@
             }
 
             isLoading = true;
-
             const end = Math.min(start + PAGE_SIZE, allData.length);
             const slice = allData.slice(start, end);
 
@@ -530,7 +525,6 @@
                 return;
             }
 
-            // 移除加载指示器
             removeLoader();
 
             slice.forEach((item, index) => {
@@ -568,11 +562,9 @@
             currentPage++;
             isLoading = false;
 
-            // 检查是否还有更多
             if (currentPage * PAGE_SIZE >= allData.length) {
                 isAllLoaded = true;
             } else {
-                // 添加底部加载指示器
                 const loader = document.createElement('div');
                 loader.className = 'loader';
                 loader.id = 'bottomLoader';
@@ -586,21 +578,18 @@
             if (loader) loader.remove();
         }
 
-        // ===== 滚动监听 =====
-        let scrollTimer = null;
+        // ===== ★★★ 核心修复：监听 .grid 的滚动事件 ★★★ =====
+        function handleGridScroll() {
+            if (isLoading || isAllLoaded) return;
 
-        function handleScroll() {
-            if (scrollTimer) return;
-            scrollTimer = setTimeout(() => {
-                scrollTimer = null;
-                const scrollY = window.scrollY;
-                const windowHeight = window.innerHeight;
-                const documentHeight = document.documentElement.scrollHeight;
+            const scrollTop = grid.scrollTop;
+            const clientHeight = grid.clientHeight;
+            const scrollHeight = grid.scrollHeight;
 
-                if (scrollY + windowHeight >= documentHeight - 400) {
-                    renderMore();
-                }
-            }, 100);
+            // 滚动到距离底部 400px 时触发加载
+            if (scrollTop + clientHeight >= scrollHeight - 400) {
+                renderMore();
+            }
         }
 
         // ===== 空状态 =====
@@ -616,7 +605,7 @@
         }
 
         // ============================================================
-        // 3. 全屏预览
+        // 3. 全屏预览（保持不变）
         // ============================================================
         function openPreview(index) {
             if (allData.length === 0) return;
@@ -711,7 +700,6 @@
             imageContainer.style.cursor = 'grab';
         }
 
-        // ===== 滚轮缩放 =====
         function wheelZoom(e) {
             e.preventDefault();
             const delta = e.deltaY > 0 ? -0.15 : 0.15;
@@ -769,10 +757,12 @@
             if (e.key === '0') resetZoom();
         });
 
-        window.addEventListener('scroll', handleScroll);
+        // ===== ★★★ 核心修复：监听 .grid 容器的滚动事件 ★★★ =====
+        grid.addEventListener('scroll', handleGridScroll);
+
+        // 也监听窗口变化，重新检查
         window.addEventListener('resize', () => {
-            // 窗口变化时重新检查滚动
-            setTimeout(handleScroll, 200);
+            setTimeout(handleGridScroll, 200);
         });
 
         // ============================================================
