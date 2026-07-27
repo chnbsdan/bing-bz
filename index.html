@@ -15,7 +15,7 @@
         html,
         body {
             width: 100%;
-            min-height: 100vh;
+            height: 100%;
             background: #0d0d1a;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             overflow: hidden;
@@ -24,16 +24,16 @@
         /* ===== 导航栏触发按钮（左上角固定） ===== */
         .nav-toggle {
             position: fixed;
-            top: 16px;
-            left: 16px;
+            top: 12px;
+            left: 12px;
             z-index: 1001;
             background: rgba(13, 13, 26, 0.7);
             backdrop-filter: blur(8px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
+            border-radius: 8px;
             color: #fff;
-            font-size: 22px;
-            padding: 8px 14px;
+            font-size: 20px;
+            padding: 6px 12px;
             cursor: pointer;
             transition: 0.2s;
             line-height: 1;
@@ -47,19 +47,19 @@
         /* ===== 顶部浮动导航栏 ===== */
         .navbar {
             position: fixed;
-            top: 16px;
-            left: 16px;
+            top: 12px;
+            left: 12px;
             z-index: 1000;
             background: rgba(13, 13, 26, 0.92);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 14px;
-            padding: 14px 18px;
+            border-radius: 12px;
+            padding: 14px 16px;
             display: flex;
             flex-direction: column;
             gap: 10px;
-            min-width: 220px;
+            min-width: 200px;
             opacity: 0;
             transform: translateY(-10px) scale(0.95);
             transition: opacity 0.25s ease, transform 0.25s ease;
@@ -74,18 +74,26 @@
             pointer-events: auto;
         }
 
+        /* 导航栏头部（LOGO + 关闭按钮） */
+        .navbar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
         .navbar .logo {
             color: #fff;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 300;
             letter-spacing: 1px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .navbar .logo .icon {
-            font-size: 24px;
+            font-size: 22px;
         }
 
         .navbar .logo span {
@@ -93,10 +101,28 @@
             font-weight: 600;
         }
 
+        /* 导航栏关闭按钮（右上角） */
+        .navbar-close {
+            background: rgba(255, 255, 255, 0.06);
+            border: none;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 18px;
+            cursor: pointer;
+            padding: 2px 8px;
+            border-radius: 4px;
+            transition: 0.2s;
+            line-height: 1.4;
+        }
+
+        .navbar-close:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+        }
+
         .navbar .badge {
             color: rgba(255, 255, 255, 0.3);
             font-size: 12px;
-            margin-top: -4px;
+            margin-top: -2px;
         }
 
         .navbar .badge span {
@@ -114,7 +140,7 @@
             background: rgba(255, 255, 255, 0.06);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 6px;
-            padding: 6px 12px;
+            padding: 5px 10px;
             color: #fff;
             font-size: 13px;
             outline: none;
@@ -135,7 +161,7 @@
             background: rgba(79, 195, 247, 0.15);
             border: none;
             color: #4fc3f7;
-            padding: 6px 14px;
+            padding: 5px 12px;
             border-radius: 6px;
             cursor: pointer;
             font-size: 13px;
@@ -158,7 +184,7 @@
             background: rgba(255, 255, 255, 0.06);
             border: none;
             color: rgba(255, 255, 255, 0.5);
-            padding: 6px 14px;
+            padding: 5px 12px;
             border-radius: 6px;
             cursor: pointer;
             font-size: 13px;
@@ -175,11 +201,13 @@
         .app {
             display: flex;
             flex-direction: column;
+            width: 100%;
             height: 100vh;
-            padding: 10px;
+            padding: 0;
+            overflow: hidden;
         }
 
-        /* ===== 网格：7列，无间隙，固定高度 ===== */
+        /* ===== 网格：7列，无间隙，无边框 ===== */
         .grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
@@ -187,7 +215,7 @@
             flex: 1;
             align-content: start;
             overflow: hidden;
-            padding-bottom: 70px;
+            padding-bottom: 60px;
         }
 
         .card {
@@ -246,33 +274,33 @@
         /* ===== 浮动分页控制栏 ===== */
         .pagination {
             position: fixed;
-            bottom: 20px;
+            bottom: 12px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 8px 16px;
+            gap: 8px;
+            padding: 6px 14px;
             background: rgba(13, 13, 26, 0.85);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 14px;
+            border-radius: 12px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
             z-index: 100;
             flex-wrap: wrap;
             justify-content: center;
-            max-width: 95vw;
+            max-width: 96vw;
         }
 
         .pagination button {
             background: rgba(255, 255, 255, 0.06);
             border: none;
             color: #e0e0e0;
-            padding: 6px 14px;
+            padding: 4px 12px;
             border-radius: 6px;
             cursor: pointer;
-            font-size: 13px;
+            font-size: 12px;
             transition: 0.2s;
             white-space: nowrap;
         }
@@ -289,13 +317,13 @@
 
         .pagination .page-info {
             color: rgba(255, 255, 255, 0.4);
-            font-size: 13px;
+            font-size: 12px;
             white-space: nowrap;
         }
 
         .pagination .total-info {
             color: rgba(255, 255, 255, 0.2);
-            font-size: 12px;
+            font-size: 11px;
             white-space: nowrap;
         }
 
@@ -306,13 +334,13 @@
         }
 
         .pagination .goto-box input {
-            width: 50px;
+            width: 44px;
             background: rgba(255, 255, 255, 0.06);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 4px;
-            padding: 4px 6px;
+            padding: 3px 4px;
             color: #fff;
-            font-size: 13px;
+            font-size: 12px;
             text-align: center;
             outline: none;
             transition: 0.2s;
@@ -335,10 +363,10 @@
             background: rgba(79, 195, 247, 0.15);
             border: none;
             color: #4fc3f7;
-            padding: 4px 10px;
+            padding: 3px 8px;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 13px;
+            font-size: 12px;
             transition: 0.2s;
         }
 
@@ -382,10 +410,10 @@
 
         .overlay .close {
             position: fixed;
-            top: 20px;
-            right: 28px;
+            top: 16px;
+            right: 24px;
             color: rgba(255, 255, 255, 0.3);
-            font-size: 36px;
+            font-size: 34px;
             cursor: pointer;
             z-index: 100;
             font-family: serif;
@@ -401,11 +429,11 @@
 
         .overlay .action-buttons {
             position: fixed;
-            bottom: 80px;
+            bottom: 70px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 16px;
+            gap: 14px;
             z-index: 100;
             opacity: 0;
             transition: opacity 0.3s ease;
@@ -421,8 +449,8 @@
         .overlay .action-buttons button {
             color: rgba(255, 255, 255, 0.5);
             text-decoration: none;
-            font-size: 14px;
-            padding: 6px 18px;
+            font-size: 13px;
+            padding: 5px 16px;
             border-radius: 6px;
             transition: 0.2s;
             background: transparent;
@@ -482,18 +510,17 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
         }
 
-        /* ===== 大图版权信息：默认隐藏，鼠标移入显示，字体放大 ===== */
         .overlay .meta {
             position: fixed;
-            bottom: 150px;
+            bottom: 130px;
             left: 50%;
             transform: translateX(-50%);
             color: rgba(255, 255, 255, 0.7);
-            font-size: 18px;
+            font-size: 17px;
             text-align: center;
             background: rgba(0, 0, 0, 0.3);
-            padding: 10px 24px;
-            border-radius: 12px;
+            padding: 8px 20px;
+            border-radius: 10px;
             max-width: 80%;
             pointer-events: none;
             z-index: 50;
@@ -508,21 +535,20 @@
         }
 
         .overlay .meta .date {
-            font-size: 14px;
+            font-size: 13px;
             opacity: 0.5;
             display: block;
             margin-top: 2px;
         }
 
-        /* ===== 大图左右箭头 ===== */
         .overlay .arrow {
             position: fixed;
             top: 50%;
             transform: translateY(-50%);
             color: rgba(255, 255, 255, 0.15);
-            font-size: 48px;
+            font-size: 44px;
             cursor: pointer;
-            padding: 20px 12px;
+            padding: 16px 10px;
             z-index: 50;
             font-family: serif;
             line-height: 1;
@@ -543,11 +569,11 @@
         }
 
         .overlay .arrow-left {
-            left: 10px;
+            left: 8px;
         }
 
         .overlay .arrow-right {
-            right: 10px;
+            right: 8px;
         }
 
         /* ============================================================
@@ -564,38 +590,42 @@
                 grid-template-columns: repeat(3, 1fr);
             }
             .navbar {
-                min-width: 180px;
+                min-width: 170px;
                 padding: 12px 14px;
+                top: 10px;
+                left: 10px;
             }
             .navbar .logo {
-                font-size: 17px;
+                font-size: 16px;
             }
             .nav-toggle {
                 font-size: 18px;
-                padding: 6px 12px;
-            }
-            .pagination {
-                padding: 6px 12px;
-                gap: 6px;
-            }
-            .pagination button {
-                font-size: 12px;
-                padding: 4px 10px;
+                padding: 5px 10px;
+                top: 10px;
+                left: 10px;
             }
             .overlay .meta {
                 font-size: 15px;
-                padding: 8px 18px;
-                bottom: 130px;
+                padding: 6px 16px;
+                bottom: 110px;
             }
             .overlay .meta .date {
                 font-size: 12px;
+            }
+            .pagination {
+                padding: 5px 10px;
+                gap: 5px;
+            }
+            .pagination button {
+                font-size: 11px;
+                padding: 3px 8px;
             }
         }
 
         @media (max-width: 500px) {
             .grid {
                 grid-template-columns: repeat(2, 1fr);
-                padding-bottom: 80px;
+                padding-bottom: 70px;
             }
             .card {
                 aspect-ratio: 16 / 12;
@@ -603,14 +633,14 @@
             .navbar {
                 min-width: 150px;
                 padding: 10px 12px;
-                top: 10px;
-                left: 10px;
+                top: 8px;
+                left: 8px;
             }
             .navbar .logo {
-                font-size: 15px;
+                font-size: 14px;
             }
             .navbar .logo .icon {
-                font-size: 18px;
+                font-size: 16px;
             }
             .navbar .search-box input {
                 font-size: 12px;
@@ -618,48 +648,51 @@
             }
             .navbar .search-box .search-btn {
                 font-size: 12px;
-                padding: 4px 10px;
+                padding: 4px 8px;
             }
             .navbar .nav-actions button {
                 font-size: 12px;
-                padding: 4px 10px;
+                padding: 4px 8px;
+            }
+            .navbar-close {
+                font-size: 16px;
+                padding: 0 6px;
             }
             .nav-toggle {
                 font-size: 16px;
-                padding: 5px 10px;
-                top: 10px;
-                left: 10px;
+                padding: 4px 8px;
+                top: 8px;
+                left: 8px;
             }
             .pagination {
-                flex-wrap: wrap;
-                justify-content: center;
-                padding: 6px 10px;
+                padding: 4px 8px;
                 gap: 4px;
                 max-width: 98vw;
-                bottom: 8px;
+                bottom: 6px;
+                border-radius: 10px;
             }
             .pagination button {
-                font-size: 11px;
-                padding: 3px 8px;
+                font-size: 10px;
+                padding: 2px 6px;
             }
             .pagination .page-info {
-                font-size: 11px;
-            }
-            .pagination .total-info {
                 font-size: 10px;
             }
+            .pagination .total-info {
+                font-size: 9px;
+            }
             .pagination .goto-box input {
-                width: 34px;
-                font-size: 11px;
-                padding: 2px 4px;
+                width: 30px;
+                font-size: 10px;
+                padding: 2px 3px;
             }
             .pagination .goto-box .goto-btn {
-                font-size: 11px;
-                padding: 2px 8px;
+                font-size: 10px;
+                padding: 2px 6px;
             }
             .overlay .arrow {
-                font-size: 28px;
-                padding: 10px 4px;
+                font-size: 26px;
+                padding: 8px 4px;
             }
             .overlay .arrow-left {
                 left: 2px;
@@ -668,29 +701,29 @@
                 right: 2px;
             }
             .overlay .close {
-                font-size: 28px;
-                top: 12px;
-                right: 16px;
+                font-size: 26px;
+                top: 10px;
+                right: 14px;
             }
             .overlay .action-buttons {
-                bottom: 70px;
-                gap: 8px;
+                bottom: 60px;
+                gap: 6px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
             .overlay .action-buttons a,
             .overlay .action-buttons button {
-                font-size: 12px;
-                padding: 4px 12px;
+                font-size: 11px;
+                padding: 4px 10px;
             }
             .overlay .meta {
                 font-size: 13px;
-                padding: 6px 14px;
-                bottom: 120px;
+                padding: 5px 12px;
+                bottom: 105px;
                 max-width: 90%;
             }
             .overlay .meta .date {
-                font-size: 11px;
+                font-size: 10px;
             }
         }
     </style>
@@ -702,9 +735,12 @@
 
     <!-- ===== 浮动导航栏 ===== -->
     <div class="navbar" id="navbar">
-        <div class="logo">
-            <span class="icon">🌅</span>
-            Bing <span>Wallpaper</span>
+        <div class="navbar-header">
+            <div class="logo">
+                <span class="icon">🌅</span>
+                Bing <span>Wallpaper</span>
+            </div>
+            <button class="navbar-close" id="navClose">✕</button>
         </div>
         <div class="badge"><span id="totalNavCount">0</span> 张</div>
 
@@ -785,21 +821,28 @@
         // ============================================================
         const navToggle = document.getElementById('navToggle');
         const navbar = document.getElementById('navbar');
+        const navClose = document.getElementById('navClose');
         let navOpen = false;
+
+        function toggleNav(open) {
+            navOpen = open !== undefined ? open : !navOpen;
+            navbar.classList.toggle('open', navOpen);
+            navToggle.textContent = navOpen ? '✕' : '☰';
+        }
 
         navToggle.addEventListener('click', (e) => {
             e.stopPropagation();
-            navOpen = !navOpen;
-            navbar.classList.toggle('open', navOpen);
-            navToggle.textContent = navOpen ? '✕' : '☰';
+            toggleNav();
+        });
+
+        navClose.addEventListener('click', () => {
+            toggleNav(false);
         });
 
         // 点击页面其他地方关闭导航
         document.addEventListener('click', (e) => {
             if (navOpen && !navbar.contains(e.target) && e.target !== navToggle) {
-                navOpen = false;
-                navbar.classList.remove('open');
-                navToggle.textContent = '☰';
+                toggleNav(false);
             }
         });
 
@@ -844,12 +887,10 @@
         let lastTranslateX = 0;
         let lastTranslateY = 0;
 
-        // ===== 获取当前显示的数据 =====
         function getCurrentData() {
             return filteredData.length > 0 ? filteredData : allData;
         }
 
-        // ===== 加载数据 =====
         async function loadData() {
             try {
                 const url = `${BASE_PATH}/data/wallpapers.json`;
@@ -872,7 +913,6 @@
             }
         }
 
-        // ===== 渲染指定页 =====
         function renderPage(page) {
             const data = getCurrentData();
             const totalPages = Math.ceil(data.length / PAGE_SIZE);
@@ -930,7 +970,6 @@
             gotoInput.placeholder = `1-${totalPages}`;
         }
 
-        // ===== 分页按钮事件 =====
         prevBtn.addEventListener('click', () => {
             if (currentPage > 0) renderPage(currentPage - 1);
         });
@@ -941,7 +980,6 @@
             if (currentPage < totalPages - 1) renderPage(currentPage + 1);
         });
 
-        // ===== 跳转 =====
         gotoBtn.addEventListener('click', () => {
             const data = getCurrentData();
             const totalPages = Math.ceil(data.length / PAGE_SIZE);
@@ -956,7 +994,6 @@
             if (e.key === 'Enter') gotoBtn.click();
         });
 
-        // ===== 搜索 =====
         function doSearch() {
             const keyword = searchInput.value.trim().toLowerCase();
             if (!keyword) {
@@ -990,18 +1027,13 @@
             if (e.key === 'Enter') doSearch();
         });
 
-        // ===== 首页 =====
         homeBtn.addEventListener('click', () => {
             searchInput.value = '';
             filteredData = [];
             renderPage(0);
-            // 关闭导航
-            navOpen = false;
-            navbar.classList.remove('open');
-            navToggle.textContent = '☰';
+            toggleNav(false);
         });
 
-        // ===== 空状态 =====
         function showEmpty() {
             grid.innerHTML = `
                 <div class="empty">
@@ -1058,7 +1090,6 @@
             };
         }
 
-        // ===== 下载 =====
         async function downloadImage(url) {
             try {
                 const response = await fetch(url);
@@ -1082,7 +1113,6 @@
             document.body.style.overflow = 'auto';
         }
 
-        // ===== 缩放 =====
         function updateTransform() {
             previewImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
         }
@@ -1098,7 +1128,6 @@
             updateTransform();
         }
 
-        // ===== 拖拽 =====
         function startDrag(e) {
             if (scale <= 1) return;
             isDragging = true;
@@ -1126,7 +1155,6 @@
             imageContainer.style.cursor = 'grab';
         }
 
-        // ===== 滚轮缩放 =====
         function wheelZoom(e) {
             e.preventDefault();
             const delta = e.deltaY > 0 ? -0.15 : 0.15;
