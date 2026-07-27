@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>必应壁纸</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>" />
     <style>
         * {
             margin: 0;
@@ -61,10 +62,17 @@
 
         .navbar .logo {
             color: #fff;
-            font-size: 17px;
+            font-size: 20px;
             font-weight: 300;
             letter-spacing: 1px;
             white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .navbar .logo .icon {
+            font-size: 24px;
         }
 
         .navbar .logo span {
@@ -155,25 +163,23 @@
             padding: 10px;
         }
 
-        /* ===== 网格：7列 ===== */
+        /* ===== 网格：7列，无间隙 ===== */
         .grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 6px;
+            gap: 0;
             flex: 1;
             align-content: start;
             overflow: hidden;
             padding-bottom: 70px;
-            /* 给浮动的控制栏留空间 */;
         }
 
         .card {
             position: relative;
             aspect-ratio: 16 / 11;
-            background: #1a1a2e;
+            background: #0d0d1a;
             overflow: hidden;
             cursor: pointer;
-            border-radius: 4px;
         }
 
         .card img {
@@ -277,7 +283,6 @@
             white-space: nowrap;
         }
 
-        /* ===== 跳转输入框 ===== */
         .pagination .goto-box {
             display: flex;
             align-items: center;
@@ -363,19 +368,22 @@
             position: fixed;
             top: 20px;
             right: 28px;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.3);
             font-size: 36px;
             cursor: pointer;
             z-index: 100;
             font-family: serif;
             line-height: 1;
             transition: 0.2s;
+            background: transparent;
+            border: none;
         }
 
         .overlay .close:hover {
             color: #fff;
         }
 
+        /* ===== 操作按钮：无背景，默认隐藏，悬停显示 ===== */
         .overlay .action-buttons {
             position: fixed;
             bottom: 80px;
@@ -384,42 +392,47 @@
             display: flex;
             gap: 16px;
             z-index: 100;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 10px 20px;
-            border-radius: 30px;
-            backdrop-filter: blur(8px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .overlay:hover .action-buttons {
+            opacity: 1;
+            pointer-events: auto;
         }
 
         .overlay .action-buttons a,
         .overlay .action-buttons button {
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.5);
             text-decoration: none;
             font-size: 14px;
             padding: 6px 18px;
             border-radius: 6px;
             transition: 0.2s;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             cursor: pointer;
             font-family: inherit;
+            backdrop-filter: blur(4px);
         }
 
         .overlay .action-buttons a:hover,
         .overlay .action-buttons button:hover {
-            background: rgba(79, 195, 247, 0.2);
-            color: #4fc3f7;
-            border-color: rgba(79, 195, 247, 0.3);
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.05);
         }
 
         .overlay .action-buttons .btn-download {
-            background: rgba(79, 195, 247, 0.15);
             color: #4fc3f7;
             border-color: rgba(79, 195, 247, 0.2);
         }
 
         .overlay .action-buttons .btn-download:hover {
-            background: rgba(79, 195, 247, 0.3);
             color: #fff;
+            border-color: #4fc3f7;
+            background: rgba(79, 195, 247, 0.1);
         }
 
         .overlay .image-container {
@@ -459,21 +472,19 @@
             bottom: 150px;
             left: 50%;
             transform: translateX(-50%);
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.3);
             font-size: 13px;
             text-align: center;
-            background: rgba(0, 0, 0, 0.3);
+            background: transparent;
             padding: 6px 18px;
-            border-radius: 20px;
             max-width: 80%;
             pointer-events: none;
-            backdrop-filter: blur(4px);
             z-index: 50;
         }
 
         .overlay .meta .date {
             font-size: 11px;
-            opacity: 0.5;
+            opacity: 0.4;
             display: block;
         }
 
@@ -481,7 +492,7 @@
             position: fixed;
             top: 50%;
             transform: translateY(-50%);
-            color: rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.15);
             font-size: 48px;
             cursor: pointer;
             padding: 20px 12px;
@@ -490,13 +501,18 @@
             line-height: 1;
             user-select: none;
             transition: 0.2s;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
+            background: transparent;
+            border: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .overlay:hover .arrow {
+            opacity: 1;
         }
 
         .overlay .arrow:hover {
             color: #fff;
-            background: rgba(0, 0, 0, 0.5);
         }
 
         .overlay .arrow-left {
@@ -527,7 +543,10 @@
                 left: 10px;
             }
             .navbar .logo {
-                font-size: 14px;
+                font-size: 16px;
+            }
+            .navbar .logo .icon {
+                font-size: 20px;
             }
             .navbar .badge {
                 font-size: 10px;
@@ -561,7 +580,6 @@
         @media (max-width: 500px) {
             .grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 4px;
                 padding-bottom: 80px;
             }
             .card {
@@ -614,7 +632,6 @@
             }
             .overlay .action-buttons {
                 bottom: 70px;
-                padding: 6px 12px;
                 gap: 8px;
                 flex-wrap: wrap;
                 justify-content: center;
@@ -637,11 +654,14 @@
     <!-- ===== 左上角浮动导航栏 ===== -->
     <div class="navbar-trigger" id="navbarTrigger"></div>
     <div class="navbar" id="navbar">
-        <div class="logo">Bing <span>Wallpaper</span></div>
+        <div class="logo">
+            <span class="icon">🌅</span>
+            Bing <span>Wallpaper</span>
+        </div>
         <div class="badge"><span id="totalNavCount">0</span> 张</div>
 
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="搜索壁纸..." />
+            <input type="text" id="searchInput" placeholder="搜索年份/关键词..." />
             <button class="search-btn" id="searchBtn">搜索</button>
         </div>
 
@@ -668,9 +688,9 @@
 
     <!-- ===== 全屏预览遮罩 ===== -->
     <div class="overlay" id="overlay">
-        <span class="close" id="closeBtn">&times;</span>
-        <span class="arrow arrow-left" id="prevPreviewBtn">‹</span>
-        <span class="arrow arrow-right" id="nextPreviewBtn">›</span>
+        <button class="close" id="closeBtn">&times;</button>
+        <button class="arrow arrow-left" id="prevPreviewBtn">‹</button>
+        <button class="arrow arrow-right" id="nextPreviewBtn">›</button>
 
         <div class="image-container" id="imageContainer">
             <img class="preview-image" id="previewImg" src="" alt="预览" />
@@ -779,7 +799,7 @@
         let lastTranslateX = 0;
         let lastTranslateY = 0;
 
-        // ===== 获取当前显示的数据（原始或搜索结果） =====
+        // ===== 获取当前显示的数据 =====
         function getCurrentData() {
             return filteredData.length > 0 ? filteredData : allData;
         }
@@ -851,7 +871,6 @@
                 `;
 
                 card.addEventListener('click', () => {
-                    // 计算在原始数据中的索引
                     const originalIndex = allData.indexOf(item);
                     openPreview(originalIndex >= 0 ? originalIndex : realIndex);
                 });
@@ -892,7 +911,7 @@
             if (e.key === 'Enter') gotoBtn.click();
         });
 
-        // ===== 搜索功能 =====
+        // ===== 搜索功能（支持年份如"2023"） =====
         function doSearch() {
             const keyword = searchInput.value.trim().toLowerCase();
             if (!keyword) {
@@ -903,7 +922,10 @@
             filteredData = allData.filter(item => {
                 const title = (item.title || '').toLowerCase();
                 const copyright = (item.copyright || '').toLowerCase();
-                return title.includes(keyword) || copyright.includes(keyword);
+                const date = item.date || '';
+                // 支持搜索年份（如"2023"）
+                const yearMatch = date.includes(keyword);
+                return title.includes(keyword) || copyright.includes(keyword) || yearMatch;
             });
             if (filteredData.length === 0) {
                 grid.innerHTML = `
@@ -983,14 +1005,13 @@
             const url = currentPreviewItem.jpg || currentPreviewItem.webp || '';
             const fullUrl = fixImagePath(url);
             openLinkBtn.href = fullUrl;
-            // 下载功能：使用 fetch 获取图片并下载
             downloadBtn.onclick = function(e) {
                 e.preventDefault();
                 downloadImage(fullUrl);
             };
         }
 
-        // ===== 下载功能（直接下载文件） =====
+        // ===== 下载功能 =====
         async function downloadImage(url) {
             try {
                 const response = await fetch(url);
@@ -1005,7 +1026,6 @@
                 document.body.removeChild(a);
                 URL.revokeObjectURL(blobUrl);
             } catch (err) {
-                // 降级方案：直接打开链接
                 window.open(url, '_blank');
             }
         }
