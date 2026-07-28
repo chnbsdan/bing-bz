@@ -1122,81 +1122,81 @@
         // 5.2 渲染
         // ============================================================
         function renderPage(page) {
-            const data = filteredData.length > 0 ? filteredData : allData;
-            totalPages = Math.ceil(data.length / PAGE_SIZE);
-            if (page < 1) page = 1;
-            if (page > totalPages) page = totalPages;
-            if (totalPages === 0) { showEmpty(); return; }
+    const data = filteredData.length > 0 ? filteredData : allData;
+    totalPages = Math.ceil(data.length / PAGE_SIZE);
+    if (page < 1) page = 1;
+    if (page > totalPages) page = totalPages;
+    if (totalPages === 0) { showEmpty(); return; }
 
-            currentPage = page;
-            const start = (page - 1) * PAGE_SIZE;
-            const end = Math.min(start + PAGE_SIZE, data.length);
-            const items = data.slice(start, end);
+    currentPage = page;
+    const start = (page - 1) * PAGE_SIZE;
+    const end = Math.min(start + PAGE_SIZE, data.length);
+    const items = data.slice(start, end);
 
-            grid.innerHTML = '';
-            if (items.length === 0) { showEmpty(); return; }
+    grid.innerHTML = '';
+    if (items.length === 0) { showEmpty(); return; }
 
-            items.forEach((item, index) => {
-                const realIndex = start + index;
-                const card = document.createElement('div');
-                card.className = 'card';
-                const imgSrc = getImageUrl(item.webp || item.jpg || '');
-                const fallback = getImageUrl(item.jpg || '');
+    items.forEach((item) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        const imgSrc = getImageUrl(item.webp || item.jpg || '');
+        const fallback = getImageUrl(item.jpg || '');
 
-                let placeholderSrc = imgSrc;
-                if (imgSrc.includes('th?id=')) {
-                    placeholderSrc = imgSrc.includes('?') ? `${imgSrc}&w=200` : `${imgSrc}?w=200`;
-                }
-
-                card.innerHTML = `
-                        <div class="placeholder-bg" style="background-image: url('${placeholderSrc}');"></div>
-                        <img src="${imgSrc}" alt="${item.copyright || item.date}" loading="lazy" />
-                        <div class="info">
-                            <div class="date">${item.date}</div>
-                            <div class="title">${item.copyright || '无标题'}</div>
-                            <div class="copyright">${item.copyright || ''}</div>
-                        </div>
-                    `;
-
-                const img = card.querySelector('img');
-                const placeholderBg = card.querySelector('.placeholder-bg');
-
-                img.addEventListener('load', () => {
-                    img.classList.add('loaded');
-                    placeholderBg.classList.add('hidden');
-                });
-                if (img.complete) {
-                    img.classList.add('loaded');
-                    placeholderBg.classList.add('hidden');
-                }
-                img.addEventListener('error', () => {
-                    if (fallback && fallback !== imgSrc) {
-                        img.src = fallback;
-                    } else {
-                        img.classList.add('loaded');
-                        placeholderBg.classList.add('hidden');
-                    }
-                });
-
-                card.addEventListener('click', () => {
-                    let targetIndex = realIndex;
-                    if (allData.length > 0) {
-                        const found = allData.findIndex(d => d.date === item.date);
-                        if (found >= 0) targetIndex = found;
-                    }
-                    openPreview(targetIndex);
-                });
-
-                grid.appendChild(card);
-            });
-
-            prevBtn.disabled = currentPage <= 1;
-            nextBtn.disabled = currentPage >= totalPages;
-            pageInfo.textContent = `第 ${currentPage} / ${totalPages} 页`;
-            gotoInput.max = totalPages;
-            gotoInput.placeholder = `1-${totalPages}`;
-            grid.scrollTop = 0;
+        let placeholderSrc = imgSrc;
+        if (imgSrc.includes('th?id=')) {
+            placeholderSrc = imgSrc.includes('?') ? `${imgSrc}&w=200` : `${imgSrc}?w=200`;
         }
+
+        card.innerHTML = `
+            <div class="placeholder-bg" style="background-image: url('${placeholderSrc}');"></div>
+            <img src="${imgSrc}" alt="${item.copyright || item.date}" loading="lazy" />
+            <div class="info">
+                <div class="date">${item.date}</div>
+                <div class="title">${item.copyright || '无标题'}</div>
+                <div class="copyright">${item.copyright || ''}</div>
+            </div>
+        `;
+
+        const img = card.querySelector('img');
+        const placeholderBg = card.querySelector('.placeholder-bg');
+
+        img.addEventListener('load', () => {
+            img.classList.add('loaded');
+            placeholderBg.classList.add('hidden');
+        });
+        if (img.complete) {
+            img.classList.add('loaded');
+            placeholderBg.classList.add('hidden');
+        }
+        img.addEventListener('error', () => {
+            if (fallback && fallback !== imgSrc) {
+                img.src = fallback;
+            } else {
+                img.classList.add('loaded');
+                placeholderBg.classList.add('hidden');
+            }
+        });
+
+        // 修正：用 item.date 查找索引
+        card.addEventListener('click', () => {
+            const targetIndex = allData.findIndex(d => d.date === item.date && d.copyright === item.copyright);
+            if (targetIndex === -1) {
+                console.warn('图片不在数据列表中');
+                return;
+            }
+            openPreview(targetIndex);
+        });
+
+        grid.appendChild(card);
+    });
+
+    prevBtn.disabled = currentPage <= 1;
+    nextBtn.disabled = currentPage >= totalPages;
+    pageInfo.textContent = `第 ${currentPage} / ${totalPages} 页`;
+    gotoInput.max = totalPages;
+    gotoInput.placeholder = `1-${totalPages}`;
+    grid.scrollTop = 0;
+}
 
         // ============================================================
         // 5.3 分页
