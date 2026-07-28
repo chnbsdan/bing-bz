@@ -12,6 +12,10 @@
 
 </div>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bing-img/webp/daily.webp" alt="Daily Bing Wallpaper" width="600" />
+</p>
+
 ---
 
 ## ✨ 特性
