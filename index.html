@@ -86,7 +86,7 @@
         .card { position: relative; border-radius: 4px; overflow: hidden; background: var(--bg-card); aspect-ratio: 16 / 9; cursor: pointer; transition: background 0.3s ease; }
         .card img { width: 100%; height: 100%; object-fit: cover; display: block; position: relative; z-index: 2; opacity: 0; transition: opacity 0.5s ease; }
         .card img.loaded { opacity: 1; }
-        .card .placeholder-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; filter: blur(12px) brightness(0.7); transform: scale(1.04); transition: opacity 0.6s ease; z-index: 1; }
+        .card .placeholder-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; filter: blur(10px) brightness(0.7); transform: scale(1.05); transition: opacity 0.6s ease; z-index: 1; }
         .card .placeholder-bg.hidden { opacity: 0; }
         .card .info { position: absolute; bottom: 0; left: 0; right: 0; z-index: 3; padding: 16px 12px 12px; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%); color: #fff; opacity: 0; transition: opacity 0.25s ease; pointer-events: none; }
         .card:hover .info { opacity: 1; }
@@ -187,26 +187,21 @@
                 <div class="detail-item"><span class="detail-label"><i class="fas fa-globe"></i> 地区</span><span class="detail-value" id="detailLocale">-</span></div>
                 <div class="detail-item"><span class="detail-label"><i class="fas fa-image"></i> 分辨率</span><span class="detail-value" id="detailResolution">1920 x 1080</span></div>
                 <div class="detail-item" style="border-bottom: none; padding-top: 8px; padding-bottom: 4px;">
-                    <span class="detail-value" style="font-size: 14px; color: var(--text-secondary); opacity: 0.6; user-select: none; -webkit-user-select: none;">
-                        <i class="fas fa-shield-alt" style="margin-right: 6px; color: var(--accent-color); opacity: 0.4;"></i>本站仅聚合 Bing 官方壁纸链接，图片版权归微软及原作者所有。
-                    </span>
-                </div>
+    <span class="detail-value" style="font-size: 14px; color: var(--text-secondary); opacity: 0.6; user-select: none; -webkit-user-select: none;">
+        <i class="fas fa-shield-alt" style="margin-right: 6px; color: var(--accent-color); opacity: 0.4;"></i>本站仅聚合 Bing 官方壁纸链接，图片版权归微软及原作者所有。
+    </span>
+</div>
                 <div class="detail-item"><span class="detail-label"><i class="fas fa-link"></i> 原图链接</span><span class="detail-value"><a href="#" id="detailLink" target="_blank"><i class="fas fa-external-link-alt"></i> 打开原图</a></span></div>
             </div>
         </div>
     </div>
     <script>
-        // ============================================================
-        // 1. 路径适配
-        // ============================================================
         function getBasePath() {
-            var path = window.location.pathname;
-            if (path.endsWith('.html')) {
-                return path.substring(0, path.lastIndexOf('/'));
-            }
+            const path = window.location.pathname;
+            if (path.endsWith('.html')) { return path.substring(0, path.lastIndexOf('/')); }
             return path.replace(/\/$/, '');
         }
-        var BASE_PATH = getBasePath();
+        const BASE_PATH = getBasePath();
 
         function getImageUrl(url) {
             if (!url) return '';
@@ -215,31 +210,8 @@
             return url;
         }
 
-        // ★★★ 生成缩略图链接（使用必应支持的 _400x240 格式） ★★★
-        function getThumbnailUrl(url) {
-            if (!url) return '';
-            // 如果是必应 CDN 链接（包含 th?id=）
-            if (url.indexOf('th?id=') !== -1) {
-                // 将 _UHD.jpg 替换为 _400x240.jpg（必应标准缩略图格式）
-                // 同时去除可能已有的查询参数
-                var baseUrl = url.split('&')[0];
-                // 尝试替换 _UHD.jpg 为 _400x240.jpg
-                if (baseUrl.indexOf('_UHD.jpg') !== -1) {
-                    return baseUrl.replace('_UHD.jpg', '_400x240.jpg');
-                } else {
-                    // 如果原图不是 UHD 格式，则保持原样
-                    return baseUrl;
-                }
-            }
-            // 本地图片或非必应链接，原样返回
-            return url;
-        }
-
-        // ============================================================
-        // 2. 主题切换
-        // ============================================================
-        var themeToggle = document.getElementById('themeToggle');
-        var currentTheme = localStorage.getItem('theme') || 'dark';
+        const themeToggle = document.getElementById('themeToggle');
+        let currentTheme = localStorage.getItem('theme') || 'dark';
 
         function setTheme(theme) {
             currentTheme = theme;
@@ -247,87 +219,65 @@
             localStorage.setItem('theme', theme);
             themeToggle.innerHTML = theme === 'dark' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
         }
-        themeToggle.addEventListener('click', function() {
-            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
-        });
+        themeToggle.addEventListener('click', () => setTheme(currentTheme === 'dark' ? 'light' : 'dark'));
         setTheme(currentTheme);
 
-        // ============================================================
-        // 3. 进度条
-        // ============================================================
-        var progressBar = document.getElementById('progress-bar');
+        const progressBar = document.getElementById('progress-bar');
 
-        function showProgress() {
-            progressBar.style.width = '30%';
-            setTimeout(function() { progressBar.style.width = '60%'; }, 150);
-        }
+        function showProgress() { progressBar.style.width = '30%';
+            setTimeout(() => progressBar.style.width = '60%', 150); }
 
-        function hideProgress() {
-            progressBar.style.width = '100%';
-            setTimeout(function() { progressBar.style.width = '0%'; }, 350);
-        }
+        function hideProgress() { progressBar.style.width = '100%';
+            setTimeout(() => progressBar.style.width = '0%', 350); }
 
-        // ============================================================
-        // 4. 导航栏
-        // ============================================================
-        var navToggle = document.getElementById('navToggle');
-        var navbar = document.getElementById('navbar');
-        var navOpen = false;
-
-        // ★★★ 定义 toggleNav 函数 ★★★
-        function toggleNav(open) {
-            navOpen = open !== undefined ? open : !navOpen;
+        const navToggle = document.getElementById('navToggle');
+        const navbar = document.getElementById('navbar');
+        let navOpen = false;
+        navToggle.addEventListener('click', (e) => { e.stopPropagation();
+            navOpen = !navOpen;
             navbar.classList.toggle('open', navOpen);
-            navToggle.innerHTML = navOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        }
-
-        navToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            toggleNav();
-        });
-
-        document.addEventListener('click', function(e) {
+            navToggle.innerHTML = navOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>'; });
+        document.addEventListener('click', (e) => {
             if (navOpen && !navbar.contains(e.target) && e.target !== navToggle) {
-                toggleNav(false);
+                navOpen = false;
+                navbar.classList.remove('open');
+                navToggle.innerHTML = '<i class="fas fa-bars"></i>';
             }
         });
 
-        // ============================================================
-        // 5. 数据加载
-        // ============================================================
-        var allData = [];
-        var filteredData = [];
-        var currentPage = 1;
-        var PAGE_SIZE = window.innerWidth <= 500 ? 12 : 42;
-        var totalPages = 1;
-        var currentPreviewIndex = 0;
-        var currentPreviewItem = null;
+        let allData = [];
+        let filteredData = [];
+        let currentPage = 1;
+        const PAGE_SIZE = window.innerWidth <= 500 ? 12 : 42;
+        let totalPages = 1;
+        let currentPreviewIndex = 0;
+        let currentPreviewItem = null;
 
-        var grid = document.getElementById('grid');
-        var overlay = document.getElementById('overlay');
-        var imageContainer = document.getElementById('imageContainer');
-        var previewImg = document.getElementById('previewImg');
-        var previewTitle = document.getElementById('previewTitle');
-        var previewDate = document.getElementById('previewDate');
-        var totalNavCount = document.getElementById('totalNavCount');
-        var downloadBtn = document.getElementById('downloadBtn');
-        var detailBtn = document.getElementById('detailBtn');
-        var detailPanel = document.getElementById('detailPanel');
-        var detailPanelClose = document.getElementById('detailPanelClose');
-        var detailOverlay = document.getElementById('detailOverlay');
-        var searchInput = document.getElementById('searchInput');
-        var searchBtn = document.getElementById('searchBtn');
-        var homeBtn = document.getElementById('homeBtn');
-        var prevBtn = document.getElementById('prevBtn');
-        var nextBtn = document.getElementById('nextBtn');
-        var pageInfo = document.getElementById('pageInfo');
-        var totalInfo = document.getElementById('totalInfo');
-        var gotoInput = document.getElementById('gotoInput');
-        var gotoBtn = document.getElementById('gotoBtn');
-        var closeBtn = document.getElementById('closeBtn');
-        var detailLink = document.getElementById('detailLink');
+        const grid = document.getElementById('grid');
+        const overlay = document.getElementById('overlay');
+        const imageContainer = document.getElementById('imageContainer');
+        const previewImg = document.getElementById('previewImg');
+        const previewTitle = document.getElementById('previewTitle');
+        const previewDate = document.getElementById('previewDate');
+        const totalNavCount = document.getElementById('totalNavCount');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const detailBtn = document.getElementById('detailBtn');
+        const detailPanel = document.getElementById('detailPanel');
+        const detailPanelClose = document.getElementById('detailPanelClose');
+        const detailOverlay = document.getElementById('detailOverlay');
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+        const homeBtn = document.getElementById('homeBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const pageInfo = document.getElementById('pageInfo');
+        const totalInfo = document.getElementById('totalInfo');
+        const gotoInput = document.getElementById('gotoInput');
+        const gotoBtn = document.getElementById('gotoBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const detailLink = document.getElementById('detailLink');
 
-        var scale = 1,
+        let scale = 1,
             minScale = 0.3,
             maxScale = 5,
             translateX = 0,
@@ -338,22 +288,16 @@
             lastTranslateX = 0,
             lastTranslateY = 0;
 
-        // ============================================================
-        // 5.1 加载数据
-        // ============================================================
         async function loadData() {
             showProgress();
             try {
-                var url = BASE_PATH + '/data/wallpapers.json';
-                var res = await fetch(url);
+                const url = BASE_PATH + '/data/wallpapers.json';
+                const res = await fetch(url);
                 if (!res.ok) throw new Error('HTTP ' + res.status);
                 allData = await res.json();
-                if (!Array.isArray(allData) || allData.length === 0) {
-                    showEmpty();
-                    hideProgress();
-                    return;
-                }
-                allData.sort(function(a, b) { return b.date.localeCompare(a.date); });
+                if (!Array.isArray(allData) || allData.length === 0) { showEmpty();
+                    hideProgress(); return; }
+                allData.sort((a, b) => b.date.localeCompare(a.date));
                 filteredData = [];
                 totalNavCount.textContent = allData.length;
                 totalInfo.innerHTML = '<i class="fas fa-images"></i> 共 ' + allData.length + ' 张';
@@ -367,9 +311,6 @@
             }
         }
 
-        // ============================================================
-        // 5.2 渲染页面（★ 使用缩略图优化 ★）
-        // ============================================================
         function renderPage(page) {
             var data = filteredData.length > 0 ? filteredData : allData;
             totalPages = Math.ceil(data.length / PAGE_SIZE);
@@ -382,39 +323,30 @@
             var items = data.slice(start, end);
             grid.innerHTML = '';
             if (items.length === 0) { showEmpty(); return; }
-
             items.forEach(function(item) {
                 var card = document.createElement('div');
                 card.className = 'card';
-
                 var imgSrc = getImageUrl(item.webp || item.jpg || '');
                 var fallback = getImageUrl(item.jpg || '');
-
-                // ★★★ 占位图：使用 _400x240 缩略图 ★★★
-                var placeholderSrc = getThumbnailUrl(imgSrc);
-
+                var placeholderSrc = imgSrc;
+                if (imgSrc.indexOf('th?id=') !== -1) {
+                    placeholderSrc = imgSrc.indexOf('?') !== -1 ? imgSrc + '&w=200' : imgSrc + '?w=200';
+                }
                 card.innerHTML =
-                    '<div class="placeholder-bg" style="background-image: url(' + placeholderSrc + ');"></div>' +
-                    '<img src="' + imgSrc + '" alt="' + (item.copyright || item.date) + '" loading="lazy" />' +
-                    '<div class="info">' +
-                    '<div class="date">' + item.date + '</div>' +
-                    '<div class="title">' + (item.copyright || '无标题') + '</div>' +
-                    '<div class="copyright">' + (item.copyright || '') + '</div>' +
-                    '</div>';
-
+                    '<div class="placeholder-bg" style="background-image: url(' + placeholderSrc + ');"></div><img src="' +
+                    imgSrc + '" alt="' + (item.copyright || item.date) + '" loading="lazy" /><div class="info"><div class="date">' +
+                    item.date + '</div><div class="title">' + (item.copyright || '无标题') + '</div><div class="copyright">' + (
+                        item.copyright || '') + '</div></div>';
                 var img = card.querySelector('img');
                 var placeholderBg = card.querySelector('.placeholder-bg');
-
                 img.addEventListener('load', function() {
                     img.classList.add('loaded');
                     placeholderBg.classList.add('hidden');
                 });
-
                 if (img.complete) {
                     img.classList.add('loaded');
                     placeholderBg.classList.add('hidden');
                 }
-
                 img.addEventListener('error', function() {
                     if (fallback && fallback !== imgSrc) {
                         img.src = fallback;
@@ -423,7 +355,6 @@
                         placeholderBg.classList.add('hidden');
                     }
                 });
-
                 card.addEventListener('click', function() {
                     var targetIndex = -1;
                     for (var i = 0; i < allData.length; i++) {
@@ -438,10 +369,8 @@
                     }
                     openPreview(targetIndex);
                 });
-
                 grid.appendChild(card);
             });
-
             prevBtn.disabled = currentPage <= 1;
             nextBtn.disabled = currentPage >= totalPages;
             pageInfo.textContent = '第 ' + currentPage + ' / ' + totalPages + ' 页';
@@ -450,9 +379,6 @@
             grid.scrollTop = 0;
         }
 
-        // ============================================================
-        // 5.3 分页事件
-        // ============================================================
         prevBtn.addEventListener('click', function() { if (currentPage > 1) renderPage(currentPage - 1); });
         nextBtn.addEventListener('click', function() { if (currentPage < totalPages) renderPage(currentPage + 1); });
         gotoBtn.addEventListener('click', function() {
@@ -462,9 +388,6 @@
         });
         gotoInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') gotoBtn.click(); });
 
-        // ============================================================
-        // 5.4 搜索
-        // ============================================================
         function doSearch() {
             var keyword = searchInput.value.trim().toLowerCase();
             if (!keyword) { filteredData = [];
@@ -489,17 +412,11 @@
         }
         searchBtn.addEventListener('click', doSearch);
         searchInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') doSearch(); });
-        homeBtn.addEventListener('click', function() {
-            searchInput.value = '';
+        homeBtn.addEventListener('click', function() { searchInput.value = '';
             filteredData = [];
             renderPage(1);
-            // ★★★ 使用 toggleNav 函数关闭导航 ★★★
-            toggleNav(false);
-        });
+            toggleNav(false); });
 
-        // ============================================================
-        // 5.5 空状态
-        // ============================================================
         function showEmpty() {
             grid.innerHTML =
                 '<div class="empty"><div class="icon"><i class="fas fa-image"></i></div><div>暂无壁纸数据</div></div>';
@@ -510,9 +427,6 @@
             totalNavCount.textContent = '0';
         }
 
-        // ============================================================
-        // 6. 全屏预览
-        // ============================================================
         function openPreview(index) {
             if (!allData || allData.length === 0) {
                 console.warn('数据未加载，请刷新页面重试');
@@ -550,14 +464,11 @@
             closeDetailPanel();
         }
 
-        // ============================================================
-        // 6.1 详情面板
-        // ============================================================
         function openDetailPanel() {
             if (!currentPreviewItem) return;
             document.getElementById('detailDate').textContent = currentPreviewItem.date || '-';
-            document.getElementById('detailTitle').textContent = currentPreviewItem.copyright || currentPreviewItem
-            .title || '-';
+            document.getElementById('detailTitle').textContent = currentPreviewItem.copyright || currentPreviewItem.title ||
+                '-';
             document.getElementById('detailCopyright').textContent = currentPreviewItem.copyright || '-';
             document.getElementById('detailLocale').textContent = currentPreviewItem.locale || 'zh-CN';
             var imgSrc = getImageUrl(currentPreviewItem.jpg || currentPreviewItem.webp || '');
@@ -578,9 +489,6 @@
         detailPanelClose.addEventListener('click', closeDetailPanel);
         detailOverlay.addEventListener('click', closeDetailPanel);
 
-        // ============================================================
-        // 6.2 下载
-        // ============================================================
         downloadBtn.addEventListener('click', function(e) {
             e.preventDefault();
             var url = getImageUrl(currentPreviewItem.jpg || currentPreviewItem.webp || '');
@@ -594,11 +502,6 @@
             document.body.removeChild(a);
         });
 
-        closeBtn.addEventListener('click', closePreview);
-
-        // ============================================================
-        // 7. 缩放与拖拽
-        // ============================================================
         function updateTransform() {
             previewImg.style.transform = 'translate(' + translateX + 'px, ' + translateY + 'px) scale(' + scale + ')';
         }
@@ -644,6 +547,7 @@
             updateTransform();
         }
 
+        closeBtn.addEventListener('click', closePreview);
         document.getElementById('prevPreviewBtn').addEventListener('click', function(e) {
             e.stopPropagation();
             showPreview(currentPreviewIndex - 1);
@@ -675,9 +579,6 @@
             }
         });
 
-        // ============================================================
-        // 8. 启动
-        // ============================================================
         loadData();
     </script>
 </body>
