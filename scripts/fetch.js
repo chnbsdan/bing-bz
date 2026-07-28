@@ -1,4 +1,4 @@
-// scripts/fetch.js - 完整版（本地存图片，但 wallpapers.json 全部用 CDN 链接）
+// scripts/fetch.js - 完整版（本地存图片，但 wallpapers.json 全部用 CDN 链接,去掉 copyrightLink、title、description）
 
 const fs = require('fs');
 const path = require('path');
@@ -109,10 +109,7 @@ async function fetchBingWallpaper(offset) {
             valid: true,
             data: {
                 url: imageUrl,
-                copyright: image.copyright || '',
-                copyrightLink: image.copyrightlink || '',
-                title: image.title || '',
-                description: image.description || ''
+                copyright: image.copyright || ''
             },
             date: expectedDate,
             apiDate: apiDate
@@ -129,9 +126,8 @@ async function downloadWallpaper(wallpaper, dateStr) {
     const jpgPath = path.join(PICTURE_DIR, `${dateStr}.jpg`);
     const webpPath = path.join(WEBP_DIR, `${dateStr}.webp`);
 
-    // 如果已存在则跳过
     if (fs.existsSync(jpgPath) && fs.existsSync(webpPath)) {
-        return true; // 返回 true 表示已存在
+        return true;
     }
 
     try {
@@ -183,16 +179,11 @@ function loadHistoricalData() {
         const m = String(d.getMonth() + 1).padStart(2, '0');
         const day = String(d.getDate()).padStart(2, '0');
         const dateStr = `${y}-${m}-${day}`;
-        const title = item.copyright || '';
-        const copyrightLink = `https://www.bing.com/search?q=${encodeURIComponent(title)}&form=hpcapt&mkt=zh-cn`;
         
-        // ★★★ 全部用 CDN 链接 ★★★
+        // ★★★ 精简：只保留 date, copyright, jpg, webp ★★★
         return {
             date: dateStr,
-            copyright: item.copyright,
-            copyrightLink: copyrightLink,
-            title: title,
-            description: '',
+            copyright: item.copyright || '',
             jpg: item.url,
             webp: item.url
         };
@@ -268,7 +259,6 @@ async function main() {
     console.log(`📅 今天是: ${getTargetDate(0)}`);
     console.log('');
 
-    // 1. 抓取今天和明天（正常下载图片到本地）
     const offsets = [0, 1];
     const newResults = [];
 
@@ -276,18 +266,14 @@ async function main() {
         const { valid, data, date } = await fetchBingWallpaper(offset);
         if (!valid || !data) continue;
 
-        // ★★★ 正常下载图片到本地 ★★★
         const downloaded = await downloadWallpaper(data, date);
         if (downloaded) {
-            // ★★★ 存入 wallpapers.json 时，强制用 CDN 链接 ★★★
+            // ★★★ 精简：只保留四个字段 ★★★
             const cdnEntry = {
                 date: date,
-                copyright: data.copyright,
-                copyrightLink: data.copyrightLink,
-                title: data.copyright || '',
-                description: data.description || '',
-                jpg: data.url,      // ← CDN 链接
-                webp: data.url      // ← CDN 链接
+                copyright: data.copyright || '',
+                jpg: data.url,
+                webp: data.url
             };
             newResults.push(cdnEntry);
             console.log(`✅ ${date}`);
@@ -297,17 +283,13 @@ async function main() {
         await new Promise(r => setTimeout(r, 300));
     }
 
-    // 2. 读取历史数据（从 urls.txt 和 copyrights.txt）
     const historicalData = loadHistoricalData();
     console.log(`📂 历史数据: ${historicalData.length} 条`);
 
-    // ★★★ 3. 合并数据：全部用 CDN 链接 ★★★
     const dataMap = new Map();
-    
     historicalData.forEach(item => {
         if (item.date) dataMap.set(item.date, item);
     });
-    
     newResults.forEach(item => {
         if (item.date) dataMap.set(item.date, item);
     });
@@ -317,17 +299,12 @@ async function main() {
 
     console.log(`📊 合并后共 ${finalData.length} 条记录`);
 
-    // 4. 保存 wallpapers.json
     fs.writeFileSync(DATA_FILE, JSON.stringify(finalData, null, 2));
     console.log(`📝 wallpapers.json 已保存`);
 
-    // 5. 清理过期图片（保留60天）
     cleanOldImages();
-
-    // 6. 生成分页 JSON
     generatePagination(finalData);
 
-    // 7. 统计
     const jpgCount = fs.existsSync(PICTURE_DIR) ? fs.readdirSync(PICTURE_DIR).filter(f => f.endsWith('.jpg')).length : 0;
     const webpCount = fs.existsSync(WEBP_DIR) ? fs.readdirSync(WEBP_DIR).filter(f => f.endsWith('.webp')).length : 0;
     console.log(`📁 本地图片: ${jpgCount} 张 jpg, ${webpCount} 张 webp`);
