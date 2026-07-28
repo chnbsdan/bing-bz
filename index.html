@@ -645,71 +645,75 @@
         }
 
         .overlay .meta {
-            position: fixed;
-            bottom: 130px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: var(--text-secondary);
-            font-size: 17px;
-            text-align: center;
-            background: transparent;
-            padding: 0;
-            border-radius: 0;
-            max-width: 90%;
-            pointer-events: none;
-            z-index: 50;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            border: none;
-            backdrop-filter: none;
-            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.5);
-            word-wrap: break-word;
-            line-height: 1.6;
-        }
+    position: fixed;
+    bottom: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-secondary);
+    font-size: 17px;
+    text-align: center;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    max-width: 90%;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border: none;
+    backdrop-filter: none;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.5);
+    word-wrap: break-word;
+    line-height: 1.6;
+}
 
-        .overlay:hover .meta {
-            opacity: 1;
-        }
+/* ★★★ 删除这行 ★★★ */
+/* .overlay:hover .meta { opacity: 1; } */
 
-        .overlay .meta .date {
-            font-size: 14px;
-            opacity: 0.5;
-            display: block;
-            margin-top: 4px;
-        }
+/* ★★★ 新增：鼠标在图片上才显示 ★★★ */
+.overlay .preview-image:hover ~ .meta {
+    opacity: 1;
+}
 
-        .overlay .arrow {
-            position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-muted);
-            font-size: 32px;
-            cursor: pointer;
-            padding: 16px 10px;
-            z-index: 50;
-            user-select: none;
-            transition: 0.2s;
-            background: transparent;
-            border: none;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
+.overlay .meta .date {
+    font-size: 14px;
+    opacity: 0.5;
+    display: block;
+    margin-top: 4px;
+}
 
-        .overlay:hover .arrow {
-            opacity: 1;
-        }
+.overlay .arrow {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 32px;
+    cursor: pointer;
+    padding: 16px 10px;
+    z-index: 50;
+    user-select: none;
+    transition: 0.2s;
+    background: transparent;
+    border: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
-        .overlay .arrow:hover {
-            color: var(--text-primary);
-        }
+.overlay:hover .arrow {
+    opacity: 1;
+}
 
-        .overlay .arrow-left {
-            left: 8px;
-        }
+.overlay .arrow:hover {
+    color: var(--text-primary);
+}
 
-        .overlay .arrow-right {
-            right: 8px;
-        }
+.overlay .arrow-left {
+    left: 8px;
+}
+
+.overlay .arrow-right {
+    right: 8px;
+}
 
         /* ============================================================
            响应式
