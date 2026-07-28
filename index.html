@@ -3,12 +3,62 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <title>必应每日壁纸</title>
+    <title>必应壁纸</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
+        /* ===== CSS 变量 ===== */
+        :root {
+            --bg-primary: #0d0d1a;
+            --bg-secondary: #1a1a2e;
+            --bg-card: #1a1a2e;
+            --text-primary: #fff;
+            --text-secondary: rgba(255,255,255,0.4);
+            --text-muted: rgba(255,255,255,0.2);
+            --text-faint: rgba(255,255,255,0.15);
+            --border-color: rgba(255,255,255,0.06);
+            --border-hover: rgba(255,255,255,0.12);
+            --nav-bg: rgba(13,13,26,0.92);
+            --pagination-bg: rgba(13,13,26,0.85);
+            --shadow-color: rgba(0,0,0,0.5);
+            --overlay-bg: rgba(0,0,0,0.95);
+            --card-bg: #1a1a2e;
+            --input-bg: rgba(255,255,255,0.05);
+            --input-border: rgba(255,255,255,0.06);
+            --btn-hover: rgba(255,255,255,0.08);
+            --scrollbar-thumb: rgba(255,255,255,0.15);
+            --scrollbar-thumb-hover: rgba(255,255,255,0.25);
+            --progress-bar: linear-gradient(90deg, #4fc3f7, #00e5ff);
+            --accent-color: #4fc3f7;
+            --accent-hover: rgba(79,195,247,0.2);
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #f0f2f5;
+            --bg-secondary: #ffffff;
+            --bg-card: #ffffff;
+            --text-primary: #1a1a2e;
+            --text-secondary: rgba(0,0,0,0.5);
+            --text-muted: rgba(0,0,0,0.2);
+            --text-faint: rgba(0,0,0,0.1);
+            --border-color: rgba(0,0,0,0.06);
+            --border-hover: rgba(0,0,0,0.12);
+            --nav-bg: rgba(255,255,255,0.92);
+            --pagination-bg: rgba(255,255,255,0.85);
+            --shadow-color: rgba(0,0,0,0.1);
+            --overlay-bg: rgba(255,255,255,0.95);
+            --card-bg: #ffffff;
+            --input-bg: rgba(0,0,0,0.04);
+            --input-border: rgba(0,0,0,0.08);
+            --btn-hover: rgba(0,0,0,0.06);
+            --scrollbar-thumb: rgba(0,0,0,0.15);
+            --scrollbar-thumb-hover: rgba(0,0,0,0.25);
+            --progress-bar: linear-gradient(90deg, #4fc3f7, #00e5ff);
+            --accent-color: #4fc3f7;
+            --accent-hover: rgba(79,195,247,0.15);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -19,9 +69,11 @@
         body {
             width: 100%;
             height: 100%;
-            background: #0d0d1a;
+            background: var(--bg-primary);
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             overflow: hidden;
+            transition: background 0.3s ease, color 0.3s ease;
+            color: var(--text-primary);
         }
 
         /* ===== 进度条 ===== */
@@ -30,7 +82,7 @@
             top: 0;
             left: 0;
             height: 2.5px;
-            background: linear-gradient(90deg, #4fc3f7, #00e5ff);
+            background: var(--progress-bar);
             width: 0%;
             z-index: 9999;
             transition: width 0.3s ease;
@@ -43,11 +95,11 @@
             top: 12px;
             left: 12px;
             z-index: 1001;
-            background: rgba(13, 13, 26, 0.7);
+            background: var(--nav-bg);
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
             border-radius: 8px;
-            color: #fff;
+            color: var(--text-primary);
             font-size: 20px;
             padding: 6px 12px;
             cursor: pointer;
@@ -56,7 +108,7 @@
         }
 
         .nav-toggle:hover {
-            background: rgba(79, 195, 247, 0.12);
+            background: var(--accent-hover);
             border-color: rgba(79, 195, 247, 0.2);
         }
 
@@ -66,9 +118,9 @@
             top: 12px;
             left: 56px;
             z-index: 1000;
-            background: rgba(13, 13, 26, 0.92);
+            background: var(--nav-bg);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 14px 16px;
             display: flex;
@@ -79,7 +131,7 @@
             transform: translateY(-10px) scale(0.95);
             transition: opacity 0.25s ease, transform 0.25s ease;
             pointer-events: none;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 8px 32px var(--shadow-color);
             max-width: 90vw;
         }
 
@@ -97,7 +149,7 @@
         }
 
         .navbar .logo {
-            color: #fff;
+            color: var(--text-primary);
             font-size: 17px;
             font-weight: 300;
             display: flex;
@@ -110,17 +162,17 @@
         }
 
         .navbar .logo span {
-            color: #4fc3f7;
+            color: var(--accent-color);
             font-weight: 600;
         }
 
         .navbar .badge {
-            color: rgba(255, 255, 255, 0.25);
+            color: var(--text-secondary);
             font-size: 12px;
         }
 
         .navbar .badge span {
-            color: rgba(255, 255, 255, 0.4);
+            color: var(--text-muted);
         }
 
         .navbar .search-box {
@@ -131,29 +183,29 @@
 
         .navbar .search-box input {
             flex: 1;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: var(--input-bg);
+            border: 1px solid var(--input-border);
             border-radius: 6px;
             padding: 5px 10px;
-            color: #fff;
+            color: var(--text-primary);
             font-size: 13px;
             outline: none;
             transition: 0.2s;
         }
 
         .navbar .search-box input:focus {
-            border-color: #4fc3f7;
-            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent-color);
+            background: var(--input-bg);
         }
 
         .navbar .search-box input::placeholder {
-            color: rgba(255, 255, 255, 0.2);
+            color: var(--text-muted);
         }
 
         .navbar .search-box .search-btn {
-            background: rgba(79, 195, 247, 0.12);
+            background: var(--accent-hover);
             border: none;
-            color: #4fc3f7;
+            color: var(--accent-color);
             padding: 5px 12px;
             border-radius: 6px;
             cursor: pointer;
@@ -162,8 +214,8 @@
         }
 
         .navbar .search-box .search-btn:hover {
-            background: rgba(79, 195, 247, 0.2);
-            color: #fff;
+            background: rgba(79, 195, 247, 0.25);
+            color: var(--text-primary);
         }
 
         .navbar .nav-actions {
@@ -175,9 +227,9 @@
 
         .navbar .nav-actions a,
         .navbar .nav-actions button {
-            background: rgba(255, 255, 255, 0.04);
+            background: var(--input-bg);
             border: none;
-            color: rgba(255, 255, 255, 0.4);
+            color: var(--text-secondary);
             padding: 5px 12px;
             border-radius: 6px;
             cursor: pointer;
@@ -191,13 +243,31 @@
 
         .navbar .nav-actions a:hover,
         .navbar .nav-actions button:hover {
-            background: rgba(255, 255, 255, 0.08);
-            color: #fff;
+            background: var(--btn-hover);
+            color: var(--text-primary);
         }
 
         .navbar .nav-actions a i,
         .navbar .nav-actions button i {
             font-size: 14px;
+        }
+
+        /* ===== 主题切换按钮特殊样式 ===== */
+        #themeToggle {
+            background: var(--accent-hover);
+            color: var(--accent-color);
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #themeToggle:hover {
+            background: rgba(79, 195, 247, 0.3);
+            color: var(--text-primary);
         }
 
         /* ===== 应用容器 ===== */
@@ -233,12 +303,12 @@
         }
 
         .grid::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.15);
+            background: var(--scrollbar-thumb);
             border-radius: 3px;
         }
 
         .grid::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 255, 255, 0.25);
+            background: var(--scrollbar-thumb-hover);
         }
 
         /* ===== 卡片 ===== */
@@ -246,9 +316,10 @@
             position: relative;
             border-radius: 4px;
             overflow: hidden;
-            background: #1a1a2e;
+            background: var(--card-bg);
             aspect-ratio: 16 / 9;
             cursor: pointer;
+            transition: background 0.3s ease;
         }
 
         .card img {
@@ -284,7 +355,6 @@
             opacity: 0;
         }
 
-        /* ===== 悬停信息 ===== */
         .card .info {
             position: absolute;
             bottom: 0;
@@ -334,21 +404,22 @@
             align-items: center;
             gap: 10px;
             padding: 8px 16px;
-            background: rgba(13, 13, 26, 0.85);
+            background: var(--pagination-bg);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 8px 32px var(--shadow-color);
             z-index: 100;
             flex-wrap: wrap;
             justify-content: center;
             max-width: 95vw;
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
 
         .pagination button {
-            background: rgba(255, 255, 255, 0.06);
+            background: var(--input-bg);
             border: none;
-            color: #e0e0e0;
+            color: var(--text-secondary);
             padding: 6px 14px;
             border-radius: 6px;
             cursor: pointer;
@@ -361,8 +432,8 @@
         }
 
         .pagination button:hover:not(:disabled) {
-            background: rgba(79, 195, 247, 0.2);
-            color: #4fc3f7;
+            background: var(--accent-hover);
+            color: var(--accent-color);
         }
 
         .pagination button:disabled {
@@ -375,13 +446,13 @@
         }
 
         .pagination .page-info {
-            color: rgba(255, 255, 255, 0.4);
+            color: var(--text-secondary);
             font-size: 13px;
             white-space: nowrap;
         }
 
         .pagination .total-info {
-            color: rgba(255, 255, 255, 0.2);
+            color: var(--text-muted);
             font-size: 12px;
             white-space: nowrap;
         }
@@ -394,11 +465,11 @@
 
         .pagination .goto-box input {
             width: 48px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: var(--input-bg);
+            border: 1px solid var(--input-border);
             border-radius: 4px;
             padding: 4px 6px;
-            color: #fff;
+            color: var(--text-primary);
             font-size: 13px;
             text-align: center;
             outline: none;
@@ -406,7 +477,7 @@
         }
 
         .pagination .goto-box input:focus {
-            border-color: #4fc3f7;
+            border-color: var(--accent-color);
         }
 
         .pagination .goto-box input::-webkit-outer-spin-button,
@@ -419,9 +490,9 @@
         }
 
         .pagination .goto-box .goto-btn {
-            background: rgba(79, 195, 247, 0.15);
+            background: var(--accent-hover);
             border: none;
-            color: #4fc3f7;
+            color: var(--accent-color);
             padding: 4px 10px;
             border-radius: 4px;
             cursor: pointer;
@@ -434,14 +505,14 @@
 
         .pagination .goto-box .goto-btn:hover {
             background: rgba(79, 195, 247, 0.3);
-            color: #fff;
+            color: var(--text-primary);
         }
 
         .empty {
             grid-column: 1 / -1;
             text-align: center;
             padding: 80px 20px;
-            color: rgba(255, 255, 255, 0.15);
+            color: var(--text-secondary);
         }
 
         .empty .icon {
@@ -459,10 +530,11 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.95);
+            background: var(--overlay-bg);
             z-index: 999;
             overflow: hidden;
             user-select: none;
+            transition: background 0.3s ease;
         }
 
         .overlay.active {
@@ -473,7 +545,7 @@
             position: fixed;
             top: 16px;
             right: 24px;
-            color: rgba(255, 255, 255, 0.25);
+            color: var(--text-secondary);
             font-size: 28px;
             cursor: pointer;
             z-index: 100;
@@ -483,7 +555,7 @@
         }
 
         .overlay .close:hover {
-            color: #fff;
+            color: var(--text-primary);
         }
 
         .overlay .action-buttons {
@@ -506,14 +578,14 @@
 
         .overlay .action-buttons a,
         .overlay .action-buttons button {
-            color: rgba(255, 255, 255, 0.4);
+            color: var(--text-secondary);
             text-decoration: none;
             font-size: 13px;
             padding: 5px 16px;
             border-radius: 6px;
             transition: 0.2s;
             background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
             cursor: pointer;
             font-family: inherit;
             backdrop-filter: blur(4px);
@@ -524,20 +596,20 @@
 
         .overlay .action-buttons a:hover,
         .overlay .action-buttons button:hover {
-            color: #fff;
-            border-color: rgba(255, 255, 255, 0.2);
-            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-primary);
+            border-color: var(--border-hover);
+            background: var(--btn-hover);
         }
 
         .overlay .action-buttons .btn-download {
-            color: #4fc3f7;
+            color: var(--accent-color);
             border-color: rgba(79, 195, 247, 0.15);
         }
 
         .overlay .action-buttons .btn-download:hover {
-            color: #fff;
-            border-color: #4fc3f7;
-            background: rgba(79, 195, 247, 0.08);
+            color: var(--text-primary);
+            border-color: var(--accent-color);
+            background: var(--accent-hover);
         }
 
         .overlay .image-container {
@@ -569,49 +641,48 @@
             max-height: 85vh;
             object-fit: contain;
             border-radius: 4px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 20px 60px var(--shadow-color);
         }
 
-        /* ===== 大图版权信息 - 直接显示在图片上，无框 ===== */
-.overlay .meta {
-    position: fixed;
-    bottom: 130px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 18px;
-    text-align: center;
-    background: transparent;
-    padding: 0;
-    border-radius: 0;
-    max-width: 90%;
-    pointer-events: none;
-    z-index: 50;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border: none;
-    backdrop-filter: none;
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.5);
-    word-wrap: break-word;
-    line-height: 1.6;
-}
+        .overlay .meta {
+            position: fixed;
+            bottom: 130px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--text-secondary);
+            font-size: 17px;
+            text-align: center;
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
+            max-width: 90%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border: none;
+            backdrop-filter: none;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.5);
+            word-wrap: break-word;
+            line-height: 1.6;
+        }
 
-.overlay:hover .meta {
-    opacity: 1;
-}
+        .overlay:hover .meta {
+            opacity: 1;
+        }
 
-.overlay .meta .date {
-    font-size: 14px;
-    opacity: 0.5;
-    display: block;
-    margin-top: 4px;
-}
+        .overlay .meta .date {
+            font-size: 14px;
+            opacity: 0.5;
+            display: block;
+            margin-top: 4px;
+        }
 
         .overlay .arrow {
             position: fixed;
             top: 50%;
             transform: translateY(-50%);
-            color: rgba(255, 255, 255, 0.1);
+            color: var(--text-muted);
             font-size: 32px;
             cursor: pointer;
             padding: 16px 10px;
@@ -629,7 +700,7 @@
         }
 
         .overlay .arrow:hover {
-            color: #fff;
+            color: var(--text-primary);
         }
 
         .overlay .arrow-left {
@@ -684,120 +755,125 @@
         }
 
         @media (max-width: 500px) {
-    .app {
-        height: auto;
-        min-height: 100vh;
-        overflow-y: auto;
-    }
+            .app {
+                height: auto;
+                min-height: 100vh;
+                overflow-y: auto;
+            }
 
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0;
-        height: auto;
-        overflow-y: visible;
-        padding: 0;
-        padding-bottom: 80px;
-        align-content: start;
-    }
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0;
+                height: auto;
+                overflow-y: visible;
+                padding: 0;
+                padding-bottom: 80px;
+                align-content: start;
+            }
 
-    .card {
-        aspect-ratio: 16 / 10;
-        border-radius: 0;
-    }
+            .card {
+                aspect-ratio: 16 / 10;
+                border-radius: 0;
+            }
 
-    .navbar {
-        left: 48px;
-        min-width: 140px;
-        padding: 10px 12px;
-        top: 8px;
-    }
-    .navbar .logo {
-        font-size: 14px;
-    }
-    .navbar .logo .icon {
-        font-size: 16px;
-    }
-    .navbar .search-box input {
-        font-size: 12px;
-        padding: 4px 8px;
-    }
-    .navbar .search-box .search-btn {
-        font-size: 12px;
-        padding: 4px 8px;
-    }
-    .navbar .nav-actions a,
-    .navbar .nav-actions button {
-        font-size: 12px;
-        padding: 4px 8px;
-    }
-    .nav-toggle {
-        font-size: 16px;
-        padding: 4px 8px;
-        top: 8px;
-        left: 8px;
-    }
-    .pagination {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 6px 10px;
-        gap: 4px;
-        max-width: 98vw;
-        bottom: 8px;
-    }
-    .pagination button {
-        font-size: 11px;
-        padding: 3px 8px;
-    }
-    .pagination .page-info {
-        font-size: 11px;
-    }
-    .pagination .total-info {
-        font-size: 10px;
-    }
-    .pagination .goto-box input {
-        width: 34px;
-        font-size: 11px;
-        padding: 2px 4px;
-    }
-    .pagination .goto-box .goto-btn {
-        font-size: 11px;
-        padding: 2px 8px;
-    }
-    .overlay .arrow {
-        font-size: 26px;
-        padding: 8px 4px;
-    }
-    .overlay .arrow-left {
-        left: 2px;
-    }
-    .overlay .arrow-right {
-        right: 2px;
-    }
-    .overlay .close {
-        font-size: 26px;
-        top: 10px;
-        right: 14px;
-    }
-    .overlay .action-buttons {
-        bottom: 60px;
-        gap: 6px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .overlay .action-buttons a,
-    .overlay .action-buttons button {
-        font-size: 11px;
-        padding: 4px 10px;
-    }
-    .overlay .meta {
-        font-size: 14px;
-        bottom: 120px;
-        max-width: 92%;
-    }
-    .overlay .meta .date {
-        font-size: 11px;
-    }
-}
+            .navbar {
+                left: 48px;
+                min-width: 140px;
+                padding: 10px 12px;
+                top: 8px;
+            }
+            .navbar .logo {
+                font-size: 14px;
+            }
+            .navbar .logo .icon {
+                font-size: 16px;
+            }
+            .navbar .search-box input {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+            .navbar .search-box .search-btn {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+            .navbar .nav-actions a,
+            .navbar .nav-actions button {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+            #themeToggle {
+                width: 28px;
+                height: 28px;
+                font-size: 13px;
+            }
+            .nav-toggle {
+                font-size: 16px;
+                padding: 4px 8px;
+                top: 8px;
+                left: 8px;
+            }
+            .pagination {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 6px 10px;
+                gap: 4px;
+                max-width: 98vw;
+                bottom: 8px;
+            }
+            .pagination button {
+                font-size: 11px;
+                padding: 3px 8px;
+            }
+            .pagination .page-info {
+                font-size: 11px;
+            }
+            .pagination .total-info {
+                font-size: 10px;
+            }
+            .pagination .goto-box input {
+                width: 34px;
+                font-size: 11px;
+                padding: 2px 4px;
+            }
+            .pagination .goto-box .goto-btn {
+                font-size: 11px;
+                padding: 2px 8px;
+            }
+            .overlay .arrow {
+                font-size: 26px;
+                padding: 8px 4px;
+            }
+            .overlay .arrow-left {
+                left: 2px;
+            }
+            .overlay .arrow-right {
+                right: 2px;
+            }
+            .overlay .close {
+                font-size: 26px;
+                top: 10px;
+                right: 14px;
+            }
+            .overlay .action-buttons {
+                bottom: 60px;
+                gap: 6px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .overlay .action-buttons a,
+            .overlay .action-buttons button {
+                font-size: 11px;
+                padding: 4px 10px;
+            }
+            .overlay .meta {
+                font-size: 14px;
+                bottom: 120px;
+                max-width: 92%;
+            }
+            .overlay .meta .date {
+                font-size: 11px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -814,8 +890,8 @@
     <div class="navbar" id="navbar">
         <div class="navbar-header">
             <div class="logo">
-              <img src="/favicon.ico" alt="Logo" style="width:24px;height:24px;border-radius:4px;" />
-              Bing <span>Wallpaper</span>
+                <i class="fas fa-image icon"></i>
+                Bing <span>Wallpaper</span>
             </div>
         </div>
         <div class="badge"><i class="fas fa-images"></i> <span id="totalNavCount">0</span> 张</div>
@@ -827,6 +903,7 @@
             <button id="homeBtn"><i class="fas fa-home"></i> 首页</button>
             <a href="/api" target="_blank"><i class="fas fa-code"></i> API</a>
             <a href="https://aoso.hangdn.com" target="_blank" rel="noopener"><i class="fas fa-blog"></i> 博客</a>
+            <button id="themeToggle"><i class="fas fa-moon"></i></button>
         </div>
     </div>
 
@@ -899,7 +976,29 @@
         }
 
         // ============================================================
-        // 2. 进度条
+        // 2. ★★★ 主题切换 ★★★
+        // ============================================================
+        const themeToggle = document.getElementById('themeToggle');
+        let currentTheme = localStorage.getItem('theme') || 'dark';
+
+        function setTheme(theme) {
+            currentTheme = theme;
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            themeToggle.innerHTML = theme === 'dark'
+                ? '<i class="fas fa-moon"></i>'
+                : '<i class="fas fa-sun"></i>';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+
+        // 初始化主题
+        setTheme(currentTheme);
+
+        // ============================================================
+        // 3. 进度条
         // ============================================================
         const progressBar = document.getElementById('progress-bar');
 
@@ -914,7 +1013,7 @@
         }
 
         // ============================================================
-        // 3. 导航栏
+        // 4. 导航栏
         // ============================================================
         const navToggle = document.getElementById('navToggle');
         const navbar = document.getElementById('navbar');
@@ -938,11 +1037,12 @@
         });
 
         // ============================================================
-        // 4. 分页数据加载
+        // 5. ★★★ 分页数据加载 ★★★
         // ============================================================
         let allData = [];
         let filteredData = [];
         let currentPage = 1;
+        // ★★★ 手机端 12 张/页，电脑端 42 张/页 ★★★
         const PAGE_SIZE = window.innerWidth <= 500 ? 12 : 42;
         let totalPages = 1;
         let currentPreviewIndex = 0;
@@ -980,7 +1080,7 @@
         let lastTranslateY = 0;
 
         // ============================================================
-        // 4.1 加载数据
+        // 5.1 加载数据
         // ============================================================
         async function loadData() {
             showProgress();
@@ -1009,7 +1109,7 @@
         }
 
         // ============================================================
-        // 4.2 渲染页面
+        // 5.2 渲染页面
         // ============================================================
         function renderPage(page) {
             const data = filteredData.length > 0 ? filteredData : allData;
@@ -1105,7 +1205,7 @@
         }
 
         // ============================================================
-        // 4.3 分页事件
+        // 5.3 分页事件
         // ============================================================
         prevBtn.addEventListener('click', () => {
             if (currentPage > 1) renderPage(currentPage - 1);
@@ -1128,7 +1228,7 @@
         });
 
         // ============================================================
-        // 4.4 搜索
+        // 5.4 搜索
         // ============================================================
         function doSearch() {
             const keyword = searchInput.value.trim().toLowerCase();
@@ -1139,12 +1239,11 @@
             }
 
             filteredData = allData.filter(item => {
-                const title = (item.copyright || '').toLowerCase();
                 const copyright = (item.copyright || '').toLowerCase();
                 const date = item.date || '';
                 const dateClean = date.replace(/-/g, '');
                 const dateMatch = date.includes(keyword) || dateClean.includes(keyword);
-                return title.includes(keyword) || copyright.includes(keyword) || dateMatch;
+                return copyright.includes(keyword) || dateMatch;
             });
 
             if (filteredData.length === 0) {
@@ -1168,7 +1267,7 @@
         });
 
         // ============================================================
-        // 4.5 首页
+        // 5.5 首页
         // ============================================================
         homeBtn.addEventListener('click', () => {
             searchInput.value = '';
@@ -1178,7 +1277,7 @@
         });
 
         // ============================================================
-        // 4.6 空状态
+        // 5.6 空状态
         // ============================================================
         function showEmpty() {
             grid.innerHTML = `
@@ -1195,7 +1294,7 @@
         }
 
         // ============================================================
-        // 5. 全屏预览
+        // 6. 全屏预览
         // ============================================================
         function openPreview(index) {
             if (allData.length === 0) return;
@@ -1320,7 +1419,7 @@
         }
 
         // ============================================================
-        // 6. 事件绑定
+        // 7. 事件绑定
         // ============================================================
         document.getElementById('closeBtn').addEventListener('click', closePreview);
         document.getElementById('prevPreviewBtn').addEventListener('click', (e) => {
@@ -1354,7 +1453,7 @@
         });
 
         // ============================================================
-        // 7. 启动
+        // 8. 启动
         // ============================================================
         loadData();
     </script>
