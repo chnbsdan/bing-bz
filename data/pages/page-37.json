@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "date": "2022-06-07",
+      "copyright": "Scarlet macaw in Costa Rica (© Harry Collins/Getty Images)",
+      "copyrightLink": "https://www.bing.com/search?q=Scarlet%20macaw%20in%20Costa%20Rica%20(%C2%A9%20Harry%20Collins%2FGetty%20Images)&form=hpcapt&mkt=zh-cn",
+      "title": "Scarlet macaw in Costa Rica (© Harry Collins/Getty Images)",
+      "description": "",
+      "jpg": "https://cn.bing.com/th?id=OHR.ParrotDay_EN-US9824481217_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ParrotDay_EN-US9824481217_UHD.jpg"
+    },
+    {
       "date": "2022-06-06",
       "copyright": "Rainbow Pool and the field of stars in the World War II Memorial with the Lincoln Memorial in the background, Washington, DC (© Sean Pavone/Getty Images)",
       "copyrightLink": "https://www.bing.com/search?q=Rainbow%20Pool%20and%20the%20field%20of%20stars%20in%20the%20World%20War%20II%20Memorial%20with%20the%20Lincoln%20Memorial%20in%20the%20background%2C%20Washington%2C%20DC%20(%C2%A9%20Sean%20Pavone%2FGetty%20Images)&form=hpcapt&mkt=zh-cn",
@@ -156,7 +165,7 @@
   ],
   "page": 37,
   "pageSize": 42,
-  "total": 1529,
+  "total": 1530,
   "totalPages": 37,
   "hasMore": false
 }

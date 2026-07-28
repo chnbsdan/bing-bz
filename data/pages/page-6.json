@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "date": "2025-12-30",
+      "copyright": "St. Gregory Church in Ani Ruins, Kars, Türkiye (© Kenan Talas/Getty Images)",
+      "copyrightLink": "https://www.bing.com/search?q=St.%20Gregory%20Church%20in%20Ani%20Ruins%2C%20Kars%2C%20T%C3%BCrkiye%20(%C2%A9%20Kenan%20Talas%2FGetty%20Images)&form=hpcapt&mkt=zh-cn",
+      "title": "St. Gregory Church in Ani Ruins, Kars, Türkiye (© Kenan Talas/Getty Images)",
+      "description": "",
+      "jpg": "https://cn.bing.com/th?id=OHR.AniTurkey_EN-US6168768263_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AniTurkey_EN-US6168768263_UHD.jpg"
+    },
+    {
       "date": "2025-12-29",
       "copyright": "Black-and-white ruffed lemur in Madagascar (© Cyrielle Beaubois/Getty Images)",
       "copyrightLink": "https://www.bing.com/search?q=Black-and-white%20ruffed%20lemur%20in%20Madagascar%20(%C2%A9%20Cyrielle%20Beaubois%2FGetty%20Images)&form=hpcapt&mkt=zh-cn",
@@ -368,20 +377,11 @@
       "description": "",
       "jpg": "https://cn.bing.com/th?id=OHR.AutumnMerganser_EN-US5860535351_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AutumnMerganser_EN-US5860535351_UHD.jpg"
-    },
-    {
-      "date": "2025-11-18",
-      "copyright": "Fall colors in Shenandoah National Park, Virginia (© Michael Ver Sprill/Getty Images)",
-      "copyrightLink": "https://www.bing.com/search?q=Fall%20colors%20in%20Shenandoah%20National%20Park%2C%20Virginia%20(%C2%A9%20Michael%20Ver%20Sprill%2FGetty%20Images)&form=hpcapt&mkt=zh-cn",
-      "title": "Fall colors in Shenandoah National Park, Virginia (© Michael Ver Sprill/Getty Images)",
-      "description": "",
-      "jpg": "https://cn.bing.com/th?id=OHR.ShenandoahTrail_EN-US8964689271_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ShenandoahTrail_EN-US8964689271_UHD.jpg"
     }
   ],
   "page": 6,
   "pageSize": 42,
-  "total": 1529,
+  "total": 1530,
   "totalPages": 37,
   "hasMore": true
 }

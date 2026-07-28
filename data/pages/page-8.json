@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "date": "2025-10-07",
+      "copyright": "Anshun Bridge illuminated for the Mid-Autumn Festival, Chengdu, China (© Philippe LEJEANVRE/Getty Images)",
+      "copyrightLink": "https://www.bing.com/search?q=Anshun%20Bridge%20illuminated%20for%20the%20Mid-Autumn%20Festival%2C%20Chengdu%2C%20China%20(%C2%A9%20Philippe%20LEJEANVRE%2FGetty%20Images)&form=hpcapt&mkt=zh-cn",
+      "title": "Anshun Bridge illuminated for the Mid-Autumn Festival, Chengdu, China (© Philippe LEJEANVRE/Getty Images)",
+      "description": "",
+      "jpg": "https://cn.bing.com/th?id=OHR.AnshunBridge_EN-US0059795497_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AnshunBridge_EN-US0059795497_UHD.jpg"
+    },
+    {
       "date": "2025-10-06",
       "copyright": "Boreal owl in a forest in Central Europe (© Ondrej Prosicky/Alamy)",
       "copyrightLink": "https://www.bing.com/search?q=Boreal%20owl%20in%20a%20forest%20in%20Central%20Europe%20(%C2%A9%20Ondrej%20Prosicky%2FAlamy)&form=hpcapt&mkt=zh-cn",
@@ -368,20 +377,11 @@
       "description": "",
       "jpg": "https://cn.bing.com/th?id=OHR.TrulliHouses_EN-US3489439665_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.TrulliHouses_EN-US3489439665_UHD.jpg"
-    },
-    {
-      "date": "2025-08-26",
-      "copyright": "Calcite Springs Overlook and Yellowstone River, Yellowstone National Park, Wyoming (© Rebecca L. Latson/Getty Images)",
-      "copyrightLink": "https://www.bing.com/search?q=Calcite%20Springs%20Overlook%20and%20Yellowstone%20River%2C%20Yellowstone%20National%20Park%2C%20Wyoming%20(%C2%A9%20Rebecca%20L.%20Latson%2FGetty%20Images)&form=hpcapt&mkt=zh-cn",
-      "title": "Calcite Springs Overlook and Yellowstone River, Yellowstone National Park, Wyoming (© Rebecca L. Latson/Getty Images)",
-      "description": "",
-      "jpg": "https://cn.bing.com/th?id=OHR.YellowstoneRiver_EN-US3380364726_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.YellowstoneRiver_EN-US3380364726_UHD.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 1529,
+  "total": 1530,
   "totalPages": 37,
   "hasMore": true
 }

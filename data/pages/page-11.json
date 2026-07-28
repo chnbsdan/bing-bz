@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "date": "2025-06-03",
+      "copyright": "Skipper butterfly on a coneflower, Rockefeller State Park Preserve, New York (© Marianne A. Campolongo/Alamy)",
+      "copyrightLink": "https://www.bing.com/search?q=Skipper%20butterfly%20on%20a%20coneflower%2C%20Rockefeller%20State%20Park%20Preserve%2C%20New%20York%20(%C2%A9%20Marianne%20A.%20Campolongo%2FAlamy)&form=hpcapt&mkt=zh-cn",
+      "title": "Skipper butterfly on a coneflower, Rockefeller State Park Preserve, New York (© Marianne A. Campolongo/Alamy)",
+      "description": "",
+      "jpg": "https://cn.bing.com/th?id=OHR.EchinaceaButterfly_EN-US8404044892_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.EchinaceaButterfly_EN-US8404044892_UHD.jpg"
+    },
+    {
       "date": "2025-06-02",
       "copyright": "Barrier reef off the island of Grande Terre in the French overseas territory of New Caledonia (© Karsten Wrobel/Getty Images)",
       "copyrightLink": "https://www.bing.com/search?q=Barrier%20reef%20off%20the%20island%20of%20Grande%20Terre%20in%20the%20French%20overseas%20territory%20of%20New%20Caledonia%20(%C2%A9%20Karsten%20Wrobel%2FGetty%20Images)&form=hpcapt&mkt=zh-cn",
@@ -368,20 +377,11 @@
       "description": "",
       "jpg": "https://cn.bing.com/th?id=OHR.YellowstoneSpring_EN-US2710865870_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.YellowstoneSpring_EN-US2710865870_UHD.jpg"
-    },
-    {
-      "date": "2025-04-22",
-      "copyright": "Joshua trees under the Milky Way, California (© Chao Zhang/Getty Images)",
-      "copyrightLink": "https://www.bing.com/search?q=Joshua%20trees%20under%20the%20Milky%20Way%2C%20California%20(%C2%A9%20Chao%20Zhang%2FGetty%20Images)&form=hpcapt&mkt=zh-cn",
-      "title": "Joshua trees under the Milky Way, California (© Chao Zhang/Getty Images)",
-      "description": "",
-      "jpg": "https://cn.bing.com/th?id=OHR.JoshuaStars_EN-US2563220033_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.JoshuaStars_EN-US2563220033_UHD.jpg"
     }
   ],
   "page": 11,
   "pageSize": 42,
-  "total": 1529,
+  "total": 1530,
   "totalPages": 37,
   "hasMore": true
 }

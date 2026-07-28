@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "date": "2025-11-18",
+      "copyright": "Fall colors in Shenandoah National Park, Virginia (© Michael Ver Sprill/Getty Images)",
+      "copyrightLink": "https://www.bing.com/search?q=Fall%20colors%20in%20Shenandoah%20National%20Park%2C%20Virginia%20(%C2%A9%20Michael%20Ver%20Sprill%2FGetty%20Images)&form=hpcapt&mkt=zh-cn",
+      "title": "Fall colors in Shenandoah National Park, Virginia (© Michael Ver Sprill/Getty Images)",
+      "description": "",
+      "jpg": "https://cn.bing.com/th?id=OHR.ShenandoahTrail_EN-US8964689271_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ShenandoahTrail_EN-US8964689271_UHD.jpg"
+    },
+    {
       "date": "2025-11-17",
       "copyright": "A traboule in Lyon, France (© TPopova/Getty Images)",
       "copyrightLink": "https://www.bing.com/search?q=A%20traboule%20in%20Lyon%2C%20France%20(%C2%A9%20TPopova%2FGetty%20Images)&form=hpcapt&mkt=zh-cn",
@@ -368,20 +377,11 @@
       "description": "",
       "jpg": "https://cn.bing.com/th?id=OHR.RidgwayAspens_EN-US0136548884_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.RidgwayAspens_EN-US0136548884_UHD.jpg"
-    },
-    {
-      "date": "2025-10-07",
-      "copyright": "Anshun Bridge illuminated for the Mid-Autumn Festival, Chengdu, China (© Philippe LEJEANVRE/Getty Images)",
-      "copyrightLink": "https://www.bing.com/search?q=Anshun%20Bridge%20illuminated%20for%20the%20Mid-Autumn%20Festival%2C%20Chengdu%2C%20China%20(%C2%A9%20Philippe%20LEJEANVRE%2FGetty%20Images)&form=hpcapt&mkt=zh-cn",
-      "title": "Anshun Bridge illuminated for the Mid-Autumn Festival, Chengdu, China (© Philippe LEJEANVRE/Getty Images)",
-      "description": "",
-      "jpg": "https://cn.bing.com/th?id=OHR.AnshunBridge_EN-US0059795497_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AnshunBridge_EN-US0059795497_UHD.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 1529,
+  "total": 1530,
   "totalPages": 37,
   "hasMore": true
 }

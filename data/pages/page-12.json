@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "date": "2025-04-22",
+      "copyright": "Joshua trees under the Milky Way, California (© Chao Zhang/Getty Images)",
+      "copyrightLink": "https://www.bing.com/search?q=Joshua%20trees%20under%20the%20Milky%20Way%2C%20California%20(%C2%A9%20Chao%20Zhang%2FGetty%20Images)&form=hpcapt&mkt=zh-cn",
+      "title": "Joshua trees under the Milky Way, California (© Chao Zhang/Getty Images)",
+      "description": "",
+      "jpg": "https://cn.bing.com/th?id=OHR.JoshuaStars_EN-US2563220033_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.JoshuaStars_EN-US2563220033_UHD.jpg"
+    },
+    {
       "date": "2025-04-21",
       "copyright": "Wild baby rabbits in spring (© Fiona McAllister Photography/Getty Images)",
       "copyrightLink": "https://www.bing.com/search?q=Wild%20baby%20rabbits%20in%20spring%20(%C2%A9%20Fiona%20McAllister%20Photography%2FGetty%20Images)&form=hpcapt&mkt=zh-cn",
@@ -368,20 +377,11 @@
       "description": "",
       "jpg": "https://cn.bing.com/th?id=OHR.NusaPenida_EN-US8722184767_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.NusaPenida_EN-US8722184767_UHD.jpg"
-    },
-    {
-      "date": "2025-03-11",
-      "copyright": "A lion sleeping in Ishasha Sector, Queen Elizabeth National Park, Uganda (© Gunter Nuyts/Getty Images)",
-      "copyrightLink": "https://www.bing.com/search?q=A%20lion%20sleeping%20in%20Ishasha%20Sector%2C%20Queen%20Elizabeth%20National%20Park%2C%20Uganda%20(%C2%A9%20Gunter%20Nuyts%2FGetty%20Images)&form=hpcapt&mkt=zh-cn",
-      "title": "A lion sleeping in Ishasha Sector, Queen Elizabeth National Park, Uganda (© Gunter Nuyts/Getty Images)",
-      "description": "",
-      "jpg": "https://cn.bing.com/th?id=OHR.NappingLion_EN-US8441298325_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.NappingLion_EN-US8441298325_UHD.jpg"
     }
   ],
   "page": 12,
   "pageSize": 42,
-  "total": 1529,
+  "total": 1530,
   "totalPages": 37,
   "hasMore": true
 }
