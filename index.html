@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
+        /* ===== CSS 变量 ===== */
         :root {
             --bg-primary: #0d0d1a;
             --bg-secondary: #1a1a2e;
@@ -21,7 +22,7 @@
             --nav-bg: rgba(13,13,26,0.92);
             --pagination-bg: rgba(13,13,26,0.85);
             --shadow-color: rgba(0,0,0,0.5);
-            --overlay-bg: rgba(0,0,0,0.92);
+            --overlay-bg: rgba(0,0,0,0.95);
             --card-bg: #1a1a2e;
             --input-bg: rgba(255,255,255,0.05);
             --input-border: rgba(255,255,255,0.06);
@@ -31,8 +32,8 @@
             --progress-bar: linear-gradient(90deg, #4fc3f7, #00e5ff);
             --accent-color: #4fc3f7;
             --accent-hover: rgba(79,195,247,0.2);
-            --detail-panel-bg: #1a1a2e;
         }
+
         [data-theme="light"] {
             --bg-primary: #f0f2f5;
             --bg-secondary: #ffffff;
@@ -46,170 +47,953 @@
             --nav-bg: rgba(255,255,255,0.92);
             --pagination-bg: rgba(255,255,255,0.85);
             --shadow-color: rgba(0,0,0,0.1);
-            --overlay-bg: rgba(255,255,255,0.92);
+            --overlay-bg: rgba(255,255,255,0.95);
             --card-bg: #ffffff;
             --input-bg: rgba(0,0,0,0.04);
             --input-border: rgba(0,0,0,0.08);
             --btn-hover: rgba(0,0,0,0.06);
             --scrollbar-thumb: rgba(0,0,0,0.15);
             --scrollbar-thumb-hover: rgba(0,0,0,0.25);
-            --detail-panel-bg: #ffffff;
+            --progress-bar: linear-gradient(90deg, #4fc3f7, #00e5ff);
+            --accent-color: #4fc3f7;
+            --accent-hover: rgba(79,195,247,0.15);
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body { width: 100%; height: 100%; background: var(--bg-primary); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; overflow: hidden; transition: background 0.3s ease, color 0.3s ease; color: var(--text-primary); }
-        #progress-bar { position: fixed; top: 0; left: 0; height: 2.5px; background: var(--progress-bar); width: 0%; z-index: 9999; transition: width 0.3s ease; box-shadow: 0 0 12px rgba(79,195,247,0.4); }
-        .nav-toggle { position: fixed; top: 12px; left: 12px; z-index: 1001; background: var(--nav-bg); backdrop-filter: blur(8px); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-primary); font-size: 20px; padding: 6px 12px; cursor: pointer; transition: 0.2s; line-height: 1; }
-        .nav-toggle:hover { background: var(--accent-hover); border-color: rgba(79,195,247,0.2); }
-        .navbar { position: fixed; top: 12px; left: 56px; z-index: 1000; background: var(--nav-bg); backdrop-filter: blur(16px); border: 1px solid var(--border-color); border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; min-width: 200px; opacity: 0; transform: translateY(-10px) scale(0.95); transition: opacity 0.25s ease, transform 0.25s ease; pointer-events: none; box-shadow: 0 8px 32px var(--shadow-color); max-width: 90vw; }
-        .navbar.open { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
-        .navbar-header { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .navbar .logo { color: var(--text-primary); font-size: 17px; font-weight: 300; display: flex; align-items: center; gap: 8px; }
-        .navbar .logo span { color: var(--accent-color); font-weight: 600; }
-        .navbar .badge { color: var(--text-secondary); font-size: 12px; }
-        .navbar .search-box { display: flex; gap: 6px; width: 100%; }
-        .navbar .search-box input { flex: 1; background: var(--input-bg); border: 1px solid var(--input-border); border-radius: 6px; padding: 5px 10px; color: var(--text-primary); font-size: 13px; outline: none; transition: 0.2s; }
-        .navbar .search-box input:focus { border-color: var(--accent-color); }
-        .navbar .search-box input::placeholder { color: var(--text-muted); }
-        .navbar .search-box .search-btn { background: var(--accent-hover); border: none; color: var(--accent-color); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 13px; transition: 0.2s; }
-        .navbar .search-box .search-btn:hover { background: rgba(79,195,247,0.25); color: var(--text-primary); }
-        .navbar .nav-actions { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
-        .navbar .nav-actions a, .navbar .nav-actions button { background: var(--input-bg); border: none; color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 13px; transition: 0.2s; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
-        .navbar .nav-actions a:hover, .navbar .nav-actions button:hover { background: var(--btn-hover); color: var(--text-primary); }
-        #themeToggle { background: var(--accent-hover); color: var(--accent-color); border-radius: 50%; width: 32px; height: 32px; padding: 0; display: flex; align-items: center; justify-content: center; }
-        #themeToggle:hover { background: rgba(79,195,247,0.3); color: var(--text-primary); }
-        .app { display: flex; flex-direction: column; width: 100%; height: 100vh; padding: 0; overflow: hidden; }
-        .grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; flex: 1; align-content: start; overflow-y: auto; padding: 4px; padding-bottom: 70px; scroll-behavior: smooth; min-height: 0; }
-        .grid::-webkit-scrollbar { width: 6px; }
-        .grid::-webkit-scrollbar-track { background: transparent; }
-        .grid::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
-        .grid::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
-        .card { position: relative; border-radius: 4px; overflow: hidden; background: var(--bg-card); aspect-ratio: 16 / 9; cursor: pointer; transition: background 0.3s ease; }
-        .card img { width: 100%; height: 100%; object-fit: cover; display: block; position: relative; z-index: 2; opacity: 0; transition: opacity 0.5s ease; }
-        .card img.loaded { opacity: 1; }
-        .card .placeholder-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; filter: blur(10px) brightness(0.7); transform: scale(1.05); transition: opacity 0.6s ease; z-index: 1; }
-        .card .placeholder-bg.hidden { opacity: 0; }
-        .card .info { position: absolute; bottom: 0; left: 0; right: 0; z-index: 3; padding: 16px 12px 12px; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%); color: #fff; opacity: 0; transition: opacity 0.25s ease; pointer-events: none; }
-        .card:hover .info { opacity: 1; }
-        .card .info .date { font-size: 11px; color: rgba(255,255,255,0.4); }
-        .card .info .title { font-size: 14px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .card .info .copyright { font-size: 12px; color: rgba(255,255,255,0.4); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .pagination { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; padding: 8px 16px; background: var(--pagination-bg); backdrop-filter: blur(16px); border: 1px solid var(--border-color); border-radius: 12px; box-shadow: 0 8px 32px var(--shadow-color); z-index: 100; flex-wrap: wrap; justify-content: center; max-width: 95vw; transition: background 0.3s ease, border-color 0.3s ease; }
-        .pagination button { background: var(--input-bg); border: none; color: var(--text-secondary); padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 13px; transition: 0.2s; white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; }
-        .pagination button:hover:not(:disabled) { background: var(--accent-hover); color: var(--accent-color); }
-        .pagination button:disabled { opacity: 0.2; cursor: not-allowed; }
-        .pagination .page-info { color: var(--text-secondary); font-size: 13px; white-space: nowrap; }
-        .pagination .total-info { color: var(--text-muted); font-size: 12px; white-space: nowrap; }
-        .pagination .goto-box { display: flex; align-items: center; gap: 4px; }
-        .pagination .goto-box input { width: 48px; background: var(--input-bg); border: 1px solid var(--input-border); border-radius: 4px; padding: 4px 6px; color: var(--text-primary); font-size: 13px; text-align: center; outline: none; transition: 0.2s; }
-        .pagination .goto-box input:focus { border-color: var(--accent-color); }
-        .pagination .goto-box .goto-btn { background: var(--accent-hover); border: none; color: var(--accent-color); padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 13px; transition: 0.2s; display: inline-flex; align-items: center; gap: 4px; }
-        .pagination .goto-box .goto-btn:hover { background: rgba(79,195,247,0.3); color: var(--text-primary); }
-        .empty { grid-column: 1 / -1; text-align: center; padding: 80px 20px; color: var(--text-secondary); }
-        .empty .icon { font-size: 40px; margin-bottom: 10px; }
-        .overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--overlay-bg); z-index: 999; overflow: hidden; user-select: none; transition: background 0.3s ease; }
-        .overlay.active { display: block; }
-        .overlay .image-container { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; cursor: grab; overflow: hidden; position: relative; }
-        .overlay .image-container:active { cursor: grabbing; }
-        .overlay .preview-image { display: block; width: 100%; height: 100%; object-fit: contain; pointer-events: none; transform-origin: center center; will-change: transform; transition: none; background: var(--overlay-bg); }
-        .overlay .arrow { position: fixed; top: 0; bottom: 0; width: 80px; cursor: pointer; z-index: 60; display: flex; align-items: center; justify-content: center; background: transparent; border: none; color: rgba(255,255,255,0.15); font-size: 32px; transition: background 0.25s ease, color 0.25s ease; }
-        .overlay .arrow-left { left: 0; }
-        .overlay .arrow-right { right: 0; }
-        .overlay .arrow:hover { background: rgba(0,0,0,0.3); color: rgba(255,255,255,0.6); }
-        .overlay .action-buttons { position: fixed; top: 20px; right: 20px; display: flex; align-items: center; gap: 8px; z-index: 70; }
-        .overlay .action-buttons button, .overlay .action-buttons a { background: rgba(0,0,0,0.4); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; color: rgba(255,255,255,0.7); padding: 8px 14px; font-size: 13px; cursor: pointer; transition: all 0.2s ease; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; font-family: inherit; white-space: nowrap; }
-        .overlay .action-buttons button:hover, .overlay .action-buttons a:hover { background: rgba(0,0,0,0.6); color: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.15); }
-        .overlay .action-buttons .btn-download { color: var(--accent-color); border-color: rgba(79,195,247,0.15); }
-        .overlay .action-buttons .btn-download:hover { background: var(--accent-hover); color: var(--text-primary); border-color: var(--accent-color); }
-        .overlay .action-buttons .btn-detail { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.08); }
-        .overlay .action-buttons .btn-detail:hover { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); }
-        .overlay .action-buttons .btn-close { background: rgba(0,0,0,0.3); border-color: transparent; padding: 8px 12px; font-size: 16px; }
-        .overlay .action-buttons .btn-close:hover { background: rgba(255,50,50,0.2); color: #ff6b6b; border-color: rgba(255,50,50,0.2); }
-        .overlay .meta { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.7); font-size: 15px; text-align: center; z-index: 50; pointer-events: none; text-shadow: 0 2px 20px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.4); line-height: 1.6; max-width: 80%; }
-        .overlay .meta .date { font-size: 13px; opacity: 0.4; display: block; margin-top: 2px; }
-        .detail-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 80; background: rgba(0,0,0,0.3); opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
-        .detail-overlay.active { opacity: 1; pointer-events: auto; }
-        .detail-panel { position: fixed; top: 0; right: -420px; width: 400px; max-width: 90vw; height: 100%; background: var(--detail-panel-bg); z-index: 90; box-shadow: -8px 0 40px var(--shadow-color); transition: right 0.35s cubic-bezier(0.4,0,0.2,1); display: flex; flex-direction: column; overflow: hidden; border-left: 1px solid var(--border-color); }
-        .detail-panel.open { right: 0; }
-        .detail-panel-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; border-bottom: 1px solid var(--border-color); flex-shrink: 0; }
-        .detail-panel-header h2 { font-size: 18px; font-weight: 600; color: var(--text-primary); margin: 0; display: flex; align-items: center; gap: 10px; }
-        .detail-panel-header h2 i { color: var(--accent-color); }
-        .detail-panel-close { background: var(--input-bg); border: none; color: var(--text-secondary); width: 36px; height: 36px; border-radius: 8px; cursor: pointer; font-size: 18px; transition: 0.2s; display: flex; align-items: center; justify-content: center; }
-        .detail-panel-close:hover { background: var(--btn-hover); color: var(--text-primary); }
-        .detail-panel-body { flex: 1; overflow-y: auto; padding: 24px; }
-        .detail-panel-body::-webkit-scrollbar { width: 4px; }
-        .detail-panel-body::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 2px; }
-        .detail-item { display: flex; flex-direction: column; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--border-color); }
-        .detail-item:last-child { border-bottom: none; }
-        .detail-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500; }
-        .detail-value { font-size: 15px; color: var(--text-primary); line-height: 1.5; word-break: break-word; }
-        .detail-value a { color: var(--accent-color); text-decoration: none; }
-        .detail-value a:hover { text-decoration: underline; }
-        @media (max-width: 1200px) { .grid { grid-template-columns: repeat(5, 1fr); } }
-        @media (max-width: 900px) { .grid { grid-template-columns: repeat(3, 1fr); } .navbar { left: 52px; min-width: 160px; padding: 12px 14px; top: 10px; } .nav-toggle { font-size: 18px; padding: 5px 10px; top: 10px; left: 10px; } .pagination { padding: 6px 12px; gap: 6px; bottom: 12px; } .pagination button { font-size: 12px; padding: 4px 10px; } .pagination .page-info { font-size: 12px; } .pagination .goto-box input { width: 40px; font-size: 12px; } }
-        @media (max-width: 500px) { .app { height: auto; min-height: 100vh; overflow-y: auto; } .grid { grid-template-columns: repeat(2, 1fr); gap: 0; height: auto; overflow-y: visible; padding: 0; padding-bottom: 80px; align-content: start; } .card { aspect-ratio: 16 / 10; border-radius: 0; } .navbar { left: 48px; min-width: 140px; padding: 10px 12px; top: 8px; } .navbar .logo { font-size: 14px; } .navbar .search-box input { font-size: 12px; padding: 4px 8px; } .navbar .nav-actions a, .navbar .nav-actions button { font-size: 12px; padding: 4px 8px; } #themeToggle { width: 28px; height: 28px; font-size: 13px; } .nav-toggle { font-size: 16px; padding: 4px 8px; top: 8px; left: 8px; } .pagination { flex-wrap: wrap; justify-content: center; padding: 6px 10px; gap: 4px; max-width: 98vw; bottom: 8px; } .pagination button { font-size: 11px; padding: 3px 8px; } .pagination .page-info { font-size: 11px; } .pagination .total-info { font-size: 10px; } .pagination .goto-box input { width: 34px; font-size: 11px; padding: 2px 4px; } .pagination .goto-box .goto-btn { font-size: 11px; padding: 2px 8px; } .overlay .arrow { width: 50px; font-size: 22px; } .overlay .action-buttons { top: 12px; right: 12px; gap: 4px; flex-wrap: wrap; justify-content: flex-end; } .overlay .action-buttons button, .overlay .action-buttons a { font-size: 11px; padding: 4px 10px; } .overlay .action-buttons .btn-close { padding: 4px 10px; font-size: 14px; } .overlay .meta { font-size: 13px; bottom: 30px; max-width: 90%; } .overlay .meta .date { font-size: 11px; } .detail-panel { width: 100%; max-width: 100vw; right: -100vw; } .detail-panel.open { right: 0; } .detail-panel-header { padding: 16px 20px; } .detail-panel-header h2 { font-size: 16px; } .detail-panel-body { padding: 16px 20px; } .detail-item { padding: 12px 0; } .detail-value { font-size: 14px; } }
-        @media (pointer: coarse) { .overlay .arrow { width: 60px; color: rgba(255,255,255,0.25); } }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            overflow: hidden;
+            transition: background 0.3s ease, color 0.3s ease;
+            color: var(--text-primary);
+        }
+
+        /* ===== 进度条 ===== */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2.5px;
+            background: var(--progress-bar);
+            width: 0%;
+            z-index: 9999;
+            transition: width 0.3s ease;
+            box-shadow: 0 0 12px rgba(79, 195, 247, 0.4);
+        }
+
+        /* ===== ☰ 按钮 ===== */
+        .nav-toggle {
+            position: fixed;
+            top: 12px;
+            left: 12px;
+            z-index: 1001;
+            background: var(--nav-bg);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 20px;
+            padding: 6px 12px;
+            cursor: pointer;
+            transition: 0.2s;
+            line-height: 1;
+        }
+
+        .nav-toggle:hover {
+            background: var(--accent-hover);
+            border-color: rgba(79, 195, 247, 0.2);
+        }
+
+        /* ===== 导航栏 ===== */
+        .navbar {
+            position: fixed;
+            top: 12px;
+            left: 56px;
+            z-index: 1000;
+            background: var(--nav-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 14px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            min-width: 200px;
+            opacity: 0;
+            transform: translateY(-10px) scale(0.95);
+            transition: opacity 0.25s ease, transform 0.25s ease;
+            pointer-events: none;
+            box-shadow: 0 8px 32px var(--shadow-color);
+            max-width: 90vw;
+        }
+
+        .navbar.open {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        .navbar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .navbar .logo {
+            color: var(--text-primary);
+            font-size: 17px;
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .navbar .logo img {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+        }
+
+        .navbar .logo span {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .navbar .badge {
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+
+        .navbar .badge span {
+            color: var(--text-muted);
+        }
+
+        .navbar .search-box {
+            display: flex;
+            gap: 6px;
+            width: 100%;
+        }
+
+        .navbar .search-box input {
+            flex: 1;
+            background: var(--input-bg);
+            border: 1px solid var(--input-border);
+            border-radius: 6px;
+            padding: 5px 10px;
+            color: var(--text-primary);
+            font-size: 13px;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .navbar .search-box input:focus {
+            border-color: var(--accent-color);
+            background: var(--input-bg);
+        }
+
+        .navbar .search-box input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .navbar .search-box .search-btn {
+            background: var(--accent-hover);
+            border: none;
+            color: var(--accent-color);
+            padding: 5px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: 0.2s;
+        }
+
+        .navbar .search-box .search-btn:hover {
+            background: rgba(79, 195, 247, 0.25);
+            color: var(--text-primary);
+        }
+
+        .navbar .nav-actions {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .navbar .nav-actions a,
+        .navbar .nav-actions button {
+            background: var(--input-bg);
+            border: none;
+            color: var(--text-secondary);
+            padding: 5px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .navbar .nav-actions a:hover,
+        .navbar .nav-actions button:hover {
+            background: var(--btn-hover);
+            color: var(--text-primary);
+        }
+
+        .navbar .nav-actions a i,
+        .navbar .nav-actions button i {
+            font-size: 14px;
+        }
+
+        /* ===== 主题切换按钮特殊样式 ===== */
+        #themeToggle {
+            background: var(--accent-hover);
+            color: var(--accent-color);
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #themeToggle:hover {
+            background: rgba(79, 195, 247, 0.3);
+            color: var(--text-primary);
+        }
+
+        /* ===== 应用容器 ===== */
+        .app {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        /* ===== 网格 ===== */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+            flex: 1;
+            align-content: start;
+            overflow-y: auto;
+            padding: 4px;
+            padding-bottom: 70px;
+            scroll-behavior: smooth;
+            min-height: 0;
+        }
+
+        .grid::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .grid::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .grid::-webkit-scrollbar-thumb {
+            background: var(--scrollbar-thumb);
+            border-radius: 3px;
+        }
+
+        .grid::-webkit-scrollbar-thumb:hover {
+            background: var(--scrollbar-thumb-hover);
+        }
+
+        /* ===== 卡片 ===== */
+        .card {
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            background: var(--card-bg);
+            aspect-ratio: 16 / 9;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
+        }
+
+        .card img.loaded {
+            opacity: 1;
+        }
+
+        /* ★★★ 占位图（低分辨率背景，仿 bing.ioliu.cn） ★★★ */
+        .card .placeholder-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            filter: blur(12px) brightness(0.7);
+            transform: scale(1.04);
+            transition: opacity 0.6s ease;
+            z-index: 1;
+        }
+
+        .card .placeholder-bg.hidden {
+            opacity: 0;
+        }
+
+        .card .info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 3;
+            padding: 16px 12px 12px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+            pointer-events: none;
+        }
+
+        .card:hover .info {
+            opacity: 1;
+        }
+
+        .card .info .date {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .card .info .title {
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card .info .copyright {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* ===== 分页控制栏 ===== */
+        .pagination {
+            position: fixed;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 16px;
+            background: var(--pagination-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px var(--shadow-color);
+            z-index: 100;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 95vw;
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        .pagination button {
+            background: var(--input-bg);
+            border: none;
+            color: var(--text-secondary);
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: 0.2s;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .pagination button:hover:not(:disabled) {
+            background: var(--accent-hover);
+            color: var(--accent-color);
+        }
+
+        .pagination button:disabled {
+            opacity: 0.2;
+            cursor: not-allowed;
+        }
+
+        .pagination button i {
+            font-size: 14px;
+        }
+
+        .pagination .page-info {
+            color: var(--text-secondary);
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .pagination .total-info {
+            color: var(--text-muted);
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .pagination .goto-box {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .pagination .goto-box input {
+            width: 48px;
+            background: var(--input-bg);
+            border: 1px solid var(--input-border);
+            border-radius: 4px;
+            padding: 4px 6px;
+            color: var(--text-primary);
+            font-size: 13px;
+            text-align: center;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .pagination .goto-box input:focus {
+            border-color: var(--accent-color);
+        }
+
+        .pagination .goto-box input::-webkit-outer-spin-button,
+        .pagination .goto-box input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .pagination .goto-box input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        .pagination .goto-box .goto-btn {
+            background: var(--accent-hover);
+            border: none;
+            color: var(--accent-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .pagination .goto-box .goto-btn:hover {
+            background: rgba(79, 195, 247, 0.3);
+            color: var(--text-primary);
+        }
+
+        .empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--text-secondary);
+        }
+
+        .empty .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        /* ============================================================
+           全屏预览遮罩
+           ============================================================ */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--overlay-bg);
+            z-index: 999;
+            overflow: hidden;
+            user-select: none;
+            transition: background 0.3s ease;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        .overlay .close {
+            position: fixed;
+            top: 16px;
+            right: 24px;
+            color: var(--text-secondary);
+            font-size: 28px;
+            cursor: pointer;
+            z-index: 100;
+            transition: 0.2s;
+            background: transparent;
+            border: none;
+        }
+
+        .overlay .close:hover {
+            color: var(--text-primary);
+        }
+
+        .overlay .action-buttons {
+            position: fixed;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 14px;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .overlay:hover .action-buttons {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .overlay .action-buttons a,
+        .overlay .action-buttons button {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            padding: 5px 16px;
+            border-radius: 6px;
+            transition: 0.2s;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            font-family: inherit;
+            backdrop-filter: blur(4px);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .overlay .action-buttons a:hover,
+        .overlay .action-buttons button:hover {
+            color: var(--text-primary);
+            border-color: var(--border-hover);
+            background: var(--btn-hover);
+        }
+
+        .overlay .action-buttons .btn-download {
+            color: var(--accent-color);
+            border-color: rgba(79, 195, 247, 0.15);
+        }
+
+        .overlay .action-buttons .btn-download:hover {
+            color: var(--text-primary);
+            border-color: var(--accent-color);
+            background: var(--accent-hover);
+        }
+
+        .overlay .image-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: grab;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .overlay .image-container:active {
+            cursor: grabbing;
+        }
+
+        .overlay .preview-image {
+            display: block;
+            max-width: none;
+            max-height: none;
+            pointer-events: auto;
+            transform-origin: center center;
+            transition: none;
+            will-change: transform;
+            width: auto;
+            height: auto;
+            max-width: 95vw;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 4px;
+            box-shadow: 0 20px 60px var(--shadow-color);
+        }
+
+        .overlay .meta {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--text-secondary);
+            font-size: 17px;
+            text-align: center;
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
+            max-width: 90%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border: none;
+            backdrop-filter: none;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.5);
+            word-wrap: break-word;
+            line-height: 1.6;
+        }
+
+        .overlay .preview-image:hover + .meta {
+            opacity: 1;
+        }
+
+        .overlay .meta .date {
+            font-size: 14px;
+            opacity: 0.5;
+            display: block;
+            margin-top: 4px;
+        }
+
+        .overlay .arrow {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 32px;
+            cursor: pointer;
+            padding: 16px 10px;
+            z-index: 50;
+            user-select: none;
+            transition: 0.2s;
+            background: transparent;
+            border: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .overlay:hover .arrow {
+            opacity: 1;
+        }
+
+        .overlay .arrow:hover {
+            color: var(--text-primary);
+        }
+
+        .overlay .arrow-left {
+            left: 8px;
+        }
+
+        .overlay .arrow-right {
+            right: 8px;
+        }
+
+        /* ============================================================
+           响应式
+           ============================================================ */
+        @media (max-width: 1200px) {
+            .grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .navbar {
+                left: 52px;
+                min-width: 160px;
+                padding: 12px 14px;
+                top: 10px;
+            }
+            .nav-toggle {
+                font-size: 18px;
+                padding: 5px 10px;
+                top: 10px;
+                left: 10px;
+            }
+            .pagination {
+                padding: 6px 12px;
+                gap: 6px;
+                bottom: 12px;
+            }
+            .pagination button {
+                font-size: 12px;
+                padding: 4px 10px;
+            }
+            .pagination .page-info {
+                font-size: 12px;
+            }
+            .pagination .goto-box input {
+                width: 40px;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .app {
+                height: auto;
+                min-height: 100vh;
+                overflow-y: auto;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0;
+                height: auto;
+                overflow-y: visible;
+                padding: 0;
+                padding-bottom: 80px;
+                align-content: start;
+            }
+
+            .card {
+                aspect-ratio: 16 / 10;
+                border-radius: 0;
+            }
+
+            .navbar {
+                left: 48px;
+                min-width: 140px;
+                padding: 10px 12px;
+                top: 8px;
+            }
+            .navbar .logo {
+                font-size: 14px;
+            }
+            .navbar .logo img {
+                width: 20px;
+                height: 20px;
+            }
+            .navbar .search-box input {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+            .navbar .search-box .search-btn {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+            .navbar .nav-actions a,
+            .navbar .nav-actions button {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+            #themeToggle {
+                width: 28px;
+                height: 28px;
+                font-size: 13px;
+            }
+            .nav-toggle {
+                font-size: 16px;
+                padding: 4px 8px;
+                top: 8px;
+                left: 8px;
+            }
+            .pagination {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 6px 10px;
+                gap: 4px;
+                max-width: 98vw;
+                bottom: 8px;
+            }
+            .pagination button {
+                font-size: 11px;
+                padding: 3px 8px;
+            }
+            .pagination .page-info {
+                font-size: 11px;
+            }
+            .pagination .total-info {
+                font-size: 10px;
+            }
+            .pagination .goto-box input {
+                width: 34px;
+                font-size: 11px;
+                padding: 2px 4px;
+            }
+            .pagination .goto-box .goto-btn {
+                font-size: 11px;
+                padding: 2px 8px;
+            }
+            .overlay .arrow {
+                font-size: 26px;
+                padding: 8px 4px;
+            }
+            .overlay .arrow-left {
+                left: 2px;
+            }
+            .overlay .arrow-right {
+                right: 2px;
+            }
+            .overlay .close {
+                font-size: 26px;
+                top: 10px;
+                right: 14px;
+            }
+            .overlay .action-buttons {
+                bottom: 60px;
+                gap: 6px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .overlay .action-buttons a,
+            .overlay .action-buttons button {
+                font-size: 11px;
+                padding: 4px 10px;
+            }
+            .overlay .meta {
+                font-size: 14px;
+                bottom: 120px;
+                max-width: 92%;
+            }
+            .overlay .meta .date {
+                font-size: 11px;
+            }
+        }
     </style>
 </head>
 <body>
+
+    <!-- ===== 进度条 ===== -->
     <div id="progress-bar"></div>
-    <button class="nav-toggle" id="navToggle" aria-label="切换导航"><i class="fas fa-bars"></i></button>
+
+    <!-- ===== ☰ 按钮 ===== -->
+    <button class="nav-toggle" id="navToggle" aria-label="切换导航">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- ===== 导航栏 ===== -->
     <div class="navbar" id="navbar">
-        <div class="navbar-header"><div class="logo"><img src="/favicon.ico" alt="Logo" style="width:24px;height:24px;border-radius:4px;" /> Bing <span>Wallpaper</span></div></div>
+        <div class="navbar-header">
+            <div class="logo">
+                <img src="/favicon.ico" alt="Logo" />
+                Bing <span>Wallpaper</span>
+            </div>
+        </div>
         <div class="badge"><i class="fas fa-images"></i> <span id="totalNavCount">0</span> 张</div>
-        <div class="search-box"><input type="text" id="searchInput" placeholder="搜索年份/关键词..." /><button class="search-btn" id="searchBtn"><i class="fas fa-search"></i></button></div>
-        <div class="nav-actions"><button id="homeBtn"><i class="fas fa-home"></i> 首页</button><a href="/api" target="_blank"><i class="fas fa-code"></i> API</a><a href="https://aoso.hangdn.com" target="_blank" rel="noopener"><i class="fas fa-blog"></i> 博客</a><button id="themeToggle"><i class="fas fa-moon"></i></button></div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="搜索年份/关键词..." />
+            <button class="search-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="nav-actions">
+            <button id="homeBtn"><i class="fas fa-home"></i> 首页</button>
+            <a href="/api" target="_blank"><i class="fas fa-code"></i> API</a>
+            <a href="https://aoso.hangdn.com" target="_blank" rel="noopener"><i class="fas fa-blog"></i> 博客</a>
+            <button id="themeToggle"><i class="fas fa-moon"></i></button>
+        </div>
     </div>
-    <div class="app"><div class="grid" id="grid"></div></div>
+
+    <!-- ===== 应用容器 ===== -->
+    <div class="app">
+        <div class="grid" id="grid"></div>
+    </div>
+
+    <!-- ===== 分页控制栏 ===== -->
     <div class="pagination" id="pagination">
         <button id="prevBtn" disabled><i class="fas fa-chevron-left"></i> 上一页</button>
         <span class="page-info" id="pageInfo">第 1 / 1 页</span>
         <span class="total-info" id="totalInfo"><i class="fas fa-images"></i> 共 0 张</span>
         <button id="nextBtn">下一页 <i class="fas fa-chevron-right"></i></button>
-        <div class="goto-box"><input type="number" id="gotoInput" min="1" placeholder="页" /><button class="goto-btn" id="gotoBtn"><i class="fas fa-arrow-right"></i> 跳转</button></div>
+
+        <div class="goto-box">
+            <input type="number" id="gotoInput" min="1" placeholder="页" />
+            <button class="goto-btn" id="gotoBtn"><i class="fas fa-arrow-right"></i> 跳转</button>
+        </div>
     </div>
+
+    <!-- ===== 全屏预览遮罩 ===== -->
     <div class="overlay" id="overlay">
-        <div class="image-container" id="imageContainer"><img class="preview-image" id="previewImg" src="" alt="预览" /></div>
+        <button class="close" id="closeBtn"><i class="fas fa-times"></i></button>
         <button class="arrow arrow-left" id="prevPreviewBtn"><i class="fas fa-chevron-left"></i></button>
         <button class="arrow arrow-right" id="nextPreviewBtn"><i class="fas fa-chevron-right"></i></button>
-        <div class="action-buttons">
-            <button class="btn-download" id="downloadBtn"><i class="fas fa-download"></i> 下载</button>
-            <button class="btn-detail" id="detailBtn"><i class="fas fa-circle-info"></i> 详情</button>
-            <button class="btn-close" id="closeBtn"><i class="fas fa-times"></i></button>
-        </div>
-        <div class="meta" id="previewMeta"><span id="previewTitle"></span><span class="date" id="previewDate"></span></div>
-        <div class="detail-overlay" id="detailOverlay"></div>
-        <div class="detail-panel" id="detailPanel">
-            <div class="detail-panel-header"><h2><i class="fas fa-circle-info"></i> 图片详情</h2><button class="detail-panel-close" id="detailPanelClose"><i class="fas fa-times"></i></button></div>
-            <div class="detail-panel-body">
-                <div class="detail-item"><span class="detail-label"><i class="fas fa-calendar-day"></i> 日期</span><span class="detail-value" id="detailDate">-</span></div>
-                <div class="detail-item"><span class="detail-label"><i class="fas fa-tag"></i> 标题</span><span class="detail-value" id="detailTitle">-</span></div>
-                <div class="detail-item"><span class="detail-label"><i class="fas fa-copyright"></i> 版权</span><span class="detail-value" id="detailCopyright">-</span></div>
-                <div class="detail-item"><span class="detail-label"><i class="fas fa-globe"></i> 地区</span><span class="detail-value" id="detailLocale">-</span></div>
-                <div class="detail-item"><span class="detail-label"><i class="fas fa-image"></i> 分辨率</span><span class="detail-value" id="detailResolution">1920 x 1080</span></div>
-                <div class="detail-item" style="border-bottom: none; padding-top: 8px; padding-bottom: 4px;">
-    <span class="detail-value" style="font-size: 14px; color: var(--text-secondary); opacity: 0.6; user-select: none; -webkit-user-select: none;">
-        <i class="fas fa-shield-alt" style="margin-right: 6px; color: var(--accent-color); opacity: 0.4;"></i>本站仅聚合 Bing 官方壁纸链接，图片版权归微软及原作者所有。
-    </span>
-</div>
-                <div class="detail-item"><span class="detail-label"><i class="fas fa-link"></i> 原图链接</span><span class="detail-value"><a href="#" id="detailLink" target="_blank"><i class="fas fa-external-link-alt"></i> 打开原图</a></span></div>
+
+        <div class="image-container" id="imageContainer">
+            <img class="preview-image" id="previewImg" src="" alt="预览" />
+            <div class="meta" id="previewMeta">
+                <span id="previewTitle"></span>
+                <span class="date" id="previewDate"></span>
             </div>
         </div>
+
+        <div class="action-buttons">
+            <a href="#" id="openLinkBtn" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 打开链接</a>
+            <button class="btn-download" id="downloadBtn"><i class="fas fa-download"></i> 下载4K图片</button>
+        </div>
     </div>
+
     <script>
+        // ============================================================
+        // 1. 路径适配
+        // ============================================================
         function getBasePath() {
             const path = window.location.pathname;
-            if (path.endsWith('.html')) { return path.substring(0, path.lastIndexOf('/')); }
+            if (path.endsWith('.html')) {
+                return path.substring(0, path.lastIndexOf('/'));
+            }
             return path.replace(/\/$/, '');
         }
         const BASE_PATH = getBasePath();
 
-        function getImageUrl(url) {
+        function fixImagePath(url) {
             if (!url) return '';
             if (url.startsWith('http://') || url.startsWith('https://')) return url;
-            if (url.startsWith('/')) return BASE_PATH + url;
+            if (url.startsWith('/bing-img/')) return url;
+            if (url.startsWith('/')) {
+                return `${BASE_PATH}${url}`;
+            }
             return url;
         }
 
+        function getImageUrl(url) {
+            if (!url) return '';
+            if (url.startsWith('http://') || url.startsWith('https://')) return url;
+            return fixImagePath(url);
+        }
+
+        // ★★★ 生成缩略图链接（仿 bing.ioliu.cn） ★★★
+        function getThumbnailUrl(url, width = 400, height = 225) {
+            if (!url) return '';
+            // 如果是必应 CDN 链接，添加缩放参数
+            if (url.includes('th?id=')) {
+                // 去掉已有的缩放参数，避免重复
+                const baseUrl = url.split('&')[0];
+                return `${baseUrl}&w=${width}&h=${height}`;
+            }
+            // 本地图片或非必应链接，原样返回
+            return url;
+        }
+
+        // ============================================================
+        // 2. 主题切换
+        // ============================================================
         const themeToggle = document.getElementById('themeToggle');
         let currentTheme = localStorage.getItem('theme') || 'dark';
 
@@ -217,34 +1001,58 @@
             currentTheme = theme;
             document.documentElement.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
-            themeToggle.innerHTML = theme === 'dark' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+            themeToggle.innerHTML = theme === 'dark' ?
+                '<i class="fas fa-moon"></i>' :
+                '<i class="fas fa-sun"></i>';
         }
-        themeToggle.addEventListener('click', () => setTheme(currentTheme === 'dark' ? 'light' : 'dark'));
+
+        themeToggle.addEventListener('click', () => {
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
         setTheme(currentTheme);
 
+        // ============================================================
+        // 3. 进度条
+        // ============================================================
         const progressBar = document.getElementById('progress-bar');
 
-        function showProgress() { progressBar.style.width = '30%';
-            setTimeout(() => progressBar.style.width = '60%', 150); }
+        function showProgress() {
+            progressBar.style.width = '30%';
+            setTimeout(() => { progressBar.style.width = '60%'; }, 150);
+        }
 
-        function hideProgress() { progressBar.style.width = '100%';
-            setTimeout(() => progressBar.style.width = '0%', 350); }
+        function hideProgress() {
+            progressBar.style.width = '100%';
+            setTimeout(() => { progressBar.style.width = '0%'; }, 350);
+        }
 
+        // ============================================================
+        // 4. 导航栏
+        // ============================================================
         const navToggle = document.getElementById('navToggle');
         const navbar = document.getElementById('navbar');
         let navOpen = false;
-        navToggle.addEventListener('click', (e) => { e.stopPropagation();
-            navOpen = !navOpen;
+
+        function toggleNav(open) {
+            navOpen = open !== undefined ? open : !navOpen;
             navbar.classList.toggle('open', navOpen);
-            navToggle.innerHTML = navOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>'; });
+            navToggle.innerHTML = navOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        }
+
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleNav();
+        });
+
         document.addEventListener('click', (e) => {
             if (navOpen && !navbar.contains(e.target) && e.target !== navToggle) {
-                navOpen = false;
-                navbar.classList.remove('open');
-                navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                toggleNav(false);
             }
         });
 
+        // ============================================================
+        // 5. 分页数据加载
+        // ============================================================
         let allData = [];
         let filteredData = [];
         let currentPage = 1;
@@ -260,11 +1068,8 @@
         const previewTitle = document.getElementById('previewTitle');
         const previewDate = document.getElementById('previewDate');
         const totalNavCount = document.getElementById('totalNavCount');
+        const openLinkBtn = document.getElementById('openLinkBtn');
         const downloadBtn = document.getElementById('downloadBtn');
-        const detailBtn = document.getElementById('detailBtn');
-        const detailPanel = document.getElementById('detailPanel');
-        const detailPanelClose = document.getElementById('detailPanelClose');
-        const detailOverlay = document.getElementById('detailOverlay');
         const searchInput = document.getElementById('searchInput');
         const searchBtn = document.getElementById('searchBtn');
         const homeBtn = document.getElementById('homeBtn');
@@ -274,80 +1079,129 @@
         const totalInfo = document.getElementById('totalInfo');
         const gotoInput = document.getElementById('gotoInput');
         const gotoBtn = document.getElementById('gotoBtn');
-        const closeBtn = document.getElementById('closeBtn');
-        const detailLink = document.getElementById('detailLink');
 
-        let scale = 1,
-            minScale = 0.3,
-            maxScale = 5,
-            translateX = 0,
-            translateY = 0,
-            isDragging = false,
-            startX = 0,
-            startY = 0,
-            lastTranslateX = 0,
-            lastTranslateY = 0;
+        // 缩放状态
+        let scale = 1;
+        let minScale = 0.3;
+        let maxScale = 5;
+        let translateX = 0;
+        let translateY = 0;
+        let isDragging = false;
+        let startX = 0;
+        let startY = 0;
+        let lastTranslateX = 0;
+        let lastTranslateY = 0;
 
+        // ============================================================
+        // 5.1 加载数据
+        // ============================================================
         async function loadData() {
             showProgress();
             try {
-                const url = BASE_PATH + '/data/wallpapers.json';
-                const res = await fetch(url);
-                if (!res.ok) throw new Error('HTTP ' + res.status);
-                allData = await res.json();
-                if (!Array.isArray(allData) || allData.length === 0) { showEmpty();
-                    hideProgress(); return; }
-                allData.sort((a, b) => b.date.localeCompare(a.date));
-                filteredData = [];
-                totalNavCount.textContent = allData.length;
-                totalInfo.innerHTML = '<i class="fas fa-images"></i> 共 ' + allData.length + ' 张';
+                // ★★★ 优先加载分页 JSON（只加载第一页） ★★★
+                const pageUrl = `${BASE_PATH}/data/pages/page-1.json`;
+                const res = await fetch(pageUrl);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const pageData = await res.json();
+                allData = pageData.items || [];
+                totalPages = pageData.totalPages || 1;
+                const totalCount = pageData.total || allData.length;
+                totalNavCount.textContent = totalCount;
+                totalInfo.innerHTML = `<i class="fas fa-images"></i> 共 ${totalCount} 张`;
                 currentPage = 1;
                 renderPage(1);
                 hideProgress();
             } catch (err) {
-                console.error('加载失败:', err);
-                showEmpty();
-                hideProgress();
+                console.warn('分页加载失败，降级加载完整 wallpapers.json', err);
+                // ★★★ 降级方案：加载完整 wallpapers.json ★★★
+                try {
+                    const url = `${BASE_PATH}/data/wallpapers.json`;
+                    const res = await fetch(url);
+                    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                    allData = await res.json();
+                    if (!Array.isArray(allData) || allData.length === 0) {
+                        showEmpty();
+                        hideProgress();
+                        return;
+                    }
+                    allData.sort((a, b) => b.date.localeCompare(a.date));
+                    filteredData = [];
+                    totalNavCount.textContent = allData.length;
+                    totalInfo.innerHTML = `<i class="fas fa-images"></i> 共 ${allData.length} 张`;
+                    currentPage = 1;
+                    renderPage(1);
+                    hideProgress();
+                } catch (e) {
+                    console.error('加载失败:', e);
+                    showEmpty();
+                    hideProgress();
+                }
             }
         }
 
+        // ============================================================
+        // 5.2 渲染页面
+        // ============================================================
         function renderPage(page) {
-            var data = filteredData.length > 0 ? filteredData : allData;
+            const data = filteredData.length > 0 ? filteredData : allData;
             totalPages = Math.ceil(data.length / PAGE_SIZE);
+
             if (page < 1) page = 1;
             if (page > totalPages) page = totalPages;
-            if (totalPages === 0) { showEmpty(); return; }
+            if (totalPages === 0) {
+                showEmpty();
+                return;
+            }
+
             currentPage = page;
-            var start = (page - 1) * PAGE_SIZE;
-            var end = Math.min(start + PAGE_SIZE, data.length);
-            var items = data.slice(start, end);
+            const start = (page - 1) * PAGE_SIZE;
+            const end = Math.min(start + PAGE_SIZE, data.length);
+            const items = data.slice(start, end);
+
             grid.innerHTML = '';
-            if (items.length === 0) { showEmpty(); return; }
-            items.forEach(function(item) {
-                var card = document.createElement('div');
+
+            if (items.length === 0) {
+                showEmpty();
+                return;
+            }
+
+            items.forEach((item, index) => {
+                const realIndex = start + index;
+                const card = document.createElement('div');
                 card.className = 'card';
-                var imgSrc = getImageUrl(item.webp || item.jpg || '');
-                var fallback = getImageUrl(item.jpg || '');
-                var placeholderSrc = imgSrc;
-                if (imgSrc.indexOf('th?id=') !== -1) {
-                    placeholderSrc = imgSrc.indexOf('?') !== -1 ? imgSrc + '&w=200' : imgSrc + '?w=200';
-                }
-                card.innerHTML =
-                    '<div class="placeholder-bg" style="background-image: url(' + placeholderSrc + ');"></div><img src="' +
-                    imgSrc + '" alt="' + (item.copyright || item.date) + '" loading="lazy" /><div class="info"><div class="date">' +
-                    item.date + '</div><div class="title">' + (item.copyright || '无标题') + '</div><div class="copyright">' + (
-                        item.copyright || '') + '</div></div>';
-                var img = card.querySelector('img');
-                var placeholderBg = card.querySelector('.placeholder-bg');
-                img.addEventListener('load', function() {
+
+                const imgSrc = getImageUrl(item.webp || item.jpg || '');
+                const fallback = getImageUrl(item.jpg || '');
+
+                // ★★★ 占位图：用缩略图（400x225） ★★★
+                const placeholderSrc = getThumbnailUrl(imgSrc, 400, 225);
+
+                card.innerHTML = `
+                    <div class="placeholder-bg" style="background-image: url('${placeholderSrc}');"></div>
+                    <img src="${imgSrc}" 
+                         alt="${item.copyright || item.date}" 
+                         loading="lazy" />
+                    <div class="info">
+                        <div class="date">${item.date}</div>
+                        <div class="title">${item.copyright || '无标题'}</div>
+                        <div class="copyright">${item.copyright || ''}</div>
+                    </div>
+                `;
+
+                const img = card.querySelector('img');
+                const placeholderBg = card.querySelector('.placeholder-bg');
+
+                img.addEventListener('load', () => {
                     img.classList.add('loaded');
                     placeholderBg.classList.add('hidden');
                 });
+
                 if (img.complete) {
                     img.classList.add('loaded');
                     placeholderBg.classList.add('hidden');
                 }
-                img.addEventListener('error', function() {
+
+                img.addEventListener('error', () => {
                     if (fallback && fallback !== imgSrc) {
                         img.src = fallback;
                     } else {
@@ -355,54 +1209,77 @@
                         placeholderBg.classList.add('hidden');
                     }
                 });
-                card.addEventListener('click', function() {
-                    var targetIndex = -1;
-                    for (var i = 0; i < allData.length; i++) {
-                        if (allData[i].date === item.date) {
-                            targetIndex = i;
-                            break;
-                        }
-                    }
-                    if (targetIndex === -1) {
-                        console.warn('图片不在数据列表中');
-                        return;
+
+                card.addEventListener('click', () => {
+                    let targetIndex = realIndex;
+                    if (allData.length > 0) {
+                        const found = allData.findIndex(d => d.date === item.date);
+                        if (found >= 0) targetIndex = found;
                     }
                     openPreview(targetIndex);
                 });
+
                 grid.appendChild(card);
             });
+
             prevBtn.disabled = currentPage <= 1;
             nextBtn.disabled = currentPage >= totalPages;
-            pageInfo.textContent = '第 ' + currentPage + ' / ' + totalPages + ' 页';
+            pageInfo.textContent = `第 ${currentPage} / ${totalPages} 页`;
             gotoInput.max = totalPages;
-            gotoInput.placeholder = '1-' + totalPages;
+            gotoInput.placeholder = `1-${totalPages}`;
+
             grid.scrollTop = 0;
         }
 
-        prevBtn.addEventListener('click', function() { if (currentPage > 1) renderPage(currentPage - 1); });
-        nextBtn.addEventListener('click', function() { if (currentPage < totalPages) renderPage(currentPage + 1); });
-        gotoBtn.addEventListener('click', function() {
-            var val = parseInt(gotoInput.value);
-            if (!isNaN(val) && val >= 1 && val <= totalPages) renderPage(val);
+        // ============================================================
+        // 5.3 分页事件
+        // ============================================================
+        prevBtn.addEventListener('click', () => {
+            if (currentPage > 1) renderPage(currentPage - 1);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentPage < totalPages) renderPage(currentPage + 1);
+        });
+
+        gotoBtn.addEventListener('click', () => {
+            const val = parseInt(gotoInput.value);
+            if (!isNaN(val) && val >= 1 && val <= totalPages) {
+                renderPage(val);
+            }
             gotoInput.value = '';
         });
-        gotoInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') gotoBtn.click(); });
 
+        gotoInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') gotoBtn.click();
+        });
+
+        // ============================================================
+        // 5.4 搜索
+        // ============================================================
         function doSearch() {
-            var keyword = searchInput.value.trim().toLowerCase();
-            if (!keyword) { filteredData = [];
-                renderPage(1); return; }
-            filteredData = allData.filter(function(item) {
-                var copyright = (item.copyright || '').toLowerCase();
-                var date = item.date || '';
-                var dateClean = date.replace(/-/g, '');
-                return copyright.indexOf(keyword) !== -1 || date.indexOf(keyword) !== -1 || dateClean.indexOf(keyword) !==
-                    -1;
+            const keyword = searchInput.value.trim().toLowerCase();
+            if (!keyword) {
+                filteredData = [];
+                renderPage(1);
+                return;
+            }
+
+            filteredData = allData.filter(item => {
+                const copyright = (item.copyright || '').toLowerCase();
+                const date = item.date || '';
+                const dateClean = date.replace(/-/g, '');
+                const dateMatch = date.includes(keyword) || dateClean.includes(keyword);
+                return copyright.includes(keyword) || dateMatch;
             });
+
             if (filteredData.length === 0) {
-                grid.innerHTML =
-                    '<div class="empty"><div class="icon"><i class="fas fa-search"></i></div><div>没有匹配"' + keyword +
-                    '"的壁纸</div></div>';
+                grid.innerHTML = `
+                    <div class="empty">
+                        <div class="icon"><i class="fas fa-search"></i></div>
+                        <div>没有匹配"${keyword}"的壁纸</div>
+                    </div>
+                `;
                 prevBtn.disabled = true;
                 nextBtn.disabled = true;
                 pageInfo.textContent = '第 0 / 0 页';
@@ -410,16 +1287,32 @@
             }
             renderPage(1);
         }
+
         searchBtn.addEventListener('click', doSearch);
-        searchInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') doSearch(); });
-        homeBtn.addEventListener('click', function() { searchInput.value = '';
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') doSearch();
+        });
+
+        // ============================================================
+        // 5.5 首页
+        // ============================================================
+        homeBtn.addEventListener('click', () => {
+            searchInput.value = '';
             filteredData = [];
             renderPage(1);
-            toggleNav(false); });
+            toggleNav(false);
+        });
 
+        // ============================================================
+        // 5.6 空状态
+        // ============================================================
         function showEmpty() {
-            grid.innerHTML =
-                '<div class="empty"><div class="icon"><i class="fas fa-image"></i></div><div>暂无壁纸数据</div></div>';
+            grid.innerHTML = `
+                <div class="empty">
+                    <div class="icon"><i class="fas fa-image"></i></div>
+                    <div>暂无壁纸数据</div>
+                </div>
+            `;
             prevBtn.disabled = true;
             nextBtn.disabled = true;
             pageInfo.textContent = '第 0 / 0 页';
@@ -427,11 +1320,11 @@
             totalNavCount.textContent = '0';
         }
 
+        // ============================================================
+        // 6. 全屏预览
+        // ============================================================
         function openPreview(index) {
-            if (!allData || allData.length === 0) {
-                console.warn('数据未加载，请刷新页面重试');
-                return;
-            }
+            if (allData.length === 0) return;
             if (index < 0) index = 0;
             if (index >= allData.length) index = allData.length - 1;
             currentPreviewIndex = index;
@@ -440,6 +1333,7 @@
             showPreview(currentPreviewIndex);
             overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
+            updateActionButtons();
         }
 
         function showPreview(index) {
@@ -448,75 +1342,69 @@
             if (index >= allData.length) index = 0;
             currentPreviewIndex = index;
             currentPreviewItem = allData[currentPreviewIndex];
-            var imgSrc = getImageUrl(currentPreviewItem.jpg || currentPreviewItem.webp || '');
+
+            const imgSrc = getImageUrl(currentPreviewItem.jpg || currentPreviewItem.webp || '');
             previewImg.src = imgSrc;
             previewTitle.textContent = currentPreviewItem.copyright || '';
             previewDate.textContent = currentPreviewItem.date || '';
-            if (detailLink) {
-                detailLink.href = imgSrc;
-            }
+            updateActionButtons();
             resetZoom();
+        }
+
+        function updateActionButtons() {
+            if (!currentPreviewItem) return;
+            const url = getImageUrl(currentPreviewItem.jpg || currentPreviewItem.webp || '');
+            openLinkBtn.href = url;
+            downloadBtn.onclick = function(e) {
+                e.preventDefault();
+                downloadImage(url);
+            };
+        }
+
+        async function downloadImage(url) {
+            try {
+                const response = await fetch(url);
+                const blob = await response.blob();
+                const blobUrl = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = blobUrl;
+                const fileName = url.split('/').pop().split('?')[0] || 'wallpaper.jpg';
+                a.download = fileName;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(blobUrl);
+            } catch (err) {
+                window.open(url, '_blank');
+            }
         }
 
         function closePreview() {
             overlay.classList.remove('active');
             document.body.style.overflow = 'auto';
-            closeDetailPanel();
         }
 
-        function openDetailPanel() {
-            if (!currentPreviewItem) return;
-            document.getElementById('detailDate').textContent = currentPreviewItem.date || '-';
-            document.getElementById('detailTitle').textContent = currentPreviewItem.copyright || currentPreviewItem.title ||
-                '-';
-            document.getElementById('detailCopyright').textContent = currentPreviewItem.copyright || '-';
-            document.getElementById('detailLocale').textContent = currentPreviewItem.locale || 'zh-CN';
-            var imgSrc = getImageUrl(currentPreviewItem.jpg || currentPreviewItem.webp || '');
-            if (detailLink) {
-                detailLink.href = imgSrc;
-            }
-            document.getElementById('detailResolution').textContent = '1920 x 1080';
-            detailPanel.classList.add('open');
-            detailOverlay.classList.add('active');
-        }
-
-        function closeDetailPanel() {
-            detailPanel.classList.remove('open');
-            detailOverlay.classList.remove('active');
-        }
-
-        detailBtn.addEventListener('click', openDetailPanel);
-        detailPanelClose.addEventListener('click', closeDetailPanel);
-        detailOverlay.addEventListener('click', closeDetailPanel);
-
-        downloadBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            var url = getImageUrl(currentPreviewItem.jpg || currentPreviewItem.webp || '');
-            if (!url) return;
-            var a = document.createElement('a');
-            a.href = url;
-            a.download = url.split('/').pop().split('?')[0] || 'wallpaper.jpg';
-            a.target = '_blank';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        });
-
+        // ===== 缩放 =====
         function updateTransform() {
-            previewImg.style.transform = 'translate(' + translateX + 'px, ' + translateY + 'px) scale(' + scale + ')';
+            previewImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
         }
 
         function resetZoom() {
             scale = 1;
             translateX = 0;
             translateY = 0;
+            previewImg.style.width = 'auto';
+            previewImg.style.height = 'auto';
+            previewImg.style.maxWidth = '95vw';
+            previewImg.style.maxHeight = '85vh';
             updateTransform();
         }
 
+        // ===== 拖拽 =====
         function startDrag(e) {
             if (scale <= 1) return;
             isDragging = true;
-            var pos = e.type === 'mousedown' ? e : e.touches[0];
+            const pos = e.type === 'mousedown' ? e : e.touches[0];
             startX = pos.clientX;
             startY = pos.clientY;
             lastTranslateX = translateX;
@@ -527,9 +1415,11 @@
         function moveDrag(e) {
             if (!isDragging) return;
             e.preventDefault();
-            var pos = e.type === 'mousemove' ? e : e.touches[0];
-            translateX = lastTranslateX + pos.clientX - startX;
-            translateY = lastTranslateY + pos.clientY - startY;
+            const pos = e.type === 'mousemove' ? e : e.touches[0];
+            const dx = pos.clientX - startX;
+            const dy = pos.clientY - startY;
+            translateX = lastTranslateX + dx;
+            translateY = lastTranslateY + dy;
             updateTransform();
         }
 
@@ -540,19 +1430,30 @@
 
         function wheelZoom(e) {
             e.preventDefault();
-            var delta = e.deltaY > 0 ? -0.15 : 0.15;
-            scale = Math.min(Math.max(scale + delta, minScale), maxScale);
-            if (scale <= 1) { translateX = 0;
-                translateY = 0; }
+            const delta = e.deltaY > 0 ? -0.15 : 0.15;
+            const newScale = Math.min(Math.max(scale + delta, minScale), maxScale);
+            if (newScale > 1) {
+                previewImg.style.maxWidth = 'none';
+                previewImg.style.maxHeight = 'none';
+            } else {
+                previewImg.style.maxWidth = '95vw';
+                previewImg.style.maxHeight = '85vh';
+                translateX = 0;
+                translateY = 0;
+            }
+            scale = newScale;
             updateTransform();
         }
 
-        closeBtn.addEventListener('click', closePreview);
-        document.getElementById('prevPreviewBtn').addEventListener('click', function(e) {
+        // ============================================================
+        // 7. 事件绑定
+        // ============================================================
+        document.getElementById('closeBtn').addEventListener('click', closePreview);
+        document.getElementById('prevPreviewBtn').addEventListener('click', (e) => {
             e.stopPropagation();
             showPreview(currentPreviewIndex - 1);
         });
-        document.getElementById('nextPreviewBtn').addEventListener('click', function(e) {
+        document.getElementById('nextPreviewBtn').addEventListener('click', (e) => {
             e.stopPropagation();
             showPreview(currentPreviewIndex + 1);
         });
@@ -560,26 +1461,29 @@
         imageContainer.addEventListener('mousedown', startDrag);
         document.addEventListener('mousemove', moveDrag);
         document.addEventListener('mouseup', endDrag);
+
         imageContainer.addEventListener('touchstart', startDrag, { passive: true });
         document.addEventListener('touchmove', moveDrag, { passive: false });
         document.addEventListener('touchend', endDrag, { passive: true });
+
         imageContainer.addEventListener('wheel', wheelZoom, { passive: false });
 
-        overlay.addEventListener('click', function(e) {
+        overlay.addEventListener('click', (e) => {
             if (e.target === overlay) closePreview();
         });
 
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', (e) => {
             if (!overlay.classList.contains('active')) return;
             if (e.key === 'Escape') closePreview();
             if (e.key === 'ArrowLeft') showPreview(currentPreviewIndex - 1);
             if (e.key === 'ArrowRight') showPreview(currentPreviewIndex + 1);
-            if (e.key === 'Escape' && detailPanel.classList.contains('open')) {
-                closeDetailPanel();
-            }
         });
 
+        // ============================================================
+        // 8. 启动
+        // ============================================================
         loadData();
     </script>
+
 </body>
 </html>
