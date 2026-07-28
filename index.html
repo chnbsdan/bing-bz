@@ -684,98 +684,112 @@
         }
 
         @media (max-width: 500px) {
-            .grid {
-                grid-template-columns: repeat(2, 1fr);
-                padding-bottom: 80px;
-            }
-            .card {
-                aspect-ratio: 16 / 10;
-            }
-            .navbar {
-                left: 48px;
-                min-width: 140px;
-                padding: 10px 12px;
-                top: 8px;
-            }
-            .navbar .logo {
-                font-size: 14px;
-            }
-            .navbar .logo .icon {
-                font-size: 16px;
-            }
-            .navbar .search-box input {
-                font-size: 12px;
-                padding: 4px 8px;
-            }
-            .navbar .search-box .search-btn {
-                font-size: 12px;
-                padding: 4px 8px;
-            }
-            .navbar .nav-actions a,
-            .navbar .nav-actions button {
-                font-size: 12px;
-                padding: 4px 8px;
-            }
-            .nav-toggle {
-                font-size: 16px;
-                padding: 4px 8px;
-                top: 8px;
-                left: 8px;
-            }
-            .pagination {
-                flex-wrap: wrap;
-                justify-content: center;
-                padding: 6px 10px;
-                gap: 4px;
-                max-width: 98vw;
-                bottom: 8px;
-            }
-            .pagination button {
-                font-size: 11px;
-                padding: 3px 8px;
-            }
-            .pagination .page-info {
-                font-size: 11px;
-            }
-            .pagination .total-info {
-                font-size: 10px;
-            }
-            .pagination .goto-box input {
-                width: 34px;
-                font-size: 11px;
-                padding: 2px 4px;
-            }
-            .pagination .goto-box .goto-btn {
-                font-size: 11px;
-                padding: 2px 8px;
-            }
-            .overlay .arrow {
-                font-size: 26px;
-                padding: 8px 4px;
-            }
-            .overlay .arrow-left {
-                left: 2px;
-            }
-            .overlay .arrow-right {
-                right: 2px;
-            }
-            .overlay .close {
-                font-size: 26px;
-                top: 10px;
-                right: 14px;
-            }
-            .overlay .action-buttons {
-                bottom: 60px;
-                gap: 6px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .overlay .action-buttons a,
-            .overlay .action-buttons button {
-                font-size: 11px;
-                padding: 4px 10px;
-            }
-            .overlay .meta {
+    .app {
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+        height: auto;
+        overflow-y: visible;
+        padding: 0;
+        padding-bottom: 80px;
+        align-content: start;
+    }
+
+    .card {
+        aspect-ratio: 16 / 10;
+        border-radius: 0;
+    }
+
+    .navbar {
+        left: 48px;
+        min-width: 140px;
+        padding: 10px 12px;
+        top: 8px;
+    }
+    .navbar .logo {
+        font-size: 14px;
+    }
+    .navbar .logo .icon {
+        font-size: 16px;
+    }
+    .navbar .search-box input {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+    .navbar .search-box .search-btn {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+    .navbar .nav-actions a,
+    .navbar .nav-actions button {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+    .nav-toggle {
+        font-size: 16px;
+        padding: 4px 8px;
+        top: 8px;
+        left: 8px;
+    }
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 6px 10px;
+        gap: 4px;
+        max-width: 98vw;
+        bottom: 8px;
+    }
+    .pagination button {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+    .pagination .page-info {
+        font-size: 11px;
+    }
+    .pagination .total-info {
+        font-size: 10px;
+    }
+    .pagination .goto-box input {
+        width: 34px;
+        font-size: 11px;
+        padding: 2px 4px;
+    }
+    .pagination .goto-box .goto-btn {
+        font-size: 11px;
+        padding: 2px 8px;
+    }
+    .overlay .arrow {
+        font-size: 26px;
+        padding: 8px 4px;
+    }
+    .overlay .arrow-left {
+        left: 2px;
+    }
+    .overlay .arrow-right {
+        right: 2px;
+    }
+    .overlay .close {
+        font-size: 26px;
+        top: 10px;
+        right: 14px;
+    }
+    .overlay .action-buttons {
+        bottom: 60px;
+        gap: 6px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .overlay .action-buttons a,
+    .overlay .action-buttons button {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+    .overlay .meta {
         font-size: 14px;
         bottom: 120px;
         max-width: 92%;
@@ -783,7 +797,7 @@
     .overlay .meta .date {
         font-size: 11px;
     }
-        }
+}
     </style>
 </head>
 <body>
