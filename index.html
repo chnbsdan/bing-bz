@@ -124,30 +124,29 @@
         .overlay .action-buttons .btn-detail:hover { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); }
         .overlay .action-buttons .btn-close { background: rgba(0,0,0,0.3); border-color: transparent; padding: 8px 12px; font-size: 16px; }
         .overlay .action-buttons .btn-close:hover { background: rgba(255,50,50,0.2); color: #ff6b6b; border-color: rgba(255,50,50,0.2); }
-        .overlay .meta { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.7); font-size: 15px; text-align: center; z-index: 50; pointer-events: none; text-shadow: 0 2px 20px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.4); line-height: 1.6; max-width: 80%; user-select: none; -webkit-user-select: none; }
+        .overlay .meta { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.7); font-size: 15px; text-align: center; z-index: 50; pointer-events: none; text-shadow: 0 2px 20px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.4); line-height: 1.6; max-width: 80%; }
         .overlay .meta .date { font-size: 13px; opacity: 0.4; display: block; margin-top: 2px; }
         .detail-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 80; background: rgba(0,0,0,0.3); opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
         .detail-overlay.active { opacity: 1; pointer-events: auto; }
-        .detail-panel { position: fixed; top: 0; right: -420px; width: 400px; max-width: 90vw; height: 100%; background: var(--detail-panel-bg); z-index: 90; box-shadow: -8px 0 40px var(--shadow-color); transition: right 0.35s cubic-bezier(0.4,0,0.2,1); display: flex; flex-direction: column; overflow: hidden; border-left: 1px solid var(--border-color); user-select: none; -webkit-user-select: none; }
+        .detail-panel { position: fixed; top: 0; right: -420px; width: 400px; max-width: 90vw; height: 100%; background: var(--detail-panel-bg); z-index: 90; box-shadow: -8px 0 40px var(--shadow-color); transition: right 0.35s cubic-bezier(0.4,0,0.2,1); display: flex; flex-direction: column; overflow: hidden; border-left: 1px solid var(--border-color); }
         .detail-panel.open { right: 0; }
-        .detail-panel-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; border-bottom: 1px solid var(--border-color); flex-shrink: 0; user-select: none; -webkit-user-select: none; }
-        .detail-panel-header h2 { font-size: 18px; font-weight: 600; color: var(--text-primary); margin: 0; display: flex; align-items: center; gap: 10px; user-select: none; -webkit-user-select: none; }
+        .detail-panel-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; border-bottom: 1px solid var(--border-color); flex-shrink: 0; }
+        .detail-panel-header h2 { font-size: 18px; font-weight: 600; color: var(--text-primary); margin: 0; display: flex; align-items: center; gap: 10px; }
         .detail-panel-header h2 i { color: var(--accent-color); }
-        .detail-panel-close { background: var(--input-bg); border: none; color: var(--text-secondary); width: 36px; height: 36px; border-radius: 8px; cursor: pointer; font-size: 18px; transition: 0.2s; display: flex; align-items: center; justify-content: center; user-select: none; -webkit-user-select: none; }
+        .detail-panel-close { background: var(--input-bg); border: none; color: var(--text-secondary); width: 36px; height: 36px; border-radius: 8px; cursor: pointer; font-size: 18px; transition: 0.2s; display: flex; align-items: center; justify-content: center; }
         .detail-panel-close:hover { background: var(--btn-hover); color: var(--text-primary); }
-        .detail-panel-body { flex: 1; overflow-y: auto; padding: 24px; user-select: none; -webkit-user-select: none; }
+        .detail-panel-body { flex: 1; overflow-y: auto; padding: 24px; }
         .detail-panel-body::-webkit-scrollbar { width: 4px; }
         .detail-panel-body::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 2px; }
-        .detail-item { display: flex; flex-direction: column; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--border-color); user-select: none; -webkit-user-select: none; }
+        .detail-item { display: flex; flex-direction: column; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--border-color); }
         .detail-item:last-child { border-bottom: none; }
-        .detail-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500; user-select: none; -webkit-user-select: none; }
-        .detail-value { font-size: 15px; color: var(--text-primary); line-height: 1.5; word-break: break-word; user-select: none; -webkit-user-select: none; }
-        .detail-value a { color: var(--accent-color); text-decoration: none; user-select: none; -webkit-user-select: none; }
+        .detail-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500; }
+        .detail-value { font-size: 15px; color: var(--text-primary); line-height: 1.5; word-break: break-word; }
+        .detail-value a { color: var(--accent-color); text-decoration: none; }
         .detail-value a:hover { text-decoration: underline; }
-        .site-footer { position: fixed; bottom: 70px; left: 50%; transform: translateX(-50%); color: var(--text-muted); font-size: 11px; text-align: center; z-index: 9999; pointer-events: none; opacity: 0.5; user-select: none; -webkit-user-select: none; width: 100%; max-width: 600px; padding: 0 20px; line-height: 1.4; }
         @media (max-width: 1200px) { .grid { grid-template-columns: repeat(5, 1fr); } }
         @media (max-width: 900px) { .grid { grid-template-columns: repeat(3, 1fr); } .navbar { left: 52px; min-width: 160px; padding: 12px 14px; top: 10px; } .nav-toggle { font-size: 18px; padding: 5px 10px; top: 10px; left: 10px; } .pagination { padding: 6px 12px; gap: 6px; bottom: 12px; } .pagination button { font-size: 12px; padding: 4px 10px; } .pagination .page-info { font-size: 12px; } .pagination .goto-box input { width: 40px; font-size: 12px; } }
-        @media (max-width: 500px) { .app { height: auto; min-height: 100vh; overflow-y: auto; } .grid { grid-template-columns: repeat(2, 1fr); gap: 0; height: auto; overflow-y: visible; padding: 0; padding-bottom: 80px; align-content: start; } .card { aspect-ratio: 16 / 10; border-radius: 0; } .navbar { left: 48px; min-width: 140px; padding: 10px 12px; top: 8px; } .navbar .logo { font-size: 14px; } .navbar .search-box input { font-size: 12px; padding: 4px 8px; } .navbar .nav-actions a, .navbar .nav-actions button { font-size: 12px; padding: 4px 8px; } #themeToggle { width: 28px; height: 28px; font-size: 13px; } .nav-toggle { font-size: 16px; padding: 4px 8px; top: 8px; left: 8px; } .pagination { flex-wrap: wrap; justify-content: center; padding: 6px 10px; gap: 4px; max-width: 98vw; bottom: 8px; } .pagination button { font-size: 11px; padding: 3px 8px; } .pagination .page-info { font-size: 11px; } .pagination .total-info { font-size: 10px; } .pagination .goto-box input { width: 34px; font-size: 11px; padding: 2px 4px; } .pagination .goto-box .goto-btn { font-size: 11px; padding: 2px 8px; } .overlay .arrow { width: 50px; font-size: 22px; } .overlay .action-buttons { top: 12px; right: 12px; gap: 4px; flex-wrap: wrap; justify-content: flex-end; } .overlay .action-buttons button, .overlay .action-buttons a { font-size: 11px; padding: 4px 10px; } .overlay .action-buttons .btn-close { padding: 4px 10px; font-size: 14px; } .overlay .meta { font-size: 13px; bottom: 30px; max-width: 90%; } .overlay .meta .date { font-size: 11px; } .detail-panel { width: 100%; max-width: 100vw; right: -100vw; } .detail-panel.open { right: 0; } .detail-panel-header { padding: 16px 20px; } .detail-panel-header h2 { font-size: 16px; } .detail-panel-body { padding: 16px 20px; } .detail-item { padding: 12px 0; } .detail-value { font-size: 14px; } .site-footer { bottom: 60px; font-size: 10px; } }
+        @media (max-width: 500px) { .app { height: auto; min-height: 100vh; overflow-y: auto; } .grid { grid-template-columns: repeat(2, 1fr); gap: 0; height: auto; overflow-y: visible; padding: 0; padding-bottom: 80px; align-content: start; } .card { aspect-ratio: 16 / 10; border-radius: 0; } .navbar { left: 48px; min-width: 140px; padding: 10px 12px; top: 8px; } .navbar .logo { font-size: 14px; } .navbar .search-box input { font-size: 12px; padding: 4px 8px; } .navbar .nav-actions a, .navbar .nav-actions button { font-size: 12px; padding: 4px 8px; } #themeToggle { width: 28px; height: 28px; font-size: 13px; } .nav-toggle { font-size: 16px; padding: 4px 8px; top: 8px; left: 8px; } .pagination { flex-wrap: wrap; justify-content: center; padding: 6px 10px; gap: 4px; max-width: 98vw; bottom: 8px; } .pagination button { font-size: 11px; padding: 3px 8px; } .pagination .page-info { font-size: 11px; } .pagination .total-info { font-size: 10px; } .pagination .goto-box input { width: 34px; font-size: 11px; padding: 2px 4px; } .pagination .goto-box .goto-btn { font-size: 11px; padding: 2px 8px; } .overlay .arrow { width: 50px; font-size: 22px; } .overlay .action-buttons { top: 12px; right: 12px; gap: 4px; flex-wrap: wrap; justify-content: flex-end; } .overlay .action-buttons button, .overlay .action-buttons a { font-size: 11px; padding: 4px 10px; } .overlay .action-buttons .btn-close { padding: 4px 10px; font-size: 14px; } .overlay .meta { font-size: 13px; bottom: 30px; max-width: 90%; } .overlay .meta .date { font-size: 11px; } .detail-panel { width: 100%; max-width: 100vw; right: -100vw; } .detail-panel.open { right: 0; } .detail-panel-header { padding: 16px 20px; } .detail-panel-header h2 { font-size: 16px; } .detail-panel-body { padding: 16px 20px; } .detail-item { padding: 12px 0; } .detail-value { font-size: 14px; } }
         @media (pointer: coarse) { .overlay .arrow { width: 60px; color: rgba(255,255,255,0.25); } }
     </style>
 </head>
@@ -187,29 +186,32 @@
                 <div class="detail-item"><span class="detail-label"><i class="fas fa-copyright"></i> 版权</span><span class="detail-value" id="detailCopyright">-</span></div>
                 <div class="detail-item"><span class="detail-label"><i class="fas fa-globe"></i> 地区</span><span class="detail-value" id="detailLocale">-</span></div>
                 <div class="detail-item"><span class="detail-label"><i class="fas fa-image"></i> 分辨率</span><span class="detail-value" id="detailResolution">1920 x 1080</span></div>
-                <div class="detail-item"><span class="detail-label"><i class="fas fa-weight-hanging"></i> 文件大小</span><span class="detail-value" id="detailSize">计算中...</span></div>
+                <div class="detail-item" style="border-bottom: none; padding-top: 4px; padding-bottom: 4px;">
+    <span class="detail-value" style="font-size: 11px; color: var(--text-muted); opacity: 0.4; user-select: none; -webkit-user-select: none;">
+        本站仅聚合 Bing 官方壁纸链接，图片版权归微软及原作者所有。
+    </span>
+</div>
                 <div class="detail-item"><span class="detail-label"><i class="fas fa-link"></i> 原图链接</span><span class="detail-value"><a href="#" id="detailLink" target="_blank"><i class="fas fa-external-link-alt"></i> 打开原图</a></span></div>
             </div>
         </div>
-        <div class="site-footer">本站仅聚合 Bing 官方壁纸链接，图片版权归微软及原作者所有。</div>
     </div>
     <script>
         function getBasePath() {
-            var path = window.location.pathname;
+            const path = window.location.pathname;
             if (path.endsWith('.html')) { return path.substring(0, path.lastIndexOf('/')); }
             return path.replace(/\/$/, '');
         }
-        var BASE_PATH = getBasePath();
+        const BASE_PATH = getBasePath();
 
         function getImageUrl(url) {
             if (!url) return '';
-            if (url.indexOf('http://') === 0 || url.indexOf('https://') === 0) return url;
-            if (url.indexOf('/') === 0) return BASE_PATH + url;
+            if (url.startsWith('http://') || url.startsWith('https://')) return url;
+            if (url.startsWith('/')) return BASE_PATH + url;
             return url;
         }
 
-        var themeToggle = document.getElementById('themeToggle');
-        var currentTheme = localStorage.getItem('theme') || 'dark';
+        const themeToggle = document.getElementById('themeToggle');
+        let currentTheme = localStorage.getItem('theme') || 'dark';
 
         function setTheme(theme) {
             currentTheme = theme;
@@ -217,27 +219,25 @@
             localStorage.setItem('theme', theme);
             themeToggle.innerHTML = theme === 'dark' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
         }
-        themeToggle.addEventListener('click', function() { setTheme(currentTheme === 'dark' ? 'light' : 'dark'); });
+        themeToggle.addEventListener('click', () => setTheme(currentTheme === 'dark' ? 'light' : 'dark'));
         setTheme(currentTheme);
 
-        var progressBar = document.getElementById('progress-bar');
+        const progressBar = document.getElementById('progress-bar');
 
         function showProgress() { progressBar.style.width = '30%';
-            setTimeout(function() { progressBar.style.width = '60%'; }, 150); }
+            setTimeout(() => progressBar.style.width = '60%', 150); }
 
         function hideProgress() { progressBar.style.width = '100%';
-            setTimeout(function() { progressBar.style.width = '0%'; }, 350); }
+            setTimeout(() => progressBar.style.width = '0%', 350); }
 
-        var navToggle = document.getElementById('navToggle');
-        var navbar = document.getElementById('navbar');
-        var navOpen = false;
-        navToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
+        const navToggle = document.getElementById('navToggle');
+        const navbar = document.getElementById('navbar');
+        let navOpen = false;
+        navToggle.addEventListener('click', (e) => { e.stopPropagation();
             navOpen = !navOpen;
             navbar.classList.toggle('open', navOpen);
-            navToggle.innerHTML = navOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        });
-        document.addEventListener('click', function(e) {
+            navToggle.innerHTML = navOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>'; });
+        document.addEventListener('click', (e) => {
             if (navOpen && !navbar.contains(e.target) && e.target !== navToggle) {
                 navOpen = false;
                 navbar.classList.remove('open');
@@ -245,40 +245,39 @@
             }
         });
 
-        var allData = [];
-        var filteredData = [];
-        var currentPage = 1;
-        var PAGE_SIZE = window.innerWidth <= 500 ? 12 : 42;
-        var totalPages = 1;
-        var currentPreviewIndex = 0;
-        var currentPreviewItem = null;
+        let allData = [];
+        let filteredData = [];
+        let currentPage = 1;
+        const PAGE_SIZE = window.innerWidth <= 500 ? 12 : 42;
+        let totalPages = 1;
+        let currentPreviewIndex = 0;
+        let currentPreviewItem = null;
 
-        var grid = document.getElementById('grid');
-        var overlay = document.getElementById('overlay');
-        var imageContainer = document.getElementById('imageContainer');
-        var previewImg = document.getElementById('previewImg');
-        var previewTitle = document.getElementById('previewTitle');
-        var previewDate = document.getElementById('previewDate');
-        var totalNavCount = document.getElementById('totalNavCount');
-        var downloadBtn = document.getElementById('downloadBtn');
-        var detailBtn = document.getElementById('detailBtn');
-        var detailPanel = document.getElementById('detailPanel');
-        var detailPanelClose = document.getElementById('detailPanelClose');
-        var detailOverlay = document.getElementById('detailOverlay');
-        var searchInput = document.getElementById('searchInput');
-        var searchBtn = document.getElementById('searchBtn');
-        var homeBtn = document.getElementById('homeBtn');
-        var prevBtn = document.getElementById('prevBtn');
-        var nextBtn = document.getElementById('nextBtn');
-        var pageInfo = document.getElementById('pageInfo');
-        var totalInfo = document.getElementById('totalInfo');
-        var gotoInput = document.getElementById('gotoInput');
-        var gotoBtn = document.getElementById('gotoBtn');
-        var closeBtn = document.getElementById('closeBtn');
-        var detailLink = document.getElementById('detailLink');
-        var detailSize = document.getElementById('detailSize');
+        const grid = document.getElementById('grid');
+        const overlay = document.getElementById('overlay');
+        const imageContainer = document.getElementById('imageContainer');
+        const previewImg = document.getElementById('previewImg');
+        const previewTitle = document.getElementById('previewTitle');
+        const previewDate = document.getElementById('previewDate');
+        const totalNavCount = document.getElementById('totalNavCount');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const detailBtn = document.getElementById('detailBtn');
+        const detailPanel = document.getElementById('detailPanel');
+        const detailPanelClose = document.getElementById('detailPanelClose');
+        const detailOverlay = document.getElementById('detailOverlay');
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+        const homeBtn = document.getElementById('homeBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const pageInfo = document.getElementById('pageInfo');
+        const totalInfo = document.getElementById('totalInfo');
+        const gotoInput = document.getElementById('gotoInput');
+        const gotoBtn = document.getElementById('gotoBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const detailLink = document.getElementById('detailLink');
 
-        var scale = 1,
+        let scale = 1,
             minScale = 0.3,
             maxScale = 5,
             translateX = 0,
@@ -289,31 +288,27 @@
             lastTranslateX = 0,
             lastTranslateY = 0;
 
-        function loadData() {
+        async function loadData() {
             showProgress();
-            var url = BASE_PATH + '/data/wallpapers.json';
-            fetch(url)
-                .then(function(res) {
-                    if (!res.ok) throw new Error('HTTP ' + res.status);
-                    return res.json();
-                })
-                .then(function(data) {
-                    allData = data;
-                    if (!Array.isArray(allData) || allData.length === 0) { showEmpty();
-                        hideProgress(); return; }
-                    allData.sort(function(a, b) { return b.date.localeCompare(a.date); });
-                    filteredData = [];
-                    totalNavCount.textContent = allData.length;
-                    totalInfo.innerHTML = '<i class="fas fa-images"></i> 共 ' + allData.length + ' 张';
-                    currentPage = 1;
-                    renderPage(1);
-                    hideProgress();
-                })
-                .catch(function(err) {
-                    console.error('加载失败:', err);
-                    showEmpty();
-                    hideProgress();
-                });
+            try {
+                const url = BASE_PATH + '/data/wallpapers.json';
+                const res = await fetch(url);
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                allData = await res.json();
+                if (!Array.isArray(allData) || allData.length === 0) { showEmpty();
+                    hideProgress(); return; }
+                allData.sort((a, b) => b.date.localeCompare(a.date));
+                filteredData = [];
+                totalNavCount.textContent = allData.length;
+                totalInfo.innerHTML = '<i class="fas fa-images"></i> 共 ' + allData.length + ' 张';
+                currentPage = 1;
+                renderPage(1);
+                hideProgress();
+            } catch (err) {
+                console.error('加载失败:', err);
+                showEmpty();
+                hideProgress();
+            }
         }
 
         function renderPage(page) {
@@ -459,22 +454,6 @@
             previewDate.textContent = currentPreviewItem.date || '';
             if (detailLink) {
                 detailLink.href = imgSrc;
-            }
-            if (detailSize) {
-                detailSize.textContent = '计算中...';
-                fetch(imgSrc, { method: 'HEAD' })
-                    .then(function(response) {
-                        var size = response.headers.get('content-length');
-                        if (size) {
-                            var sizeMB = (size / 1024 / 1024).toFixed(2);
-                            detailSize.textContent = sizeMB + ' MB';
-                        } else {
-                            detailSize.textContent = '未知';
-                        }
-                    })
-                    .catch(function() {
-                        detailSize.textContent = '获取失败';
-                    });
             }
             resetZoom();
         }
