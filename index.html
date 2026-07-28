@@ -215,16 +215,21 @@
             return url;
         }
 
-        // ★★★ 生成缩略图链接（仿 bing.ioliu.cn） ★★★
-        function getThumbnailUrl(url, width, height) {
+        // ★★★ 生成缩略图链接（使用必应支持的 _400x240 格式） ★★★
+        function getThumbnailUrl(url) {
             if (!url) return '';
-            width = width || 400;
-            height = height || 225;
-            // 如果是必应 CDN 链接，添加缩放参数
+            // 如果是必应 CDN 链接（包含 th?id=）
             if (url.indexOf('th?id=') !== -1) {
-                // 去掉已有的缩放参数，避免重复
+                // 将 _UHD.jpg 替换为 _400x240.jpg（必应标准缩略图格式）
+                // 同时去除可能已有的查询参数
                 var baseUrl = url.split('&')[0];
-                return baseUrl + '&w=' + width + '&h=' + height;
+                // 尝试替换 _UHD.jpg 为 _400x240.jpg
+                if (baseUrl.indexOf('_UHD.jpg') !== -1) {
+                    return baseUrl.replace('_UHD.jpg', '_400x240.jpg');
+                } else {
+                    // 如果原图不是 UHD 格式，则保持原样
+                    return baseUrl;
+                }
             }
             // 本地图片或非必应链接，原样返回
             return url;
@@ -268,17 +273,22 @@
         var navToggle = document.getElementById('navToggle');
         var navbar = document.getElementById('navbar');
         var navOpen = false;
-        navToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            navOpen = !navOpen;
+
+        // ★★★ 定义 toggleNav 函数 ★★★
+        function toggleNav(open) {
+            navOpen = open !== undefined ? open : !navOpen;
             navbar.classList.toggle('open', navOpen);
             navToggle.innerHTML = navOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        }
+
+        navToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleNav();
         });
+
         document.addEventListener('click', function(e) {
             if (navOpen && !navbar.contains(e.target) && e.target !== navToggle) {
-                navOpen = false;
-                navbar.classList.remove('open');
-                navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                toggleNav(false);
             }
         });
 
@@ -380,8 +390,8 @@
                 var imgSrc = getImageUrl(item.webp || item.jpg || '');
                 var fallback = getImageUrl(item.jpg || '');
 
-                // ★★★ 占位图：使用缩略图（400x225） ★★★
-                var placeholderSrc = getThumbnailUrl(imgSrc, 400, 225);
+                // ★★★ 占位图：使用 _400x240 缩略图 ★★★
+                var placeholderSrc = getThumbnailUrl(imgSrc);
 
                 card.innerHTML =
                     '<div class="placeholder-bg" style="background-image: url(' + placeholderSrc + ');"></div>' +
@@ -406,12 +416,8 @@
                 }
 
                 img.addEventListener('error', function() {
-                    // ★★★ 如果原图加载失败，尝试加载缩略图作为 fallback ★★★
-                    var fallbackThumb = getThumbnailUrl(fallback, 800, 450);
                     if (fallback && fallback !== imgSrc) {
                         img.src = fallback;
-                    } else if (fallbackThumb && fallbackThumb !== imgSrc) {
-                        img.src = fallbackThumb;
                     } else {
                         img.classList.add('loaded');
                         placeholderBg.classList.add('hidden');
@@ -483,10 +489,13 @@
         }
         searchBtn.addEventListener('click', doSearch);
         searchInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') doSearch(); });
-        homeBtn.addEventListener('click', function() { searchInput.value = '';
+        homeBtn.addEventListener('click', function() {
+            searchInput.value = '';
             filteredData = [];
             renderPage(1);
-            toggleNav(false); });
+            // ★★★ 使用 toggleNav 函数关闭导航 ★★★
+            toggleNav(false);
+        });
 
         // ============================================================
         // 5.5 空状态
