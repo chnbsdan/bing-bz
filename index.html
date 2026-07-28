@@ -943,7 +943,7 @@
         let allData = [];
         let filteredData = [];
         let currentPage = 1;
-        const PAGE_SIZE = 42;
+        const PAGE_SIZE = window.innerWidth <= 500 ? 12 : 42;
         let totalPages = 1;
         let currentPreviewIndex = 0;
         let currentPreviewItem = null;
