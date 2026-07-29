@@ -114,19 +114,7 @@
     background: var(--bg-card);
     aspect-ratio: 16 / 9;
     cursor: pointer;
-    transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1), box-shadow 0.3s ease, background 0.3s ease;
-    will-change: transform;
-}
-
-/* ★★★ 悬停放大 ★★★ */
-.card:hover {
-    transform: scale(1.04);
-    z-index: 10;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-}
-
-[data-theme="light"] .card:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transition: background 0.3s ease;
 }
 
 .card img {
@@ -137,16 +125,16 @@
     position: relative;
     z-index: 2;
     opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1);
 }
 
 .card img.loaded {
     opacity: 1;
 }
 
-/* ★★★ 图片在悬停时轻微放大 ★★★ */
+/* ★★★ 只有图片放大 ★★★ */
 .card:hover img {
-    transform: scale(1.02);
+    transform: scale(1.06);
 }
 
 .card .placeholder-bg {
