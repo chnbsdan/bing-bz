@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2026-06-17",
+      "copyright": "Tremola Road on the Saint Gotthard Pass in Airolo, Switzerland (© Sandro Bisaro/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.TremolaRoad_EN-US6212254886_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.TremolaRoad_EN-US6212254886_UHD.jpg"
+    },
+    {
       "date": "2026-06-16",
       "copyright": "Hawksbill sea turtle pair near Seven Mile Beach, Grand Cayman, Cayman Islands (© Alex Mustard/Nature Picture Library)",
       "jpg": "https://cn.bing.com/th?id=OHR.SevenMileTurtle_EN-US6164934763_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Kofa National Wildlife Refuge, Arizona (© Denis Tangney Jr/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.Kofa_EN-US0655690866_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.Kofa_EN-US0655690866_UHD.jpg"
-    },
-    {
-      "date": "2026-05-06",
-      "copyright": "Thunderstorm above the plains, Bulgaria (© Revolu7ion93/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BulgariaPlains_EN-US0576020979_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BulgariaPlains_EN-US0576020979_UHD.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 1530,
-  "totalPages": 37,
+  "total": 2003,
+  "totalPages": 48,
   "hasMore": true
 }

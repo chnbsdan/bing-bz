@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2023-08-02",
+      "copyright": "Jubail Mangrove Park in Abu Dhabi, United Arab Emirates (© Amazing Aerial Premium/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MangrovePark_EN-US2211111720_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MangrovePark_EN-US2211111720_UHD.jpg"
+    },
+    {
       "date": "2023-08-01",
       "copyright": "Laguna de Torrevieja, Alicante, Spain (© Juan Maria Coy Vergara/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.LasLagunas_EN-US2134252350_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Synchronous fireflies, Great Smoky Mountains National Park, Tennessee (© Floris Van Bruegel/Minden Pictures)",
       "jpg": "https://cn.bing.com/th?id=OHR.SmokyFireflies_EN-US8809086301_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SmokyFireflies_EN-US8809086301_UHD.jpg"
-    },
-    {
-      "date": "2023-06-21",
-      "copyright": "US Capitol building and US flags, Washington, DC (© Orhan Cam/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.FlagDayCapitol_EN-US8751000302_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.FlagDayCapitol_EN-US8751000302_UHD.jpg"
     }
   ],
   "page": 27,
   "pageSize": 42,
-  "total": 1530,
-  "totalPages": 37,
+  "total": 2003,
+  "totalPages": 48,
   "hasMore": true
 }

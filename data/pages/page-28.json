@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2023-06-21",
+      "copyright": "US Capitol building and US flags, Washington, DC (© Orhan Cam/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FlagDayCapitol_EN-US8751000302_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FlagDayCapitol_EN-US8751000302_UHD.jpg"
+    },
+    {
       "date": "2023-06-20",
       "copyright": "Trees with Spanish moss over a boardwalk in the Okefenokee Swamp, Folkston, Georgia (© Emmer Photo/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.OkefenokeeSwamp_EN-US8688169198_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Jöriseen lakes in the Silvretta Alps, Switzerland (© Florin Baumann/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.KlostersSerneus_EN-US9360254697_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.KlostersSerneus_EN-US9360254697_UHD.jpg"
-    },
-    {
-      "date": "2023-05-10",
-      "copyright": "Korean Bell of Friendship, Los Angeles (© Carlos Marin/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.KoreanBell_EN-US9211069806_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.KoreanBell_EN-US9211069806_UHD.jpg"
     }
   ],
   "page": 28,
   "pageSize": 42,
-  "total": 1530,
-  "totalPages": 37,
+  "total": 2003,
+  "totalPages": 48,
   "hasMore": true
 }

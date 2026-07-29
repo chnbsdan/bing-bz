@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2025-08-27",
+      "copyright": "Trullo buildings in Alberobello, Apulia, Italy (© Feng Wei Photography/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.TrulliHouses_EN-US3489439665_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.TrulliHouses_EN-US3489439665_UHD.jpg"
+    },
+    {
       "date": "2025-08-26",
       "copyright": "Calcite Springs Overlook and Yellowstone River, Yellowstone National Park, Wyoming (© Rebecca L. Latson/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.YellowstoneRiver_EN-US3380364726_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Temple of Philae (aka Temple of Isis), Aswan, Egypt (© Ratnakorn Piyasirisorost/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.TemplePhilae_EN-US5062419351_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.TemplePhilae_EN-US5062419351_UHD.jpg"
-    },
-    {
-      "date": "2025-07-16",
-      "copyright": "Perseid meteor shower and an ancient bristlecone pine, Great Basin National Park, Nevada (© Wirestock Creators/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.PerseidsPine_EN-US4826682211_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.PerseidsPine_EN-US4826682211_UHD.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 1530,
-  "totalPages": 37,
+  "total": 2003,
+  "totalPages": 48,
   "hasMore": true
 }

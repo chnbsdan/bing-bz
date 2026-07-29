@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2024-04-10",
+      "copyright": "A rainbow in At-Bashy District  , Kakshaal Too Mountains, Naryn Province, Kyrgyzstan (© Emad aljumah/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.KyrgyzstanRainbow_EN-US3266651913_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.KyrgyzstanRainbow_EN-US3266651913_UHD.jpg"
+    },
+    {
       "date": "2024-04-09",
       "copyright": "Beech trees and wild anemones, Jutland, Denmark (© Nick Brundle Photography/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.JutlandSpring_EN-US3202382460_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Bathing boxes at Brighton Beach, Melbourne, Victoria, Australia (© Prasit photo/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BrightonBoxes_EN-US7951266383_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BrightonBoxes_EN-US7951266383_UHD.jpg"
-    },
-    {
-      "date": "2024-02-28",
-      "copyright": "Firefall at Horsetail Fall, Yosemite National Park, California (© Gregory B Cuvelier/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.YosemiteFirefall_EN-US8169903146_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.YosemiteFirefall_EN-US8169903146_UHD.jpg"
     }
   ],
   "page": 21,
   "pageSize": 42,
-  "total": 1530,
-  "totalPages": 37,
+  "total": 2003,
+  "totalPages": 48,
   "hasMore": true
 }

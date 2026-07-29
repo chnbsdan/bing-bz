@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2025-11-19",
+      "copyright": "Male hooded merganser, Oregon (© Eric Vogt/TANDEM Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AutumnMerganser_EN-US5860535351_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AutumnMerganser_EN-US5860535351_UHD.jpg"
+    },
+    {
       "date": "2025-11-18",
       "copyright": "Fall colors in Shenandoah National Park, Virginia (© Michael Ver Sprill/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ShenandoahTrail_EN-US8964689271_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Day octopus in the waters off Maui, Hawaii (© Dave Fleetham/plainpicture)",
       "jpg": "https://cn.bing.com/th?id=OHR.OctopusCyanea_EN-US0194861123_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.OctopusCyanea_EN-US0194861123_UHD.jpg"
-    },
-    {
-      "date": "2025-10-08",
-      "copyright": "Fall colors below Mount Sneffels near Ridgway, Colorado (© Grant Ordelheide/TANDEM Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.RidgwayAspens_EN-US0136548884_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.RidgwayAspens_EN-US0136548884_UHD.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 1530,
-  "totalPages": 37,
+  "total": 2003,
+  "totalPages": 48,
   "hasMore": true
 }

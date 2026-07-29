@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2024-07-03",
+      "copyright": "Duomo Santa Maria del Fiore at dusk, Florence, Italy (© Elena Pueyo/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FlorenceDuomo_EN-US1448955167_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FlorenceDuomo_EN-US1448955167_UHD.jpg"
+    },
+    {
       "date": "2024-07-02",
       "copyright": "Juvenile Banggai cardinalfish with sea anemone, Lembeh Strait, North Sulawesi, Indonesia (© Constantinos Petrinos/NPL/Minden Pictures)",
       "jpg": "https://cn.bing.com/th?id=OHR.CardinalfishAnemone_EN-US1278259894_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "'Feelings are Facts,' by artist Olafur Eliasson and architect Ma Yansong, Beijing, China (© Feng Li/Getty Images News)",
       "jpg": "https://cn.bing.com/th?id=OHR.DayOfLight_EN-US1723401316_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.DayOfLight_EN-US1723401316_UHD.jpg"
-    },
-    {
-      "date": "2024-05-22",
-      "copyright": "The Blue City of Jodhpur, India (© cinoby/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BlueCityIndia_EN-US1593809891_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BlueCityIndia_EN-US1593809891_UHD.jpg"
     }
   ],
   "page": 19,
   "pageSize": 42,
-  "total": 1530,
-  "totalPages": 37,
+  "total": 2003,
+  "totalPages": 48,
   "hasMore": true
 }

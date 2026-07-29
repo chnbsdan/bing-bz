@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2025-10-08",
+      "copyright": "Fall colors below Mount Sneffels near Ridgway, Colorado (© Grant Ordelheide/TANDEM Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.RidgwayAspens_EN-US0136548884_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.RidgwayAspens_EN-US0136548884_UHD.jpg"
+    },
+    {
       "date": "2025-10-07",
       "copyright": "Anshun Bridge illuminated for the Mid-Autumn Festival, Chengdu, China (© Philippe LEJEANVRE/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.AnshunBridge_EN-US0059795497_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Sørvágsvatn lake, island of Vágar, Faroe Islands, Denmark (© Anton Petrus/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.FaroeLake_EN-US3557234950_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.FaroeLake_EN-US3557234950_UHD.jpg"
-    },
-    {
-      "date": "2025-08-27",
-      "copyright": "Trullo buildings in Alberobello, Apulia, Italy (© Feng Wei Photography/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.TrulliHouses_EN-US3489439665_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.TrulliHouses_EN-US3489439665_UHD.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 1530,
-  "totalPages": 37,
+  "total": 2003,
+  "totalPages": 48,
   "hasMore": true
 }

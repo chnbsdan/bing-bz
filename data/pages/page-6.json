@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2025-12-31",
+      "copyright": "Whooper swans, Kotoku Pond, Japan (© Martin Bailey/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.JapanSwans_EN-US6228421340_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.JapanSwans_EN-US6228421340_UHD.jpg"
+    },
+    {
       "date": "2025-12-30",
       "copyright": "St. Gregory Church in Ani Ruins, Kars, Türkiye (© Kenan Talas/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.AniTurkey_EN-US6168768263_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Hungarian Parliament Building, Budapest, Hungary (© Alexander Spatari/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BudapestParliament_EN-US5929195878_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BudapestParliament_EN-US5929195878_UHD.jpg"
-    },
-    {
-      "date": "2025-11-19",
-      "copyright": "Male hooded merganser, Oregon (© Eric Vogt/TANDEM Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AutumnMerganser_EN-US5860535351_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AutumnMerganser_EN-US5860535351_UHD.jpg"
     }
   ],
   "page": 6,
   "pageSize": 42,
-  "total": 1530,
-  "totalPages": 37,
+  "total": 2003,
+  "totalPages": 48,
   "hasMore": true
 }
