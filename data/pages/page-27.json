@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2023-08-03",
+      "copyright": "Arc de Triomphe du Carrousel and Louvre Pyramid, Paris, France (© Jon Hicks/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ParisLouvre_EN-US2282259448_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ParisLouvre_EN-US2282259448_UHD.jpg"
+    },
+    {
       "date": "2023-08-02",
       "copyright": "Jubail Mangrove Park in Abu Dhabi, United Arab Emirates (© Amazing Aerial Premium/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.MangrovePark_EN-US2211111720_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Hawksbill sea turtle swimming near Akajima, Okinawa, Japan (© Robert Mallon/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.HawksbillTurtle_EN-US0640232978_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.HawksbillTurtle_EN-US0640232978_UHD.jpg"
-    },
-    {
-      "date": "2023-06-22",
-      "copyright": "Synchronous fireflies, Great Smoky Mountains National Park, Tennessee (© Floris Van Bruegel/Minden Pictures)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SmokyFireflies_EN-US8809086301_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SmokyFireflies_EN-US8809086301_UHD.jpg"
     }
   ],
   "page": 27,
   "pageSize": 42,
-  "total": 2003,
+  "total": 2004,
   "totalPages": 48,
   "hasMore": true
 }

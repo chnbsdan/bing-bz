@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2021-11-11",
+      "copyright": "梅加拉亚邦的七姐妹瀑布，印度 (© Upamanyoo Das/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.NohsngithiangFalls_ZH-CN1819466830_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.NohsngithiangFalls_ZH-CN1819466830_UHD.jpg"
+    },
+    {
       "date": "2021-11-10",
       "copyright": "坎伯兰岛国家海岸，美国佐治亚州 (© Wilsilver77/Getty Images Plus)",
       "jpg": "https://cn.bing.com/th?id=OHR.CumberlandSeashore_ZH-CN1662936356_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "加利福尼亚州的一艘集装箱船，美国 (© Cameron Venti/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ContainerShip_ZH-CN0850122021_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ContainerShip_ZH-CN0850122021_UHD.jpg"
-    },
-    {
-      "date": "2021-09-30",
-      "copyright": "加拿大西北部的一头美洲野牛 (© Don Johnston/agefotostock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.WoodBison_ZH-CN0663388789_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.WoodBison_ZH-CN0663388789_UHD.jpg"
     }
   ],
   "page": 42,
   "pageSize": 42,
-  "total": 2003,
+  "total": 2004,
   "totalPages": 48,
   "hasMore": true
 }

@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2025-06-05",
+      "copyright": "The beach at Cala Luna, Sardinia, Italy (© guenterguni/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.CalaLuna_EN-US8760708047_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.CalaLuna_EN-US8760708047_UHD.jpg"
+    },
+    {
       "date": "2025-06-04",
       "copyright": "Bicycles on a bridge in Utrecht, Netherlands (© George Pachantouris/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BicyclesUtrecht_EN-US8449213938_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Spire Cove in Kenai Fjords National Park, Seward, Alaska (© Wander Photography/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.KenaiSpires_EN-US3294247007_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.KenaiSpires_EN-US3294247007_UHD.jpg"
-    },
-    {
-      "date": "2025-04-24",
-      "copyright": "Shakespeare's Globe, London, England (© Peter Dazeley/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.GlobeTheatre_EN-US3262022178_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.GlobeTheatre_EN-US3262022178_UHD.jpg"
     }
   ],
   "page": 11,
   "pageSize": 42,
-  "total": 2003,
+  "total": 2004,
   "totalPages": 48,
   "hasMore": true
 }

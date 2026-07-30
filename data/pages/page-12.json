@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2025-04-24",
+      "copyright": "Shakespeare's Globe, London, England (© Peter Dazeley/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.GlobeTheatre_EN-US3262022178_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.GlobeTheatre_EN-US3262022178_UHD.jpg"
+    },
+    {
       "date": "2025-04-23",
       "copyright": "Grand Prismatic Spring, Yellowstone National Park, Wyoming (© Ajith Kumar/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.YellowstoneSpring_EN-US2710865870_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Holi celebration in Jaipur, India (© powerofforever/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.HoliColors_EN-US9033637774_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.HoliColors_EN-US9033637774_UHD.jpg"
-    },
-    {
-      "date": "2025-03-13",
-      "copyright": "Château de Sully-sur-Loire, Center-Val de Loire, France (© StockPhotoAstur/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ChateauLoire_EN-US8827570825_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ChateauLoire_EN-US8827570825_UHD.jpg"
     }
   ],
   "page": 12,
   "pageSize": 42,
-  "total": 2003,
+  "total": 2004,
   "totalPages": 48,
   "hasMore": true
 }

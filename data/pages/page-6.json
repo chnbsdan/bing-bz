@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2026-01-01",
+      "copyright": "New Year's Eve, Oberbaum Bridge, Berlin, Germany (© spreephoto.de/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.GermanyNewYear_EN-US6344260060_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.GermanyNewYear_EN-US6344260060_UHD.jpg"
+    },
+    {
       "date": "2025-12-31",
       "copyright": "Whooper swans, Kotoku Pond, Japan (© Martin Bailey/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.JapanSwans_EN-US6228421340_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Artist Saype poses with his land art painting at UN Headquarters, Geneva, Switzerland (© Valentin Flauraud/EPA-EFE/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.SaypeGeneva_EN-US6121087903_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SaypeGeneva_EN-US6121087903_UHD.jpg"
-    },
-    {
-      "date": "2025-11-20",
-      "copyright": "Hungarian Parliament Building, Budapest, Hungary (© Alexander Spatari/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BudapestParliament_EN-US5929195878_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BudapestParliament_EN-US5929195878_UHD.jpg"
     }
   ],
   "page": 6,
   "pageSize": 42,
-  "total": 2003,
+  "total": 2004,
   "totalPages": 48,
   "hasMore": true
 }

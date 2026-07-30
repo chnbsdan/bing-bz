@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2023-09-14",
+      "copyright": "The Circus townhouses in Bath, Somerset, England (© Gavin Hellier/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BathCircus_EN-US1560951776_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BathCircus_EN-US1560951776_UHD.jpg"
+    },
+    {
       "date": "2023-09-13",
       "copyright": "Camels in the desert, United Arab Emirates (© Amazing Aerial Premium/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.CamelsAbove_EN-US3904666620_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "San Blas Islands, Panama (© bgremler/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.SanBlasIslands_EN-US1442226155_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SanBlasIslands_EN-US1442226155_UHD.jpg"
-    },
-    {
-      "date": "2023-08-03",
-      "copyright": "Arc de Triomphe du Carrousel and Louvre Pyramid, Paris, France (© Jon Hicks/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ParisLouvre_EN-US2282259448_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ParisLouvre_EN-US2282259448_UHD.jpg"
     }
   ],
   "page": 26,
   "pageSize": 42,
-  "total": 2003,
+  "total": 2004,
   "totalPages": 48,
   "hasMore": true
 }

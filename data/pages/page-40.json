@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2022-02-03",
+      "copyright": "Corjuem堡垒，印度果阿邦 (© Ingvar Kuznetsov/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FortCorjuem_ZH-CN7295613217_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FortCorjuem_ZH-CN7295613217_UHD.jpg"
+    },
+    {
       "date": "2022-02-02",
       "copyright": "阿尔卑斯旱獭，奥地利陶恩山国家公园 (© Misja Smits/Minden Pictures)",
       "jpg": "https://cn.bing.com/th?id=OHR.GHDMarmot_ZH-CN5983212280_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "湖畔的一棵小圣诞树，奥地利魏森湖 (© nagelestock/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.Rauchnachte_ZH-CN6061051054_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.Rauchnachte_ZH-CN6061051054_UHD.jpg"
-    },
-    {
-      "date": "2021-12-23",
-      "copyright": "两只玩耍的北极熊，加拿大丘吉尔镇 (© Cheryl Ramalho/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ManitobaBears_ZH-CN5877672648_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ManitobaBears_ZH-CN5877672648_UHD.jpg"
     }
   ],
   "page": 40,
   "pageSize": 42,
-  "total": 2003,
+  "total": 2004,
   "totalPages": 48,
   "hasMore": true
 }

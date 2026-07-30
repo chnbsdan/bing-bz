@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2024-07-04",
+      "copyright": "Pride flags at Christopher Park, Stonewall National Monument, New York City (© Noam Galai/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ChristopherPark_EN-US9362447266_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ChristopherPark_EN-US9362447266_UHD.jpg"
+    },
+    {
       "date": "2024-07-03",
       "copyright": "Duomo Santa Maria del Fiore at dusk, Florence, Italy (© Elena Pueyo/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.FlorenceDuomo_EN-US1448955167_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "A family of African elephants in Tarangire National Park, Tanzania (© Vicki Jauron, Babylon and Beyond Photography/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.TarangireElephants_EN-US8865263185_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.TarangireElephants_EN-US8865263185_UHD.jpg"
-    },
-    {
-      "date": "2024-05-23",
-      "copyright": "'Feelings are Facts,' by artist Olafur Eliasson and architect Ma Yansong, Beijing, China (© Feng Li/Getty Images News)",
-      "jpg": "https://cn.bing.com/th?id=OHR.DayOfLight_EN-US1723401316_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.DayOfLight_EN-US1723401316_UHD.jpg"
     }
   ],
   "page": 19,
   "pageSize": 42,
-  "total": 2003,
+  "total": 2004,
   "totalPages": 48,
   "hasMore": true
 }

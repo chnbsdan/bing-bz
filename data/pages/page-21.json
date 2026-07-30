@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2024-04-11",
+      "copyright": "Red lechwe herd crossing marshy plain of Okavango Delta, Botswana (© Ibrahim Suha Derbent/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AntelopeBotswana_EN-US3335739405_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AntelopeBotswana_EN-US3335739405_UHD.jpg"
+    },
+    {
       "date": "2024-04-10",
       "copyright": "A rainbow in At-Bashy District  , Kakshaal Too Mountains, Naryn Province, Kyrgyzstan (© Emad aljumah/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.KyrgyzstanRainbow_EN-US3266651913_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Haghartsin Monastery, Dilijan National Park, Armenia (© Alexey Kharitonov/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.HaghartsinMonastery_EN-US2523109486_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.HaghartsinMonastery_EN-US2523109486_UHD.jpg"
-    },
-    {
-      "date": "2024-02-29",
-      "copyright": "Bathing boxes at Brighton Beach, Melbourne, Victoria, Australia (© Prasit photo/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BrightonBoxes_EN-US7951266383_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BrightonBoxes_EN-US7951266383_UHD.jpg"
     }
   ],
   "page": 21,
   "pageSize": 42,
-  "total": 2003,
+  "total": 2004,
   "totalPages": 48,
   "hasMore": true
 }
