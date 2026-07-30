@@ -91,7 +91,6 @@
         /* ===== 导航栏 ===== */
         .nav-toggle { position: fixed; top: 12px; left: 12px; z-index: 1001; background: var(--nav-bg); backdrop-filter: blur(8px); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-primary); font-size: 20px; padding: 6px 12px; cursor: pointer; transition: 0.2s; line-height: 1; }
         .nav-toggle:hover { background: var(--accent-hover); border-color: rgba(79,195,247,0.2); }
-        /* ★★★ 大图预览时隐藏汉堡按钮 ★★★ */
         .nav-toggle.hidden { display: none !important; }
         .navbar { position: fixed; top: 12px; left: 56px; z-index: 1000; background: var(--nav-bg); backdrop-filter: blur(16px); border: 1px solid var(--border-color); border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; min-width: 200px; opacity: 0; transform: translateY(-10px) scale(0.95); transition: opacity 0.25s ease, transform 0.25s ease; pointer-events: none; box-shadow: 0 8px 32px var(--shadow-color); max-width: 90vw; }
         .navbar.open { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
@@ -111,9 +110,29 @@
         #themeToggle { background: var(--accent-hover); color: var(--accent-color); border-radius: 50%; width: 32px; height: 32px; padding: 0; display: flex; align-items: center; justify-content: center; }
         #themeToggle:hover { background: rgba(79,195,247,0.3); color: var(--text-primary); }
 
-        /* ===== 应用 ===== */
-        .app { display: flex; flex-direction: column; width: 100%; height: 100vh; padding: 0; overflow: hidden; }
-        .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; flex: 1; align-content: start; overflow-y: auto; padding: 4px; padding-bottom: 70px; scroll-behavior: smooth; min-height: 0; }
+        /* ===== 应用 - 占满全屏 ===== */
+        .app { 
+            display: flex; 
+            flex-direction: column; 
+            width: 100%; 
+            height: 100vh; 
+            padding: 0; 
+            overflow: hidden; 
+        }
+        
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(6, 1fr); 
+            gap: 4px; 
+            flex: 1; 
+            align-content: start; 
+            overflow-y: auto; 
+            padding: 4px; 
+            /* ★★★ 移除底部内边距，让卡片占满 ★★★ */
+            padding-bottom: 0;
+            scroll-behavior: smooth; 
+            min-height: 0; 
+        }
         .grid::-webkit-scrollbar { width: 6px; }
         .grid::-webkit-scrollbar-track { background: transparent; }
         .grid::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
@@ -182,18 +201,100 @@
         .card .info .title { font-size: 14px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .card .info .copyright { font-size: 12px; color: rgba(255,255,255,0.4); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-        /* ===== 分页 ===== */
-        .pagination { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; padding: 8px 16px; background: var(--pagination-bg); backdrop-filter: blur(16px); border-top: 1px solid var(--border-color); border-radius: 0; box-shadow: 0 -4px 20px var(--shadow-color); z-index: 100; flex-wrap: wrap; justify-content: center; max-width: 100vw; transition: background 0.3s ease, border-color 0.3s ease; }
-        .pagination button { background: var(--input-bg); border: none; color: var(--text-secondary); padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 13px; transition: 0.2s; white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; }
-        .pagination button:hover:not(:disabled) { background: var(--accent-hover); color: var(--accent-color); }
-        .pagination button:disabled { opacity: 0.2; cursor: not-allowed; }
-        .pagination .page-info { color: var(--text-secondary); font-size: 13px; white-space: nowrap; }
-        .pagination .total-info { color: var(--text-muted); font-size: 12px; white-space: nowrap; }
-        .pagination .goto-box { display: flex; align-items: center; gap: 4px; }
-        .pagination .goto-box input { width: 48px; background: var(--input-bg); border: 1px solid var(--input-border); border-radius: 4px; padding: 4px 6px; color: var(--text-primary); font-size: 13px; text-align: center; outline: none; transition: 0.2s; }
-        .pagination .goto-box input:focus { border-color: var(--accent-color); }
-        .pagination .goto-box .goto-btn { background: var(--accent-hover); border: none; color: var(--accent-color); padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 13px; transition: 0.2s; display: inline-flex; align-items: center; gap: 4px; }
-        .pagination .goto-box .goto-btn:hover { background: rgba(79,195,247,0.3); color: var(--text-primary); }
+        /* ===== ★★★ 分页 - 浮动在底部内侧 ★★★ ===== */
+        .pagination { 
+            position: fixed; 
+            bottom: 16px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+            padding: 8px 16px; 
+            background: var(--pagination-bg); 
+            backdrop-filter: blur(16px); 
+            border: 1px solid var(--border-color);
+            border-radius: 12px; 
+            box-shadow: 0 4px 30px var(--shadow-color); 
+            z-index: 100; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            max-width: 95vw; 
+            transition: background 0.3s ease, border-color 0.3s ease; 
+            /* ★★★ 底部保留空间，不遮挡卡片 ★★★ */
+            pointer-events: auto;
+        }
+        
+        .pagination button { 
+            background: var(--input-bg); 
+            border: none; 
+            color: var(--text-secondary); 
+            padding: 6px 14px; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            font-size: 13px; 
+            transition: 0.2s; 
+            white-space: nowrap; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 6px; 
+        }
+        .pagination button:hover:not(:disabled) { 
+            background: var(--accent-hover); 
+            color: var(--accent-color); 
+        }
+        .pagination button:disabled { 
+            opacity: 0.2; 
+            cursor: not-allowed; 
+        }
+        .pagination .page-info { 
+            color: var(--text-secondary); 
+            font-size: 13px; 
+            white-space: nowrap; 
+        }
+        .pagination .total-info { 
+            color: var(--text-muted); 
+            font-size: 12px; 
+            white-space: nowrap; 
+        }
+        .pagination .goto-box { 
+            display: flex; 
+            align-items: center; 
+            gap: 4px; 
+        }
+        .pagination .goto-box input { 
+            width: 48px; 
+            background: var(--input-bg); 
+            border: 1px solid var(--input-border); 
+            border-radius: 4px; 
+            padding: 4px 6px; 
+            color: var(--text-primary); 
+            font-size: 13px; 
+            text-align: center; 
+            outline: none; 
+            transition: 0.2s; 
+        }
+        .pagination .goto-box input:focus { 
+            border-color: var(--accent-color); 
+        }
+        .pagination .goto-box .goto-btn { 
+            background: var(--accent-hover); 
+            border: none; 
+            color: var(--accent-color); 
+            padding: 4px 10px; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-size: 13px; 
+            transition: 0.2s; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 4px; 
+        }
+        .pagination .goto-box .goto-btn:hover { 
+            background: rgba(79,195,247,0.3); 
+            color: var(--text-primary); 
+        }
+        
         .empty { grid-column: 1 / -1; text-align: center; padding: 80px 20px; color: var(--text-secondary); }
         .empty .icon { font-size: 40px; margin-bottom: 10px; }
 
@@ -430,7 +531,12 @@
             .grid { grid-template-columns: repeat(4, 1fr); }
             .navbar { left: 52px; min-width: 160px; padding: 12px 14px; top: 10px; }
             .nav-toggle { font-size: 18px; padding: 5px 10px; top: 10px; left: 10px; }
-            .pagination { padding: 6px 12px; gap: 6px; bottom: 0; }
+            .pagination { 
+                padding: 6px 12px; 
+                gap: 6px; 
+                bottom: 10px;
+                border-radius: 10px;
+            }
             .pagination button { font-size: 12px; padding: 4px 10px; }
             .pagination .page-info { font-size: 12px; }
             .pagination .goto-box input { width: 40px; font-size: 12px; }
@@ -446,9 +552,20 @@
         }
         @media (max-width: 600px) {
             .grid { grid-template-columns: repeat(3, 1fr); }
+            .pagination { 
+                padding: 5px 10px; 
+                gap: 4px;
+                bottom: 8px;
+                border-radius: 8px;
+            }
         }
         @media (max-width: 400px) {
-            .grid { grid-template-columns: repeat(2, 1fr); gap: 2px; padding: 2px; padding-bottom: 60px; }
+            .grid { 
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 2px; 
+                padding: 2px; 
+                padding-bottom: 0;
+            }
             .card { aspect-ratio: 16 / 10; border-radius: 0; }
             .card .info .title { font-size: 12px; }
             .card .info .copyright { font-size: 10px; }
@@ -459,12 +576,20 @@
             .navbar .nav-actions a, .navbar .nav-actions button { font-size: 12px; padding: 4px 8px; }
             #themeToggle { width: 28px; height: 28px; font-size: 13px; }
             .nav-toggle { font-size: 16px; padding: 4px 8px; top: 8px; left: 8px; }
-            .pagination { flex-wrap: wrap; justify-content: center; padding: 4px 8px; gap: 4px; max-width: 100vw; bottom: 0; border-radius: 0; }
-            .pagination button { font-size: 11px; padding: 3px 8px; }
-            .pagination .page-info { font-size: 11px; }
-            .pagination .total-info { font-size: 10px; }
-            .pagination .goto-box input { width: 34px; font-size: 11px; padding: 2px 4px; }
-            .pagination .goto-box .goto-btn { font-size: 11px; padding: 2px 8px; }
+            .pagination { 
+                flex-wrap: wrap; 
+                justify-content: center; 
+                padding: 4px 8px; 
+                gap: 3px; 
+                max-width: 98vw; 
+                bottom: 6px; 
+                border-radius: 8px;
+            }
+            .pagination button { font-size: 10px; padding: 2px 6px; }
+            .pagination .page-info { font-size: 10px; }
+            .pagination .total-info { font-size: 9px; }
+            .pagination .goto-box input { width: 30px; font-size: 10px; padding: 2px 4px; }
+            .pagination .goto-box .goto-btn { font-size: 10px; padding: 2px 6px; }
             .arrow { font-size: 18px; padding: 10px 6px; }
             .toolbar .btn span { display: none; }
             .toolbar .btn { padding: 6px 10px; }
@@ -490,7 +615,7 @@
     <!-- ===== 应用 ===== -->
     <div class="app"><div class="grid" id="grid"></div></div>
 
-    <!-- ===== 分页 ===== -->
+    <!-- ===== ★★★ 分页 - 浮动在底部内侧 ★★★ ===== -->
     <div class="pagination" id="pagination">
         <button id="prevBtn" disabled><i class="fas fa-chevron-left"></i> 上一页</button>
         <span class="page-info" id="pageInfo">第 1 / 1 页</span>
@@ -866,7 +991,7 @@
             var imgSrc = getImageUrl(currentPreviewItem.jpg || currentPreviewItem.webp || '');
             previewOverlay.style.setProperty('--bg-url', 'url(' + imgSrc + ')');
 
-            // ★★★ 隐藏汉堡按钮 ★★★
+            // 隐藏汉堡按钮
             navToggle.classList.add('hidden');
 
             // 显示工具栏
@@ -899,7 +1024,7 @@
         function closePreview() {
             previewOverlay.classList.remove('active');
             document.body.style.overflow = 'auto';
-            // ★★★ 恢复显示汉堡按钮 ★★★
+            // 恢复显示汉堡按钮
             navToggle.classList.remove('hidden');
             // 重置工具栏显示状态
             showToolbar();
@@ -1110,7 +1235,7 @@
         loadData();
         console.log('✅ 大图预览已加载');
         console.log('💡 功能：左右切换、下载下拉菜单、捐赠二维码、键盘控制、点击大图切换工具栏');
-        console.log('💡 大图预览时左上角汉堡按钮已隐藏');
+        console.log('💡 分页控制面板已浮动在底部内侧，卡片已占满全屏');
     </script>
 
 </body>
