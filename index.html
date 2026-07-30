@@ -394,12 +394,65 @@
             font-family: inherit;
             white-space: nowrap;
             text-decoration: none;
+            position: relative;
         }
 
         .toolbar .btn:hover {
             background: rgba(255, 255, 255, 0.12);
             color: #fff;
             border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        /* ===== ★★★ 捐赠悬停二维码 ★★★ ===== */
+        .donate-qr-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .donate-qr-wrapper .qr-tooltip {
+            display: none;
+            position: absolute;
+            bottom: calc(100% + 12px);
+            right: 50%;
+            transform: translateX(50%);
+            background: rgba(20, 20, 35, 0.95);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
+            z-index: 30;
+            min-width: 180px;
+        }
+
+        .donate-qr-wrapper .qr-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 8px solid transparent;
+            border-top-color: rgba(20, 20, 35, 0.95);
+        }
+
+        .donate-qr-wrapper .qr-tooltip img {
+            width: 160px;
+            height: 160px;
+            display: block;
+            border-radius: 6px;
+            background: #fff;
+            padding: 4px;
+        }
+
+        .donate-qr-wrapper .qr-tooltip .qr-label {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        .donate-qr-wrapper:hover .qr-tooltip {
+            display: block;
         }
 
         /* 下载下拉菜单 */
@@ -433,55 +486,10 @@
         .dropdown-menu a:hover { background: rgba(255, 255, 255, 0.06); color: #fff; }
         .dropdown-menu .divider { height: 1px; background: rgba(255, 255, 255, 0.06); margin: 4px 12px; }
 
-        /* 捐赠浮窗 */
+        /* 捐赠浮窗 - 保留但默认隐藏，悬停显示二维码替代 */
         .donate-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 1001;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(4px);
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
+            display: none !important;
         }
-        .donate-modal.show { display: flex; }
-        .donate-box {
-            background: var(--bg-secondary, #1a1a2e);
-            border-radius: 16px;
-            padding: 32px 40px 28px;
-            max-width: 360px;
-            width: 90%;
-            text-align: center;
-            cursor: default;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-        }
-        .donate-box img {
-            width: 200px;
-            height: 200px;
-            object-fit: contain;
-            border-radius: 8px;
-            background: #fff;
-            padding: 8px;
-            margin-bottom: 12px;
-        }
-        .donate-box p { color: rgba(255, 255, 255, 0.5); font-size: 14px; margin-bottom: 16px; line-height: 1.5; }
-        .donate-box .close-donate {
-            background: rgba(255, 255, 255, 0.06);
-            border: none;
-            color: rgba(255, 255, 255, 0.5);
-            padding: 6px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 13px;
-            transition: 0.2s;
-            font-family: inherit;
-        }
-        .donate-box .close-donate:hover { background: rgba(255, 255, 255, 0.12); color: #fff; }
 
         /* 左右箭头 */
         .arrow {
@@ -556,8 +564,8 @@
             .toolbar .btn { font-size: 11px; padding: 5px 10px; }
             .info-panel .copyright { font-size: 13px; }
             .info-panel .desc { font-size: 12px; -webkit-line-clamp: 1; }
-            .donate-box { padding: 24px 20px; }
-            .donate-box img { width: 160px; height: 160px; }
+            .donate-qr-wrapper .qr-tooltip img { width: 130px; height: 130px; }
+            .donate-qr-wrapper .qr-tooltip { min-width: 150px; padding: 10px; }
         }
         @media (max-width: 600px) {
             .grid { grid-template-columns: repeat(3, 1fr); padding-bottom: 65px; }
@@ -567,6 +575,8 @@
                 bottom: 10px;
                 border-radius: 8px;
             }
+            .donate-qr-wrapper .qr-tooltip img { width: 110px; height: 110px; }
+            .donate-qr-wrapper .qr-tooltip { min-width: 130px; padding: 8px; }
         }
         @media (max-width: 400px) {
             .grid { 
@@ -604,6 +614,9 @@
             .toolbar .btn { padding: 6px 10px; }
             .dropdown-menu { min-width: 120px; right: -10px; }
             .dropdown-menu a { font-size: 12px; padding: 6px 14px; }
+            .donate-qr-wrapper .qr-tooltip img { width: 90px; height: 90px; }
+            .donate-qr-wrapper .qr-tooltip { min-width: 110px; padding: 6px; }
+            .donate-qr-wrapper .qr-tooltip .qr-label { font-size: 10px; margin-top: 4px; }
         }
     </style>
 </head>
@@ -659,7 +672,15 @@
                 </div>
             </div>
 
-            <button class="btn" id="donateBtn"><i class="fas fa-heart" style="color:#ff6b6b;"></i> <span>捐赠</span></button>
+            <!-- ===== ★★★ 捐赠按钮 - 悬停显示二维码 ★★★ ===== -->
+            <div class="donate-qr-wrapper">
+                <button class="btn" id="donateBtn"><i class="fas fa-heart" style="color:#ff6b6b;"></i> <span>捐赠</span></button>
+                <div class="qr-tooltip">
+                    <img src="https://img.hangdn.com/hd/wx_alipay.png" alt="捐赠二维码" />
+                    <div class="qr-label">微信 / 支付宝 扫码支持</div>
+                </div>
+            </div>
+
             <button class="btn" id="closePreviewBtn"><i class="fas fa-times"></i></button>
         </div>
 
@@ -671,10 +692,10 @@
         </div>
     </div>
 
-    <!-- ===== 捐赠浮窗 ===== -->
+    <!-- ===== 捐赠浮窗（已废弃，改用悬停显示） ===== -->
     <div class="donate-modal" id="donateModal">
         <div class="donate-box">
-            <img src="https://img.hangdn.com/hd/wx_alipay.png" alt="捐赠二维码" />
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://bing.ee123.net/donate" alt="捐赠二维码" />
             <p>扫码支持本站<br /><span style="font-size:12px;opacity:0.5;">您的支持是我持续更新的动力 ❤️</span></p>
             <button class="close-donate" id="closeDonate">关闭</button>
         </div>
@@ -1163,21 +1184,9 @@
         }
 
         // ============================================================
-        // 6.2 捐赠浮窗
+        // 6.2 ★★★ 捐赠功能已改为悬停显示二维码，不再需要点击弹窗 ★★★
         // ============================================================
-        donateBtn.addEventListener('click', function() {
-            donateModal.classList.add('show');
-        });
-
-        closeDonate.addEventListener('click', function() {
-            donateModal.classList.remove('show');
-        });
-
-        donateModal.addEventListener('click', function(e) {
-            if (e.target === donateModal) {
-                donateModal.classList.remove('show');
-            }
-        });
+        // 保留 donateBtn 变量但不绑定点击事件，悬停由 CSS 控制
 
         // ============================================================
         // 7. 缩放
@@ -1243,7 +1252,7 @@
         // ============================================================
         loadData();
         console.log('✅ 大图预览已加载');
-        console.log('💡 功能：左右切换、下载下拉菜单、捐赠二维码、键盘控制、点击大图切换工具栏');
+        console.log('💡 功能：左右切换、下载下拉菜单、悬停捐赠显示二维码、键盘控制、点击大图切换工具栏');
         console.log('💡 分页控制面板已浮动在底部内侧，卡片已占满全屏');
     </script>
 
