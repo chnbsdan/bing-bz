@@ -91,6 +91,8 @@
         /* ===== 导航栏 ===== */
         .nav-toggle { position: fixed; top: 12px; left: 12px; z-index: 1001; background: var(--nav-bg); backdrop-filter: blur(8px); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-primary); font-size: 20px; padding: 6px 12px; cursor: pointer; transition: 0.2s; line-height: 1; }
         .nav-toggle:hover { background: var(--accent-hover); border-color: rgba(79,195,247,0.2); }
+        /* ★★★ 大图预览时隐藏汉堡按钮 ★★★ */
+        .nav-toggle.hidden { display: none !important; }
         .navbar { position: fixed; top: 12px; left: 56px; z-index: 1000; background: var(--nav-bg); backdrop-filter: blur(16px); border: 1px solid var(--border-color); border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; min-width: 200px; opacity: 0; transform: translateY(-10px) scale(0.95); transition: opacity 0.25s ease, transform 0.25s ease; pointer-events: none; box-shadow: 0 8px 32px var(--shadow-color); max-width: 90vw; }
         .navbar.open { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
         .navbar-header { display: flex; justify-content: space-between; align-items: center; width: 100%; }
@@ -680,7 +682,7 @@
             lastTranslateX = 0,
             lastTranslateY = 0;
 
-        // ★★★ 工具栏显示状态 ★★★
+        // 工具栏显示状态
         var toolbarVisible = true;
 
         // ============================================================
@@ -847,7 +849,7 @@
         }
 
         // ============================================================
-        // 6. ★★★ 大图预览（含点击切换工具栏） ★★★
+        // 6. 大图预览（含点击切换工具栏）
         // ============================================================
 
         function openPreview(index) {
@@ -864,10 +866,13 @@
             var imgSrc = getImageUrl(currentPreviewItem.jpg || currentPreviewItem.webp || '');
             previewOverlay.style.setProperty('--bg-url', 'url(' + imgSrc + ')');
 
-            // ★★★ 显示工具栏 ★★★
+            // ★★★ 隐藏汉堡按钮 ★★★
+            navToggle.classList.add('hidden');
+
+            // 显示工具栏
             showToolbar();
 
-            // ★★★ 点击图片切换工具栏 ★★★
+            // 点击图片切换工具栏
             previewImg.onclick = function(e) {
                 e.stopPropagation();
                 toggleToolbar();
@@ -894,11 +899,13 @@
         function closePreview() {
             previewOverlay.classList.remove('active');
             document.body.style.overflow = 'auto';
-            // ★★★ 重置工具栏显示状态 ★★★
+            // ★★★ 恢复显示汉堡按钮 ★★★
+            navToggle.classList.remove('hidden');
+            // 重置工具栏显示状态
             showToolbar();
         }
 
-        // ★★★ 切换工具栏显示/隐藏 ★★★
+        // 切换工具栏显示/隐藏
         function toggleToolbar() {
             toolbarVisible = !toolbarVisible;
 
@@ -927,7 +934,7 @@
             }
         }
 
-        // ★★★ 显示工具栏 ★★★
+        // 显示工具栏
         function showToolbar() {
             toolbarVisible = true;
             var allElements = document.querySelectorAll('.arrow, .toolbar, .info-panel');
@@ -972,7 +979,7 @@
         closePreviewBtn.addEventListener('click', closePreview);
 
         // ============================================================
-        // 6.1 ★★★ 下载下拉菜单 ★★★
+        // 6.1 下载下拉菜单
         // ============================================================
         downloadBtn.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -1022,7 +1029,7 @@
         }
 
         // ============================================================
-        // 6.2 ★★★ 捐赠浮窗 ★★★
+        // 6.2 捐赠浮窗
         // ============================================================
         donateBtn.addEventListener('click', function() {
             donateModal.classList.add('show');
@@ -1103,6 +1110,7 @@
         loadData();
         console.log('✅ 大图预览已加载');
         console.log('💡 功能：左右切换、下载下拉菜单、捐赠二维码、键盘控制、点击大图切换工具栏');
+        console.log('💡 大图预览时左上角汉堡按钮已隐藏');
     </script>
 
 </body>
