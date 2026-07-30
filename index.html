@@ -118,7 +118,7 @@
         #themeToggle { background: var(--accent-hover); color: var(--accent-color); border-radius: 50%; width: 32px; height: 32px; padding: 0; display: flex; align-items: center; justify-content: center; }
         #themeToggle:hover { background: rgba(79,195,247,0.3); color: var(--text-primary); }
 
-        /* ===== 应用 - 占满全屏 ===== */
+        /* ===== ★★★ 应用 - 关键修复 ★★★ ===== */
         .app { 
             display: flex; 
             flex-direction: column; 
@@ -129,38 +129,40 @@
             background: var(--bg-primary);
         }
         
+        /* ===== ★★★ 网格 - 真正占满全屏 ★★★ ===== */
         .grid { 
             display: grid; 
             grid-template-columns: repeat(6, 1fr); 
             gap: 4px; 
-            flex: 1 1 auto;
-            align-content: start; 
+            /* ★★★ 关键：用 flex:1 撑满剩余空间 ★★★ */
+            flex: 1;
+            /* ★★★ 改用 stretch 让卡片拉伸填满 ★★★ */
+            align-content: stretch;
             overflow-y: auto; 
             padding: 4px; 
             padding-bottom: 75px;
             scroll-behavior: smooth; 
             min-height: 0;
-            height: 100%;
             background: var(--bg-primary);
         }
-        .grid::-webkit-scrollbar { width: 6px; }
-        .grid::-webkit-scrollbar-track { background: transparent; }
-        .grid::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
-        .grid::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
 
-        /* ===== 卡片 - 强制统一尺寸 ===== */
+        /* ===== ★★★ 让每个卡片自动拉伸填满网格单元 ★★★ ===== */
         .card {
             position: relative;
             border-radius: 4px;
             overflow: hidden;
             background: var(--bg-card);
-            aspect-ratio: 16 / 9;
-            min-height: 0;
+            /* ★★★ 使用 100% 高度让卡片填满网格单元 ★★★ */
             width: 100%;
+            height: 100%;
+            min-height: 0;
             cursor: pointer;
             transition: background 0.3s ease;
+            /* ★★★ 保持宽高比，但用 object-fit 处理 ★★★ */
+            aspect-ratio: 16 / 9;
         }
 
+        /* ===== ★★★ 图片填满卡片 ★★★ ===== */
         .card img {
             width: 100%;
             height: 100%;
@@ -211,7 +213,7 @@
         .card .info .title { font-size: 14px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .card .info .copyright { font-size: 12px; color: rgba(255,255,255,0.4); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-        /* ===== ★★★ 分页 - 浮动在底部内侧 ★★★ ===== */
+        /* ===== ★★★ 分页 - 浮动在底部上方 ★★★ ===== */
         .pagination { 
             position: fixed; 
             bottom: 20px; 
@@ -325,7 +327,6 @@
         }
         .preview-overlay.active { display: flex; }
 
-        /* 模糊背景 */
         .preview-overlay::before {
             content: '';
             position: fixed;
@@ -403,7 +404,7 @@
             border-color: rgba(255, 255, 255, 0.15);
         }
 
-        /* ===== ★★★ 捐赠悬停二维码 - 向下展开 ★★★ ===== */
+        /* ===== 捐赠悬停二维码 ===== */
         .donate-qr-wrapper {
             position: relative;
             display: inline-block;
@@ -485,10 +486,7 @@
         .dropdown-menu a:hover { background: rgba(255, 255, 255, 0.06); color: #fff; }
         .dropdown-menu .divider { height: 1px; background: rgba(255, 255, 255, 0.06); margin: 4px 12px; }
 
-        /* 捐赠浮窗 - 废弃 */
-        .donate-modal {
-            display: none !important;
-        }
+        .donate-modal { display: none !important; }
 
         /* 左右箭头 */
         .arrow {
@@ -547,12 +545,7 @@
             .grid { grid-template-columns: repeat(4, 1fr); padding-bottom: 70px; }
             .navbar { left: 52px; min-width: 160px; padding: 12px 14px; top: 10px; }
             .nav-toggle { font-size: 18px; padding: 5px 10px; top: 10px; left: 10px; }
-            .pagination { 
-                padding: 6px 12px; 
-                gap: 6px; 
-                bottom: 14px;
-                border-radius: 10px;
-            }
+            .pagination { padding: 6px 12px; gap: 6px; bottom: 14px; border-radius: 10px; }
             .pagination button { font-size: 12px; padding: 4px 10px; }
             .pagination .page-info { font-size: 12px; }
             .pagination .goto-box input { width: 40px; font-size: 12px; }
@@ -568,12 +561,7 @@
         }
         @media (max-width: 600px) {
             .grid { grid-template-columns: repeat(3, 1fr); padding-bottom: 65px; }
-            .pagination { 
-                padding: 5px 10px; 
-                gap: 4px;
-                bottom: 10px;
-                border-radius: 8px;
-            }
+            .pagination { padding: 5px 10px; gap: 4px; bottom: 10px; border-radius: 8px; }
             .donate-qr-wrapper .qr-tooltip img { width: 110px; height: 110px; }
             .donate-qr-wrapper .qr-tooltip { min-width: 130px; padding: 8px; }
         }
@@ -636,7 +624,7 @@
     <!-- ===== 应用 ===== -->
     <div class="app"><div class="grid" id="grid"></div></div>
 
-    <!-- ===== ★★★ 分页 - 浮动在底部内侧 ★★★ ===== -->
+    <!-- ===== 分页 - 浮动在底部上方 ===== -->
     <div class="pagination" id="pagination">
         <button id="prevBtn" disabled><i class="fas fa-chevron-left"></i> 上一页</button>
         <span class="page-info" id="pageInfo">第 1 / 1 页</span>
@@ -671,7 +659,6 @@
                 </div>
             </div>
 
-            <!-- ===== ★★★ 捐赠按钮 - 悬停向下显示二维码 ★★★ ===== -->
             <div class="donate-qr-wrapper">
                 <button class="btn" id="donateBtn"><i class="fas fa-heart" style="color:#ff6b6b;"></i> <span>捐赠</span></button>
                 <div class="qr-tooltip">
@@ -1003,7 +990,7 @@
         }
 
         // ============================================================
-        // 6. 大图预览（含点击切换工具栏）
+        // 6. 大图预览
         // ============================================================
 
         function openPreview(index) {
@@ -1016,17 +1003,12 @@
             showPreview(currentPreviewIndex);
             previewOverlay.classList.add('active');
             document.body.style.overflow = 'hidden';
-            // 更新模糊背景
             var imgSrc = getImageUrl(currentPreviewItem.jpg || currentPreviewItem.webp || '');
             previewOverlay.style.setProperty('--bg-url', 'url(' + imgSrc + ')');
 
-            // 隐藏汉堡按钮
             navToggle.classList.add('hidden');
-
-            // 显示工具栏
             showToolbar();
 
-            // 点击图片切换工具栏
             previewImg.onclick = function(e) {
                 e.stopPropagation();
                 toggleToolbar();
@@ -1045,7 +1027,6 @@
             previewCopyright.textContent = currentPreviewItem.copyright || '';
             previewDate.textContent = currentPreviewItem.date || '';
             previewDesc.textContent = currentPreviewItem.description || '';
-            // 更新模糊背景
             previewOverlay.style.setProperty('--bg-url', 'url(' + imgSrc + ')');
             resetZoom();
         }
@@ -1053,33 +1034,24 @@
         function closePreview() {
             previewOverlay.classList.remove('active');
             document.body.style.overflow = 'auto';
-            // 恢复显示汉堡按钮
             navToggle.classList.remove('hidden');
-            // 重置工具栏显示状态
             showToolbar();
         }
 
-        // 切换工具栏显示/隐藏
         function toggleToolbar() {
             toolbarVisible = !toolbarVisible;
-
-            // 控制箭头
             var arrows = document.querySelectorAll('.arrow');
             for (var i = 0; i < arrows.length; i++) {
                 arrows[i].style.transition = 'opacity 0.3s ease';
                 arrows[i].style.opacity = toolbarVisible ? '1' : '0';
                 arrows[i].style.pointerEvents = toolbarVisible ? '' : 'none';
             }
-
-            // 控制工具栏
             var toolbars = document.querySelectorAll('.toolbar');
             for (var i = 0; i < toolbars.length; i++) {
                 toolbars[i].style.transition = 'opacity 0.3s ease';
                 toolbars[i].style.opacity = toolbarVisible ? '1' : '0';
                 toolbars[i].style.pointerEvents = toolbarVisible ? '' : 'none';
             }
-
-            // 控制底部信息
             var infoPanels = document.querySelectorAll('.info-panel');
             for (var i = 0; i < infoPanels.length; i++) {
                 infoPanels[i].style.transition = 'opacity 0.3s ease';
@@ -1088,7 +1060,6 @@
             }
         }
 
-        // 显示工具栏
         function showToolbar() {
             toolbarVisible = true;
             var allElements = document.querySelectorAll('.arrow, .toolbar, .info-panel');
@@ -1099,7 +1070,6 @@
             }
         }
 
-        // 左右切换
         document.getElementById('prevPreviewBtn').addEventListener('click', function(e) {
             e.stopPropagation();
             showPreview(currentPreviewIndex - 1);
@@ -1111,7 +1081,6 @@
             showToolbar();
         });
 
-        // 键盘控制
         document.addEventListener('keydown', function(e) {
             if (!previewOverlay.classList.contains('active')) return;
             if (e.key === 'Escape') closePreview();
@@ -1125,7 +1094,6 @@
             }
         });
 
-        // 点击背景关闭
         previewOverlay.addEventListener('click', function(e) {
             if (e.target === previewOverlay) closePreview();
         });
@@ -1183,10 +1151,6 @@
         }
 
         // ============================================================
-        // 6.2 捐赠功能 - 悬停显示二维码
-        // ============================================================
-
-        // ============================================================
         // 7. 缩放
         // ============================================================
         var imageContainer = previewImg;
@@ -1236,7 +1200,6 @@
             updateTransform();
         }
 
-        // 鼠标拖拽
         previewImg.addEventListener('mousedown', startDrag);
         document.addEventListener('mousemove', moveDrag);
         document.addEventListener('mouseup', endDrag);
@@ -1250,8 +1213,7 @@
         // ============================================================
         loadData();
         console.log('✅ 大图预览已加载');
-        console.log('💡 功能：左右切换、下载下拉菜单、悬停捐赠显示二维码、键盘控制、点击大图切换工具栏');
-        console.log('💡 分页控制面板已浮动在底部内侧，卡片已占满全屏');
+        console.log('💡 分页控制面板浮动在底部上方，卡片已占满全屏');
     </script>
 
 </body>
