@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2024-05-24",
+      "copyright": "A family of African elephants in Tarangire National Park, Tanzania (© Vicki Jauron, Babylon and Beyond Photography/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.TarangireElephants_EN-US8865263185_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.TarangireElephants_EN-US8865263185_UHD.jpg"
+    },
+    {
       "date": "2024-05-23",
       "copyright": "'Feelings are Facts,' by artist Olafur Eliasson and architect Ma Yansong, Beijing, China (© Feng Li/Getty Images News)",
       "jpg": "https://cn.bing.com/th?id=OHR.DayOfLight_EN-US1723401316_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Himeji Castle, Himeji, Hyōgo Prefecture, Japan (© Julian Elliott Photography/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.JapanHimeji_EN-US1768279571_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.JapanHimeji_EN-US1768279571_UHD.jpg"
-    },
-    {
-      "date": "2024-04-12",
-      "copyright": "The Bahamas photographed from the International Space Station (© NASA)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BahamasSpace_EN-US1544254149_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BahamasSpace_EN-US1544254149_UHD.jpg"
     }
   ],
   "page": 20,
   "pageSize": 42,
-  "total": 2004,
+  "total": 2005,
   "totalPages": 48,
   "hasMore": true
 }

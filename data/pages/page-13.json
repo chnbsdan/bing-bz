@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2025-03-14",
+      "copyright": "Holi celebration in Jaipur, India (© powerofforever/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.HoliColors_EN-US9033637774_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.HoliColors_EN-US9033637774_UHD.jpg"
+    },
+    {
       "date": "2025-03-13",
       "copyright": "Château de Sully-sur-Loire, Center-Val de Loire, France (© StockPhotoAstur/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.ChateauLoire_EN-US8827570825_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "La Brecha de Rolando, Ordesa y Monte Perdido National Park, Spain (© Inaki Relanzon/Nature Picture Library/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.OrdesaSpain_EN-US9252424531_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.OrdesaSpain_EN-US9252424531_UHD.jpg"
-    },
-    {
-      "date": "2025-01-31",
-      "copyright": "Dragon dance, Wuhan, China (© Miao Jian/Wuhan Morning Post/Visual China Group via Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LunarDragon_EN-US9011723385_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LunarDragon_EN-US9011723385_UHD.jpg"
     }
   ],
   "page": 13,
   "pageSize": 42,
-  "total": 2004,
+  "total": 2005,
   "totalPages": 48,
   "hasMore": true
 }

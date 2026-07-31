@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2025-01-31",
+      "copyright": "Dragon dance, Wuhan, China (© Miao Jian/Wuhan Morning Post/Visual China Group via Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.LunarDragon_EN-US9011723385_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.LunarDragon_EN-US9011723385_UHD.jpg"
+    },
+    {
       "date": "2025-01-30",
       "copyright": "Short-eared owl hunting in heavy snow (© Dilshan Muthalib/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.FlyingOwl_EN-US8779625388_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "English National Ballet performing 'The Nutcracker' (© Caroline Holden/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.NutcrackerBallet_EN-US8927830113_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.NutcrackerBallet_EN-US8927830113_UHD.jpg"
-    },
-    {
-      "date": "2024-12-20",
-      "copyright": "Traditional red fishermen's cabins on the shore of Reinefjorden, Norway (© Pilat666/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ReinefjordenNorway_EN-US8636083241_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ReinefjordenNorway_EN-US8636083241_UHD.jpg"
     }
   ],
   "page": 14,
   "pageSize": 42,
-  "total": 2004,
+  "total": 2005,
   "totalPages": 48,
   "hasMore": true
 }

@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2026-06-19",
+      "copyright": "National Museum of African American History and Culture, Washington, DC (© Walter Bibikow/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.JuneteenthNMAAHC_EN-US6306942628_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.JuneteenthNMAAHC_EN-US6306942628_UHD.jpg"
+    },
+    {
       "date": "2026-06-18",
       "copyright": "Aerial view of the ruins of Sacsayhuamán, Cusco, Peru (© Creative-Family/Getty Images Plus)",
       "jpg": "https://cn.bing.com/th?id=OHR.Saqsaywaman_EN-US6250260694_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Skradinski Buk Waterfall in Krka National Park, Croatia (© Amazing Aerial Agency/Adobe Stock)",
       "jpg": "https://cn.bing.com/th?id=OHR.SkradinskiBuk_EN-US0750882952_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SkradinskiBuk_EN-US0750882952_UHD.jpg"
-    },
-    {
-      "date": "2026-05-08",
-      "copyright": "Sardinian donkey mare and foal, France (© Klein & Hubert/Nature Picture Library)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SardinianDonkey_EN-US0705945312_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SardinianDonkey_EN-US0705945312_UHD.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2004,
+  "total": 2005,
   "totalPages": 48,
   "hasMore": true
 }

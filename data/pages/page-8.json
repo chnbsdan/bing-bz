@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2025-10-10",
+      "copyright": "The Pillars of Creation viewed by the James Webb Space Telescope (© NASA)",
+      "jpg": "https://cn.bing.com/th?id=OHR.WebbPillars_EN-US0251661895_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.WebbPillars_EN-US0251661895_UHD.jpg"
+    },
+    {
       "date": "2025-10-09",
       "copyright": "Day octopus in the waters off Maui, Hawaii (© Dave Fleetham/plainpicture)",
       "jpg": "https://cn.bing.com/th?id=OHR.OctopusCyanea_EN-US0194861123_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Aerial view of Plaza Mayor, Madrid, Spain (© AirPano LLC/Amazing Aerial Agency)",
       "jpg": "https://cn.bing.com/th?id=OHR.PlazaMayor_EN-US3692727880_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PlazaMayor_EN-US3692727880_UHD.jpg"
-    },
-    {
-      "date": "2025-08-29",
-      "copyright": "Great white egret, Hungary (© Markus Varesvuo/Nature Picture Library)",
-      "jpg": "https://cn.bing.com/th?id=OHR.WhiteEgret_EN-US3605994040_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.WhiteEgret_EN-US3605994040_UHD.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2004,
+  "total": 2005,
   "totalPages": 48,
   "hasMore": true
 }

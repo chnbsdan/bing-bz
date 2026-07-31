@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2021-12-24",
+      "copyright": "湖畔的一棵小圣诞树，奥地利魏森湖 (© nagelestock/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.Rauchnachte_ZH-CN6061051054_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.Rauchnachte_ZH-CN6061051054_UHD.jpg"
+    },
+    {
       "date": "2021-12-23",
       "copyright": "两只玩耍的北极熊，加拿大丘吉尔镇 (© Cheryl Ramalho/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ManitobaBears_ZH-CN5877672648_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "鸟瞰埃尔塔霍峡谷, 西班牙龙达小镇 (© Jude Newkirk/Amazing Aerial Agency)",
       "jpg": "https://cn.bing.com/th?id=OHR.ElTajo_ZH-CN2134749418_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ElTajo_ZH-CN2134749418_UHD.jpg"
-    },
-    {
-      "date": "2021-11-12",
-      "copyright": "海狸湾度假公园, 美国俄克拉何马州 (© Inge Johnsson/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BeaversBend_ZH-CN1916035610_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BeaversBend_ZH-CN1916035610_UHD.jpg"
     }
   ],
   "page": 41,
   "pageSize": 42,
-  "total": 2004,
+  "total": 2005,
   "totalPages": 48,
   "hasMore": true
 }

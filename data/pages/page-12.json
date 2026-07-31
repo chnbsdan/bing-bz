@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2025-04-25",
+      "copyright": "Spire Cove in Kenai Fjords National Park, Seward, Alaska (© Wander Photography/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.KenaiSpires_EN-US3294247007_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.KenaiSpires_EN-US3294247007_UHD.jpg"
+    },
+    {
       "date": "2025-04-24",
       "copyright": "Shakespeare's Globe, London, England (© Peter Dazeley/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.GlobeTheatre_EN-US3262022178_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Dolmen of Sorginetxe, Basque Country, Álava, Spain (© David Herraez Calzada/plainpicture)",
       "jpg": "https://cn.bing.com/th?id=OHR.BasqueDolmen_EN-US9089569057_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BasqueDolmen_EN-US9089569057_UHD.jpg"
-    },
-    {
-      "date": "2025-03-14",
-      "copyright": "Holi celebration in Jaipur, India (© powerofforever/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.HoliColors_EN-US9033637774_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.HoliColors_EN-US9033637774_UHD.jpg"
     }
   ],
   "page": 12,
   "pageSize": 42,
-  "total": 2004,
+  "total": 2005,
   "totalPages": 48,
   "hasMore": true
 }

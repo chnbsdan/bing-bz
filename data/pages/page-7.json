@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2025-11-21",
+      "copyright": "Artist Saype poses with his land art painting at UN Headquarters, Geneva, Switzerland (© Valentin Flauraud/EPA-EFE/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SaypeGeneva_EN-US6121087903_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SaypeGeneva_EN-US6121087903_UHD.jpg"
+    },
+    {
       "date": "2025-11-20",
       "copyright": "Hungarian Parliament Building, Budapest, Hungary (© Alexander Spatari/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BudapestParliament_EN-US5929195878_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Coral reef surrounding the island of Monuriki, Mamanuca Islands, Fiji (© David Wall/SuperStock)",
       "jpg": "https://cn.bing.com/th?id=OHR.MonurikiFiji_EN-US0326449622_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MonurikiFiji_EN-US0326449622_UHD.jpg"
-    },
-    {
-      "date": "2025-10-10",
-      "copyright": "The Pillars of Creation viewed by the James Webb Space Telescope (© NASA)",
-      "jpg": "https://cn.bing.com/th?id=OHR.WebbPillars_EN-US0251661895_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.WebbPillars_EN-US0251661895_UHD.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2004,
+  "total": 2005,
   "totalPages": 48,
   "hasMore": true
 }

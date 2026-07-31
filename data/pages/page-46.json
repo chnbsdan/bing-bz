@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2021-05-28",
+      "copyright": "马哈拉施特拉邦的Varandha Ghat，印度 (© AmitRane1975/iStock/Getty Images Plus)",
+      "jpg": "https://cn.bing.com/th?id=OHR.VarandhaGhat_ZH-CN1268827595_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.VarandhaGhat_ZH-CN1268827595_UHD.jpg"
+    },
+    {
       "date": "2021-05-27",
       "copyright": "2015年4月4日摄于Tear Drop Arch附近的月全食，犹他州纪念碑谷 (© Alan Dyer/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.TearDropEclipse_ZH-CN2282761840_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Dinan镇的鹅卵石铺成的街道，法国布列塔尼 (© Scott Wilson/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.FlowerTown_ZH-CN6364330124_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.FlowerTown_ZH-CN6364330124_UHD.jpg"
-    },
-    {
-      "date": "2021-04-16",
-      "copyright": "亚伯拉罕湖中的树，加拿大艾伯塔 (© Coolbiere/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AlbertaTrunks_ZH-CN6124025876_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AlbertaTrunks_ZH-CN6124025876_UHD.jpg"
     }
   ],
   "page": 46,
   "pageSize": 42,
-  "total": 2004,
+  "total": 2005,
   "totalPages": 48,
   "hasMore": true
 }
