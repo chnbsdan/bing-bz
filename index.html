@@ -45,6 +45,10 @@
             --meta-shadow: 0 2px 20px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.4);
             --resolution-bg: #1a1a2e;
             --detail-panel-bg: #1a1a2e;
+            --comment-bg: #1a1a2e;
+            --comment-border: rgba(255,255,255,0.06);
+            --comment-text: rgba(255,255,255,0.85);
+            --comment-muted: rgba(255,255,255,0.4);
         }
 
         [data-theme="light"] {
@@ -80,6 +84,10 @@
             --meta-shadow: 0 2px 20px rgba(255,255,255,0.9), 0 0 40px rgba(255,255,255,0.4);
             --resolution-bg: #ffffff;
             --detail-panel-bg: #ffffff;
+            --comment-bg: #ffffff;
+            --comment-border: rgba(0,0,0,0.06);
+            --comment-text: rgba(0,0,0,0.85);
+            --comment-muted: rgba(0,0,0,0.4);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -118,19 +126,389 @@
         #themeToggle { background: var(--accent-hover); color: var(--accent-color); border-radius: 50%; width: 32px; height: 32px; padding: 0; display: flex; align-items: center; justify-content: center; }
         #themeToggle:hover { background: rgba(79,195,247,0.3); color: var(--text-primary); }
 
-        /* ===== ★★★ 应用 - 使用 calc 精确计算 ★★★ ===== */
+        /* ===== ★★★ 评论按钮（导航栏上方） ★★★ ===== */
+        .comment-nav-btn {
+            position: fixed;
+            top: 12px;
+            right: 12px;
+            z-index: 1001;
+            background: var(--nav-bg);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 14px;
+            padding: 6px 14px;
+            cursor: pointer;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+        }
+        .comment-nav-btn:hover {
+            background: var(--accent-hover);
+            border-color: rgba(79,195,247,0.2);
+        }
+        .comment-nav-btn .badge-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #ff6b6b;
+            border-radius: 50%;
+            margin-left: 2px;
+            animation: pulse-dot 2s infinite;
+        }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+
+        /* ===== ★★★ 评论弹窗 ★★★ ===== */
+        .comment-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2000;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.25s ease;
+        }
+        .comment-overlay.active { display: flex; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px) scale(0.96); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .comment-modal {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            width: 90%;
+            max-width: 680px;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+            border: 1px solid var(--border-color);
+            animation: slideUp 0.3s ease;
+            overflow: hidden;
+        }
+
+        /* 评论弹窗头部 */
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 24px 14px;
+            border-bottom: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+        .comment-header h2 {
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .comment-header h2 i {
+            color: var(--accent-color);
+        }
+        .comment-header .close-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 20px;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+        .comment-header .close-btn:hover {
+            background: var(--btn-hover);
+            color: var(--text-primary);
+        }
+
+        /* 评论主体 - 可滚动 */
+        .comment-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px 24px 16px;
+        }
+        .comment-body::-webkit-scrollbar { width: 4px; }
+        .comment-body::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 2px; }
+
+        /* 评论输入区 */
+        .comment-input-area {
+            background: var(--input-bg);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+            border: 1px solid var(--input-border);
+            transition: border-color 0.2s;
+        }
+        .comment-input-area:focus-within {
+            border-color: var(--accent-color);
+        }
+        .comment-input-area textarea {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            font-size: 14px;
+            resize: vertical;
+            min-height: 60px;
+            max-height: 120px;
+            outline: none;
+            font-family: inherit;
+        }
+        .comment-input-area textarea::placeholder {
+            color: var(--text-muted);
+        }
+        .comment-input-row {
+            display: flex;
+            gap: 10px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        .comment-input-row input {
+            flex: 1;
+            min-width: 100px;
+            background: var(--bg-primary);
+            border: 1px solid var(--input-border);
+            border-radius: 6px;
+            padding: 6px 12px;
+            color: var(--text-primary);
+            font-size: 13px;
+            outline: none;
+            transition: 0.2s;
+            font-family: inherit;
+        }
+        .comment-input-row input:focus {
+            border-color: var(--accent-color);
+        }
+        .comment-input-row input::placeholder {
+            color: var(--text-muted);
+        }
+        .comment-submit-btn {
+            background: var(--accent-color);
+            border: none;
+            color: #fff;
+            padding: 6px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            transition: 0.2s;
+            font-family: inherit;
+            white-space: nowrap;
+        }
+        .comment-submit-btn:hover {
+            opacity: 0.85;
+            transform: scale(0.98);
+        }
+        .comment-submit-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* 评论列表 */
+        .comment-list-title {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .comment-list-title .count {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .comment-item {
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .comment-item:last-child {
+            border-bottom: none;
+        }
+        .comment-item .comment-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 6px;
+            flex-wrap: wrap;
+        }
+        .comment-item .comment-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--accent-hover);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-color);
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        .comment-item .comment-author {
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--text-primary);
+        }
+        .comment-item .comment-time {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        .comment-item .comment-browser {
+            font-size: 11px;
+            color: var(--text-muted);
+            background: var(--input-bg);
+            padding: 1px 8px;
+            border-radius: 10px;
+        }
+        .comment-item .comment-content {
+            font-size: 14px;
+            color: var(--comment-text);
+            line-height: 1.6;
+            padding-left: 42px;
+            word-break: break-word;
+        }
+        .comment-item .comment-actions {
+            padding-left: 42px;
+            margin-top: 6px;
+            display: flex;
+            gap: 16px;
+        }
+        .comment-item .comment-actions button {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 12px;
+            cursor: pointer;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-family: inherit;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        .comment-item .comment-actions button:hover {
+            color: var(--accent-color);
+            background: var(--accent-hover);
+        }
+        .comment-item .comment-actions .like-btn.liked {
+            color: #ff6b6b;
+        }
+        .comment-item .comment-actions .like-btn.liked i {
+            animation: likeAnim 0.3s ease;
+        }
+        @keyframes likeAnim {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.4); }
+            100% { transform: scale(1); }
+        }
+
+        /* 加载更多 */
+        .comment-load-more {
+            text-align: center;
+            padding: 12px 0;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+        .comment-load-more button {
+            background: none;
+            border: none;
+            color: var(--accent-color);
+            cursor: pointer;
+            font-size: 13px;
+            font-family: inherit;
+            transition: 0.2s;
+        }
+        .comment-load-more button:hover {
+            opacity: 0.7;
+        }
+
+        /* 空状态 */
+        .comment-empty {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+        }
+        .comment-empty i {
+            font-size: 40px;
+            margin-bottom: 12px;
+            opacity: 0.3;
+        }
+        .comment-empty p {
+            font-size: 14px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .comment-modal {
+                width: 95%;
+                max-height: 90vh;
+                border-radius: 12px;
+            }
+            .comment-header {
+                padding: 14px 16px 10px;
+            }
+            .comment-header h2 { font-size: 16px; }
+            .comment-body {
+                padding: 14px 16px 12px;
+            }
+            .comment-input-area { padding: 12px; }
+            .comment-input-row input { min-width: 70px; font-size: 12px; }
+            .comment-input-row { gap: 6px; }
+            .comment-item .comment-content { padding-left: 0; margin-top: 4px; }
+            .comment-item .comment-actions { padding-left: 0; }
+            .comment-nav-btn { 
+                font-size: 12px; 
+                padding: 4px 10px; 
+                top: 8px;
+                right: 8px;
+            }
+            .comment-nav-btn span { display: none; }
+        }
+        @media (max-width: 400px) {
+            .comment-modal {
+                width: 98%;
+                max-height: 92vh;
+                border-radius: 8px;
+            }
+            .comment-header h2 { font-size: 14px; }
+            .comment-header h2 i { font-size: 14px; }
+            .comment-body { padding: 10px 12px 8px; }
+            .comment-input-area textarea { min-height: 40px; font-size: 13px; }
+            .comment-input-row input { font-size: 11px; padding: 4px 8px; }
+            .comment-submit-btn { font-size: 12px; padding: 4px 14px; }
+            .comment-item .comment-content { font-size: 13px; }
+        }
+
+        /* ===== 应用 ===== */
         .app { 
             display: flex; 
             flex-direction: column; 
             width: 100%; 
             height: 100vh; 
-            height: 100dvh;  /* ★ 动态视口高度，解决手机浏览器地址栏问题 */
+            height: 100dvh;
             padding: 0; 
             overflow: hidden; 
             background: var(--bg-primary);
         }
         
-        /* ===== ★★★ 网格 - 使用 flex:1 撑满，不加 padding-bottom ★★★ ===== */
         .grid { 
             display: grid; 
             grid-template-columns: repeat(6, 1fr);
@@ -138,12 +516,10 @@
             gap: 4px; 
             flex: 1;
             padding: 4px; 
-            /* ★★★ 不加 padding-bottom，让网格真正占满 ★★★ */
             overflow-y: auto; 
             min-height: 0;
             background: var(--bg-primary);
             align-content: stretch;
-            /* ★★★ 解决闪屏：图片加载时保持稳定 ★★★ */
             contain: layout style paint;
         }
 
@@ -152,7 +528,7 @@
         .grid::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
         .grid::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
 
-        /* ===== 卡片 - 填满网格单元 ===== */
+        /* ===== 卡片 ===== */
         .card {
             position: relative;
             border-radius: 4px;
@@ -163,7 +539,6 @@
             min-height: 0;
             cursor: pointer;
             transition: background 0.3s ease;
-            /* ★★★ 解决闪屏 ★★★ */
             contain: strict;
         }
 
@@ -176,7 +551,6 @@
             z-index: 2;
             opacity: 0;
             transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1);
-            /* ★★★ 解决闪屏 ★★★ */
             background: var(--bg-card);
         }
 
@@ -219,7 +593,7 @@
         .card .info .title { font-size: 14px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .card .info .copyright { font-size: 12px; color: rgba(255,255,255,0.4); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-        /* ===== ★★★ 分页 - 浮动在底部，不占文档流 ★★★ ===== */
+        /* ===== 分页 ===== */
         .pagination { 
             position: fixed; 
             bottom: 16px; 
@@ -410,7 +784,7 @@
             border-color: rgba(255, 255, 255, 0.15);
         }
 
-        /* ===== 捐赠悬停二维码 ===== */
+        /* 捐赠悬停二维码 */
         .donate-qr-wrapper {
             position: relative;
             display: inline-block;
@@ -568,7 +942,7 @@
         }
 
         /* ============================================================
-           ★★★ 响应式 ★★★
+           响应式
            ============================================================ */
         @media (max-width: 1200px) { 
             .grid { grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(5, 1fr); } 
@@ -577,10 +951,7 @@
             .grid { grid-template-columns: repeat(5, 1fr); grid-template-rows: repeat(6, 1fr); } 
         }
         @media (max-width: 768px) {
-            .grid { 
-                grid-template-columns: repeat(4, 1fr); 
-                grid-template-rows: repeat(7, 1fr);
-            }
+            .grid { grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(7, 1fr); }
             .navbar { left: 52px; min-width: 160px; padding: 12px 14px; top: 10px; }
             .nav-toggle { font-size: 18px; padding: 5px 10px; top: 10px; left: 10px; }
             .pagination { padding: 6px 12px; gap: 6px; bottom: 12px; border-radius: 10px; }
@@ -597,12 +968,10 @@
             .donate-qr-wrapper .qr-tooltip { min-width: 260px; padding: 10px 12px; }
             .donate-qr-wrapper .qr-tooltip .qr-item img { width: 110px; height: 110px; }
             .donate-qr-wrapper .qr-tooltip .qr-row { gap: 12px; }
+            .comment-nav-btn { top: 10px; right: 10px; }
         }
         @media (max-width: 576px) {
-            .grid { 
-                grid-template-columns: repeat(3, 1fr); 
-                grid-template-rows: repeat(9, 1fr);
-            }
+            .grid { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(9, 1fr); }
             .pagination { padding: 5px 10px; gap: 4px; bottom: 10px; border-radius: 8px; }
             .donate-qr-wrapper .qr-tooltip { min-width: 220px; padding: 8px 10px; }
             .donate-qr-wrapper .qr-tooltip .qr-item img { width: 90px; height: 90px; }
@@ -669,10 +1038,59 @@
         <div class="nav-actions"><button id="homeBtn"><i class="fas fa-home"></i> 首页</button><a href="/api" target="_blank"><i class="fas fa-code"></i> API</a><a href="https://aoso.hangdn.com" target="_blank" rel="noopener"><i class="fas fa-blog"></i> 博客</a><button id="themeToggle"><i class="fas fa-moon"></i></button></div>
     </div>
 
+    <!-- ===== ★★★ 评论按钮（导航栏上方） ★★★ ===== -->
+    <button class="comment-nav-btn" id="commentNavBtn">
+        <i class="fas fa-comment"></i>
+        <span>留言</span>
+        <span class="badge-dot"></span>
+    </button>
+
+    <!-- ===== ★★★ 评论弹窗 ★★★ ===== -->
+    <div class="comment-overlay" id="commentOverlay">
+        <div class="comment-modal">
+            <!-- 头部 -->
+            <div class="comment-header">
+                <h2><i class="fas fa-comment-dots"></i> 留言反馈</h2>
+                <button class="close-btn" id="closeCommentBtn"><i class="fas fa-times"></i></button>
+            </div>
+            <!-- 主体 -->
+            <div class="comment-body" id="commentBody">
+                <!-- 输入区 -->
+                <div class="comment-input-area">
+                    <textarea id="commentText" placeholder="欢迎欣赏必应每日一图，有什么想法就留言吧……" rows="2"></textarea>
+                    <div class="comment-input-row">
+                        <input type="text" id="commentNick" placeholder="昵称" />
+                        <input type="email" id="commentEmail" placeholder="邮箱" />
+                        <input type="text" id="commentSite" placeholder="网址" />
+                        <button class="comment-submit-btn" id="commentSubmitBtn">提交</button>
+                    </div>
+                </div>
+                <!-- 评论列表标题 -->
+                <div class="comment-list-title">
+                    <i class="fas fa-comments"></i>
+                    全部留言 <span class="count" id="commentCount">0</span> 条
+                    <span style="margin-left:auto;font-size:12px;color:var(--text-muted);">
+                        <span id="sortByTime" style="cursor:pointer;color:var(--accent-color);">正序</span>
+                        <span style="color:var(--text-faint);">|</span>
+                        <span id="sortByHeat" style="cursor:pointer;">热度</span>
+                    </span>
+                </div>
+                <!-- 评论列表 -->
+                <div id="commentList">
+                    <!-- 动态渲染 -->
+                </div>
+                <!-- 加载更多 -->
+                <div class="comment-load-more" id="commentLoadMore">
+                    <button id="loadMoreBtn">加载更多 <i class="fas fa-chevron-down"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- ===== 应用 ===== -->
     <div class="app"><div class="grid" id="grid"></div></div>
 
-    <!-- ===== 分页 - 浮动在底部 ===== -->
+    <!-- ===== 分页 ===== -->
     <div class="pagination" id="pagination">
         <button id="prevBtn" disabled><i class="fas fa-chevron-left"></i> 上一页</button>
         <span class="page-info" id="pageInfo">第 1 / 1 页</span>
@@ -835,7 +1253,238 @@
         });
 
         // ============================================================
-        // 5. 数据加载
+        // 5. ★★★ 评论系统 ★★★
+        // ============================================================
+        var COMMENT_API = 'https://waline.hangdn.com';
+        var comments = [];
+        var commentPage = 1;
+        var commentPageSize = 10;
+        var commentTotal = 0;
+        var commentSort = 'time'; // 'time' | 'heat'
+        var commentOrder = 'asc'; // 'asc' | 'desc'
+
+        var commentOverlay = document.getElementById('commentOverlay');
+        var commentBody = document.getElementById('commentBody');
+        var commentList = document.getElementById('commentList');
+        var commentCount = document.getElementById('commentCount');
+        var commentNavBtn = document.getElementById('commentNavBtn');
+        var closeCommentBtn = document.getElementById('closeCommentBtn');
+        var commentText = document.getElementById('commentText');
+        var commentNick = document.getElementById('commentNick');
+        var commentEmail = document.getElementById('commentEmail');
+        var commentSite = document.getElementById('commentSite');
+        var commentSubmitBtn = document.getElementById('commentSubmitBtn');
+        var loadMoreBtn = document.getElementById('loadMoreBtn');
+        var sortByTime = document.getElementById('sortByTime');
+        var sortByHeat = document.getElementById('sortByHeat');
+
+        // 打开评论
+        function openComment() {
+            commentOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            if (comments.length === 0) {
+                loadComments(1);
+            }
+        }
+
+        // 关闭评论
+        function closeComment() {
+            commentOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // 加载评论
+        async function loadComments(page, append) {
+            try {
+                var url = COMMENT_API + '/api/comment?page=' + page + '&pageSize=' + commentPageSize;
+                if (commentSort === 'time') {
+                    url += '&sort=time&order=' + commentOrder;
+                } else {
+                    url += '&sort=like&order=desc';
+                }
+                var res = await fetch(url);
+                if (!res.ok) throw new Error('加载失败');
+                var data = await res.json();
+                comments = data.data || [];
+                commentTotal = data.total || 0;
+                commentCount.textContent = commentTotal;
+                renderComments(comments);
+                loadMoreBtn.style.display = (page * commentPageSize < commentTotal) ? 'block' : 'none';
+                commentPage = page;
+            } catch (err) {
+                console.error('加载评论失败:', err);
+                commentList.innerHTML = '<div class="comment-empty"><i class="fas fa-exclamation-circle"></i><p>加载评论失败，请稍后重试</p></div>';
+            }
+        }
+
+        // 渲染评论
+        function renderComments(items) {
+            if (!items || items.length === 0) {
+                commentList.innerHTML = '<div class="comment-empty"><i class="fas fa-comment"></i><p>暂无留言，快来发表第一条吧 ✨</p></div>';
+                return;
+            }
+            var html = '';
+            items.forEach(function(item) {
+                var avatar = item.avatar || 'https://api.dicebear.com/7.x/identicon/svg?seed=' + (item.nick || 'user');
+                var nick = item.nick || '匿名';
+                var time = item.createdAt ? formatTime(item.createdAt) : '';
+                var content = item.content || '';
+                var like = item.like || 0;
+                var ua = item.ua || '';
+                var browser = getBrowser(ua);
+                var isLiked = item.isLiked || false;
+
+                html += '<div class="comment-item" data-id="' + (item.objectId || '') + '">';
+                html += '<div class="comment-meta">';
+                html += '<div class="comment-avatar"><img src="' + avatar + '" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" /></div>';
+                html += '<span class="comment-author">' + escapeHtml(nick) + '</span>';
+                html += '<span class="comment-time">' + time + '</span>';
+                if (browser) html += '<span class="comment-browser">' + browser + '</span>';
+                html += '</div>';
+                html += '<div class="comment-content">' + escapeHtml(content) + '</div>';
+                html += '<div class="comment-actions">';
+                html += '<button class="like-btn' + (isLiked ? ' liked' : '') + '" onclick="toggleLike(\'' + (item.objectId || '') + '\', this)"><i class="fas fa-heart"></i> <span class="like-count">' + like + '</span></button>';
+                html += '<button onclick="replyComment(\'' + (item.objectId || '') + '\', \'' + escapeHtml(nick) + '\')"><i class="fas fa-reply"></i> 回复</button>';
+                html += '</div>';
+                html += '</div>';
+            });
+            commentList.innerHTML = html;
+        }
+
+        // 切换排序
+        function setSort(type) {
+            if (commentSort === type) {
+                commentOrder = commentOrder === 'asc' ? 'desc' : 'asc';
+            } else {
+                commentSort = type;
+                commentOrder = type === 'time' ? 'asc' : 'desc';
+            }
+            sortByTime.style.color = commentSort === 'time' ? 'var(--accent-color)' : '';
+            sortByHeat.style.color = commentSort === 'heat' ? 'var(--accent-color)' : '';
+            loadComments(1);
+        }
+
+        sortByTime.addEventListener('click', function() { setSort('time'); });
+        sortByHeat.addEventListener('click', function() { setSort('heat'); });
+
+        // 加载更多
+        loadMoreBtn.addEventListener('click', function() {
+            loadComments(commentPage + 1);
+        });
+
+        // 提交评论
+        commentSubmitBtn.addEventListener('click', async function() {
+            var content = commentText.value.trim();
+            if (!content) {
+                alert('请输入评论内容');
+                return;
+            }
+            var nick = commentNick.value.trim() || '匿名';
+            var mail = commentEmail.value.trim() || '';
+            var site = commentSite.value.trim() || '';
+
+            commentSubmitBtn.disabled = true;
+            commentSubmitBtn.textContent = '提交中...';
+
+            try {
+                var data = {
+                    content: content,
+                    nick: nick,
+                    mail: mail,
+                    url: site,
+                    ua: navigator.userAgent
+                };
+                var res = await fetch(COMMENT_API + '/api/comment', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                if (!res.ok) throw new Error('提交失败');
+                commentText.value = '';
+                commentNick.value = '';
+                commentEmail.value = '';
+                commentSite.value = '';
+                loadComments(1);
+                alert('✅ 留言提交成功，审核后显示');
+            } catch (err) {
+                console.error('提交失败:', err);
+                alert('❌ 提交失败，请稍后重试');
+            }
+            commentSubmitBtn.disabled = false;
+            commentSubmitBtn.textContent = '提交';
+        });
+
+        // 键盘提交 (Ctrl+Enter)
+        commentText.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+                commentSubmitBtn.click();
+            }
+        });
+
+        // 点赞
+        window.toggleLike = async function(id, btn) {
+            if (!id) return;
+            try {
+                var res = await fetch(COMMENT_API + '/api/like/' + id, {
+                    method: 'POST'
+                });
+                if (!res.ok) throw new Error('点赞失败');
+                var data = await res.json();
+                var countSpan = btn.querySelector('.like-count');
+                var current = parseInt(countSpan.textContent) || 0;
+                countSpan.textContent = data.like || current + 1;
+                btn.classList.toggle('liked');
+            } catch (err) {
+                console.error('点赞失败:', err);
+            }
+        };
+
+        // 回复
+        window.replyComment = function(id, nick) {
+            commentText.value = '@' + nick + ' ';
+            commentText.focus();
+        };
+
+        // 辅助函数
+        function formatTime(iso) {
+            var d = new Date(iso);
+            var y = d.getFullYear();
+            var m = String(d.getMonth() + 1).padStart(2, '0');
+            var day = String(d.getDate()).padStart(2, '0');
+            var h = String(d.getHours()).padStart(2, '0');
+            var min = String(d.getMinutes()).padStart(2, '0');
+            return y + '-' + m + '-' + day + ' ' + h + ':' + min;
+        }
+
+        function getBrowser(ua) {
+            if (!ua) return '';
+            if (ua.indexOf('Chrome') > -1) return 'Chrome';
+            if (ua.indexOf('Firefox') > -1) return 'Firefox';
+            if (ua.indexOf('Safari') > -1) return 'Safari';
+            if (ua.indexOf('Edge') > -1) return 'Edge';
+            return '';
+        }
+
+        function escapeHtml(text) {
+            var div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // 评论按钮事件
+        commentNavBtn.addEventListener('click', openComment);
+        closeCommentBtn.addEventListener('click', closeComment);
+        commentOverlay.addEventListener('click', function(e) {
+            if (e.target === commentOverlay) closeComment();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && commentOverlay.classList.contains('active')) {
+                closeComment();
+            }
+        });
+
+        // ============================================================
+        // 6. 数据加载
         // ============================================================
         var allData = [];
         var filteredData = [];
@@ -884,7 +1533,7 @@
         var toolbarVisible = true;
 
         // ============================================================
-        // 5.1 加载数据
+        // 6.1 加载数据
         // ============================================================
         async function loadData() {
             showProgress();
@@ -913,7 +1562,7 @@
         }
 
         // ============================================================
-        // 5.2 渲染页面
+        // 6.2 渲染页面
         // ============================================================
         function renderPage(page) {
             var data = filteredData.length > 0 ? filteredData : allData;
@@ -989,7 +1638,7 @@
         }
 
         // ============================================================
-        // 5.3 分页事件
+        // 6.3 分页事件
         // ============================================================
         prevBtn.addEventListener('click', function() { if (currentPage > 1) renderPage(currentPage - 1); });
         nextBtn.addEventListener('click', function() { if (currentPage < totalPages) renderPage(currentPage + 1); });
@@ -1001,7 +1650,7 @@
         gotoInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') gotoBtn.click(); });
 
         // ============================================================
-        // 5.4 搜索
+        // 6.4 搜索
         // ============================================================
         function doSearch() {
             var keyword = searchInput.value.trim().toLowerCase();
@@ -1034,7 +1683,7 @@
         });
 
         // ============================================================
-        // 5.5 空状态
+        // 6.5 空状态
         // ============================================================
         function showEmpty() {
             grid.innerHTML =
@@ -1047,7 +1696,7 @@
         }
 
         // ============================================================
-        // 6. 大图预览
+        // 7. 大图预览
         // ============================================================
 
         function openPreview(index) {
@@ -1158,7 +1807,7 @@
         closePreviewBtn.addEventListener('click', closePreview);
 
         // ============================================================
-        // 6.1 下载下拉菜单
+        // 7.1 下载下拉菜单
         // ============================================================
         downloadBtn.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -1208,7 +1857,7 @@
         }
 
         // ============================================================
-        // 7. 缩放
+        // 8. 缩放
         // ============================================================
         var imageContainer = previewImg;
 
@@ -1266,12 +1915,12 @@
         previewImg.addEventListener('wheel', wheelZoom, { passive: false });
 
         // ============================================================
-        // 8. 启动
+        // 9. 启动
         // ============================================================
         loadData();
         console.log('✅ 大图预览已加载');
-        console.log('📱 桌面端: 6列×5行=30张 | 手机端: 2列×6行=12张');
-        console.log('💡 分页控制栏浮动在底部，不占文档流');
+        console.log('💡 点击右上角"留言"按钮打开评论弹窗');
+        console.log('💡 评论接口: ' + COMMENT_API);
     </script>
 
 </body>
