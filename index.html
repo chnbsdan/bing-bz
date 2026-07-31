@@ -118,30 +118,33 @@
         #themeToggle { background: var(--accent-hover); color: var(--accent-color); border-radius: 50%; width: 32px; height: 32px; padding: 0; display: flex; align-items: center; justify-content: center; }
         #themeToggle:hover { background: rgba(79,195,247,0.3); color: var(--text-primary); }
 
-        /* ===== 应用 - 占满全屏 ===== */
+        /* ===== ★★★ 应用 - 使用 calc 精确计算 ★★★ ===== */
         .app { 
             display: flex; 
             flex-direction: column; 
             width: 100%; 
             height: 100vh; 
+            height: 100dvh;  /* ★ 动态视口高度，解决手机浏览器地址栏问题 */
             padding: 0; 
             overflow: hidden; 
             background: var(--bg-primary);
         }
         
-        /* ===== ★★★ 网格 - 占满全屏，卡片自适应 ★★★ ===== */
+        /* ===== ★★★ 网格 - 使用 flex:1 撑满，不加 padding-bottom ★★★ ===== */
         .grid { 
             display: grid; 
             grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: repeat(5, 1fr);  /* ★★★ 固定5行，占满高度 ★★★ */
+            grid-template-rows: repeat(5, 1fr);
             gap: 4px; 
             flex: 1;
             padding: 4px; 
-            padding-bottom: 75px;  /* 为分页留空间 */
+            /* ★★★ 不加 padding-bottom，让网格真正占满 ★★★ */
             overflow-y: auto; 
             min-height: 0;
             background: var(--bg-primary);
             align-content: stretch;
+            /* ★★★ 解决闪屏：图片加载时保持稳定 ★★★ */
+            contain: layout style paint;
         }
 
         .grid::-webkit-scrollbar { width: 6px; }
@@ -149,28 +152,32 @@
         .grid::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
         .grid::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
 
-        /* ===== ★★★ 卡片 - 填满网格单元，无固定比例 ★★★ ===== */
+        /* ===== 卡片 - 填满网格单元 ===== */
         .card {
             position: relative;
             border-radius: 4px;
             overflow: hidden;
             background: var(--bg-card);
             width: 100%;
-            height: 100%;  /* ★★★ 填满网格单元 ★★★ */
+            height: 100%;
             min-height: 0;
             cursor: pointer;
             transition: background 0.3s ease;
+            /* ★★★ 解决闪屏 ★★★ */
+            contain: strict;
         }
 
         .card img {
             width: 100%;
             height: 100%;
-            object-fit: cover;  /* ★★★ 图片填满卡片 ★★★ */
+            object-fit: cover;
             display: block;
             position: relative;
             z-index: 2;
             opacity: 0;
             transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1);
+            /* ★★★ 解决闪屏 ★★★ */
+            background: var(--bg-card);
         }
 
         .card img.loaded { opacity: 1; }
@@ -188,7 +195,7 @@
             transform: scale(1.04);
             transition: opacity 0.6s ease;
             z-index: 1;
-            background-color: #1a1a2e;
+            background-color: var(--bg-card);
         }
 
         .card .placeholder-bg.hidden { opacity: 0; }
@@ -212,10 +219,10 @@
         .card .info .title { font-size: 14px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .card .info .copyright { font-size: 12px; color: rgba(255,255,255,0.4); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-        /* ===== 分页 - 浮动在底部上方 ===== */
+        /* ===== ★★★ 分页 - 浮动在底部，不占文档流 ★★★ ===== */
         .pagination { 
             position: fixed; 
-            bottom: 20px; 
+            bottom: 16px; 
             left: 50%; 
             transform: translateX(-50%); 
             display: flex; 
@@ -403,7 +410,7 @@
             border-color: rgba(255, 255, 255, 0.15);
         }
 
-        /* ===== 捐赠悬停二维码 - 长方形双码 ===== */
+        /* ===== 捐赠悬停二维码 ===== */
         .donate-qr-wrapper {
             position: relative;
             display: inline-block;
@@ -566,18 +573,17 @@
         @media (max-width: 1200px) { 
             .grid { grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(5, 1fr); } 
         }
-        @media (max-width: 1000px) { 
+        @media (max-width: 992px) { 
             .grid { grid-template-columns: repeat(5, 1fr); grid-template-rows: repeat(6, 1fr); } 
         }
-        @media (max-width: 800px) {
+        @media (max-width: 768px) {
             .grid { 
                 grid-template-columns: repeat(4, 1fr); 
                 grid-template-rows: repeat(7, 1fr);
-                padding-bottom: 70px; 
             }
             .navbar { left: 52px; min-width: 160px; padding: 12px 14px; top: 10px; }
             .nav-toggle { font-size: 18px; padding: 5px 10px; top: 10px; left: 10px; }
-            .pagination { padding: 6px 12px; gap: 6px; bottom: 14px; border-radius: 10px; }
+            .pagination { padding: 6px 12px; gap: 6px; bottom: 12px; border-radius: 10px; }
             .pagination button { font-size: 12px; padding: 4px 10px; }
             .pagination .page-info { font-size: 12px; }
             .pagination .goto-box input { width: 40px; font-size: 12px; }
@@ -592,11 +598,10 @@
             .donate-qr-wrapper .qr-tooltip .qr-item img { width: 110px; height: 110px; }
             .donate-qr-wrapper .qr-tooltip .qr-row { gap: 12px; }
         }
-        @media (max-width: 600px) {
+        @media (max-width: 576px) {
             .grid { 
                 grid-template-columns: repeat(3, 1fr); 
                 grid-template-rows: repeat(9, 1fr);
-                padding-bottom: 65px; 
             }
             .pagination { padding: 5px 10px; gap: 4px; bottom: 10px; border-radius: 8px; }
             .donate-qr-wrapper .qr-tooltip { min-width: 220px; padding: 8px 10px; }
@@ -607,10 +612,9 @@
         @media (max-width: 400px) {
             .grid { 
                 grid-template-columns: repeat(2, 1fr); 
-                grid-template-rows: repeat(6, 1fr);  /* ★★★ 手机端2列6行=12张 ★★★ */
+                grid-template-rows: repeat(6, 1fr);
                 gap: 2px; 
                 padding: 2px; 
-                padding-bottom: 60px;
             }
             .card { border-radius: 2px; }
             .card .info .title { font-size: 11px; }
@@ -642,11 +646,11 @@
             .toolbar .btn { padding: 6px 10px; }
             .dropdown-menu { min-width: 120px; right: -10px; }
             .dropdown-menu a { font-size: 12px; padding: 6px 14px; }
-            .donate-qr-wrapper .qr-tooltip { min-width: 180px; padding: 6px 8px; right: -20px; }
-            .donate-qr-wrapper .qr-tooltip .qr-item img { width: 70px; height: 70px; }
-            .donate-qr-wrapper .qr-tooltip .qr-row { gap: 8px; }
-            .donate-qr-wrapper .qr-tooltip .qr-item .qr-label { font-size: 9px; }
-            .donate-qr-wrapper .qr-tooltip .qr-footer { font-size: 9px; margin-top: 6px; padding-top: 6px; }
+            .donate-qr-wrapper .qr-tooltip { min-width: 170px; padding: 6px 8px; right: -20px; }
+            .donate-qr-wrapper .qr-tooltip .qr-item img { width: 65px; height: 65px; }
+            .donate-qr-wrapper .qr-tooltip .qr-row { gap: 6px; }
+            .donate-qr-wrapper .qr-tooltip .qr-item .qr-label { font-size: 8px; }
+            .donate-qr-wrapper .qr-tooltip .qr-footer { font-size: 8px; margin-top: 4px; padding-top: 4px; }
             .donate-qr-wrapper .qr-tooltip::before { right: 30px; }
         }
     </style>
@@ -668,7 +672,7 @@
     <!-- ===== 应用 ===== -->
     <div class="app"><div class="grid" id="grid"></div></div>
 
-    <!-- ===== 分页 ===== -->
+    <!-- ===== 分页 - 浮动在底部 ===== -->
     <div class="pagination" id="pagination">
         <button id="prevBtn" disabled><i class="fas fa-chevron-left"></i> 上一页</button>
         <span class="page-info" id="pageInfo">第 1 / 1 页</span>
@@ -708,11 +712,11 @@
                 <div class="qr-tooltip">
                     <div class="qr-row">
                         <div class="qr-item">
-                            <img src="https://img.hangdn.com/hd/wechat.png" alt="微信支付" />
+                            <img src="https://img.hangdn.com/hd/wx_alipay.png" alt="微信支付" />
                             <span class="qr-label wechat"><i class="fab fa-weixin"></i> 微信支付</span>
                         </div>
                         <div class="qr-item">
-                            <img src="https://img.hangdn.com/hd/alipay.png" alt="支付宝" />
+                            <img src="https://img.hangdn.com/hd/wx_alipay.png" alt="支付宝" />
                             <span class="qr-label alipay"><i class="fab fa-alipay"></i> 支付宝</span>
                         </div>
                     </div>
@@ -909,7 +913,7 @@
         }
 
         // ============================================================
-        // 5.2 渲染页面 - ★★★ 30张 = 6列 x 5行 ★★★
+        // 5.2 渲染页面
         // ============================================================
         function renderPage(page) {
             var data = filteredData.length > 0 ? filteredData : allData;
@@ -1266,7 +1270,8 @@
         // ============================================================
         loadData();
         console.log('✅ 大图预览已加载');
-        console.log('💡 桌面端: 6列×5行=30张 | 手机端: 2列×6行=12张');
+        console.log('📱 桌面端: 6列×5行=30张 | 手机端: 2列×6行=12张');
+        console.log('💡 分页控制栏浮动在底部，不占文档流');
     </script>
 
 </body>
