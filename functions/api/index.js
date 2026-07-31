@@ -6,87 +6,613 @@ export async function onRequest(context) {
 
   const html = `
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>图片 API 服务</title>
+  <title>必应壁纸 API</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: system-ui, -apple-system, sans-serif;
-      max-width: 720px;
-      margin: 2rem auto;
-      padding: 1rem;
-      line-height: 1.6;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       background: #0d0d1a;
       color: #e0e0e0;
+      min-height: 100vh;
+      padding: 30px 20px 60px;
     }
-    h1 { color: #4fc3f7; }
-    code { background: rgba(255,255,255,0.06); padding: 0.2rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
-    .endpoint { 
-      margin-bottom: 1.5rem; 
-      background: rgba(255,255,255,0.03);
-      padding: 1rem 1.2rem;
-      border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.05);
-    }
-    .endpoint h2 { color: #81d4fa; font-size: 1.1rem; margin-bottom: 0.5rem; }
-    ul { list-style: none; padding: 0; }
-    li { padding: 0.2rem 0; color: rgba(255,255,255,0.6); }
     a { color: #4fc3f7; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .back-home {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.5rem 1.2rem;
-      background: rgba(79, 195, 247, 0.12);
-      border: 1px solid rgba(79, 195, 247, 0.2);
-      border-radius: 6px;
-      color: #4fc3f7;
-      font-size: 0.9rem;
-      transition: 0.2s;
+    a:hover { color: #81d4fa; }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
     }
-    .back-home:hover {
-      background: rgba(79, 195, 247, 0.2);
+
+    /* ===== 头部 ===== */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .header-left h1 {
+      font-size: 28px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #4fc3f7, #00e5ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .header-left p {
+      color: rgba(255,255,255,0.4);
+      font-size: 14px;
+      margin-top: 4px;
+    }
+    .header-left p i { margin-right: 6px; }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .header-right .badge {
+      background: rgba(79,195,247,0.12);
+      color: #4fc3f7;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      border: 1px solid rgba(79,195,247,0.12);
+    }
+    .header-right .btn-back {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.6);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: 0.2s;
+      font-family: inherit;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       text-decoration: none;
     }
-    footer {
-      margin-top: 2rem;
+    .header-right .btn-back:hover {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+
+    /* ===== 统计卡片 ===== */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 16px 18px;
+      text-align: center;
+    }
+    .stat-card .num {
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+    }
+    .stat-card .num i { color: #4fc3f7; margin-right: 6px; }
+    .stat-card .label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+      margin-top: 4px;
+    }
+
+    /* ===== 区块标题 ===== */
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 30px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title i { color: #4fc3f7; font-size: 20px; }
+    .section-title .tag {
+      font-size: 12px;
+      font-weight: 400;
+      background: rgba(79,195,247,0.1);
+      color: #4fc3f7;
+      padding: 2px 10px;
+      border-radius: 12px;
+    }
+
+    /* ===== API 卡片网格 ===== */
+    .api-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+    }
+    .api-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 18px 20px;
+      transition: 0.25s ease;
+    }
+    .api-card:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(79,195,247,0.15);
+      transform: translateY(-2px);
+    }
+    .api-card .api-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.25);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .api-card .api-path {
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      margin-bottom: 6px;
+    }
+    .api-card .api-path .method {
+      font-size: 11px;
+      font-weight: 400;
+      background: rgba(79,195,247,0.12);
+      color: #4fc3f7;
+      padding: 1px 8px;
+      border-radius: 4px;
+      margin-left: 8px;
+      font-family: inherit;
+    }
+    .api-card .api-desc {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.5;
+    }
+    .api-card .api-code {
+      margin-top: 10px;
+      background: rgba(0,0,0,0.3);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      color: rgba(255,255,255,0.6);
+      overflow-x: auto;
+      white-space: nowrap;
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+    .api-card .api-code i { color: #4fc3f7; margin-right: 4px; }
+    .api-card .api-code .copy-btn {
+      background: none;
+      border: none;
       color: rgba(255,255,255,0.2);
-      font-size: 0.85rem;
+      cursor: pointer;
+      float: right;
+      font-size: 13px;
+      transition: 0.2s;
+      font-family: inherit;
+      padding: 0 4px;
+    }
+    .api-card .api-code .copy-btn:hover { color: #4fc3f7; }
+
+    /* ===== 参数表格 ===== */
+    .params-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+    .params-table th {
+      text-align: left;
+      color: rgba(255,255,255,0.25);
+      font-weight: 400;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 6px 10px 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .params-table td {
+      padding: 8px 10px 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+      color: rgba(255,255,255,0.6);
+    }
+    .params-table td:first-child {
+      color: #fff;
+      font-weight: 500;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 13px;
+    }
+    .params-table td .param-desc {
+      color: rgba(255,255,255,0.35);
+      font-size: 12px;
+    }
+
+    /* ===== 打赏区域 ===== */
+    .donate-section {
+      margin-top: 40px;
+      padding: 24px 28px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 14px;
+      text-align: center;
+    }
+    .donate-section .donate-title {
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .donate-section .donate-title i { color: #ff6b6b; margin-right: 8px; }
+    .donate-section .donate-desc {
+      font-size: 13px;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 14px;
+    }
+    .donate-section .qr-row {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .donate-section .qr-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .donate-section .qr-item img {
+      width: 120px;
+      height: 120px;
+      border-radius: 10px;
+      background: #fff;
+      padding: 6px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .donate-section .qr-item .qr-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+    .donate-section .qr-item .qr-label.wechat { color: #07c160; }
+    .donate-section .qr-item .qr-label.alipay { color: #1677ff; }
+
+    /* ===== 页脚 ===== */
+    footer {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.04);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.15);
+    }
+    footer .footer-links {
+      display: flex;
+      gap: 16px;
+    }
+    footer .footer-links a {
+      color: rgba(255,255,255,0.2);
+      transition: 0.2s;
+    }
+    footer .footer-links a:hover { color: rgba(255,255,255,0.5); }
+
+    /* ===== Toast ===== */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(8px);
+      padding: 10px 24px;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.06);
+      opacity: 0;
+      transition: all 0.4s ease;
+      pointer-events: none;
+      z-index: 999;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 640px) {
+      body { padding: 16px 12px 40px; }
+      .header-left h1 { font-size: 22px; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .api-grid { grid-template-columns: 1fr; }
+      .api-card .api-code { font-size: 11px; white-space: normal; word-break: break-all; }
+      .donate-section .qr-item img { width: 90px; height: 90px; }
+      .params-table { font-size: 13px; }
+      .params-table td, .params-table th { padding: 4px 6px 4px 0; }
+      footer { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 400px) {
+      .stats { grid-template-columns: 1fr; }
+      .donate-section .qr-row { gap: 16px; }
+      .donate-section .qr-item img { width: 75px; height: 75px; }
     }
   </style>
 </head>
 <body>
-  <h1>📷 图片 API 服务</h1>
-  <p>基于 <strong>data/wallpapers.json</strong> 提供图片接口。</p>
 
-  <div class="endpoint">
-    <h2>/api/random</h2>
-    <ul>
-      <li><code>${base}/api/random</code> → 随机图片（默认 <strong>不重定向</strong>）</li>
-      <li><code>${base}/api/random?redirect=true</code> → 随机图片（使用重定向）</li>
-    </ul>
+  <div class="container">
+
+    <!-- ===== 头部 ===== -->
+    <div class="header">
+      <div class="header-left">
+        <h1>📷 必应壁纸 API</h1>
+        <p><i class="fas fa-clock"></i> 图片自动更新时间：每天 0:10</p>
+      </div>
+      <div class="header-right">
+        <span class="badge"><i class="fas fa-code"></i> RESTful API</span>
+        <a href="/" class="btn-back"><i class="fas fa-arrow-left"></i> 返回首页</a>
+      </div>
+    </div>
+
+    <!-- ===== 统计 ===== -->
+    <div class="stats" id="stats">
+      <div class="stat-card">
+        <div class="num"><i class="fas fa-image"></i> <span id="totalCount">--</span></div>
+        <div class="label">总图片数</div>
+      </div>
+      <div class="stat-card">
+        <div class="num"><i class="fas fa-calendar-day"></i> <span id="todayDate">--</span></div>
+        <div class="label">今日更新</div>
+      </div>
+      <div class="stat-card">
+        <div class="num"><i class="fas fa-clock"></i> <span id="updateTime">--</span></div>
+        <div class="label">最后更新</div>
+      </div>
+    </div>
+
+    <!-- ===== API 列表 ===== -->
+    <div class="section-title">
+      <i class="fas fa-plug"></i> API 接口
+      <span class="tag">全部免费</span>
+    </div>
+
+    <div class="api-grid">
+
+      <!-- 当天图像 -->
+      <div class="api-card">
+        <div class="api-label"><i class="fas fa-sun"></i> 当天图像</div>
+        <div class="api-path">/api/daily <span class="method">GET</span></div>
+        <div class="api-desc">获取今日必应壁纸</div>
+        <div class="api-code">
+          <i class="fas fa-link"></i> ${base}/api/daily
+          <button class="copy-btn" onclick="copyText('${base}/api/daily')"><i class="fas fa-copy"></i></button>
+        </div>
+        <div style="margin-top:6px;font-size:12px;color:rgba(255,255,255,0.2);">
+          <code>?format=webp</code> · <code>?format=jpeg</code> · <code>?format=original</code>
+        </div>
+      </div>
+
+      <!-- 随机图像 -->
+      <div class="api-card">
+        <div class="api-label"><i class="fas fa-random"></i> 随机图像</div>
+        <div class="api-path">/api/random <span class="method">GET</span></div>
+        <div class="api-desc">随机返回一张壁纸</div>
+        <div class="api-code">
+          <i class="fas fa-link"></i> ${base}/api/random
+          <button class="copy-btn" onclick="copyText('${base}/api/random')"><i class="fas fa-copy"></i></button>
+        </div>
+        <div style="margin-top:6px;font-size:12px;color:rgba(255,255,255,0.2);">
+          <code>?redirect=true</code> 重定向到图片
+        </div>
+      </div>
+
+      <!-- 指定日期 -->
+      <div class="api-card">
+        <div class="api-label"><i class="fas fa-calendar-alt"></i> 指定日期</div>
+        <div class="api-path">/api/image <span class="method">GET</span></div>
+        <div class="api-desc">获取指定日期的壁纸</div>
+        <div class="api-code">
+          <i class="fas fa-link"></i> ${base}/api/image?date=20260731
+          <button class="copy-btn" onclick="copyText('${base}/api/image?date=20260731')"><i class="fas fa-copy"></i></button>
+        </div>
+        <div style="margin-top:6px;font-size:12px;color:rgba(255,255,255,0.2);">
+          <code>?date=20260731</code> 格式：YYYYMMDD
+        </div>
+      </div>
+
+      <!-- 壁纸列表 -->
+      <div class="api-card">
+        <div class="api-label"><i class="fas fa-list"></i> 壁纸列表</div>
+        <div class="api-path">/api/list <span class="method">GET</span></div>
+        <div class="api-desc">获取所有壁纸列表（分页）</div>
+        <div class="api-code">
+          <i class="fas fa-link"></i> ${base}/api/list
+          <button class="copy-btn" onclick="copyText('${base}/api/list')"><i class="fas fa-copy"></i></button>
+        </div>
+        <div style="margin-top:6px;font-size:12px;color:rgba(255,255,255,0.2);">
+          <code>?page=1&size=30</code> 分页参数
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===== 参数说明 ===== -->
+    <div class="section-title" style="margin-top:36px;">
+      <i class="fas fa-cog"></i> 参数说明
+      <span class="tag">可选</span>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:16px 20px;">
+      <table class="params-table">
+        <thead>
+          <tr><th>参数</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>date</td>
+            <td>指定日期 <span class="param-desc">（格式：YYYYMMDD，如 20260731）</span></td>
+          </tr>
+          <tr>
+            <td>format</td>
+            <td>图片格式 <span class="param-desc">（webp / jpeg / original，默认 webp）</span></td>
+          </tr>
+          <tr>
+            <td>redirect</td>
+            <td>是否重定向到图片 <span class="param-desc">（true / false，默认 false）</span></td>
+          </tr>
+          <tr>
+            <td>page</td>
+            <td>分页页码 <span class="param-desc">（默认 1）</span></td>
+          </tr>
+          <tr>
+            <td>size</td>
+            <td>每页数量 <span class="param-desc">（默认 30，最大 100）</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== 使用示例 ===== -->
+    <div class="section-title" style="margin-top:36px;">
+      <i class="fas fa-code"></i> 使用示例
+      <span class="tag">HTML</span>
+    </div>
+
+    <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:16px 20px;font-family:'SF Mono','Fira Code',monospace;font-size:13px;color:rgba(255,255,255,0.7);overflow-x:auto;">
+      <div style="color:rgba(255,255,255,0.2);margin-bottom:6px;">&lt;!-- 嵌入当天壁纸 --&gt;</div>
+      &lt;img src="${base}/api/daily" alt="今日壁纸" /&gt;
+      <div style="color:rgba(255,255,255,0.2);margin:10px 0 6px;">&lt;!-- 嵌入随机壁纸 --&gt;</div>
+      &lt;img src="${base}/api/random" alt="随机壁纸" /&gt;
+      <div style="color:rgba(255,255,255,0.2);margin:10px 0 6px;">&lt;!-- 嵌入指定日期壁纸 --&gt;</div>
+      &lt;img src="${base}/api/image?date=20260731" alt="壁纸" /&gt;
+      <div style="color:rgba(255,255,255,0.2);margin:10px 0 6px;">&lt;!-- JavaScript 调用 --&gt;</div>
+      fetch('${base}/api/random')
+        .then(res => res.json())
+        .then(data => console.log(data));
+    </div>
+
+    <!-- ===== 打赏 ===== -->
+    <div class="donate-section">
+      <div class="donate-title"><i class="fas fa-heart"></i> 支持作者</div>
+      <div class="donate-desc">如果这个 API 对你有帮助，请作者喝杯咖啡吧 ☕</div>
+      <div class="qr-row">
+        <div class="qr-item">
+          <img src="https://img.hangdn.com/hd/wechat.png" alt="微信支付" />
+          <span class="qr-label wechat"><i class="fab fa-weixin"></i> 微信支付</span>
+        </div>
+        <div class="qr-item">
+          <img src="https://img.hangdn.com/hd/alipay.png" alt="支付宝" />
+          <span class="qr-label alipay"><i class="fab fa-alipay"></i> 支付宝</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 页脚 ===== -->
+    <footer>
+      <span>© 2026 必应壁纸 · 图片来自 Bing</span>
+      <div class="footer-links">
+        <a href="/" title="首页"><i class="fas fa-home"></i></a>
+        <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" title="反馈"><i class="fas fa-bug"></i></a>
+      </div>
+    </footer>
+
   </div>
 
-  <div class="endpoint">
-    <h2>/api/daily</h2>
-    <ul>
-      <li><code>${base}/api/daily</code> → 今日图像（默认 WebP，不重定向）</li>
-      <li><code>${base}/api/daily?format=jpeg</code> → 压缩 JPEG</li>
-      <li><code>${base}/api/daily?format=original</code> → 原始 JPEG</li>
-      <li><code>${base}/api/daily?redirect=true</code> → 今日图像（使用重定向）</li>
-    </ul>
-  </div>
+  <!-- ===== Toast ===== -->
+  <div class="toast" id="toast">✅ 已复制</div>
 
-  <a href="/" class="back-home">🏠 返回首页</a>
+  <script>
+    // ===== 复制功能 =====
+    function copyText(text) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(function() {
+          showToast('✅ 已复制: ' + text);
+        }).catch(function() {
+          fallbackCopy(text);
+        });
+      } else {
+        fallbackCopy(text);
+      }
+    }
 
-  <footer>Powered by Cloudflare Pages Functions</footer>
+    function fallbackCopy(text) {
+      var input = document.createElement('input');
+      input.value = text;
+      document.body.appendChild(input);
+      input.select();
+      try {
+        document.execCommand('copy');
+        showToast('✅ 已复制: ' + text);
+      } catch (e) {
+        showToast('⚠️ 复制失败，请手动复制');
+      }
+      document.body.removeChild(input);
+    }
+
+    function showToast(msg) {
+      var toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(toast._timer);
+      toast._timer = setTimeout(function() {
+        toast.classList.remove('show');
+      }, 2000);
+    }
+
+    // ===== 加载统计信息 =====
+    async function loadStats() {
+      try {
+        var res = await fetch('/data/wallpapers.json');
+        if (!res.ok) throw new Error('加载失败');
+        var data = await res.json();
+        
+        document.getElementById('totalCount').textContent = data.length || '--';
+        
+        if (data.length > 0) {
+          var today = data[0];
+          document.getElementById('todayDate').textContent = today.date || '--';
+        }
+        
+        // 最后更新时间
+        var now = new Date();
+        var h = String(now.getHours()).padStart(2, '0');
+        var m = String(now.getMinutes()).padStart(2, '0');
+        document.getElementById('updateTime').textContent = h + ':' + m;
+        
+      } catch (err) {
+        console.log('统计加载失败:', err);
+        document.getElementById('totalCount').textContent = '--';
+      }
+    }
+
+    loadStats();
+  </script>
+
 </body>
 </html>
   `;
 
   return new Response(html, {
-    headers: { "Content-Type": "text/html; charset=utf-8" },
+    headers: { 
+      "Content-Type": "text/html; charset=utf-8",
+      "Cache-Control": "no-cache"
+    },
   });
 }
