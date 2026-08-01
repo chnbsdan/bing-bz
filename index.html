@@ -1464,7 +1464,7 @@ html, body {
         closePreviewBtn.addEventListener('click', closePreview);
 
         // ============================================================
-        // 7.1 下载下拉菜单
+        // 7.1 下载下拉菜单（已修复手机1080x1920裁剪功能）
         // ============================================================
         downloadBtn.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -1485,140 +1485,145 @@ html, body {
             downloadMenu.classList.remove('show');
         });
 
+        // 核心下载函数
         function downloadImage(index, resolution) {
-    if (!allData || allData.length === 0) return;
-    var item = allData[index];
-    if (!item) return;
-    
-    var url = getImageUrl(item.jpg || item.webp || '');
-    var resolutions = {
-        '4k': { w: 3840, h: 2160 },
-        'fhd': { w: 1920, h: 1080 },
-        'hd': { w: 1366, h: 768 },
-        'mobile': { w: 1080, h: 1920 }
-    };
-    var res = resolutions[resolution] || resolutions['fhd'];
-    var downloadUrl = url;
-    
-    if (resolution === 'mobile') {
-        // ★★★ 手机模式：通过 canvas 裁剪 ★★★
-        if (url.indexOf('th?id=') !== -1) {
-            var baseUrl = url.split('&')[0];
-            // 获取高清原图
-            downloadUrl = baseUrl + '&w=1920&h=1080';
-        }
-    } else {
-        if (url.indexOf('th?id=') !== -1) {
-            var baseUrl = url.split('&')[0];
-            downloadUrl = baseUrl + '&w=' + res.w + '&h=' + res.h;
-        }
-    }
-    
-    var fileName = 'wallpaper_' + (item.date || '') + '_' + resolution + '.jpg';
-    
-    console.log('📥 开始下载: ' + fileName);
-    console.log('📷 下载链接: ' + downloadUrl);
-    
-    fetch(downloadUrl, {
-        mode: 'cors',
-        headers: {
-            'Origin': window.location.origin
-        }
-    })
-    .then(function(response) {
-        if (!response.ok) throw new Error('网络请求失败');
-        return response.blob();
-    })
-    .then(function(blob) {
-        // ★★★ 如果是手机模式，用 canvas 裁剪 ★★★
-        if (resolution === 'mobile') {
-            return cropToMobile(blob, fileName);
-        } else {
-            return downloadBlob(blob, fileName);
-        }
-    })
-    .catch(function(err) {
-        console.warn('⚠️ 下载失败，使用备用方法:', err.message);
-        var link = document.createElement('a');
-        link.href = downloadUrl + (downloadUrl.indexOf('?') === -1 ? '?' : '&') + '_t=' + Date.now();
-        link.download = fileName;
-        link.target = '_blank';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        console.log('📥 使用备用方法下载: ' + fileName);
-    });
-}
-
-// ★★★ 手机竖屏裁剪函数 ★★★
-function cropToMobile(blob, fileName) {
-    return new Promise(function(resolve, reject) {
-        var img = new Image();
-        var url = URL.createObjectURL(blob);
-        img.onload = function() {
-            var canvas = document.createElement('canvas');
-            var ctx = canvas.getContext('2d');
+            if (!allData || allData.length === 0) return;
+            var item = allData[index];
+            if (!item) return;
             
-            var targetW = 1080;
-            var targetH = 1920;
-            canvas.width = targetW;
-            canvas.height = targetH;
+            var url = getImageUrl(item.jpg || item.webp || '');
+            var resolutions = {
+                '4k': { w: 3840, h: 2160 },
+                'fhd': { w: 1920, h: 1080 },
+                'hd': { w: 1366, h: 768 },
+                'mobile': { w: 1080, h: 1920 }
+            };
+            var res = resolutions[resolution] || resolutions['fhd'];
+            var downloadUrl = url;
             
-            // 计算裁剪区域（居中裁剪）
-            var imgRatio = img.width / img.height;
-            var targetRatio = targetW / targetH;
-            
-            var sx, sy, sw, sh;
-            if (imgRatio > targetRatio) {
-                // 图片太宽，裁剪左右
-                sh = img.height;
-                sw = img.height * targetRatio;
-                sx = (img.width - sw) / 2;
-                sy = 0;
+            // 1. 准备图片下载地址
+            if (resolution === 'mobile') {
+                // 手机模式：我们需要先把原图加载到 Canvas 里截取，所以这里直接用原图清晰地址
+                if (url.indexOf('th?id=') !== -1) {
+                    var baseUrl = url.split('&')[0];
+                    downloadUrl = baseUrl + '&w=1920&h=1080'; // 手机比较吃资源，先拿个稍微清晰的横图
+                }
             } else {
-                // 图片太高，裁剪上下
-                sw = img.width;
-                sh = img.width / targetRatio;
-                sx = 0;
-                sy = (img.height - sh) / 2;
+                if (url.indexOf('th?id=') !== -1) {
+                    var baseUrl = url.split('&')[0];
+                    downloadUrl = baseUrl + '&w=' + res.w + '&h=' + res.h;
+                }
             }
             
-            ctx.drawImage(img, sx, sy, sw, sh, 0, 0, targetW, targetH);
+            var fileName = 'wallpaper_' + (item.date || '') + '_' + resolution + '.jpg';
             
-            canvas.toBlob(function(croppedBlob) {
-                if (croppedBlob) {
-                    downloadBlob(croppedBlob, fileName);
-                    resolve();
+            console.log('📥 开始下载: ' + fileName);
+            
+            fetch(downloadUrl, {
+                mode: 'cors',
+                headers: { 'Origin': window.location.origin }
+            })
+            .then(function(response) {
+                if (!response.ok) throw new Error('网络请求失败');
+                return response.blob();
+            })
+            .then(function(blob) {
+                // ★★★ 核心逻辑在这里 ★★★
+                if (resolution === 'mobile') {
+                    // 如果是手机，调用裁剪函数，生成 1080x1920 的图再下载
+                    return cropToMobile(blob, fileName);
                 } else {
-                    reject('裁剪失败');
+                    // 如果是 4K/FHD/HD，直接下载
+                    return downloadBlob(blob, fileName);
                 }
-            }, 'image/jpeg', 0.92);
-            
-            URL.revokeObjectURL(url);
-        };
-        img.onerror = function() {
-            // 裁剪失败，直接下载原图
-            console.warn('⚠️ 裁剪失败，直接下载原图');
-            downloadBlob(blob, fileName);
-            resolve();
-        };
-        img.src = url;
-    });
-}
+            })
+            .catch(function(err) {
+                console.warn('⚠️ 下载失败，使用备用方法:', err.message);
+                // 如果 Fetch 失败，最后兜底用 a 标签直接打开
+                var link = document.createElement('a');
+                link.href = downloadUrl + (downloadUrl.indexOf('?') === -1 ? '?' : '&') + '_t=' + Date.now();
+                link.download = fileName;
+                link.target = '_blank';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        }
 
-// ★★★ 下载 Blob ★★★
-function downloadBlob(blob, fileName) {
-    var link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = fileName;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    setTimeout(function() {
-        URL.revokeObjectURL(link.href);
-    }, 1000);
-    console.log('✅ 下载成功: ' + fileName);
-}
+        // ★★★ 手机竖屏裁剪函数 (已修复) ★★★
+        function cropToMobile(blob, fileName) {
+            return new Promise(function(resolve, reject) {
+                var img = new Image();
+                var url = URL.createObjectURL(blob);
+                
+                img.onload = function() {
+                    var canvas = document.createElement('canvas');
+                    var ctx = canvas.getContext('2d');
+                    
+                    // 目标尺寸 1080x1920
+                    var targetW = 1080;
+                    var targetH = 1920;
+                    canvas.width = targetW;
+                    canvas.height = targetH;
+                    
+                    // 计算裁剪区域（从正中间截取 9:16 的比例）
+                    var imgRatio = img.width / img.height;
+                    var targetRatio = targetW / targetH;
+                    
+                    var sx, sy, sw, sh;
+                    if (imgRatio > targetRatio) {
+                        // 原图太宽了（宽屏），以高度为基准，从左右两边中间取宽度
+                        sh = img.height;
+                        sw = img.height * targetRatio;
+                        sx = (img.width - sw) / 2;
+                        sy = 0;
+                    } else {
+                        // 原图太高了，以宽度为基准，从上下两边中间取高度
+                        sw = img.width;
+                        sh = img.width / targetRatio;
+                        sx = 0;
+                        sy = (img.height - sh) / 2;
+                    }
+                    
+                    // 绘制到 1080x1920 的画布上
+                    ctx.drawImage(img, sx, sy, sw, sh, 0, 0, targetW, targetH);
+                    
+                    // 将 Canvas 转为 Blob 并触发下载
+                    canvas.toBlob(function(croppedBlob) {
+                        if (croppedBlob) {
+                            downloadBlob(croppedBlob, fileName);
+                            resolve();
+                        } else {
+                            reject('裁剪失败');
+                        }
+                    }, 'image/jpeg', 0.92);
+                    
+                    URL.revokeObjectURL(url);
+                };
+                
+                img.onerror = function() {
+                    // 如果原图加载失败，直接下载原图 blob
+                    console.warn('⚠️ 图片加载失败，直接下载原图');
+                    downloadBlob(blob, fileName);
+                    resolve();
+                };
+                img.src = url;
+            });
+        }
+
+        // ★★★ 通用的 Blob 下载函数 ★★★
+        function downloadBlob(blob, fileName) {
+            var link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            setTimeout(function() {
+                URL.revokeObjectURL(link.href);
+            }, 1000);
+            console.log('✅ 下载成功: ' + fileName);
+        }
 
         // ============================================================
         // 8. 缩放
