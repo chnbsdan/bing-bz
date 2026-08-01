@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
-        /* ===== CSS 变量 ===== */
+        /* ===== CSS 变量（同原版） ===== */
         :root {
             --bg-primary: #0d0d1a;
             --bg-secondary: #1a1a2e;
@@ -94,10 +94,10 @@
             -webkit-tap-highlight-color: transparent !important;
         }
 
-        /* ===== 进度条 ===== */
+        /* ===== 进度条（同原版） ===== */
         #progress-bar { position: fixed; top: 0; left: 0; height: 2.5px; background: var(--progress-bar); width: 0%; z-index: 9999; transition: width 0.3s ease; box-shadow: 0 0 12px rgba(79,195,247,0.4); }
 
-        /* ===== 导航栏 ===== */
+        /* ===== 导航栏（同原版） ===== */
         .nav-toggle { position: fixed; top: 12px; left: 12px; z-index: 1001; background: var(--nav-bg); backdrop-filter: blur(8px); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-primary); font-size: 20px; padding: 6px 12px; cursor: pointer; transition: 0.2s; line-height: 1; -webkit-tap-highlight-color: transparent; }
         .nav-toggle:hover { background: var(--accent-hover); border-color: rgba(79,195,247,0.2); }
         .nav-toggle.hidden { display: none !important; }
@@ -125,7 +125,7 @@
             50% { opacity: 0.5; transform: scale(0.8); }
         }
 
-        /* ===== 应用 ===== */
+        /* ===== ★★★ 现代版：无限滚动 + 修复卡片叠加 ★★★ ===== */
         .app { 
             display: flex; 
             flex-direction: column; 
@@ -137,39 +137,40 @@
             background: var(--bg-primary);
         }
         
+        /* ★★★ 关键修复：grid-auto-rows: auto 让卡片自动撑开，不会叠加 ★★★ */
         .grid { 
-    display: grid; 
-    grid-template-columns: repeat(6, 1fr);
-    gap: 0;
-    flex: 1;
-    padding: 0;
-    overflow-y: auto; 
-    min-height: 0;
-    background: var(--bg-primary);
-    align-content: start;
-    contain: layout style paint;
-    grid-auto-rows: auto;  /* ★★★ 关键修复 ★★★ */
-}
+            display: grid; 
+            grid-template-columns: repeat(6, 1fr);
+            gap: 0;
+            flex: 1;
+            padding: 0;
+            overflow-y: auto; 
+            min-height: 0;
+            background: var(--bg-primary);
+            align-content: start;
+            contain: layout style paint;
+            grid-auto-rows: auto;  /* ★★★ 关键：自动行高 ★★★ */
+        }
 
         .grid::-webkit-scrollbar { width: 4px; }
         .grid::-webkit-scrollbar-track { background: transparent; }
         .grid::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 2px; }
         .grid::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
 
-        /* ===== 卡片 - 自动适应高度 ===== */
+        /* ===== 卡片 - 使用 aspect-ratio 保持比例 ★★★ ===== */
         .card {
-    position: relative;
-    overflow: hidden;
-    background: var(--bg-card);
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    contain: strict;
-    -webkit-tap-highlight-color: transparent;
-    border-radius: 0;
-    min-height: 0;
-}
+            position: relative;
+            overflow: hidden;
+            background: var(--bg-card);
+            width: 100%;
+            aspect-ratio: 16 / 9;  /* ★★★ 固定宽高比 ★★★ */
+            cursor: pointer;
+            transition: background 0.3s ease;
+            contain: strict;
+            -webkit-tap-highlight-color: transparent;
+            border-radius: 0;
+            min-height: 0;
+        }
 
         .card img {
             width: 100%;
@@ -251,7 +252,7 @@
             font-size: 13px;
         }
 
-        /* ===== ★★★ 回到顶部按钮 ★★★ ===== */
+        /* ===== 回到顶部按钮 ===== */
         .back-to-top {
             position: fixed;
             bottom: 80px;
@@ -282,25 +283,8 @@
             display: flex;
         }
 
-        /* ===== 底部信息 ===== */
-        .info-panel {
-            position: fixed;
-            bottom: 80px;
-            left: 50%;
-            transform: translateX(-50%);
-            max-width: 90%;
-            text-align: center;
-            pointer-events: none;
-            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9);
-            z-index: 5;
-            transition: opacity 0.3s ease;
-        }
-        .info-panel .copyright { font-size: 14px; color: rgba(255, 255, 255, 0.85); line-height: 1.5; }
-        .info-panel .date { font-size: 12px; color: rgba(255, 255, 255, 0.4); margin-top: 4px; }
-        .info-panel .desc { font-size: 13px; color: rgba(255, 255, 255, 0.5); margin-top: 4px; max-width: 500px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; line-height: 1.6; }
-
         /* ============================================================
-           大图预览
+           大图预览（同原版）
            ============================================================ */
         .preview-overlay {
             display: none;
@@ -485,6 +469,23 @@
         .dropdown-menu .divider { height: 1px; background: rgba(255, 255, 255, 0.06); margin: 4px 12px; }
 
         .donate-modal { display: none !important; }
+
+        /* ===== 底部信息 ===== */
+        .info-panel {
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 90%;
+            text-align: center;
+            pointer-events: none;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9);
+            z-index: 5;
+            transition: opacity 0.3s ease;
+        }
+        .info-panel .copyright { font-size: 14px; color: rgba(255, 255, 255, 0.85); line-height: 1.5; }
+        .info-panel .date { font-size: 12px; color: rgba(255, 255, 255, 0.4); margin-top: 4px; }
+        .info-panel .desc { font-size: 13px; color: rgba(255, 255, 255, 0.5); margin-top: 4px; max-width: 500px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; line-height: 1.6; }
 
         /* ============================================================
            评论弹窗
@@ -673,13 +674,13 @@
     <!-- ===== 应用 ===== -->
     <div class="app"><div class="grid" id="grid"></div></div>
 
-    <!-- ===== ★★★ 回到顶部按钮 ★★★ ===== -->
+    <!-- ===== ★★★ 回到顶部按钮（现代版新增） ★★★ ===== -->
     <button class="back-to-top" id="backToTop" title="回到顶部">
         <i class="fas fa-arrow-up"></i>
     </button>
 
     <!-- ============================================================
-    大图预览
+    大图预览（同原版）
     ============================================================ -->
     <div class="preview-overlay" id="previewOverlay">
         <button class="arrow arrow-left" id="prevPreviewBtn"><i class="fas fa-chevron-left"></i></button>
@@ -926,7 +927,7 @@
         var toolbarVisible = true;
 
         // ============================================================
-        // 6.1 加载数据（首次）
+        // 6.1 加载数据
         // ============================================================
         async function loadData() {
             showProgress();
@@ -1472,7 +1473,7 @@
         previewImg.addEventListener('wheel', wheelZoom, { passive: false });
 
         // ============================================================
-        // 9. ★★★ 启动 ★★★
+        // 9. 启动
         // ============================================================
         loadData();
         console.log('✅ 大图预览已加载');
