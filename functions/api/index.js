@@ -4,6 +4,25 @@ export async function onRequest(context) {
   const url = new URL(request.url);
   const base = `${url.protocol}//${url.host}`;
 
+  // 读取壁纸数据获取统计
+  let totalCount = '--';
+  let todayDate = '--';
+  try {
+    const fs = await import('fs');
+    const path = await import('path');
+    const dataPath = path.resolve('./data/wallpapers.json');
+    if (fs.existsSync(dataPath)) {
+      const raw = fs.readFileSync(dataPath, 'utf-8');
+      const data = JSON.parse(raw);
+      totalCount = data.length || 0;
+      if (data.length > 0) {
+        todayDate = data[0].date || '--';
+      }
+    }
+  } catch (e) {
+    // 如果读取失败，保持默认值
+  }
+
   const html = `
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -15,19 +34,73 @@ export async function onRequest(context) {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --bg-primary: #0d0d1a;
+      --bg-secondary: #1a1a2e;
+      --bg-card: rgba(255,255,255,0.03);
+      --bg-card-hover: rgba(255,255,255,0.06);
+      --text-primary: #fff;
+      --text-secondary: rgba(255,255,255,0.6);
+      --text-muted: rgba(255,255,255,0.3);
+      --border-color: rgba(255,255,255,0.06);
+      --border-hover: rgba(79,195,247,0.15);
+      --shadow: none;
+      --code-bg: rgba(0,0,0,0.3);
+      --donate-bg: rgba(255,255,255,0.02);
+    }
+
+    [data-theme="light"] {
+      --bg-primary: #f0f2f5;
+      --bg-secondary: #ffffff;
+      --bg-card: rgba(0,0,0,0.02);
+      --bg-card-hover: rgba(0,0,0,0.04);
+      --text-primary: #1a1a2e;
+      --text-secondary: rgba(0,0,0,0.6);
+      --text-muted: rgba(0,0,0,0.3);
+      --border-color: rgba(0,0,0,0.08);
+      --border-hover: rgba(79,195,247,0.3);
+      --shadow: 0 2px 12px rgba(0,0,0,0.04);
+      --code-bg: rgba(0,0,0,0.04);
+      --donate-bg: rgba(0,0,0,0.02);
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background: #0d0d1a;
-      color: #e0e0e0;
+      background: var(--bg-primary);
+      color: var(--text-primary);
       min-height: 100vh;
       padding: 30px 20px 60px;
+      transition: background 0.3s ease, color 0.3s ease;
     }
     a { color: #4fc3f7; text-decoration: none; }
     a:hover { color: #81d4fa; }
 
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
+    .container { max-width: 1000px; margin: 0 auto; }
+
+    /* ===== 顶部主题切换 ===== */
+    .theme-toggle-wrap {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 16px;
+    }
+    .theme-toggle-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.2s;
+      font-family: inherit;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .theme-toggle-btn:hover {
+      background: var(--bg-card-hover);
+      color: var(--text-primary);
     }
 
     /* ===== 头部 ===== */
@@ -39,7 +112,7 @@ export async function onRequest(context) {
       gap: 16px;
       margin-bottom: 30px;
       padding-bottom: 20px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid var(--border-color);
     }
     .header-left h1 {
       font-size: 28px;
@@ -50,7 +123,7 @@ export async function onRequest(context) {
       background-clip: text;
     }
     .header-left p {
-      color: rgba(255,255,255,0.4);
+      color: var(--text-muted);
       font-size: 14px;
       margin-top: 4px;
     }
@@ -70,9 +143,9 @@ export async function onRequest(context) {
       border: 1px solid rgba(79,195,247,0.12);
     }
     .header-right .btn-back {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: rgba(255,255,255,0.6);
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
       padding: 8px 16px;
       border-radius: 8px;
       font-size: 13px;
@@ -85,8 +158,8 @@ export async function onRequest(context) {
       text-decoration: none;
     }
     .header-right .btn-back:hover {
-      background: rgba(255,255,255,0.1);
-      color: #fff;
+      background: var(--bg-card-hover);
+      color: var(--text-primary);
     }
 
     /* ===== 统计卡片 ===== */
@@ -97,22 +170,24 @@ export async function onRequest(context) {
       margin-bottom: 30px;
     }
     .stat-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
       border-radius: 12px;
       padding: 16px 18px;
       text-align: center;
+      transition: 0.2s;
     }
+    .stat-card:hover { border-color: var(--border-hover); }
     .stat-card .num {
       font-size: 26px;
       font-weight: 700;
-      color: #fff;
+      color: var(--text-primary);
       line-height: 1.2;
     }
     .stat-card .num i { color: #4fc3f7; margin-right: 6px; }
     .stat-card .label {
       font-size: 12px;
-      color: rgba(255,255,255,0.35);
+      color: var(--text-muted);
       margin-top: 4px;
     }
 
@@ -135,27 +210,28 @@ export async function onRequest(context) {
       border-radius: 12px;
     }
 
-    /* ===== API 卡片网格 ===== */
+    /* ===== API 卡片 ===== */
     .api-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 14px;
     }
     .api-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
       border-radius: 12px;
       padding: 18px 20px;
       transition: 0.25s ease;
     }
     .api-card:hover {
-      background: rgba(255,255,255,0.06);
-      border-color: rgba(79,195,247,0.15);
+      background: var(--bg-card-hover);
+      border-color: var(--border-hover);
       transform: translateY(-2px);
+      box-shadow: var(--shadow);
     }
     .api-card .api-label {
       font-size: 11px;
-      color: rgba(255,255,255,0.25);
+      color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.5px;
       margin-bottom: 4px;
@@ -163,7 +239,7 @@ export async function onRequest(context) {
     .api-card .api-path {
       font-size: 16px;
       font-weight: 600;
-      color: #fff;
+      color: var(--text-primary);
       font-family: 'SF Mono', 'Fira Code', monospace;
       margin-bottom: 6px;
     }
@@ -179,87 +255,137 @@ export async function onRequest(context) {
     }
     .api-card .api-desc {
       font-size: 13px;
-      color: rgba(255,255,255,0.5);
+      color: var(--text-secondary);
       line-height: 1.5;
     }
     .api-card .api-code {
       margin-top: 10px;
-      background: rgba(0,0,0,0.3);
+      background: var(--code-bg);
       border-radius: 6px;
       padding: 8px 12px;
       font-size: 12px;
       font-family: 'SF Mono', 'Fira Code', monospace;
-      color: rgba(255,255,255,0.6);
+      color: var(--text-secondary);
       overflow-x: auto;
       white-space: nowrap;
-      border: 1px solid rgba(255,255,255,0.04);
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
     }
-    .api-card .api-code i { color: #4fc3f7; margin-right: 4px; }
+    .api-card .api-code .link-part {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      flex: 1;
+    }
+    .api-card .api-code .link-part a {
+      color: var(--text-secondary);
+      transition: 0.2s;
+    }
+    .api-card .api-code .link-part a:hover {
+      color: #4fc3f7;
+    }
     .api-card .api-code .copy-btn {
       background: none;
       border: none;
-      color: rgba(255,255,255,0.2);
+      color: var(--text-muted);
       cursor: pointer;
-      float: right;
-      font-size: 13px;
+      font-size: 14px;
       transition: 0.2s;
       font-family: inherit;
       padding: 0 4px;
+      flex-shrink: 0;
     }
     .api-card .api-code .copy-btn:hover { color: #4fc3f7; }
+    .api-card .api-tags {
+      margin-top: 6px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .api-card .api-tags code {
+      background: var(--code-bg);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
 
     /* ===== 参数表格 ===== */
+    .params-table-wrap {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px 20px;
+      overflow-x: auto;
+    }
     .params-table {
       width: 100%;
       border-collapse: collapse;
       font-size: 14px;
-      margin-top: 8px;
+      margin-top: 0;
     }
     .params-table th {
       text-align: left;
-      color: rgba(255,255,255,0.25);
+      color: var(--text-muted);
       font-weight: 400;
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       padding: 6px 10px 6px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
+      border-bottom: 1px solid var(--border-color);
     }
     .params-table td {
       padding: 8px 10px 8px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.03);
-      color: rgba(255,255,255,0.6);
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-secondary);
     }
     .params-table td:first-child {
-      color: #fff;
+      color: var(--text-primary);
       font-weight: 500;
       font-family: 'SF Mono', 'Fira Code', monospace;
       font-size: 13px;
     }
     .params-table td .param-desc {
-      color: rgba(255,255,255,0.35);
+      color: var(--text-muted);
       font-size: 12px;
     }
+    .params-table tr:last-child td { border-bottom: none; }
 
-    /* ===== 打赏区域 ===== */
+    /* ===== 使用示例 ===== */
+    .example-box {
+      background: var(--code-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 13px;
+      color: var(--text-secondary);
+      overflow-x: auto;
+    }
+    .example-box .comment {
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    /* ===== 打赏 ===== */
     .donate-section {
       margin-top: 40px;
       padding: 24px 28px;
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(255,255,255,0.06);
+      background: var(--donate-bg);
+      border: 1px solid var(--border-color);
       border-radius: 14px;
       text-align: center;
     }
     .donate-section .donate-title {
       font-size: 16px;
       font-weight: 500;
-      color: #fff;
+      color: var(--text-primary);
       margin-bottom: 4px;
     }
     .donate-section .donate-title i { color: #ff6b6b; margin-right: 8px; }
     .donate-section .donate-desc {
       font-size: 13px;
-      color: rgba(255,255,255,0.35);
+      color: var(--text-muted);
       margin-bottom: 14px;
     }
     .donate-section .qr-row {
@@ -280,11 +406,11 @@ export async function onRequest(context) {
       border-radius: 10px;
       background: #fff;
       padding: 6px;
-      border: 1px solid rgba(255,255,255,0.06);
+      border: 1px solid var(--border-color);
     }
     .donate-section .qr-item .qr-label {
       font-size: 12px;
-      color: rgba(255,255,255,0.4);
+      color: var(--text-muted);
     }
     .donate-section .qr-item .qr-label.wechat { color: #07c160; }
     .donate-section .qr-item .qr-label.alipay { color: #1677ff; }
@@ -293,24 +419,21 @@ export async function onRequest(context) {
     footer {
       margin-top: 30px;
       padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.04);
+      border-top: 1px solid var(--border-color);
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
       gap: 12px;
       font-size: 13px;
-      color: rgba(255,255,255,0.15);
+      color: var(--text-muted);
     }
-    footer .footer-links {
-      display: flex;
-      gap: 16px;
-    }
+    footer .footer-links { display: flex; gap: 16px; }
     footer .footer-links a {
-      color: rgba(255,255,255,0.2);
+      color: var(--text-muted);
       transition: 0.2s;
     }
-    footer .footer-links a:hover { color: rgba(255,255,255,0.5); }
+    footer .footer-links a:hover { color: var(--text-primary); }
 
     /* ===== Toast ===== */
     .toast {
@@ -318,13 +441,14 @@ export async function onRequest(context) {
       bottom: 30px;
       left: 50%;
       transform: translateX(-50%) translateY(80px);
-      background: rgba(0,0,0,0.85);
+      background: var(--bg-secondary);
       backdrop-filter: blur(8px);
       padding: 10px 24px;
       border-radius: 10px;
       font-size: 14px;
-      color: #fff;
-      border: 1px solid rgba(255,255,255,0.06);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
       opacity: 0;
       transition: all 0.4s ease;
       pointer-events: none;
@@ -358,6 +482,13 @@ export async function onRequest(context) {
 
   <div class="container">
 
+    <!-- ===== 主题切换 ===== -->
+    <div class="theme-toggle-wrap">
+      <button class="theme-toggle-btn" id="themeToggle" title="切换主题">
+        <i class="fas fa-moon" id="themeIcon"></i> <span id="themeLabel">深色</span>
+      </button>
+    </div>
+
     <!-- ===== 头部 ===== -->
     <div class="header">
       <div class="header-left">
@@ -371,13 +502,13 @@ export async function onRequest(context) {
     </div>
 
     <!-- ===== 统计 ===== -->
-    <div class="stats" id="stats">
+    <div class="stats">
       <div class="stat-card">
-        <div class="num"><i class="fas fa-image"></i> <span id="totalCount">--</span></div>
+        <div class="num"><i class="fas fa-image"></i> ${totalCount}</div>
         <div class="label">总图片数</div>
       </div>
       <div class="stat-card">
-        <div class="num"><i class="fas fa-calendar-day"></i> <span id="todayDate">--</span></div>
+        <div class="num"><i class="fas fa-calendar-day"></i> ${todayDate}</div>
         <div class="label">今日更新</div>
       </div>
       <div class="stat-card">
@@ -400,10 +531,10 @@ export async function onRequest(context) {
         <div class="api-path">/api/daily <span class="method">GET</span></div>
         <div class="api-desc">获取今日必应壁纸</div>
         <div class="api-code">
-          <i class="fas fa-link"></i> ${base}/api/daily
+          <span class="link-part"><a href="${base}/api/daily" target="_blank">${base}/api/daily</a></span>
           <button class="copy-btn" onclick="copyText('${base}/api/daily')"><i class="fas fa-copy"></i></button>
         </div>
-        <div style="margin-top:6px;font-size:12px;color:rgba(255,255,255,0.2);">
+        <div class="api-tags">
           <code>?format=webp</code> · <code>?format=jpeg</code> · <code>?format=original</code>
         </div>
       </div>
@@ -414,10 +545,10 @@ export async function onRequest(context) {
         <div class="api-path">/api/random <span class="method">GET</span></div>
         <div class="api-desc">随机返回一张壁纸</div>
         <div class="api-code">
-          <i class="fas fa-link"></i> ${base}/api/random
+          <span class="link-part"><a href="${base}/api/random" target="_blank">${base}/api/random</a></span>
           <button class="copy-btn" onclick="copyText('${base}/api/random')"><i class="fas fa-copy"></i></button>
         </div>
-        <div style="margin-top:6px;font-size:12px;color:rgba(255,255,255,0.2);">
+        <div class="api-tags">
           <code>?redirect=true</code> 重定向到图片
         </div>
       </div>
@@ -428,10 +559,10 @@ export async function onRequest(context) {
         <div class="api-path">/api/image <span class="method">GET</span></div>
         <div class="api-desc">获取指定日期的壁纸</div>
         <div class="api-code">
-          <i class="fas fa-link"></i> ${base}/api/image?date=20260731
+          <span class="link-part"><a href="${base}/api/image?date=20260731" target="_blank">${base}/api/image?date=20260731</a></span>
           <button class="copy-btn" onclick="copyText('${base}/api/image?date=20260731')"><i class="fas fa-copy"></i></button>
         </div>
-        <div style="margin-top:6px;font-size:12px;color:rgba(255,255,255,0.2);">
+        <div class="api-tags">
           <code>?date=20260731</code> 格式：YYYYMMDD
         </div>
       </div>
@@ -442,10 +573,10 @@ export async function onRequest(context) {
         <div class="api-path">/api/list <span class="method">GET</span></div>
         <div class="api-desc">获取所有壁纸列表（分页）</div>
         <div class="api-code">
-          <i class="fas fa-link"></i> ${base}/api/list
+          <span class="link-part"><a href="${base}/api/list" target="_blank">${base}/api/list</a></span>
           <button class="copy-btn" onclick="copyText('${base}/api/list')"><i class="fas fa-copy"></i></button>
         </div>
-        <div style="margin-top:6px;font-size:12px;color:rgba(255,255,255,0.2);">
+        <div class="api-tags">
           <code>?page=1&size=30</code> 分页参数
         </div>
       </div>
@@ -458,7 +589,7 @@ export async function onRequest(context) {
       <span class="tag">可选</span>
     </div>
 
-    <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:16px 20px;">
+    <div class="params-table-wrap">
       <table class="params-table">
         <thead>
           <tr><th>参数</th><th>说明</th></tr>
@@ -494,14 +625,14 @@ export async function onRequest(context) {
       <span class="tag">HTML</span>
     </div>
 
-    <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:16px 20px;font-family:'SF Mono','Fira Code',monospace;font-size:13px;color:rgba(255,255,255,0.7);overflow-x:auto;">
-      <div style="color:rgba(255,255,255,0.2);margin-bottom:6px;">&lt;!-- 嵌入当天壁纸 --&gt;</div>
+    <div class="example-box">
+      <div class="comment">&lt;!-- 嵌入当天壁纸 --&gt;</div>
       &lt;img src="${base}/api/daily" alt="今日壁纸" /&gt;
-      <div style="color:rgba(255,255,255,0.2);margin:10px 0 6px;">&lt;!-- 嵌入随机壁纸 --&gt;</div>
+      <div class="comment" style="margin-top:10px;">&lt;!-- 嵌入随机壁纸 --&gt;</div>
       &lt;img src="${base}/api/random" alt="随机壁纸" /&gt;
-      <div style="color:rgba(255,255,255,0.2);margin:10px 0 6px;">&lt;!-- 嵌入指定日期壁纸 --&gt;</div>
+      <div class="comment" style="margin-top:10px;">&lt;!-- 嵌入指定日期壁纸 --&gt;</div>
       &lt;img src="${base}/api/image?date=20260731" alt="壁纸" /&gt;
-      <div style="color:rgba(255,255,255,0.2);margin:10px 0 6px;">&lt;!-- JavaScript 调用 --&gt;</div>
+      <div class="comment" style="margin-top:10px;">&lt;!-- JavaScript 调用 --&gt;</div>
       fetch('${base}/api/random')
         .then(res => res.json())
         .then(data => console.log(data));
@@ -539,7 +670,35 @@ export async function onRequest(context) {
   <div class="toast" id="toast">✅ 已复制</div>
 
   <script>
-    // ===== 复制功能 =====
+    // ============================================================
+    // 1. 主题切换
+    // ============================================================
+    var themeToggle = document.getElementById('themeToggle');
+    var themeIcon = document.getElementById('themeIcon');
+    var themeLabel = document.getElementById('themeLabel');
+    var currentTheme = localStorage.getItem('apiTheme') || 'dark';
+
+    function setTheme(theme) {
+      currentTheme = theme;
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('apiTheme', theme);
+      if (theme === 'dark') {
+        themeIcon.className = 'fas fa-moon';
+        themeLabel.textContent = '深色';
+      } else {
+        themeIcon.className = 'fas fa-sun';
+        themeLabel.textContent = '亮色';
+      }
+    }
+
+    themeToggle.addEventListener('click', function() {
+      setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+    setTheme(currentTheme);
+
+    // ============================================================
+    // 2. 复制功能
+    // ============================================================
     function copyText(text) {
       if (navigator.clipboard) {
         navigator.clipboard.writeText(text).then(function() {
@@ -576,33 +735,13 @@ export async function onRequest(context) {
       }, 2000);
     }
 
-    // ===== 加载统计信息 =====
-    async function loadStats() {
-      try {
-        var res = await fetch('/data/wallpapers.json');
-        if (!res.ok) throw new Error('加载失败');
-        var data = await res.json();
-        
-        document.getElementById('totalCount').textContent = data.length || '--';
-        
-        if (data.length > 0) {
-          var today = data[0];
-          document.getElementById('todayDate').textContent = today.date || '--';
-        }
-        
-        // 最后更新时间
-        var now = new Date();
-        var h = String(now.getHours()).padStart(2, '0');
-        var m = String(now.getMinutes()).padStart(2, '0');
-        document.getElementById('updateTime').textContent = h + ':' + m;
-        
-      } catch (err) {
-        console.log('统计加载失败:', err);
-        document.getElementById('totalCount').textContent = '--';
-      }
-    }
-
-    loadStats();
+    // ============================================================
+    // 3. 更新时间
+    // ============================================================
+    var now = new Date();
+    var h = String(now.getHours()).padStart(2, '0');
+    var m = String(now.getMinutes()).padStart(2, '0');
+    document.getElementById('updateTime').textContent = h + ':' + m;
   </script>
 
 </body>
