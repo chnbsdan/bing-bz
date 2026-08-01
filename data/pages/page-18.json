@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2024-08-17",
+      "copyright": "Wooden path to Kennedy Lake, Vancouver Island, BC, Canada (© EB Adventure Photography/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.TofinoVancouver_EN-US1466348668_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.TofinoVancouver_EN-US1466348668_UHD.jpg"
+    },
+    {
       "date": "2024-08-16",
       "copyright": "Joshua Tree National Park, California (© Chris Moore - Exploring Light Photography/Tandem Stills + Motion)",
       "jpg": "https://cn.bing.com/th?id=OHR.JoshuaTreeNP_EN-US1399159741_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Fisgard Lighthouse, Esquimalt Harbor, Colwood, British Columbia, Canada (© davemantel/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.FisgardLighthouse_EN-US3880792118_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.FisgardLighthouse_EN-US3880792118_UHD.jpg"
-    },
-    {
-      "date": "2024-07-06",
-      "copyright": "Stone carving at a temple in Ubud, Bali, Indonesia (© R. Schönebaum/plainpicture)",
-      "jpg": "https://cn.bing.com/th?id=OHR.UbudBali_EN-US3541248173_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.UbudBali_EN-US3541248173_UHD.jpg"
     }
   ],
   "page": 18,
   "pageSize": 42,
-  "total": 2005,
+  "total": 2006,
   "totalPages": 48,
   "hasMore": true
 }

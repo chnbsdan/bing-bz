@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2023-12-09",
+      "copyright": "Sandstone rock formations, Vermilion Cliffs National Monument, Arizona (© Yva Momatiuk and John Eastcott/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.VermilionCliffs_EN-US9543863428_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.VermilionCliffs_EN-US9543863428_UHD.jpg"
+    },
+    {
       "date": "2023-12-08",
       "copyright": "North Gate of Angkor Thom, Angkor Archaeological Park, Cambodia (© Amazing Travel Lifestyle/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.AngkorPark_EN-US8869976296_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Corn maze in Saylorsburg, Pennsylvania (© Alex Potemkin/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.PoconosMaze_EN-US4210947594_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PoconosMaze_EN-US4210947594_UHD.jpg"
-    },
-    {
-      "date": "2023-10-28",
-      "copyright": "Astoria-Megler Bridge on the Columbia River, Astoria, Oregon (© Dan Mihai/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AstoriaBridge_EN-US9518437970_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AstoriaBridge_EN-US9518437970_UHD.jpg"
     }
   ],
   "page": 24,
   "pageSize": 42,
-  "total": 2005,
+  "total": 2006,
   "totalPages": 48,
   "hasMore": true
 }

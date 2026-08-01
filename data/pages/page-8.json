@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2025-10-11",
+      "copyright": "Coral reef surrounding the island of Monuriki, Mamanuca Islands, Fiji (© David Wall/SuperStock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MonurikiFiji_EN-US0326449622_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MonurikiFiji_EN-US0326449622_UHD.jpg"
+    },
+    {
       "date": "2025-10-10",
       "copyright": "The Pillars of Creation viewed by the James Webb Space Telescope (© NASA)",
       "jpg": "https://cn.bing.com/th?id=OHR.WebbPillars_EN-US0251661895_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Whale shark off the coast of Alifu Dhaalu Atoll, Maldives (© Bachir Moukarzel/Amazing Aerial Agency)",
       "jpg": "https://cn.bing.com/th?id=OHR.MaldivesWhaleShark_EN-US3819740955_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MaldivesWhaleShark_EN-US3819740955_UHD.jpg"
-    },
-    {
-      "date": "2025-08-30",
-      "copyright": "Aerial view of Plaza Mayor, Madrid, Spain (© AirPano LLC/Amazing Aerial Agency)",
-      "jpg": "https://cn.bing.com/th?id=OHR.PlazaMayor_EN-US3692727880_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.PlazaMayor_EN-US3692727880_UHD.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2005,
+  "total": 2006,
   "totalPages": 48,
   "hasMore": true
 }

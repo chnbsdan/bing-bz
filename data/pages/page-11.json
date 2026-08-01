@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2025-06-07",
+      "copyright": "Arromanches-les-Bains in Normandy, France (© Horia Merla/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.NormandyBeach_EN-US8863709180_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.NormandyBeach_EN-US8863709180_UHD.jpg"
+    },
+    {
       "date": "2025-06-06",
       "copyright": "Bottle-cap mural made by Oscar Olivares in Guatire, Venezuela (© FEDERICO PARRA/AFP via Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.OlivaresMural_EN-US8824492734_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Grove of redwoods in Redwood National and State Parks, California (© Bob Pool/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.RedwoodGrove_EN-US3412092024_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.RedwoodGrove_EN-US3412092024_UHD.jpg"
-    },
-    {
-      "date": "2025-04-26",
-      "copyright": "Magellanic penguins, Volunteer Point, Falkland Islands (© imageBROKER/Matthias Graben/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MagellanicPenguin_EN-US3332048594_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MagellanicPenguin_EN-US3332048594_UHD.jpg"
     }
   ],
   "page": 11,
   "pageSize": 42,
-  "total": 2005,
+  "total": 2006,
   "totalPages": 48,
   "hasMore": true
 }

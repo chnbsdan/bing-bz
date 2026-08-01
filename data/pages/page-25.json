@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2023-10-28",
+      "copyright": "Astoria-Megler Bridge on the Columbia River, Astoria, Oregon (© Dan Mihai/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AstoriaBridge_EN-US9518437970_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AstoriaBridge_EN-US9518437970_UHD.jpg"
+    },
+    {
       "date": "2023-10-27",
       "copyright": "Reliefs in the ancient Persian city of Persepolis, Iran (© Ozbalci/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.PersepolisRelief_EN-US9435779068_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Brooklyn Bridge with the 'Tribute in Light' installation for 9/11, New York (© ANDREY DENISYUK/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BridgeMemorial_EN-US1953692613_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BridgeMemorial_EN-US1953692613_UHD.jpg"
-    },
-    {
-      "date": "2023-09-16",
-      "copyright": "Walrus pair at sea in Svalbard, Norway (© Mark Smith/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.WalrusSvalbard_EN-US1836032120_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.WalrusSvalbard_EN-US1836032120_UHD.jpg"
     }
   ],
   "page": 25,
   "pageSize": 42,
-  "total": 2005,
+  "total": 2006,
   "totalPages": 48,
   "hasMore": true
 }

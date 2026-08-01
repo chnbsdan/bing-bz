@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2024-07-06",
+      "copyright": "Stone carving at a temple in Ubud, Bali, Indonesia (© R. Schönebaum/plainpicture)",
+      "jpg": "https://cn.bing.com/th?id=OHR.UbudBali_EN-US3541248173_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.UbudBali_EN-US3541248173_UHD.jpg"
+    },
+    {
       "date": "2024-07-05",
       "copyright": "Cyclists in the 2013 Tour de France, Corsica, France (© Pascal Pochard-Casabianca/AFP via Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.TourCorsica_EN-US3437831281_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Village of Vernazza, Cinque Terre, Liguria, Italy (© Roberto Moiola/Sysaworld/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.VernazzaItaly_EN-US2643430613_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.VernazzaItaly_EN-US2643430613_UHD.jpg"
-    },
-    {
-      "date": "2024-05-25",
-      "copyright": "Blue whale skeleton in the Natural History Museum, London, England (© Bailey-Cooper Photography/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MuseumWhale_EN-US2412212162_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MuseumWhale_EN-US2412212162_UHD.jpg"
     }
   ],
   "page": 19,
   "pageSize": 42,
-  "total": 2005,
+  "total": 2006,
   "totalPages": 48,
   "hasMore": true
 }

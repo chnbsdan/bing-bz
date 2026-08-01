@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2025-11-22",
+      "copyright": "Harbor seals at Robert Moses State Park, Long Island, New York (© Vicki Jauron, Babylon and Beyond Photography/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SealWaving_EN-US6277930581_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SealWaving_EN-US6277930581_UHD.jpg"
+    },
+    {
       "date": "2025-11-21",
       "copyright": "Artist Saype poses with his land art painting at UN Headquarters, Geneva, Switzerland (© Valentin Flauraud/EPA-EFE/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.SaypeGeneva_EN-US6121087903_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Wood duck hen (© ps50ace/iStock/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.WoodDuckHen_EN-US0382439406_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.WoodDuckHen_EN-US0382439406_UHD.jpg"
-    },
-    {
-      "date": "2025-10-11",
-      "copyright": "Coral reef surrounding the island of Monuriki, Mamanuca Islands, Fiji (© David Wall/SuperStock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MonurikiFiji_EN-US0326449622_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MonurikiFiji_EN-US0326449622_UHD.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2005,
+  "total": 2006,
   "totalPages": 48,
   "hasMore": true
 }

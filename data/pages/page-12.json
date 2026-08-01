@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2025-04-26",
+      "copyright": "Magellanic penguins, Volunteer Point, Falkland Islands (© imageBROKER/Matthias Graben/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MagellanicPenguin_EN-US3332048594_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MagellanicPenguin_EN-US3332048594_UHD.jpg"
+    },
+    {
       "date": "2025-04-25",
       "copyright": "Spire Cove in Kenai Fjords National Park, Seward, Alaska (© Wander Photography/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.KenaiSpires_EN-US3294247007_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "The Temple of Saturn in the Roman Forum, Rome, Italy (© Nico De Pasquale Photography/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ForumRomanum_EN-US9379132630_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ForumRomanum_EN-US9379132630_UHD.jpg"
-    },
-    {
-      "date": "2025-03-15",
-      "copyright": "Dolmen of Sorginetxe, Basque Country, Álava, Spain (© David Herraez Calzada/plainpicture)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BasqueDolmen_EN-US9089569057_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BasqueDolmen_EN-US9089569057_UHD.jpg"
     }
   ],
   "page": 12,
   "pageSize": 42,
-  "total": 2005,
+  "total": 2006,
   "totalPages": 48,
   "hasMore": true
 }

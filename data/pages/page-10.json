@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2025-07-19",
+      "copyright": "Beach at sunrise, Gulf Islands National Seashore, Florida (© Tim Fitzharris/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FloridaSeashore_EN-US9038929616_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FloridaSeashore_EN-US9038929616_UHD.jpg"
+    },
+    {
       "date": "2025-07-18",
       "copyright": "Lavender fields in Plateau de Valensole, France (© zpagistock/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.FranceLavender_EN-US5224253118_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Summit of Pine Mountain, Angeles National Forest, California (© Matthew Kuhns/TANDEM Stills + Motion)",
       "jpg": "https://cn.bing.com/th?id=OHR.PacificCrestTrail_EN-US8903844619_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PacificCrestTrail_EN-US8903844619_UHD.jpg"
-    },
-    {
-      "date": "2025-06-07",
-      "copyright": "Arromanches-les-Bains in Normandy, France (© Horia Merla/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.NormandyBeach_EN-US8863709180_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.NormandyBeach_EN-US8863709180_UHD.jpg"
     }
   ],
   "page": 10,
   "pageSize": 42,
-  "total": 2005,
+  "total": 2006,
   "totalPages": 48,
   "hasMore": true
 }

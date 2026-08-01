@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2024-04-13",
+      "copyright": "Himeji Castle, Himeji, Hyōgo Prefecture, Japan (© Julian Elliott Photography/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.JapanHimeji_EN-US1768279571_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.JapanHimeji_EN-US1768279571_UHD.jpg"
+    },
+    {
       "date": "2024-04-12",
       "copyright": "The Bahamas photographed from the International Space Station (© NASA)",
       "jpg": "https://cn.bing.com/th?id=OHR.BahamasSpace_EN-US1544254149_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "'United We Stand' sculpture by Charles McGee, Charles H. Wright Museum of African American History, Detroit, Michigan (© Jim West/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.WrightSculpture_EN-US2897504160_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.WrightSculpture_EN-US2897504160_UHD.jpg"
-    },
-    {
-      "date": "2024-03-02",
-      "copyright": "Almond trees in full bloom, California (© Jeffrey Lewis/Tandem Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AlmondBloom_EN-US2721273642_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AlmondBloom_EN-US2721273642_UHD.jpg"
     }
   ],
   "page": 21,
   "pageSize": 42,
-  "total": 2005,
+  "total": 2006,
   "totalPages": 48,
   "hasMore": true
 }

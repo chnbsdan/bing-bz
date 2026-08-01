@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2026-06-20",
+      "copyright": "Arched iceberg floating off the western Antarctic Peninsula, Southern Ocean (© Steven Kazlowski/Nature Picture Library)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ArchedIceberg_EN-US6345786269_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ArchedIceberg_EN-US6345786269_UHD.jpg"
+    },
+    {
       "date": "2026-06-19",
       "copyright": "National Museum of African American History and Culture, Washington, DC (© Walter Bibikow/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.JuneteenthNMAAHC_EN-US6306942628_UHD.jpg",
@@ -245,17 +251,11 @@
       "copyright": "Polar bear mother and cubs playing in Wapusk National Park, Manitoba, Canada (© Hao Jiang/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MotherCub_EN-US0916425414_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MotherCub_EN-US0916425414_UHD.jpg"
-    },
-    {
-      "date": "2026-05-09",
-      "copyright": "Skradinski Buk Waterfall in Krka National Park, Croatia (© Amazing Aerial Agency/Adobe Stock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SkradinskiBuk_EN-US0750882952_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SkradinskiBuk_EN-US0750882952_UHD.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2005,
+  "total": 2006,
   "totalPages": 48,
   "hasMore": true
 }
