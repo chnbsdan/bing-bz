@@ -583,6 +583,127 @@ html, body {
 }
 
 /* ============================================================
+   ★★★ Twikoo 暗色模式 - 强制白底黑字 ★★★
+   ============================================================ */
+
+/* 评论弹窗整体 - 强制白色背景 */
+[data-theme="dark"] .comment-modal {
+    background: #ffffff !important;
+    border-color: #e8e8e8 !important;
+}
+
+[data-theme="dark"] .comment-body {
+    background: #ffffff !important;
+}
+
+[data-theme="dark"] .comment-header {
+    border-bottom-color: #e8e8e8 !important;
+}
+[data-theme="dark"] .comment-header h2 {
+    color: #1a1a2e !important;
+}
+[data-theme="dark"] .comment-header .close-btn {
+    color: #999 !important;
+}
+[data-theme="dark"] .comment-header .close-btn:hover {
+    background: #f0f0f0 !important;
+    color: #333 !important;
+}
+
+/* ★★★ 强制 Twikoo 所有文字变黑 ★★★ */
+[data-theme="dark"] .tk-comments,
+[data-theme="dark"] .tk-comment,
+[data-theme="dark"] .tk-input,
+[data-theme="dark"] .tk-submit,
+[data-theme="dark"] .tk-meta,
+[data-theme="dark"] .tk-loading,
+[data-theme="dark"] .tk-footer,
+[data-theme="dark"] .tk-powered {
+    color: #333333 !important;
+}
+
+/* 输入框 - 白底黑字 */
+[data-theme="dark"] .tk-input {
+    background: #f5f7fa !important;
+    border: 1px solid #e8ecf1 !important;
+}
+[data-theme="dark"] .tk-input textarea,
+[data-theme="dark"] .tk-input input {
+    color: #1a1a2e !important;
+    background: transparent !important;
+}
+[data-theme="dark"] .tk-input textarea::placeholder,
+[data-theme="dark"] .tk-input input::placeholder {
+    color: #aaa !important;
+}
+
+/* 评论列表 - 黑字 */
+[data-theme="dark"] .tk-comment .tk-nick,
+[data-theme="dark"] .tk-comment .tk-nick a {
+    color: #1a1a2e !important;
+}
+[data-theme="dark"] .tk-comment .tk-content,
+[data-theme="dark"] .tk-comment .tk-content p {
+    color: #333333 !important;
+}
+[data-theme="dark"] .tk-comment .tk-time {
+    color: #aaa !important;
+}
+
+/* 操作按钮 */
+[data-theme="dark"] .tk-comment .tk-actions .tk-action {
+    color: #999 !important;
+}
+[data-theme="dark"] .tk-comment .tk-actions .tk-action:hover {
+    color: #4fc3f7 !important;
+}
+[data-theme="dark"] .tk-comment .tk-like .tk-like-count {
+    color: #999 !important;
+}
+
+/* 提交按钮 */
+[data-theme="dark"] .tk-submit .tk-btn {
+    background: #4fc3f7 !important;
+    color: #ffffff !important;
+}
+
+/* 评论计数、排序 */
+[data-theme="dark"] .tk-meta .tk-count {
+    color: #666 !important;
+}
+[data-theme="dark"] .tk-meta .tk-order {
+    color: #888 !important;
+}
+[data-theme="dark"] .tk-meta .tk-order.active {
+    color: #4fc3f7 !important;
+}
+
+/* 加载更多 */
+[data-theme="dark"] .tk-loading .tk-load-more {
+    color: #aaa !important;
+}
+[data-theme="dark"] .tk-loading .tk-load-more:hover {
+    color: #4fc3f7 !important;
+}
+
+/* 空状态 */
+[data-theme="dark"] .tk-empty {
+    color: #aaa !important;
+}
+
+/* 底部 Powered by Twikoo */
+[data-theme="dark"] .tk-footer,
+[data-theme="dark"] .tk-powered,
+[data-theme="dark"] .tk-footer a,
+[data-theme="dark"] .tk-powered a {
+    color: #aaa !important;
+}
+[data-theme="dark"] .tk-footer a:hover,
+[data-theme="dark"] .tk-powered a:hover {
+    color: #666 !important;
+}
+        
+/* ============================================================
    ★★★ 响应式 ★★★
    ============================================================ */
 @media (max-width: 1200px) { 
