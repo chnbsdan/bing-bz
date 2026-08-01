@@ -1464,8 +1464,8 @@ html, body {
 
         closePreviewBtn.addEventListener('click', closePreview);
 
-        // ============================================================
-        // 7.1 下载下拉菜单（已修复手机1080x1920裁剪功能）
+                // ============================================================
+        // 7.1 下载下拉菜单（支持 mobile 和 mobile_s 动态裁剪）
         // ============================================================
         downloadBtn.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -1504,6 +1504,7 @@ html, body {
             var downloadUrl = url;
             
             // 1. 准备图片下载地址
+            // ✅ 这里修改：包含 mobile_s
             if (resolution === 'mobile' || resolution === 'mobile_s') { 
                 // 手机模式：我们需要先把原图加载到 Canvas 里截取，所以这里直接用原图清晰地址
                 if (url.indexOf('th?id=') !== -1) {
@@ -1531,9 +1532,10 @@ html, body {
             })
             .then(function(blob) {
                 // ★★★ 核心逻辑在这里 ★★★
-                if (resolution === 'mobile') {
-                    // 如果是手机，调用裁剪函数，生成 1080x1920 的图再下载
-                    return cropToMobile(blob, fileName);
+                // ✅ 这里修改：包含 mobile_s
+                if (resolution === 'mobile' || resolution === 'mobile_s') {
+                    // 如果是手机，调用裁剪函数，把当前分辨率传进去
+                    return cropToMobile(blob, fileName, resolution);
                 } else {
                     // 如果是 4K/FHD/HD，直接下载
                     return downloadBlob(blob, fileName);
@@ -1552,8 +1554,8 @@ html, body {
             });
         }
 
-        // ★★★ 手机竖屏裁剪函数 (已修复) ★★★
-        function cropToMobile(blob, fileName) {
+        // ★★★ 手机竖屏裁剪函数 (支持动态识别 1080x1920 和 768x1280) ★★★
+        function cropToMobile(blob, fileName, resolution) {
             return new Promise(function(resolve, reject) {
                 var img = new Image();
                 var url = URL.createObjectURL(blob);
@@ -1562,13 +1564,18 @@ html, body {
                     var canvas = document.createElement('canvas');
                     var ctx = canvas.getContext('2d');
                     
-                    // 目标尺寸 1080x1920
+                    // ✅ 根据传入的 resolution 动态设定目标尺寸
                     var targetW = 1080;
                     var targetH = 1920;
+                    if (resolution === 'mobile_s') {
+                        targetW = 768;
+                        targetH = 1280;
+                    }
+                    
                     canvas.width = targetW;
                     canvas.height = targetH;
                     
-                    // 计算裁剪区域（从正中间截取 9:16 的比例）
+                    // 计算裁剪区域（从正中间截取）
                     var imgRatio = img.width / img.height;
                     var targetRatio = targetW / targetH;
                     
@@ -1587,7 +1594,7 @@ html, body {
                         sy = (img.height - sh) / 2;
                     }
                     
-                    // 绘制到 1080x1920 的画布上
+                    // 绘制到指定尺寸的画布上
                     ctx.drawImage(img, sx, sy, sw, sh, 0, 0, targetW, targetH);
                     
                     // 将 Canvas 转为 Blob 并触发下载
