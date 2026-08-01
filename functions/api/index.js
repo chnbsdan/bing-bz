@@ -4,6 +4,25 @@ export async function onRequest(context) {
   const url = new URL(request.url);
   const base = `${url.protocol}//${url.host}`;
 
+  // 读取壁纸数据获取统计
+  let totalCount = '--';
+  let todayDate = '--';
+  try {
+    const fs = await import('fs');
+    const path = await import('path');
+    const dataPath = path.resolve('./data/wallpapers.json');
+    if (fs.existsSync(dataPath)) {
+      const raw = fs.readFileSync(dataPath, 'utf-8');
+      const data = JSON.parse(raw);
+      totalCount = data.length || 0;
+      if (data.length > 0) {
+        todayDate = data[0].date || '--';
+      }
+    }
+  } catch (e) {
+    // 保持默认值
+  }
+
   const html = `
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -59,7 +78,6 @@ export async function onRequest(context) {
 
     .container { max-width: 1000px; margin: 0 auto; }
 
-    /* ===== 顶部主题切换 ===== */
     .theme-toggle-wrap {
       display: flex;
       justify-content: flex-end;
@@ -84,7 +102,6 @@ export async function onRequest(context) {
       color: var(--text-primary);
     }
 
-    /* ===== 头部 ===== */
     .header {
       display: flex;
       justify-content: space-between;
@@ -143,7 +160,6 @@ export async function onRequest(context) {
       color: var(--text-primary);
     }
 
-    /* ===== 统计卡片 ===== */
     .stats {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -172,7 +188,6 @@ export async function onRequest(context) {
       margin-top: 4px;
     }
 
-    /* ===== 区块标题 ===== */
     .section-title {
       font-size: 18px;
       font-weight: 600;
@@ -191,7 +206,6 @@ export async function onRequest(context) {
       border-radius: 12px;
     }
 
-    /* ===== API 卡片 ===== */
     .api-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -291,7 +305,6 @@ export async function onRequest(context) {
       font-size: 11px;
     }
 
-    /* ===== 参数表格 ===== */
     .params-table-wrap {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
@@ -332,7 +345,6 @@ export async function onRequest(context) {
     }
     .params-table tr:last-child td { border-bottom: none; }
 
-    /* ===== 使用示例 ===== */
     .example-box {
       background: var(--code-bg);
       border: 1px solid var(--border-color);
@@ -348,7 +360,6 @@ export async function onRequest(context) {
       margin-bottom: 4px;
     }
 
-    /* ===== 打赏 ===== */
     .donate-section {
       margin-top: 40px;
       padding: 24px 28px;
@@ -396,7 +407,6 @@ export async function onRequest(context) {
     .donate-section .qr-item .qr-label.wechat { color: #07c160; }
     .donate-section .qr-item .qr-label.alipay { color: #1677ff; }
 
-    /* ===== 页脚 ===== */
     footer {
       margin-top: 30px;
       padding-top: 20px;
@@ -416,7 +426,6 @@ export async function onRequest(context) {
     }
     footer .footer-links a:hover { color: var(--text-primary); }
 
-    /* ===== Toast ===== */
     .toast {
       position: fixed;
       bottom: 30px;
@@ -440,7 +449,6 @@ export async function onRequest(context) {
       transform: translateX(-50%) translateY(0);
     }
 
-    /* ===== 响应式 ===== */
     @media (max-width: 640px) {
       body { padding: 16px 12px 40px; }
       .header-left h1 { font-size: 22px; }
@@ -485,11 +493,11 @@ export async function onRequest(context) {
     <!-- ===== 统计 ===== -->
     <div class="stats">
       <div class="stat-card">
-        <div class="num"><i class="fas fa-image"></i> <span id="totalCount">--</span></div>
+        <div class="num"><i class="fas fa-image"></i> ${totalCount}</div>
         <div class="label">总图片数</div>
       </div>
       <div class="stat-card">
-        <div class="num"><i class="fas fa-calendar-day"></i> <span id="todayDate">--</span></div>
+        <div class="num"><i class="fas fa-calendar-day"></i> ${todayDate}</div>
         <div class="label">今日更新</div>
       </div>
       <div class="stat-card">
@@ -506,7 +514,6 @@ export async function onRequest(context) {
 
     <div class="api-grid">
 
-      <!-- 当天图像 -->
       <div class="api-card">
         <div class="api-label"><i class="fas fa-sun"></i> 当天图像</div>
         <div class="api-path">/api/daily <span class="method">GET</span></div>
@@ -520,7 +527,6 @@ export async function onRequest(context) {
         </div>
       </div>
 
-      <!-- 随机图像 -->
       <div class="api-card">
         <div class="api-label"><i class="fas fa-random"></i> 随机图像</div>
         <div class="api-path">/api/random <span class="method">GET</span></div>
@@ -534,7 +540,6 @@ export async function onRequest(context) {
         </div>
       </div>
 
-      <!-- 指定日期 -->
       <div class="api-card">
         <div class="api-label"><i class="fas fa-calendar-alt"></i> 指定日期</div>
         <div class="api-path">/api/image <span class="method">GET</span></div>
@@ -548,7 +553,6 @@ export async function onRequest(context) {
         </div>
       </div>
 
-      <!-- 壁纸列表 -->
       <div class="api-card">
         <div class="api-label"><i class="fas fa-list"></i> 壁纸列表</div>
         <div class="api-path">/api/list <span class="method">GET</span></div>
@@ -635,13 +639,13 @@ export async function onRequest(context) {
       </div>
     </div>
 
-    <!-- ===== 页脚 ===== -->
+    <!-- ===== ★★★ 页脚 - 反馈按钮对接留言 ★★★ ===== -->
     <footer>
       <span>© 2026 必应壁纸 · 图片来自 Bing</span>
       <div class="footer-links">
         <a href="/" title="首页"><i class="fas fa-home"></i></a>
         <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#" title="反馈"><i class="fas fa-bug"></i></a>
+        <a href="#" title="反馈" id="feedbackLink"><i class="fas fa-bug"></i></a>
       </div>
     </footer>
 
@@ -678,22 +682,21 @@ export async function onRequest(context) {
     setTheme(currentTheme);
 
     // ============================================================
-    // 2. 加载统计数据（从 /data/wallpapers.json 读取）
+    // 2. 加载统计数据
     // ============================================================
     async function loadStats() {
       try {
         var res = await fetch('/data/wallpapers.json');
         if (!res.ok) throw new Error('加载失败');
         var data = await res.json();
-        
-        document.getElementById('totalCount').textContent = data.length || '0';
-        
-        if (data.length > 0) {
-          document.getElementById('todayDate').textContent = data[0].date || '--';
+        var countEl = document.getElementById('totalCount');
+        var dateEl = document.getElementById('todayDate');
+        if (countEl) countEl.textContent = data.length || '0';
+        if (dateEl && data.length > 0) {
+          dateEl.textContent = data[0].date || '--';
         }
       } catch (err) {
         console.log('统计加载失败:', err);
-        document.getElementById('totalCount').textContent = '--';
       }
     }
 
@@ -703,7 +706,8 @@ export async function onRequest(context) {
     var now = new Date();
     var h = String(now.getHours()).padStart(2, '0');
     var m = String(now.getMinutes()).padStart(2, '0');
-    document.getElementById('updateTime').textContent = h + ':' + m;
+    var updateEl = document.getElementById('updateTime');
+    if (updateEl) updateEl.textContent = h + ':' + m;
 
     // ============================================================
     // 4. 复制功能
@@ -745,7 +749,56 @@ export async function onRequest(context) {
     }
 
     // ============================================================
-    // 5. 启动
+    // 5. ★★★ 反馈按钮 → 打开留言弹窗 ★★★
+    // ============================================================
+    var feedbackLink = document.getElementById('feedbackLink');
+    if (feedbackLink) {
+      feedbackLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // 如果父页面有留言功能，调用父页面的函数
+        if (window.parent && typeof window.parent.openComment === 'function') {
+          window.parent.openComment();
+          return;
+        }
+        
+        // 通过 postMessage 通知父页面
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage({ type: 'openComment' }, '*');
+          return;
+        }
+        
+        // 如果都不行，跳转到首页并带上参数
+        window.location.href = '/?action=comment';
+      });
+    }
+
+    // ============================================================
+    // 6. ★★★ 监听来自父页面的消息 ★★★
+    // ============================================================
+    window.addEventListener('message', function(event) {
+      if (event.data && event.data.type === 'openComment') {
+        if (typeof window.parent.openComment === 'function') {
+          window.parent.openComment();
+        }
+      }
+    });
+
+    // ============================================================
+    // 7. 检查 URL 参数，如果是 ?action=comment 则打开留言
+    // ============================================================
+    if (window.location.search.indexOf('action=comment') !== -1) {
+      // 如果在 iframe 中，通知父页面
+      if (window.parent && window.parent !== window) {
+        window.parent.postMessage({ type: 'openComment' }, '*');
+      } else {
+        // 直接跳转到首页
+        window.location.href = '/';
+      }
+    }
+
+    // ============================================================
+    // 8. 启动
     // ============================================================
     loadStats();
   </script>
