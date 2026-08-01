@@ -1,4 +1,4 @@
-// scripts/fetch.js - 完整版（本地存图片，但 wallpapers.json 全部用 CDN 链接,去掉 copyrightLink、title、description）
+// scripts/fetch.js - 完整版（本地存图片，wallpapers.json 全部用 CDN 链接，缩略图 400x240）
 
 const fs = require('fs');
 const path = require('path');
@@ -21,6 +21,18 @@ const PAGE_SIZE = 42;
 [PICTURE_DIR, WEBP_DIR, DATA_DIR, PAGES_DIR].forEach(dir => {
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 });
+
+// ============ ★★★ 缩略图生成函数 - 400x240 ★★★ ============
+function getThumbnailUrl(url) {
+    if (!url) return '';
+    if (url.indexOf('th?id=') !== -1) {
+        var baseUrl = url.split('&')[0];
+        // 直接使用 Bing 的 400x240 缩略图
+        var thumbUrl = baseUrl.replace('_UHD.jpg', '_400x240.jpg');
+        return thumbUrl;
+    }
+    return url;
+}
 
 // ============ 文件操作 ============
 
@@ -152,7 +164,7 @@ async function downloadWallpaper(wallpaper, dateStr) {
     }
 }
 
-// ============ 从 urls.txt 读取历史数据 ============
+// ============ ★★★ 从 urls.txt 读取历史数据（含 400x240 缩略图）★★★ ============
 
 function loadHistoricalData() {
     const urls = readLines(URLS_FILE);
@@ -180,12 +192,12 @@ function loadHistoricalData() {
         const day = String(d.getDate()).padStart(2, '0');
         const dateStr = `${y}-${m}-${day}`;
         
-        // ★★★ 精简：只保留 date, copyright, jpg, webp ★★★
         return {
             date: dateStr,
             copyright: item.copyright || '',
             jpg: item.url,
-            webp: item.url
+            webp: item.url,
+            thumb: getThumbnailUrl(item.url)  // ★★★ 400x240 缩略图 ★★★
         };
     });
 }
@@ -268,12 +280,12 @@ async function main() {
 
         const downloaded = await downloadWallpaper(data, date);
         if (downloaded) {
-            // ★★★ 精简：只保留四个字段 ★★★
             const cdnEntry = {
                 date: date,
                 copyright: data.copyright || '',
                 jpg: data.url,
-                webp: data.url
+                webp: data.url,
+                thumb: getThumbnailUrl(data.url)  // ★★★ 400x240 缩略图 ★★★
             };
             newResults.push(cdnEntry);
             console.log(`✅ ${date}`);
