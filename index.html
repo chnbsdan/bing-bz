@@ -1504,7 +1504,7 @@ html, body {
             var downloadUrl = url;
             
             // 1. 准备图片下载地址
-            if (resolution === 'mobile') {
+            if (resolution === 'mobile' || resolution === 'mobile_s') { 
                 // 手机模式：我们需要先把原图加载到 Canvas 里截取，所以这里直接用原图清晰地址
                 if (url.indexOf('th?id=') !== -1) {
                     var baseUrl = url.split('&')[0];
