@@ -482,99 +482,125 @@
         .info-panel .desc { font-size: 13px; color: rgba(255, 255, 255, 0.5); margin-top: 4px; max-width: 500px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; line-height: 1.6; }
 
         /* ============================================================
-           ★★★ 评论弹窗 - Twikoo 白底黑字 ★★★
-           ============================================================ */
-        .comment-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 2000;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(4px);
-            justify-content: center;
-            align-items: center;
-            animation: fadeIn 0.25s ease;
-        }
-        .comment-overlay.active { display: flex; }
+   ★★★ Twikoo 暗色模式 - 强制白底黑字 ★★★
+   ============================================================ */
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px) scale(0.96); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
-        }
+/* 评论弹窗整体 - 强制白色背景 */
+[data-theme="dark"] .comment-modal {
+    background: #ffffff !important;
+    border-color: #e8e8e8 !important;
+}
 
-        .comment-modal {
-            background: #ffffff !important;
-            border-radius: 16px;
-            width: 92%;
-            max-width: 720px;
-            max-height: 85vh;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            border: 1px solid #e8e8e8;
-            animation: slideUp 0.3s ease;
-            overflow: hidden;
-        }
+[data-theme="dark"] .comment-body {
+    background: #ffffff !important;
+}
 
-        [data-theme="dark"] .comment-modal {
-            background: #ffffff !important;
-            border-color: #e8e8e8 !important;
-        }
+[data-theme="dark"] .comment-header {
+    border-bottom-color: #e8e8e8 !important;
+}
+[data-theme="dark"] .comment-header h2 {
+    color: #1a1a2e !important;
+}
+[data-theme="dark"] .comment-header .close-btn {
+    color: #999 !important;
+}
+[data-theme="dark"] .comment-header .close-btn:hover {
+    background: #f0f0f0 !important;
+    color: #333 !important;
+}
 
-        .comment-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 24px 14px;
-            border-bottom: 1px solid #e8e8e8;
-            flex-shrink: 0;
-        }
-        .comment-header h2 {
-            font-size: 18px;
-            font-weight: 600;
-            color: #1a1a2e;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .comment-header h2 i {
-            color: #4fc3f7;
-        }
-        .comment-header .close-btn {
-            background: none;
-            border: none;
-            color: #999;
-            font-size: 20px;
-            cursor: pointer;
-            padding: 4px 8px;
-            border-radius: 6px;
-            transition: 0.2s;
-            -webkit-tap-highlight-color: transparent;
-        }
-        .comment-header .close-btn:hover {
-            background: #f0f0f0;
-            color: #333;
-        }
+/* ★★★ 强制 Twikoo 所有文字变黑 ★★★ */
+[data-theme="dark"] .tk-comments,
+[data-theme="dark"] .tk-comment,
+[data-theme="dark"] .tk-input,
+[data-theme="dark"] .tk-submit,
+[data-theme="dark"] .tk-meta,
+[data-theme="dark"] .tk-loading,
+[data-theme="dark"] .tk-footer,
+[data-theme="dark"] .tk-powered {
+    color: #333333 !important;
+}
 
-        .comment-body {
-            flex: 1;
-            overflow-y: auto;
-            padding: 20px 24px 16px;
-            background: #ffffff !important;
-        }
-        .comment-body::-webkit-scrollbar { width: 4px; }
-        .comment-body::-webkit-scrollbar-thumb { background: #ccc; border-radius: 2px; }
+/* 输入框 - 白底黑字 */
+[data-theme="dark"] .tk-input {
+    background: #f5f7fa !important;
+    border: 1px solid #e8ecf1 !important;
+}
+[data-theme="dark"] .tk-input textarea,
+[data-theme="dark"] .tk-input input {
+    color: #1a1a2e !important;
+    background: transparent !important;
+}
+[data-theme="dark"] .tk-input textarea::placeholder,
+[data-theme="dark"] .tk-input input::placeholder {
+    color: #aaa !important;
+}
 
-        [data-theme="dark"] .comment-body {
-            background: #ffffff !important;
-        }
+/* 评论列表 - 黑字 */
+[data-theme="dark"] .tk-comment .tk-nick,
+[data-theme="dark"] .tk-comment .tk-nick a {
+    color: #1a1a2e !important;
+}
+[data-theme="dark"] .tk-comment .tk-content,
+[data-theme="dark"] .tk-comment .tk-content p {
+    color: #333333 !important;
+}
+[data-theme="dark"] .tk-comment .tk-time {
+    color: #aaa !important;
+}
+
+/* 操作按钮 */
+[data-theme="dark"] .tk-comment .tk-actions .tk-action {
+    color: #999 !important;
+}
+[data-theme="dark"] .tk-comment .tk-actions .tk-action:hover {
+    color: #4fc3f7 !important;
+}
+[data-theme="dark"] .tk-comment .tk-like .tk-like-count {
+    color: #999 !important;
+}
+
+/* 提交按钮 */
+[data-theme="dark"] .tk-submit .tk-btn {
+    background: #4fc3f7 !important;
+    color: #ffffff !important;
+}
+
+/* 评论计数、排序 */
+[data-theme="dark"] .tk-meta .tk-count {
+    color: #666 !important;
+}
+[data-theme="dark"] .tk-meta .tk-order {
+    color: #888 !important;
+}
+[data-theme="dark"] .tk-meta .tk-order.active {
+    color: #4fc3f7 !important;
+}
+
+/* 加载更多 */
+[data-theme="dark"] .tk-loading .tk-load-more {
+    color: #aaa !important;
+}
+[data-theme="dark"] .tk-loading .tk-load-more:hover {
+    color: #4fc3f7 !important;
+}
+
+/* 空状态 */
+[data-theme="dark"] .tk-empty {
+    color: #aaa !important;
+}
+
+/* 底部 Powered by Twikoo */
+[data-theme="dark"] .tk-footer,
+[data-theme="dark"] .tk-powered,
+[data-theme="dark"] .tk-footer a,
+[data-theme="dark"] .tk-powered a {
+    color: #aaa !important;
+}
+[data-theme="dark"] .tk-footer a:hover,
+[data-theme="dark"] .tk-powered a:hover {
+    color: #666 !important;
+}
 
         /* ============================================================
            响应式
