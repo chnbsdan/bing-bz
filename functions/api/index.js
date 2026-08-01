@@ -4,25 +4,6 @@ export async function onRequest(context) {
   const url = new URL(request.url);
   const base = `${url.protocol}//${url.host}`;
 
-  // 读取壁纸数据获取统计
-  let totalCount = '--';
-  let todayDate = '--';
-  try {
-    const fs = await import('fs');
-    const path = await import('path');
-    const dataPath = path.resolve('./data/wallpapers.json');
-    if (fs.existsSync(dataPath)) {
-      const raw = fs.readFileSync(dataPath, 'utf-8');
-      const data = JSON.parse(raw);
-      totalCount = data.length || 0;
-      if (data.length > 0) {
-        todayDate = data[0].date || '--';
-      }
-    }
-  } catch (e) {
-    // 如果读取失败，保持默认值
-  }
-
   const html = `
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -504,11 +485,11 @@ export async function onRequest(context) {
     <!-- ===== 统计 ===== -->
     <div class="stats">
       <div class="stat-card">
-        <div class="num"><i class="fas fa-image"></i> ${totalCount}</div>
+        <div class="num"><i class="fas fa-image"></i> <span id="totalCount">--</span></div>
         <div class="label">总图片数</div>
       </div>
       <div class="stat-card">
-        <div class="num"><i class="fas fa-calendar-day"></i> ${todayDate}</div>
+        <div class="num"><i class="fas fa-calendar-day"></i> <span id="todayDate">--</span></div>
         <div class="label">今日更新</div>
       </div>
       <div class="stat-card">
@@ -697,7 +678,35 @@ export async function onRequest(context) {
     setTheme(currentTheme);
 
     // ============================================================
-    // 2. 复制功能
+    // 2. 加载统计数据（从 /data/wallpapers.json 读取）
+    // ============================================================
+    async function loadStats() {
+      try {
+        var res = await fetch('/data/wallpapers.json');
+        if (!res.ok) throw new Error('加载失败');
+        var data = await res.json();
+        
+        document.getElementById('totalCount').textContent = data.length || '0';
+        
+        if (data.length > 0) {
+          document.getElementById('todayDate').textContent = data[0].date || '--';
+        }
+      } catch (err) {
+        console.log('统计加载失败:', err);
+        document.getElementById('totalCount').textContent = '--';
+      }
+    }
+
+    // ============================================================
+    // 3. 更新时间
+    // ============================================================
+    var now = new Date();
+    var h = String(now.getHours()).padStart(2, '0');
+    var m = String(now.getMinutes()).padStart(2, '0');
+    document.getElementById('updateTime').textContent = h + ':' + m;
+
+    // ============================================================
+    // 4. 复制功能
     // ============================================================
     function copyText(text) {
       if (navigator.clipboard) {
@@ -736,12 +745,9 @@ export async function onRequest(context) {
     }
 
     // ============================================================
-    // 3. 更新时间
+    // 5. 启动
     // ============================================================
-    var now = new Date();
-    var h = String(now.getHours()).padStart(2, '0');
-    var m = String(now.getMinutes()).padStart(2, '0');
-    document.getElementById('updateTime').textContent = h + ':' + m;
+    loadStats();
   </script>
 
 </body>
