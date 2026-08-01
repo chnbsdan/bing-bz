@@ -34,33 +34,42 @@ export async function onRequest(context) {
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
     :root {
-      --bg-primary: #0d0d1a;
+      /* 暗色模式（默认） */
+      --bg-primary: #0f0f1a;
       --bg-secondary: #1a1a2e;
-      --bg-card: rgba(255,255,255,0.03);
-      --bg-card-hover: rgba(255,255,255,0.06);
-      --text-primary: #fff;
-      --text-secondary: rgba(255,255,255,0.6);
-      --text-muted: rgba(255,255,255,0.3);
+      --bg-card: rgba(255,255,255,0.04);
+      --bg-card-hover: rgba(255,255,255,0.08);
+      --bg-code: rgba(255,255,255,0.06);
+      --bg-donate: rgba(255,255,255,0.02);
+      --text-primary: #f0f0f5;
+      --text-secondary: rgba(255,255,255,0.65);
+      --text-muted: rgba(255,255,255,0.35);
       --border-color: rgba(255,255,255,0.06);
-      --border-hover: rgba(79,195,247,0.15);
-      --shadow: none;
-      --code-bg: rgba(0,0,0,0.3);
-      --donate-bg: rgba(255,255,255,0.02);
+      --border-hover: rgba(79,195,247,0.25);
+      --shadow: 0 4px 24px rgba(0,0,0,0.3);
+      --accent: #4fc3f7;
+      --accent-glow: rgba(79,195,247,0.15);
+      --gradient-start: #4fc3f7;
+      --gradient-end: #00e5ff;
     }
 
     [data-theme="light"] {
-      --bg-primary: #f0f2f5;
+      --bg-primary: #f4f6fa;
       --bg-secondary: #ffffff;
-      --bg-card: rgba(0,0,0,0.02);
-      --bg-card-hover: rgba(0,0,0,0.04);
+      --bg-card: rgba(0,0,0,0.03);
+      --bg-card-hover: rgba(0,0,0,0.06);
+      --bg-code: rgba(0,0,0,0.04);
+      --bg-donate: rgba(0,0,0,0.015);
       --text-primary: #1a1a2e;
-      --text-secondary: rgba(0,0,0,0.6);
+      --text-secondary: rgba(0,0,0,0.55);
       --text-muted: rgba(0,0,0,0.3);
-      --border-color: rgba(0,0,0,0.08);
-      --border-hover: rgba(79,195,247,0.3);
-      --shadow: 0 2px 12px rgba(0,0,0,0.04);
-      --code-bg: rgba(0,0,0,0.04);
-      --donate-bg: rgba(0,0,0,0.02);
+      --border-color: rgba(0,0,0,0.07);
+      --border-hover: rgba(79,195,247,0.4);
+      --shadow: 0 4px 24px rgba(0,0,0,0.06);
+      --accent: #4fc3f7;
+      --accent-glow: rgba(79,195,247,0.12);
+      --gradient-start: #4fc3f7;
+      --gradient-end: #00bcd4;
     }
 
     body {
@@ -69,61 +78,74 @@ export async function onRequest(context) {
       color: var(--text-primary);
       min-height: 100vh;
       padding: 30px 20px 60px;
-      transition: background 0.3s ease, color 0.3s ease;
+      transition: background 0.35s ease, color 0.35s ease;
+      line-height: 1.6;
     }
-    a { color: #4fc3f7; text-decoration: none; }
-    a:hover { color: #81d4fa; }
+    a { color: var(--accent); text-decoration: none; transition: 0.2s; }
+    a:hover { opacity: 0.8; }
 
     .container { max-width: 1000px; margin: 0 auto; }
 
+    /* ===== 主题切换按钮 ===== */
     .theme-toggle-wrap {
       display: flex;
       justify-content: flex-end;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
     .theme-toggle-btn {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       color: var(--text-secondary);
-      padding: 8px 14px;
-      border-radius: 8px;
+      padding: 8px 16px;
+      border-radius: 10px;
       cursor: pointer;
-      font-size: 14px;
-      transition: 0.2s;
+      font-size: 13px;
+      transition: 0.3s;
       font-family: inherit;
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      backdrop-filter: blur(8px);
     }
     .theme-toggle-btn:hover {
       background: var(--bg-card-hover);
       color: var(--text-primary);
+      border-color: var(--border-hover);
     }
 
+    /* ===== 头部 ===== */
     .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
       gap: 16px;
-      margin-bottom: 30px;
-      padding-bottom: 20px;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
       border-bottom: 1px solid var(--border-color);
     }
     .header-left h1 {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: 700;
-      background: linear-gradient(135deg, #4fc3f7, #00e5ff);
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .header-left h1 .icon-text {
+      -webkit-text-fill-color: var(--text-primary);
+      background: none;
     }
     .header-left p {
       color: var(--text-muted);
       font-size: 14px;
       margin-top: 4px;
     }
-    .header-left p i { margin-right: 6px; }
+    .header-left p i { margin-right: 6px; color: var(--accent); }
     .header-right {
       display: flex;
       align-items: center;
@@ -131,22 +153,23 @@ export async function onRequest(context) {
       flex-wrap: wrap;
     }
     .header-right .badge {
-      background: rgba(79,195,247,0.12);
-      color: #4fc3f7;
+      background: var(--accent-glow);
+      color: var(--accent);
       padding: 6px 16px;
       border-radius: 20px;
-      font-size: 13px;
-      border: 1px solid rgba(79,195,247,0.12);
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid var(--accent-glow);
     }
     .header-right .btn-back {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       color: var(--text-secondary);
       padding: 8px 16px;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 13px;
       cursor: pointer;
-      transition: 0.2s;
+      transition: 0.3s;
       font-family: inherit;
       display: inline-flex;
       align-items: center;
@@ -156,54 +179,66 @@ export async function onRequest(context) {
     .header-right .btn-back:hover {
       background: var(--bg-card-hover);
       color: var(--text-primary);
+      border-color: var(--border-hover);
     }
 
+    /* ===== 统计卡片 ===== */
     .stats {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 14px;
-      margin-bottom: 30px;
+      margin-bottom: 32px;
     }
     .stat-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 16px 18px;
+      border-radius: 14px;
+      padding: 18px 20px;
       text-align: center;
-      transition: 0.2s;
+      transition: 0.3s;
+      backdrop-filter: blur(4px);
     }
-    .stat-card:hover { border-color: var(--border-hover); }
+    .stat-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
     .stat-card .num {
-      font-size: 26px;
+      font-size: 28px;
       font-weight: 700;
       color: var(--text-primary);
       line-height: 1.2;
     }
-    .stat-card .num i { color: #4fc3f7; margin-right: 6px; }
+    .stat-card .num i { color: var(--accent); margin-right: 6px; }
     .stat-card .label {
       font-size: 12px;
       color: var(--text-muted);
       margin-top: 4px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
     }
 
+    /* ===== 区块标题 ===== */
     .section-title {
       font-size: 18px;
       font-weight: 600;
-      margin: 30px 0 16px;
+      margin: 32px 0 16px;
       display: flex;
       align-items: center;
       gap: 10px;
     }
-    .section-title i { color: #4fc3f7; font-size: 20px; }
+    .section-title i { color: var(--accent); font-size: 20px; }
     .section-title .tag {
-      font-size: 12px;
-      font-weight: 400;
-      background: rgba(79,195,247,0.1);
-      color: #4fc3f7;
-      padding: 2px 10px;
+      font-size: 11px;
+      font-weight: 500;
+      background: var(--accent-glow);
+      color: var(--accent);
+      padding: 2px 12px;
       border-radius: 12px;
     }
 
+    /* ===== API 卡片 ===== */
     .api-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -212,14 +247,15 @@ export async function onRequest(context) {
     .api-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 18px 20px;
-      transition: 0.25s ease;
+      transition: 0.3s;
+      backdrop-filter: blur(4px);
     }
     .api-card:hover {
       background: var(--bg-card-hover);
       border-color: var(--border-hover);
-      transform: translateY(-2px);
+      transform: translateY(-3px);
       box-shadow: var(--shadow);
     }
     .api-card .api-label {
@@ -227,23 +263,27 @@ export async function onRequest(context) {
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      font-weight: 600;
       margin-bottom: 4px;
     }
     .api-card .api-path {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
       color: var(--text-primary);
       font-family: 'SF Mono', 'Fira Code', monospace;
       margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
     }
     .api-card .api-path .method {
-      font-size: 11px;
-      font-weight: 400;
-      background: rgba(79,195,247,0.12);
-      color: #4fc3f7;
-      padding: 1px 8px;
+      font-size: 10px;
+      font-weight: 600;
+      background: var(--accent-glow);
+      color: var(--accent);
+      padding: 1px 10px;
       border-radius: 4px;
-      margin-left: 8px;
       font-family: inherit;
     }
     .api-card .api-desc {
@@ -253,8 +293,8 @@ export async function onRequest(context) {
     }
     .api-card .api-code {
       margin-top: 10px;
-      background: var(--code-bg);
-      border-radius: 6px;
+      background: var(--bg-code);
+      border-radius: 8px;
       padding: 8px 12px;
       font-size: 12px;
       font-family: 'SF Mono', 'Fira Code', monospace;
@@ -266,6 +306,10 @@ export async function onRequest(context) {
       align-items: center;
       justify-content: space-between;
       gap: 8px;
+      transition: 0.2s;
+    }
+    .api-card .api-code:hover {
+      border-color: var(--border-hover);
     }
     .api-card .api-code .link-part {
       overflow: hidden;
@@ -277,36 +321,39 @@ export async function onRequest(context) {
       transition: 0.2s;
     }
     .api-card .api-code .link-part a:hover {
-      color: #4fc3f7;
+      color: var(--accent);
     }
     .api-card .api-code .copy-btn {
       background: none;
       border: none;
       color: var(--text-muted);
       cursor: pointer;
-      font-size: 14px;
+      font-size: 13px;
       transition: 0.2s;
       font-family: inherit;
       padding: 0 4px;
       flex-shrink: 0;
     }
-    .api-card .api-code .copy-btn:hover { color: #4fc3f7; }
+    .api-card .api-code .copy-btn:hover { color: var(--accent); }
     .api-card .api-tags {
-      margin-top: 6px;
+      margin-top: 8px;
       font-size: 12px;
       color: var(--text-muted);
     }
     .api-card .api-tags code {
-      background: var(--code-bg);
-      padding: 1px 6px;
+      background: var(--bg-code);
+      padding: 1px 8px;
       border-radius: 4px;
       font-size: 11px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      color: var(--text-secondary);
     }
 
+    /* ===== 参数表格 ===== */
     .params-table-wrap {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 16px 20px;
       overflow-x: auto;
     }
@@ -319,15 +366,15 @@ export async function onRequest(context) {
     .params-table th {
       text-align: left;
       color: var(--text-muted);
-      font-weight: 400;
-      font-size: 12px;
+      font-weight: 600;
+      font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      padding: 6px 10px 6px 0;
+      padding: 8px 10px 8px 0;
       border-bottom: 1px solid var(--border-color);
     }
     .params-table td {
-      padding: 8px 10px 8px 0;
+      padding: 10px 10px 10px 0;
       border-bottom: 1px solid var(--border-color);
       color: var(--text-secondary);
     }
@@ -343,32 +390,42 @@ export async function onRequest(context) {
     }
     .params-table tr:last-child td { border-bottom: none; }
 
+    /* ===== 使用示例 ===== */
     .example-box {
-      background: var(--code-bg);
+      background: var(--bg-code);
       border: 1px solid var(--border-color);
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 16px 20px;
       font-family: 'SF Mono', 'Fira Code', monospace;
       font-size: 13px;
       color: var(--text-secondary);
       overflow-x: auto;
+      line-height: 1.8;
     }
     .example-box .comment {
       color: var(--text-muted);
-      margin-bottom: 4px;
+      margin-bottom: 2px;
+    }
+    .example-box .comment::before {
+      content: '// ';
     }
 
+    /* ===== 打赏 ===== */
     .donate-section {
       margin-top: 40px;
-      padding: 24px 28px;
-      background: var(--donate-bg);
+      padding: 28px 32px;
+      background: var(--bg-donate);
       border: 1px solid var(--border-color);
-      border-radius: 14px;
+      border-radius: 16px;
       text-align: center;
+      transition: 0.3s;
+    }
+    .donate-section:hover {
+      border-color: var(--border-hover);
     }
     .donate-section .donate-title {
-      font-size: 16px;
-      font-weight: 500;
+      font-size: 17px;
+      font-weight: 600;
       color: var(--text-primary);
       margin-bottom: 4px;
     }
@@ -376,12 +433,12 @@ export async function onRequest(context) {
     .donate-section .donate-desc {
       font-size: 13px;
       color: var(--text-muted);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
     .donate-section .qr-row {
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 32px;
       flex-wrap: wrap;
     }
     .donate-section .qr-item {
@@ -393,20 +450,27 @@ export async function onRequest(context) {
     .donate-section .qr-item img {
       width: 120px;
       height: 120px;
-      border-radius: 10px;
-      background: #fff;
+      border-radius: 12px;
+      background: #ffffff;
       padding: 6px;
       border: 1px solid var(--border-color);
+      transition: 0.3s;
+    }
+    .donate-section .qr-item img:hover {
+      transform: scale(1.04);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
     .donate-section .qr-item .qr-label {
       font-size: 12px;
+      font-weight: 500;
       color: var(--text-muted);
     }
     .donate-section .qr-item .qr-label.wechat { color: #07c160; }
     .donate-section .qr-item .qr-label.alipay { color: #1677ff; }
 
+    /* ===== 页脚 ===== */
     footer {
-      margin-top: 30px;
+      margin-top: 32px;
       padding-top: 20px;
       border-top: 1px solid var(--border-color);
       display: flex;
@@ -421,22 +485,24 @@ export async function onRequest(context) {
     footer .footer-links a {
       color: var(--text-muted);
       transition: 0.2s;
+      font-size: 15px;
     }
     footer .footer-links a:hover { color: var(--text-primary); }
 
+    /* ===== Toast ===== */
     .toast {
       position: fixed;
       bottom: 30px;
       left: 50%;
       transform: translateX(-50%) translateY(80px);
       background: var(--bg-secondary);
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(12px);
       padding: 10px 24px;
-      border-radius: 10px;
+      border-radius: 12px;
       font-size: 14px;
       color: var(--text-primary);
       border: 1px solid var(--border-color);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
       opacity: 0;
       transition: all 0.4s ease;
       pointer-events: none;
@@ -447,9 +513,11 @@ export async function onRequest(context) {
       transform: translateX(-50%) translateY(0);
     }
 
+    /* ===== 响应式 ===== */
     @media (max-width: 640px) {
-      body { padding: 16px 12px 40px; }
+      body { padding: 16px 14px 40px; }
       .header-left h1 { font-size: 22px; }
+      .header-left h1 .icon-text { display: none; }
       .stats { grid-template-columns: repeat(2, 1fr); }
       .api-grid { grid-template-columns: 1fr; }
       .api-card .api-code { font-size: 11px; white-space: normal; word-break: break-all; }
@@ -457,11 +525,13 @@ export async function onRequest(context) {
       .params-table { font-size: 13px; }
       .params-table td, .params-table th { padding: 4px 6px 4px 0; }
       footer { flex-direction: column; text-align: center; }
+      .header-right .badge { font-size: 11px; padding: 4px 12px; }
     }
     @media (max-width: 400px) {
       .stats { grid-template-columns: 1fr; }
       .donate-section .qr-row { gap: 16px; }
       .donate-section .qr-item img { width: 75px; height: 75px; }
+      .header-left h1 { font-size: 19px; }
     }
   </style>
 </head>
@@ -479,7 +549,9 @@ export async function onRequest(context) {
     <!-- ===== 头部 ===== -->
     <div class="header">
       <div class="header-left">
-        <h1>📷 必应壁纸 API</h1>
+        <h1>
+          <span class="icon-text">📷</span> 必应壁纸 API
+        </h1>
         <p><i class="fas fa-clock"></i> 图片自动更新时间：每天 0:10</p>
       </div>
       <div class="header-right">
@@ -609,13 +681,13 @@ export async function onRequest(context) {
     </div>
 
     <div class="example-box">
-      <div class="comment">&lt;!-- 嵌入当天壁纸 --&gt;</div>
+      <div class="comment">嵌入当天壁纸</div>
       &lt;img src="${base}/api/daily" alt="今日壁纸" /&gt;
-      <div class="comment" style="margin-top:10px;">&lt;!-- 嵌入随机壁纸 --&gt;</div>
+      <div class="comment" style="margin-top:8px;">嵌入随机壁纸</div>
       &lt;img src="${base}/api/random" alt="随机壁纸" /&gt;
-      <div class="comment" style="margin-top:10px;">&lt;!-- 嵌入指定日期壁纸 --&gt;</div>
+      <div class="comment" style="margin-top:8px;">嵌入指定日期壁纸</div>
       &lt;img src="${base}/api/image?date=20260731" alt="壁纸" /&gt;
-      <div class="comment" style="margin-top:10px;">&lt;!-- JavaScript 调用 --&gt;</div>
+      <div class="comment" style="margin-top:8px;">JavaScript 调用</div>
       fetch('${base}/api/random')
         .then(res => res.json())
         .then(data => console.log(data));
@@ -637,7 +709,7 @@ export async function onRequest(context) {
       </div>
     </div>
 
-    <!-- ===== 页脚 - 反馈按钮对接留言 ===== -->
+    <!-- ===== 页脚 ===== -->
     <footer>
       <span>© 2026 必应壁纸 · 图片来自 Bing</span>
       <div class="footer-links">
@@ -754,19 +826,16 @@ export async function onRequest(context) {
       feedbackLink.addEventListener('click', function(e) {
         e.preventDefault();
         
-        // 如果父页面有留言功能，调用父页面的函数
         if (window.parent && typeof window.parent.openComment === 'function') {
           window.parent.openComment();
           return;
         }
         
-        // 通过 postMessage 通知父页面
         if (window.parent && window.parent !== window) {
           window.parent.postMessage({ type: 'openComment' }, '*');
           return;
         }
         
-        // 兜底：跳转到首页并带上参数
         window.location.href = '/?action=comment';
       });
     }
