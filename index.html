@@ -125,7 +125,7 @@
             50% { opacity: 0.5; transform: scale(0.8); }
         }
 
-        /* ===== 应用 - ★★★ gap: 0 去掉卡片间隙 ★★★ ===== */
+        /* ===== 应用 ===== */
         .app { 
             display: flex; 
             flex-direction: column; 
@@ -141,9 +141,9 @@
             display: grid; 
             grid-template-columns: repeat(6, 1fr);
             grid-template-rows: repeat(5, 1fr);
-            gap: 0; /* ★★★ 去掉卡片间隙 ★★★ */
+            gap: 0;
             flex: 1;
-            padding: 0; /* ★★★ 去掉内边距 ★★★ */
+            padding: 0;
             overflow-y: auto; 
             min-height: 0;
             background: var(--bg-primary);
@@ -168,7 +168,7 @@
             transition: background 0.3s ease;
             contain: strict;
             -webkit-tap-highlight-color: transparent;
-            border-radius: 0; /* ★★★ 去掉圆角，无缝拼接 ★★★ */
+            border-radius: 0;
         }
 
         .card img {
@@ -225,7 +225,7 @@
         .card .info .title { font-size: 13px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .card .info .copyright { font-size: 11px; color: rgba(255,255,255,0.4); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-        /* ===== 分页 - 浮动在底部 ===== */
+        /* ===== 分页 ===== */
         .pagination { 
             position: fixed; 
             bottom: 16px; 
@@ -482,7 +482,7 @@
         .info-panel .desc { font-size: 13px; color: rgba(255, 255, 255, 0.5); margin-top: 4px; max-width: 500px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; line-height: 1.6; }
 
         /* ============================================================
-           ★★★ 评论弹窗 - 亮色/暗色都白底黑字 ★★★
+           ★★★ 评论弹窗 - Twikoo 白底黑字 ★★★
            ============================================================ */
         .comment-overlay {
             display: none;
@@ -521,6 +521,11 @@
             border: 1px solid #e8e8e8;
             animation: slideUp 0.3s ease;
             overflow: hidden;
+        }
+
+        [data-theme="dark"] .comment-modal {
+            background: #ffffff !important;
+            border-color: #e8e8e8 !important;
         }
 
         .comment-header {
@@ -567,132 +572,9 @@
         .comment-body::-webkit-scrollbar { width: 4px; }
         .comment-body::-webkit-scrollbar-thumb { background: #ccc; border-radius: 2px; }
 
-        /* ★★★ 暗色模式下保持白底黑字 ★★★ */
-        [data-theme="dark"] .comment-modal {
-            background: #ffffff !important;
-            border-color: #e8e8e8 !important;
-        }
-        [data-theme="dark"] .comment-header {
-            border-bottom-color: #e8e8e8 !important;
-        }
-        [data-theme="dark"] .comment-header h2 {
-            color: #1a1a2e !important;
-        }
-        [data-theme="dark"] .comment-header .close-btn {
-            color: #999 !important;
-        }
-        [data-theme="dark"] .comment-header .close-btn:hover {
-            background: #f0f0f0 !important;
-            color: #333 !important;
-        }
         [data-theme="dark"] .comment-body {
             background: #ffffff !important;
         }
-
-        /* ===== Waline 评论样式（适配白底黑字） ===== */
-        .comment-input-area {
-            background: #f5f7fa;
-            border-radius: 12px;
-            padding: 14px 16px;
-            margin-bottom: 20px;
-            border: 1px solid #e8ecf1;
-            transition: border-color 0.2s;
-        }
-        .comment-input-area:focus-within { border-color: #4fc3f7; }
-        .comment-input-area textarea {
-            width: 100%;
-            background: transparent;
-            border: none;
-            color: #1a1a2e;
-            font-size: 14px;
-            resize: vertical;
-            min-height: 56px;
-            max-height: 120px;
-            outline: none;
-            font-family: inherit;
-        }
-        .comment-input-area textarea::placeholder { color: #aaa; }
-        .comment-input-row { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
-        .comment-input-row input {
-            flex: 1;
-            min-width: 80px;
-            background: #ffffff;
-            border: 1px solid #e0e4ea;
-            border-radius: 6px;
-            padding: 6px 12px;
-            color: #1a1a2e;
-            font-size: 13px;
-            outline: none;
-            transition: 0.2s;
-            font-family: inherit;
-        }
-        .comment-input-row input:focus { border-color: #4fc3f7; }
-        .comment-input-row input::placeholder { color: #aaa; }
-        .comment-submit-btn {
-            background: #4fc3f7;
-            border: none;
-            color: #fff;
-            padding: 6px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: 500;
-            transition: 0.2s;
-            font-family: inherit;
-            white-space: nowrap;
-            -webkit-tap-highlight-color: transparent;
-        }
-        .comment-submit-btn:hover { opacity: 0.85; transform: scale(0.98); }
-        .comment-submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-
-        .comment-list-title {
-            font-size: 13px;
-            color: #666;
-            margin-bottom: 14px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .comment-list-title .count { color: #4fc3f7; font-weight: 600; }
-        .comment-list-title .sort-btn { cursor: pointer; transition: 0.2s; padding: 2px 6px; border-radius: 4px; color: #888; -webkit-tap-highlight-color: transparent; }
-        .comment-list-title .sort-btn:hover { background: #f0f0f0; }
-        .comment-list-title .sort-btn.active { color: #4fc3f7; font-weight: 500; }
-
-        .comment-item { padding: 14px 0; border-bottom: 1px solid #f0f0f0; }
-        .comment-item:last-child { border-bottom: none; }
-        .comment-item .comment-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; flex-wrap: wrap; }
-        .comment-item .comment-avatar { width: 32px; height: 32px; border-radius: 50%; overflow: hidden; flex-shrink: 0; background: #e3f2fd; }
-        .comment-item .comment-avatar img { width: 100%; height: 100%; object-fit: cover; }
-        .comment-item .comment-author { font-weight: 500; font-size: 14px; color: #1a1a2e; }
-        .comment-item .comment-time { font-size: 12px; color: #aaa; }
-        .comment-item .comment-browser { font-size: 11px; color: #aaa; background: #f0f2f5; padding: 1px 8px; border-radius: 10px; }
-        .comment-item .comment-content { font-size: 14px; color: #333; line-height: 1.7; padding-left: 42px; word-break: break-word; }
-        .comment-item .comment-actions { padding-left: 42px; margin-top: 6px; display: flex; gap: 16px; }
-        .comment-item .comment-actions button {
-            background: none;
-            border: none;
-            color: #999;
-            font-size: 12px;
-            cursor: pointer;
-            transition: 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            font-family: inherit;
-            padding: 2px 6px;
-            border-radius: 4px;
-            -webkit-tap-highlight-color: transparent;
-        }
-        .comment-item .comment-actions button:hover { color: #4fc3f7; background: #e3f2fd; }
-        .comment-item .comment-actions .like-btn.liked { color: #ff6b6b; }
-
-        .comment-load-more { text-align: center; padding: 12px 0; color: #aaa; font-size: 13px; }
-        .comment-load-more button { background: none; border: none; color: #4fc3f7; cursor: pointer; font-size: 13px; font-family: inherit; transition: 0.2s; -webkit-tap-highlight-color: transparent; }
-        .comment-load-more button:hover { opacity: 0.7; }
-
-        .comment-empty { text-align: center; padding: 40px 20px; color: #aaa; }
-        .comment-empty i { font-size: 40px; margin-bottom: 12px; opacity: 0.3; }
-        .comment-empty p { font-size: 14px; }
 
         /* ============================================================
            响应式
@@ -720,10 +602,6 @@
             .comment-header { padding: 14px 16px 10px; }
             .comment-header h2 { font-size: 16px; }
             .comment-body { padding: 14px 16px 12px; }
-            .comment-input-area { padding: 12px; }
-            .comment-input-row input { min-width: 60px; font-size: 12px; }
-            .comment-item .comment-content { padding-left: 0; margin-top: 4px; }
-            .comment-item .comment-actions { padding-left: 0; }
         }
         @media (max-width: 576px) {
             .grid { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(9, 1fr); }
@@ -760,10 +638,6 @@
             .comment-modal { width: 98%; max-height: 92vh; border-radius: 8px; }
             .comment-header h2 { font-size: 14px; }
             .comment-body { padding: 10px 12px 8px; }
-            .comment-input-area textarea { min-height: 40px; font-size: 13px; }
-            .comment-input-row input { font-size: 11px; padding: 4px 8px; }
-            .comment-submit-btn { font-size: 12px; padding: 4px 14px; }
-            .comment-item .comment-content { font-size: 13px; }
         }
     </style>
 </head>
@@ -795,28 +669,7 @@
                 <button class="close-btn" id="closeCommentBtn"><i class="fas fa-times"></i></button>
             </div>
             <div class="comment-body" id="commentBody">
-                <div class="comment-input-area">
-                    <textarea id="commentText" placeholder="欢迎欣赏必应每日一图，有什么想法就留言吧……" rows="2"></textarea>
-                    <div class="comment-input-row">
-                        <input type="text" id="commentNick" placeholder="昵称" />
-                        <input type="email" id="commentEmail" placeholder="邮箱" />
-                        <input type="text" id="commentSite" placeholder="网址" />
-                        <button class="comment-submit-btn" id="commentSubmitBtn">提交</button>
-                    </div>
-                </div>
-                <div class="comment-list-title">
-                    <i class="fas fa-comments"></i>
-                    全部留言 <span class="count" id="commentCount">0</span> 条
-                    <span style="margin-left:auto;font-size:12px;color:#888;">
-                        <span class="sort-btn active" id="sortByTime" data-sort="time">正序</span>
-                        <span style="color:#ccc;">|</span>
-                        <span class="sort-btn" id="sortByHeat" data-sort="heat">热度</span>
-                    </span>
-                </div>
-                <div id="commentList"></div>
-                <div class="comment-load-more">
-                    <button id="loadMoreBtn">加载更多 <i class="fas fa-chevron-down"></i></button>
-                </div>
+                <div id="tcomment"></div>
             </div>
         </div>
     </div>
@@ -894,6 +747,8 @@
         </div>
     </div>
 
+    <!-- Twikoo CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.41/dist/twikoo.min.js"></script>
     <script>
         // ============================================================
         // 1. 路径适配
@@ -985,37 +840,20 @@
         });
 
         // ============================================================
-        // 5. 评论系统
+        // 5. 评论系统 - Twikoo
         // ============================================================
-        var COMMENT_API = 'https://waline.hangdn.com';
-        var comments = [];
-        var commentPage = 1;
-        var commentPageSize = 10;
-        var commentTotal = 0;
-        var commentSort = 'time';
-        var commentOrder = 'asc';
-
+        var TWIKOO_API = 'https://twikoo.hangdn.net';
         var commentOverlay = document.getElementById('commentOverlay');
-        var commentList = document.getElementById('commentList');
-        var commentCount = document.getElementById('commentCount');
-        var commentNavBtn = document.getElementById('commentNavBtn');
         var closeCommentBtn = document.getElementById('closeCommentBtn');
-        var commentText = document.getElementById('commentText');
-        var commentNick = document.getElementById('commentNick');
-        var commentEmail = document.getElementById('commentEmail');
-        var commentSite = document.getElementById('commentSite');
-        var commentSubmitBtn = document.getElementById('commentSubmitBtn');
-        var loadMoreBtn = document.getElementById('loadMoreBtn');
-        var sortByTime = document.getElementById('sortByTime');
-        var sortByHeat = document.getElementById('sortByHeat');
+        var commentNavBtn = document.getElementById('commentNavBtn');
 
         function openComment() {
             commentOverlay.classList.add('active');
             document.body.style.overflow = 'hidden';
-            if (comments.length === 0) {
-                loadComments(1);
-            }
             toggleNav(false);
+            if (!document.getElementById('tcomment').hasChildNodes()) {
+                initTwikoo();
+            }
         }
 
         function closeComment() {
@@ -1023,173 +861,16 @@
             document.body.style.overflow = '';
         }
 
-        async function loadComments(page) {
-            try {
-                var url = COMMENT_API + '/api/comment?page=' + page + '&pageSize=' + commentPageSize;
-                if (commentSort === 'time') {
-                    url += '&sort=time&order=' + commentOrder;
-                } else {
-                    url += '&sort=like&order=desc';
-                }
-                var res = await fetch(url);
-                if (!res.ok) throw new Error('加载失败');
-                var data = await res.json();
-                comments = data.data || [];
-                commentTotal = data.total || 0;
-                commentCount.textContent = commentTotal;
-                renderComments(comments);
-                loadMoreBtn.style.display = (page * commentPageSize < commentTotal) ? 'block' : 'none';
-                commentPage = page;
-            } catch (err) {
-                console.error('加载评论失败:', err);
-                commentList.innerHTML = '<div class="comment-empty"><i class="fas fa-exclamation-circle"></i><p>加载评论失败，请稍后重试</p></div>';
-            }
-        }
-
-        function renderComments(items) {
-            if (!items || items.length === 0) {
-                commentList.innerHTML = '<div class="comment-empty"><i class="fas fa-comment"></i><p>暂无留言，快来发表第一条吧 ✨</p></div>';
+        function initTwikoo() {
+            if (typeof twikoo === 'undefined') {
+                setTimeout(initTwikoo, 500);
                 return;
             }
-            var html = '';
-            items.forEach(function(item) {
-                var avatar = item.avatar || 'https://api.dicebear.com/7.x/identicon/svg?seed=' + (item.nick || 'user');
-                var nick = item.nick || '匿名';
-                var time = item.createdAt ? formatTime(item.createdAt) : '';
-                var content = item.content || '';
-                var like = item.like || 0;
-                var ua = item.ua || '';
-                var browser = getBrowser(ua);
-                var isLiked = item.isLiked || false;
-
-                html += '<div class="comment-item" data-id="' + (item.objectId || '') + '">';
-                html += '<div class="comment-meta">';
-                html += '<div class="comment-avatar"><img src="' + avatar + '" /></div>';
-                html += '<span class="comment-author">' + escapeHtml(nick) + '</span>';
-                html += '<span class="comment-time">' + time + '</span>';
-                if (browser) html += '<span class="comment-browser">' + browser + '</span>';
-                html += '</div>';
-                html += '<div class="comment-content">' + escapeHtml(content) + '</div>';
-                html += '<div class="comment-actions">';
-                html += '<button class="like-btn' + (isLiked ? ' liked' : '') + '" onclick="toggleLike(\'' + (item.objectId || '') + '\', this)"><i class="fas fa-heart"></i> <span class="like-count">' + like + '</span></button>';
-                html += '<button onclick="replyComment(\'' + (item.objectId || '') + '\', \'' + escapeHtml(nick) + '\')"><i class="fas fa-reply"></i> 回复</button>';
-                html += '</div>';
-                html += '</div>';
+            twikoo.init({
+                envId: TWIKOO_API,
+                el: '#tcomment',
+                lang: 'zh-CN',
             });
-            commentList.innerHTML = html;
-        }
-
-        function setSort(type) {
-            if (commentSort === type) {
-                commentOrder = commentOrder === 'asc' ? 'desc' : 'asc';
-            } else {
-                commentSort = type;
-                commentOrder = type === 'time' ? 'asc' : 'desc';
-            }
-            sortByTime.className = 'sort-btn' + (commentSort === 'time' ? ' active' : '');
-            sortByHeat.className = 'sort-btn' + (commentSort === 'heat' ? ' active' : '');
-            loadComments(1);
-        }
-
-        sortByTime.addEventListener('click', function() { setSort('time'); });
-        sortByHeat.addEventListener('click', function() { setSort('heat'); });
-
-        loadMoreBtn.addEventListener('click', function() {
-            loadComments(commentPage + 1);
-        });
-
-        commentSubmitBtn.addEventListener('click', async function() {
-            var content = commentText.value.trim();
-            if (!content) {
-                alert('请输入评论内容');
-                return;
-            }
-            var nick = commentNick.value.trim() || '匿名';
-            var mail = commentEmail.value.trim() || '';
-            var site = commentSite.value.trim() || '';
-
-            commentSubmitBtn.disabled = true;
-            commentSubmitBtn.textContent = '提交中...';
-
-            try {
-                var data = {
-                    content: content,
-                    nick: nick,
-                    mail: mail,
-                    url: site,
-                    ua: navigator.userAgent
-                };
-                var res = await fetch(COMMENT_API + '/api/comment', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
-                });
-                if (!res.ok) throw new Error('提交失败');
-                commentText.value = '';
-                commentNick.value = '';
-                commentEmail.value = '';
-                commentSite.value = '';
-                loadComments(1);
-                alert('✅ 留言提交成功，审核后显示');
-            } catch (err) {
-                console.error('提交失败:', err);
-                alert('❌ 提交失败，请稍后重试');
-            }
-            commentSubmitBtn.disabled = false;
-            commentSubmitBtn.textContent = '提交';
-        });
-
-        commentText.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
-                commentSubmitBtn.click();
-            }
-        });
-
-        window.toggleLike = async function(id, btn) {
-            if (!id) return;
-            try {
-                var res = await fetch(COMMENT_API + '/api/like/' + id, {
-                    method: 'POST'
-                });
-                if (!res.ok) throw new Error('点赞失败');
-                var data = await res.json();
-                var countSpan = btn.querySelector('.like-count');
-                var current = parseInt(countSpan.textContent) || 0;
-                countSpan.textContent = data.like || current + 1;
-                btn.classList.toggle('liked');
-            } catch (err) {
-                console.error('点赞失败:', err);
-            }
-        };
-
-        window.replyComment = function(id, nick) {
-            commentText.value = '@' + nick + ' ';
-            commentText.focus();
-        };
-
-        function formatTime(iso) {
-            var d = new Date(iso);
-            var y = d.getFullYear();
-            var m = String(d.getMonth() + 1).padStart(2, '0');
-            var day = String(d.getDate()).padStart(2, '0');
-            var h = String(d.getHours()).padStart(2, '0');
-            var min = String(d.getMinutes()).padStart(2, '0');
-            return y + '-' + m + '-' + day + ' ' + h + ':' + min;
-        }
-
-        function getBrowser(ua) {
-            if (!ua) return '';
-            if (ua.indexOf('Chrome') > -1) return 'Chrome';
-            if (ua.indexOf('Firefox') > -1) return 'Firefox';
-            if (ua.indexOf('Safari') > -1) return 'Safari';
-            if (ua.indexOf('Edge') > -1) return 'Edge';
-            return '';
-        }
-
-        function escapeHtml(text) {
-            var div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
         }
 
         commentNavBtn.addEventListener('click', function(e) {
@@ -1198,9 +879,13 @@
         });
 
         closeCommentBtn.addEventListener('click', closeComment);
+
         commentOverlay.addEventListener('click', function(e) {
-            if (e.target === commentOverlay) closeComment();
+            if (e.target === commentOverlay) {
+                closeComment();
+            }
         });
+
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && commentOverlay.classList.contains('active')) {
                 closeComment();
@@ -1441,7 +1126,6 @@
                 toggleToolbar();
             };
 
-            // ★★★ 手机左右滑动切换 ★★★
             var startX = 0;
             var startY = 0;
 
@@ -1564,7 +1248,7 @@
         closePreviewBtn.addEventListener('click', closePreview);
 
         // ============================================================
-        // 7.1 ★★★ 下载下拉菜单 - 直接下载（不打开新窗口）★★★
+        // 7.1 下载下拉菜单
         // ============================================================
         downloadBtn.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -1616,7 +1300,6 @@
             
             console.log('📥 开始下载: ' + fileName);
             
-            // ★★★ 使用 fetch + Blob 强制下载，不打开新窗口 ★★★
             fetch(downloadUrl, {
                 mode: 'cors',
                 headers: {
@@ -1644,7 +1327,6 @@
             .catch(function(err) {
                 console.warn('⚠️ Fetch 下载失败，使用备用方法:', err.message);
                 
-                // ★★★ 备用方法 ★★★
                 var link = document.createElement('a');
                 link.href = downloadUrl + (downloadUrl.indexOf('?') === -1 ? '?' : '&') + '_t=' + Date.now();
                 link.download = fileName;
@@ -1720,9 +1402,7 @@
         loadData();
         console.log('✅ 大图预览已加载');
         console.log('💡 留言按钮在导航栏（汉堡菜单）内');
-        console.log('💡 卡片间隙已去除，无缝拼接');
-        console.log('💡 下载使用 fetch + Blob，直接下载不打开新窗口');
+        console.log('💡 评论系统: Twikoo');
     </script>
-
 </body>
 </html>
