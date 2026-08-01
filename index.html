@@ -481,102 +481,102 @@
         .info-panel .date { font-size: 12px; color: rgba(255, 255, 255, 0.4); margin-top: 4px; }
         .info-panel .desc { font-size: 13px; color: rgba(255, 255, 255, 0.5); margin-top: 4px; max-width: 500px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; line-height: 1.6; }
 
-      /* ============================================================
-   ★★★ 评论弹窗 - Twikoo 白底黑字 ★★★
-   ============================================================ */
-.comment-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2000;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    justify-content: center;
-    align-items: center;
-    animation: fadeIn 0.25s ease;
-}
-.comment-overlay.active { display: flex; }
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-@keyframes slideUp {
-    from { opacity: 0; transform: translateY(30px) scale(0.96); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-.comment-modal {
-    background: #ffffff !important;
-    border-radius: 16px;
-    width: 92%;
-    max-width: 720px;
-    max-height: 85vh;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    border: 1px solid #e8e8e8;
-    animation: slideUp 0.3s ease;
-    overflow: hidden;
-}
-
-[data-theme="dark"] .comment-modal {
-    background: #ffffff !important;
-    border-color: #e8e8e8 !important;
-}
-
-.comment-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 24px 14px;
-    border-bottom: 1px solid #e8e8e8;
-    flex-shrink: 0;
-}
-.comment-header h2 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1a1a2e;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.comment-header h2 i {
-    color: #4fc3f7;
-}
-.comment-header .close-btn {
-    background: none;
-    border: none;
-    color: #999;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 6px;
-    transition: 0.2s;
-    -webkit-tap-highlight-color: transparent;
-}
-.comment-header .close-btn:hover {
-    background: #f0f0f0;
-    color: #333;
-}
-
-.comment-body {
-    flex: 1;
-    overflow-y: auto;
-    padding: 20px 24px 16px;
-    background: #ffffff !important;
-}
-.comment-body::-webkit-scrollbar { width: 4px; }
-.comment-body::-webkit-scrollbar-thumb { background: #ccc; border-radius: 2px; }
-
-[data-theme="dark"] .comment-body {
-    background: #ffffff !important;
-}
-        
         /* ============================================================
+           ★★★ 评论弹窗 - Twikoo 白底黑字 ★★★
+           ============================================================ */
+        .comment-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2000;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.25s ease;
+        }
+        .comment-overlay.active { display: flex; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px) scale(0.96); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .comment-modal {
+            background: #ffffff !important;
+            border-radius: 16px;
+            width: 92%;
+            max-width: 720px;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid #e8e8e8;
+            animation: slideUp 0.3s ease;
+            overflow: hidden;
+        }
+
+        [data-theme="dark"] .comment-modal {
+            background: #ffffff !important;
+            border-color: #e8e8e8 !important;
+        }
+
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px 14px;
+            border-bottom: 1px solid #e8e8e8;
+            flex-shrink: 0;
+        }
+        .comment-header h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a2e;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .comment-header h2 i {
+            color: #4fc3f7;
+        }
+        .comment-header .close-btn {
+            background: none;
+            border: none;
+            color: #999;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: 0.2s;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .comment-header .close-btn:hover {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .comment-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px 24px 16px;
+            background: #ffffff !important;
+        }
+        .comment-body::-webkit-scrollbar { width: 4px; }
+        .comment-body::-webkit-scrollbar-thumb { background: #ccc; border-radius: 2px; }
+
+        [data-theme="dark"] .comment-body {
+            background: #ffffff !important;
+        }
+
+         /* ============================================================
    ★★★ Twikoo 暗色模式 - 强制白底黑字 ★★★
    ============================================================ */
 
@@ -696,7 +696,7 @@
 [data-theme="dark"] .tk-powered a:hover {
     color: #666 !important;
 }
-
+        
         /* ============================================================
            响应式
            ============================================================ */
@@ -890,17 +890,13 @@
             return url;
         }
 
+        // ★★★ 缩略图函数 - 400x240 ★★★
         function getThumbnailUrl(url) {
             if (!url) return '';
             if (url.indexOf('th?id=') !== -1) {
                 var baseUrl = url.split('&')[0];
-                if (baseUrl.indexOf('_UHD.jpg') !== -1) {
-                    baseUrl = baseUrl.replace('_UHD.jpg', '_1920x1080.jpg');
-                }
-                if (baseUrl.indexOf('_400x240.jpg') !== -1) {
-                    return baseUrl;
-                }
-                return baseUrl + '&w=800&h=450';
+                var thumbUrl = baseUrl.replace('_UHD.jpg', '_400x240.jpg');
+                return thumbUrl;
             }
             return url;
         }
@@ -963,7 +959,6 @@
         // ============================================================
         // 5. 评论系统 - Twikoo
         // ============================================================
-        var TWIKOO_API = 'https://twikoo.hangdn.net';
         var commentOverlay = document.getElementById('commentOverlay');
         var closeCommentBtn = document.getElementById('closeCommentBtn');
         var commentNavBtn = document.getElementById('commentNavBtn');
@@ -988,7 +983,7 @@
                 return;
             }
             twikoo.init({
-                envId: TWIKOO_API,
+                envId: 'https://twikoo.hangdn.net',
                 el: '#tcomment',
                 lang: 'zh-CN',
             });
@@ -1047,6 +1042,7 @@
         var downloadBtn = document.getElementById('downloadBtn');
         var downloadMenu = document.getElementById('downloadMenu');
 
+        // 缩放状态
         var scale = 1,
             minScale = 0.3,
             maxScale = 5,
@@ -1057,6 +1053,8 @@
             startY = 0,
             lastTranslateX = 0,
             lastTranslateY = 0;
+
+        // 工具栏显示状态
         var toolbarVisible = true;
 
         // ============================================================
@@ -1089,7 +1087,7 @@
         }
 
         // ============================================================
-        // 6.2 渲染页面
+        // 6.2 渲染页面 - ★★★ 使用 400x240 缩略图 ★★★
         // ============================================================
         function renderPage(page) {
             var data = filteredData.length > 0 ? filteredData : allData;
@@ -1108,13 +1106,16 @@
                 var card = document.createElement('div');
                 card.className = 'card';
 
-                var imgSrc = getImageUrl(item.webp || item.jpg || '');
+                // ★★★ 优先使用 thumb 缩略图（400x240）★★★
+                var thumbSrc = getImageUrl(item.thumb || item.webp || item.jpg || '');
+                // ★★★ 高清原图（备选）★★★
+                var fullImgSrc = getImageUrl(item.webp || item.jpg || '');
                 var fallback = getImageUrl(item.jpg || '');
-                var placeholderSrc = getThumbnailUrl(imgSrc);
+                var placeholderSrc = getThumbnailUrl(thumbSrc);
 
                 card.innerHTML =
                     '<div class="placeholder-bg" style="background-image: url(' + placeholderSrc + ');"></div>' +
-                    '<img src="' + imgSrc + '" alt="' + (item.copyright || item.date) + '" loading="lazy" />' +
+                    '<img src="' + thumbSrc + '" alt="' + (item.copyright || item.date) + '" loading="lazy" />' +
                     '<div class="info">' +
                     '<div class="date">' + item.date + '</div>' +
                     '<div class="title">' + (item.copyright || '无标题') + '</div>' +
@@ -1132,11 +1133,14 @@
                     img.classList.add('loaded');
                     placeholderBg.classList.add('hidden');
                 }
+                // ★★★ 缩略图加载失败时，回退到高清原图 ★★★
                 img.addEventListener('error', function() {
-                    if (fallback && fallback !== imgSrc) {
-                        img.src = fallback;
+                    if (fullImgSrc && fullImgSrc !== thumbSrc) {
+                        this.src = fullImgSrc;
+                    } else if (fallback && fallback !== thumbSrc) {
+                        this.src = fallback;
                     } else {
-                        img.classList.add('loaded');
+                        this.classList.add('loaded');
                         placeholderBg.classList.add('hidden');
                     }
                 });
@@ -1247,6 +1251,7 @@
                 toggleToolbar();
             };
 
+            // 手机左右滑动切换
             var startX = 0;
             var startY = 0;
 
@@ -1369,7 +1374,7 @@
         closePreviewBtn.addEventListener('click', closePreview);
 
         // ============================================================
-        // 7.1 下载下拉菜单
+        // 7.1 下载下拉菜单 - 强制下载 + 手机竖屏裁剪
         // ============================================================
         downloadBtn.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -1420,6 +1425,7 @@
             var fileName = 'wallpaper_' + (item.date || '') + '_' + resolution + '.jpg';
             
             console.log('📥 开始下载: ' + fileName);
+            console.log('📷 下载链接: ' + downloadUrl);
             
             fetch(downloadUrl, {
                 mode: 'cors',
@@ -1518,32 +1524,31 @@
         previewImg.addEventListener('wheel', wheelZoom, { passive: false });
 
         // ============================================================
-// 9. 启动
-// ============================================================
-loadData();
-console.log('✅ 大图预览已加载');
-console.log('💡 留言按钮在导航栏（汉堡菜单）内');
-console.log('💡 评论系统: Twikoo');
+        // 9. 启动
+        // ============================================================
+        loadData();
+        console.log('✅ 大图预览已加载');
+        console.log('💡 留言按钮在导航栏（汉堡菜单）内');
+        console.log('💡 评论系统: Twikoo');
 
-// 暴露 openComment 给 API 页面调用
-window.openComment = openComment;
+        // 暴露 openComment 给 API 页面调用
+        window.openComment = openComment;
 
-// 检测 URL 参数，自动打开留言弹窗
-(function checkUrlAction() {
-    var params = new URLSearchParams(window.location.search);
-    if (params.get('action') === 'comment') {
-        setTimeout(function() {
-            if (typeof openComment === 'function') {
-                openComment();
+        // 检测 URL 参数，自动打开留言弹窗
+        (function checkUrlAction() {
+            var params = new URLSearchParams(window.location.search);
+            if (params.get('action') === 'comment') {
+                setTimeout(function() {
+                    if (typeof openComment === 'function') {
+                        openComment();
+                    }
+                    if (window.history && window.history.replaceState) {
+                        var cleanUrl = window.location.pathname + window.location.hash;
+                        window.history.replaceState({}, document.title, cleanUrl);
+                    }
+                }, 500);
             }
-            // 清除 URL 参数
-            if (window.history && window.history.replaceState) {
-                var cleanUrl = window.location.pathname + window.location.hash;
-                window.history.replaceState({}, document.title, cleanUrl);
-            }
-        }, 500);
-    }
-})();
+        })();
     </script>
 </body>
 </html>
