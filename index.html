@@ -138,17 +138,18 @@
         }
         
         .grid { 
-            display: grid; 
-            grid-template-columns: repeat(6, 1fr);
-            gap: 0;
-            flex: 1;
-            padding: 0;
-            overflow-y: auto; 
-            min-height: 0;
-            background: var(--bg-primary);
-            align-content: start;
-            contain: layout style paint;
-        }
+    display: grid; 
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+    flex: 1;
+    padding: 0;
+    overflow-y: auto; 
+    min-height: 0;
+    background: var(--bg-primary);
+    align-content: start;
+    contain: layout style paint;
+    grid-auto-rows: auto;  /* ★★★ 关键修复 ★★★ */
+}
 
         .grid::-webkit-scrollbar { width: 4px; }
         .grid::-webkit-scrollbar-track { background: transparent; }
@@ -157,17 +158,18 @@
 
         /* ===== 卡片 - 自动适应高度 ===== */
         .card {
-            position: relative;
-            overflow: hidden;
-            background: var(--bg-card);
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            contain: strict;
-            -webkit-tap-highlight-color: transparent;
-            border-radius: 0;
-        }
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-card);
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    contain: strict;
+    -webkit-tap-highlight-color: transparent;
+    border-radius: 0;
+    min-height: 0;
+}
 
         .card img {
             width: 100%;
