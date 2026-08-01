@@ -4,23 +4,21 @@ export async function onRequest(context) {
   const url = new URL(request.url);
   const base = `${url.protocol}//${url.host}`;
 
-  // 读取壁纸数据获取统计
+  // ★★★ 通过 fetch 获取壁纸数据 ★★★
   let totalCount = '--';
   let todayDate = '--';
   try {
-    const fs = await import('fs');
-    const path = await import('path');
-    const dataPath = path.resolve('./data/wallpapers.json');
-    if (fs.existsSync(dataPath)) {
-      const raw = fs.readFileSync(dataPath, 'utf-8');
-      const data = JSON.parse(raw);
+    const dataUrl = `${base}/data/wallpapers.json`;
+    const res = await fetch(dataUrl);
+    if (res.ok) {
+      const data = await res.json();
       totalCount = data.length || 0;
       if (data.length > 0) {
         todayDate = data[0].date || '--';
       }
     }
   } catch (e) {
-    // 保持默认值
+    // 保持默认值 '--'
   }
 
   const html = `
@@ -639,7 +637,7 @@ export async function onRequest(context) {
       </div>
     </div>
 
-    <!-- ===== ★★★ 页脚 - 反馈按钮对接留言 ★★★ ===== -->
+    <!-- ===== 页脚 - 反馈按钮对接留言 ===== -->
     <footer>
       <span>© 2026 必应壁纸 · 图片来自 Bing</span>
       <div class="footer-links">
@@ -749,7 +747,7 @@ export async function onRequest(context) {
     }
 
     // ============================================================
-    // 5. ★★★ 反馈按钮 → 打开留言弹窗 ★★★
+    // 5. 反馈按钮 → 打开留言弹窗
     // ============================================================
     var feedbackLink = document.getElementById('feedbackLink');
     if (feedbackLink) {
@@ -768,13 +766,13 @@ export async function onRequest(context) {
           return;
         }
         
-        // 如果都不行，跳转到首页并带上参数
+        // 兜底：跳转到首页并带上参数
         window.location.href = '/?action=comment';
       });
     }
 
     // ============================================================
-    // 6. ★★★ 监听来自父页面的消息 ★★★
+    // 6. 监听来自父页面的消息
     // ============================================================
     window.addEventListener('message', function(event) {
       if (event.data && event.data.type === 'openComment') {
@@ -785,14 +783,12 @@ export async function onRequest(context) {
     });
 
     // ============================================================
-    // 7. 检查 URL 参数，如果是 ?action=comment 则打开留言
+    // 7. 检查 URL 参数
     // ============================================================
     if (window.location.search.indexOf('action=comment') !== -1) {
-      // 如果在 iframe 中，通知父页面
       if (window.parent && window.parent !== window) {
         window.parent.postMessage({ type: 'openComment' }, '*');
       } else {
-        // 直接跳转到首页
         window.location.href = '/';
       }
     }
