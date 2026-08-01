@@ -3,12 +3,10 @@ export async function onRequest(context) {
   const { request } = context;
   const url = new URL(request.url);
 
-  // 获取参数
   const date = url.searchParams.get('date');
   const format = url.searchParams.get('format') || 'webp';
   const redirect = url.searchParams.get('redirect') === 'true';
 
-  // 验证日期参数
   if (!date) {
     return new Response(JSON.stringify({
       error: '缺少 date 参数',
@@ -19,29 +17,14 @@ export async function onRequest(context) {
     });
   }
 
-  // 验证日期格式 (YYYYMMDD)
-  if (!/^\d{8}$/.test(date)) {
-    return new Response(JSON.stringify({
-      error: '日期格式错误，请使用 YYYYMMDD 格式，如 20260731'
-    }), {
-      status: 400,
-      headers: { 'Content-Type': 'application/json' }
-    });
-  }
-
-  // 验证格式参数
-  const allowedFormats = ['webp', 'jpeg', 'original'];
-  if (!allowedFormats.includes(format)) {
-    return new Response(JSON.stringify({
-      error: '格式参数错误，支持: webp, jpeg, original'
-    }), {
-      status: 400,
-      headers: { 'Content-Type': 'application/json' }
-    });
+  // ★★★ 支持两种格式：20260731 或 2026-07-31 ★★★
+  let formattedDate = date;
+  if (/^\d{8}$/.test(date)) {
+    // 20260731 → 2026-07-31
+    formattedDate = `${date.slice(0,4)}-${date.slice(4,6)}-${date.slice(6,8)}`;
   }
 
   try {
-    // 从 wallpapers.json 获取数据
     const host = url.origin;
     const jsonUrl = `${host}/data/wallpapers.json`;
 
@@ -66,28 +49,26 @@ export async function onRequest(context) {
       });
     }
 
-    // ★★★ 查找匹配日期的壁纸 ★★★
-    const item = wallpapers.find(w => w.date === date);
+    // ★★★ 用格式化后的日期匹配 ★★★
+    const item = wallpapers.find(w => w.date === formattedDate);
 
     if (!item) {
-      // 返回最近10个日期供参考
       const recentDates = wallpapers.slice(0, 10).map(w => w.date);
       return new Response(JSON.stringify({
         error: `未找到 ${date} 的壁纸`,
         available_dates: recentDates,
-        hint: '可用日期格式: YYYYMMDD'
+        hint: '可用日期格式: YYYYMMDD (如 20260731) 或 YYYY-MM-DD (如 2026-07-31)'
       }), {
         status: 404,
         headers: { 'Content-Type': 'application/json' }
       });
     }
 
-    // ★★★ 根据格式选择图片路径 ★★★
+    // ★★★ 根据格式选择图片 ★★★
     let imagePath;
     if (format === 'jpeg' || format === 'original') {
       imagePath = item.jpg || item.webp;
     } else {
-      // webp
       imagePath = item.webp || item.jpg;
     }
 
@@ -105,7 +86,6 @@ export async function onRequest(context) {
       if (redirect) {
         return Response.redirect(imagePath, 302);
       }
-      // 代理图片
       const resp = await fetch(imagePath);
       return new Response(resp.body, {
         headers: {
