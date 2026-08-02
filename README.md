@@ -13,7 +13,7 @@
 </div>
 
 <p align="center">
-  <img src="https://sfx.de5.net/api/daily" alt="Daily Bing Wallpaper" width="600" />
+  <img src="https://bing-bz.pages.dev/api/daily" alt="Daily Bing Wallpaper" width="600" />
 </p>
 
 ---
