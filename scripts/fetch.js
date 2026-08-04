@@ -271,7 +271,7 @@ async function main() {
     console.log(`📅 今天是: ${getTargetDate(0)}`);
     console.log('');
 
-    const offsets = [0, 1];
+    const offsets = [0, -1];
     const newResults = [];
 
     for (const offset of offsets) {
