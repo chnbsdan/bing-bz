@@ -1,4 +1,5 @@
 // scripts/fetch.js - 完整版（本地存图片，wallpapers.json 全部用 CDN 链接，缩略图 400x240）
+process.env.TZ = 'Asia/Shanghai';  // ← 加在这里，第一行，使用北京时间！
 
 const fs = require('fs');
 const path = require('path');
