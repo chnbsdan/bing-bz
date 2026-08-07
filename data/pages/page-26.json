@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-09-23",
+      "copyright": "A beer tent at Oktoberfest in Theresienwiese, Munich, Germany (© Peter Kneffel/picture alliance via Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.CubanTody_EN-US3083797062_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.CubanTody_EN-US3083797062_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.CubanTody_EN-US3083797062_400x240.jpg"
+    },
+    {
       "date": "2023-09-22",
       "copyright": "Mission church ruins at Quarai, Salinas Pueblo Missions National Monument, New Mexico (© Thomas Roche/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.OktoberfestWorkers_EN-US5478786117_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.NaganoPond_EN-US2600828175_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.NaganoPond_EN-US2600828175_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.NaganoPond_EN-US2600828175_400x240.jpg"
-    },
-    {
-      "date": "2023-08-12",
-      "copyright": "Tintern Abbey, Wales (© matthibcn/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AtlanticPuffin_EN-US6337041297_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AtlanticPuffin_EN-US6337041297_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AtlanticPuffin_EN-US6337041297_400x240.jpg"
     }
   ],
   "page": 26,
   "pageSize": 42,
-  "total": 2012,
+  "total": 2013,
   "totalPages": 48,
   "hasMore": true
 }

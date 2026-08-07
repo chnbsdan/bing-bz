@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-02-12",
+      "copyright": "慕那尔山区的茶园，印度喀拉拉邦 (© SvitlanaBelinska/iStock/Getty Images Plus)",
+      "jpg": "https://cn.bing.com/th?id=OHR.DarwinsArch_ZH-CN9740478501_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.DarwinsArch_ZH-CN9740478501_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.DarwinsArch_ZH-CN9740478501_400x240.jpg"
+    },
+    {
       "date": "2022-02-11",
       "copyright": "静谧的伯尔尼古城区，瑞士 (© Xantana/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.TeaGardensMunnar_ZH-CN9587720369_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SnowyPrague_ZH-CN9794475183_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SnowyPrague_ZH-CN9794475183_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SnowyPrague_ZH-CN9794475183_400x240.jpg"
-    },
-    {
-      "date": "2022-01-01",
-      "copyright": "跨年夜的篝火晚会，冰岛雷克雅未克 (© Ragnar Th Sigurdsson/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.JonesBeachHarpSeal_ZH-CN9584238333_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.JonesBeachHarpSeal_ZH-CN9584238333_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.JonesBeachHarpSeal_ZH-CN9584238333_400x240.jpg"
     }
   ],
   "page": 40,
   "pageSize": 42,
-  "total": 2012,
+  "total": 2013,
   "totalPages": 48,
   "hasMore": true
 }

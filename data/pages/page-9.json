@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-09-06",
+      "copyright": "Grizzly bears wrestling, Katmai National Park and Preserve, Alaska (© Cavan Images/Adobe Stock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SunsetPier_EN-US7261804528_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SunsetPier_EN-US7261804528_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SunsetPier_EN-US7261804528_400x240.jpg"
+    },
+    {
       "date": "2025-09-05",
       "copyright": "Boundary Waters Canoe Area Wilderness, Minnesota (© s.tomas/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.WrestlingBears_EN-US4338158114_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MangroveTwilight_EN-US0646432423_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MangroveTwilight_EN-US0646432423_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MangroveTwilight_EN-US0646432423_400x240.jpg"
-    },
-    {
-      "date": "2025-07-26",
-      "copyright": "Family of ashy woodswallows perched on a branch in Thailand (© Captain Skyhigh/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LasPalmas_EN-US0568727017_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LasPalmas_EN-US0568727017_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.LasPalmas_EN-US0568727017_400x240.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 2012,
+  "total": 2013,
   "totalPages": 48,
   "hasMore": true
 }

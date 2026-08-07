@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-01-27",
+      "copyright": "Macaroni penguins, Drake Passage, Chile (© Paul Souders/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SquirrelNetherlands_EN-US2174319616_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SquirrelNetherlands_EN-US2174319616_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SquirrelNetherlands_EN-US2174319616_400x240.jpg"
+    },
+    {
       "date": "2024-01-26",
       "copyright": "Frozen waterfalls in Plitvice Lakes National Park, Croatia (© Massimo_S8/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MacaroniPenguins_EN-US2046934125_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MountainDayChina_EN-US0394775210_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MountainDayChina_EN-US0394775210_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MountainDayChina_EN-US0394775210_400x240.jpg"
-    },
-    {
-      "date": "2023-12-16",
-      "copyright": "Guanacos in Los Glaciares National Park, Patagonia, Argentina (© Yva Momatiuk and John Eastcott/Minden Pictures)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SaharaDunes_EN-US0324387398_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SaharaDunes_EN-US0324387398_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SaharaDunes_EN-US0324387398_400x240.jpg"
     }
   ],
   "page": 23,
   "pageSize": 42,
-  "total": 2012,
+  "total": 2013,
   "totalPages": 48,
   "hasMore": true
 }
