@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-10-04",
+      "copyright": "Cottonwoods seen through an arch in Coyote Gulch, Glen Canyon Recreation Area, Utah (© Stephen Matera/Tandem Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ConnecticutBridge_EN-US4557226937_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ConnecticutBridge_EN-US4557226937_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ConnecticutBridge_EN-US4557226937_400x240.jpg"
+    },
+    {
       "date": "2024-10-03",
       "copyright": "Aerial view of the Grand Canal and the Basilica di Santa Maria della Salute, Venice, Italy (© Bachir Moukarzel/Amazing Aerial Agency)",
       "jpg": "https://cn.bing.com/th?id=OHR.CoyoteGulch_EN-US1769933001_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.HuntingtonBeach_EN-US9892577517_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.HuntingtonBeach_EN-US9892577517_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.HuntingtonBeach_EN-US9892577517_400x240.jpg"
-    },
-    {
-      "date": "2024-08-23",
-      "copyright": "Roller coaster in Nagashima Spa Land, Mie prefecture, Japan (© Japanese amateur photographer/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AlfanzinaLighthouse_EN-US9545750672_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AlfanzinaLighthouse_EN-US9545750672_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AlfanzinaLighthouse_EN-US9545750672_400x240.jpg"
     }
   ],
   "page": 17,
   "pageSize": 42,
-  "total": 2011,
+  "total": 2012,
   "totalPages": 48,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-12-27",
+      "copyright": "Red-crowned cranes in Kushiro, Hokkaido, Japan (© Wirestock, Inc./Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SantaSnowglobe_EN-US0704281966_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SantaSnowglobe_EN-US0704281966_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SantaSnowglobe_EN-US0704281966_400x240.jpg"
+    },
+    {
       "date": "2024-12-26",
       "copyright": "Christmas tree at Crystal Pier, Pacific Beach, San Diego, California (© SamAntonioPhotography/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.FestivusCranes_EN-US0396321898_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.CoveArch_EN-US4653050772_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.CoveArch_EN-US4653050772_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.CoveArch_EN-US4653050772_400x240.jpg"
-    },
-    {
-      "date": "2024-11-15",
-      "copyright": "Caribbean flamingos, Yucatán Peninsula, Mexico (© Claudio Contreras/NPL/Minden Pictures)",
-      "jpg": "https://cn.bing.com/th?id=OHR.VeteranReflections_EN-US4567357121_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.VeteranReflections_EN-US4567357121_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.VeteranReflections_EN-US4567357121_400x240.jpg"
     }
   ],
   "page": 15,
   "pageSize": 42,
-  "total": 2011,
+  "total": 2012,
   "totalPages": 48,
   "hasMore": true
 }

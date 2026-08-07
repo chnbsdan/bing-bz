@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-04-07",
+      "copyright": "Milky Way above the Tre Cime di Lavaredo, South Tyrol, Italy (© Juan Romero/Cavan Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.NuzzleManatee_EN-US6719438929_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.NuzzleManatee_EN-US6719438929_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.NuzzleManatee_EN-US6719438929_400x240.jpg"
+    },
+    {
       "date": "2023-04-06",
       "copyright": "New York City skyline in fog (© Orbon Alija/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MWDolomites_EN-US2413806289_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.FireFallYosemite_EN-US1696286356_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.FireFallYosemite_EN-US1696286356_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.FireFallYosemite_EN-US1696286356_400x240.jpg"
-    },
-    {
-      "date": "2023-02-24",
-      "copyright": "Igloo at Otaru Snow Light Path Festival, Hokkaido, Japan (© T Photography/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.HippoDayChobe_EN-US1475666654_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.HippoDayChobe_EN-US1475666654_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.HippoDayChobe_EN-US1475666654_400x240.jpg"
     }
   ],
   "page": 30,
   "pageSize": 42,
-  "total": 2011,
+  "total": 2012,
   "totalPages": 48,
   "hasMore": true
 }

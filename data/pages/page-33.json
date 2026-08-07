@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-12-02",
+      "copyright": "Ahmad Bin Ali Stadium in Doha, Qatar (© Qatar 2022/Supreme Committee via Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.Waterleidingduinen_EN-US9090200846_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.Waterleidingduinen_EN-US9090200846_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.Waterleidingduinen_EN-US9090200846_400x240.jpg"
+    },
+    {
       "date": "2022-12-01",
       "copyright": "'World in Progress II,' a land art painting by Saype, United Nations Headquarters, New York City (© Valentin Flauraud/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.FIFA2022_EN-US9006895256_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AmmoniteGraveyard_EN-US7510840532_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AmmoniteGraveyard_EN-US7510840532_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AmmoniteGraveyard_EN-US7510840532_400x240.jpg"
-    },
-    {
-      "date": "2022-10-21",
-      "copyright": "The 'Circle of Sacred Smoke' sculpture by Junkyu Muto frames Devils Tower in Wyoming (© Nagel Photography/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.TortulaMoss_EN-US7128071079_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.TortulaMoss_EN-US7128071079_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.TortulaMoss_EN-US7128071079_400x240.jpg"
     }
   ],
   "page": 33,
   "pageSize": 42,
-  "total": 2011,
+  "total": 2012,
   "totalPages": 48,
   "hasMore": true
 }

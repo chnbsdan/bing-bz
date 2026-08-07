@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-04-03",
+      "copyright": "Wildflower bloom, Central Valley, California (© Jeff Lewis/Tandem Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ArmbrugBridge_EN-US3302230248_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ArmbrugBridge_EN-US3302230248_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ArmbrugBridge_EN-US3302230248_400x240.jpg"
+    },
+    {
       "date": "2026-04-02",
       "copyright": "Japanese tree frog in a pink morning glory (© Tetsuya Tanooka/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.WildflowerValley_EN-US6579657743_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.TetonFox_EN-US2616700325_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.TetonFox_EN-US2616700325_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.TetonFox_EN-US2616700325_400x240.jpg"
-    },
-    {
-      "date": "2026-02-20",
-      "copyright": "The Dragon's Eye rock formation at Uttakleiv Beach, Norway (© reisegraf/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AdamsFirefall_EN-US2580399078_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AdamsFirefall_EN-US2580399078_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AdamsFirefall_EN-US2580399078_400x240.jpg"
     }
   ],
   "page": 4,
   "pageSize": 42,
-  "total": 2011,
+  "total": 2012,
   "totalPages": 48,
   "hasMore": true
 }

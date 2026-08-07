@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-10-21",
+      "copyright": "The 'Circle of Sacred Smoke' sculpture by Junkyu Muto frames Devils Tower in Wyoming (© Nagel Photography/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.TortulaMoss_EN-US7128071079_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.TortulaMoss_EN-US7128071079_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.TortulaMoss_EN-US7128071079_400x240.jpg"
+    },
+    {
       "date": "2022-10-20",
       "copyright": "Phytoplankton blooming in the Chukchi Sea off the coast of Alaska (© Norman Kuring/Kathryn Hansen/U.S. Geological Survey/NASA)",
       "jpg": "https://cn.bing.com/th?id=OHR.SacredSmoke_EN-US7047459944_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BlueLinckia_EN-US7078787133_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BlueLinckia_EN-US7078787133_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BlueLinckia_EN-US7078787133_400x240.jpg"
-    },
-    {
-      "date": "2022-09-09",
-      "copyright": "Baltic Sea in Estonia (© fotoman-kharkov/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.Migliarino_EN-US6999892958_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.Migliarino_EN-US6999892958_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.Migliarino_EN-US6999892958_400x240.jpg"
     }
   ],
   "page": 34,
   "pageSize": 42,
-  "total": 2011,
+  "total": 2012,
   "totalPages": 48,
   "hasMore": true
 }

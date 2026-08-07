@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-09-05",
+      "copyright": "Boundary Waters Canoe Area Wilderness, Minnesota (© s.tomas/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.WrestlingBears_EN-US4338158114_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.WrestlingBears_EN-US4338158114_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.WrestlingBears_EN-US4338158114_400x240.jpg"
+    },
+    {
       "date": "2025-09-04",
       "copyright": "Camel thorn trees, Deadvlei, Namib-Naukluft Park, Namibia (© Inge Johnsson/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.MinnesotaWaters_EN-US4282198656_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.LasPalmas_EN-US0568727017_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.LasPalmas_EN-US0568727017_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.LasPalmas_EN-US0568727017_400x240.jpg"
-    },
-    {
-      "date": "2025-07-25",
-      "copyright": "Vatican City with St. Peter's Basilica (© RudyBalasko/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AshyWoodswallow_EN-US7005770998_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AshyWoodswallow_EN-US7005770998_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AshyWoodswallow_EN-US7005770998_400x240.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 2011,
+  "total": 2012,
   "totalPages": 48,
   "hasMore": true
 }

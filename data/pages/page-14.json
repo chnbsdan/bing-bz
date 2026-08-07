@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-02-07",
+      "copyright": "Golden Bridge, Bà Nà Hills, Da Nang, Vietnam (© Hien Phung Thu/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ScottishSheep_EN-US3449526052_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ScottishSheep_EN-US3449526052_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ScottishSheep_EN-US3449526052_400x240.jpg"
+    },
+    {
       "date": "2025-02-06",
       "copyright": "Ribblehead Viaduct and Ingleborough mountain, North Yorkshire, England (© AWL Images/DanitaDelimont.com)",
       "jpg": "https://cn.bing.com/th?id=OHR.GoldenBridge_EN-US3362533203_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ReindeerTrio_EN-US1000272747_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ReindeerTrio_EN-US1000272747_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ReindeerTrio_EN-US1000272747_400x240.jpg"
-    },
-    {
-      "date": "2024-12-27",
-      "copyright": "Red-crowned cranes in Kushiro, Hokkaido, Japan (© Wirestock, Inc./Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SantaSnowglobe_EN-US0704281966_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SantaSnowglobe_EN-US0704281966_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SantaSnowglobe_EN-US0704281966_400x240.jpg"
     }
   ],
   "page": 14,
   "pageSize": 42,
-  "total": 2011,
+  "total": 2012,
   "totalPages": 48,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-07-25",
+      "copyright": "Vatican City with St. Peter's Basilica (© RudyBalasko/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AshyWoodswallow_EN-US7005770998_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AshyWoodswallow_EN-US7005770998_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AshyWoodswallow_EN-US7005770998_400x240.jpg"
+    },
+    {
       "date": "2025-07-24",
       "copyright": "Sunset over Badlands National Park, South Dakota (© Petr Bednarik/Danita Delimont/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.VaticanCity_EN-US5915643866_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SanMiguelAzores_EN-US2785372768_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SanMiguelAzores_EN-US2785372768_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SanMiguelAzores_EN-US2785372768_400x240.jpg"
-    },
-    {
-      "date": "2025-06-13",
-      "copyright": "Greater flamingos, Lüderitz, Namibia (© Karine Aigner/TANDEM Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BigBendChisos_EN-US9433220487_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BigBendChisos_EN-US9433220487_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BigBendChisos_EN-US9433220487_400x240.jpg"
     }
   ],
   "page": 10,
   "pageSize": 42,
-  "total": 2011,
+  "total": 2012,
   "totalPages": 48,
   "hasMore": true
 }

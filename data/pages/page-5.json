@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-02-20",
+      "copyright": "The Dragon's Eye rock formation at Uttakleiv Beach, Norway (© reisegraf/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AdamsFirefall_EN-US2580399078_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AdamsFirefall_EN-US2580399078_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AdamsFirefall_EN-US2580399078_400x240.jpg"
+    },
+    {
       "date": "2026-02-19",
       "copyright": "Przewalski's horses (© Nemyrivskyi Viacheslav/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.DragonsEyeRock_EN-US6826796617_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MuirWoodsMonument_EN-US9831416144_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MuirWoodsMonument_EN-US9831416144_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MuirWoodsMonument_EN-US9831416144_400x240.jpg"
-    },
-    {
-      "date": "2026-01-09",
-      "copyright": "Turret Arch framed by North Window in Arches National Park, Utah (© Jim Patterson/TANDEM Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.StarlingBrighton2025_EN-US6998438769_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.StarlingBrighton2025_EN-US6998438769_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.StarlingBrighton2025_EN-US6998438769_400x240.jpg"
     }
   ],
   "page": 5,
   "pageSize": 42,
-  "total": 2011,
+  "total": 2012,
   "totalPages": 48,
   "hasMore": true
 }
