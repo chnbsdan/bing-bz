@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-08-09",
+      "copyright": "让-马里·吉巴乌文化中心，新喀里多尼亚 (© Fabien Astre/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.JMTjibaou_ZH-CN6992670356_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.JMTjibaou_ZH-CN6992670356_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.JMTjibaou_ZH-CN6992670356_400x240.jpg"
+    },
+    {
       "date": "2026-08-08",
       "copyright": "蒂斯河畔斯托克顿无限桥，英格兰 (© Bahadir Yeniceri/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.StocktonInfinity_ZH-CN5941379745_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BoraBoraLagoon_EN-US1491116478_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BoraBoraLagoon_EN-US1491116478_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BoraBoraLagoon_EN-US1491116478_400x240.jpg"
-    },
-    {
-      "date": "2026-06-28",
-      "copyright": "Driftwood on Boneyard Beach, Hunting Island, South Carolina (© Frances/Adobe Stock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SaguaroSun_EN-US8982109543_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SaguaroSun_EN-US8982109543_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SaguaroSun_EN-US8982109543_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2013,
+  "total": 2014,
   "totalPages": 48,
   "hasMore": true
 }

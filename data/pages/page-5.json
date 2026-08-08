@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-02-22",
+      "copyright": "Red fox standing in snowfall, Grand Teton National Park, Wyoming (© Radomir Jakubowski/naturepl.com)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MamTorSunrise_EN-US2655534073_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MamTorSunrise_EN-US2655534073_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.MamTorSunrise_EN-US2655534073_400x240.jpg"
+    },
+    {
       "date": "2026-02-21",
       "copyright": "Horsetail Fall in Yosemite National Park, California (© Jorge Villalba/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.TetonFox_EN-US2616700325_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BlueMorocco_EN-US0026059455_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BlueMorocco_EN-US0026059455_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BlueMorocco_EN-US0026059455_400x240.jpg"
-    },
-    {
-      "date": "2026-01-11",
-      "copyright": "Giant redwood trees in Muir Woods National Monument, California (© photo by canderson/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MatterhornSunrise_EN-US9978097106_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MatterhornSunrise_EN-US9978097106_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MatterhornSunrise_EN-US9978097106_400x240.jpg"
     }
   ],
   "page": 5,
   "pageSize": 42,
-  "total": 2013,
+  "total": 2014,
   "totalPages": 48,
   "hasMore": true
 }

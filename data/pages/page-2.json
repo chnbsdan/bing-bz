@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-06-28",
+      "copyright": "Driftwood on Boneyard Beach, Hunting Island, South Carolina (© Frances/Adobe Stock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SaguaroSun_EN-US8982109543_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SaguaroSun_EN-US8982109543_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SaguaroSun_EN-US8982109543_400x240.jpg"
+    },
+    {
       "date": "2026-06-27",
       "copyright": "The River Thames, London, England (© Daniel Lange/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BoneyardBeach_EN-US8247496696_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MuseumLondon_EN-US0527592013_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MuseumLondon_EN-US0527592013_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MuseumLondon_EN-US0527592013_400x240.jpg"
-    },
-    {
-      "date": "2026-05-17",
-      "copyright": "Smith Rock State Park, Oregon (© Alex Ratson/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ShenandoahSunset_EN-US0482920183_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ShenandoahSunset_EN-US0482920183_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ShenandoahSunset_EN-US0482920183_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2013,
+  "total": 2014,
   "totalPages": 48,
   "hasMore": true
 }

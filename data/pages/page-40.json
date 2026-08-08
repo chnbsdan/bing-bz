@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-02-13",
+      "copyright": "达尔文岛的达尔文拱门，厄瓜多尔加拉帕戈斯 (© miralex/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FaceOff_ZH-CN9969100257_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FaceOff_ZH-CN9969100257_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.FaceOff_ZH-CN9969100257_400x240.jpg"
+    },
+    {
       "date": "2022-02-12",
       "copyright": "慕那尔山区的茶园，印度喀拉拉邦 (© SvitlanaBelinska/iStock/Getty Images Plus)",
       "jpg": "https://cn.bing.com/th?id=OHR.DarwinsArch_ZH-CN9740478501_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.LickObservatory_ZH-CN9676762110_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.LickObservatory_ZH-CN9676762110_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.LickObservatory_ZH-CN9676762110_400x240.jpg"
-    },
-    {
-      "date": "2022-01-02",
-      "copyright": "睡在海滩上的竖琴海豹，纽约长岛 (© Vicki Jauron, Babylon and Beyond Photography/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SnowyPrague_ZH-CN9794475183_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SnowyPrague_ZH-CN9794475183_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SnowyPrague_ZH-CN9794475183_400x240.jpg"
     }
   ],
   "page": 40,
   "pageSize": 42,
-  "total": 2013,
+  "total": 2014,
   "totalPages": 48,
   "hasMore": true
 }

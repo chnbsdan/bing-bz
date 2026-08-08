@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-06-15",
+      "copyright": "Vila Franca Islet, São Miguel Island, Azores, Portugal (© ARoxo/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FlagCapitolDC_EN-US1553861171_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FlagCapitolDC_EN-US1553861171_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.FlagCapitolDC_EN-US1553861171_400x240.jpg"
+    },
+    {
       "date": "2025-06-14",
       "copyright": "Chisos Mountains, Big Bend National Park, Texas (© Dean Fikar/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.SanMiguelAzores_EN-US2785372768_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SevilleNaboo_EN-US5814352031_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SevilleNaboo_EN-US5814352031_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SevilleNaboo_EN-US5814352031_400x240.jpg"
-    },
-    {
-      "date": "2025-05-04",
-      "copyright": "Striated heron on a Victoria water lily, Pantanal, Brazil (© Gerald Corsi/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ArchesGalaxy_EN-US5690613383_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ArchesGalaxy_EN-US5690613383_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ArchesGalaxy_EN-US5690613383_400x240.jpg"
     }
   ],
   "page": 11,
   "pageSize": 42,
-  "total": 2013,
+  "total": 2014,
   "totalPages": 48,
   "hasMore": true
 }

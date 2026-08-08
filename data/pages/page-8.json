@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-10-19",
+      "copyright": "Rock River Falls, Upper Peninsula, Michigan (© Matt Anderson Photography/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SilburyHill_EN-US2485144120_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SilburyHill_EN-US2485144120_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SilburyHill_EN-US2485144120_400x240.jpg"
+    },
+    {
       "date": "2025-10-18",
       "copyright": "Eurasian lynx in Siberia (© Mario Plechaty Photograph/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.RockRiverFalls_EN-US2428797661_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BlueGdansk_EN-US8032283831_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BlueGdansk_EN-US8032283831_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BlueGdansk_EN-US8032283831_400x240.jpg"
-    },
-    {
-      "date": "2025-09-07",
-      "copyright": "Pacific Park at Santa Monica State Beach, California (© EXTREME-PHOTOGRAPHER/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.RufousHummer_EN-US7346003108_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.RufousHummer_EN-US7346003108_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.RufousHummer_EN-US7346003108_400x240.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2013,
+  "total": 2014,
   "totalPages": 48,
   "hasMore": true
 }

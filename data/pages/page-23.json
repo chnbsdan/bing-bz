@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-01-28",
+      "copyright": "Eurasian red squirrel, Netherlands (© Ernst Dirksen/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SantaCruzSunrise_EN-US6436233856_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SantaCruzSunrise_EN-US6436233856_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SantaCruzSunrise_EN-US6436233856_400x240.jpg"
+    },
+    {
       "date": "2024-01-27",
       "copyright": "Macaroni penguins, Drake Passage, Chile (© Paul Souders/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.SquirrelNetherlands_EN-US2174319616_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.Poinsettia_EN-US0450019921_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.Poinsettia_EN-US0450019921_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.Poinsettia_EN-US0450019921_400x240.jpg"
-    },
-    {
-      "date": "2023-12-17",
-      "copyright": "Last rays of sun on a group of dunes, Sahara, Algeria (© AWL Images/DanitaDelimont.com)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MountainDayChina_EN-US0394775210_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MountainDayChina_EN-US0394775210_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MountainDayChina_EN-US0394775210_400x240.jpg"
     }
   ],
   "page": 23,
   "pageSize": 42,
-  "total": 2013,
+  "total": 2014,
   "totalPages": 48,
   "hasMore": true
 }

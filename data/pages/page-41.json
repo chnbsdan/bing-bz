@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-01-02",
+      "copyright": "睡在海滩上的竖琴海豹，纽约长岛 (© Vicki Jauron, Babylon and Beyond Photography/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SnowyPrague_ZH-CN9794475183_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SnowyPrague_ZH-CN9794475183_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SnowyPrague_ZH-CN9794475183_400x240.jpg"
+    },
+    {
       "date": "2022-01-01",
       "copyright": "跨年夜的篝火晚会，冰岛雷克雅未克 (© Ragnar Th Sigurdsson/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.JonesBeachHarpSeal_ZH-CN9584238333_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.IrohazakaRoad_ZH-CN9151363864_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.IrohazakaRoad_ZH-CN9151363864_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.IrohazakaRoad_ZH-CN9151363864_400x240.jpg"
-    },
-    {
-      "date": "2021-11-21",
-      "copyright": "阿西尼博因山公园的秋叶，加拿大不列颠哥伦比亚省 (© Mitch Pittman/TANDEM Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.Invergarry_ZH-CN9013535988_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.Invergarry_ZH-CN9013535988_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.Invergarry_ZH-CN9013535988_400x240.jpg"
     }
   ],
   "page": 41,
   "pageSize": 42,
-  "total": 2013,
+  "total": 2014,
   "totalPages": 48,
   "hasMore": true
 }

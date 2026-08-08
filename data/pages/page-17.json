@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-10-06",
+      "copyright": "Herd of walruses in northern Spitsbergen, Svalbard archipelago, Norway (© AWL Images/Danita Delimont)",
+      "jpg": "https://cn.bing.com/th?id=OHR.HalfDomeYosemite_EN-US4890007214_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.HalfDomeYosemite_EN-US4890007214_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.HalfDomeYosemite_EN-US4890007214_400x240.jpg"
+    },
+    {
       "date": "2024-10-05",
       "copyright": "West Cornwall Covered Bridge over the Housatonic River, Connecticut (© pabradyphoto/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.WalrusNorway_EN-US4658961878_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.TetonSunrise_EN-US0849252457_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.TetonSunrise_EN-US0849252457_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.TetonSunrise_EN-US0849252457_400x240.jpg"
-    },
-    {
-      "date": "2024-08-25",
-      "copyright": "Huntington Beach Pier, California, at sunset (© Stan Moniz Photography/Tandem Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.FlightMuseum_EN-US0151236175_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.FlightMuseum_EN-US0151236175_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.FlightMuseum_EN-US0151236175_400x240.jpg"
     }
   ],
   "page": 17,
   "pageSize": 42,
-  "total": 2013,
+  "total": 2014,
   "totalPages": 48,
   "hasMore": true
 }

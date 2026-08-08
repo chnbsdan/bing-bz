@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-06-19",
+      "copyright": "Misool Island, one of the four major islands in the Raja Ampat Islands in West Papua, Indonesia (© Elsy Saldek/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SierraPonce_EN-US7735077868_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SierraPonce_EN-US7735077868_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SierraPonce_EN-US7735077868_400x240.jpg"
+    },
+    {
       "date": "2022-06-18",
       "copyright": "Poppies in bloom, Moravia, Czech Republic (© rusm/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MisoolIsland_EN-US7672276436_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.GoremeNationalPark_ZH-CN1861727385_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.GoremeNationalPark_ZH-CN1861727385_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.GoremeNationalPark_ZH-CN1861727385_400x240.jpg"
-    },
-    {
-      "date": "2022-05-08",
-      "copyright": "拉西拉ESO天文台上的天文望远镜设备，智利 (© Alberto Ghizzi Panizza/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MomJoey_ZH-CN1642006600_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MomJoey_ZH-CN1642006600_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MomJoey_ZH-CN1642006600_400x240.jpg"
     }
   ],
   "page": 37,
   "pageSize": 42,
-  "total": 2013,
+  "total": 2014,
   "totalPages": 48,
   "hasMore": true
 }
