@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-07-28",
+      "copyright": "Mangrove trees at twilight, Walakiri Beach, island of Sumba, Indonesia (© Boonchet Ch./Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BlackfinBarracuda_EN-US1227116811_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BlackfinBarracuda_EN-US1227116811_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BlackfinBarracuda_EN-US1227116811_400x240.jpg"
+    },
+    {
       "date": "2025-07-27",
       "copyright": "Aerial view of colorful houses, Las Palmas de Gran Canaria, Spain (© Marco Bottigelli/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MangroveTwilight_EN-US0646432423_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SeaTurtleBrazil_EN-US1789042400_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SeaTurtleBrazil_EN-US1789042400_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SeaTurtleBrazil_EN-US1789042400_400x240.jpg"
-    },
-    {
-      "date": "2025-06-16",
-      "copyright": "Flag display at the US Capitol, Washington, DC (© kmiragaya/Adobe Stock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.RheaDad_EN-US1643943847_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.RheaDad_EN-US1643943847_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.RheaDad_EN-US1643943847_400x240.jpg"
     }
   ],
   "page": 10,
   "pageSize": 42,
-  "total": 2014,
+  "total": 2015,
   "totalPages": 48,
   "hasMore": true
 }

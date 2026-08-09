@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-09-08",
+      "copyright": "Rufous hummingbird, Golden Gate Park, San Francisco, California (© jeremyborkat/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BlueGdansk_EN-US8032283831_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BlueGdansk_EN-US8032283831_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BlueGdansk_EN-US8032283831_400x240.jpg"
+    },
+    {
       "date": "2025-09-07",
       "copyright": "Pacific Park at Santa Monica State Beach, California (© EXTREME-PHOTOGRAPHER/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.RufousHummer_EN-US7346003108_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MongoliaYurts_EN-US1803457525_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MongoliaYurts_EN-US1803457525_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MongoliaYurts_EN-US1803457525_400x240.jpg"
-    },
-    {
-      "date": "2025-07-28",
-      "copyright": "Mangrove trees at twilight, Walakiri Beach, island of Sumba, Indonesia (© Boonchet Ch./Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BlackfinBarracuda_EN-US1227116811_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BlackfinBarracuda_EN-US1227116811_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BlackfinBarracuda_EN-US1227116811_400x240.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 2014,
+  "total": 2015,
   "totalPages": 48,
   "hasMore": true
 }

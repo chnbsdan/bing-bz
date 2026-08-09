@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-10-07",
+      "copyright": "Last light on Half Dome, Yosemite National Park, California (© Adam Burton/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.WindRiverAlaska_EN-US4993335597_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.WindRiverAlaska_EN-US4993335597_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.WindRiverAlaska_EN-US4993335597_400x240.jpg"
+    },
+    {
       "date": "2024-10-06",
       "copyright": "Herd of walruses in northern Spitsbergen, Svalbard archipelago, Norway (© AWL Images/Danita Delimont)",
       "jpg": "https://cn.bing.com/th?id=OHR.HalfDomeYosemite_EN-US4890007214_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.NazcaBooby_EN-US0971401791_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.NazcaBooby_EN-US0971401791_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.NazcaBooby_EN-US0971401791_400x240.jpg"
-    },
-    {
-      "date": "2024-08-26",
-      "copyright": "Museum of Flight, Seattle, Washington (© George Rose/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.TetonSunrise_EN-US0849252457_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.TetonSunrise_EN-US0849252457_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.TetonSunrise_EN-US0849252457_400x240.jpg"
     }
   ],
   "page": 17,
   "pageSize": 42,
-  "total": 2014,
+  "total": 2015,
   "totalPages": 48,
   "hasMore": true
 }
