@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-06-30",
+      "copyright": "Bora Bora and its lagoon, South Pacific, French Polynesia (© Frederick Millett/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MasaiGiraffe_EN-US2240704874_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MasaiGiraffe_EN-US2240704874_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.MasaiGiraffe_EN-US2240704874_400x240.jpg"
+    },
+    {
       "date": "2026-06-29",
       "copyright": "Saguaro cacti near Windgate Pass, McDowell Range, Arizona, USA (© Eric Mischke/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BoraBoraLagoon_EN-US1491116478_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BumbleBee_EN-US0634100541_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BumbleBee_EN-US0634100541_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BumbleBee_EN-US0634100541_400x240.jpg"
-    },
-    {
-      "date": "2026-05-19",
-      "copyright": "Natural History Museum, London, England (© Colm Keating/Tandem Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SpainLighthouse_EN-US0598364035_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SpainLighthouse_EN-US0598364035_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SpainLighthouse_EN-US0598364035_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2015,
+  "total": 2016,
   "totalPages": 48,
   "hasMore": true
 }

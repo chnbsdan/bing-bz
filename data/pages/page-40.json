@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-02-15",
+      "copyright": "心形小岛和白沙滩，印度洋马尔代夫 (© Willyam Bradberry/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.Latern2022_ZH-CN0112710917_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.Latern2022_ZH-CN0112710917_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.Latern2022_ZH-CN0112710917_400x240.jpg"
+    },
+    {
       "date": "2022-02-14",
       "copyright": "黄石国家公园的美洲野牛，美国怀俄明州 (© Gerald Corsi/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MaldivesHeart_ZH-CN0032539727_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MountainToucan_ZH-CN9939482570_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MountainToucan_ZH-CN9939482570_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MountainToucan_ZH-CN9939482570_400x240.jpg"
-    },
-    {
-      "date": "2022-01-04",
-      "copyright": "汉密尔顿山顶的利克天文台，美国加利福尼亚州 (© Jeffrey Lewis/Tandem Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BorregoBadlands_ZH-CN9913349081_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BorregoBadlands_ZH-CN9913349081_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BorregoBadlands_ZH-CN9913349081_400x240.jpg"
     }
   ],
   "page": 40,
   "pageSize": 42,
-  "total": 2015,
+  "total": 2016,
   "totalPages": 48,
   "hasMore": true
 }

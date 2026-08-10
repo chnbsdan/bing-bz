@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-12-19",
+      "copyright": "Poinsettias (© Yarygin/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.LofotenRorbu_EN-US1036629496_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.LofotenRorbu_EN-US1036629496_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.LofotenRorbu_EN-US1036629496_400x240.jpg"
+    },
+    {
       "date": "2023-12-18",
       "copyright": "Winter at Huangshan, China (© Hung Chung Chih/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.Poinsettia_EN-US0450019921_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.DeathValleySalt_EN-US1068737086_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.DeathValleySalt_EN-US1068737086_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.DeathValleySalt_EN-US1068737086_400x240.jpg"
-    },
-    {
-      "date": "2023-11-07",
-      "copyright": "Halloween jack-o'-lanterns on a porch (© Bing Image Creator)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MummyCaveRuins_EN-US0871963100_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MummyCaveRuins_EN-US0871963100_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MummyCaveRuins_EN-US0871963100_400x240.jpg"
     }
   ],
   "page": 24,
   "pageSize": 42,
-  "total": 2015,
+  "total": 2016,
   "totalPages": 48,
   "hasMore": true
 }

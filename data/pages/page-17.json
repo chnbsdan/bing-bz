@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-10-08",
+      "copyright": "Wind River, Brooks Range, Arctic National Wildlife Refuge, Alaska (© Design Pics/Danita Delimont)",
+      "jpg": "https://cn.bing.com/th?id=OHR.TajMahalReflection_EN-US5053333041_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.TajMahalReflection_EN-US5053333041_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.TajMahalReflection_EN-US5053333041_400x240.jpg"
+    },
+    {
       "date": "2024-10-07",
       "copyright": "Last light on Half Dome, Yosemite National Park, California (© Adam Burton/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.WindRiverAlaska_EN-US4993335597_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.OceanCityMD_EN-US1389904046_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.OceanCityMD_EN-US1389904046_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.OceanCityMD_EN-US1389904046_400x240.jpg"
-    },
-    {
-      "date": "2024-08-27",
-      "copyright": "Sunrise at Grand Teton National Park, Wyoming (© Kurt Budliger/Tandem Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.NazcaBooby_EN-US0971401791_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.NazcaBooby_EN-US0971401791_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.NazcaBooby_EN-US0971401791_400x240.jpg"
     }
   ],
   "page": 17,
   "pageSize": 42,
-  "total": 2015,
+  "total": 2016,
   "totalPages": 48,
   "hasMore": true
 }

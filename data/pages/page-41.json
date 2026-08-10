@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-01-04",
+      "copyright": "汉密尔顿山顶的利克天文台，美国加利福尼亚州 (© Jeffrey Lewis/Tandem Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BorregoBadlands_ZH-CN9913349081_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BorregoBadlands_ZH-CN9913349081_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BorregoBadlands_ZH-CN9913349081_400x240.jpg"
+    },
+    {
       "date": "2022-01-03",
       "copyright": "雪后的布拉格，捷克共和国 (© benkrut/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.LickObservatory_ZH-CN9676762110_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ChocoHillBohol_ZH-CN9297094265_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ChocoHillBohol_ZH-CN9297094265_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ChocoHillBohol_ZH-CN9297094265_400x240.jpg"
-    },
-    {
-      "date": "2021-11-23",
-      "copyright": "伊吕波坂山道，日本日光市 (© LightRecords/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AmmoniteShell_ZH-CN9232274077_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AmmoniteShell_ZH-CN9232274077_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AmmoniteShell_ZH-CN9232274077_400x240.jpg"
     }
   ],
   "page": 41,
   "pageSize": 42,
-  "total": 2015,
+  "total": 2016,
   "totalPages": 48,
   "hasMore": true
 }

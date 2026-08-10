@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-05-19",
+      "copyright": "Natural History Museum, London, England (© Colm Keating/Tandem Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SpainLighthouse_EN-US0598364035_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SpainLighthouse_EN-US0598364035_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SpainLighthouse_EN-US0598364035_400x240.jpg"
+    },
+    {
       "date": "2026-05-18",
       "copyright": "Hawksbill Mountain in Shenandoah National Park, Virginia (© John Baggaley/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MuseumLondon_EN-US0527592013_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SeattleSunrise_EN-US6729754002_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SeattleSunrise_EN-US6729754002_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SeattleSunrise_EN-US6729754002_400x240.jpg"
-    },
-    {
-      "date": "2026-04-07",
-      "copyright": "Hirosaki Castle with cherry blossoms, Hirosaki, Japan (© Glenn Waters/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BeaverPortrait_EN-US6459336252_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BeaverPortrait_EN-US6459336252_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BeaverPortrait_EN-US6459336252_400x240.jpg"
     }
   ],
   "page": 3,
   "pageSize": 42,
-  "total": 2015,
+  "total": 2016,
   "totalPages": 48,
   "hasMore": true
 }

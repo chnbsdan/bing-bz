@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-08-11",
+      "copyright": "哥本哈根新港运河沿岸的彩色房屋，首都大区，丹麦 (© emicristea/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ColorfulCop_ZH-CN8015611442_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ColorfulCop_ZH-CN8015611442_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ColorfulCop_ZH-CN8015611442_400x240.jpg"
+    },
+    {
       "date": "2026-08-10",
       "copyright": "约书亚树国家公园，加利福尼亚州，美国 (© JJ Landscapes/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.SandPath_ZH-CN7820825668_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.DungeonPark_EN-US2499621341_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.DungeonPark_EN-US2499621341_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.DungeonPark_EN-US2499621341_400x240.jpg"
-    },
-    {
-      "date": "2026-06-30",
-      "copyright": "Bora Bora and its lagoon, South Pacific, French Polynesia (© Frederick Millett/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MasaiGiraffe_EN-US2240704874_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MasaiGiraffe_EN-US2240704874_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MasaiGiraffe_EN-US2240704874_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2015,
+  "total": 2016,
   "totalPages": 48,
   "hasMore": true
 }
