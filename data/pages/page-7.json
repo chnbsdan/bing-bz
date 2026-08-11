@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-12-03",
+      "copyright": "Natural arch carved in an iceberg, Antarctica (© Gabrielle/Adobe Stock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.WillowLake_EN-US6664756735_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.WillowLake_EN-US6664756735_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.WillowLake_EN-US6664756735_400x240.jpg"
+    },
+    {
       "date": "2025-12-02",
       "copyright": "Christmas market in Leipzig, Germany (© Krzysztof Baranowski/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.AntarcticArch_EN-US6560308300_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BulgariaRocks_EN-US3184562282_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BulgariaRocks_EN-US3184562282_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BulgariaRocks_EN-US3184562282_400x240.jpg"
-    },
-    {
-      "date": "2025-10-22",
-      "copyright": "A Hoffmann's two-toed sloth in Ecuador (© Murray Cooper/Minden Pictures)",
-      "jpg": "https://cn.bing.com/th?id=OHR.DiyaDiwali_EN-US3108369974_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.DiyaDiwali_EN-US3108369974_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.DiyaDiwali_EN-US3108369974_400x240.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2016,
-  "totalPages": 48,
+  "total": 2017,
+  "totalPages": 49,
   "hasMore": true
 }

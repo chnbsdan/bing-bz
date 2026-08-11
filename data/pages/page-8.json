@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-10-22",
+      "copyright": "A Hoffmann's two-toed sloth in Ecuador (© Murray Cooper/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.DiyaDiwali_EN-US3108369974_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.DiyaDiwali_EN-US3108369974_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.DiyaDiwali_EN-US3108369974_400x240.jpg"
+    },
+    {
       "date": "2025-10-21",
       "copyright": "Apples ready for harvest, Minnesota (© Tammi Mild/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.HoffmansSloth_EN-US3030106938_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.YorkshireHay_EN-US8523120193_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.YorkshireHay_EN-US8523120193_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.YorkshireHay_EN-US8523120193_400x240.jpg"
-    },
-    {
-      "date": "2025-09-10",
-      "copyright": "Library@orchard, Singapore (© Darwin Fan/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SwissSquirrel_EN-US8185093853_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SwissSquirrel_EN-US8185093853_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SwissSquirrel_EN-US8185093853_400x240.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2016,
-  "totalPages": 48,
+  "total": 2017,
+  "totalPages": 49,
   "hasMore": true
 }

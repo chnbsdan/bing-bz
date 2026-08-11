@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-07-01",
+      "copyright": "Giraffes at sunset in the Masai Mara National Reserve, Kenya (© danm/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.DungeonPark_EN-US2499621341_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.DungeonPark_EN-US2499621341_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.DungeonPark_EN-US2499621341_400x240.jpg"
+    },
+    {
       "date": "2026-06-30",
       "copyright": "Bora Bora and its lagoon, South Pacific, French Polynesia (© Frederick Millett/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.MasaiGiraffe_EN-US2240704874_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SichuanTea_EN-US0676754504_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SichuanTea_EN-US0676754504_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SichuanTea_EN-US0676754504_400x240.jpg"
-    },
-    {
-      "date": "2026-05-20",
-      "copyright": "Formentor Lighthouse, Mallorca, Balearic Islands, Spain (© Allard Schager/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BumbleBee_EN-US0634100541_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BumbleBee_EN-US0634100541_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BumbleBee_EN-US0634100541_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2016,
-  "totalPages": 48,
+  "total": 2017,
+  "totalPages": 49,
   "hasMore": true
 }

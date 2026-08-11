@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-11-20",
+      "copyright": "Yi Peng lantern festival, Chiang Mai, Thailand (© tampatra/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FrieslandNetherlands_EN-US3770890281_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FrieslandNetherlands_EN-US3770890281_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.FrieslandNetherlands_EN-US3770890281_400x240.jpg"
+    },
+    {
       "date": "2024-11-19",
       "copyright": "Manarola, Cinque Terre National Park, Liguria, Italy (© John_Silver/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.YiPengLanterns_EN-US2889801198_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ElephantTeacher_EN-US8363933732_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ElephantTeacher_EN-US8363933732_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ElephantTeacher_EN-US8363933732_400x240.jpg"
-    },
-    {
-      "date": "2024-10-09",
-      "copyright": "Taj Mahal in Agra, Uttar Pradesh, India (© Tanarch/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.EuropaMoon_EN-US8269574935_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.EuropaMoon_EN-US8269574935_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.EuropaMoon_EN-US8269574935_400x240.jpg"
     }
   ],
   "page": 16,
   "pageSize": 42,
-  "total": 2016,
-  "totalPages": 48,
+  "total": 2017,
+  "totalPages": 49,
   "hasMore": true
 }

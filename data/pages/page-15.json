@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-01-01",
+      "copyright": "A green sea turtle swims in the Pacific Ocean near the French special collectivity of New Caledonia (© Damsea/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BorobudurBells_EN-US6354350828_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BorobudurBells_EN-US6354350828_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BorobudurBells_EN-US6354350828_400x240.jpg"
+    },
+    {
       "date": "2024-12-31",
       "copyright": "Lake Bled, Slovenia (© Kesu01/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.CoralTurtle_EN-US6100263163_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.RedStag_EN-US3910525623_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.RedStag_EN-US3910525623_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.RedStag_EN-US3910525623_400x240.jpg"
-    },
-    {
-      "date": "2024-11-20",
-      "copyright": "Yi Peng lantern festival, Chiang Mai, Thailand (© tampatra/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.FrieslandNetherlands_EN-US3770890281_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.FrieslandNetherlands_EN-US3770890281_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.FrieslandNetherlands_EN-US3770890281_400x240.jpg"
     }
   ],
   "page": 15,
   "pageSize": 42,
-  "total": 2016,
-  "totalPages": 48,
+  "total": 2017,
+  "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-02-12",
+      "copyright": "Alstrom Point, Lake Powell, Utah (© T.M. Schultze/TANDEM Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.UmbrellaDay_EN-US6816351187_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.UmbrellaDay_EN-US6816351187_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.UmbrellaDay_EN-US6816351187_400x240.jpg"
+    },
+    {
       "date": "2025-02-11",
       "copyright": "Medieval towers in Mestia, Upper Svaneti, Georgia (© photoaliona/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.AlstromPoint_EN-US6746094430_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MountFieldNP_EN-US6905459745_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MountFieldNP_EN-US6905459745_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MountFieldNP_EN-US6905459745_400x240.jpg"
-    },
-    {
-      "date": "2025-01-01",
-      "copyright": "A green sea turtle swims in the Pacific Ocean near the French special collectivity of New Caledonia (© Damsea/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BorobudurBells_EN-US6354350828_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BorobudurBells_EN-US6354350828_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BorobudurBells_EN-US6354350828_400x240.jpg"
     }
   ],
   "page": 14,
   "pageSize": 42,
-  "total": 2016,
-  "totalPages": 48,
+  "total": 2017,
+  "totalPages": 49,
   "hasMore": true
 }

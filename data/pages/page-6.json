@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-01-14",
+      "copyright": "Eurasian otter and pup, Estonia (© Sven Zacek/naturepl.com)",
+      "jpg": "https://cn.bing.com/th?id=OHR.WalesWinter_EN-US0191348069_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.WalesWinter_EN-US0191348069_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.WalesWinter_EN-US0191348069_400x240.jpg"
+    },
+    {
       "date": "2026-01-13",
       "copyright": "Blue walls of Chefchaouen, Morocco (© AnetteAndersen/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.SnowOtters_EN-US0138589680_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BosqueCranes_EN-US6752028797_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BosqueCranes_EN-US6752028797_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BosqueCranes_EN-US6752028797_400x240.jpg"
-    },
-    {
-      "date": "2025-12-03",
-      "copyright": "Natural arch carved in an iceberg, Antarctica (© Gabrielle/Adobe Stock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.WillowLake_EN-US6664756735_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.WillowLake_EN-US6664756735_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.WillowLake_EN-US6664756735_400x240.jpg"
     }
   ],
   "page": 6,
   "pageSize": 42,
-  "total": 2016,
-  "totalPages": 48,
+  "total": 2017,
+  "totalPages": 49,
   "hasMore": true
 }
