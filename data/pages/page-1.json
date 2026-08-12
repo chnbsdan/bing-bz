@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-08-13",
+      "copyright": "泰德天文台上空的英仙座流星，加那利群岛，西班牙 (© Westend61/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.PerseidasTenerife_ZH-CN8520379683_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.PerseidasTenerife_ZH-CN8520379683_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.PerseidasTenerife_ZH-CN8520379683_400x240.jpg"
+    },
+    {
       "date": "2026-08-12",
       "copyright": "安博塞利国家公园的非洲草原象群，卡贾多郡，肯尼亚 (© Ibrahim Suha Derbent/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ElephantDay_ZH-CN8350171749_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.FirefliesJapan_EN-US2315956275_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.FirefliesJapan_EN-US2315956275_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.FirefliesJapan_EN-US2315956275_400x240.jpg"
-    },
-    {
-      "date": "2026-07-02",
-      "copyright": "Dungeon Provincial Park, Newfoundland and Labrador, Canada (© Kaitlyn McLachlan/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.TempleEsna_EN-US1999215513_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.TempleEsna_EN-US1999215513_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.TempleEsna_EN-US1999215513_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2017,
+  "total": 2018,
   "totalPages": 49,
   "hasMore": true
 }

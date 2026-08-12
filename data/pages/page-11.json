@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-06-19",
+      "copyright": "Maritime forest in Cumberland Island National Seashore, Georgia (© Chris Moore/TANDEM Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AsianSwallowtail_EN-US1924189362_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AsianSwallowtail_EN-US1924189362_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AsianSwallowtail_EN-US1924189362_400x240.jpg"
+    },
+    {
       "date": "2025-06-18",
       "copyright": "Sea turtle, Fernando de Noronha, Brazil (© João Vianna/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.CumberlandOaks_EN-US1850139942_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.RhyoliteDonkeys_EN-US6439068828_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.RhyoliteDonkeys_EN-US6439068828_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.RhyoliteDonkeys_EN-US6439068828_400x240.jpg"
-    },
-    {
-      "date": "2025-05-08",
-      "copyright": "An ultralight aircraft flying over the sands of Namibia (© Burt Johnson/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.DunluceIreland_EN-US6236791025_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.DunluceIreland_EN-US6236791025_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.DunluceIreland_EN-US6236791025_400x240.jpg"
     }
   ],
   "page": 11,
   "pageSize": 42,
-  "total": 2017,
+  "total": 2018,
   "totalPages": 49,
   "hasMore": true
 }

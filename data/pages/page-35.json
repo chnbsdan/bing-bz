@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-09-15",
+      "copyright": "Arambol Beach in Goa, India (© Ben Pipe/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.GastoniaParade_EN-US8873564493_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.GastoniaParade_EN-US8873564493_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.GastoniaParade_EN-US8873564493_400x240.jpg"
+    },
+    {
       "date": "2022-09-14",
       "copyright": "Petronas Twin Towers, Kuala Lumpur, Malaysia (© tampatra/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ArambolBeach_EN-US7908449198_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MangroveDay_EN-US4051479273_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MangroveDay_EN-US4051479273_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MangroveDay_EN-US4051479273_400x240.jpg"
-    },
-    {
-      "date": "2022-08-04",
-      "copyright": "Amelia Earhart teaching students in Newark, New Jersey (© Bettmann/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MGRBrighton_EN-US4452708176_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MGRBrighton_EN-US4452708176_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MGRBrighton_EN-US4452708176_400x240.jpg"
     }
   ],
   "page": 35,
   "pageSize": 42,
-  "total": 2017,
+  "total": 2018,
   "totalPages": 49,
   "hasMore": true
 }

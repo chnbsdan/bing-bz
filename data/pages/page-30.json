@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-04-13",
+      "copyright": "Pu'uhonua o Hōnaunau National Historical Park, Big Island, Hawaii (© Westend61/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.RomanBridge_EN-US4101165681_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.RomanBridge_EN-US4101165681_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.RomanBridge_EN-US4101165681_400x240.jpg"
+    },
+    {
       "date": "2023-04-12",
       "copyright": "Bromo Tengger Semeru National Park, East Java, Indonesia (© Bento Fotography/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.HonaunauNP_EN-US9995236109_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.FreedomRallyChi_EN-US2565810173_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.FreedomRallyChi_EN-US2565810173_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.FreedomRallyChi_EN-US2565810173_400x240.jpg"
-    },
-    {
-      "date": "2023-03-02",
-      "copyright": "Washington Monument and Capitol Building on the National Mall, Washington, DC (© AevanStock/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MardiGrasNOLA_EN-US2138635038_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MardiGrasNOLA_EN-US2138635038_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MardiGrasNOLA_EN-US2138635038_400x240.jpg"
     }
   ],
   "page": 30,
   "pageSize": 42,
-  "total": 2017,
+  "total": 2018,
   "totalPages": 49,
   "hasMore": true
 }

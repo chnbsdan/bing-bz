@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-02-13",
+      "copyright": "Art installation of umbrellas at Borough Market in London, England (© Malcolm P Chapman/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.GalapagosIguana_EN-US6976814194_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.GalapagosIguana_EN-US6976814194_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.GalapagosIguana_EN-US6976814194_400x240.jpg"
+    },
+    {
       "date": "2025-02-12",
       "copyright": "Alstrom Point, Lake Powell, Utah (© T.M. Schultze/TANDEM Stills + Motion)",
       "jpg": "https://cn.bing.com/th?id=OHR.UmbrellaDay_EN-US6816351187_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.RioNewYear_EN-US7216341802_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.RioNewYear_EN-US7216341802_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.RioNewYear_EN-US7216341802_400x240.jpg"
-    },
-    {
-      "date": "2025-01-02",
-      "copyright": "Borobudur Temple, Java, Indonesia (© Robertharding/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MountFieldNP_EN-US6905459745_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MountFieldNP_EN-US6905459745_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MountFieldNP_EN-US6905459745_400x240.jpg"
     }
   ],
   "page": 14,
   "pageSize": 42,
-  "total": 2017,
+  "total": 2018,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-08-17",
+      "copyright": "Indigenous artwork, Ngaruwanajirri Art Centre, Wurrumiyanga, Bathurst Island, Australia (© Robert Wyatt/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.WorldLionDay_EN-US3311213683_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.WorldLionDay_EN-US3311213683_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.WorldLionDay_EN-US3311213683_400x240.jpg"
+    },
+    {
       "date": "2023-08-16",
       "copyright": "Highways in Taipei, Taiwan (© Tavarius/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.BathurstArt_EN-US3084378813_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ClamBears_EN-US1283973201_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ClamBears_EN-US1283973201_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ClamBears_EN-US1283973201_400x240.jpg"
-    },
-    {
-      "date": "2023-07-06",
-      "copyright": "Rainbow flags and confetti, Reykjavík, Iceland (© Arctic-Images/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BanyakIslands_EN-US2426505225_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BanyakIslands_EN-US2426505225_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BanyakIslands_EN-US2426505225_400x240.jpg"
     }
   ],
   "page": 27,
   "pageSize": 42,
-  "total": 2017,
+  "total": 2018,
   "totalPages": 49,
   "hasMore": true
 }

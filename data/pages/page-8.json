@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-10-23",
+      "copyright": "A diya at the Golden Temple during Diwali, Amritsar, India (© EyeEm Mobile GmbH/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BulgariaRocks_EN-US3184562282_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BulgariaRocks_EN-US3184562282_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BulgariaRocks_EN-US3184562282_400x240.jpg"
+    },
+    {
       "date": "2025-10-22",
       "copyright": "A Hoffmann's two-toed sloth in Ecuador (© Murray Cooper/Minden Pictures)",
       "jpg": "https://cn.bing.com/th?id=OHR.DiyaDiwali_EN-US3108369974_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.LibertyManhattan_EN-US8781721086_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.LibertyManhattan_EN-US8781721086_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.LibertyManhattan_EN-US8781721086_400x240.jpg"
-    },
-    {
-      "date": "2025-09-11",
-      "copyright": "A female Eurasian red squirrel carrying moss, Switzerland (© Jean-Luc and Francoise Ziegler/Minden Pictures)",
-      "jpg": "https://cn.bing.com/th?id=OHR.YorkshireHay_EN-US8523120193_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.YorkshireHay_EN-US8523120193_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.YorkshireHay_EN-US8523120193_400x240.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2017,
+  "total": 2018,
   "totalPages": 49,
   "hasMore": true
 }

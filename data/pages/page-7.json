@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-12-04",
+      "copyright": "Willow Lake and Mount Blackburn, Wrangell-St. Elias National Park and Preserve, Alaska (© Patrick J. Endres/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BosqueCranes_EN-US6752028797_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BosqueCranes_EN-US6752028797_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BosqueCranes_EN-US6752028797_400x240.jpg"
+    },
+    {
       "date": "2025-12-03",
       "copyright": "Natural arch carved in an iceberg, Antarctica (© Gabrielle/Adobe Stock)",
       "jpg": "https://cn.bing.com/th?id=OHR.WillowLake_EN-US6664756735_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SnowLeopard_EN-US3294064537_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SnowLeopard_EN-US3294064537_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SnowLeopard_EN-US3294064537_400x240.jpg"
-    },
-    {
-      "date": "2025-10-23",
-      "copyright": "A diya at the Golden Temple during Diwali, Amritsar, India (© EyeEm Mobile GmbH/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BulgariaRocks_EN-US3184562282_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BulgariaRocks_EN-US3184562282_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BulgariaRocks_EN-US3184562282_400x240.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2017,
+  "total": 2018,
   "totalPages": 49,
   "hasMore": true
 }
