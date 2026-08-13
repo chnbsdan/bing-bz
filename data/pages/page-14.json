@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-02-14",
+      "copyright": "Marine iguanas, Galápagos Islands, Ecuador (© helovi/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.LakeTyrrell_EN-US7326346900_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.LakeTyrrell_EN-US7326346900_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.LakeTyrrell_EN-US7326346900_400x240.jpg"
+    },
+    {
       "date": "2025-02-13",
       "copyright": "Art installation of umbrellas at Borough Market in London, England (© Malcolm P Chapman/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.GalapagosIguana_EN-US6976814194_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.PolarBearSwim_EN-US7610036047_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PolarBearSwim_EN-US7610036047_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.PolarBearSwim_EN-US7610036047_400x240.jpg"
-    },
-    {
-      "date": "2025-01-03",
-      "copyright": "Tasmanian snow gum and pandani plants near Lake Dobson, Mount Field National Park, Tasmania, Australia (© Whitworth Images/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.RioNewYear_EN-US7216341802_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.RioNewYear_EN-US7216341802_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.RioNewYear_EN-US7216341802_400x240.jpg"
     }
   ],
   "page": 14,
   "pageSize": 42,
-  "total": 2018,
+  "total": 2019,
   "totalPages": 49,
   "hasMore": true
 }

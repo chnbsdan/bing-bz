@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-10-11",
+      "copyright": "African elephants in Tsavo East National Park, Kenya (© Neil Bowman/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SoranoItaly_EN-US2208208147_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SoranoItaly_EN-US2208208147_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SoranoItaly_EN-US2208208147_400x240.jpg"
+    },
+    {
       "date": "2024-10-10",
       "copyright": "Jupiter's icy moon Europa (© NASA/JPL-Caltech/SETI Institute)",
       "jpg": "https://cn.bing.com/th?id=OHR.ElephantTeacher_EN-US8363933732_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SwiftcurrentLake_EN-US8272209593_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SwiftcurrentLake_EN-US8272209593_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SwiftcurrentLake_EN-US8272209593_400x240.jpg"
-    },
-    {
-      "date": "2024-08-30",
-      "copyright": "Prasat Phanom Rung temple ruins, Buriram province, Thailand (© Banjongseal324/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.KatahdinWoods_EN-US8182768375_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.KatahdinWoods_EN-US8182768375_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.KatahdinWoods_EN-US8182768375_400x240.jpg"
     }
   ],
   "page": 17,
   "pageSize": 42,
-  "total": 2018,
+  "total": 2019,
   "totalPages": 49,
   "hasMore": true
 }

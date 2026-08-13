@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-10-24",
+      "copyright": "Belogradchik Rocks, Bulgaria (© EvaL Miko/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SnowLeopard_EN-US3294064537_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SnowLeopard_EN-US3294064537_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SnowLeopard_EN-US3294064537_400x240.jpg"
+    },
+    {
       "date": "2025-10-23",
       "copyright": "A diya at the Golden Temple during Diwali, Amritsar, India (© EyeEm Mobile GmbH/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BulgariaRocks_EN-US3184562282_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SpinnerDolphins_EN-US8860882818_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SpinnerDolphins_EN-US8860882818_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SpinnerDolphins_EN-US8860882818_400x240.jpg"
-    },
-    {
-      "date": "2025-09-12",
-      "copyright": "Hay bales, North Yorkshire, England (© Nick Brundle Photography/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LibertyManhattan_EN-US8781721086_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LibertyManhattan_EN-US8781721086_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.LibertyManhattan_EN-US8781721086_400x240.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2018,
+  "total": 2019,
   "totalPages": 49,
   "hasMore": true
 }

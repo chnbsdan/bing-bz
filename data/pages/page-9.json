@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-09-12",
+      "copyright": "Hay bales, North Yorkshire, England (© Nick Brundle Photography/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.LibertyManhattan_EN-US8781721086_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.LibertyManhattan_EN-US8781721086_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.LibertyManhattan_EN-US8781721086_400x240.jpg"
+    },
+    {
       "date": "2025-09-11",
       "copyright": "A female Eurasian red squirrel carrying moss, Switzerland (© Jean-Luc and Francoise Ziegler/Minden Pictures)",
       "jpg": "https://cn.bing.com/th?id=OHR.YorkshireHay_EN-US8523120193_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.EdinburghFringe_EN-US5923216873_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.EdinburghFringe_EN-US5923216873_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.EdinburghFringe_EN-US5923216873_400x240.jpg"
-    },
-    {
-      "date": "2025-08-01",
-      "copyright": "'Beyond Walls' land-art installation by Saype at Expo 2020 Dubai, United Arab Emirates (© VALENTIN FLAURAUD/EPA-EFE/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BabyLemur_EN-US9264861498_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BabyLemur_EN-US9264861498_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BabyLemur_EN-US9264861498_400x240.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 2018,
+  "total": 2019,
   "totalPages": 49,
   "hasMore": true
 }

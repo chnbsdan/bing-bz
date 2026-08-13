@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-08-14",
+      "copyright": "扎克舒夫附近的野生动物通道，波兰 (© bbsferrari/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.WildlifeCrossingPoland_ZH-CN9439167246_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.WildlifeCrossingPoland_ZH-CN9439167246_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.WildlifeCrossingPoland_ZH-CN9439167246_400x240.jpg"
+    },
+    {
       "date": "2026-08-13",
       "copyright": "泰德天文台上空的英仙座流星，加那利群岛，西班牙 (© Westend61/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.PerseidasTenerife_ZH-CN8520379683_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.LibertyHall_EN-US2562041614_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.LibertyHall_EN-US2562041614_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.LibertyHall_EN-US2562041614_400x240.jpg"
-    },
-    {
-      "date": "2026-07-03",
-      "copyright": "Ceiling of the Temple of Esna, Egypt (© Nick Brundle Photography/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.FirefliesJapan_EN-US2315956275_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.FirefliesJapan_EN-US2315956275_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.FirefliesJapan_EN-US2315956275_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2018,
+  "total": 2019,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-06-20",
+      "copyright": "Asian swallowtail butterfly on a red spider lily (© lzh/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.TexasCapitol_EN-US1992205396_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.TexasCapitol_EN-US1992205396_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.TexasCapitol_EN-US1992205396_400x240.jpg"
+    },
+    {
       "date": "2025-06-19",
       "copyright": "Maritime forest in Cumberland Island National Seashore, Georgia (© Chris Moore/TANDEM Stills + Motion)",
       "jpg": "https://cn.bing.com/th?id=OHR.AsianSwallowtail_EN-US1924189362_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.CuteChameleon_EN-US6483346105_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.CuteChameleon_EN-US6483346105_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.CuteChameleon_EN-US6483346105_400x240.jpg"
-    },
-    {
-      "date": "2025-05-09",
-      "copyright": "Dunluce Castle, County Antrim, Northern Ireland (© DieterMeyrl/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.RhyoliteDonkeys_EN-US6439068828_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.RhyoliteDonkeys_EN-US6439068828_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.RhyoliteDonkeys_EN-US6439068828_400x240.jpg"
     }
   ],
   "page": 11,
   "pageSize": 42,
-  "total": 2018,
+  "total": 2019,
   "totalPages": 49,
   "hasMore": true
 }

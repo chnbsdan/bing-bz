@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-07-03",
+      "copyright": "Ceiling of the Temple of Esna, Egypt (© Nick Brundle Photography/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FirefliesJapan_EN-US2315956275_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FirefliesJapan_EN-US2315956275_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.FirefliesJapan_EN-US2315956275_400x240.jpg"
+    },
+    {
       "date": "2026-07-02",
       "copyright": "Dungeon Provincial Park, Newfoundland and Labrador, Canada (© Kaitlyn McLachlan/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.TempleEsna_EN-US1999215513_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ThreeTurtlesButterflies_EN-US0786859772_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ThreeTurtlesButterflies_EN-US0786859772_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ThreeTurtlesButterflies_EN-US0786859772_400x240.jpg"
-    },
-    {
-      "date": "2026-05-22",
-      "copyright": "Tea terraces in Sichuan Province, China (© lzf/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.KauehiAtollLagoon_EN-US6299031230_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.KauehiAtollLagoon_EN-US6299031230_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.KauehiAtollLagoon_EN-US6299031230_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2018,
+  "total": 2019,
   "totalPages": 49,
   "hasMore": true
 }
