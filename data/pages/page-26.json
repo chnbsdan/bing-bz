@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-09-30",
+      "copyright": "Cottonwood trees and red sandstone in Coyote Gulch, Glen Canyon National Recreation Area, Utah (© Stephen Matera/Tandem Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FraserRiverBC_EN-US1696932265_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FraserRiverBC_EN-US1696932265_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.FraserRiverBC_EN-US1696932265_400x240.jpg"
+    },
+    {
       "date": "2023-09-29",
       "copyright": "Southern white rhinoceros males, Shamwari Private Game Reserve, South Africa (© David Silverman/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.CottonwoodCanyon_EN-US1573845041_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.PerseidsOregon_EN-US9307597393_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PerseidsOregon_EN-US9307597393_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.PerseidsOregon_EN-US9307597393_400x240.jpg"
-    },
-    {
-      "date": "2023-08-19",
-      "copyright": "'Gateway Pool' art installation at Jupiter Artland sculpture park, Edinburgh, Scotland (© Owen Humphreys/PA Images/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ThreeElephants_EN-US3930300492_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ThreeElephants_EN-US3930300492_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ThreeElephants_EN-US3930300492_400x240.jpg"
     }
   ],
   "page": 26,
   "pageSize": 42,
-  "total": 2019,
+  "total": 2020,
   "totalPages": 49,
   "hasMore": true
 }

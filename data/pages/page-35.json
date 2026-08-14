@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-09-17",
+      "copyright": "Red squirrel carrying a mushroom (© Michael Quinton/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MuseudoAmanha_EN-US9576177041_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MuseudoAmanha_EN-US9576177041_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.MuseudoAmanha_EN-US9576177041_400x240.jpg"
+    },
+    {
       "date": "2022-09-16",
       "copyright": "Labor Day parade in 1934, Gastonia, North Carolina (© Bettmann/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.SquirrelMushroom_EN-US8955570535_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.LongsPeak_EN-US4189093342_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.LongsPeak_EN-US4189093342_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.LongsPeak_EN-US4189093342_400x240.jpg"
-    },
-    {
-      "date": "2022-08-06",
-      "copyright": "Mangrove forest in the Saloum Delta National Park, Senegal (© mariusz_prusaczyk/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.NabateanTomb_EN-US4126304993_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.NabateanTomb_EN-US4126304993_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.NabateanTomb_EN-US4126304993_400x240.jpg"
     }
   ],
   "page": 35,
   "pageSize": 42,
-  "total": 2019,
+  "total": 2020,
   "totalPages": 49,
   "hasMore": true
 }

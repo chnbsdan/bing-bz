@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-04-11",
+      "copyright": "Two young red foxes at Karula National Park, Estonia (© Sven Zacek/Nature Picture Library)",
+      "jpg": "https://cn.bing.com/th?id=OHR.PlayaPapagayo_EN-US7775494888_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.PlayaPapagayo_EN-US7775494888_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.PlayaPapagayo_EN-US7775494888_400x240.jpg"
+    },
+    {
       "date": "2026-04-10",
       "copyright": "Sgwd yr Eira waterfall, Bannau Brycheiniog National Park, Wales (© Guy Edwardes/Nature Picture Library)",
       "jpg": "https://cn.bing.com/th?id=OHR.FoxSiblings_EN-US7533678992_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SuffragettesNY_EN-US2900175138_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SuffragettesNY_EN-US2900175138_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SuffragettesNY_EN-US2900175138_400x240.jpg"
-    },
-    {
-      "date": "2026-02-28",
-      "copyright": "Polar bear cub walking across pack ice, Arctic National Wildlife Refuge, Alaska (© Steven Kazlowski/naturepl.com)",
-      "jpg": "https://cn.bing.com/th?id=OHR.OloupenaFalls_EN-US2862358887_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.OloupenaFalls_EN-US2862358887_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.OloupenaFalls_EN-US2862358887_400x240.jpg"
     }
   ],
   "page": 4,
   "pageSize": 42,
-  "total": 2019,
+  "total": 2020,
   "totalPages": 49,
   "hasMore": true
 }

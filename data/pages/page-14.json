@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-02-15",
+      "copyright": "Lake Tyrrell, Victoria, Australia (© Monica Bertolazzi/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.PenguinLove_EN-US7515315710_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.PenguinLove_EN-US7515315710_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.PenguinLove_EN-US7515315710_400x240.jpg"
+    },
+    {
       "date": "2025-02-14",
       "copyright": "Marine iguanas, Galápagos Islands, Ecuador (© helovi/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.LakeTyrrell_EN-US7326346900_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ArdezSwitzerland_EN-US8405268165_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ArdezSwitzerland_EN-US8405268165_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ArdezSwitzerland_EN-US8405268165_400x240.jpg"
-    },
-    {
-      "date": "2025-01-04",
-      "copyright": "New Year's Eve fireworks over Copacabana Beach, Rio de Janeiro, Brazil (© Wagner Meier/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.PolarBearSwim_EN-US7610036047_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.PolarBearSwim_EN-US7610036047_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.PolarBearSwim_EN-US7610036047_400x240.jpg"
     }
   ],
   "page": 14,
   "pageSize": 42,
-  "total": 2019,
+  "total": 2020,
   "totalPages": 49,
   "hasMore": true
 }

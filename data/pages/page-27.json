@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-08-19",
+      "copyright": "'Gateway Pool' art installation at Jupiter Artland sculpture park, Edinburgh, Scotland (© Owen Humphreys/PA Images/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ThreeElephants_EN-US3930300492_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ThreeElephants_EN-US3930300492_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ThreeElephants_EN-US3930300492_400x240.jpg"
+    },
+    {
       "date": "2023-08-18",
       "copyright": "A lion in Maasai Mara, Kenya (© Scott Davis/Tandem Stills + Motion)",
       "jpg": "https://cn.bing.com/th?id=OHR.JupiterArtland_EN-US8317170258_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.HalfwayBoats_EN-US9913306071_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.HalfwayBoats_EN-US9913306071_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.HalfwayBoats_EN-US9913306071_400x240.jpg"
-    },
-    {
-      "date": "2023-07-08",
-      "copyright": "Brown bear mother and cub, Lake Clark National Park and Preserve, Alaska (© Carlos Carreno/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.PelotonPont_EN-US1487303209_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.PelotonPont_EN-US1487303209_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.PelotonPont_EN-US1487303209_400x240.jpg"
     }
   ],
   "page": 27,
   "pageSize": 42,
-  "total": 2019,
+  "total": 2020,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-08-02",
+      "copyright": "Ring-tailed lemur infant playing with its own tail, Madagascar (© Andy Rouse/Nature Picture Library)",
+      "jpg": "https://cn.bing.com/th?id=OHR.EdinburghFringe_EN-US5923216873_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.EdinburghFringe_EN-US5923216873_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.EdinburghFringe_EN-US5923216873_400x240.jpg"
+    },
+    {
       "date": "2025-08-01",
       "copyright": "'Beyond Walls' land-art installation by Saype at Expo 2020 Dubai, United Arab Emirates (© VALENTIN FLAURAUD/EPA-EFE/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.BabyLemur_EN-US9264861498_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SerengetiGiraffe_EN-US2127484447_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SerengetiGiraffe_EN-US2127484447_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SerengetiGiraffe_EN-US2127484447_400x240.jpg"
-    },
-    {
-      "date": "2025-06-21",
-      "copyright": "Texas State Capitol in Austin (© joe daniel price/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.IcelandSolstice_EN-US2057542769_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.IcelandSolstice_EN-US2057542769_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.IcelandSolstice_EN-US2057542769_400x240.jpg"
     }
   ],
   "page": 10,
   "pageSize": 42,
-  "total": 2019,
+  "total": 2020,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-01-04",
+      "copyright": "New Year's Eve fireworks over Copacabana Beach, Rio de Janeiro, Brazil (© Wagner Meier/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.PolarBearSwim_EN-US7610036047_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.PolarBearSwim_EN-US7610036047_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.PolarBearSwim_EN-US7610036047_400x240.jpg"
+    },
+    {
       "date": "2025-01-03",
       "copyright": "Tasmanian snow gum and pandani plants near Lake Dobson, Mount Field National Park, Tasmania, Australia (© Whitworth Images/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.RioNewYear_EN-US7216341802_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BeyondSaype_EN-US4398054405_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BeyondSaype_EN-US4398054405_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BeyondSaype_EN-US4398054405_400x240.jpg"
-    },
-    {
-      "date": "2024-11-23",
-      "copyright": "Porthcawl Lighthouse, Wales (© Leighton Collins/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.TasmansArch_EN-US4274981499_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.TasmansArch_EN-US4274981499_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.TasmansArch_EN-US4274981499_400x240.jpg"
     }
   ],
   "page": 15,
   "pageSize": 42,
-  "total": 2019,
+  "total": 2020,
   "totalPages": 49,
   "hasMore": true
 }

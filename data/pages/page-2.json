@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-07-04",
+      "copyright": "Fireflies glowing above a stream, Okayama Prefecture, Japan (© tdub303/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.LibertyHall_EN-US2562041614_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.LibertyHall_EN-US2562041614_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.LibertyHall_EN-US2562041614_400x240.jpg"
+    },
+    {
       "date": "2026-07-03",
       "copyright": "Ceiling of the Temple of Esna, Egypt (© Nick Brundle Photography/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.FirefliesJapan_EN-US2315956275_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.DolomitesPark_EN-US0828472809_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.DolomitesPark_EN-US0828472809_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.DolomitesPark_EN-US0828472809_400x240.jpg"
-    },
-    {
-      "date": "2026-05-23",
-      "copyright": "Kauehi Atoll, Tuamotu Archipelago, French Polynesia (© WaterFrame_dpr/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ThreeTurtlesButterflies_EN-US0786859772_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ThreeTurtlesButterflies_EN-US0786859772_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ThreeTurtlesButterflies_EN-US0786859772_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2019,
+  "total": 2020,
   "totalPages": 49,
   "hasMore": true
 }
