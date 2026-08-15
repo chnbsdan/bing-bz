@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-08-03",
+      "copyright": "Royal Mile, Edinburgh, Scotland (© MEDITERRANEAN/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FruitaPetroglyphs_EN-US8712481828_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FruitaPetroglyphs_EN-US8712481828_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.FruitaPetroglyphs_EN-US8712481828_400x240.jpg"
+    },
+    {
       "date": "2025-08-02",
       "copyright": "Ring-tailed lemur infant playing with its own tail, Madagascar (© Andy Rouse/Nature Picture Library)",
       "jpg": "https://cn.bing.com/th?id=OHR.EdinburghFringe_EN-US5923216873_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AmazonEcuador_EN-US2195278379_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AmazonEcuador_EN-US2195278379_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AmazonEcuador_EN-US2195278379_400x240.jpg"
-    },
-    {
-      "date": "2025-06-22",
-      "copyright": "Seljalandsfoss waterfall at sunset, Iceland (© Tom Mackie/AWL/plainpicture)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SerengetiGiraffe_EN-US2127484447_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SerengetiGiraffe_EN-US2127484447_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SerengetiGiraffe_EN-US2127484447_400x240.jpg"
     }
   ],
   "page": 10,
   "pageSize": 42,
-  "total": 2020,
+  "total": 2021,
   "totalPages": 49,
   "hasMore": true
 }

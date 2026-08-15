@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-08-20",
+      "copyright": "Elephant family in Amboseli National Park, Kenya (© Ibrahim Suha Derbent/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.PerseidsOregon_EN-US9307597393_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.PerseidsOregon_EN-US9307597393_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.PerseidsOregon_EN-US9307597393_400x240.jpg"
+    },
+    {
       "date": "2023-08-19",
       "copyright": "'Gateway Pool' art installation at Jupiter Artland sculpture park, Edinburgh, Scotland (© Owen Humphreys/PA Images/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.ThreeElephants_EN-US3930300492_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.CoyoteBanff_EN-US9716853560_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.CoyoteBanff_EN-US9716853560_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.CoyoteBanff_EN-US9716853560_400x240.jpg"
-    },
-    {
-      "date": "2023-07-09",
-      "copyright": "Tour de France cyclists crossing the Pont du Gard, France (© Gonzalo Fuentes/Reuters)",
-      "jpg": "https://cn.bing.com/th?id=OHR.HalfwayBoats_EN-US9913306071_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.HalfwayBoats_EN-US9913306071_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.HalfwayBoats_EN-US9913306071_400x240.jpg"
     }
   ],
   "page": 27,
   "pageSize": 42,
-  "total": 2020,
+  "total": 2021,
   "totalPages": 49,
   "hasMore": true
 }

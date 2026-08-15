@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-07-05",
+      "copyright": "Liberty Bell and Independence Hall, Independence National Historical Park, Philadelphia, Pennsylvania (© f11photo/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.LavenderRows_EN-US2831933520_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.LavenderRows_EN-US2831933520_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.LavenderRows_EN-US2831933520_400x240.jpg"
+    },
+    {
       "date": "2026-07-04",
       "copyright": "Fireflies glowing above a stream, Okayama Prefecture, Japan (© tdub303/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.LibertyHall_EN-US2562041614_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ArlingtonAmphitheater_EN-US0872772906_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ArlingtonAmphitheater_EN-US0872772906_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ArlingtonAmphitheater_EN-US0872772906_400x240.jpg"
-    },
-    {
-      "date": "2026-05-24",
-      "copyright": "Turtles with butterflies (© Patrick Gallet/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.DolomitesPark_EN-US0828472809_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.DolomitesPark_EN-US0828472809_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.DolomitesPark_EN-US0828472809_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2020,
+  "total": 2021,
   "totalPages": 49,
   "hasMore": true
 }

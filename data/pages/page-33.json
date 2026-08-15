@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-12-11",
+      "copyright": "The Old Town of Rovinj, Croatia (© trabantos/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AntarcticaDay_EN-US9921573438_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AntarcticaDay_EN-US9921573438_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AntarcticaDay_EN-US9921573438_400x240.jpg"
+    },
+    {
       "date": "2022-12-10",
       "copyright": "Great blue herons building a nest in Wakodahatchee Wetlands, Delray Beach, Florida (© Imagebroker/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.RovinjCroatia_EN-US9834093615_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.GeorgiaCypress_EN-US2966839861_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.GeorgiaCypress_EN-US2966839861_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.GeorgiaCypress_EN-US2966839861_400x240.jpg"
-    },
-    {
-      "date": "2022-10-30",
-      "copyright": "Thuringian Forest in autumn with Wartburg Castle, Germany (© ezypix/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SlothDay_EN-US8418438094_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SlothDay_EN-US8418438094_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SlothDay_EN-US8418438094_400x240.jpg"
     }
   ],
   "page": 33,
   "pageSize": 42,
-  "total": 2020,
+  "total": 2021,
   "totalPages": 49,
   "hasMore": true
 }

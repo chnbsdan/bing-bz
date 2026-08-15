@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-06-09",
+      "copyright": "Flowers blooming in a garden, Alaska (© jet 67/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.CopenhagenBicycles_EN-US6431027482_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.CopenhagenBicycles_EN-US6431027482_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.CopenhagenBicycles_EN-US6431027482_400x240.jpg"
+    },
+    {
       "date": "2024-06-08",
       "copyright": "San Francisco City Hall lit up in rainbow lights for Pride, California (© Josh Edelson/AFP via Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.GardenWeek_EN-US6333815527_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.EarthDayTurtle_EN-US4769423754_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.EarthDayTurtle_EN-US4769423754_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.EarthDayTurtle_EN-US4769423754_400x240.jpg"
-    },
-    {
-      "date": "2024-04-28",
-      "copyright": "Grand Prismatic Spring at sunrise, Yellowstone National Park, Wyoming (© XIN WANG/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.CadesCove_EN-US4359486356_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.CadesCove_EN-US4359486356_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.CadesCove_EN-US4359486356_400x240.jpg"
     }
   ],
   "page": 20,
   "pageSize": 42,
-  "total": 2020,
+  "total": 2021,
   "totalPages": 49,
   "hasMore": true
 }

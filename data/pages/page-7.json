@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-12-07",
+      "copyright": "Maya site of Copán, Honduras (© diegograndi/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.EvergladesSunrise_EN-US5606230133_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.EvergladesSunrise_EN-US5606230133_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.EvergladesSunrise_EN-US5606230133_400x240.jpg"
+    },
+    {
       "date": "2025-12-06",
       "copyright": "Cheetah in Maasai Mara National Reserve, Narok, Kenya (© Andy Rouse/naturepl.com)",
       "jpg": "https://cn.bing.com/th?id=OHR.CopanRuins_EN-US5517813382_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.PumpkinFarm_EN-US3773448576_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PumpkinFarm_EN-US3773448576_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.PumpkinFarm_EN-US3773448576_400x240.jpg"
-    },
-    {
-      "date": "2025-10-26",
-      "copyright": "Night view of the RMS Queen Mary, Long Beach, California (© Kit Leong/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MartimoaapaFinland_EN-US3685817058_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MartimoaapaFinland_EN-US3685817058_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MartimoaapaFinland_EN-US3685817058_400x240.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2020,
+  "total": 2021,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-09-14",
+      "copyright": "Spinner dolphin pod in the Red Sea, Marsa Alam, Egypt (© Franco Banfi/Nature Picture Library)",
+      "jpg": "https://cn.bing.com/th?id=OHR.PointReyesSeashore_EN-US8949381326_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.PointReyesSeashore_EN-US8949381326_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.PointReyesSeashore_EN-US8949381326_400x240.jpg"
+    },
+    {
       "date": "2025-09-13",
       "copyright": "Statue of Liberty and Lower Manhattan, New York City (© Tetra Images/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.SpinnerDolphins_EN-US8860882818_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.HappySunflower_EN-US8791544241_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.HappySunflower_EN-US8791544241_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.HappySunflower_EN-US8791544241_400x240.jpg"
-    },
-    {
-      "date": "2025-08-03",
-      "copyright": "Royal Mile, Edinburgh, Scotland (© MEDITERRANEAN/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.FruitaPetroglyphs_EN-US8712481828_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.FruitaPetroglyphs_EN-US8712481828_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.FruitaPetroglyphs_EN-US8712481828_400x240.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 2020,
+  "total": 2021,
   "totalPages": 49,
   "hasMore": true
 }

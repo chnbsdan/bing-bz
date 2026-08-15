@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2021-10-17",
+      "copyright": "哈特谢普苏特女王神庙鸟瞰图，埃及卢克索古城 (© Ratnakorn Piyasirisorost/Moment/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.Whakarewarewa_ZH-CN4957778498_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.Whakarewarewa_ZH-CN4957778498_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.Whakarewarewa_ZH-CN4957778498_400x240.jpg"
+    },
+    {
       "date": "2021-10-16",
       "copyright": "世界著名气泡酒产地普罗塞克山丘,意大利威尼托 (© Olimpio Fantuz/Sime/eStock Photo)",
       "jpg": "https://cn.bing.com/th?id=OHR.Hatshepsut_ZH-CN4516192627_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.GCVenice_ZH-CN0993336331_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.GCVenice_ZH-CN0993336331_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.GCVenice_ZH-CN0993336331_400x240.jpg"
-    },
-    {
-      "date": "2021-09-05",
-      "copyright": "比斯蒂荒野上的“外星孵化场”，新墨西哥州 (© Ian Shive/Tandem Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AnnasHummingbird_ZH-CN0832228710_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AnnasHummingbird_ZH-CN0832228710_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AnnasHummingbird_ZH-CN0832228710_400x240.jpg"
     }
   ],
   "page": 43,
   "pageSize": 42,
-  "total": 2020,
+  "total": 2021,
   "totalPages": 49,
   "hasMore": true
 }
