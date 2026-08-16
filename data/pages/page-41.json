@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-01-10",
+      "copyright": "正在晾晒的大米，孟加拉国达卡 (© Amazing Aerial Agency/Offset by Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SkiTouring_ZH-CN0237169285_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SkiTouring_ZH-CN0237169285_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SkiTouring_ZH-CN0237169285_400x240.jpg"
+    },
+    {
       "date": "2022-01-09",
       "copyright": "黄石国家公园的美洲野牛，美国怀俄明州 (© Steve Gettle/Minden Pictures)",
       "jpg": "https://cn.bing.com/th?id=OHR.RiceBangladesh_ZH-CN0196473460_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ElephantGiving_ZH-CN9743352473_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ElephantGiving_ZH-CN9743352473_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ElephantGiving_ZH-CN9743352473_400x240.jpg"
-    },
-    {
-      "date": "2021-11-29",
-      "copyright": "古老的水青冈树，英国北安普顿郡 (© Andrew Baskott/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.RainbowMountain_ZH-CN9670076890_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.RainbowMountain_ZH-CN9670076890_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.RainbowMountain_ZH-CN9670076890_400x240.jpg"
     }
   ],
   "page": 41,
   "pageSize": 42,
-  "total": 2021,
+  "total": 2022,
   "totalPages": 49,
   "hasMore": true
 }

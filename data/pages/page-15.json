@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-01-06",
+      "copyright": "Star trails over Ardez, Graubunden, Switzerland (© Roberto Moiola/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.TolkienOxford_EN-US6755564963_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.TolkienOxford_EN-US6755564963_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.TolkienOxford_EN-US6755564963_400x240.jpg"
+    },
+    {
       "date": "2025-01-05",
       "copyright": "Polar bears at play in the Arctic (© Ondrej Prosicky/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.ArdezSwitzerland_EN-US8405268165_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ZafraCastle_EN-US5032917939_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ZafraCastle_EN-US5032917939_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ZafraCastle_EN-US5032917939_400x240.jpg"
-    },
-    {
-      "date": "2024-11-25",
-      "copyright": "Giant land art painting 'Beyond Crisis' by Saype, Leysin, Switzerland (© VALENTIN FLAURAUD/EPA-EFE/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LionCubs_EN-US4742616367_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LionCubs_EN-US4742616367_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.LionCubs_EN-US4742616367_400x240.jpg"
     }
   ],
   "page": 15,
   "pageSize": 42,
-  "total": 2021,
+  "total": 2022,
   "totalPages": 49,
   "hasMore": true
 }

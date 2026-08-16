@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-01-19",
+      "copyright": "Basilica of San Francesco di Paola, Naples, Italy (© javarman3/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.WhiteSandsNM_EN-US0565482616_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.WhiteSandsNM_EN-US0565482616_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.WhiteSandsNM_EN-US0565482616_400x240.jpg"
+    },
+    {
       "date": "2026-01-18",
       "copyright": "Leopard at Etosha National Park, Namibia (© Norbert Achtelik/Cavan Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.NaplesBasilica_EN-US0483177548_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ComoChristmas_EN-US5867954466_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ComoChristmas_EN-US5867954466_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ComoChristmas_EN-US5867954466_400x240.jpg"
-    },
-    {
-      "date": "2025-12-08",
-      "copyright": "Spider webs in Everglades National Park, Florida (© Troy Harrison/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.PearlHarborDay_EN-US5774515492_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.PearlHarborDay_EN-US5774515492_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.PearlHarborDay_EN-US5774515492_400x240.jpg"
     }
   ],
   "page": 6,
   "pageSize": 42,
-  "total": 2021,
+  "total": 2022,
   "totalPages": 49,
   "hasMore": true
 }

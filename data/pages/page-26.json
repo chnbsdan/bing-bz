@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-10-02",
+      "copyright": "Sea otter in Bartlett Cove, Glacier Bay National Park and Preserve, Alaska (© Andrew Peacock/Tandem Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.VeniceSkatePark_EN-US1972530060_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.VeniceSkatePark_EN-US1972530060_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.VeniceSkatePark_EN-US1972530060_400x240.jpg"
+    },
+    {
       "date": "2023-10-01",
       "copyright": "The Fraser River near Mount Robson, British Columbia, Canada (© phototropic/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.GlacierBayOtter_EN-US1818492105_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.TaorminaSquare_EN-US9553838481_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.TaorminaSquare_EN-US9553838481_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.TaorminaSquare_EN-US9553838481_400x240.jpg"
-    },
-    {
-      "date": "2023-08-21",
-      "copyright": "Perseid meteor shower, Cottonwood Canyon State Park, Oregon (© Joshua Meador/Tandem Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.GeckoLeaf_EN-US4138920498_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.GeckoLeaf_EN-US4138920498_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.GeckoLeaf_EN-US4138920498_400x240.jpg"
     }
   ],
   "page": 26,
   "pageSize": 42,
-  "total": 2021,
+  "total": 2022,
   "totalPages": 49,
   "hasMore": true
 }

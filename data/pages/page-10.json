@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-08-04",
+      "copyright": "Petroglyphs near Fruita in Capitol Reef National Park, Utah (© Nicolas VINCENT/Adobe Stock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.HappySunflower_EN-US8791544241_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.HappySunflower_EN-US8791544241_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.HappySunflower_EN-US8791544241_400x240.jpg"
+    },
+    {
       "date": "2025-08-03",
       "copyright": "Royal Mile, Edinburgh, Scotland (© MEDITERRANEAN/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.FruitaPetroglyphs_EN-US8712481828_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.DresdenElbe_EN-US2259441179_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.DresdenElbe_EN-US2259441179_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.DresdenElbe_EN-US2259441179_400x240.jpg"
-    },
-    {
-      "date": "2025-06-23",
-      "copyright": "Masai giraffe mother grooming her calf in the Serengeti, Tanzania (© Alberto Cassani/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AmazonEcuador_EN-US2195278379_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AmazonEcuador_EN-US2195278379_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AmazonEcuador_EN-US2195278379_400x240.jpg"
     }
   ],
   "page": 10,
   "pageSize": 42,
-  "total": 2021,
+  "total": 2022,
   "totalPages": 49,
   "hasMore": true
 }

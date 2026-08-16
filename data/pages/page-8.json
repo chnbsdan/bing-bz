@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-10-27",
+      "copyright": "Aerial view of peatland in Martimoaapa Mire Reserve, Finland (© romikatarina/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.PumpkinFarm_EN-US3773448576_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.PumpkinFarm_EN-US3773448576_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.PumpkinFarm_EN-US3773448576_400x240.jpg"
+    },
+    {
       "date": "2025-10-26",
       "copyright": "Night view of the RMS Queen Mary, Long Beach, California (© Kit Leong/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.MartimoaapaFinland_EN-US3685817058_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.DallasLegorreta_EN-US9050675226_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.DallasLegorreta_EN-US9050675226_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.DallasLegorreta_EN-US9050675226_400x240.jpg"
-    },
-    {
-      "date": "2025-09-15",
-      "copyright": "Chimney Rock, Point Reyes National Seashore, California (© Enrique Aguirre Aves/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.HohWaterfall_EN-US9003533736_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.HohWaterfall_EN-US9003533736_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.HohWaterfall_EN-US9003533736_400x240.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2021,
+  "total": 2022,
   "totalPages": 49,
   "hasMore": true
 }
