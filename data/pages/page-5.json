@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-03-03",
+      "copyright": "Harbor and longtail boats at Ko Samui, Thailand (© Foto2rich/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BabyElephant_EN-US3103670102_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BabyElephant_EN-US3103670102_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BabyElephant_EN-US3103670102_400x240.jpg"
+    },
+    {
       "date": "2026-03-02",
       "copyright": "Suffragette celebrations, August 27, 1920, New York City (© Keystone/Hulton Archive/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.SamuiThailand_EN-US3008233136_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.IciclePenguin_EN-US0727591285_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.IciclePenguin_EN-US0727591285_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.IciclePenguin_EN-US0727591285_400x240.jpg"
-    },
-    {
-      "date": "2026-01-20",
-      "copyright": "White Sands National Park, New Mexico (© Francesco Carucci/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MLKSunrise_EN-US0641684404_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MLKSunrise_EN-US0641684404_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MLKSunrise_EN-US0641684404_400x240.jpg"
     }
   ],
   "page": 5,
   "pageSize": 42,
-  "total": 2022,
+  "total": 2023,
   "totalPages": 49,
   "hasMore": true
 }

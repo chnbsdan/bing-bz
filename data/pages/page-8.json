@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-10-28",
+      "copyright": "Pumpkin farm in North Carolina (© Matthew H Irvin/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AfricanRaven_EN-US4057369898_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AfricanRaven_EN-US4057369898_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AfricanRaven_EN-US4057369898_400x240.jpg"
+    },
+    {
       "date": "2025-10-27",
       "copyright": "Aerial view of peatland in Martimoaapa Mire Reserve, Finland (© romikatarina/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.PumpkinFarm_EN-US3773448576_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.OzoneEarth_EN-US9728527733_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.OzoneEarth_EN-US9728527733_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.OzoneEarth_EN-US9728527733_400x240.jpg"
-    },
-    {
-      "date": "2025-09-16",
-      "copyright": "A waterfall in Olympic National Park, Washington (© Chris Moore/TANDEM Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.DallasLegorreta_EN-US9050675226_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.DallasLegorreta_EN-US9050675226_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.DallasLegorreta_EN-US9050675226_400x240.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2022,
+  "total": 2023,
   "totalPages": 49,
   "hasMore": true
 }

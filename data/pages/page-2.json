@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-07-07",
+      "copyright": "Syracuse at sunset, Sicily, Italy (© Balate Dorin/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MountainToucanOrchids_EN-US3433249651_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MountainToucanOrchids_EN-US3433249651_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.MountainToucanOrchids_EN-US3433249651_400x240.jpg"
+    },
+    {
       "date": "2026-07-06",
       "copyright": "Lavender rows, Plateau de Valensole, Provence, France (© Robert Harding/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.SyracuseItaly_EN-US3071727282_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.OtterDay_EN-US0973120905_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.OtterDay_EN-US0973120905_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.OtterDay_EN-US0973120905_400x240.jpg"
-    },
-    {
-      "date": "2026-05-26",
-      "copyright": "Memorial Amphitheater at Arlington National Cemetery, Arlington, Virginia (© idesignimages/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LupineBloom_EN-US0920778137_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LupineBloom_EN-US0920778137_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.LupineBloom_EN-US0920778137_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2022,
+  "total": 2023,
   "totalPages": 49,
   "hasMore": true
 }

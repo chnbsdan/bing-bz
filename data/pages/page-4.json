@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-04-14",
+      "copyright": "Milky Way over Anza-Borrego Desert State Park, California (© Kevin Key/Slworking)/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.OcellarisClownfish_EN-US8509728179_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.OcellarisClownfish_EN-US8509728179_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.OcellarisClownfish_EN-US8509728179_400x240.jpg"
+    },
+    {
       "date": "2026-04-13",
       "copyright": "City lights streak below, taken from the International Space Station (© NASA)",
       "jpg": "https://cn.bing.com/th?id=OHR.BorregoStars_EN-US8252825773_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.RilaCrocuses_EN-US3179110237_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.RilaCrocuses_EN-US3179110237_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.RilaCrocuses_EN-US3179110237_400x240.jpg"
-    },
-    {
-      "date": "2026-03-03",
-      "copyright": "Harbor and longtail boats at Ko Samui, Thailand (© Foto2rich/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BabyElephant_EN-US3103670102_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BabyElephant_EN-US3103670102_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BabyElephant_EN-US3103670102_400x240.jpg"
     }
   ],
   "page": 4,
   "pageSize": 42,
-  "total": 2022,
+  "total": 2023,
   "totalPages": 49,
   "hasMore": true
 }
