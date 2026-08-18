@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-09-21",
+      "copyright": "Moon installation for the Mid-Autumn Festival in Kuala Lumpur, Malaysia (© Lim Huey Teng/Reuters)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SOLHalfStaff_EN-US6710129226_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SOLHalfStaff_EN-US6710129226_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SOLHalfStaff_EN-US6710129226_400x240.jpg"
+    },
+    {
       "date": "2022-09-20",
       "copyright": "Lighthouse Reef, Blue Hole Natural Monument, Belize (© Tom Till/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.KLMidAutumn_EN-US6642842911_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.LavaTube_EN-US0984183891_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.LavaTube_EN-US0984183891_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.LavaTube_EN-US0984183891_400x240.jpg"
-    },
-    {
-      "date": "2022-08-10",
-      "copyright": "Rainforest hike near Milford Sound/Piopiotahi in New Zealand (© Jim Patterson/Tandem Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.NoctilucentClouds_EN-US0838966037_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.NoctilucentClouds_EN-US0838966037_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.NoctilucentClouds_EN-US0838966037_400x240.jpg"
     }
   ],
   "page": 35,
   "pageSize": 42,
-  "total": 2023,
+  "total": 2024,
   "totalPages": 49,
   "hasMore": true
 }

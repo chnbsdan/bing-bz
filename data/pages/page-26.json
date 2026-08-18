@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-10-04",
+      "copyright": "The Via Krupp footpath on Capri island, Italy (© Mikolaj Niemczewski/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MaritimeDay_EN-US2262770680_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MaritimeDay_EN-US2262770680_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.MaritimeDay_EN-US2262770680_400x240.jpg"
+    },
+    {
       "date": "2023-10-03",
       "copyright": "Venice Skatepark at sunset, Los Angeles, California (© EXTREME-PHOTOGRAPHER/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.CapriKrupp_EN-US2044781395_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SequoiaSunlight_EN-US6214316930_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SequoiaSunlight_EN-US6214316930_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SequoiaSunlight_EN-US6214316930_400x240.jpg"
-    },
-    {
-      "date": "2023-08-23",
-      "copyright": "Piazza IX Aprile, Taormina, Sicily, Italy (© rudi1976/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.KeyWestBridge_EN-US9752501933_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.KeyWestBridge_EN-US9752501933_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.KeyWestBridge_EN-US9752501933_400x240.jpg"
     }
   ],
   "page": 26,
   "pageSize": 42,
-  "total": 2023,
+  "total": 2024,
   "totalPages": 49,
   "hasMore": true
 }

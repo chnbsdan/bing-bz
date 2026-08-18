@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-07-08",
+      "copyright": "Plate-billed mountain toucan with orchids, Ecuador (© Murray Cooper/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.LakeAtitlan_EN-US3747076006_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.LakeAtitlan_EN-US3747076006_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.LakeAtitlan_EN-US3747076006_400x240.jpg"
+    },
+    {
       "date": "2026-07-07",
       "copyright": "Syracuse at sunset, Sicily, Italy (© Balate Dorin/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MountainToucanOrchids_EN-US3433249651_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.HwaesongFortress_EN-US1012626869_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.HwaesongFortress_EN-US1012626869_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.HwaesongFortress_EN-US1012626869_400x240.jpg"
-    },
-    {
-      "date": "2026-05-27",
-      "copyright": "Lupine flowers in bloom, Northern California (© Jeffrey Lewis/Tandem Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.OtterDay_EN-US0973120905_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.OtterDay_EN-US0973120905_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.OtterDay_EN-US0973120905_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2023,
+  "total": 2024,
   "totalPages": 49,
   "hasMore": true
 }

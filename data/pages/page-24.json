@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-12-27",
+      "copyright": "Village in Val Gardena at Christmas, Dolomites, Italy (© Ingus Kruklitis/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BavarianSolstice_EN-US9111666986_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BavarianSolstice_EN-US9111666986_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BavarianSolstice_EN-US9111666986_400x240.jpg"
+    },
+    {
       "date": "2023-12-26",
       "copyright": "Christmas tree in Castle Square, Old Town, Warsaw, Poland (© Panther Media GmbH/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.ValGardenaItaly_EN-US8887980856_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BadlandsSunrise_EN-US7576048436_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BadlandsSunrise_EN-US7576048436_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BadlandsSunrise_EN-US7576048436_400x240.jpg"
-    },
-    {
-      "date": "2023-11-15",
-      "copyright": "West Indian manatee mother and baby, Three Sisters Springs, Crystal River, Florida (© Karine Aigner/Tandem Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.NorwayBirch_EN-US7497125692_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.NorwayBirch_EN-US7497125692_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.NorwayBirch_EN-US7497125692_400x240.jpg"
     }
   ],
   "page": 24,
   "pageSize": 42,
-  "total": 2023,
+  "total": 2024,
   "totalPages": 49,
   "hasMore": true
 }

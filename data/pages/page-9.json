@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-09-17",
+      "copyright": "Latino Cultural Center designed by Ricardo Legorreta, Dallas, Texas (© Ken Hurst/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.OzoneEarth_EN-US9728527733_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.OzoneEarth_EN-US9728527733_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.OzoneEarth_EN-US9728527733_400x240.jpg"
+    },
+    {
       "date": "2025-09-16",
       "copyright": "A waterfall in Olympic National Park, Washington (© Chris Moore/TANDEM Stills + Motion)",
       "jpg": "https://cn.bing.com/th?id=OHR.DallasLegorreta_EN-US9050675226_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.NaPaliKauai_EN-US7451684312_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.NaPaliKauai_EN-US7451684312_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.NaPaliKauai_EN-US7451684312_400x240.jpg"
-    },
-    {
-      "date": "2025-08-06",
-      "copyright": "Great gray owls in their nest, Finland (© imageBROKER.com/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.CaliforniaTidepool_EN-US9089576317_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.CaliforniaTidepool_EN-US9089576317_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.CaliforniaTidepool_EN-US9089576317_400x240.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 2023,
+  "total": 2024,
   "totalPages": 49,
   "hasMore": true
 }

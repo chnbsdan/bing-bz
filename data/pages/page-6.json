@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-01-21",
+      "copyright": "Washington Monument seen from Lincoln Memorial, Washington, DC (© RickSause/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.IciclePenguin_EN-US0727591285_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.IciclePenguin_EN-US0727591285_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.IciclePenguin_EN-US0727591285_400x240.jpg"
+    },
+    {
       "date": "2026-01-20",
       "copyright": "White Sands National Park, New Mexico (© Francesco Carucci/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MLKSunrise_EN-US0641684404_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.CordobaCathedral_EN-US6045311068_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.CordobaCathedral_EN-US6045311068_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.CordobaCathedral_EN-US6045311068_400x240.jpg"
-    },
-    {
-      "date": "2025-12-10",
-      "copyright": "Christmas lights in Domaso, Lake Como, Italy (© Roberto Moiola/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LlamaDay_EN-US5971354659_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LlamaDay_EN-US5971354659_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.LlamaDay_EN-US5971354659_400x240.jpg"
     }
   ],
   "page": 6,
   "pageSize": 42,
-  "total": 2023,
+  "total": 2024,
   "totalPages": 49,
   "hasMore": true
 }

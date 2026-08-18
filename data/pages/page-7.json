@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-12-10",
+      "copyright": "Christmas lights in Domaso, Lake Como, Italy (© Roberto Moiola/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.LlamaDay_EN-US5971354659_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.LlamaDay_EN-US5971354659_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.LlamaDay_EN-US5971354659_400x240.jpg"
+    },
+    {
       "date": "2025-12-09",
       "copyright": "USS Arizona Memorial, Pearl Harbor, Honolulu, Hawaii (© Jessica O. Blackwell/APFootage/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.ComoChristmas_EN-US5867954466_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.FanalForest_EN-US4405104404_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.FanalForest_EN-US4405104404_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.FanalForest_EN-US4405104404_400x240.jpg"
-    },
-    {
-      "date": "2025-10-29",
-      "copyright": "Thick-billed raven, Simien Mountains, Ethiopia (© Ignacio Yufera/FLPA/Minden Pictures)",
-      "jpg": "https://cn.bing.com/th?id=OHR.TepliceRocks_EN-US4098225022_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.TepliceRocks_EN-US4098225022_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.TepliceRocks_EN-US4098225022_400x240.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2023,
+  "total": 2024,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-04-19",
+      "copyright": "Lithuanian Easter eggs (© fotomem/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ElephantTwins_EN-US2939253051_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ElephantTwins_EN-US2939253051_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ElephantTwins_EN-US2939253051_400x240.jpg"
+    },
+    {
       "date": "2023-04-18",
       "copyright": "The Giant's Causeway, County Antrim, Northern Ireland (© Dieter Meyrl/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.LithuanianEggs_EN-US5086451033_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AtraniAmalfi_EN-US0095082556_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AtraniAmalfi_EN-US0095082556_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AtraniAmalfi_EN-US0095082556_400x240.jpg"
-    },
-    {
-      "date": "2023-03-08",
-      "copyright": "Suspension bridge in Tambopata National Reserve, Amazon Basin, Peru (© Pere Rubi/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.PolarBearFrost_EN-US9888741440_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.PolarBearFrost_EN-US9888741440_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.PolarBearFrost_EN-US9888741440_400x240.jpg"
     }
   ],
   "page": 30,
   "pageSize": 42,
-  "total": 2023,
+  "total": 2024,
   "totalPages": 49,
   "hasMore": true
 }
