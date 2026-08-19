@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-08-20",
+      "copyright": "林恩运河中浮出水面的虎鲸，奇尔卡特山脉附近，阿拉斯加州，美国 (© John Hyde/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.LynnCanalOrca_ZH-CN0719217908_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.LynnCanalOrca_ZH-CN0719217908_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.LynnCanalOrca_ZH-CN0719217908_400x240.jpg"
+    },
+    {
       "date": "2026-08-19",
       "copyright": "怀特克利夫公园，西温哥华，加拿大 (© Aolin Chen/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.WhyteCliffP_ZH-CN0573407830_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.VictoriaBeach_EN-US7607379912_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.VictoriaBeach_EN-US7607379912_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.VictoriaBeach_EN-US7607379912_400x240.jpg"
-    },
-    {
-      "date": "2026-07-09",
-      "copyright": "Sunrise at Lake Atitlán, Guatemala (© shayes17/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SapaVietnam_EN-US4008171614_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SapaVietnam_EN-US4008171614_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SapaVietnam_EN-US4008171614_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2024,
+  "total": 2025,
   "totalPages": 49,
   "hasMore": true
 }

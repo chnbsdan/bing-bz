@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-09-22",
+      "copyright": "Statue of Liberty seen behind US flags at half-staff for the anniversary of September 11 in 2014, New York City (© Adam Parent/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.Aracari_EN-US6920359857_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.Aracari_EN-US6920359857_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.Aracari_EN-US6920359857_400x240.jpg"
+    },
+    {
       "date": "2022-09-21",
       "copyright": "Moon installation for the Mid-Autumn Festival in Kuala Lumpur, Malaysia (© Lim Huey Teng/Reuters)",
       "jpg": "https://cn.bing.com/th?id=OHR.SOLHalfStaff_EN-US6710129226_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.HickmanBridge_EN-US1087333208_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.HickmanBridge_EN-US1087333208_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.HickmanBridge_EN-US1087333208_400x240.jpg"
-    },
-    {
-      "date": "2022-08-11",
-      "copyright": "Noctilucent clouds in Lithuania (© ljphoto7/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LavaTube_EN-US0984183891_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LavaTube_EN-US0984183891_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.LavaTube_EN-US0984183891_400x240.jpg"
     }
   ],
   "page": 35,
   "pageSize": 42,
-  "total": 2024,
+  "total": 2025,
   "totalPages": 49,
   "hasMore": true
 }

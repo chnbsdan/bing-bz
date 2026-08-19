@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-12-15",
+      "copyright": "Elephants near Mount Kilimanjaro, Amboseli National Park, Kenya (© Diana Robinson Photography/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.StNick_EN-US1370158441_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.StNick_EN-US1370158441_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.StNick_EN-US1370158441_400x240.jpg"
+    },
+    {
       "date": "2022-12-14",
       "copyright": "Miami Beach, Florida (© Matteo Colombo/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.KilimanjaroElephants_EN-US1249382486_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.OrcusMouth_EN-US5010597701_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.OrcusMouth_EN-US5010597701_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.OrcusMouth_EN-US5010597701_400x240.jpg"
-    },
-    {
-      "date": "2022-11-03",
-      "copyright": "Mute swan in Valkenhorst Nature Reserve, near Valkenswaard, the Netherlands (© David Pattyn/Minden Pictures)",
-      "jpg": "https://cn.bing.com/th?id=OHR.GuwahatiDiwali_EN-US3454357880_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.GuwahatiDiwali_EN-US3454357880_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.GuwahatiDiwali_EN-US3454357880_400x240.jpg"
     }
   ],
   "page": 33,
   "pageSize": 42,
-  "total": 2024,
+  "total": 2025,
   "totalPages": 49,
   "hasMore": true
 }

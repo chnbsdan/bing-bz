@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-08-07",
+      "copyright": "Tide pools in La Jolla, California (© Andrew Shoemaker/DanitaDelimont.com)",
+      "jpg": "https://cn.bing.com/th?id=OHR.NaPaliKauai_EN-US7451684312_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.NaPaliKauai_EN-US7451684312_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.NaPaliKauai_EN-US7451684312_400x240.jpg"
+    },
+    {
       "date": "2025-08-06",
       "copyright": "Great gray owls in their nest, Finland (© imageBROKER.com/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.CaliforniaTidepool_EN-US9089576317_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.HorseheadRock_EN-US2494437641_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.HorseheadRock_EN-US2494437641_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.HorseheadRock_EN-US2494437641_400x240.jpg"
-    },
-    {
-      "date": "2025-06-26",
-      "copyright": "Delicate Arch, Arches National Park, Utah (© mmac72/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.GlastonburyScenic_EN-US2433998806_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.GlastonburyScenic_EN-US2433998806_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.GlastonburyScenic_EN-US2433998806_400x240.jpg"
     }
   ],
   "page": 10,
   "pageSize": 42,
-  "total": 2024,
+  "total": 2025,
   "totalPages": 49,
   "hasMore": true
 }

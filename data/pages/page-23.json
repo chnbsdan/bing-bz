@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-02-08",
+      "copyright": "Burchell's zebra mother and foal, Rietvlei Nature Reserve, South Africa (© Richard Du Toit/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.DizzyGillespie_EN-US7637800342_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.DizzyGillespie_EN-US7637800342_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.DizzyGillespie_EN-US7637800342_400x240.jpg"
+    },
+    {
       "date": "2024-02-07",
       "copyright": "Aýna, Sierra del Segura, Albacete, Spain (© Juan Maria Coy Vergara/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ZebraMother_EN-US7544209908_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.FestivusPenguins_EN-US9322662873_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.FestivusPenguins_EN-US9322662873_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.FestivusPenguins_EN-US9322662873_400x240.jpg"
-    },
-    {
-      "date": "2023-12-28",
-      "copyright": "Avenue of birch trees near Uffing am Staffelsee, Bavaria, Germany (© Reinhard Schmid/Huber/eStock Photo)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LjubljanaLights_EN-US9215683814_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LjubljanaLights_EN-US9215683814_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.LjubljanaLights_EN-US9215683814_400x240.jpg"
     }
   ],
   "page": 23,
   "pageSize": 42,
-  "total": 2024,
+  "total": 2025,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-01-22",
+      "copyright": "Gentoo penguin, Petermann Island, Antarctica (© Paul Souders/DanitaDelimont.com/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BerrySquirrel_EN-US0798771452_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BerrySquirrel_EN-US0798771452_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BerrySquirrel_EN-US0798771452_400x240.jpg"
+    },
+    {
       "date": "2026-01-21",
       "copyright": "Washington Monument seen from Lincoln Memorial, Washington, DC (© RickSause/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.IciclePenguin_EN-US0727591285_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.EverestGlow_EN-US6131667612_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.EverestGlow_EN-US6131667612_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.EverestGlow_EN-US6131667612_400x240.jpg"
-    },
-    {
-      "date": "2025-12-11",
-      "copyright": "Guanaco in Punta Norte, Argentina (© Sylvain Cordier/naturepl.com)",
-      "jpg": "https://cn.bing.com/th?id=OHR.CordobaCathedral_EN-US6045311068_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.CordobaCathedral_EN-US6045311068_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.CordobaCathedral_EN-US6045311068_400x240.jpg"
     }
   ],
   "page": 6,
   "pageSize": 42,
-  "total": 2024,
+  "total": 2025,
   "totalPages": 49,
   "hasMore": true
 }

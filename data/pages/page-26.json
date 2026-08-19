@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-10-05",
+      "copyright": "Container ship near a commercial port in Thailand (© Suriyapong Thongsawang/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.GuiyangMoon_EN-US2407385108_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.GuiyangMoon_EN-US2407385108_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.GuiyangMoon_EN-US2407385108_400x240.jpg"
+    },
+    {
       "date": "2023-10-04",
       "copyright": "The Via Krupp footpath on Capri island, Italy (© Mikolaj Niemczewski/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.MaritimeDay_EN-US2262770680_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AvatarMountain_EN-US0084042494_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AvatarMountain_EN-US0084042494_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AvatarMountain_EN-US0084042494_400x240.jpg"
-    },
-    {
-      "date": "2023-08-24",
-      "copyright": "Overseas Highway in the Florida Keys (© Evgeny Vasenev/Cavan Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SequoiaSunlight_EN-US6214316930_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SequoiaSunlight_EN-US6214316930_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SequoiaSunlight_EN-US6214316930_400x240.jpg"
     }
   ],
   "page": 26,
   "pageSize": 42,
-  "total": 2024,
+  "total": 2025,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-01-13",
+      "copyright": "梵净山，中国西南部 (© zhuxiaophotography/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.TasiilaqAurora_ZH-CN0330057121_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.TasiilaqAurora_ZH-CN0330057121_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.TasiilaqAurora_ZH-CN0330057121_400x240.jpg"
+    },
+    {
       "date": "2022-01-12",
       "copyright": "爬上柳树枝头的豪猪，美国阿拉斯加 (© Design Pics/Danita Delimont)",
       "jpg": "https://cn.bing.com/th?id=OHR.FanjingStairs_ZH-CN0360402048_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.FrostLeaves_ZH-CN6851974281_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.FrostLeaves_ZH-CN6851974281_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.FrostLeaves_ZH-CN6851974281_400x240.jpg"
-    },
-    {
-      "date": "2021-12-02",
-      "copyright": "库佛维尔岛附近的蓝色冰山，南极洲 (© Mike Hill/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.DenaliDall_ZH-CN9952652691_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.DenaliDall_ZH-CN9952652691_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.DenaliDall_ZH-CN9952652691_400x240.jpg"
     }
   ],
   "page": 41,
   "pageSize": 42,
-  "total": 2024,
+  "total": 2025,
   "totalPages": 49,
   "hasMore": true
 }

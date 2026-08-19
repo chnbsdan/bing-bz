@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-11-03",
+      "copyright": "Mute swan in Valkenhorst Nature Reserve, near Valkenswaard, the Netherlands (© David Pattyn/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.GuwahatiDiwali_EN-US3454357880_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.GuwahatiDiwali_EN-US3454357880_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.GuwahatiDiwali_EN-US3454357880_400x240.jpg"
+    },
+    {
       "date": "2022-11-02",
       "copyright": "Karst mountains in Guilin and Lijiang River National Park, China (© Sean Pavone/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.Knobbelzwaan_EN-US4809716001_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.GSDNPest_EN-US6985335988_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.GSDNPest_EN-US6985335988_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.GSDNPest_EN-US6985335988_400x240.jpg"
-    },
-    {
-      "date": "2022-09-22",
-      "copyright": "Statue of Liberty seen behind US flags at half-staff for the anniversary of September 11 in 2014, New York City (© Adam Parent/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.Aracari_EN-US6920359857_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.Aracari_EN-US6920359857_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.Aracari_EN-US6920359857_400x240.jpg"
     }
   ],
   "page": 34,
   "pageSize": 42,
-  "total": 2024,
+  "total": 2025,
   "totalPages": 49,
   "hasMore": true
 }

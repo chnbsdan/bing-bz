@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-12-11",
+      "copyright": "Guanaco in Punta Norte, Argentina (© Sylvain Cordier/naturepl.com)",
+      "jpg": "https://cn.bing.com/th?id=OHR.CordobaCathedral_EN-US6045311068_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.CordobaCathedral_EN-US6045311068_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.CordobaCathedral_EN-US6045311068_400x240.jpg"
+    },
+    {
       "date": "2025-12-10",
       "copyright": "Christmas lights in Domaso, Lake Como, Italy (© Roberto Moiola/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.LlamaDay_EN-US5971354659_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.PushkarFair_EN-US4430814252_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PushkarFair_EN-US4430814252_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.PushkarFair_EN-US4430814252_400x240.jpg"
-    },
-    {
-      "date": "2025-10-30",
-      "copyright": "The Gothic Gate in the Adršpach-Teplice Rocks, Czechia (© Kseniya_Milner/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.FanalForest_EN-US4405104404_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.FanalForest_EN-US4405104404_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.FanalForest_EN-US4405104404_400x240.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2024,
+  "total": 2025,
   "totalPages": 49,
   "hasMore": true
 }
