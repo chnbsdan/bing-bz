@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-01-23",
+      "copyright": "Eurasian red squirrel (© Galina Jacyna/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.KarlovyVary_EN-US0856094511_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.KarlovyVary_EN-US0856094511_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.KarlovyVary_EN-US0856094511_400x240.jpg"
+    },
+    {
       "date": "2026-01-22",
       "copyright": "Gentoo penguin, Petermann Island, Antarctica (© Paul Souders/DanitaDelimont.com/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.BerrySquirrel_EN-US0798771452_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SpeckledPoinsettia_EN-US4098165068_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SpeckledPoinsettia_EN-US4098165068_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SpeckledPoinsettia_EN-US4098165068_400x240.jpg"
-    },
-    {
-      "date": "2025-12-12",
-      "copyright": "Interior of the Mosque-Cathedral of Córdoba, Andalusia, Spain (© Elena Zolotova/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.EverestGlow_EN-US6131667612_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.EverestGlow_EN-US6131667612_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.EverestGlow_EN-US6131667612_400x240.jpg"
     }
   ],
   "page": 6,
   "pageSize": 42,
-  "total": 2025,
+  "total": 2026,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-08-21",
+      "copyright": "尤利尔山口蜿蜒的公路，瑞士 (© Westend61/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.JulierPass_ZH-CN3064797820_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.JulierPass_ZH-CN3064797820_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.JulierPass_ZH-CN3064797820_400x240.jpg"
+    },
+    {
       "date": "2026-08-20",
       "copyright": "林恩运河中浮出水面的虎鲸，奇尔卡特山脉附近，阿拉斯加州，美国 (© John Hyde/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.LynnCanalOrca_ZH-CN0719217908_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AurayBrittany_EN-US7890619884_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AurayBrittany_EN-US7890619884_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AurayBrittany_EN-US7890619884_400x240.jpg"
-    },
-    {
-      "date": "2026-07-10",
-      "copyright": "Rice fields at Sapa, Lào Cai, Vietnam (© Anujak Jaimook/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.VictoriaBeach_EN-US7607379912_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.VictoriaBeach_EN-US7607379912_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.VictoriaBeach_EN-US7607379912_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2025,
+  "total": 2026,
   "totalPages": 49,
   "hasMore": true
 }

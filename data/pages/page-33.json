@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-12-16",
+      "copyright": "Saint Nicholas Day in Verbier, Switzerland (© Denis Balibouse/Reuters)",
+      "jpg": "https://cn.bing.com/th?id=OHR.GreatEgret_EN-US1489292796_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.GreatEgret_EN-US1489292796_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.GreatEgret_EN-US1489292796_400x240.jpg"
+    },
+    {
       "date": "2022-12-15",
       "copyright": "Elephants near Mount Kilimanjaro, Amboseli National Park, Kenya (© Diana Robinson Photography/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.StNick_EN-US1370158441_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BrockenSpecter_EN-US5247366251_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BrockenSpecter_EN-US5247366251_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BrockenSpecter_EN-US5247366251_400x240.jpg"
-    },
-    {
-      "date": "2022-11-04",
-      "copyright": "Oil lamps arranged on a rangoli to celebrate Diwali in Guwahati, India (© Biju Boro/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.OrcusMouth_EN-US5010597701_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.OrcusMouth_EN-US5010597701_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.OrcusMouth_EN-US5010597701_400x240.jpg"
     }
   ],
   "page": 33,
   "pageSize": 42,
-  "total": 2025,
+  "total": 2026,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-11-17",
+      "copyright": "Badlands National Park, South Dakota (© Grant Ordelheide/Tandem Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.VeteransDayDC_EN-US7666353324_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.VeteransDayDC_EN-US7666353324_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.VeteransDayDC_EN-US7666353324_400x240.jpg"
+    },
+    {
       "date": "2023-11-16",
       "copyright": "Birch trees in autumn, Drammen, Norway (© Baac3nes/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BadlandsSunrise_EN-US7576048436_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.LakeBledSunrise_EN-US2708574517_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.LakeBledSunrise_EN-US2708574517_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.LakeBledSunrise_EN-US2708574517_400x240.jpg"
-    },
-    {
-      "date": "2023-10-06",
-      "copyright": "Jiaxiu Tower under a full moon, Guiyang, Guizhou province, China (© Wang Yukun/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ShenandoahFoliage_EN-US9719781431_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ShenandoahFoliage_EN-US9719781431_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ShenandoahFoliage_EN-US9719781431_400x240.jpg"
     }
   ],
   "page": 25,
   "pageSize": 42,
-  "total": 2025,
+  "total": 2026,
   "totalPages": 49,
   "hasMore": true
 }

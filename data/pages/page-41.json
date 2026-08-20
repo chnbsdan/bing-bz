@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-01-14",
+      "copyright": "搁浅船只上空的极光，格陵兰岛塔西拉克 (© Shane P. White/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SaCalobra_ZH-CN0945855556_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SaCalobra_ZH-CN0945855556_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SaCalobra_ZH-CN0945855556_400x240.jpg"
+    },
+    {
       "date": "2022-01-13",
       "copyright": "梵净山，中国西南部 (© zhuxiaophotography/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.TasiilaqAurora_ZH-CN0330057121_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MotherCheetah_ZH-CN6992630248_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MotherCheetah_ZH-CN6992630248_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MotherCheetah_ZH-CN6992630248_400x240.jpg"
-    },
-    {
-      "date": "2021-12-03",
-      "copyright": "迪纳利国家公园里的白大角羊，阿拉斯加 (© Patrick J. Endres/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.FrostLeaves_ZH-CN6851974281_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.FrostLeaves_ZH-CN6851974281_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.FrostLeaves_ZH-CN6851974281_400x240.jpg"
     }
   ],
   "page": 41,
   "pageSize": 42,
-  "total": 2025,
+  "total": 2026,
   "totalPages": 49,
   "hasMore": true
 }

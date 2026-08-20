@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-09-23",
+      "copyright": "Chestnut-eared aracari in the Pantanal region of Brazil (© Ana Gram/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.GSDNPest_EN-US6985335988_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.GSDNPest_EN-US6985335988_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.GSDNPest_EN-US6985335988_400x240.jpg"
+    },
+    {
       "date": "2022-09-22",
       "copyright": "Statue of Liberty seen behind US flags at half-staff for the anniversary of September 11 in 2014, New York City (© Adam Parent/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.Aracari_EN-US6920359857_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.RedneckedGrebe_EN-US1190259802_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.RedneckedGrebe_EN-US1190259802_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.RedneckedGrebe_EN-US1190259802_400x240.jpg"
-    },
-    {
-      "date": "2022-08-12",
-      "copyright": "An active lava tube, Hawai'i Volcanoes National Park, Hawaii (© Tom Schwabel/Tandem Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.HickmanBridge_EN-US1087333208_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.HickmanBridge_EN-US1087333208_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.HickmanBridge_EN-US1087333208_400x240.jpg"
     }
   ],
   "page": 35,
   "pageSize": 42,
-  "total": 2025,
+  "total": 2026,
   "totalPages": 49,
   "hasMore": true
 }

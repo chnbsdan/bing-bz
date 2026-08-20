@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-07-10",
+      "copyright": "Rice fields at Sapa, Lào Cai, Vietnam (© Anujak Jaimook/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.VictoriaBeach_EN-US7607379912_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.VictoriaBeach_EN-US7607379912_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.VictoriaBeach_EN-US7607379912_400x240.jpg"
+    },
+    {
       "date": "2026-07-09",
       "copyright": "Sunrise at Lake Atitlán, Guatemala (© shayes17/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.SapaVietnam_EN-US4008171614_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.EquusQuagga_EN-US8240577582_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.EquusQuagga_EN-US8240577582_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.EquusQuagga_EN-US8240577582_400x240.jpg"
-    },
-    {
-      "date": "2026-05-29",
-      "copyright": "Old city wall of Hwaseong Fortress, Suwon, South Korea (© aomam/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SummitEverest_EN-US0552794971_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SummitEverest_EN-US0552794971_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SummitEverest_EN-US0552794971_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2025,
+  "total": 2026,
   "totalPages": 49,
   "hasMore": true
 }

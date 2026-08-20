@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-08-12",
+      "copyright": "An active lava tube, Hawai'i Volcanoes National Park, Hawaii (© Tom Schwabel/Tandem Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.HickmanBridge_EN-US1087333208_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.HickmanBridge_EN-US1087333208_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.HickmanBridge_EN-US1087333208_400x240.jpg"
+    },
+    {
       "date": "2022-08-11",
       "copyright": "Noctilucent clouds in Lithuania (© ljphoto7/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.LavaTube_EN-US0984183891_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BBMomCub_EN-US7553314922_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BBMomCub_EN-US7553314922_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BBMomCub_EN-US7553314922_400x240.jpg"
-    },
-    {
-      "date": "2022-07-01",
-      "copyright": "Stari Most in Mostar, Bosnia and Herzegovina (© Ayhan Altun/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.CenoteDiver_EN-US7458460864_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.CenoteDiver_EN-US7458460864_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.CenoteDiver_EN-US7458460864_400x240.jpg"
     }
   ],
   "page": 36,
   "pageSize": 42,
-  "total": 2025,
+  "total": 2026,
   "totalPages": 49,
   "hasMore": true
 }

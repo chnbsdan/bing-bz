@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-02-21",
+      "copyright": "European river otter, Lelystad, Netherlands (© Ernst Dirksen/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AdamsYosemite_EN-US7924059397_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AdamsYosemite_EN-US7924059397_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AdamsYosemite_EN-US7924059397_400x240.jpg"
+    },
+    {
       "date": "2025-02-20",
       "copyright": "Great Blue Hole, Belize (© JamiesOnAMission/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.IceHoleOtter_EN-US7859051687_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.GreatWallStairs_EN-US0360405933_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.GreatWallStairs_EN-US0360405933_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.GreatWallStairs_EN-US0360405933_400x240.jpg"
-    },
-    {
-      "date": "2025-01-10",
-      "copyright": "Flooded crypt, Basilica of San Francesco, Ravenna, Italy (© Andrea Pucci/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BouldersNZ_EN-US0112829210_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BouldersNZ_EN-US0112829210_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BouldersNZ_EN-US0112829210_400x240.jpg"
     }
   ],
   "page": 14,
   "pageSize": 42,
-  "total": 2025,
+  "total": 2026,
   "totalPages": 49,
   "hasMore": true
 }
