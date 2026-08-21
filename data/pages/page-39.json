@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-04-09",
+      "copyright": "蓬塔德尔加达附近的海岸，葡萄牙 (© Jan Wlodarczyk/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.LightPainting_ZH-CN8824196181_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.LightPainting_ZH-CN8824196181_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.LightPainting_ZH-CN8824196181_400x240.jpg"
+    },
+    {
       "date": "2022-04-08",
       "copyright": "黄昏下的马拉加老城，西班牙 (© Sean Pavone Photo/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.PontaDelgada_ZH-CN8596828822_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.IPBDMom_ZH-CN5918907676_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.IPBDMom_ZH-CN5918907676_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.IPBDMom_ZH-CN5918907676_400x240.jpg"
-    },
-    {
-      "date": "2022-02-26",
-      "copyright": "怀特霍斯市的落日余晖，加拿大育空地区 (© Robert Postma/Design Pics)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LamplughGlacier_ZH-CN5709513673_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LamplughGlacier_ZH-CN5709513673_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.LamplughGlacier_ZH-CN5709513673_400x240.jpg"
     }
   ],
   "page": 39,
   "pageSize": 42,
-  "total": 2026,
+  "total": 2027,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-11-18",
+      "copyright": "Sunset at the Washington Monument, Washington, DC (© Joe Daniel Price/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.DiwaliAyodhya_EN-US7782727326_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.DiwaliAyodhya_EN-US7782727326_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.DiwaliAyodhya_EN-US7782727326_400x240.jpg"
+    },
+    {
       "date": "2023-11-17",
       "copyright": "Badlands National Park, South Dakota (© Grant Ordelheide/Tandem Stills + Motion)",
       "jpg": "https://cn.bing.com/th?id=OHR.VeteransDayDC_EN-US7666353324_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.VuittonFoundation_EN-US2808914200_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.VuittonFoundation_EN-US2808914200_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.VuittonFoundation_EN-US2808914200_400x240.jpg"
-    },
-    {
-      "date": "2023-10-07",
-      "copyright": "Fall colors in Shenandoah National Park, Virginia (© Michael Ver Sprill/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LakeBledSunrise_EN-US2708574517_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LakeBledSunrise_EN-US2708574517_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.LakeBledSunrise_EN-US2708574517_400x240.jpg"
     }
   ],
   "page": 25,
   "pageSize": 42,
-  "total": 2026,
+  "total": 2027,
   "totalPages": 49,
   "hasMore": true
 }

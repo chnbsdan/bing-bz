@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-11-01",
+      "copyright": "Camels at Jaisalmer, Rajasthan, India (© f9photos/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BranCastle_EN-US5914201029_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BranCastle_EN-US5914201029_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BranCastle_EN-US5914201029_400x240.jpg"
+    },
+    {
       "date": "2025-10-31",
       "copyright": "Ancient til trees in Fanal Forest, island of Madeira, Portugal (© Lukas Jonaitis/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.PushkarFair_EN-US4430814252_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.OktoberfestSwing_EN-US7916182497_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.OktoberfestSwing_EN-US7916182497_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.OktoberfestSwing_EN-US7916182497_400x240.jpg"
-    },
-    {
-      "date": "2025-09-20",
-      "copyright": "Serpentine stairs of Dunquin Pier, County Kerry, Ireland (© Hugh O'Connor/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ThousandIslands_EN-US7884567746_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ThousandIslands_EN-US7884567746_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ThousandIslands_EN-US7884567746_400x240.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2026,
+  "total": 2027,
   "totalPages": 49,
   "hasMore": true
 }

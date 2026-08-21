@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-01-24",
+      "copyright": "Karlovy Vary, Bohemia, Czechia (© Henryk Sadura/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AndermattSwiss_EN-US9318337691_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AndermattSwiss_EN-US9318337691_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AndermattSwiss_EN-US9318337691_400x240.jpg"
+    },
+    {
       "date": "2026-01-23",
       "copyright": "Eurasian red squirrel (© Galina Jacyna/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.KarlovyVary_EN-US0856094511_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.YosemiteWinter_EN-US4786605896_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.YosemiteWinter_EN-US4786605896_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.YosemiteWinter_EN-US4786605896_400x240.jpg"
-    },
-    {
-      "date": "2025-12-13",
-      "copyright": "Summit of Mount Everest at sunset, seen from Renjo La, Nepal (© shoults/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SpeckledPoinsettia_EN-US4098165068_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SpeckledPoinsettia_EN-US4098165068_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SpeckledPoinsettia_EN-US4098165068_400x240.jpg"
     }
   ],
   "page": 6,
   "pageSize": 42,
-  "total": 2026,
+  "total": 2027,
   "totalPages": 49,
   "hasMore": true
 }

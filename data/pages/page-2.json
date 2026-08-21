@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-07-11",
+      "copyright": "Aerial view of land and ocean, Victoria, Australia (© Nearmap/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AurayBrittany_EN-US7890619884_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AurayBrittany_EN-US7890619884_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AurayBrittany_EN-US7890619884_400x240.jpg"
+    },
+    {
       "date": "2026-07-10",
       "copyright": "Rice fields at Sapa, Lào Cai, Vietnam (© Anujak Jaimook/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.VictoriaBeach_EN-US7607379912_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.EvergladesWetlands_EN-US8572465847_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.EvergladesWetlands_EN-US8572465847_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.EvergladesWetlands_EN-US8572465847_400x240.jpg"
-    },
-    {
-      "date": "2026-05-30",
-      "copyright": "Mount Everest summit, Sagarmatha National Park, Nepal (© fotoVoyager/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.EquusQuagga_EN-US8240577582_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.EquusQuagga_EN-US8240577582_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.EquusQuagga_EN-US8240577582_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2026,
+  "total": 2027,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-12-13",
+      "copyright": "Summit of Mount Everest at sunset, seen from Renjo La, Nepal (© shoults/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SpeckledPoinsettia_EN-US4098165068_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SpeckledPoinsettia_EN-US4098165068_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SpeckledPoinsettia_EN-US4098165068_400x240.jpg"
+    },
+    {
       "date": "2025-12-12",
       "copyright": "Interior of the Mosque-Cathedral of Córdoba, Andalusia, Spain (© Elena Zolotova/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.EverestGlow_EN-US6131667612_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BisonSprings_EN-US6080228013_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BisonSprings_EN-US6080228013_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BisonSprings_EN-US6080228013_400x240.jpg"
-    },
-    {
-      "date": "2025-11-01",
-      "copyright": "Camels at Jaisalmer, Rajasthan, India (© f9photos/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BranCastle_EN-US5914201029_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BranCastle_EN-US5914201029_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BranCastle_EN-US5914201029_400x240.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2026,
+  "total": 2027,
   "totalPages": 49,
   "hasMore": true
 }

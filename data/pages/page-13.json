@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-04-05",
+      "copyright": "Rainbow over Wasson Peak, Saguaro National Park, Arizona (© Frank Staub/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.CherryBlossomDC_EN-US9897772834_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.CherryBlossomDC_EN-US9897772834_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.CherryBlossomDC_EN-US9897772834_400x240.jpg"
+    },
+    {
       "date": "2025-04-04",
       "copyright": "Sandstone formations in the badlands near Caineville, Utah (© Chris Moore/TANDEM Stills + Motion)",
       "jpg": "https://cn.bing.com/th?id=OHR.SaguaroRainbow_EN-US3149462337_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.StLouisArch_EN-US1920417205_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.StLouisArch_EN-US1920417205_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.StLouisArch_EN-US1920417205_400x240.jpg"
-    },
-    {
-      "date": "2025-02-22",
-      "copyright": "Alpenglow on Half Dome, Yosemite National Park, California (© Matthew Kuhns/TANDEM Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ChampakaSarasi_EN-US0671131929_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ChampakaSarasi_EN-US0671131929_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ChampakaSarasi_EN-US0671131929_400x240.jpg"
     }
   ],
   "page": 13,
   "pageSize": 42,
-  "total": 2026,
+  "total": 2027,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-08-26",
+      "copyright": "'Avatar Mountains,' Zhangjiajie National Forest Park, China (© Amazing Aerial Premium/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.CameraSquirrel_EN-US0174540169_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.CameraSquirrel_EN-US0174540169_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.CameraSquirrel_EN-US0174540169_400x240.jpg"
+    },
+    {
       "date": "2023-08-25",
       "copyright": "Giant sequoia trees in Sequoia and Kings Canyon National Parks, California (© lucky-photographer/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.AvatarMountain_EN-US0084042494_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MoselleRiver_EN-US2499319157_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MoselleRiver_EN-US2499319157_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MoselleRiver_EN-US2499319157_400x240.jpg"
-    },
-    {
-      "date": "2023-07-15",
-      "copyright": "Cocoa pods from Ambanja, Madagascar (© pierivb/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.CooperChapel_EN-US2412561000_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.CooperChapel_EN-US2412561000_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.CooperChapel_EN-US2412561000_400x240.jpg"
     }
   ],
   "page": 27,
   "pageSize": 42,
-  "total": 2026,
+  "total": 2027,
   "totalPages": 49,
   "hasMore": true
 }

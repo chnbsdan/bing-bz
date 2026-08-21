@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2021-12-04",
+      "copyright": "Autumn leaves coated with frost (© sagarmanis/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MotherCheetah_ZH-CN6992630248_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MotherCheetah_ZH-CN6992630248_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.MotherCheetah_ZH-CN6992630248_400x240.jpg"
+    },
+    {
       "date": "2021-12-03",
       "copyright": "迪纳利国家公园里的白大角羊，阿拉斯加 (© Patrick J. Endres/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.FrostLeaves_ZH-CN6851974281_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.Bavljenac_ZH-CN1739905750_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.Bavljenac_ZH-CN1739905750_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.Bavljenac_ZH-CN1739905750_400x240.jpg"
-    },
-    {
-      "date": "2021-10-23",
-      "copyright": "划过湖面上空的新智彗星，加拿大贾斯珀国家公园 (© Stocktrek Images, Inc./Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ScopsOwl_ZH-CN1547209464_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ScopsOwl_ZH-CN1547209464_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ScopsOwl_ZH-CN1547209464_400x240.jpg"
     }
   ],
   "page": 42,
   "pageSize": 42,
-  "total": 2026,
+  "total": 2027,
   "totalPages": 49,
   "hasMore": true
 }

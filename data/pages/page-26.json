@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-10-07",
+      "copyright": "Fall colors in Shenandoah National Park, Virginia (© Michael Ver Sprill/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.LakeBledSunrise_EN-US2708574517_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.LakeBledSunrise_EN-US2708574517_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.LakeBledSunrise_EN-US2708574517_400x240.jpg"
+    },
+    {
       "date": "2023-10-06",
       "copyright": "Jiaxiu Tower under a full moon, Guiyang, Guizhou province, China (© Wang Yukun/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ShenandoahFoliage_EN-US9719781431_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.StartPointLight_EN-US0323042936_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.StartPointLight_EN-US0323042936_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.StartPointLight_EN-US0323042936_400x240.jpg"
-    },
-    {
-      "date": "2023-08-26",
-      "copyright": "'Avatar Mountains,' Zhangjiajie National Forest Park, China (© Amazing Aerial Premium/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.CameraSquirrel_EN-US0174540169_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.CameraSquirrel_EN-US0174540169_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.CameraSquirrel_EN-US0174540169_400x240.jpg"
     }
   ],
   "page": 26,
   "pageSize": 42,
-  "total": 2026,
+  "total": 2027,
   "totalPages": 49,
   "hasMore": true
 }
