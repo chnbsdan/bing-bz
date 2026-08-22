@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-07-12",
+      "copyright": "Port de Saint-Goustan, Auray, Brittany, France (© Rolf E. Staerk/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.KatahdinWWNM_EN-US8982810797_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.KatahdinWWNM_EN-US8982810797_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.KatahdinWWNM_EN-US8982810797_400x240.jpg"
+    },
+    {
       "date": "2026-07-11",
       "copyright": "Aerial view of land and ocean, Victoria, Australia (© Nearmap/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.AurayBrittany_EN-US7890619884_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.RockefellerPride_EN-US1087499810_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.RockefellerPride_EN-US1087499810_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.RockefellerPride_EN-US1087499810_400x240.jpg"
-    },
-    {
-      "date": "2026-05-31",
-      "copyright": "Plains zebra foal in Etosha National Park, Namibia (© Sharon Heald/Nature Picture Library)",
-      "jpg": "https://cn.bing.com/th?id=OHR.EvergladesWetlands_EN-US8572465847_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.EvergladesWetlands_EN-US8572465847_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.EvergladesWetlands_EN-US8572465847_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2027,
+  "total": 2028,
   "totalPages": 49,
   "hasMore": true
 }

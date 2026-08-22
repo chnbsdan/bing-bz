@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-09-08",
+      "copyright": "River Thames, London, England (© Puthipong Worasaran/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.KansasMural_EN-US9504361321_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.KansasMural_EN-US9504361321_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.KansasMural_EN-US9504361321_400x240.jpg"
+    },
+    {
       "date": "2024-09-07",
       "copyright": "Rock formations and sand dunes in the Sahara, Tassili n’Ajjer, Algeria (© Airpano/Amazing Aerial Agency)",
       "jpg": "https://cn.bing.com/th?id=OHR.ThamesLondon_EN-US9385705885_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MethoniCastle_EN-US9447007951_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MethoniCastle_EN-US9447007951_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MethoniCastle_EN-US9447007951_400x240.jpg"
-    },
-    {
-      "date": "2024-07-28",
-      "copyright": "Wooden fishing boats at Kendwa, Zanzibar, Tanzania (© Lubos Paukeje/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.HammockCamping_EN-US9298465355_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.HammockCamping_EN-US9298465355_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.HammockCamping_EN-US9298465355_400x240.jpg"
     }
   ],
   "page": 18,
   "pageSize": 42,
-  "total": 2027,
+  "total": 2028,
   "totalPages": 49,
   "hasMore": true
 }

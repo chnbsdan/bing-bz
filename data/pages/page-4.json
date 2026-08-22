@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-04-19",
+      "copyright": "Moai statue quarry, Rano Raraku, Easter Island, Chile (© Gavin Hellier/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.LibraryWeek_EN-US0888768835_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.LibraryWeek_EN-US0888768835_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.LibraryWeek_EN-US0888768835_400x240.jpg"
+    },
+    {
       "date": "2026-04-18",
       "copyright": "Grey-headed flying fox carrying her pup, Yarra Bend Park, Australia (© Doug Gimesy/Nature Picture Library)",
       "jpg": "https://cn.bing.com/th?id=OHR.MaoiStatues_EN-US0752877903_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.NappingSeal_EN-US6764325041_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.NappingSeal_EN-US6764325041_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.NappingSeal_EN-US6764325041_400x240.jpg"
-    },
-    {
-      "date": "2026-03-08",
-      "copyright": "Sunrise on the Brocken, Harz National Park, Germany (© imageBROKER/AVTG/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.UlmClock_EN-US6692804943_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.UlmClock_EN-US6692804943_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.UlmClock_EN-US6692804943_400x240.jpg"
     }
   ],
   "page": 4,
   "pageSize": 42,
-  "total": 2027,
+  "total": 2028,
   "totalPages": 49,
   "hasMore": true
 }

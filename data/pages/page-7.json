@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-12-14",
+      "copyright": "Spotted poinsettia (© DigiPub/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.YosemiteWinter_EN-US4786605896_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.YosemiteWinter_EN-US4786605896_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.YosemiteWinter_EN-US4786605896_400x240.jpg"
+    },
+    {
       "date": "2025-12-13",
       "copyright": "Summit of Mount Everest at sunset, seen from Renjo La, Nepal (© shoults/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.SpeckledPoinsettia_EN-US4098165068_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.KyotoMaple_EN-US6732403492_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.KyotoMaple_EN-US6732403492_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.KyotoMaple_EN-US6732403492_400x240.jpg"
-    },
-    {
-      "date": "2025-11-02",
-      "copyright": "Entrance of Bran Castle in Bran, Brașov, Romania (© blue sky in my pocket/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BisonSprings_EN-US6080228013_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BisonSprings_EN-US6080228013_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BisonSprings_EN-US6080228013_400x240.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2027,
+  "total": 2028,
   "totalPages": 49,
   "hasMore": true
 }

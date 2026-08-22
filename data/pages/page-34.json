@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-11-06",
+      "copyright": "Brocken spectre in Central Balkan National Park, Bulgaria (© Maya Karkalicheva/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BridgeofSighs_EN-US5335369208_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BridgeofSighs_EN-US5335369208_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BridgeofSighs_EN-US5335369208_400x240.jpg"
+    },
+    {
       "date": "2022-11-05",
       "copyright": "Orcus sculpture in the Gardens of Bomarzo in Bomarzo, Italy (© Scott Wilson/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.BrockenSpecter_EN-US5247366251_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.PianePuma_EN-US7221521942_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PianePuma_EN-US7221521942_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.PianePuma_EN-US7221521942_400x240.jpg"
-    },
-    {
-      "date": "2022-09-25",
-      "copyright": "Navajo Bridge over the Colorado River at the Glen Canyon National Recreation Area in northern Arizona (© trekandshoot/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BuffaloMural_EN-US7123580117_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BuffaloMural_EN-US7123580117_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BuffaloMural_EN-US7123580117_400x240.jpg"
     }
   ],
   "page": 34,
   "pageSize": 42,
-  "total": 2027,
+  "total": 2028,
   "totalPages": 49,
   "hasMore": true
 }

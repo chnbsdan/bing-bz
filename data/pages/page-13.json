@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-04-06",
+      "copyright": "The National Cherry Blossom Festival in Washington, DC (© f11photo/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.GaztelugatxeSunset_EN-US9970203395_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.GaztelugatxeSunset_EN-US9970203395_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.GaztelugatxeSunset_EN-US9970203395_400x240.jpg"
+    },
+    {
       "date": "2025-04-05",
       "copyright": "Rainbow over Wasson Peak, Saguaro National Park, Arizona (© Frank Staub/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.CherryBlossomDC_EN-US9897772834_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MtFujiSunrise_EN-US2218385739_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MtFujiSunrise_EN-US2218385739_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MtFujiSunrise_EN-US2218385739_400x240.jpg"
-    },
-    {
-      "date": "2025-02-23",
-      "copyright": "Champaka Sarasi pond near Shivamogga, Karnataka, India (© Amith Nag Photography/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.StLouisArch_EN-US1920417205_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.StLouisArch_EN-US1920417205_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.StLouisArch_EN-US1920417205_400x240.jpg"
     }
   ],
   "page": 13,
   "pageSize": 42,
-  "total": 2027,
+  "total": 2028,
   "totalPages": 49,
   "hasMore": true
 }

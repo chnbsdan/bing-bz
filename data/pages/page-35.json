@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-09-25",
+      "copyright": "Navajo Bridge over the Colorado River at the Glen Canyon National Recreation Area in northern Arizona (© trekandshoot/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BuffaloMural_EN-US7123580117_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BuffaloMural_EN-US7123580117_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BuffaloMural_EN-US7123580117_400x240.jpg"
+    },
+    {
       "date": "2022-09-24",
       "copyright": "Great Sand Dunes National Park and Preserve, Colorado (© Y Paudel/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MarbleCanyon_EN-US7056773172_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MilitaryTattoo_EN-US2404986711_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MilitaryTattoo_EN-US2404986711_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MilitaryTattoo_EN-US2404986711_400x240.jpg"
-    },
-    {
-      "date": "2022-08-14",
-      "copyright": "Red-necked grebes in Germany (© Edo van Uchelen/Minden Pictures)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BangladeshWaterLilies_EN-US1994505786_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BangladeshWaterLilies_EN-US1994505786_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BangladeshWaterLilies_EN-US1994505786_400x240.jpg"
     }
   ],
   "page": 35,
   "pageSize": 42,
-  "total": 2027,
+  "total": 2028,
   "totalPages": 49,
   "hasMore": true
 }

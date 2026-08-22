@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-09-21",
+      "copyright": "Thousand Islands region, St. Lawrence River, US-Canada border (© benedek/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.OktoberfestSwing_EN-US7916182497_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.OktoberfestSwing_EN-US7916182497_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.OktoberfestSwing_EN-US7916182497_400x240.jpg"
+    },
+    {
       "date": "2025-09-20",
       "copyright": "Serpentine stairs of Dunquin Pier, County Kerry, Ireland (© Hugh O'Connor/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ThousandIslands_EN-US7884567746_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.LionessKenya_EN-US8440386444_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.LionessKenya_EN-US8440386444_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.LionessKenya_EN-US8440386444_400x240.jpg"
-    },
-    {
-      "date": "2025-08-10",
-      "copyright": "Three Musketeers Falls at Iguazú Falls, Argentina (© Mark Meredith/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MaoriRock_EN-US6499689741_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MaoriRock_EN-US6499689741_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MaoriRock_EN-US6499689741_400x240.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 2027,
+  "total": 2028,
   "totalPages": 49,
   "hasMore": true
 }
