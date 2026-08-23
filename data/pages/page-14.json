@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-02-24",
+      "copyright": "The Gateway Arch in St. Louis, Missouri (© f11photo/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MtFujiSunrise_EN-US2218385739_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MtFujiSunrise_EN-US2218385739_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.MtFujiSunrise_EN-US2218385739_400x240.jpg"
+    },
+    {
       "date": "2025-02-23",
       "copyright": "Champaka Sarasi pond near Shivamogga, Karnataka, India (© Amith Nag Photography/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.StLouisArch_EN-US1920417205_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MeknesMorocco_EN-US6991915839_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MeknesMorocco_EN-US6991915839_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MeknesMorocco_EN-US6991915839_400x240.jpg"
-    },
-    {
-      "date": "2025-01-13",
-      "copyright": "The US Capitol dome with flags flying at half-staff in honor of former President Jimmy Carter, Washington, DC (© J. David Ake/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BubbleLake_EN-US6558545411_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BubbleLake_EN-US6558545411_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BubbleLake_EN-US6558545411_400x240.jpg"
     }
   ],
   "page": 14,
   "pageSize": 42,
-  "total": 2028,
+  "total": 2029,
   "totalPages": 49,
   "hasMore": true
 }

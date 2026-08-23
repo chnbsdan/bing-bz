@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-09-22",
+      "copyright": "Swing carousel at Oktoberfest, Munich, Germany (© LOOK-foto/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.IceOtters_EN-US7982442590_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.IceOtters_EN-US7982442590_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.IceOtters_EN-US7982442590_400x240.jpg"
+    },
+    {
       "date": "2025-09-21",
       "copyright": "Thousand Islands region, St. Lawrence River, US-Canada border (© benedek/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.OktoberfestSwing_EN-US7916182497_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SantaMaddalena_EN-US8546897995_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SantaMaddalena_EN-US8546897995_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SantaMaddalena_EN-US8546897995_400x240.jpg"
-    },
-    {
-      "date": "2025-08-11",
-      "copyright": "Ngātoroirangi Mine Bay Māori Rock Carvings on Lake Taupō, New Zealand (© Joppi/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LionessKenya_EN-US8440386444_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LionessKenya_EN-US8440386444_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.LionessKenya_EN-US8440386444_400x240.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 2028,
+  "total": 2029,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-06-01",
+      "copyright": "Aerial view of Everglades National Park, Florida (© Tetra Images/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.RockefellerPride_EN-US1087499810_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.RockefellerPride_EN-US1087499810_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.RockefellerPride_EN-US1087499810_400x240.jpg"
+    },
+    {
       "date": "2026-05-31",
       "copyright": "Plains zebra foal in Etosha National Park, Namibia (© Sharon Heald/Nature Picture Library)",
       "jpg": "https://cn.bing.com/th?id=OHR.EvergladesWetlands_EN-US8572465847_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SpringHedgehog_EN-US1312133826_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SpringHedgehog_EN-US1312133826_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SpringHedgehog_EN-US1312133826_400x240.jpg"
-    },
-    {
-      "date": "2026-04-20",
-      "copyright": "Books in the children's section of The New York Public Library, New York (© Ken Welsh/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SunsetKiva_EN-US1031978429_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SunsetKiva_EN-US1031978429_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SunsetKiva_EN-US1031978429_400x240.jpg"
     }
   ],
   "page": 3,
   "pageSize": 42,
-  "total": 2028,
+  "total": 2029,
   "totalPages": 49,
   "hasMore": true
 }

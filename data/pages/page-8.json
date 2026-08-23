@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-11-03",
+      "copyright": "Bison grazing at thermal hot springs, Yellowstone National Park, Wyoming (© Cheryl Ramalho/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.KyotoMaple_EN-US6732403492_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.KyotoMaple_EN-US6732403492_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.KyotoMaple_EN-US6732403492_400x240.jpg"
+    },
+    {
       "date": "2025-11-02",
       "copyright": "Entrance of Bran Castle in Bran, Brașov, Romania (© blue sky in my pocket/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BisonSprings_EN-US6080228013_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AspenEquinox_EN-US8237887036_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AspenEquinox_EN-US8237887036_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AspenEquinox_EN-US8237887036_400x240.jpg"
-    },
-    {
-      "date": "2025-09-22",
-      "copyright": "Swing carousel at Oktoberfest, Munich, Germany (© LOOK-foto/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.IceOtters_EN-US7982442590_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.IceOtters_EN-US7982442590_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.IceOtters_EN-US7982442590_400x240.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2028,
+  "total": 2029,
   "totalPages": 49,
   "hasMore": true
 }

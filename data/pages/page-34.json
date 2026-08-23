@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-11-07",
+      "copyright": "Bridge of Sighs in Venice, Italy (© Doug Pearson/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FrankensteinFriday_EN-US3119113489_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FrankensteinFriday_EN-US3119113489_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.FrankensteinFriday_EN-US3119113489_400x240.jpg"
+    },
+    {
       "date": "2022-11-06",
       "copyright": "Brocken spectre in Central Balkan National Park, Bulgaria (© Maya Karkalicheva/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BridgeofSighs_EN-US5335369208_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.Wellenflug_EN-US7380614960_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.Wellenflug_EN-US7380614960_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.Wellenflug_EN-US7380614960_400x240.jpg"
-    },
-    {
-      "date": "2022-09-26",
-      "copyright": "Mural by Betsy Casañas in Buffalo, New York (© Tom Loonan)",
-      "jpg": "https://cn.bing.com/th?id=OHR.PianePuma_EN-US7221521942_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.PianePuma_EN-US7221521942_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.PianePuma_EN-US7221521942_400x240.jpg"
     }
   ],
   "page": 34,
   "pageSize": 42,
-  "total": 2028,
+  "total": 2029,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-08-24",
+      "copyright": "布鲁克林大桥，纽约市，美国 (© shayes17/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BKBridge_ZH-CN3870511222_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BKBridge_ZH-CN3870511222_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BKBridge_ZH-CN3870511222_400x240.jpg"
+    },
+    {
       "date": "2026-08-23",
       "copyright": "在处暑时节的村庄田野与寺庙佛塔，江阴市，江苏省，中国 (© jia yu/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.EndofHeatY26_ZH-CN8936468848_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.LemonShark_EN-US9828936448_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.LemonShark_EN-US9828936448_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.LemonShark_EN-US9828936448_400x240.jpg"
-    },
-    {
-      "date": "2026-07-13",
-      "copyright": "Katahdin Woods and Waters National Monument, Maine (© Cavan Images/Offset/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.NavajoSandstone_EN-US9496264383_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.NavajoSandstone_EN-US9496264383_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.NavajoSandstone_EN-US9496264383_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2028,
+  "total": 2029,
   "totalPages": 49,
   "hasMore": true
 }
