@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-01-02",
+      "copyright": "Winter sunrise in Dedham, Colchester, England (© George W Johnson/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.KirkjufellAurora_EN-US0249270913_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.KirkjufellAurora_EN-US0249270913_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.KirkjufellAurora_EN-US0249270913_400x240.jpg"
+    },
+    {
       "date": "2024-01-01",
       "copyright": "Caribou running in snow, Alaska (© Michael Quinton/Minden Pictures)",
       "jpg": "https://cn.bing.com/th?id=OHR.BoxingDaySunrise_EN-US9951041123_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AthensAcropolis_EN-US8385195396_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AthensAcropolis_EN-US8385195396_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AthensAcropolis_EN-US8385195396_400x240.jpg"
-    },
-    {
-      "date": "2023-11-21",
-      "copyright": "Russell lupines along Lake Tekapo, South Island, New Zealand (© Jeffrey Lewis/Tandem Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SarekSweden_EN-US8292531624_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SarekSweden_EN-US8292531624_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SarekSweden_EN-US8292531624_400x240.jpg"
     }
   ],
   "page": 24,
   "pageSize": 42,
-  "total": 2029,
+  "total": 2030,
   "totalPages": 49,
   "hasMore": true
 }

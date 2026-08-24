@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-08-12",
+      "copyright": "Lioness in Maasai Mara National Reserve, Kenya (© Tandem Stock/Adobe Stock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SantaMaddalena_EN-US8546897995_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SantaMaddalena_EN-US8546897995_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SantaMaddalena_EN-US8546897995_400x240.jpg"
+    },
+    {
       "date": "2025-08-11",
       "copyright": "Ngātoroirangi Mine Bay Māori Rock Carvings on Lake Taupō, New Zealand (© Joppi/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.LionessKenya_EN-US8440386444_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.CanadaDayFogo_EN-US0231478181_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.CanadaDayFogo_EN-US0231478181_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.CanadaDayFogo_EN-US0231478181_400x240.jpg"
-    },
-    {
-      "date": "2025-07-01",
-      "copyright": "Blue lagoon at Pulau Ay, Banda Islands, Indonesia (© fabio lamanna/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.WolfeCrater_EN-US2390330059_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.WolfeCrater_EN-US2390330059_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.WolfeCrater_EN-US2390330059_400x240.jpg"
     }
   ],
   "page": 10,
   "pageSize": 42,
-  "total": 2029,
+  "total": 2030,
   "totalPages": 49,
   "hasMore": true
 }

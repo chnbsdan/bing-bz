@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-04-08",
+      "copyright": "George Peabody Library, Baltimore, Maryland (© Wim Wiskerke/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BeaverDay_EN-US0090956170_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BeaverDay_EN-US0090956170_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BeaverDay_EN-US0090956170_400x240.jpg"
+    },
+    {
       "date": "2025-04-07",
       "copyright": "Gaztelugatxe at sunset, Basque Country, Spain (© Eloi_Omella/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.PeabodyBaltimore_EN-US0036943577_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BryceHoodoos_EN-US2334649046_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BryceHoodoos_EN-US2334649046_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BryceHoodoos_EN-US2334649046_400x240.jpg"
-    },
-    {
-      "date": "2025-02-25",
-      "copyright": "Mount Fuji at sunrise, Lake Kawaguchi, Japan (© Twenty47studio/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.GiantCuttlefish_EN-US2276053377_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.GiantCuttlefish_EN-US2276053377_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.GiantCuttlefish_EN-US2276053377_400x240.jpg"
     }
   ],
   "page": 13,
   "pageSize": 42,
-  "total": 2029,
+  "total": 2030,
   "totalPages": 49,
   "hasMore": true
 }

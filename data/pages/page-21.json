@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-05-07",
+      "copyright": "Fujian Tulou complex of historical and cultural heritage buildings in Fujian province, China (© Hongjie Han/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.CheetahRain_EN-US6179670004_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.CheetahRain_EN-US6179670004_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.CheetahRain_EN-US6179670004_400x240.jpg"
+    },
+    {
       "date": "2024-05-06",
       "copyright": "El Capitan at sunrise in Guadalupe Mountains National Park, Texas (© Adam Mowery/Tandem Stills + Motion)",
       "jpg": "https://cn.bing.com/th?id=OHR.TulouFujian_EN-US6009679228_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.CherryBlossomsDC_EN-US3285783737_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.CherryBlossomsDC_EN-US3285783737_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.CherryBlossomsDC_EN-US3285783737_400x240.jpg"
-    },
-    {
-      "date": "2024-03-26",
-      "copyright": "Elephant Rock, Al-Ula, Saudi Arabia (© Lubo Ivanko/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SpringFrog_EN-US7109699294_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SpringFrog_EN-US7109699294_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SpringFrog_EN-US7109699294_400x240.jpg"
     }
   ],
   "page": 21,
   "pageSize": 42,
-  "total": 2029,
+  "total": 2030,
   "totalPages": 49,
   "hasMore": true
 }

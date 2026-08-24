@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-09-23",
+      "copyright": "Sea otters, Prince William Sound, Alaska (© Gerald Corsi/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AspenEquinox_EN-US8237887036_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AspenEquinox_EN-US8237887036_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AspenEquinox_EN-US8237887036_400x240.jpg"
+    },
+    {
       "date": "2025-09-22",
       "copyright": "Swing carousel at Oktoberfest, Munich, Germany (© LOOK-foto/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.IceOtters_EN-US7982442590_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.KenyaElephants_EN-US8723347309_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.KenyaElephants_EN-US8723347309_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.KenyaElephants_EN-US8723347309_400x240.jpg"
-    },
-    {
-      "date": "2025-08-12",
-      "copyright": "Lioness in Maasai Mara National Reserve, Kenya (© Tandem Stock/Adobe Stock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SantaMaddalena_EN-US8546897995_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SantaMaddalena_EN-US8546897995_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SantaMaddalena_EN-US8546897995_400x240.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 2029,
+  "total": 2030,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-08-25",
+      "copyright": "红木国家与州立公园的日出，加利福尼亚州，美国 (© HadelProductions/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.RedwoodPark_ZH-CN9513051062_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.RedwoodPark_ZH-CN9513051062_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.RedwoodPark_ZH-CN9513051062_400x240.jpg"
+    },
+    {
       "date": "2026-08-24",
       "copyright": "布鲁克林大桥，纽约市，美国 (© shayes17/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BKBridge_ZH-CN3870511222_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MarieLake_EN-US0365186943_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MarieLake_EN-US0365186943_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MarieLake_EN-US0365186943_400x240.jpg"
-    },
-    {
-      "date": "2026-07-14",
-      "copyright": "Antelope Canyon on the Navajo Nation, east of Page, Arizona (© Mark Skalny/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LemonShark_EN-US9828936448_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LemonShark_EN-US9828936448_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.LemonShark_EN-US9828936448_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2029,
+  "total": 2030,
   "totalPages": 49,
   "hasMore": true
 }

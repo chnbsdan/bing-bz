@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-12-16",
+      "copyright": "Tufted titmouse perched on pine boughs, Massachusetts (© Tim Laman/NPL/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AmsterdamLights_EN-US4980559514_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AmsterdamLights_EN-US4980559514_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AmsterdamLights_EN-US4980559514_400x240.jpg"
+    },
+    {
       "date": "2025-12-15",
       "copyright": "Merced River, Yosemite National Park, California (© Ron and Patty Thomas/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.TuftedTitmouse_EN-US4835376471_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.TowerBridgeUK_EN-US6871236865_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.TowerBridgeUK_EN-US6871236865_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.TowerBridgeUK_EN-US6871236865_400x240.jpg"
-    },
-    {
-      "date": "2025-11-04",
-      "copyright": "Colorful maple leaves and bamboo forest in Arashiyama, Kyoto, Japan (© DoctorEgg/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MexicoJelly_EN-US6803524310_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MexicoJelly_EN-US6803524310_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MexicoJelly_EN-US6803524310_400x240.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2029,
+  "total": 2030,
   "totalPages": 49,
   "hasMore": true
 }

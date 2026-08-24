@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-11-04",
+      "copyright": "Colorful maple leaves and bamboo forest in Arashiyama, Kyoto, Japan (© DoctorEgg/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MexicoJelly_EN-US6803524310_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MexicoJelly_EN-US6803524310_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.MexicoJelly_EN-US6803524310_400x240.jpg"
+    },
+    {
       "date": "2025-11-03",
       "copyright": "Bison grazing at thermal hot springs, Yellowstone National Park, Wyoming (© Cheryl Ramalho/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.KyotoMaple_EN-US6732403492_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ToucanForest_EN-US8319635845_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ToucanForest_EN-US8319635845_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ToucanForest_EN-US8319635845_400x240.jpg"
-    },
-    {
-      "date": "2025-09-23",
-      "copyright": "Sea otters, Prince William Sound, Alaska (© Gerald Corsi/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AspenEquinox_EN-US8237887036_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AspenEquinox_EN-US8237887036_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AspenEquinox_EN-US8237887036_400x240.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2029,
+  "total": 2030,
   "totalPages": 49,
   "hasMore": true
 }
