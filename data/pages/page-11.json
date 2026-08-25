@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-07-02",
+      "copyright": "Wolfe Creek Crater, Australia (© Abstract Aerial Art/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.CanadaDayFogo_EN-US0231478181_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.CanadaDayFogo_EN-US0231478181_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.CanadaDayFogo_EN-US0231478181_400x240.jpg"
+    },
+    {
       "date": "2025-07-01",
       "copyright": "Blue lagoon at Pulau Ay, Banda Islands, Indonesia (© fabio lamanna/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.WolfeCrater_EN-US2390330059_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SongyangTeaGarden_EN-US3919106941_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SongyangTeaGarden_EN-US3919106941_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SongyangTeaGarden_EN-US3919106941_400x240.jpg"
-    },
-    {
-      "date": "2025-05-21",
-      "copyright": "Mount Hamilton, near San Jose, California (© Jeffrey Lewis/TANDEM Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.HoneyBeeLavender_EN-US3860322899_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.HoneyBeeLavender_EN-US3860322899_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.HoneyBeeLavender_EN-US3860322899_400x240.jpg"
     }
   ],
   "page": 11,
   "pageSize": 42,
-  "total": 2030,
+  "total": 2031,
   "totalPages": 49,
   "hasMore": true
 }

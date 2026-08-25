@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-08-26",
+      "copyright": "基尔丘山上空的极光，冰岛 (© Cavan Images/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AurorasIceland_ZH-CN9781322454_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AurorasIceland_ZH-CN9781322454_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AurorasIceland_ZH-CN9781322454_400x240.jpg"
+    },
+    {
       "date": "2026-08-25",
       "copyright": "红木国家与州立公园的日出，加利福尼亚州，美国 (© HadelProductions/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.RedwoodPark_ZH-CN9513051062_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.NavyPier_EN-US1069960047_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.NavyPier_EN-US1069960047_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.NavyPier_EN-US1069960047_400x240.jpg"
-    },
-    {
-      "date": "2026-07-15",
-      "copyright": "Lemon shark pup in mangrove forest, Eleuthera, Bahamas (© Shane Gross/Nature Picture Library)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MarieLake_EN-US0365186943_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MarieLake_EN-US0365186943_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MarieLake_EN-US0365186943_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2030,
+  "total": 2031,
   "totalPages": 49,
   "hasMore": true
 }

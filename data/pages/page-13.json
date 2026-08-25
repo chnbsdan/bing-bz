@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-04-09",
+      "copyright": "North American beaver, Moran, Wyoming (© Enrique Aguirre Aves/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ParoTsechu_EN-US0177055246_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ParoTsechu_EN-US0177055246_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ParoTsechu_EN-US0177055246_400x240.jpg"
+    },
+    {
       "date": "2025-04-08",
       "copyright": "George Peabody Library, Baltimore, Maryland (© Wim Wiskerke/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.BeaverDay_EN-US0090956170_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ArgyllStalker_EN-US2452683665_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ArgyllStalker_EN-US2452683665_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ArgyllStalker_EN-US2452683665_400x240.jpg"
-    },
-    {
-      "date": "2025-02-26",
-      "copyright": "Group of giant cuttlefish in Spencer Gulf, off Whyalla, South Australia (© Gary Bell/Minden Pictures)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BryceHoodoos_EN-US2334649046_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BryceHoodoos_EN-US2334649046_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BryceHoodoos_EN-US2334649046_400x240.jpg"
     }
   ],
   "page": 13,
   "pageSize": 42,
-  "total": 2030,
+  "total": 2031,
   "totalPages": 49,
   "hasMore": true
 }

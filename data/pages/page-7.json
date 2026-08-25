@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-12-17",
+      "copyright": "Lights on Spiegelgracht canal, Amsterdam, Netherlands (© Amith Nag Photography/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ChristmasGnomes_EN-US5094302697_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ChristmasGnomes_EN-US5094302697_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ChristmasGnomes_EN-US5094302697_400x240.jpg"
+    },
+    {
       "date": "2025-12-16",
       "copyright": "Tufted titmouse perched on pine boughs, Massachusetts (© Tim Laman/NPL/Minden Pictures)",
       "jpg": "https://cn.bing.com/th?id=OHR.AmsterdamLights_EN-US4980559514_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MoncayoAutumn_EN-US1753631441_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MoncayoAutumn_EN-US1753631441_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MoncayoAutumn_EN-US1753631441_400x240.jpg"
-    },
-    {
-      "date": "2025-11-05",
-      "copyright": "Jellyfish swimming in the Pacific, Guerrero, Mexico (© Christian Vizl/TANDEM Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.TowerBridgeUK_EN-US6871236865_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.TowerBridgeUK_EN-US6871236865_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.TowerBridgeUK_EN-US6871236865_400x240.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2030,
+  "total": 2031,
   "totalPages": 49,
   "hasMore": true
 }
