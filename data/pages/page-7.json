@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-12-18",
+      "copyright": "Handmade gnomes at a Christmas market (© Veronika Seppanen/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FrostySquirrel_EN-US5169660143_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FrostySquirrel_EN-US5169660143_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.FrostySquirrel_EN-US5169660143_400x240.jpg"
+    },
+    {
       "date": "2025-12-17",
       "copyright": "Lights on Spiegelgracht canal, Amsterdam, Netherlands (© Amith Nag Photography/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ChristmasGnomes_EN-US5094302697_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.LanternsThailand_EN-US6955074347_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.LanternsThailand_EN-US6955074347_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.LanternsThailand_EN-US6955074347_400x240.jpg"
-    },
-    {
-      "date": "2025-11-06",
-      "copyright": "Tower Bridge, London, England (© Nick Brundle Photography/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MoncayoAutumn_EN-US1753631441_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MoncayoAutumn_EN-US1753631441_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MoncayoAutumn_EN-US1753631441_400x240.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2031,
+  "total": 2032,
   "totalPages": 49,
   "hasMore": true
 }

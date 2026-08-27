@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-06-08",
+      "copyright": "Lantern floating ceremony, Ala Moana Beach Park, Honolulu, Hawaii (© Naomi Hayes of Island Memories Photography/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.HiddenBeach_EN-US8990991711_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.HiddenBeach_EN-US8990991711_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.HiddenBeach_EN-US8990991711_400x240.jpg"
+    },
+    {
       "date": "2023-06-07",
       "copyright": "Tegallalang terrace farms in Ubud, Bali, Indonesia (© Cavan Images/Adobe Stock)",
       "jpg": "https://cn.bing.com/th?id=OHR.LanternFloating_EN-US4433076187_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.TaiwanYuhina_EN-US1768443431_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.TaiwanYuhina_EN-US1768443431_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.TaiwanYuhina_EN-US1768443431_400x240.jpg"
-    },
-    {
-      "date": "2023-04-27",
-      "copyright": "'One Thousand Springs' haiku art installation by Chiharu Shiota, Kew Royal Botanic Gardens, London, England (© Guy Bell/Alamy Live News)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MPPUnesco_EN-US8204922969_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MPPUnesco_EN-US8204922969_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MPPUnesco_EN-US8204922969_400x240.jpg"
     }
   ],
   "page": 29,
   "pageSize": 42,
-  "total": 2031,
+  "total": 2032,
   "totalPages": 49,
   "hasMore": true
 }

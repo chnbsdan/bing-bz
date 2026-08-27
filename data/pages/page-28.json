@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-07-20",
+      "copyright": "Sand bar in Nakupenda Beach Nature Reserve, Zanzibar, Tanzania  (© Lubos Paukeje/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ZhangyeGeopark_EN-US3229882052_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ZhangyeGeopark_EN-US3229882052_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ZhangyeGeopark_EN-US3229882052_400x240.jpg"
+    },
+    {
       "date": "2023-07-19",
       "copyright": "Hong Kong SAR (© leungchopan/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.NakupendaBeach_EN-US3130365422_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.WorldOtterDay_EN-US4690332709_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.WorldOtterDay_EN-US4690332709_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.WorldOtterDay_EN-US4690332709_400x240.jpg"
-    },
-    {
-      "date": "2023-06-08",
-      "copyright": "Lantern floating ceremony, Ala Moana Beach Park, Honolulu, Hawaii (© Naomi Hayes of Island Memories Photography/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.HiddenBeach_EN-US8990991711_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.HiddenBeach_EN-US8990991711_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.HiddenBeach_EN-US8990991711_400x240.jpg"
     }
   ],
   "page": 28,
   "pageSize": 42,
-  "total": 2031,
+  "total": 2032,
   "totalPages": 49,
   "hasMore": true
 }

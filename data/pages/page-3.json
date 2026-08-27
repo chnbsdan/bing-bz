@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-06-04",
+      "copyright": "Cyclist in Bardenas Reales Natural Park and Biosphere Reserve, Navarra, Spain (© Artur Debat/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.PreeningEgret_EN-US9350488148_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.PreeningEgret_EN-US9350488148_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.PreeningEgret_EN-US9350488148_400x240.jpg"
+    },
+    {
       "date": "2026-06-03",
       "copyright": "Highway through Xitai Jinaier Lake, Qinghai Province, China (© Kaicheng Xu/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BardenasReales_EN-US9044910730_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SlashPine_EN-US2059787604_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SlashPine_EN-US2059787604_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SlashPine_EN-US2059787604_400x240.jpg"
-    },
-    {
-      "date": "2026-04-23",
-      "copyright": "Alam-Pedja Nature Reserve in Tartu County, Estonia (© Sven Zacek/Nature Picture Library)",
-      "jpg": "https://cn.bing.com/th?id=OHR.HathawayCottage_EN-US1795877015_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.HathawayCottage_EN-US1795877015_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.HathawayCottage_EN-US1795877015_400x240.jpg"
     }
   ],
   "page": 3,
   "pageSize": 42,
-  "total": 2031,
+  "total": 2032,
   "totalPages": 49,
   "hasMore": true
 }

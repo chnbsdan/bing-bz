@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-04-10",
+      "copyright": "Women in traditional dress at the Paro Tshechu Festival in Bhutan (© Richard I'Anson/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BlueNaxos_EN-US0374867860_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BlueNaxos_EN-US0374867860_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BlueNaxos_EN-US0374867860_400x240.jpg"
+    },
+    {
       "date": "2025-04-09",
       "copyright": "North American beaver, Moran, Wyoming (© Enrique Aguirre Aves/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ParoTsechu_EN-US0177055246_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.PolarCub_EN-US2740470421_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PolarCub_EN-US2740470421_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.PolarCub_EN-US2740470421_400x240.jpg"
-    },
-    {
-      "date": "2025-02-27",
-      "copyright": "Sandstone hoodoos, Bryce Canyon National Park, Utah (© Stephen Matera/TANDEM Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ArgyllStalker_EN-US2452683665_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ArgyllStalker_EN-US2452683665_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ArgyllStalker_EN-US2452683665_400x240.jpg"
     }
   ],
   "page": 13,
   "pageSize": 42,
-  "total": 2031,
+  "total": 2032,
   "totalPages": 49,
   "hasMore": true
 }
