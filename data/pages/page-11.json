@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-07-04",
+      "copyright": "Spine-cheeked anemonefish surrounded by bubble-tip anemone, Milne Bay, Papua New Guinea (© Fred Bavendam/Nature Picture Library)",
+      "jpg": "https://cn.bing.com/th?id=OHR.RainbowRiver_EN-US0442967532_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.RainbowRiver_EN-US0442967532_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.RainbowRiver_EN-US0442967532_400x240.jpg"
+    },
+    {
       "date": "2025-07-03",
       "copyright": "Fishing village of Tilting, Fogo Island, Newfoundland and Labrador, Canada (© FedevPhoto/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MaroonClownfish_EN-US0391262783_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ButterflyTurtle_EN-US4083359630_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ButterflyTurtle_EN-US4083359630_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ButterflyTurtle_EN-US4083359630_400x240.jpg"
-    },
-    {
-      "date": "2025-05-23",
-      "copyright": "Tea garden at Yangjiatang Village, Songyang County, China (© feng xu/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BaobabAvenue_EN-US3968050605_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BaobabAvenue_EN-US3968050605_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BaobabAvenue_EN-US3968050605_400x240.jpg"
     }
   ],
   "page": 11,
   "pageSize": 42,
-  "total": 2032,
+  "total": 2033,
   "totalPages": 49,
   "hasMore": true
 }

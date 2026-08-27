@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-12-19",
+      "copyright": "Eurasian red squirrel in Northumberland, England (© Michael_Conrad/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.CathedralValley_EN-US5270905846_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.CathedralValley_EN-US5270905846_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.CathedralValley_EN-US5270905846_400x240.jpg"
+    },
+    {
       "date": "2025-12-18",
       "copyright": "Handmade gnomes at a Christmas market (© Veronika Seppanen/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.FrostySquirrel_EN-US5169660143_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.WillowBear_EN-US6995170630_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.WillowBear_EN-US6995170630_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.WillowBear_EN-US6995170630_400x240.jpg"
-    },
-    {
-      "date": "2025-11-07",
-      "copyright": "Peña Roya beech forest, Moncayo Natural Park, Zaragoza, Aragon, Spain (© David Santiago Garcia/DEEPOL by plainpicture)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LanternsThailand_EN-US6955074347_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LanternsThailand_EN-US6955074347_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.LanternsThailand_EN-US6955074347_400x240.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2032,
+  "total": 2033,
   "totalPages": 49,
   "hasMore": true
 }

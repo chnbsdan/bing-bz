@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-01-21",
+      "copyright": "格雷厄姆海峡的阿德利企鹅，南极洲南极半岛 (© Nick Garbutt/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.HuggingDay_ZH-CN2984681593_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.HuggingDay_ZH-CN2984681593_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.HuggingDay_ZH-CN2984681593_400x240.jpg"
+    },
+    {
       "date": "2022-01-20",
       "copyright": "克卢恩国家公园保护区的山脉和冰川，加拿大育空地区 (© Design Pics Inc/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.GrahamAdelie_ZH-CN2945763969_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ShadowEverest_ZH-CN9951649290_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ShadowEverest_ZH-CN9951649290_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ShadowEverest_ZH-CN9951649290_400x240.jpg"
-    },
-    {
-      "date": "2021-12-10",
-      "copyright": "蓝山国家公园里的萤火虫，澳大利亚 (© Leelakajonkij/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.FoxDovrefjell_ZH-CN9554491452_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.FoxDovrefjell_ZH-CN9554491452_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.FoxDovrefjell_ZH-CN9554491452_400x240.jpg"
     }
   ],
   "page": 41,
   "pageSize": 42,
-  "total": 2032,
+  "total": 2033,
   "totalPages": 49,
   "hasMore": true
 }

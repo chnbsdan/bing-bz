@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-06-05",
+      "copyright": "Snowy egret preening, central Florida, USA (© Donald M. Jones/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.WedLapland_EN-US9813120088_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.WedLapland_EN-US9813120088_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.WedLapland_EN-US9813120088_400x240.jpg"
+    },
+    {
       "date": "2026-06-04",
       "copyright": "Cyclist in Bardenas Reales Natural Park and Biosphere Reserve, Navarra, Spain (© Artur Debat/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.PreeningEgret_EN-US9350488148_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.GalapagosPenguins_EN-US2287809863_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.GalapagosPenguins_EN-US2287809863_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.GalapagosPenguins_EN-US2287809863_400x240.jpg"
-    },
-    {
-      "date": "2026-04-24",
-      "copyright": "Anne Hathaway's cottage and garden, Stratford-upon-Avon, England (© David Steele/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SlashPine_EN-US2059787604_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SlashPine_EN-US2059787604_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SlashPine_EN-US2059787604_400x240.jpg"
     }
   ],
   "page": 3,
   "pageSize": 42,
-  "total": 2032,
+  "total": 2033,
   "totalPages": 49,
   "hasMore": true
 }

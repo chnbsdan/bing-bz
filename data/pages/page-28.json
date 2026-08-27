@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-07-21",
+      "copyright": "Zhangye Danxia National Geopark, Gansu province, China (© TONNAJA/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BlacktipSharks_EN-US9224288033_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BlacktipSharks_EN-US9224288033_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BlacktipSharks_EN-US9224288033_400x240.jpg"
+    },
+    {
       "date": "2023-07-20",
       "copyright": "Sand bar in Nakupenda Beach Nature Reserve, Zanzibar, Tanzania  (© Lubos Paukeje/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.ZhangyeGeopark_EN-US3229882052_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ReefAwareness_EN-US4807167780_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ReefAwareness_EN-US4807167780_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ReefAwareness_EN-US4807167780_400x240.jpg"
-    },
-    {
-      "date": "2023-06-09",
-      "copyright": "Playa del Amor in the Marietas Islands, off the coast of Puerto Vallarta, Mexico (© ferrantraite/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.WorldOtterDay_EN-US4690332709_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.WorldOtterDay_EN-US4690332709_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.WorldOtterDay_EN-US4690332709_400x240.jpg"
     }
   ],
   "page": 28,
   "pageSize": 42,
-  "total": 2032,
+  "total": 2033,
   "totalPages": 49,
   "hasMore": true
 }

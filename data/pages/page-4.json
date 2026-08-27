@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-04-24",
+      "copyright": "Anne Hathaway's cottage and garden, Stratford-upon-Avon, England (© David Steele/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SlashPine_EN-US2059787604_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SlashPine_EN-US2059787604_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SlashPine_EN-US2059787604_400x240.jpg"
+    },
+    {
       "date": "2026-04-23",
       "copyright": "Alam-Pedja Nature Reserve in Tartu County, Estonia (© Sven Zacek/Nature Picture Library)",
       "jpg": "https://cn.bing.com/th?id=OHR.HathawayCottage_EN-US1795877015_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.CornwallDolmen_EN-US7192709883_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.CornwallDolmen_EN-US7192709883_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.CornwallDolmen_EN-US7192709883_400x240.jpg"
-    },
-    {
-      "date": "2026-03-13",
-      "copyright": "Juvenile sunbittern displaying at nest, Ecuador (© Andy Rouse/naturepl.com)",
-      "jpg": "https://cn.bing.com/th?id=OHR.VendeeVaults_EN-US7120114878_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.VendeeVaults_EN-US7120114878_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.VendeeVaults_EN-US7120114878_400x240.jpg"
     }
   ],
   "page": 4,
   "pageSize": 42,
-  "total": 2032,
+  "total": 2033,
   "totalPages": 49,
   "hasMore": true
 }

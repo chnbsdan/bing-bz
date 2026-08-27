@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-08-28",
+      "copyright": "涨潮时的圣米歇尔山，芒什省，诺曼底，法国 (© Clement LEONARD/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MichelSunset_ZH-CN0822968543_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MichelSunset_ZH-CN0822968543_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.MichelSunset_ZH-CN0822968543_400x240.jpg"
+    },
+    {
       "date": "2026-08-27",
       "copyright": "日出时的小红鹳群，马加迪湖，肯尼亚 (© Denis-Huot/Nature Picture Library)",
       "jpg": "https://cn.bing.com/th?id=OHR.LakeMagadi_ZH-CN0601527009_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.DevilsBridge_EN-US3505962815_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.DevilsBridge_EN-US3505962815_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.DevilsBridge_EN-US3505962815_400x240.jpg"
-    },
-    {
-      "date": "2026-07-17",
-      "copyright": "Navy Pier, Chicago, Illinois (© Christopher.F Photography/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.VaiUmbrellas_EN-US8985051242_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.VaiUmbrellas_EN-US8985051242_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.VaiUmbrellas_EN-US8985051242_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2032,
+  "total": 2033,
   "totalPages": 49,
   "hasMore": true
 }
