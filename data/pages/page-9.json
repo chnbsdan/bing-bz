@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-09-27",
+      "copyright": "Chittorgarh Fort, Rajasthan, India (© chetansoni/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AutumnChipmunk_EN-US9248365602_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AutumnChipmunk_EN-US9248365602_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AutumnChipmunk_EN-US9248365602_400x240.jpg"
+    },
+    {
       "date": "2025-09-26",
       "copyright": "Devils Tower National Monument, Wyoming (© Laura Hedien/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.FortChittorgarh_EN-US9184486139_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ColorfulBeehives_EN-US1476944743_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ColorfulBeehives_EN-US1476944743_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ColorfulBeehives_EN-US1476944743_400x240.jpg"
-    },
-    {
-      "date": "2025-08-16",
-      "copyright": "Cable car station on Piz Nair mountain, Graubünden, Switzerland (© Roberto Moiola/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SpottedEagleRay_EN-US9227600044_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SpottedEagleRay_EN-US9227600044_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SpottedEagleRay_EN-US9227600044_400x240.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 2033,
+  "total": 2034,
   "totalPages": 49,
   "hasMore": true
 }

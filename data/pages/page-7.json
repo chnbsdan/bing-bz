@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-12-20",
+      "copyright": "Temple of the Sun, Capitol Reef National Park, Utah (© Austin Cronnelly/TANDEM Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BormioItaly_EN-US5324526286_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BormioItaly_EN-US5324526286_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BormioItaly_EN-US5324526286_400x240.jpg"
+    },
+    {
       "date": "2025-12-19",
       "copyright": "Eurasian red squirrel in Northumberland, England (© Michael_Conrad/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.CathedralValley_EN-US5270905846_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BandonBeach_EN-US7099626478_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BandonBeach_EN-US7099626478_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BandonBeach_EN-US7099626478_400x240.jpg"
-    },
-    {
-      "date": "2025-11-08",
-      "copyright": "Colorful lanterns at the temple of Wat Phra That Hariphunchai, Lamphun, Thailand (© MR. ANUJAK JAIMOOK/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.WillowBear_EN-US6995170630_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.WillowBear_EN-US6995170630_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.WillowBear_EN-US6995170630_400x240.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2033,
+  "total": 2034,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-08-29",
+      "copyright": "冲浪者航拍图，圣卡塔琳娜州，巴西 (© Wonderful Nature/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SantaCatarina_ZH-CN4170292043_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SantaCatarina_ZH-CN4170292043_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SantaCatarina_ZH-CN4170292043_400x240.jpg"
+    },
+    {
       "date": "2026-08-28",
       "copyright": "涨潮时的圣米歇尔山，芒什省，诺曼底，法国 (© Clement LEONARD/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MichelSunset_ZH-CN0822968543_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.HirundoRustica_EN-US3193611104_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.HirundoRustica_EN-US3193611104_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.HirundoRustica_EN-US3193611104_400x240.jpg"
-    },
-    {
-      "date": "2026-07-18",
-      "copyright": "Sunbeds on the beach at Vai, Crete, Greece (© borchee/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.DevilsBridge_EN-US3505962815_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.DevilsBridge_EN-US3505962815_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.DevilsBridge_EN-US3505962815_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2033,
+  "total": 2034,
   "totalPages": 49,
   "hasMore": true
 }

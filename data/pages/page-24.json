@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-01-06",
+      "copyright": "Daiichi Tadami River Bridge, Fukushima prefecture, Japan (© DoctorEgg/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ThailandNewYears_EN-US7115555089_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ThailandNewYears_EN-US7115555089_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ThailandNewYears_EN-US7115555089_400x240.jpg"
+    },
+    {
       "date": "2024-01-05",
       "copyright": "Oud-West, Amsterdam, Netherlands (© George Pachantouris/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.TadamiWinter_EN-US6973402256_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ChapmanAdventure_EN-US2522291999_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ChapmanAdventure_EN-US2522291999_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ChapmanAdventure_EN-US2522291999_400x240.jpg"
-    },
-    {
-      "date": "2023-11-25",
-      "copyright": "Polar bear mother and cubs, Churchill, Manitoba, Canada (© Thorsten Milse/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.FrozenBog_EN-US2448711069_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.FrozenBog_EN-US2448711069_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.FrozenBog_EN-US2448711069_400x240.jpg"
     }
   ],
   "page": 24,
   "pageSize": 42,
-  "total": 2033,
+  "total": 2034,
   "totalPages": 49,
   "hasMore": true
 }

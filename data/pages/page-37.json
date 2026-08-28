@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-07-09",
+      "copyright": "'Vejrpigerne' ('The Weather Girls') sculpture on top of the Richshuset building in City Hall Square, Copenhagen, Denmark (© Stig Alenas/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.HalfwayDay_EN-US6981774268_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.HalfwayDay_EN-US6981774268_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.HalfwayDay_EN-US6981774268_400x240.jpg"
+    },
+    {
       "date": "2022-07-08",
       "copyright": "The Acraman crater, Australia (© USGS/NASA Landsat data/Orbital Horizon/Gallo Images/Getty images)",
       "jpg": "https://cn.bing.com/th?id=OHR.WeatherGirls_EN-US6924387788_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.HyaliteCreek_ZH-CN0400013447_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.HyaliteCreek_ZH-CN0400013447_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.HyaliteCreek_ZH-CN0400013447_400x240.jpg"
-    },
-    {
-      "date": "2022-05-28",
-      "copyright": "金门大桥和马林岬角，美国加利福尼亚州 (© Jeff Lewis/Tandem Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.PurnululuNP_ZH-CN0102753224_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.PurnululuNP_ZH-CN0102753224_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.PurnululuNP_ZH-CN0102753224_400x240.jpg"
     }
   ],
   "page": 37,
   "pageSize": 42,
-  "total": 2033,
+  "total": 2034,
   "totalPages": 49,
   "hasMore": true
 }

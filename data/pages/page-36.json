@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-08-20",
+      "copyright": "Cueva de las Manos (Cave of the Hands) in Santa Cruz, Argentina (© Adwo/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AnniversaryJTNP_EN-US2914674933_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AnniversaryJTNP_EN-US2914674933_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AnniversaryJTNP_EN-US2914674933_400x240.jpg"
+    },
+    {
       "date": "2022-08-19",
       "copyright": "Aerial view of the island Pantaleu near Sant Elm, Mallorca, Spain (© Dimitri Weber/Amazing Aerial Agency)",
       "jpg": "https://cn.bing.com/th?id=OHR.CuevaManos_EN-US2810052050_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SummerDogs_EN-US7055120050_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SummerDogs_EN-US7055120050_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SummerDogs_EN-US7055120050_400x240.jpg"
-    },
-    {
-      "date": "2022-07-09",
-      "copyright": "'Vejrpigerne' ('The Weather Girls') sculpture on top of the Richshuset building in City Hall Square, Copenhagen, Denmark (© Stig Alenas/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.HalfwayDay_EN-US6981774268_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.HalfwayDay_EN-US6981774268_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.HalfwayDay_EN-US6981774268_400x240.jpg"
     }
   ],
   "page": 36,
   "pageSize": 42,
-  "total": 2033,
+  "total": 2034,
   "totalPages": 49,
   "hasMore": true
 }

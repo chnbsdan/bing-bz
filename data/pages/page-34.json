@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-11-12",
+      "copyright": "Skeleton figures (calacas) dressed up for Día de los Muertos celebrations in Mexico (© Amelia Fuentes Marin/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SpruceGoose_EN-US0021752220_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SpruceGoose_EN-US0021752220_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SpruceGoose_EN-US0021752220_400x240.jpg"
+    },
+    {
       "date": "2022-11-11",
       "copyright": "Trees in Wychwood Forest near Chipping Norton, Oxfordshire, England (© Frederick Ardley/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.Calacas_EN-US6430903741_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.LastDollarRoad_EN-US7923638318_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.LastDollarRoad_EN-US7923638318_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.LastDollarRoad_EN-US7923638318_400x240.jpg"
-    },
-    {
-      "date": "2022-10-01",
-      "copyright": "Raft of sea otters in Sitka Sound, near Sitka, Alaska (© Robert Harding/Offset/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.PWPeaceDoves_EN-US7797522376_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.PWPeaceDoves_EN-US7797522376_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.PWPeaceDoves_EN-US7797522376_400x240.jpg"
     }
   ],
   "page": 34,
   "pageSize": 42,
-  "total": 2033,
+  "total": 2034,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-06-06",
+      "copyright": "View from Skierffe Mountain over the Rapadalen river delta, Sarek National Park, Laponia, Lapland, Sweden (© Robert Haasmann/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.HikingNatchez_EN-US0663065299_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.HikingNatchez_EN-US0663065299_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.HikingNatchez_EN-US0663065299_400x240.jpg"
+    },
+    {
       "date": "2026-06-05",
       "copyright": "Snowy egret preening, central Florida, USA (© Donald M. Jones/Minden Pictures)",
       "jpg": "https://cn.bing.com/th?id=OHR.WedLapland_EN-US9813120088_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AppleBlossoms_EN-US2396192691_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AppleBlossoms_EN-US2396192691_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AppleBlossoms_EN-US2396192691_400x240.jpg"
-    },
-    {
-      "date": "2026-04-25",
-      "copyright": "Forest hammock of slash pine and saw palmetto, Everglades National Park, Florida (© Mary Liz Austin/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.GalapagosPenguins_EN-US2287809863_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.GalapagosPenguins_EN-US2287809863_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.GalapagosPenguins_EN-US2287809863_400x240.jpg"
     }
   ],
   "page": 3,
   "pageSize": 42,
-  "total": 2033,
+  "total": 2034,
   "totalPages": 49,
   "hasMore": true
 }

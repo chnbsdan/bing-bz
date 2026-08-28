@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-10-01",
+      "copyright": "Raft of sea otters in Sitka Sound, near Sitka, Alaska (© Robert Harding/Offset/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.PWPeaceDoves_EN-US7797522376_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.PWPeaceDoves_EN-US7797522376_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.PWPeaceDoves_EN-US7797522376_400x240.jpg"
+    },
+    {
       "date": "2022-09-30",
       "copyright": "Floral tributes left in London, England, following the death of Queen Elizabeth II (© Maja Smiejkowska/Reuters)",
       "jpg": "https://cn.bing.com/th?id=OHR.SitkaOtters_EN-US7714053956_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MtTsubakuro_EN-US2985513957_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MtTsubakuro_EN-US2985513957_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MtTsubakuro_EN-US2985513957_400x240.jpg"
-    },
-    {
-      "date": "2022-08-20",
-      "copyright": "Cueva de las Manos (Cave of the Hands) in Santa Cruz, Argentina (© Adwo/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AnniversaryJTNP_EN-US2914674933_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AnniversaryJTNP_EN-US2914674933_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AnniversaryJTNP_EN-US2914674933_400x240.jpg"
     }
   ],
   "page": 35,
   "pageSize": 42,
-  "total": 2033,
+  "total": 2034,
   "totalPages": 49,
   "hasMore": true
 }

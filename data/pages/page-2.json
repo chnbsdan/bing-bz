@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-07-18",
+      "copyright": "Sunbeds on the beach at Vai, Crete, Greece (© borchee/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.DevilsBridge_EN-US3505962815_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.DevilsBridge_EN-US3505962815_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.DevilsBridge_EN-US3505962815_400x240.jpg"
+    },
+    {
       "date": "2026-07-17",
       "copyright": "Navy Pier, Chicago, Illinois (© Christopher.F Photography/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.VaiUmbrellas_EN-US8985051242_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.GardenAtlanta_EN-US2319128074_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.GardenAtlanta_EN-US2319128074_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.GardenAtlanta_EN-US2319128074_400x240.jpg"
-    },
-    {
-      "date": "2026-06-06",
-      "copyright": "View from Skierffe Mountain over the Rapadalen river delta, Sarek National Park, Laponia, Lapland, Sweden (© Robert Haasmann/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.HikingNatchez_EN-US0663065299_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.HikingNatchez_EN-US0663065299_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.HikingNatchez_EN-US0663065299_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2033,
+  "total": 2034,
   "totalPages": 49,
   "hasMore": true
 }
