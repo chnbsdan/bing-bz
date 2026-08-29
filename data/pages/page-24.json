@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-01-07",
+      "copyright": "Fireworks over Phra Nakhon Khiri, Phetchaburi, Thailand (© noomcpk/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SleepingFox_EN-US7231760677_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SleepingFox_EN-US7231760677_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SleepingFox_EN-US7231760677_400x240.jpg"
+    },
+    {
       "date": "2024-01-06",
       "copyright": "Daiichi Tadami River Bridge, Fukushima prefecture, Japan (© DoctorEgg/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ThailandNewYears_EN-US7115555089_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.HelloSeal_EN-US2666982656_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.HelloSeal_EN-US2666982656_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.HelloSeal_EN-US2666982656_400x240.jpg"
-    },
-    {
-      "date": "2023-11-26",
-      "copyright": "Alam-Pedja Nature Reserve, Estonia (© Sven Zacek/Minden Pictures)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ChapmanAdventure_EN-US2522291999_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ChapmanAdventure_EN-US2522291999_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ChapmanAdventure_EN-US2522291999_400x240.jpg"
     }
   ],
   "page": 24,
   "pageSize": 42,
-  "total": 2034,
+  "total": 2035,
   "totalPages": 49,
   "hasMore": true
 }

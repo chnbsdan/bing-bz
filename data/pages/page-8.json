@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-11-09",
+      "copyright": "Polar bear in Churchill, Manitoba, Canada (© karen crewe/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BandonBeach_EN-US7099626478_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BandonBeach_EN-US7099626478_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BandonBeach_EN-US7099626478_400x240.jpg"
+    },
+    {
       "date": "2025-11-08",
       "copyright": "Colorful lanterns at the temple of Wat Phra That Hariphunchai, Lamphun, Thailand (© MR. ANUJAK JAIMOOK/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.WillowBear_EN-US6995170630_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.PienzaItaly_EN-US8831227247_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PienzaItaly_EN-US8831227247_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.PienzaItaly_EN-US8831227247_400x240.jpg"
-    },
-    {
-      "date": "2025-09-28",
-      "copyright": "Least chipmunk, Kootenai National Forest, Montana (© Donald M. Jones/Minden Pictures)",
-      "jpg": "https://cn.bing.com/th?id=OHR.TankLakes_EN-US9278332978_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.TankLakes_EN-US9278332978_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.TankLakes_EN-US9278332978_400x240.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2034,
+  "total": 2035,
   "totalPages": 49,
   "hasMore": true
 }

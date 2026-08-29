@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2021-09-19",
+      "copyright": "贝纳吉尔洞穴，葡萄牙阿尔加维 (© Michael Malorny/Offset by Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.Firefox_ZH-CN0575885603_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.Firefox_ZH-CN0575885603_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.Firefox_ZH-CN0575885603_400x240.jpg"
+    },
+    {
       "date": "2021-09-18",
       "copyright": "阿拉普扎的船屋，印度喀拉拉邦 (© Martin Harvey/The Image Bank/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BenagilCave_ZH-CN0480408879_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.QuayBridge_ZH-CN4900551209_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.QuayBridge_ZH-CN4900551209_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.QuayBridge_ZH-CN4900551209_400x240.jpg"
-    },
-    {
-      "date": "2021-08-08",
-      "copyright": "从索尔兹伯里的峭壁上俯瞰爱丁堡，苏格兰荷里路德公园 (© Andrew Merry/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SaltCones_ZH-CN4825397608_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SaltCones_ZH-CN4825397608_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SaltCones_ZH-CN4825397608_400x240.jpg"
     }
   ],
   "page": 44,
   "pageSize": 42,
-  "total": 2034,
+  "total": 2035,
   "totalPages": 49,
   "hasMore": true
 }

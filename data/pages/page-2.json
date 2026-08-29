@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-07-19",
+      "copyright": "Devil's Bridge in Rhododendron Park Kromlau, Saxony, Germany (© Mike Mareen/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.HirundoRustica_EN-US3193611104_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.HirundoRustica_EN-US3193611104_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.HirundoRustica_EN-US3193611104_400x240.jpg"
+    },
+    {
       "date": "2026-07-18",
       "copyright": "Sunbeds on the beach at Vai, Crete, Greece (© borchee/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.DevilsBridge_EN-US3505962815_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.Cyanea_EN-US1146473249_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.Cyanea_EN-US1146473249_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.Cyanea_EN-US1146473249_400x240.jpg"
-    },
-    {
-      "date": "2026-06-07",
-      "copyright": "Natchez Trace Parkway, Tupelo, Mississippi, USA (© The best photo is earned/Getty Images Plus)",
-      "jpg": "https://cn.bing.com/th?id=OHR.GardenAtlanta_EN-US2319128074_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.GardenAtlanta_EN-US2319128074_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.GardenAtlanta_EN-US2319128074_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2034,
+  "total": 2035,
   "totalPages": 49,
   "hasMore": true
 }

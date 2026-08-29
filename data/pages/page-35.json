@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-10-02",
+      "copyright": "'Peace Doves' by artist Peter Walker in Liverpool Cathedral, Liverpool, England (© PAUL ELLIS/AFP via Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.LastDollarRoad_EN-US7923638318_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.LastDollarRoad_EN-US7923638318_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.LastDollarRoad_EN-US7923638318_400x240.jpg"
+    },
+    {
       "date": "2022-10-01",
       "copyright": "Raft of sea otters in Sitka Sound, near Sitka, Alaska (© Robert Harding/Offset/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.PWPeaceDoves_EN-US7797522376_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AmboseliElephants_EN-US1510486473_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AmboseliElephants_EN-US1510486473_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AmboseliElephants_EN-US1510486473_400x240.jpg"
-    },
-    {
-      "date": "2022-08-21",
-      "copyright": "Joshua trees in Joshua Tree National Park, California (© Tim Fitzharris/Minden Pictures)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MtTsubakuro_EN-US2985513957_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MtTsubakuro_EN-US2985513957_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MtTsubakuro_EN-US2985513957_400x240.jpg"
     }
   ],
   "page": 35,
   "pageSize": 42,
-  "total": 2034,
+  "total": 2035,
   "totalPages": 49,
   "hasMore": true
 }

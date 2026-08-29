@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-02-18",
+      "copyright": "Artists performing the dragon dance for Chinese New Year, Luzhou, China (© Liu Guoxing/VCG via Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FolegandrosGreece_EN-US6921652492_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FolegandrosGreece_EN-US6921652492_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.FolegandrosGreece_EN-US6921652492_400x240.jpg"
+    },
+    {
       "date": "2024-02-17",
       "copyright": "Pegadung Rock, Lampung, Sumatra, Indonesia (© CK NG/500px/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ChinaDragon_EN-US6781838142_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BhutanSolstice_EN-US7410762908_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BhutanSolstice_EN-US7410762908_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BhutanSolstice_EN-US7410762908_400x240.jpg"
-    },
-    {
-      "date": "2024-01-07",
-      "copyright": "Fireworks over Phra Nakhon Khiri, Phetchaburi, Thailand (© noomcpk/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SleepingFox_EN-US7231760677_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SleepingFox_EN-US7231760677_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SleepingFox_EN-US7231760677_400x240.jpg"
     }
   ],
   "page": 23,
   "pageSize": 42,
-  "total": 2034,
+  "total": 2035,
   "totalPages": 49,
   "hasMore": true
 }
