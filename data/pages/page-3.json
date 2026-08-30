@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-06-08",
+      "copyright": "Atlanta Botanical Garden, Atlanta, Georgia (© Marcus E Jones/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.Cyanea_EN-US1146473249_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.Cyanea_EN-US1146473249_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.Cyanea_EN-US1146473249_400x240.jpg"
+    },
+    {
       "date": "2026-06-07",
       "copyright": "Natchez Trace Parkway, Tupelo, Mississippi, USA (© The best photo is earned/Getty Images Plus)",
       "jpg": "https://cn.bing.com/th?id=OHR.GardenAtlanta_EN-US2319128074_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AndeanBear_EN-US2465945308_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AndeanBear_EN-US2465945308_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AndeanBear_EN-US2465945308_400x240.jpg"
-    },
-    {
-      "date": "2026-04-27",
-      "copyright": "Pink apple blossoms, Avila Beach, California (© Mimi Ditchie Photography/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MilanGalleria_EN-US2432086382_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MilanGalleria_EN-US2432086382_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MilanGalleria_EN-US2432086382_400x240.jpg"
     }
   ],
   "page": 3,
   "pageSize": 42,
-  "total": 2035,
+  "total": 2036,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-12-22",
+      "copyright": "Christmas star lanterns, Germany (© artas/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SwedenSolstice_EN-US5470044971_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SwedenSolstice_EN-US5470044971_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SwedenSolstice_EN-US5470044971_400x240.jpg"
+    },
+    {
       "date": "2025-12-21",
       "copyright": "Snow-covered landscape at Bormio, Lombardy, Italy (© Roberto Moiola/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.StarLanterns_EN-US5419993556_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.PrairieDogTown_EN-US6854295076_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PrairieDogTown_EN-US6854295076_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.PrairieDogTown_EN-US6854295076_400x240.jpg"
-    },
-    {
-      "date": "2025-11-10",
-      "copyright": "Sea stacks of Bandon Beach in Bandon, Oregon (© Grant Ordelheide/TANDEM Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LagoonNebula_EN-US7186308623_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LagoonNebula_EN-US7186308623_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.LagoonNebula_EN-US7186308623_400x240.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2035,
+  "total": 2036,
   "totalPages": 49,
   "hasMore": true
 }

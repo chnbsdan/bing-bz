@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-10-03",
+      "copyright": "The aspen canopy along the Last Dollar Road near Telluride, Colorado (© Grant Ordelheide/Tandem Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.GoldenJellyfish_EN-US6743816471_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.GoldenJellyfish_EN-US6743816471_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.GoldenJellyfish_EN-US6743816471_400x240.jpg"
+    },
+    {
       "date": "2022-10-02",
       "copyright": "'Peace Doves' by artist Peter Walker in Liverpool Cathedral, Liverpool, England (© PAUL ELLIS/AFP via Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.LastDollarRoad_EN-US7923638318_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BoundaryWaters_EN-US1592534087_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BoundaryWaters_EN-US1592534087_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BoundaryWaters_EN-US1592534087_400x240.jpg"
-    },
-    {
-      "date": "2022-08-22",
-      "copyright": "Mount Tsubakuro near Azumino, Nagano, Japan (© Joshua Hawley/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AmboseliElephants_EN-US1510486473_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AmboseliElephants_EN-US1510486473_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AmboseliElephants_EN-US1510486473_400x240.jpg"
     }
   ],
   "page": 35,
   "pageSize": 42,
-  "total": 2035,
+  "total": 2036,
   "totalPages": 49,
   "hasMore": true
 }

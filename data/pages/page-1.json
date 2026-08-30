@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-08-31",
+      "copyright": "雷吉斯坦广场的建筑细节，撒马尔罕，乌兹别克斯坦 (© Piero M. Bianchi/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SamarkandCeiling_ZH-CN1818913296_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SamarkandCeiling_ZH-CN1818913296_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SamarkandCeiling_ZH-CN1818913296_400x240.jpg"
+    },
+    {
       "date": "2026-08-30",
       "copyright": "鲸鲨与黄金鲹，极乐鸟湾，西巴布亚，印度尼西亚 (© Pete Oxford/Nature Picture Library)",
       "jpg": "https://cn.bing.com/th?id=OHR.YellowShark_ZH-CN1570569826_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SantaCatalina_EN-US1116829215_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SantaCatalina_EN-US1116829215_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SantaCatalina_EN-US1116829215_400x240.jpg"
-    },
-    {
-      "date": "2026-07-20",
-      "copyright": "Barn swallows of different subspecies resting together (© Oscar Dominguez/Tandem Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.Artemis_EN-US0683925849_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.Artemis_EN-US0683925849_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.Artemis_EN-US0683925849_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2035,
+  "total": 2036,
   "totalPages": 49,
   "hasMore": true
 }

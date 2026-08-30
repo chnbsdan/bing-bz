@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-07-07",
+      "copyright": "Descending the Col du Tourmalet in the French Pyrenees during the 2021 Tour de France (© THOMAS SAMSON/AFP via Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MesquiteFlats_EN-US0638943216_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MesquiteFlats_EN-US0638943216_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.MesquiteFlats_EN-US0638943216_400x240.jpg"
+    },
+    {
       "date": "2025-07-06",
       "copyright": "Fourth of July fireworks over Lake Union in Seattle (© Dixin Yan)",
       "jpg": "https://cn.bing.com/th?id=OHR.TourCyclists_EN-US0589835009_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ArlingtonSunrise_EN-US4503302075_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ArlingtonSunrise_EN-US4503302075_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ArlingtonSunrise_EN-US4503302075_400x240.jpg"
-    },
-    {
-      "date": "2025-05-26",
-      "copyright": "Jotunheimen National Park in Norway (© Marisa Estivill/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ButchartFlowers_EN-US3361647368_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ButchartFlowers_EN-US3361647368_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ButchartFlowers_EN-US3361647368_400x240.jpg"
     }
   ],
   "page": 11,
   "pageSize": 42,
-  "total": 2035,
+  "total": 2036,
   "totalPages": 49,
   "hasMore": true
 }

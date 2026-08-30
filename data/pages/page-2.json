@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-07-20",
+      "copyright": "Barn swallows of different subspecies resting together (© Oscar Dominguez/Tandem Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.Artemis_EN-US0683925849_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.Artemis_EN-US0683925849_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.Artemis_EN-US0683925849_400x240.jpg"
+    },
+    {
       "date": "2026-07-19",
       "copyright": "Devil's Bridge in Rhododendron Park Kromlau, Saxony, Germany (© Mike Mareen/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.HirundoRustica_EN-US3193611104_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.CTNPVernazza_EN-US1571456265_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.CTNPVernazza_EN-US1571456265_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.CTNPVernazza_EN-US1571456265_400x240.jpg"
-    },
-    {
-      "date": "2026-06-08",
-      "copyright": "Atlanta Botanical Garden, Atlanta, Georgia (© Marcus E Jones/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.Cyanea_EN-US1146473249_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.Cyanea_EN-US1146473249_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.Cyanea_EN-US1146473249_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2035,
+  "total": 2036,
   "totalPages": 49,
   "hasMore": true
 }
