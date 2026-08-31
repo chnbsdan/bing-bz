@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2021-11-02",
+      "copyright": "海滩上的三趾鹬，法国布列塔尼大区 (© Fabrice Cahez/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.CinnamonFernNS_ZH-CN3822051382_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.CinnamonFernNS_ZH-CN3822051382_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.CinnamonFernNS_ZH-CN3822051382_400x240.jpg"
+    },
+    {
       "date": "2021-11-01",
       "copyright": "约克大教堂墙上的怪诞雕塑，英格兰北约克郡 (© John Potter/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.LittleBirds_ZH-CN3637653515_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MidAutumnFestival2021_ZH-CN7657484762_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MidAutumnFestival2021_ZH-CN7657484762_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MidAutumnFestival2021_ZH-CN7657484762_400x240.jpg"
-    },
-    {
-      "date": "2021-09-21",
-      "copyright": "英国康沃尔郡岸边的日落 (© Andrew Turner/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BlackSun_ZH-CN0889682619_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BlackSun_ZH-CN0889682619_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BlackSun_ZH-CN0889682619_400x240.jpg"
     }
   ],
   "page": 43,
   "pageSize": 42,
-  "total": 2036,
+  "total": 2037,
   "totalPages": 49,
   "hasMore": true
 }

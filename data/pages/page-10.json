@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-08-19",
+      "copyright": "Lyngvig Lighthouse, Hvide Sande, Denmark (© Caroline Brundle Bugge/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AvalancheLake_EN-US1814683119_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AvalancheLake_EN-US1814683119_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AvalancheLake_EN-US1814683119_400x240.jpg"
+    },
+    {
       "date": "2025-08-18",
       "copyright": "Colorful beehives in Italy (© Roberto Caucino/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.LyngvigLighthouse_EN-US1600601632_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SecedaPeak_EN-US0983713623_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SecedaPeak_EN-US0983713623_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SecedaPeak_EN-US0983713623_400x240.jpg"
-    },
-    {
-      "date": "2025-07-08",
-      "copyright": "Mesquite Flat Sand Dunes in Death Valley National Park, California (© Bryan Jolley/TANDEM Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ShetlandGannets_EN-US0812287314_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ShetlandGannets_EN-US0812287314_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ShetlandGannets_EN-US0812287314_400x240.jpg"
     }
   ],
   "page": 10,
   "pageSize": 42,
-  "total": 2036,
+  "total": 2037,
   "totalPages": 49,
   "hasMore": true
 }

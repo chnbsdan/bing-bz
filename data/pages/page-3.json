@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-06-09",
+      "copyright": "Lion's mane jellyfish swimming in the ocean (© Alexander Semenov Images/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.CTNPVernazza_EN-US1571456265_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.CTNPVernazza_EN-US1571456265_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.CTNPVernazza_EN-US1571456265_400x240.jpg"
+    },
+    {
       "date": "2026-06-08",
       "copyright": "Atlanta Botanical Garden, Atlanta, Georgia (© Marcus E Jones/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.Cyanea_EN-US1146473249_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BelemTowerBank_EN-US2528466391_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BelemTowerBank_EN-US2528466391_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BelemTowerBank_EN-US2528466391_400x240.jpg"
-    },
-    {
-      "date": "2026-04-28",
-      "copyright": "The glass dome of Galleria Vittorio Emanuele II, Milan, Italy (© PhillipMinnis/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AndeanBear_EN-US2465945308_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AndeanBear_EN-US2465945308_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AndeanBear_EN-US2465945308_400x240.jpg"
     }
   ],
   "page": 3,
   "pageSize": 42,
-  "total": 2036,
+  "total": 2037,
   "totalPages": 49,
   "hasMore": true
 }

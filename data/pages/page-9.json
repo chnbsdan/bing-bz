@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-09-30",
+      "copyright": "Town of Pienza in Tuscany, Italy (© zpagistock/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.HoutenHouses_EN-US8966537355_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.HoutenHouses_EN-US8966537355_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.HoutenHouses_EN-US8966537355_400x240.jpg"
+    },
+    {
       "date": "2025-09-29",
       "copyright": "Tank Lakes, Alpine Lakes Wilderness, Washington (© Austin Trigg/TANDEM Stills + Motion)",
       "jpg": "https://cn.bing.com/th?id=OHR.PienzaItaly_EN-US8831227247_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SolarAviation_EN-US1940905760_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SolarAviation_EN-US1940905760_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SolarAviation_EN-US1940905760_400x240.jpg"
-    },
-    {
-      "date": "2025-08-19",
-      "copyright": "Lyngvig Lighthouse, Hvide Sande, Denmark (© Caroline Brundle Bugge/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AvalancheLake_EN-US1814683119_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AvalancheLake_EN-US1814683119_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AvalancheLake_EN-US1814683119_400x240.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 2036,
+  "total": 2037,
   "totalPages": 49,
   "hasMore": true
 }

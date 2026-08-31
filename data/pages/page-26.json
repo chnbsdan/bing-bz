@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-10-17",
+      "copyright": "Mount Sopris, Colorado (© Jason Hatfield/Tandem Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.JohnDayFossil_EN-US9957224234_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.JohnDayFossil_EN-US9957224234_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.JohnDayFossil_EN-US9957224234_400x240.jpg"
+    },
+    {
       "date": "2023-10-16",
       "copyright": "Fremont Indian petroglyphs, Dinosaur National Monument, Jensen, Utah (© Dan Leeth/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.SoprisSunrise_EN-US9658915846_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.NingalooShark_EN-US2673625094_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.NingalooShark_EN-US2673625094_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.NingalooShark_EN-US2673625094_400x240.jpg"
-    },
-    {
-      "date": "2023-09-05",
-      "copyright": "Fort Lovrijenac, West Harbor, Dubrovnik, Croatia (© Benny Marty/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.TetonBison_EN-US5358590688_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.TetonBison_EN-US5358590688_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.TetonBison_EN-US5358590688_400x240.jpg"
     }
   ],
   "page": 26,
   "pageSize": 42,
-  "total": 2036,
+  "total": 2037,
   "totalPages": 49,
   "hasMore": true
 }

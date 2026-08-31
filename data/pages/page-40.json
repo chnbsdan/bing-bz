@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-03-08",
+      "copyright": "以新西兰南岛奥拉基/库克山国家公园为背景的特卡波湖 (© Sophie Dover/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.Mercantour_ZH-CN7208180454_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.Mercantour_ZH-CN7208180454_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.Mercantour_ZH-CN7208180454_400x240.jpg"
+    },
+    {
       "date": "2022-03-07",
       "copyright": "在暴风雪中畅游的鸬鹚，德国黑森州 (© Wilfried Martin/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.NZTekapo_ZH-CN6919300257_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MehrangarhCourtyard_ZH-CN3216739355_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MehrangarhCourtyard_ZH-CN3216739355_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MehrangarhCourtyard_ZH-CN3216739355_400x240.jpg"
-    },
-    {
-      "date": "2022-01-25",
-      "copyright": "灯光璀璨的曼哈顿下城，美国纽约 (© New York On Air/Offset/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.StDwynwensDay_ZH-CN3187096355_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.StDwynwensDay_ZH-CN3187096355_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.StDwynwensDay_ZH-CN3187096355_400x240.jpg"
     }
   ],
   "page": 40,
   "pageSize": 42,
-  "total": 2036,
+  "total": 2037,
   "totalPages": 49,
   "hasMore": true
 }

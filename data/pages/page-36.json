@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-08-23",
+      "copyright": "Herd of African elephants in Amboseli National Park, Kenya (© Susan Portnoy/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BoundaryWaters_EN-US1592534087_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BoundaryWaters_EN-US1592534087_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BoundaryWaters_EN-US1592534087_400x240.jpg"
+    },
+    {
       "date": "2022-08-22",
       "copyright": "Mount Tsubakuro near Azumino, Nagano, Japan (© Joshua Hawley/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.AmboseliElephants_EN-US1510486473_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.KissingPuffins_EN-US7469101764_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.KissingPuffins_EN-US7469101764_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.KissingPuffins_EN-US7469101764_400x240.jpg"
-    },
-    {
-      "date": "2022-07-12",
-      "copyright": "Fireworks explode during Independence Day celebrations on July 4, 2021, in Washington, DC (© White House Photo/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.FannetteIsland_EN-US7369656560_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.FannetteIsland_EN-US7369656560_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.FannetteIsland_EN-US7369656560_400x240.jpg"
     }
   ],
   "page": 36,
   "pageSize": 42,
-  "total": 2036,
+  "total": 2037,
   "totalPages": 49,
   "hasMore": true
 }

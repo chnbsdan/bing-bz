@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-01-25",
+      "copyright": "灯光璀璨的曼哈顿下城，美国纽约 (© New York On Air/Offset/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.StDwynwensDay_ZH-CN3187096355_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.StDwynwensDay_ZH-CN3187096355_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.StDwynwensDay_ZH-CN3187096355_400x240.jpg"
+    },
+    {
       "date": "2022-01-24",
       "copyright": "海岸旁的二见浦夫妇岩，日本三重县 (© Marco Gaiotti/plainpicture)",
       "jpg": "https://cn.bing.com/th?id=OHR.ManhattanView_ZH-CN3156325644_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SantaJusta_ZH-CN0849826455_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SantaJusta_ZH-CN0849826455_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SantaJusta_ZH-CN0849826455_400x240.jpg"
-    },
-    {
-      "date": "2021-12-14",
-      "copyright": "暮色中的面包山和老城区，厄瓜多尔基多 (© Karol Kozlowski/plainpicture)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AmericanRobin_ZH-CN0667508209_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AmericanRobin_ZH-CN0667508209_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AmericanRobin_ZH-CN0667508209_400x240.jpg"
     }
   ],
   "page": 41,
   "pageSize": 42,
-  "total": 2036,
+  "total": 2037,
   "totalPages": 49,
   "hasMore": true
 }
