@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-06-10",
+      "copyright": "Vernazza, Cinque Terre, Liguria, Italy (© Kelly Cheng/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.Hnausapollur_EN-US2080493040_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.Hnausapollur_EN-US2080493040_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.Hnausapollur_EN-US2080493040_400x240.jpg"
+    },
+    {
       "date": "2026-06-09",
       "copyright": "Lion's mane jellyfish swimming in the ocean (© Alexander Semenov Images/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.CTNPVernazza_EN-US1571456265_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.DutchTulips_EN-US2575617067_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.DutchTulips_EN-US2575617067_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.DutchTulips_EN-US2575617067_400x240.jpg"
-    },
-    {
-      "date": "2026-04-29",
-      "copyright": "Spectacled bear resting in tree, Ecuador (© Andy Rouse/Nature Picture Library)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BelemTowerBank_EN-US2528466391_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BelemTowerBank_EN-US2528466391_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BelemTowerBank_EN-US2528466391_400x240.jpg"
     }
   ],
   "page": 3,
   "pageSize": 42,
-  "total": 2037,
+  "total": 2038,
   "totalPages": 49,
   "hasMore": true
 }

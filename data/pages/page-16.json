@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-12-11",
+      "copyright": "Old Town in Helsinki, Finland (© Oleksiy Mark/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ReopeningNotreDame_EN-US8084146311_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ReopeningNotreDame_EN-US8084146311_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ReopeningNotreDame_EN-US8084146311_400x240.jpg"
+    },
+    {
       "date": "2024-12-10",
       "copyright": "Tufa formations in Mono Lake, California (© Susanna Patras/TANDEM Stills + Motion)",
       "jpg": "https://cn.bing.com/th?id=OHR.HelsinkiDusk_EN-US7738977648_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.PolarBearHug_EN-US3461212514_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PolarBearHug_EN-US3461212514_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.PolarBearHug_EN-US3461212514_400x240.jpg"
-    },
-    {
-      "date": "2024-10-30",
-      "copyright": "The Mont Blanc massif, near Chamonix, France (© Simon Schöpf/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.GhostForest_EN-US3389955484_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.GhostForest_EN-US3389955484_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.GhostForest_EN-US3389955484_400x240.jpg"
     }
   ],
   "page": 16,
   "pageSize": 42,
-  "total": 2037,
+  "total": 2038,
   "totalPages": 49,
   "hasMore": true
 }

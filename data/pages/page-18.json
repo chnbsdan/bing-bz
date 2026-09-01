@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-09-18",
+      "copyright": "Dolphin pod near Réunion, overseas department of France, Indian Ocean (© Joost van Uffelen/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.PointReyes_EN-US4731803211_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.PointReyes_EN-US4731803211_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.PointReyes_EN-US4731803211_400x240.jpg"
+    },
+    {
       "date": "2024-09-17",
       "copyright": "National September 11 Memorial & Museum, New York City (© Antonino Bartuccio/Sime/eStock Photo)",
       "jpg": "https://cn.bing.com/th?id=OHR.DolphinReunion_EN-US4598756391_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.TrunkBay_EN-US6585719799_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.TrunkBay_EN-US6585719799_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.TrunkBay_EN-US6585719799_400x240.jpg"
-    },
-    {
-      "date": "2024-08-07",
-      "copyright": "Hoodoos, Sunset Point, Bryce Canyon National Park, Utah (© Tim Fitzharris/Minden Pictures)",
-      "jpg": "https://cn.bing.com/th?id=OHR.KaptaiLake_EN-US6490685268_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.KaptaiLake_EN-US6490685268_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.KaptaiLake_EN-US6490685268_400x240.jpg"
     }
   ],
   "page": 18,
   "pageSize": 42,
-  "total": 2037,
+  "total": 2038,
   "totalPages": 49,
   "hasMore": true
 }

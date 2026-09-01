@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-10-30",
+      "copyright": "The Mont Blanc massif, near Chamonix, France (© Simon Schöpf/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.GhostForest_EN-US3389955484_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.GhostForest_EN-US3389955484_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.GhostForest_EN-US3389955484_400x240.jpg"
+    },
+    {
       "date": "2024-10-29",
       "copyright": "Madame Sherri Forest and the ruins of an old castle, New Hampshire (© yggdrasill/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.MontBlancMassif_EN-US3284638409_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.RapaNuiSunrise_EN-US4872610843_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.RapaNuiSunrise_EN-US4872610843_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.RapaNuiSunrise_EN-US4872610843_400x240.jpg"
-    },
-    {
-      "date": "2024-09-18",
-      "copyright": "Dolphin pod near Réunion, overseas department of France, Indian Ocean (© Joost van Uffelen/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.PointReyes_EN-US4731803211_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.PointReyes_EN-US4731803211_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.PointReyes_EN-US4731803211_400x240.jpg"
     }
   ],
   "page": 17,
   "pageSize": 42,
-  "total": 2037,
+  "total": 2038,
   "totalPages": 49,
   "hasMore": true
 }

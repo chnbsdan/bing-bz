@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-04-03",
+      "copyright": "Seawater cascades over an ancient coral reef, Hang Rai, Vietnam (© Thang Tat Nguyen/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.TeatroColon_EN-US2518867279_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.TeatroColon_EN-US2518867279_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.TeatroColon_EN-US2518867279_400x240.jpg"
+    },
+    {
       "date": "2024-04-02",
       "copyright": "Celebrating Holi in Mathura, Uttar Pradesh, India (© Avishek Das/SOPA Images/LightRocket via Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.HangRaiVietnam_EN-US2418713642_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.HippopotamusDay_EN-US7629909300_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.HippopotamusDay_EN-US7629909300_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.HippopotamusDay_EN-US7629909300_400x240.jpg"
-    },
-    {
-      "date": "2024-02-21",
-      "copyright": "Mardi Gras beads in the Marigny, New Orleans (© Erik Pronske Photography/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BowingCrane_EN-US7534977512_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BowingCrane_EN-US7534977512_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BowingCrane_EN-US7534977512_400x240.jpg"
     }
   ],
   "page": 22,
   "pageSize": 42,
-  "total": 2037,
+  "total": 2038,
   "totalPages": 49,
   "hasMore": true
 }
