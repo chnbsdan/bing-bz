@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-06-02",
+      "copyright": "Alhambra in Granada, Andalusia, Spain (© Armand Tamboly/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.Monteverde_EN-US9503031199_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.Monteverde_EN-US9503031199_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.Monteverde_EN-US9503031199_400x240.jpg"
+    },
+    {
       "date": "2022-06-01",
       "copyright": "展开双翅的绯红金刚鹦鹉，哥斯达黎加 (© Harry Collins/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.Alhambra_EN-US9442124079_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.EarthDay2022_ZH-CN5733809629_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.EarthDay2022_ZH-CN5733809629_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.EarthDay2022_ZH-CN5733809629_400x240.jpg"
-    },
-    {
-      "date": "2022-04-21",
-      "copyright": "两只躲在妈妈尾羽下的疣鼻小天鹅，纽约长岛 (© Vicki Jauron/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.IcelandicSummer_ZH-CN1779278033_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.IcelandicSummer_ZH-CN1779278033_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.IcelandicSummer_ZH-CN1779278033_400x240.jpg"
     }
   ],
   "page": 38,
   "pageSize": 42,
-  "total": 2038,
+  "total": 2039,
   "totalPages": 49,
   "hasMore": true
 }

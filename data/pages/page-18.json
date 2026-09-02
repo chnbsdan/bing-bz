@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-09-19",
+      "copyright": "Lighthouse at Point Reyes National Seashore, California (© RMB Images/Photography by Robert Bowman/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.RapaNuiSunrise_EN-US4872610843_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.RapaNuiSunrise_EN-US4872610843_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.RapaNuiSunrise_EN-US4872610843_400x240.jpg"
+    },
+    {
       "date": "2024-09-18",
       "copyright": "Dolphin pod near Réunion, overseas department of France, Indian Ocean (© Joost van Uffelen/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.PointReyes_EN-US4731803211_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.WulongKarst_EN-US6752358338_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.WulongKarst_EN-US6752358338_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.WulongKarst_EN-US6752358338_400x240.jpg"
-    },
-    {
-      "date": "2024-08-08",
-      "copyright": "Floating market, Kaptai Lake, Rangamati, Bangladesh (© Azim Khan Ronnie/Amazing Aerial Agency)",
-      "jpg": "https://cn.bing.com/th?id=OHR.TrunkBay_EN-US6585719799_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.TrunkBay_EN-US6585719799_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.TrunkBay_EN-US6585719799_400x240.jpg"
     }
   ],
   "page": 18,
   "pageSize": 42,
-  "total": 2038,
+  "total": 2039,
   "totalPages": 49,
   "hasMore": true
 }

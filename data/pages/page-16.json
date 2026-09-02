@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-12-12",
+      "copyright": "Notre-Dame Cathedral, Paris, France (© Julien Fromentin/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.GuanacosChile_EN-US8209106662_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.GuanacosChile_EN-US8209106662_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.GuanacosChile_EN-US8209106662_400x240.jpg"
+    },
+    {
       "date": "2024-12-11",
       "copyright": "Old Town in Helsinki, Finland (© Oleksiy Mark/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.ReopeningNotreDame_EN-US8084146311_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.PumpkinMist_EN-US3686565863_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PumpkinMist_EN-US3686565863_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.PumpkinMist_EN-US3686565863_400x240.jpg"
-    },
-    {
-      "date": "2024-10-31",
-      "copyright": "Gespensterwald, Nienhagen, Mecklenburg-West Pomerania, Germany (© mauritius images GmbH/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.PolarBearHug_EN-US3461212514_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.PolarBearHug_EN-US3461212514_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.PolarBearHug_EN-US3461212514_400x240.jpg"
     }
   ],
   "page": 16,
   "pageSize": 42,
-  "total": 2038,
+  "total": 2039,
   "totalPages": 49,
   "hasMore": true
 }

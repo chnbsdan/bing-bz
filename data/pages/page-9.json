@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-10-02",
+      "copyright": "Koala in a eucalyptus tree, Great Otway National Park, Australia (© Jamie Lamb - elusive-images.co.uk/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.YosemiteClark_EN-US8503376225_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.YosemiteClark_EN-US8503376225_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.YosemiteClark_EN-US8503376225_400x240.jpg"
+    },
+    {
       "date": "2025-10-01",
       "copyright": "The Rainbow Houses of Houten, Netherlands (© George Pachantouris/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.EucalyptusKoala_EN-US8743417111_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.WheatearBird_EN-US2132045619_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.WheatearBird_EN-US2132045619_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.WheatearBird_EN-US2132045619_400x240.jpg"
-    },
-    {
-      "date": "2025-08-21",
-      "copyright": "Solar Impulse 2 at Kalaeloa Airport, Honolulu, Hawaii (© Solar Impulse/Revillard/Sipa/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.CitadelBonifacio_EN-US2046177235_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.CitadelBonifacio_EN-US2046177235_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.CitadelBonifacio_EN-US2046177235_400x240.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 2038,
+  "total": 2039,
   "totalPages": 49,
   "hasMore": true
 }

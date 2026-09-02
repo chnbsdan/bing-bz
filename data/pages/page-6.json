@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-02-05",
+      "copyright": "Rosa Parks in stained glass window, Shorter Community African Methodist Episcopal Church, Denver (© Cyrus McCrimmon/The Denver Post via Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MaltaSalt_EN-US0310458987_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MaltaSalt_EN-US0310458987_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.MaltaSalt_EN-US0310458987_400x240.jpg"
+    },
+    {
       "date": "2026-02-04",
       "copyright": "Emerald Bay and Fannette Island, Lake Tahoe, California (© Bill Stevenson/Cavan Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ParksGlass_EN-US0280057691_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SantaGlobe_EN-US5819361091_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SantaGlobe_EN-US5819361091_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SantaGlobe_EN-US5819361091_400x240.jpg"
-    },
-    {
-      "date": "2025-12-25",
-      "copyright": "Reindeer during winter snowfall, Lapland, Finland (© Roberto Moiola/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ElmauChapel_EN-US5704228113_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ElmauChapel_EN-US5704228113_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ElmauChapel_EN-US5704228113_400x240.jpg"
     }
   ],
   "page": 6,
   "pageSize": 42,
-  "total": 2038,
+  "total": 2039,
   "totalPages": 49,
   "hasMore": true
 }

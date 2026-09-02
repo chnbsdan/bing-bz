@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-04-17",
+      "copyright": "Beach art by Zarpõ at plage de Sauveterre, Les Sables-d'Olonne, France (© Hemis/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.KachinaBridge_EN-US1000475196_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.KachinaBridge_EN-US1000475196_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.KachinaBridge_EN-US1000475196_400x240.jpg"
+    },
+    {
       "date": "2025-04-16",
       "copyright": "Atlantic spotted dolphins near Santa Maria Island, Azores, Portugal (© Jordi Chias/Minden Pictures)",
       "jpg": "https://cn.bing.com/th?id=OHR.BeachArt_EN-US0911239616_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.NevadaBigHorns_EN-US3434258986_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.NevadaBigHorns_EN-US3434258986_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.NevadaBigHorns_EN-US3434258986_400x240.jpg"
-    },
-    {
-      "date": "2025-03-06",
-      "copyright": "Jackson Square, New Orleans, Louisiana (© SeanPavonePhoto/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SuratThani_EN-US3326265231_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SuratThani_EN-US3326265231_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SuratThani_EN-US3326265231_400x240.jpg"
     }
   ],
   "page": 13,
   "pageSize": 42,
-  "total": 2038,
+  "total": 2039,
   "totalPages": 49,
   "hasMore": true
 }

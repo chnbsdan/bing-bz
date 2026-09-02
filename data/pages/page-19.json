@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-08-08",
+      "copyright": "Floating market, Kaptai Lake, Rangamati, Bangladesh (© Azim Khan Ronnie/Amazing Aerial Agency)",
+      "jpg": "https://cn.bing.com/th?id=OHR.TrunkBay_EN-US6585719799_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.TrunkBay_EN-US6585719799_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.TrunkBay_EN-US6585719799_400x240.jpg"
+    },
+    {
       "date": "2024-08-07",
       "copyright": "Hoodoos, Sunset Point, Bryce Canyon National Park, Utah (© Tim Fitzharris/Minden Pictures)",
       "jpg": "https://cn.bing.com/th?id=OHR.KaptaiLake_EN-US6490685268_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BrazilRainforest_EN-US0704211658_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BrazilRainforest_EN-US0704211658_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BrazilRainforest_EN-US0704211658_400x240.jpg"
-    },
-    {
-      "date": "2024-06-27",
-      "copyright": "Kokino, an ancient megalithic observatory, North Macedonia (© stoimilov/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LewaGiraffe_EN-US0571205457_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LewaGiraffe_EN-US0571205457_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.LewaGiraffe_EN-US0571205457_400x240.jpg"
     }
   ],
   "page": 19,
   "pageSize": 42,
-  "total": 2038,
+  "total": 2039,
   "totalPages": 49,
   "hasMore": true
 }

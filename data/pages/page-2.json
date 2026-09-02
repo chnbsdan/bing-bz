@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-07-23",
+      "copyright": "Coral reef and beach in Raja Ampat, Indonesia (© SergeUWPhoto/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.PinkDahlia_EN-US1957205704_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.PinkDahlia_EN-US1957205704_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.PinkDahlia_EN-US1957205704_400x240.jpg"
+    },
+    {
       "date": "2026-07-22",
       "copyright": "Santa Catalina Arch, Antigua, Guatemala (© Filippo Maria Bianchi/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.CoralAwareness_EN-US1824657819_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SpainBeeEater_EN-US5920719155_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SpainBeeEater_EN-US5920719155_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SpainBeeEater_EN-US5920719155_400x240.jpg"
-    },
-    {
-      "date": "2026-06-11",
-      "copyright": "Hnausapollur volcanic crater lake, Fjallabak Nature Reserve, Landmannalaugar, Iceland (© Juan Maria Coy Vergara/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.Limpets_EN-US1055673545_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.Limpets_EN-US1055673545_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.Limpets_EN-US1055673545_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2038,
+  "total": 2039,
   "totalPages": 49,
   "hasMore": true
 }

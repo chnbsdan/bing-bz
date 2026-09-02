@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-11-13",
+      "copyright": "Marine Corps War Memorial, Arlington, Virginia (© f11photo/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ColosseumRome_EN-US6932882124_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ColosseumRome_EN-US6932882124_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ColosseumRome_EN-US6932882124_400x240.jpg"
+    },
+    {
       "date": "2025-11-12",
       "copyright": "Black-tailed prairie dogs at Roberts Prairie Dog Town, Badlands National Park, South Dakota (© Greg Vaughn/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MarineMemorial_EN-US6899836690_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.OxbowBend_EN-US8471628790_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.OxbowBend_EN-US8471628790_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.OxbowBend_EN-US8471628790_400x240.jpg"
-    },
-    {
-      "date": "2025-10-02",
-      "copyright": "Koala in a eucalyptus tree, Great Otway National Park, Australia (© Jamie Lamb - elusive-images.co.uk/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.YosemiteClark_EN-US8503376225_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.YosemiteClark_EN-US8503376225_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.YosemiteClark_EN-US8503376225_400x240.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2038,
+  "total": 2039,
   "totalPages": 49,
   "hasMore": true
 }
