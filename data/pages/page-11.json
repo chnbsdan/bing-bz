@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-07-11",
+      "copyright": "Constitución railway station, Buenos Aires, Argentina (© Grafissimo/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BahamaBlues_EN-US1367794856_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BahamaBlues_EN-US1367794856_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BahamaBlues_EN-US1367794856_400x240.jpg"
+    },
+    {
       "date": "2025-07-10",
       "copyright": "Seceda, a peak in the Dolomites, South Tyrol, Italy (© Kalyakan/Adobe Stock)",
       "jpg": "https://cn.bing.com/th?id=OHR.ConstitucionStation_EN-US1235857389_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.LittlePigeonRiver_EN-US1765916005_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.LittlePigeonRiver_EN-US1765916005_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.LittlePigeonRiver_EN-US1765916005_400x240.jpg"
-    },
-    {
-      "date": "2025-05-30",
-      "copyright": "Sea otter floating in a kelp bed in Alaska Maritime National Wildlife Refuge (© Gerry Ellis/Minden Pictures)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MiravetSpain_EN-US4967052818_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MiravetSpain_EN-US4967052818_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MiravetSpain_EN-US4967052818_400x240.jpg"
     }
   ],
   "page": 11,
   "pageSize": 42,
-  "total": 2039,
+  "total": 2040,
   "totalPages": 49,
   "hasMore": true
 }

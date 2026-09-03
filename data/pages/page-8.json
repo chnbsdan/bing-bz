@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-11-14",
+      "copyright": "Aerial view of the Colosseum, Rome, Italy (© Nico De Pasquale Photography/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AloeDichotoma_EN-US6966316373_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AloeDichotoma_EN-US6966316373_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AloeDichotoma_EN-US6966316373_400x240.jpg"
+    },
+    {
       "date": "2025-11-13",
       "copyright": "Marine Corps War Memorial, Arlington, Virginia (© f11photo/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.ColosseumRome_EN-US6932882124_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SkyeHeather_EN-US9221942108_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SkyeHeather_EN-US9221942108_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SkyeHeather_EN-US9221942108_400x240.jpg"
-    },
-    {
-      "date": "2025-10-03",
-      "copyright": "Clark Range, Sierra Nevada, Yosemite National Park, California (© Robb Hirsch/TANDEM Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.OxbowBend_EN-US8471628790_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.OxbowBend_EN-US8471628790_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.OxbowBend_EN-US8471628790_400x240.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2039,
+  "total": 2040,
   "totalPages": 49,
   "hasMore": true
 }

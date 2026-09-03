@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-02-23",
+      "copyright": "Hippopotamus mother and calf, South Luangwa National Park, Zambia (© Nature Picture Library/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BackyardBird_EN-US8255123787_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BackyardBird_EN-US8255123787_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BackyardBird_EN-US8255123787_400x240.jpg"
+    },
+    {
       "date": "2024-02-22",
       "copyright": "Red-crowned crane bowing to his mate in Hokkaido, Japan (© Steve Bloom Images/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.HippopotamusDay_EN-US7629909300_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.DevilsMarbles_EN-US8559239074_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.DevilsMarbles_EN-US8559239074_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.DevilsMarbles_EN-US8559239074_400x240.jpg"
-    },
-    {
-      "date": "2024-01-12",
-      "copyright": "International Ice and Snow Sculpture Festival, Harbin, China (© WANG ZHAO/AFP/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.CrabappleChaffinch_EN-US1781584314_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.CrabappleChaffinch_EN-US1781584314_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.CrabappleChaffinch_EN-US1781584314_400x240.jpg"
     }
   ],
   "page": 23,
   "pageSize": 42,
-  "total": 2039,
+  "total": 2040,
   "totalPages": 49,
   "hasMore": true
 }

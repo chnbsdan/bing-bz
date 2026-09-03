@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-12-26",
+      "copyright": "Snowy chapel with Christmas tree in the Bavarian Alps, Germany (© mauritius images GmbH/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SantaGlobe_EN-US5819361091_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SantaGlobe_EN-US5819361091_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SantaGlobe_EN-US5819361091_400x240.jpg"
+    },
+    {
       "date": "2025-12-25",
       "copyright": "Reindeer during winter snowfall, Lapland, Finland (© Roberto Moiola/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ElmauChapel_EN-US5704228113_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ManateeBaby_EN-US5594953777_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ManateeBaby_EN-US5594953777_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ManateeBaby_EN-US5594953777_400x240.jpg"
-    },
-    {
-      "date": "2025-11-14",
-      "copyright": "Aerial view of the Colosseum, Rome, Italy (© Nico De Pasquale Photography/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AloeDichotoma_EN-US6966316373_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AloeDichotoma_EN-US6966316373_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AloeDichotoma_EN-US6966316373_400x240.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2039,
+  "total": 2040,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-06-03",
+      "copyright": "Hanging bridge in the Monteverde Cloud Forest Reserve, Costa Rica (© Dmitriy Burlakov/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MarinHeadlands_EN-US9564309974_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MarinHeadlands_EN-US9564309974_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.MarinHeadlands_EN-US9564309974_400x240.jpg"
+    },
+    {
       "date": "2022-06-02",
       "copyright": "Alhambra in Granada, Andalusia, Spain (© Armand Tamboly/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.Monteverde_EN-US9503031199_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.VictoriaMemorialKolkata_ZH-CN5801450386_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.VictoriaMemorialKolkata_ZH-CN5801450386_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.VictoriaMemorialKolkata_ZH-CN5801450386_400x240.jpg"
-    },
-    {
-      "date": "2022-04-22",
-      "copyright": "在公路上吃草的绵羊，冰岛 (© Matthew Kuhns/Tandem Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.EarthDay2022_ZH-CN5733809629_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.EarthDay2022_ZH-CN5733809629_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.EarthDay2022_ZH-CN5733809629_400x240.jpg"
     }
   ],
   "page": 38,
   "pageSize": 42,
-  "total": 2039,
+  "total": 2040,
   "totalPages": 49,
   "hasMore": true
 }

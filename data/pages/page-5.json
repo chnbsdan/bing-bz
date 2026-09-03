@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-03-20",
+      "copyright": "Short-beaked echidna, Adelaide Hills, Australia (© Etienne Littlefair/naturepl.com)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SpringSnowdrops_EN-US5032204696_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SpringSnowdrops_EN-US5032204696_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SpringSnowdrops_EN-US5032204696_400x240.jpg"
+    },
+    {
       "date": "2026-03-19",
       "copyright": "Cherry blossoms at Tom McCall Waterfront Park, Portland, Oregon (© Eric Vogt/Tandem Stills + Motion)",
       "jpg": "https://cn.bing.com/th?id=OHR.EchidnaAustralia_EN-US7660451296_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SalarUyuni_EN-US1639129259_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SalarUyuni_EN-US1639129259_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SalarUyuni_EN-US1639129259_400x240.jpg"
-    },
-    {
-      "date": "2026-02-06",
-      "copyright": "Salt evaporation ponds on the island of Gozo, Malta (© Marius Roman/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.GiauPass_EN-US1580552183_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.GiauPass_EN-US1580552183_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.GiauPass_EN-US1580552183_400x240.jpg"
     }
   ],
   "page": 5,
   "pageSize": 42,
-  "total": 2039,
+  "total": 2040,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-02-06",
+      "copyright": "Salt evaporation ponds on the island of Gozo, Malta (© Marius Roman/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.GiauPass_EN-US1580552183_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.GiauPass_EN-US1580552183_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.GiauPass_EN-US1580552183_400x240.jpg"
+    },
+    {
       "date": "2026-02-05",
       "copyright": "Rosa Parks in stained glass window, Shorter Community African Methodist Episcopal Church, Denver (© Cyrus McCrimmon/The Denver Post via Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MaltaSalt_EN-US0310458987_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.WiltshireDawn_EN-US5663179833_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.WiltshireDawn_EN-US5663179833_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.WiltshireDawn_EN-US5663179833_400x240.jpg"
-    },
-    {
-      "date": "2025-12-26",
-      "copyright": "Snowy chapel with Christmas tree in the Bavarian Alps, Germany (© mauritius images GmbH/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SantaGlobe_EN-US5819361091_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SantaGlobe_EN-US5819361091_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SantaGlobe_EN-US5819361091_400x240.jpg"
     }
   ],
   "page": 6,
   "pageSize": 42,
-  "total": 2039,
+  "total": 2040,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-09-04",
+      "copyright": "韦斯特黑弗的韦斯特黑弗桑德灯塔，石勒苏益格-荷尔斯泰因州，德国 (© bluejayphoto/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.Westerheversand_ZH-CN0517707643_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.Westerheversand_ZH-CN0517707643_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.Westerheversand_ZH-CN0517707643_400x240.jpg"
+    },
+    {
       "date": "2026-09-03",
       "copyright": "郊狼丘，朱红悬崖国家纪念区，亚利桑那州，美国 (© James Hager/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.AZWilderness_ZH-CN2664566131_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.GaliciaBeach_EN-US1635715019_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.GaliciaBeach_EN-US1635715019_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.GaliciaBeach_EN-US1635715019_400x240.jpg"
-    },
-    {
-      "date": "2026-07-24",
-      "copyright": "Pink dahlia flower (© Harald Biebel/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.GalapagosFlamingos_EN-US0364264116_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.GalapagosFlamingos_EN-US0364264116_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.GalapagosFlamingos_EN-US0364264116_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2039,
+  "total": 2040,
   "totalPages": 49,
   "hasMore": true
 }
