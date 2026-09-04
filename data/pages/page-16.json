@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-12-14",
+      "copyright": "The Cornish Coast Path covered in snow, Land's End, Cornwall, England (© Josef FitzGerald-Patrick/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.DolomitesSky_EN-US8624061239_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.DolomitesSky_EN-US8624061239_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.DolomitesSky_EN-US8624061239_400x240.jpg"
+    },
+    {
       "date": "2024-12-13",
       "copyright": "Guanacos, Torres del Paine National Park, Chile (© Floris van Breugel/NPL/Minden Pictures)",
       "jpg": "https://cn.bing.com/th?id=OHR.CornwallSnow_EN-US8476437458_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.HauntedEdinburgh_EN-US3906244993_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.HauntedEdinburgh_EN-US3906244993_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.HauntedEdinburgh_EN-US3906244993_400x240.jpg"
-    },
-    {
-      "date": "2024-11-02",
-      "copyright": "Pumpkin field, Victoria, British Columbia, Canada (© Shaun Cunningham/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.GreatOwl_EN-US3778222109_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.GreatOwl_EN-US3778222109_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.GreatOwl_EN-US3778222109_400x240.jpg"
     }
   ],
   "page": 16,
   "pageSize": 42,
-  "total": 2040,
+  "total": 2041,
   "totalPages": 49,
   "hasMore": true
 }

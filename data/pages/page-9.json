@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-10-04",
+      "copyright": "Oxbow Bend on the Snake River, Grand Teton National Park, Wyoming (© DanitaDelimont.com/AWL Images/SuperStock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SkyeHeather_EN-US9221942108_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SkyeHeather_EN-US9221942108_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SkyeHeather_EN-US9221942108_400x240.jpg"
+    },
+    {
       "date": "2025-10-03",
       "copyright": "Clark Range, Sierra Nevada, Yosemite National Park, California (© Robb Hirsch/TANDEM Stills + Motion)",
       "jpg": "https://cn.bing.com/th?id=OHR.OxbowBend_EN-US8471628790_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SaintBarbaras_EN-US3076115197_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SaintBarbaras_EN-US3076115197_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SaintBarbaras_EN-US3076115197_400x240.jpg"
-    },
-    {
-      "date": "2025-08-23",
-      "copyright": "Wheatear and flowering heather, Peak District National Park, England (© Ben Hall/Nature Picture Library)",
-      "jpg": "https://cn.bing.com/th?id=OHR.PalouseWA_EN-US2419102005_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.PalouseWA_EN-US2419102005_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.PalouseWA_EN-US2419102005_400x240.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 2040,
+  "total": 2041,
   "totalPages": 49,
   "hasMore": true
 }

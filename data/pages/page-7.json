@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-12-27",
+      "copyright": "Snow globes at a Christmas market in Heidelberg, Germany (© George Pachantouris/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.WiltshireDawn_EN-US5663179833_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.WiltshireDawn_EN-US5663179833_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.WiltshireDawn_EN-US5663179833_400x240.jpg"
+    },
+    {
       "date": "2025-12-26",
       "copyright": "Snowy chapel with Christmas tree in the Bavarian Alps, Germany (© mauritius images GmbH/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.SantaGlobe_EN-US5819361091_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.IrohazakaAutumn_EN-US9137140715_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.IrohazakaAutumn_EN-US9137140715_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.IrohazakaAutumn_EN-US9137140715_400x240.jpg"
-    },
-    {
-      "date": "2025-11-15",
-      "copyright": "Quiver trees under the Milky Way, Keetmanshoop, Namibia (© Wim van den Heever/naturepl.com)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ManateeBaby_EN-US5594953777_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ManateeBaby_EN-US5594953777_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ManateeBaby_EN-US5594953777_400x240.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2040,
+  "total": 2041,
   "totalPages": 49,
   "hasMore": true
 }

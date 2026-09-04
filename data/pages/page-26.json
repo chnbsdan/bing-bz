@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-10-21",
+      "copyright": "'Ring of fire' annular solar eclipse, Doha, Qatar (© Sorin Furcoi/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AutumnHedgehog_EN-US1171311197_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AutumnHedgehog_EN-US1171311197_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AutumnHedgehog_EN-US1171311197_400x240.jpg"
+    },
+    {
       "date": "2023-10-20",
       "copyright": "Vieste on the Gargano peninsula, Apulia, Italy (© Pilat666/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.RingEclipse_EN-US1077107553_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.LaborDayWorkers_EN-US3448430770_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.LaborDayWorkers_EN-US3448430770_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.LaborDayWorkers_EN-US3448430770_400x240.jpg"
-    },
-    {
-      "date": "2023-09-09",
-      "copyright": "Allen's hummingbird, Santa Cruz, California (© mallardg500/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ManhattanAerial_EN-US3290111355_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ManhattanAerial_EN-US3290111355_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ManhattanAerial_EN-US3290111355_400x240.jpg"
     }
   ],
   "page": 26,
   "pageSize": 42,
-  "total": 2040,
+  "total": 2041,
   "totalPages": 49,
   "hasMore": true
 }

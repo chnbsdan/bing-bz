@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-11-15",
+      "copyright": "Quiver trees under the Milky Way, Keetmanshoop, Namibia (© Wim van den Heever/naturepl.com)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ManateeBaby_EN-US5594953777_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ManateeBaby_EN-US5594953777_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ManateeBaby_EN-US5594953777_400x240.jpg"
+    },
+    {
       "date": "2025-11-14",
       "copyright": "Aerial view of the Colosseum, Rome, Italy (© Nico De Pasquale Photography/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.AloeDichotoma_EN-US6966316373_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.DragonEndeavour_EN-US9321246369_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.DragonEndeavour_EN-US9321246369_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.DragonEndeavour_EN-US9321246369_400x240.jpg"
-    },
-    {
-      "date": "2025-10-04",
-      "copyright": "Oxbow Bend on the Snake River, Grand Teton National Park, Wyoming (© DanitaDelimont.com/AWL Images/SuperStock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SkyeHeather_EN-US9221942108_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SkyeHeather_EN-US9221942108_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SkyeHeather_EN-US9221942108_400x240.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2040,
+  "total": 2041,
   "totalPages": 49,
   "hasMore": true
 }

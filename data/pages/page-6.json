@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-02-07",
+      "copyright": "Ra Gusela peak at Giau Pass, near Cortina d'Ampezzo, Italy (© Tomasz Podolski/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SalarUyuni_EN-US1639129259_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SalarUyuni_EN-US1639129259_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SalarUyuni_EN-US1639129259_400x240.jpg"
+    },
+    {
       "date": "2026-02-06",
       "copyright": "Salt evaporation ponds on the island of Gozo, Malta (© Marius Roman/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.GiauPass_EN-US1580552183_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SuperiorIceMN_EN-US5952266924_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SuperiorIceMN_EN-US5952266924_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SuperiorIceMN_EN-US5952266924_400x240.jpg"
-    },
-    {
-      "date": "2025-12-27",
-      "copyright": "Snow globes at a Christmas market in Heidelberg, Germany (© George Pachantouris/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.WiltshireDawn_EN-US5663179833_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.WiltshireDawn_EN-US5663179833_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.WiltshireDawn_EN-US5663179833_400x240.jpg"
     }
   ],
   "page": 6,
   "pageSize": 42,
-  "total": 2040,
+  "total": 2041,
   "totalPages": 49,
   "hasMore": true
 }
