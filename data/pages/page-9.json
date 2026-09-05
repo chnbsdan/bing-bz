@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-10-05",
+      "copyright": "Heather growing in Glen Brittle, Isle of Skye, Scotland (© Adam Mowery/TANDEM Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.DragonEndeavour_EN-US9321246369_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.DragonEndeavour_EN-US9321246369_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.DragonEndeavour_EN-US9321246369_400x240.jpg"
+    },
+    {
       "date": "2025-10-04",
       "copyright": "Oxbow Bend on the Snake River, Grand Teton National Park, Wyoming (© DanitaDelimont.com/AWL Images/SuperStock)",
       "jpg": "https://cn.bing.com/th?id=OHR.SkyeHeather_EN-US9221942108_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.CervusDama_EN-US3217647015_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.CervusDama_EN-US3217647015_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.CervusDama_EN-US3217647015_400x240.jpg"
-    },
-    {
-      "date": "2025-08-24",
-      "copyright": "Rolling hills of the Palouse, Washington (© svetlana57/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SaintBarbaras_EN-US3076115197_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SaintBarbaras_EN-US3076115197_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SaintBarbaras_EN-US3076115197_400x240.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 2041,
+  "total": 2042,
   "totalPages": 49,
   "hasMore": true
 }

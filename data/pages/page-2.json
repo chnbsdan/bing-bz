@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-07-26",
+      "copyright": "Praia das Catedrais, Galicia, Spain (© Tui De Roy/Amazing Aerial Agency/Abobe Stock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.RedMangroveSunrise_EN-US2034025633_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.RedMangroveSunrise_EN-US2034025633_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.RedMangroveSunrise_EN-US2034025633_400x240.jpg"
+    },
+    {
       "date": "2026-07-25",
       "copyright": "Flock of American flamingos, Isabela Island, Galápagos Islands, Ecuador (© Tui De Roy/Nature Picture Library)",
       "jpg": "https://cn.bing.com/th?id=OHR.GaliciaBeach_EN-US1635715019_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ParkEstd_EN-US6114949122_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ParkEstd_EN-US6114949122_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ParkEstd_EN-US6114949122_400x240.jpg"
-    },
-    {
-      "date": "2026-06-14",
-      "copyright": "Sunset in Badlands National Park, South Dakota, USA (© Troy Harrison/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.FlagsMonument_EN-US6034154869_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.FlagsMonument_EN-US6034154869_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.FlagsMonument_EN-US6034154869_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2041,
+  "total": 2042,
   "totalPages": 49,
   "hasMore": true
 }

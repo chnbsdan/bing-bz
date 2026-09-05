@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-04-20",
+      "copyright": "Hot air balloons over Göreme Historical National Park in Cappadocia, Türkiye (© Anton Petrus/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ZionValley_EN-US2520458606_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ZionValley_EN-US2520458606_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ZionValley_EN-US2520458606_400x240.jpg"
+    },
+    {
       "date": "2025-04-19",
       "copyright": "Andean cocks-of-the-rock, Ecuador (© Kit Day/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.GoremeTurkey_EN-US1897945450_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ItalyClock_EN-US7397391355_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ItalyClock_EN-US7397391355_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ItalyClock_EN-US7397391355_400x240.jpg"
-    },
-    {
-      "date": "2025-03-09",
-      "copyright": "Plum blossoms in China (© zhikun sun/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.FearlessWomen_EN-US7338738180_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.FearlessWomen_EN-US7338738180_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.FearlessWomen_EN-US7338738180_400x240.jpg"
     }
   ],
   "page": 13,
   "pageSize": 42,
-  "total": 2041,
+  "total": 2042,
   "totalPages": 49,
   "hasMore": true
 }
