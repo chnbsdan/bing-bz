@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-01-31",
+      "copyright": "厄尔士山脉上的光晕，德国萨克森州 (© Martin Ruegner/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ChineseNewYearEve_ZH-CN1901922324_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ChineseNewYearEve_ZH-CN1901922324_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ChineseNewYearEve_ZH-CN1901922324_400x240.jpg"
+    },
+    {
       "date": "2022-01-30",
       "copyright": "加勒比海的片脑纹珊瑚，开曼群岛 (© Alex Mustard/Minden Pictures)",
       "jpg": "https://cn.bing.com/th?id=OHR.WinterHalo_ZH-CN0666553211_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SiberianSunset_ZH-CN5711093662_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SiberianSunset_ZH-CN5711093662_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SiberianSunset_ZH-CN5711093662_400x240.jpg"
-    },
-    {
-      "date": "2021-12-20",
-      "copyright": "布鲁克斯山脉上空的极光，美国阿拉斯加州 (© Noppawat Tom Charoensinphon/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.QuoichBowl_ZH-CN5583756085_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.QuoichBowl_ZH-CN5583756085_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.QuoichBowl_ZH-CN5583756085_400x240.jpg"
     }
   ],
   "page": 41,
   "pageSize": 42,
-  "total": 2042,
+  "total": 2043,
   "totalPages": 49,
   "hasMore": true
 }

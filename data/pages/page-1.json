@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-09-07",
+      "copyright": "老市政厅，班贝格，德国 (© SCStock/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BambergTownhall_ZH-CN1407954732_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BambergTownhall_ZH-CN1407954732_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BambergTownhall_ZH-CN1407954732_400x240.jpg"
+    },
+    {
       "date": "2026-09-06",
       "copyright": "菲安斯湖，格兰屏国家公园，维多利亚州，澳大利亚 (© tracielouise/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.LakeFyans_ZH-CN1067187791_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ChannelKelp_ZH-CN8732903732_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ChannelKelp_ZH-CN8732903732_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ChannelKelp_ZH-CN8732903732_400x240.jpg"
-    },
-    {
-      "date": "2026-07-27",
-      "copyright": "Sunrise on a red mangrove in the Pig Keys, Honduras (© Mac Stone/Tandem Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ChicagoTiffany_ZH-CN9860688834_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ChicagoTiffany_ZH-CN9860688834_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ChicagoTiffany_ZH-CN9860688834_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2042,
+  "total": 2043,
   "totalPages": 49,
   "hasMore": true
 }

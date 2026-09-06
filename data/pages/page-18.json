@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-09-23",
+      "copyright": "Mid-Autumn Festival in Gardens by the Bay, Singapore (© Victor Y. Zhuo/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.GujoHachiman_EN-US5502837623_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.GujoHachiman_EN-US5502837623_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.GujoHachiman_EN-US5502837623_400x240.jpg"
+    },
+    {
       "date": "2024-09-22",
       "copyright": "Wallabies at sunrise, Adelaide River, Northern Territory, Australia (© Jeremy Woodhouse/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MidAutumnSingapore_EN-US5283310908_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MichiganLighthouse_EN-US2082743301_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MichiganLighthouse_EN-US2082743301_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MichiganLighthouse_EN-US2082743301_400x240.jpg"
-    },
-    {
-      "date": "2024-08-12",
-      "copyright": "Lavender field, Hertfordshire, England (© George W Johnson/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MolokiniHawaii_EN-US7128254175_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MolokiniHawaii_EN-US7128254175_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MolokiniHawaii_EN-US7128254175_400x240.jpg"
     }
   ],
   "page": 18,
   "pageSize": 42,
-  "total": 2042,
+  "total": 2043,
   "totalPages": 49,
   "hasMore": true
 }
