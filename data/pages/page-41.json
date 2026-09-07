@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-02-01",
+      "copyright": "烟花绽放的除夕夜，中国 (© MediaProduction/E+/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ChineseNewYear_ZH-CN5844255626_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ChineseNewYear_ZH-CN5844255626_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ChineseNewYear_ZH-CN5844255626_400x240.jpg"
+    },
+    {
       "date": "2022-01-31",
       "copyright": "厄尔士山脉上的光晕，德国萨克森州 (© Martin Ruegner/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ChineseNewYearEve_ZH-CN1901922324_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AnnecyFrance_ZH-CN5773797252_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AnnecyFrance_ZH-CN5773797252_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AnnecyFrance_ZH-CN5773797252_400x240.jpg"
-    },
-    {
-      "date": "2021-12-21",
-      "copyright": "Linn of Quoich瀑布旁的碗状岩石洞，苏格兰阿伯丁郡 (© AWL Images/Danita Delimont)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SiberianSunset_ZH-CN5711093662_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SiberianSunset_ZH-CN5711093662_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SiberianSunset_ZH-CN5711093662_400x240.jpg"
     }
   ],
   "page": 41,
   "pageSize": 42,
-  "total": 2043,
+  "total": 2044,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-01-16",
+      "copyright": "Hot air balloons over the Rio Grande, Albuquerque, New Mexico (© Jennifer MacCornack/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MilopotamosStairs_EN-US9131506093_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MilopotamosStairs_EN-US9131506093_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.MilopotamosStairs_EN-US9131506093_400x240.jpg"
+    },
+    {
       "date": "2024-01-15",
       "copyright": "Skier at Bernina Pass, Graubünden, Switzerland (© Francesco Bergamaschi/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BalloonDay_EN-US9019911805_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.TrotternishStorr_EN-US4700593682_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.TrotternishStorr_EN-US4700593682_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.TrotternishStorr_EN-US4700593682_400x240.jpg"
-    },
-    {
-      "date": "2023-12-05",
-      "copyright": "Giant land art fresco by artist Saype in Istanbul, Türkiye (© Chris McGrath/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.TreeLighting_EN-US4396317497_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.TreeLighting_EN-US4396317497_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.TreeLighting_EN-US4396317497_400x240.jpg"
     }
   ],
   "page": 24,
   "pageSize": 42,
-  "total": 2043,
+  "total": 2044,
   "totalPages": 49,
   "hasMore": true
 }

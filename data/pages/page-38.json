@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-06-07",
+      "copyright": "Rainbow Pool and the field of stars in the World War II Memorial with the Lincoln Memorial in the background, Washington, DC (© Sean Pavone/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ParrotDay_EN-US9824481217_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ParrotDay_EN-US9824481217_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ParrotDay_EN-US9824481217_400x240.jpg"
+    },
+    {
       "date": "2022-06-06",
       "copyright": "Hyalite Creek in the Custer Gallatin National Forest, Montana (© Jared Lloyd/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.WW2Lincoln_EN-US6306243521_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SvalbardSun_ZH-CN6108396467_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SvalbardSun_ZH-CN6108396467_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SvalbardSun_ZH-CN6108396467_400x240.jpg"
-    },
-    {
-      "date": "2022-04-26",
-      "copyright": "圣安德鲁斯湾岸边的三只王企鹅，南乔治亚岛 (© Paul Souders/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.Hunebourg_ZH-CN6038786751_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.Hunebourg_ZH-CN6038786751_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.Hunebourg_ZH-CN6038786751_400x240.jpg"
     }
   ],
   "page": 38,
   "pageSize": 42,
-  "total": 2043,
+  "total": 2044,
   "totalPages": 49,
   "hasMore": true
 }

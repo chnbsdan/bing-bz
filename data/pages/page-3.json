@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-06-16",
+      "copyright": "Great Smoky Mountains National Park, Tennessee (© Mint Images/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SevenMileTurtle_EN-US6164934763_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SevenMileTurtle_EN-US6164934763_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SevenMileTurtle_EN-US6164934763_400x240.jpg"
+    },
+    {
       "date": "2026-06-15",
       "copyright": "US flags surrounding the Washington Monument, Washington, DC  (© Orhan Cam/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.ParkEstd_EN-US6114949122_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BulgariaPlains_EN-US0576020979_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BulgariaPlains_EN-US0576020979_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BulgariaPlains_EN-US0576020979_400x240.jpg"
-    },
-    {
-      "date": "2026-05-05",
-      "copyright": "Ksar Ouled Soltane, Tataouine district in southern Tunisia (© Dark_Eni/Getty Images Plus)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MayoAgave_EN-US0521416350_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MayoAgave_EN-US0521416350_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MayoAgave_EN-US0521416350_400x240.jpg"
     }
   ],
   "page": 3,
   "pageSize": 42,
-  "total": 2043,
+  "total": 2044,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-12-30",
+      "copyright": "Black-and-white ruffed lemur in Madagascar (© Cyrielle Beaubois/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AniTurkey_EN-US6168768263_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AniTurkey_EN-US6168768263_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AniTurkey_EN-US6168768263_400x240.jpg"
+    },
+    {
       "date": "2025-12-29",
       "copyright": "Plate ice along Lake Superior, Grand Marais, Minnesota (© wanderluster/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.RuffedLemur_EN-US6014028083_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AutumnMerganser_EN-US5860535351_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AutumnMerganser_EN-US5860535351_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AutumnMerganser_EN-US5860535351_400x240.jpg"
-    },
-    {
-      "date": "2025-11-18",
-      "copyright": "A traboule in Lyon, France (© TPopova/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ShenandoahTrail_EN-US8964689271_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ShenandoahTrail_EN-US8964689271_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ShenandoahTrail_EN-US8964689271_400x240.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2043,
+  "total": 2044,
   "totalPages": 49,
   "hasMore": true
 }
