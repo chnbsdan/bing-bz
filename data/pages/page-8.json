@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-11-19",
+      "copyright": "Fall colors in Shenandoah National Park, Virginia (© Michael Ver Sprill/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AutumnMerganser_EN-US5860535351_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AutumnMerganser_EN-US5860535351_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AutumnMerganser_EN-US5860535351_400x240.jpg"
+    },
+    {
       "date": "2025-11-18",
       "copyright": "A traboule in Lyon, France (© TPopova/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ShenandoahTrail_EN-US8964689271_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.OctopusCyanea_EN-US0194861123_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.OctopusCyanea_EN-US0194861123_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.OctopusCyanea_EN-US0194861123_400x240.jpg"
-    },
-    {
-      "date": "2025-10-08",
-      "copyright": "Anshun Bridge illuminated for the Mid-Autumn Festival, Chengdu, China (© Philippe LEJEANVRE/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.RidgwayAspens_EN-US0136548884_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.RidgwayAspens_EN-US0136548884_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.RidgwayAspens_EN-US0136548884_400x240.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2044,
+  "total": 2045,
   "totalPages": 49,
   "hasMore": true
 }

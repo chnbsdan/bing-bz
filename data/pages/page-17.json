@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-11-06",
+      "copyright": "Pueblo ruins, Hovenweep National Monument, Utah (© Alan Majchrowicz/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BisonYellowstone_EN-US4259322652_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BisonYellowstone_EN-US4259322652_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BisonYellowstone_EN-US4259322652_400x240.jpg"
+    },
+    {
       "date": "2024-11-05",
       "copyright": "Chimera of Notre-Dame de Paris, France (© scaliger/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.HovenweepRuins_EN-US3883549583_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MunichBeerfest_EN-US3708656793_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MunichBeerfest_EN-US3708656793_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MunichBeerfest_EN-US3708656793_400x240.jpg"
-    },
-    {
-      "date": "2024-09-25",
-      "copyright": "Playground at the Obereversand Lighthouse in Dorum-Neufeld, Germany (© INGO WAGNER/DPA/AFP via Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.OcracokeLight_EN-US3638306974_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.OcracokeLight_EN-US3638306974_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.OcracokeLight_EN-US3638306974_400x240.jpg"
     }
   ],
   "page": 17,
   "pageSize": 42,
-  "total": 2044,
+  "total": 2045,
   "totalPages": 49,
   "hasMore": true
 }

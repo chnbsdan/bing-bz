@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-06-08",
+      "copyright": "Scarlet macaw in Costa Rica (© Harry Collins/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MarovoLagoon_EN-US9916170608_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MarovoLagoon_EN-US9916170608_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.MarovoLagoon_EN-US9916170608_400x240.jpg"
+    },
+    {
       "date": "2022-06-07",
       "copyright": "Rainbow Pool and the field of stars in the World War II Memorial with the Lincoln Memorial in the background, Washington, DC (© Sean Pavone/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ParrotDay_EN-US9824481217_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.GreatRidge_ZH-CN6165605288_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.GreatRidge_ZH-CN6165605288_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.GreatRidge_ZH-CN6165605288_400x240.jpg"
-    },
-    {
-      "date": "2022-04-27",
-      "copyright": "下莱茵省的胡内城堡，法国阿尔萨斯大区 (© Leonid Andronov/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SvalbardSun_ZH-CN6108396467_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SvalbardSun_ZH-CN6108396467_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SvalbardSun_ZH-CN6108396467_400x240.jpg"
     }
   ],
   "page": 38,
   "pageSize": 42,
-  "total": 2044,
+  "total": 2045,
   "totalPages": 49,
   "hasMore": true
 }

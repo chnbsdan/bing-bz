@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2021-05-26",
+      "copyright": "由丹麦建筑师Niels Povlsgaard和JohanGjødes设计的无限桥，丹麦奥胡斯 (© Kosmaj/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.TowelDay_ZH-CN2107057381_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.TowelDay_ZH-CN2107057381_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.TowelDay_ZH-CN2107057381_400x240.jpg"
+    },
+    {
       "date": "2021-05-25",
       "copyright": "纽约公共图书馆总部翻新后的玫瑰主阅览室，纽约市 (© Sascha Kilmer/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.AarhusInfinite_ZH-CN1981168082_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.CarrizoPlain_ZH-CN5933565493_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.CarrizoPlain_ZH-CN5933565493_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.CarrizoPlain_ZH-CN5933565493_400x240.jpg"
-    },
-    {
-      "date": "2021-04-14",
-      "copyright": "宇航员杰夫·威廉姆斯在国际空间站拍摄到的地球 (© Jeff Williams/NASA)",
-      "jpg": "https://cn.bing.com/th?id=OHR.WatPhraSiSanphet_ZH-CN5830557189_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.WatPhraSiSanphet_ZH-CN5830557189_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.WatPhraSiSanphet_ZH-CN5830557189_400x240.jpg"
     }
   ],
   "page": 47,
   "pageSize": 42,
-  "total": 2044,
+  "total": 2045,
   "totalPages": 49,
   "hasMore": true
 }

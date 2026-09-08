@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-02-02",
+      "copyright": "寓意幸福和团圆的春节灯笼，中国 (© d3sign/Moment/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.GHDMarmot_ZH-CN5983212280_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.GHDMarmot_ZH-CN5983212280_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.GHDMarmot_ZH-CN5983212280_400x240.jpg"
+    },
+    {
       "date": "2022-02-01",
       "copyright": "烟花绽放的除夕夜，中国 (© MediaProduction/E+/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ChineseNewYear_ZH-CN5844255626_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ManitobaBears_ZH-CN5877672648_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ManitobaBears_ZH-CN5877672648_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ManitobaBears_ZH-CN5877672648_400x240.jpg"
-    },
-    {
-      "date": "2021-12-22",
-      "copyright": "西西伯利亚森林中的阳光，俄罗斯拉杜日内市附近 (© Leonid Ikan/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AnnecyFrance_ZH-CN5773797252_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AnnecyFrance_ZH-CN5773797252_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AnnecyFrance_ZH-CN5773797252_400x240.jpg"
     }
   ],
   "page": 41,
   "pageSize": 42,
-  "total": 2044,
+  "total": 2045,
   "totalPages": 49,
   "hasMore": true
 }

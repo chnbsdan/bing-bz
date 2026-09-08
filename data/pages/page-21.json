@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-05-22",
+      "copyright": "Walkway leading into the Big Room, Carlsbad Caverns, New Mexico (© Doug Meek/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BlueCityIndia_EN-US1593809891_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BlueCityIndia_EN-US1593809891_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BlueCityIndia_EN-US1593809891_400x240.jpg"
+    },
+    {
       "date": "2024-05-21",
       "copyright": "Fish River Canyon, Namibia (© R. M. Nunes/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.CarlsbadNP_EN-US2282243740_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AntelopeBotswana_EN-US3335739405_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AntelopeBotswana_EN-US3335739405_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AntelopeBotswana_EN-US3335739405_400x240.jpg"
-    },
-    {
-      "date": "2024-04-10",
-      "copyright": "Beech trees and wild anemones, Jutland, Denmark (© Nick Brundle Photography/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.KyrgyzstanRainbow_EN-US3266651913_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.KyrgyzstanRainbow_EN-US3266651913_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.KyrgyzstanRainbow_EN-US3266651913_400x240.jpg"
     }
   ],
   "page": 21,
   "pageSize": 42,
-  "total": 2044,
+  "total": 2045,
   "totalPages": 49,
   "hasMore": true
 }
