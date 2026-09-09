@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-06-22",
+      "copyright": "US Capitol building and US flags, Washington, DC (© Orhan Cam/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SmokyFireflies_EN-US8809086301_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SmokyFireflies_EN-US8809086301_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SmokyFireflies_EN-US8809086301_400x240.jpg"
+    },
+    {
       "date": "2023-06-21",
       "copyright": "Trees with Spanish moss over a boardwalk in the Okefenokee Swamp, Folkston, Georgia (© Emmer Photo/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.FlagDayCapitol_EN-US8751000302_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ThreeWildebeest_EN-US9446203427_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ThreeWildebeest_EN-US9446203427_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ThreeWildebeest_EN-US9446203427_400x240.jpg"
-    },
-    {
-      "date": "2023-05-11",
-      "copyright": "Korean Bell of Friendship, Los Angeles (© Carlos Marin/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.KlostersSerneus_EN-US9360254697_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.KlostersSerneus_EN-US9360254697_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.KlostersSerneus_EN-US9360254697_400x240.jpg"
     }
   ],
   "page": 29,
   "pageSize": 42,
-  "total": 2045,
+  "total": 2046,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-12-07",
+      "copyright": "The Storr, a rock outcrop on the Isle of Skye, Scotland (© Juan Maria Coy Vergara/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.IcebergAntarctica_EN-US8733526190_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.IcebergAntarctica_EN-US8733526190_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.IcebergAntarctica_EN-US8733526190_400x240.jpg"
+    },
+    {
       "date": "2023-12-06",
       "copyright": "Rockefeller Center Christmas tree, New York City (© Jonathan Orenstein/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.TrotternishStorr_EN-US4700593682_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.PersepolisRelief_EN-US9435779068_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PersepolisRelief_EN-US9435779068_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.PersepolisRelief_EN-US9435779068_400x240.jpg"
-    },
-    {
-      "date": "2023-10-26",
-      "copyright": "Water lily harvest, Mekong River Delta, Long An, Vietnam (© Khanh Phan/Solent News/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.PygmySloth_EN-US9345280015_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.PygmySloth_EN-US9345280015_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.PygmySloth_EN-US9345280015_400x240.jpg"
     }
   ],
   "page": 25,
   "pageSize": 42,
-  "total": 2045,
+  "total": 2046,
   "totalPages": 49,
   "hasMore": true
 }

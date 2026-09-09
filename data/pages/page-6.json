@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-02-12",
+      "copyright": "Salt flats in Badwater Basin, Death Valley National Park, California (© Jim Patterson/TANDEM Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.DarwinBooby_EN-US4839738451_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.DarwinBooby_EN-US4839738451_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.DarwinBooby_EN-US4839738451_400x240.jpg"
+    },
+    {
       "date": "2026-02-11",
       "copyright": "Islets of Es Vedrà and Es Vedranell, Ibiza, Spain (© L. Apolli/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BadwaterFlats_EN-US4770719796_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.NewYearFox_EN-US6422915878_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.NewYearFox_EN-US6422915878_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.NewYearFox_EN-US6422915878_400x240.jpg"
-    },
-    {
-      "date": "2026-01-01",
-      "copyright": "Whooper swans, Kotoku Pond, Japan (© Martin Bailey/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.GermanyNewYear_EN-US6344260060_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.GermanyNewYear_EN-US6344260060_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.GermanyNewYear_EN-US6344260060_400x240.jpg"
     }
   ],
   "page": 6,
   "pageSize": 42,
-  "total": 2045,
+  "total": 2046,
   "totalPages": 49,
   "hasMore": true
 }

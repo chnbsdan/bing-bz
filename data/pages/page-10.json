@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-08-28",
+      "copyright": "Trullo buildings in Alberobello, Apulia, Italy (© Feng Wei Photography/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FaroeLake_EN-US3557234950_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FaroeLake_EN-US3557234950_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.FaroeLake_EN-US3557234950_400x240.jpg"
+    },
+    {
       "date": "2025-08-27",
       "copyright": "Calcite Springs Overlook and Yellowstone River, Yellowstone National Park, Wyoming (© Rebecca L. Latson/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.TrulliHouses_EN-US3489439665_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.FranceLavender_EN-US5224253118_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.FranceLavender_EN-US5224253118_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.FranceLavender_EN-US5224253118_400x240.jpg"
-    },
-    {
-      "date": "2025-07-17",
-      "copyright": "Perseid meteor shower and an ancient bristlecone pine, Great Basin National Park, Nevada (© Wirestock Creators/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.TemplePhilae_EN-US5062419351_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.TemplePhilae_EN-US5062419351_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.TemplePhilae_EN-US5062419351_400x240.jpg"
     }
   ],
   "page": 10,
   "pageSize": 42,
-  "total": 2045,
+  "total": 2046,
   "totalPages": 49,
   "hasMore": true
 }
