@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-02-13",
+      "copyright": "Blue-footed booby, Galápagos Islands, Ecuador (© Karine Aigner/TANDEM Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FriendshipBridge_EN-US6136231298_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FriendshipBridge_EN-US6136231298_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.FriendshipBridge_EN-US6136231298_400x240.jpg"
+    },
+    {
       "date": "2026-02-12",
       "copyright": "Salt flats in Badwater Basin, Death Valley National Park, California (© Jim Patterson/TANDEM Stills + Motion)",
       "jpg": "https://cn.bing.com/th?id=OHR.DarwinBooby_EN-US4839738451_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.VeniceView_EN-US3244163136_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.VeniceView_EN-US3244163136_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.VeniceView_EN-US3244163136_400x240.jpg"
-    },
-    {
-      "date": "2026-01-02",
-      "copyright": "New Year's Eve, Oberbaum Bridge, Berlin, Germany (© spreephoto.de/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.NewYearFox_EN-US6422915878_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.NewYearFox_EN-US6422915878_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.NewYearFox_EN-US6422915878_400x240.jpg"
     }
   ],
   "page": 6,
   "pageSize": 42,
-  "total": 2046,
+  "total": 2047,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-11-21",
+      "copyright": "Hungarian Parliament Building, Budapest, Hungary (© Alexander Spatari/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SaypeGeneva_EN-US6121087903_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SaypeGeneva_EN-US6121087903_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SaypeGeneva_EN-US6121087903_400x240.jpg"
+    },
+    {
       "date": "2025-11-20",
       "copyright": "Male hooded merganser, Oregon (© Eric Vogt/TANDEM Stills + Motion)",
       "jpg": "https://cn.bing.com/th?id=OHR.BudapestParliament_EN-US5929195878_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MonurikiFiji_EN-US0326449622_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MonurikiFiji_EN-US0326449622_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MonurikiFiji_EN-US0326449622_400x240.jpg"
-    },
-    {
-      "date": "2025-10-10",
-      "copyright": "Day octopus in the waters off Maui, Hawaii (© Dave Fleetham/plainpicture)",
-      "jpg": "https://cn.bing.com/th?id=OHR.WebbPillars_EN-US0251661895_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.WebbPillars_EN-US0251661895_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.WebbPillars_EN-US0251661895_400x240.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2046,
+  "total": 2047,
   "totalPages": 49,
   "hasMore": true
 }

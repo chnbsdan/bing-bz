@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2021-12-24",
+      "copyright": "两只玩耍的北极熊，加拿大丘吉尔镇 (© Cheryl Ramalho/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.Rauchnachte_ZH-CN6061051054_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.Rauchnachte_ZH-CN6061051054_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.Rauchnachte_ZH-CN6061051054_400x240.jpg"
+    },
+    {
       "date": "2021-12-23",
       "copyright": "投射在安纳西中皇岛墙上的雪景影像，法国上萨瓦省 (© blickwinkel/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.ManitobaBears_ZH-CN5877672648_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ElTajo_ZH-CN2134749418_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ElTajo_ZH-CN2134749418_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ElTajo_ZH-CN2134749418_400x240.jpg"
-    },
-    {
-      "date": "2021-11-12",
-      "copyright": "梅加拉亚邦的七姐妹瀑布，印度 (© Upamanyoo Das/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BeaversBend_ZH-CN1916035610_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BeaversBend_ZH-CN1916035610_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BeaversBend_ZH-CN1916035610_400x240.jpg"
     }
   ],
   "page": 42,
   "pageSize": 42,
-  "total": 2046,
+  "total": 2047,
   "totalPages": 49,
   "hasMore": true
 }

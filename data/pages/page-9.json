@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-10-10",
+      "copyright": "Day octopus in the waters off Maui, Hawaii (© Dave Fleetham/plainpicture)",
+      "jpg": "https://cn.bing.com/th?id=OHR.WebbPillars_EN-US0251661895_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.WebbPillars_EN-US0251661895_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.WebbPillars_EN-US0251661895_400x240.jpg"
+    },
+    {
       "date": "2025-10-09",
       "copyright": "Fall colors below Mount Sneffels near Ridgway, Colorado (© Grant Ordelheide/TANDEM Stills + Motion)",
       "jpg": "https://cn.bing.com/th?id=OHR.OctopusCyanea_EN-US0194861123_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.PlazaMayor_EN-US3692727880_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PlazaMayor_EN-US3692727880_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.PlazaMayor_EN-US3692727880_400x240.jpg"
-    },
-    {
-      "date": "2025-08-29",
-      "copyright": "Sørvágsvatn lake, island of Vágar, Faroe Islands, Denmark (© Anton Petrus/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.WhiteEgret_EN-US3605994040_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.WhiteEgret_EN-US3605994040_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.WhiteEgret_EN-US3605994040_400x240.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 2046,
+  "total": 2047,
   "totalPages": 49,
   "hasMore": true
 }

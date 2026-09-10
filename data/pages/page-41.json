@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-02-04",
+      "copyright": "Corjuem堡垒，印度果阿邦 (© Ingvar Kuznetsov/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.WinterOlymics_ZH-CN7384614076_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.WinterOlymics_ZH-CN7384614076_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.WinterOlymics_ZH-CN7384614076_400x240.jpg"
+    },
+    {
       "date": "2022-02-03",
       "copyright": "阿尔卑斯旱獭，奥地利陶恩山国家公园 (© Misja Smits/Minden Pictures)",
       "jpg": "https://cn.bing.com/th?id=OHR.FortCorjuem_ZH-CN7295613217_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.KhomyakMountain_ZH-CN6296455717_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.KhomyakMountain_ZH-CN6296455717_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.KhomyakMountain_ZH-CN6296455717_400x240.jpg"
-    },
-    {
-      "date": "2021-12-24",
-      "copyright": "两只玩耍的北极熊，加拿大丘吉尔镇 (© Cheryl Ramalho/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.Rauchnachte_ZH-CN6061051054_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.Rauchnachte_ZH-CN6061051054_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.Rauchnachte_ZH-CN6061051054_400x240.jpg"
     }
   ],
   "page": 41,
   "pageSize": 42,
-  "total": 2046,
+  "total": 2047,
   "totalPages": 49,
   "hasMore": true
 }

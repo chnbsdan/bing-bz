@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-09-27",
+      "copyright": "Oktoberfest in Munich, Germany, at sunset (© AllesSuper21/iStock/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AutumnCumbria_EN-US3797009731_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AutumnCumbria_EN-US3797009731_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AutumnCumbria_EN-US3797009731_400x240.jpg"
+    },
+    {
       "date": "2024-09-26",
       "copyright": "Ocracoke Lighthouse on Ocracoke Island, North Carolina (© Chansak Joe/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MunichBeerfest_EN-US3708656793_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.TofinoVancouver_EN-US1466348668_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.TofinoVancouver_EN-US1466348668_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.TofinoVancouver_EN-US1466348668_400x240.jpg"
-    },
-    {
-      "date": "2024-08-16",
-      "copyright": "Inca ruin of Sacsayhuamán near Cusco, Peru (© SL_Photography/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.JoshuaTreeNP_EN-US1399159741_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.JoshuaTreeNP_EN-US1399159741_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.JoshuaTreeNP_EN-US1399159741_400x240.jpg"
     }
   ],
   "page": 18,
   "pageSize": 42,
-  "total": 2046,
+  "total": 2047,
   "totalPages": 49,
   "hasMore": true
 }

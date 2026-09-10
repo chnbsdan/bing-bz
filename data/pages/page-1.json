@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-09-11",
+      "copyright": "滨海自由城，法国里维埃拉，法国 (© StockByM/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FrenchRivieraVillage_ZH-CN2888811422_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FrenchRivieraVillage_ZH-CN2888811422_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.FrenchRivieraVillage_ZH-CN2888811422_400x240.jpg"
+    },
+    {
       "date": "2026-09-10",
       "copyright": "奥尔韦拉航拍图，安达卢西亚，西班牙 (© Marco Bottigelli/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.Olvera_ZH-CN2727093856_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.HawaiiLava_ZH-CN3257621771_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.HawaiiLava_ZH-CN3257621771_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.HawaiiLava_ZH-CN3257621771_400x240.jpg"
-    },
-    {
-      "date": "2026-07-31",
-      "copyright": "在纳瓦霍族保留地的纪念碑谷，亚利桑那州，美国 (© Westend61/Adobe Stock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.VirginiaTrail_ZH-CN2299501599_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.VirginiaTrail_ZH-CN2299501599_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.VirginiaTrail_ZH-CN2299501599_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2046,
+  "total": 2047,
   "totalPages": 49,
   "hasMore": true
 }

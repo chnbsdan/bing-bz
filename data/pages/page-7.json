@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-01-02",
+      "copyright": "New Year's Eve, Oberbaum Bridge, Berlin, Germany (© spreephoto.de/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.NewYearFox_EN-US6422915878_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.NewYearFox_EN-US6422915878_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.NewYearFox_EN-US6422915878_400x240.jpg"
+    },
+    {
       "date": "2026-01-01",
       "copyright": "Whooper swans, Kotoku Pond, Japan (© Martin Bailey/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.GermanyNewYear_EN-US6344260060_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SealWaving_EN-US6277930581_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SealWaving_EN-US6277930581_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SealWaving_EN-US6277930581_400x240.jpg"
-    },
-    {
-      "date": "2025-11-21",
-      "copyright": "Hungarian Parliament Building, Budapest, Hungary (© Alexander Spatari/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SaypeGeneva_EN-US6121087903_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SaypeGeneva_EN-US6121087903_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SaypeGeneva_EN-US6121087903_400x240.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2046,
+  "total": 2047,
   "totalPages": 49,
   "hasMore": true
 }

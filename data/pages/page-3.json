@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-06-19",
+      "copyright": "Aerial view of the ruins of Sacsayhuamán, Cusco, Peru (© Creative-Family/Getty Images Plus)",
+      "jpg": "https://cn.bing.com/th?id=OHR.JuneteenthNMAAHC_EN-US6306942628_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.JuneteenthNMAAHC_EN-US6306942628_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.JuneteenthNMAAHC_EN-US6306942628_400x240.jpg"
+    },
+    {
       "date": "2026-06-18",
       "copyright": "Tremola Road on the Saint Gotthard Pass in Airolo, Switzerland (© Sandro Bisaro/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.Saqsaywaman_EN-US6250260694_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SkradinskiBuk_EN-US0750882952_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SkradinskiBuk_EN-US0750882952_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SkradinskiBuk_EN-US0750882952_400x240.jpg"
-    },
-    {
-      "date": "2026-05-08",
-      "copyright": "Kofa National Wildlife Refuge, Arizona (© Denis Tangney Jr/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SardinianDonkey_EN-US0705945312_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SardinianDonkey_EN-US0705945312_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SardinianDonkey_EN-US0705945312_400x240.jpg"
     }
   ],
   "page": 3,
   "pageSize": 42,
-  "total": 2046,
+  "total": 2047,
   "totalPages": 49,
   "hasMore": true
 }
