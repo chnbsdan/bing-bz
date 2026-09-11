@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-09-12",
+      "copyright": "墨西哥近海围猎沙丁鱼饵球的加州海狮，太平洋 (© Henley Spiers/Nature Picture Library)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SardineBait_ZH-CN3256234033_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SardineBait_ZH-CN3256234033_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SardineBait_ZH-CN3256234033_400x240.jpg"
+    },
+    {
       "date": "2026-09-11",
       "copyright": "滨海自由城，法国里维埃拉，法国 (© StockByM/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.FrenchRivieraVillage_ZH-CN2888811422_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.HelsinkiBlue_ZH-CN3961551568_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.HelsinkiBlue_ZH-CN3961551568_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.HelsinkiBlue_ZH-CN3961551568_400x240.jpg"
-    },
-    {
-      "date": "2026-08-01",
-      "copyright": "鸟瞰弗吉尼亚爬山虎步道，达马斯克斯，弗吉尼亚州，美国 (© Eifel Kreutz/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.HawaiiLava_ZH-CN3257621771_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.HawaiiLava_ZH-CN3257621771_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.HawaiiLava_ZH-CN3257621771_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2047,
+  "total": 2048,
   "totalPages": 49,
   "hasMore": true
 }

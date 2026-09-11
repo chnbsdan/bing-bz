@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2021-11-13",
+      "copyright": "海狸湾度假公园, 美国俄克拉何马州 (© Inge Johnsson/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ElTajo_ZH-CN2134749418_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ElTajo_ZH-CN2134749418_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ElTajo_ZH-CN2134749418_400x240.jpg"
+    },
+    {
       "date": "2021-11-12",
       "copyright": "梅加拉亚邦的七姐妹瀑布，印度 (© Upamanyoo Das/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.BeaversBend_ZH-CN1916035610_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.Italica_ZH-CN1692906751_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.Italica_ZH-CN1692906751_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.Italica_ZH-CN1692906751_400x240.jpg"
-    },
-    {
-      "date": "2021-10-02",
-      "copyright": "加利福尼亚州的一艘集装箱船，美国 (© Cameron Venti/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.IvishakRiver_ZH-CN1464216156_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.IvishakRiver_ZH-CN1464216156_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.IvishakRiver_ZH-CN1464216156_400x240.jpg"
     }
   ],
   "page": 43,
   "pageSize": 42,
-  "total": 2047,
+  "total": 2048,
   "totalPages": 49,
   "hasMore": true
 }

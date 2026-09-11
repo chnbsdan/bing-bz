@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-07-19",
+      "copyright": "Lavender fields in Plateau de Valensole, France (© zpagistock/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FloridaSeashore_EN-US9038929616_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FloridaSeashore_EN-US9038929616_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.FloridaSeashore_EN-US9038929616_400x240.jpg"
+    },
+    {
       "date": "2025-07-18",
       "copyright": "Temple of Philae (aka Temple of Isis), Aswan, Egypt (© Ratnakorn Piyasirisorost/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.FranceLavender_EN-US5224253118_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.PacificCrestTrail_EN-US8903844619_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PacificCrestTrail_EN-US8903844619_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.PacificCrestTrail_EN-US8903844619_400x240.jpg"
-    },
-    {
-      "date": "2025-06-07",
-      "copyright": "Bottle-cap mural made by Oscar Olivares in Guatire, Venezuela (© FEDERICO PARRA/AFP via Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.NormandyBeach_EN-US8863709180_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.NormandyBeach_EN-US8863709180_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.NormandyBeach_EN-US8863709180_400x240.jpg"
     }
   ],
   "page": 11,
   "pageSize": 42,
-  "total": 2047,
+  "total": 2048,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-03-15",
+      "copyright": "Holi celebration in Jaipur, India (© powerofforever/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BasqueDolmen_EN-US9089569057_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BasqueDolmen_EN-US9089569057_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BasqueDolmen_EN-US9089569057_400x240.jpg"
+    },
+    {
       "date": "2025-03-14",
       "copyright": "Château de Sully-sur-Loire, Center-Val de Loire, France (© StockPhotoAstur/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.HoliColors_EN-US9033637774_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.PlainsZebra_EN-US9488790690_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PlainsZebra_EN-US9488790690_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.PlainsZebra_EN-US9488790690_400x240.jpg"
-    },
-    {
-      "date": "2025-02-01",
-      "copyright": "Dragon dance, Wuhan, China (© Miao Jian/Wuhan Morning Post/Visual China Group via Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.OrdesaSpain_EN-US9252424531_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.OrdesaSpain_EN-US9252424531_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.OrdesaSpain_EN-US9252424531_400x240.jpg"
     }
   ],
   "page": 14,
   "pageSize": 42,
-  "total": 2047,
+  "total": 2048,
   "totalPages": 49,
   "hasMore": true
 }

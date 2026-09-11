@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-02-14",
+      "copyright": "Third Thai-Lao Friendship Bridge connecting Laos and Thailand (© chaiyut samsuk/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ValentineHearts_EN-US6208359150_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ValentineHearts_EN-US6208359150_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ValentineHearts_EN-US6208359150_400x240.jpg"
+    },
+    {
       "date": "2026-02-13",
       "copyright": "Blue-footed booby, Galápagos Islands, Ecuador (© Karine Aigner/TANDEM Stills + Motion)",
       "jpg": "https://cn.bing.com/th?id=OHR.FriendshipBridge_EN-US6136231298_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.LauterbrunnenValley_EN-US6594933852_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.LauterbrunnenValley_EN-US6594933852_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.LauterbrunnenValley_EN-US6594933852_400x240.jpg"
-    },
-    {
-      "date": "2026-01-03",
-      "copyright": "Arctic fox sleeping (© Chansak Joe/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.VeniceView_EN-US3244163136_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.VeniceView_EN-US3244163136_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.VeniceView_EN-US3244163136_400x240.jpg"
     }
   ],
   "page": 6,
   "pageSize": 42,
-  "total": 2047,
+  "total": 2048,
   "totalPages": 49,
   "hasMore": true
 }

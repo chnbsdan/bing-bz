@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-08-01",
+      "copyright": "鸟瞰弗吉尼亚爬山虎步道，达马斯克斯，弗吉尼亚州，美国 (© Eifel Kreutz/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.HawaiiLava_ZH-CN3257621771_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.HawaiiLava_ZH-CN3257621771_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.HawaiiLava_ZH-CN3257621771_400x240.jpg"
+    },
+    {
       "date": "2026-07-31",
       "copyright": "在纳瓦霍族保留地的纪念碑谷，亚利桑那州，美国 (© Westend61/Adobe Stock)",
       "jpg": "https://cn.bing.com/th?id=OHR.VirginiaTrail_ZH-CN2299501599_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.EggDad_EN-US6390221455_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.EggDad_EN-US6390221455_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.EggDad_EN-US6390221455_400x240.jpg"
-    },
-    {
-      "date": "2026-06-20",
-      "copyright": "National Museum of African American History and Culture, Washington, DC (© Walter Bibikow/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ArchedIceberg_EN-US6345786269_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ArchedIceberg_EN-US6345786269_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ArchedIceberg_EN-US6345786269_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2047,
+  "total": 2048,
   "totalPages": 49,
   "hasMore": true
 }
