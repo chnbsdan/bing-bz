@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2021-10-03",
+      "copyright": "北坡自治市镇的伊维沙克河，阿拉斯加州 (© Don Paulson/Danita Delimont)",
+      "jpg": "https://cn.bing.com/th?id=OHR.Italica_ZH-CN1692906751_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.Italica_ZH-CN1692906751_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.Italica_ZH-CN1692906751_400x240.jpg"
+    },
+    {
       "date": "2021-10-02",
       "copyright": "加利福尼亚州的一艘集装箱船，美国 (© Cameron Venti/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.IvishakRiver_ZH-CN1464216156_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.OlympicCoast_ZH-CN0827844876_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.OlympicCoast_ZH-CN0827844876_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.OlympicCoast_ZH-CN0827844876_400x240.jpg"
-    },
-    {
-      "date": "2021-08-22",
-      "copyright": "位于阿曼和迪拜酋长国边界的鲁卜哈利沙漠 (© Daniel Schoenen/Offset by Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.PetitMinou_ZH-CN0758401900_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.PetitMinou_ZH-CN0758401900_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.PetitMinou_ZH-CN0758401900_400x240.jpg"
     }
   ],
   "page": 44,
   "pageSize": 42,
-  "total": 2048,
+  "total": 2049,
   "totalPages": 49,
   "hasMore": true
 }

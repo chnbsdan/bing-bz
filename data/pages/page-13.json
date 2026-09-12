@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-04-27",
+      "copyright": "Magellanic penguins, Volunteer Point, Falkland Islands (© imageBROKER/Matthias Graben/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.RedwoodGrove_EN-US3412092024_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.RedwoodGrove_EN-US3412092024_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.RedwoodGrove_EN-US3412092024_400x240.jpg"
+    },
+    {
       "date": "2025-04-26",
       "copyright": "Spire Cove in Kenai Fjords National Park, Seward, Alaska (© Wander Photography/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MagellanicPenguin_EN-US3332048594_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.PandaSnow_EN-US9432739016_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PandaSnow_EN-US9432739016_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.PandaSnow_EN-US9432739016_400x240.jpg"
-    },
-    {
-      "date": "2025-03-16",
-      "copyright": "Dolmen of Sorginetxe, Basque Country, Álava, Spain (© David Herraez Calzada/plainpicture)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ForumRomanum_EN-US9379132630_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ForumRomanum_EN-US9379132630_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ForumRomanum_EN-US9379132630_400x240.jpg"
     }
   ],
   "page": 13,
   "pageSize": 42,
-  "total": 2048,
+  "total": 2049,
   "totalPages": 49,
   "hasMore": true
 }

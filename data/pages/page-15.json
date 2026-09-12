@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-02-02",
+      "copyright": "La Brecha de Rolando, Ordesa y Monte Perdido National Park, Spain (© Inaki Relanzon/Nature Picture Library/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.PlainsZebra_EN-US9488790690_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.PlainsZebra_EN-US9488790690_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.PlainsZebra_EN-US9488790690_400x240.jpg"
+    },
+    {
       "date": "2025-02-01",
       "copyright": "Dragon dance, Wuhan, China (© Miao Jian/Wuhan Morning Post/Visual China Group via Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.OrdesaSpain_EN-US9252424531_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SantaClausVillage_EN-US9527661842_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SantaClausVillage_EN-US9527661842_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SantaClausVillage_EN-US9527661842_400x240.jpg"
-    },
-    {
-      "date": "2024-12-22",
-      "copyright": "English National Ballet performing 'The Nutcracker' (© Caroline Holden/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SibiuRomania_EN-US9223739756_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SibiuRomania_EN-US9223739756_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SibiuRomania_EN-US9223739756_400x240.jpg"
     }
   ],
   "page": 15,
   "pageSize": 42,
-  "total": 2048,
+  "total": 2049,
   "totalPages": 49,
   "hasMore": true
 }

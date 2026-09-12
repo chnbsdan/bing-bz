@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-12-10",
+      "copyright": "Sandstone rock formations, Vermilion Cliffs National Monument, Arizona (© Yva Momatiuk and John Eastcott/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.CheetahDay_EN-US6775219587_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.CheetahDay_EN-US6775219587_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.CheetahDay_EN-US6775219587_400x240.jpg"
+    },
+    {
       "date": "2023-12-09",
       "copyright": "North Gate of Angkor Thom, Angkor Archaeological Park, Cambodia (© Amazing Travel Lifestyle/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.VermilionCliffs_EN-US9543863428_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.FuzerCastle_EN-US9918819618_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.FuzerCastle_EN-US9918819618_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.FuzerCastle_EN-US9918819618_400x240.jpg"
-    },
-    {
-      "date": "2023-10-29",
-      "copyright": "Astoria-Megler Bridge on the Columbia River, Astoria, Oregon (© Dan Mihai/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.PoconosMaze_EN-US4210947594_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.PoconosMaze_EN-US4210947594_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.PoconosMaze_EN-US4210947594_400x240.jpg"
     }
   ],
   "page": 25,
   "pageSize": 42,
-  "total": 2048,
+  "total": 2049,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-08-02",
+      "copyright": "大批熔岩流涌入大洋，大岛，夏威夷州，美国 (© Ken McCurdy/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.HelsinkiBlue_ZH-CN3961551568_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.HelsinkiBlue_ZH-CN3961551568_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.HelsinkiBlue_ZH-CN3961551568_400x240.jpg"
+    },
+    {
       "date": "2026-08-01",
       "copyright": "鸟瞰弗吉尼亚爬山虎步道，达马斯克斯，弗吉尼亚州，美国 (© Eifel Kreutz/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.HawaiiLava_ZH-CN3257621771_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.QuinaultFerns_EN-US6436576493_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.QuinaultFerns_EN-US6436576493_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.QuinaultFerns_EN-US6436576493_400x240.jpg"
-    },
-    {
-      "date": "2026-06-21",
-      "copyright": "Arched iceberg floating off the western Antarctic Peninsula, Southern Ocean (© Steven Kazlowski/Nature Picture Library)",
-      "jpg": "https://cn.bing.com/th?id=OHR.EggDad_EN-US6390221455_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.EggDad_EN-US6390221455_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.EggDad_EN-US6390221455_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2048,
+  "total": 2049,
   "totalPages": 49,
   "hasMore": true
 }

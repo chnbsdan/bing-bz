@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-10-12",
+      "copyright": "Coral reef surrounding the island of Monuriki, Mamanuca Islands, Fiji (© David Wall/SuperStock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.WoodDuckHen_EN-US0382439406_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.WoodDuckHen_EN-US0382439406_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.WoodDuckHen_EN-US0382439406_400x240.jpg"
+    },
+    {
       "date": "2025-10-11",
       "copyright": "The Pillars of Creation viewed by the James Webb Space Telescope (© NASA)",
       "jpg": "https://cn.bing.com/th?id=OHR.MonurikiFiji_EN-US0326449622_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ScottsBluff_EN-US3893566724_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ScottsBluff_EN-US3893566724_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ScottsBluff_EN-US3893566724_400x240.jpg"
-    },
-    {
-      "date": "2025-08-31",
-      "copyright": "Aerial view of Plaza Mayor, Madrid, Spain (© AirPano LLC/Amazing Aerial Agency)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MaldivesWhaleShark_EN-US3819740955_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MaldivesWhaleShark_EN-US3819740955_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MaldivesWhaleShark_EN-US3819740955_400x240.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 2048,
+  "total": 2049,
   "totalPages": 49,
   "hasMore": true
 }
