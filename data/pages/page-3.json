@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-06-22",
+      "copyright": "King penguin father checking egg (© McDonald Wildlife Photography Inc./Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.QuinaultFerns_EN-US6436576493_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.QuinaultFerns_EN-US6436576493_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.QuinaultFerns_EN-US6436576493_400x240.jpg"
+    },
+    {
       "date": "2026-06-21",
       "copyright": "Arched iceberg floating off the western Antarctic Peninsula, Southern Ocean (© Steven Kazlowski/Nature Picture Library)",
       "jpg": "https://cn.bing.com/th?id=OHR.EggDad_EN-US6390221455_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.Fratercula_EN-US1020898539_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.Fratercula_EN-US1020898539_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.Fratercula_EN-US1020898539_400x240.jpg"
-    },
-    {
-      "date": "2026-05-11",
-      "copyright": "Polar bear mother and cubs playing in Wapusk National Park, Manitoba, Canada (© Hao Jiang/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.QueenslandReef_EN-US0977236952_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.QueenslandReef_EN-US0977236952_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.QueenslandReef_EN-US0977236952_400x240.jpg"
     }
   ],
   "page": 3,
   "pageSize": 42,
-  "total": 2049,
+  "total": 2050,
   "totalPages": 49,
   "hasMore": true
 }

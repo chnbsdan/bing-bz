@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-10-13",
+      "copyright": "Wood duck hen (© ps50ace/iStock/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SaranacLake_EN-US0445660450_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SaranacLake_EN-US0445660450_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SaranacLake_EN-US0445660450_400x240.jpg"
+    },
+    {
       "date": "2025-10-12",
       "copyright": "Coral reef surrounding the island of Monuriki, Mamanuca Islands, Fiji (© David Wall/SuperStock)",
       "jpg": "https://cn.bing.com/th?id=OHR.WoodDuckHen_EN-US0382439406_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.LaborDayChicago_EN-US3947410593_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.LaborDayChicago_EN-US3947410593_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.LaborDayChicago_EN-US3947410593_400x240.jpg"
-    },
-    {
-      "date": "2025-09-01",
-      "copyright": "Whale shark off the coast of Alifu Dhaalu Atoll, Maldives (© Bachir Moukarzel/Amazing Aerial Agency)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ScottsBluff_EN-US3893566724_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ScottsBluff_EN-US3893566724_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ScottsBluff_EN-US3893566724_400x240.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 2049,
+  "total": 2050,
   "totalPages": 49,
   "hasMore": true
 }

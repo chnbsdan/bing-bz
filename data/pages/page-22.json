@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-04-15",
+      "copyright": "North American beaver in a pond near Wonder Lake, Denali National Park, Alaska (© Paul Souders/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SolarEclipseOregon_EN-US2134131862_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SolarEclipseOregon_EN-US2134131862_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SolarEclipseOregon_EN-US2134131862_400x240.jpg"
+    },
+    {
       "date": "2024-04-14",
       "copyright": "Himeji Castle, Himeji, Hyōgo Prefecture, Japan (© Julian Elliott Photography/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BeaverDenali_EN-US1894047698_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.PolarBearCubs_EN-US3160537454_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PolarBearCubs_EN-US3160537454_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.PolarBearCubs_EN-US3160537454_400x240.jpg"
-    },
-    {
-      "date": "2024-03-04",
-      "copyright": "'United We Stand' sculpture by Charles McGee, Charles H. Wright Museum of African American History, Detroit, Michigan (© Jim West/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.GrandCanyonWinter_EN-US3010552047_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.GrandCanyonWinter_EN-US3010552047_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.GrandCanyonWinter_EN-US3010552047_400x240.jpg"
     }
   ],
   "page": 22,
   "pageSize": 42,
-  "total": 2049,
+  "total": 2050,
   "totalPages": 49,
   "hasMore": true
 }

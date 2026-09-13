@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-09-14",
+      "copyright": "地肤田，中国 (© lingqi xie/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.KochiaChina_ZH-CN4719995421_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.KochiaChina_ZH-CN4719995421_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.KochiaChina_ZH-CN4719995421_400x240.jpg"
+    },
+    {
       "date": "2026-09-13",
       "copyright": "米苏里纳群峰，多洛米蒂山脉，威尼托大区，意大利 (© Vithun Khamsong/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MisurinaPeak_ZH-CN3877105161_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AdorableOwlet_ZH-CN6929234033_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AdorableOwlet_ZH-CN6929234033_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AdorableOwlet_ZH-CN6929234033_400x240.jpg"
-    },
-    {
-      "date": "2026-08-03",
-      "copyright": "马尔萨什洛克港口五彩斑斓的渔船，马耳他 (© Klubovy/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BoatsMalta_ZH-CN4708255775_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BoatsMalta_ZH-CN4708255775_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BoatsMalta_ZH-CN4708255775_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2049,
+  "total": 2050,
   "totalPages": 49,
   "hasMore": true
 }

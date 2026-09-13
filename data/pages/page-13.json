@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-04-28",
+      "copyright": "Grove of redwoods in Redwood National and State Parks, California (© Bob Pool/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.KilaueaCaldera_EN-US7764962675_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.KilaueaCaldera_EN-US7764962675_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.KilaueaCaldera_EN-US7764962675_400x240.jpg"
+    },
+    {
       "date": "2025-04-27",
       "copyright": "Magellanic penguins, Volunteer Point, Falkland Islands (© imageBROKER/Matthias Graben/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.RedwoodGrove_EN-US3412092024_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BeckettBridge_EN-US9511078525_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BeckettBridge_EN-US9511078525_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BeckettBridge_EN-US9511078525_400x240.jpg"
-    },
-    {
-      "date": "2025-03-17",
-      "copyright": "The Temple of Saturn in the Roman Forum, Rome, Italy (© Nico De Pasquale Photography/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.PandaSnow_EN-US9432739016_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.PandaSnow_EN-US9432739016_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.PandaSnow_EN-US9432739016_400x240.jpg"
     }
   ],
   "page": 13,
   "pageSize": 42,
-  "total": 2049,
+  "total": 2050,
   "totalPages": 49,
   "hasMore": true
 }

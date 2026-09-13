@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-06-09",
+      "copyright": "Summit of Pine Mountain, Angeles National Forest, California (© Matthew Kuhns/TANDEM Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.StellarSeaLions_EN-US8941740506_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.StellarSeaLions_EN-US8941740506_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.StellarSeaLions_EN-US8941740506_400x240.jpg"
+    },
+    {
       "date": "2025-06-08",
       "copyright": "Arromanches-les-Bains in Normandy, France (© Horia Merla/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.PacificCrestTrail_EN-US8903844619_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.OrangeImpala_EN-US3494359572_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.OrangeImpala_EN-US3494359572_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.OrangeImpala_EN-US3494359572_400x240.jpg"
-    },
-    {
-      "date": "2025-04-28",
-      "copyright": "Grove of redwoods in Redwood National and State Parks, California (© Bob Pool/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.KilaueaCaldera_EN-US7764962675_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.KilaueaCaldera_EN-US7764962675_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.KilaueaCaldera_EN-US7764962675_400x240.jpg"
     }
   ],
   "page": 12,
   "pageSize": 42,
-  "total": 2049,
+  "total": 2050,
   "totalPages": 49,
   "hasMore": true
 }

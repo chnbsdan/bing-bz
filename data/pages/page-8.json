@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-11-24",
+      "copyright": "Leshan Giant Buddha, Sichuan, China (© www.anotherdayattheoffice.org/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MadgascarAmmonite_EN-US6525238032_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MadgascarAmmonite_EN-US6525238032_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.MadgascarAmmonite_EN-US6525238032_400x240.jpg"
+    },
+    {
       "date": "2025-11-23",
       "copyright": "Harbor seals at Robert Moses State Park, Long Island, New York (© Vicki Jauron, Babylon and Beyond Photography/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.LeshanBuddha_EN-US6412307232_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MuleCanyon_EN-US0527899523_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MuleCanyon_EN-US0527899523_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MuleCanyon_EN-US0527899523_400x240.jpg"
-    },
-    {
-      "date": "2025-10-13",
-      "copyright": "Wood duck hen (© ps50ace/iStock/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SaranacLake_EN-US0445660450_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SaranacLake_EN-US0445660450_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SaranacLake_EN-US0445660450_400x240.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2049,
+  "total": 2050,
   "totalPages": 49,
   "hasMore": true
 }
