@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-01-06",
+      "copyright": "Kings Mountain, Chugach Mountains, Alaska (© Chris Moore - Exploring Light Photography/TANDEM Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ImpalaRooibok_EN-US6797453661_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ImpalaRooibok_EN-US6797453661_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ImpalaRooibok_EN-US6797453661_400x240.jpg"
+    },
+    {
       "date": "2026-01-05",
       "copyright": "Staubbach Falls at Lauterbrunnen, Canton of Bern, Switzerland (© pongnathee kluaythong/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.KingMountain_EN-US6730743729_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.TreviFountain_EN-US6800145474_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.TreviFountain_EN-US6800145474_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.TreviFountain_EN-US6800145474_400x240.jpg"
-    },
-    {
-      "date": "2025-11-25",
-      "copyright": "Ammonite fossil from Madagascar (© ThomasLENNE/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.GwailorFort_EN-US6671653416_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.GwailorFort_EN-US6671653416_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.GwailorFort_EN-US6671653416_400x240.jpg"
     }
   ],
   "page": 7,
   "pageSize": 42,
-  "total": 2050,
+  "total": 2051,
   "totalPages": 49,
   "hasMore": true
 }

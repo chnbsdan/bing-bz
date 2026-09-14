@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-08-20",
+      "copyright": "Cliffs of Telašćica Nature Park, Dugi Otok Island, Croatia (© Ilija Ascic/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.WatarrkaLizard_EN-US2106702347_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.WatarrkaLizard_EN-US2106702347_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.WatarrkaLizard_EN-US2106702347_400x240.jpg"
+    },
+    {
       "date": "2024-08-19",
       "copyright": "African elephants, Amboseli National Park, Kenya (© Ruzdi Ekenheim/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.DugiOtokCroatia_EN-US1981524043_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.HudsonFireworks_EN-US4304057228_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.HudsonFireworks_EN-US4304057228_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.HudsonFireworks_EN-US4304057228_400x240.jpg"
-    },
-    {
-      "date": "2024-07-09",
-      "copyright": "The Roman amphitheater of Italica, near Seville, Spain (© Moses Palermo/Amazing Aerial Agency)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MeerkatManor_EN-US4231814766_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MeerkatManor_EN-US4231814766_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MeerkatManor_EN-US4231814766_400x240.jpg"
     }
   ],
   "page": 19,
   "pageSize": 42,
-  "total": 2050,
+  "total": 2051,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-11-25",
+      "copyright": "Ammonite fossil from Madagascar (© ThomasLENNE/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.GwailorFort_EN-US6671653416_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.GwailorFort_EN-US6671653416_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.GwailorFort_EN-US6671653416_400x240.jpg"
+    },
+    {
       "date": "2025-11-24",
       "copyright": "Leshan Giant Buddha, Sichuan, China (© www.anotherdayattheoffice.org/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.MadgascarAmmonite_EN-US6525238032_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.OiaSantorini_EN-US0585833457_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.OiaSantorini_EN-US0585833457_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.OiaSantorini_EN-US0585833457_400x240.jpg"
-    },
-    {
-      "date": "2025-10-14",
-      "copyright": "Village of Saranac Lake, Adirondack Mountains, New York (© DenisTangneyJr/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MuleCanyon_EN-US0527899523_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MuleCanyon_EN-US0527899523_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MuleCanyon_EN-US0527899523_400x240.jpg"
     }
   ],
   "page": 8,
   "pageSize": 42,
-  "total": 2050,
+  "total": 2051,
   "totalPages": 49,
   "hasMore": true
 }

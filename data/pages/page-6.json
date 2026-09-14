@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-02-17",
+      "copyright": "Lincoln Memorial, Washington, DC (© Westend61/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.NewYearLantern_EN-US6665128229_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.NewYearLantern_EN-US6665128229_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.NewYearLantern_EN-US6665128229_400x240.jpg"
+    },
+    {
       "date": "2026-02-16",
       "copyright": "Humpback whales in Monterey Bay, California (© Kiliii Fish/Cavan Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.PresidentsDay_EN-US6598155144_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.NuukGreenland_EN-US6879869782_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.NuukGreenland_EN-US6879869782_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.NuukGreenland_EN-US6879869782_400x240.jpg"
-    },
-    {
-      "date": "2026-01-06",
-      "copyright": "Kings Mountain, Chugach Mountains, Alaska (© Chris Moore - Exploring Light Photography/TANDEM Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ImpalaRooibok_EN-US6797453661_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ImpalaRooibok_EN-US6797453661_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ImpalaRooibok_EN-US6797453661_400x240.jpg"
     }
   ],
   "page": 6,
   "pageSize": 42,
-  "total": 2050,
+  "total": 2051,
   "totalPages": 49,
   "hasMore": true
 }

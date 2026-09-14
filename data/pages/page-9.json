@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-10-14",
+      "copyright": "Village of Saranac Lake, Adirondack Mountains, New York (© DenisTangneyJr/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MuleCanyon_EN-US0527899523_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MuleCanyon_EN-US0527899523_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.MuleCanyon_EN-US0527899523_400x240.jpg"
+    },
+    {
       "date": "2025-10-13",
       "copyright": "Wood duck hen (© ps50ace/iStock/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.SaranacLake_EN-US0445660450_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.DeadvleiTrees_EN-US4233800313_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.DeadvleiTrees_EN-US4233800313_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.DeadvleiTrees_EN-US4233800313_400x240.jpg"
-    },
-    {
-      "date": "2025-09-02",
-      "copyright": "Scotts Bluff National Monument in Gering, Nebraska (© Hawk Buckman/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LaborDayChicago_EN-US3947410593_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LaborDayChicago_EN-US3947410593_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.LaborDayChicago_EN-US3947410593_400x240.jpg"
     }
   ],
   "page": 9,
   "pageSize": 42,
-  "total": 2050,
+  "total": 2051,
   "totalPages": 49,
   "hasMore": true
 }

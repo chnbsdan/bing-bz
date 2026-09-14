@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-09-02",
+      "copyright": "Scotts Bluff National Monument in Gering, Nebraska (© Hawk Buckman/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.LaborDayChicago_EN-US3947410593_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.LaborDayChicago_EN-US3947410593_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.LaborDayChicago_EN-US3947410593_400x240.jpg"
+    },
+    {
       "date": "2025-09-01",
       "copyright": "Whale shark off the coast of Alifu Dhaalu Atoll, Maldives (© Bachir Moukarzel/Amazing Aerial Agency)",
       "jpg": "https://cn.bing.com/th?id=OHR.ScottsBluff_EN-US3893566724_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BadlandsSunset_EN-US5821746223_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BadlandsSunset_EN-US5821746223_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BadlandsSunset_EN-US5821746223_400x240.jpg"
-    },
-    {
-      "date": "2025-07-22",
-      "copyright": "The moon's surface photographed through a telescope (© Sergey Kuznetsov/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AcroporaReef_EN-US5567789372_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AcroporaReef_EN-US5567789372_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AcroporaReef_EN-US5567789372_400x240.jpg"
     }
   ],
   "page": 10,
   "pageSize": 42,
-  "total": 2050,
+  "total": 2051,
   "totalPages": 49,
   "hasMore": true
 }

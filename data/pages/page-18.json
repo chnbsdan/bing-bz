@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2024-10-01",
+      "copyright": "Giant sequoias, Sequoia National Park, California (© Galyna Andrushko/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.LittleToucanet_EN-US4236893251_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.LittleToucanet_EN-US4236893251_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.LittleToucanet_EN-US4236893251_400x240.jpg"
+    },
+    {
       "date": "2024-09-30",
       "copyright": "Waterfall in Skaftafell, Vatnajökull National Park, Iceland (© Nopasorn Kowathanakul/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.GiantSequoias_EN-US4034909984_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.HangCave_EN-US9374263509_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.HangCave_EN-US9374263509_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.HangCave_EN-US9374263509_400x240.jpg"
-    },
-    {
-      "date": "2024-08-20",
-      "copyright": "Cliffs of Telašćica Nature Park, Dugi Otok Island, Croatia (© Ilija Ascic/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.WatarrkaLizard_EN-US2106702347_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.WatarrkaLizard_EN-US2106702347_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.WatarrkaLizard_EN-US2106702347_400x240.jpg"
     }
   ],
   "page": 18,
   "pageSize": 42,
-  "total": 2050,
+  "total": 2051,
   "totalPages": 49,
   "hasMore": true
 }

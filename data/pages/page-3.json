@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-06-23",
+      "copyright": "Quinault rainforest, Olympic National Park, Washington state (© Chris Moore/Tandem Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.Fujisan_EN-US6479372200_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.Fujisan_EN-US6479372200_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.Fujisan_EN-US6479372200_400x240.jpg"
+    },
+    {
       "date": "2026-06-22",
       "copyright": "King penguin father checking egg (© McDonald Wildlife Photography Inc./Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.QuinaultFerns_EN-US6436576493_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AlabamaHills_EN-US1154221052_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AlabamaHills_EN-US1154221052_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AlabamaHills_EN-US1154221052_400x240.jpg"
-    },
-    {
-      "date": "2026-05-12",
-      "copyright": "Great Barrier Reef from above, Queensland, Australia (© Francesco Riccardo Iacomino/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.Fratercula_EN-US1020898539_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.Fratercula_EN-US1020898539_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.Fratercula_EN-US1020898539_400x240.jpg"
     }
   ],
   "page": 3,
   "pageSize": 42,
-  "total": 2050,
+  "total": 2051,
   "totalPages": 49,
   "hasMore": true
 }
