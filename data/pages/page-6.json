@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-02-18",
+      "copyright": "Red lanterns celebrating Chinese New Year (© Gins Wang/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.PrzewalskisHorse_EN-US6767229079_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.PrzewalskisHorse_EN-US6767229079_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.PrzewalskisHorse_EN-US6767229079_400x240.jpg"
+    },
+    {
       "date": "2026-02-17",
       "copyright": "Lincoln Memorial, Washington, DC (© Westend61/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.NewYearLantern_EN-US6665128229_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.OldRockArch_EN-US2422589534_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.OldRockArch_EN-US2422589534_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.OldRockArch_EN-US2422589534_400x240.jpg"
-    },
-    {
-      "date": "2026-01-07",
-      "copyright": "A herd of impalas, Londolozi Game Reserve, South Africa (© Mint Images/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.NuukGreenland_EN-US6879869782_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.NuukGreenland_EN-US6879869782_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.NuukGreenland_EN-US6879869782_400x240.jpg"
     }
   ],
   "page": 6,
   "pageSize": 42,
-  "total": 2051,
+  "total": 2052,
   "totalPages": 49,
   "hasMore": true
 }

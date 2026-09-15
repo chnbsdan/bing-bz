@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-08-05",
+      "copyright": "非斯皇宫装饰华丽的大门，摩洛哥 (© cgst26/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FezMorocco_ZH-CN7662339428_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FezMorocco_ZH-CN7662339428_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.FezMorocco_ZH-CN7662339428_400x240.jpg"
+    },
+    {
       "date": "2026-08-04",
       "copyright": "佛罗里达穴鸮幼鸟，开普科拉尔，佛罗里达州，美国 (© mlorenzphotography/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.AdorableOwlet_ZH-CN6929234033_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.GrandPlace_EN-US6561229456_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.GrandPlace_EN-US6561229456_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.GrandPlace_EN-US6561229456_400x240.jpg"
-    },
-    {
-      "date": "2026-06-24",
-      "copyright": "Mount Fuji on Honshu Island, Japan (© phutthiseth thongtae/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BFPollin_EN-US6519187095_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BFPollin_EN-US6519187095_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BFPollin_EN-US6519187095_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2051,
+  "total": 2052,
   "totalPages": 49,
   "hasMore": true
 }

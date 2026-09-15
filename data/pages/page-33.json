@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-01-11",
+      "copyright": "New Year's Eve fireworks, Sydney Harbour Bridge, Australia (© Wendell Teodoro/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.NorwayNYD_EN-US3880728634_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.NorwayNYD_EN-US3880728634_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.NorwayNYD_EN-US3880728634_400x240.jpg"
+    },
+    {
       "date": "2023-01-10",
       "copyright": "Rock formations in the White Desert, Egypt (© Anton Petrus/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.SydneyNYE_EN-US3807524923_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.FIFA2022_EN-US9006895256_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.FIFA2022_EN-US9006895256_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.FIFA2022_EN-US9006895256_400x240.jpg"
-    },
-    {
-      "date": "2022-11-30",
-      "copyright": "Virgin River in Zion National Park, Utah (© Jonathan Ross/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LandartPainting_EN-US8910164390_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LandartPainting_EN-US8910164390_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.LandartPainting_EN-US8910164390_400x240.jpg"
     }
   ],
   "page": 33,
   "pageSize": 42,
-  "total": 2051,
+  "total": 2052,
   "totalPages": 49,
   "hasMore": true
 }

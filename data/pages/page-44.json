@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2021-10-06",
+      "copyright": "爱德华王子岛的森林和树冠，加拿大 (© OliverChilds/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SWColorado_ZH-CN2381176407_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SWColorado_ZH-CN2381176407_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SWColorado_ZH-CN2381176407_400x240.jpg"
+    },
+    {
       "date": "2021-10-05",
       "copyright": "绚烂的仙女座星系 (© NASA/JPL-Caltech)",
       "jpg": "https://cn.bing.com/th?id=OHR.FallPEI_ZH-CN2044233645_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.WalhallaOverlook_ZH-CN1059655401_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.WalhallaOverlook_ZH-CN1059655401_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.WalhallaOverlook_ZH-CN1059655401_400x240.jpg"
-    },
-    {
-      "date": "2021-08-25",
-      "copyright": "浅水滩上的小蓝鹭，古巴 (© Sergey Uryadnikov/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.HippieTown_ZH-CN0980866245_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.HippieTown_ZH-CN0980866245_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.HippieTown_ZH-CN0980866245_400x240.jpg"
     }
   ],
   "page": 44,
   "pageSize": 42,
-  "total": 2051,
+  "total": 2052,
   "totalPages": 49,
   "hasMore": true
 }

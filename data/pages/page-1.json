@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-09-16",
+      "copyright": "斯瓦尔巴群岛玩耍的北极熊幼崽，挪威 (© Danny Green/Nature Picture Library)",
+      "jpg": "https://cn.bing.com/th?id=OHR.IcyCubs_ZH-CN5287408951_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.IcyCubs_ZH-CN5287408951_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.IcyCubs_ZH-CN5287408951_400x240.jpg"
+    },
+    {
       "date": "2026-09-15",
       "copyright": "红绿金刚鹦鹉 (© markes51/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.RedMacawsFlight_ZH-CN5045822113_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MaraCrossing_ZH-CN8816902094_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MaraCrossing_ZH-CN8816902094_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MaraCrossing_ZH-CN8816902094_400x240.jpg"
-    },
-    {
-      "date": "2026-08-05",
-      "copyright": "非斯皇宫装饰华丽的大门，摩洛哥 (© cgst26/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.FezMorocco_ZH-CN7662339428_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.FezMorocco_ZH-CN7662339428_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.FezMorocco_ZH-CN7662339428_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2051,
+  "total": 2052,
   "totalPages": 49,
   "hasMore": true
 }

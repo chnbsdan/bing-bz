@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2022-02-09",
+      "copyright": "科西嘉岛上的Speloncato市，法国 (© Jon Ingall/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SevenSistersCliffs_ZH-CN5362127173_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SevenSistersCliffs_ZH-CN5362127173_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SevenSistersCliffs_ZH-CN5362127173_400x240.jpg"
+    },
+    {
       "date": "2022-02-08",
       "copyright": "冰雪节上的冰雕艺术作品，加拿大渥太华 (© S. Garcia Cournoyer/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.SpeloncatoSnow_ZH-CN8115437163_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.WesterheverLight_ZH-CN6827035695_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.WesterheverLight_ZH-CN6827035695_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.WesterheverLight_ZH-CN6827035695_400x240.jpg"
-    },
-    {
-      "date": "2021-12-29",
-      "copyright": "半球形的谢尔亨里克森天文台，挪威斯瓦尔巴群岛 (© Vincent Fournier/Gallery Stock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.OreamnosAmericanus_ZH-CN6731612431_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.OreamnosAmericanus_ZH-CN6731612431_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.OreamnosAmericanus_ZH-CN6731612431_400x240.jpg"
     }
   ],
   "page": 41,
   "pageSize": 42,
-  "total": 2051,
+  "total": 2052,
   "totalPages": 49,
   "hasMore": true
 }

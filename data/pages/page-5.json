@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-04-01",
+      "copyright": "Paradise Cave, Phong Nha-Ke Bang National Park, Vietnam (© Pakawat Thongcharoen/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.JapaneseTreeFrog_EN-US6527297660_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.JapaneseTreeFrog_EN-US6527297660_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.JapaneseTreeFrog_EN-US6527297660_400x240.jpg"
+    },
+    {
       "date": "2026-03-31",
       "copyright": "Demoiselle cranes, India (© Axel Gomille/Nature Picture Library)",
       "jpg": "https://cn.bing.com/th?id=OHR.ParadiseCave_EN-US6470755729_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.DragonsEyeRock_EN-US6826796617_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.DragonsEyeRock_EN-US6826796617_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.DragonsEyeRock_EN-US6826796617_400x240.jpg"
-    },
-    {
-      "date": "2026-02-18",
-      "copyright": "Red lanterns celebrating Chinese New Year (© Gins Wang/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.PrzewalskisHorse_EN-US6767229079_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.PrzewalskisHorse_EN-US6767229079_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.PrzewalskisHorse_EN-US6767229079_400x240.jpg"
     }
   ],
   "page": 5,
   "pageSize": 42,
-  "total": 2051,
+  "total": 2052,
   "totalPages": 49,
   "hasMore": true
 }

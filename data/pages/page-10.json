@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-09-03",
+      "copyright": "Amalgamated Clothing Workers of America in a Labor Day parade, May 1915, Chicago (© Chicago Sun-Times/Chicago Daily News collection/Chicago History Museum/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.DeadvleiTrees_EN-US4233800313_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.DeadvleiTrees_EN-US4233800313_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.DeadvleiTrees_EN-US4233800313_400x240.jpg"
+    },
+    {
       "date": "2025-09-02",
       "copyright": "Scotts Bluff National Monument in Gering, Nebraska (© Hawk Buckman/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.LaborDayChicago_EN-US3947410593_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.VaticanCity_EN-US5915643866_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.VaticanCity_EN-US5915643866_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.VaticanCity_EN-US5915643866_400x240.jpg"
-    },
-    {
-      "date": "2025-07-23",
-      "copyright": "Staghorn coral off the island of Bonaire, Caribbean Netherlands (© blue-sea.cz/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BadlandsSunset_EN-US5821746223_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BadlandsSunset_EN-US5821746223_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BadlandsSunset_EN-US5821746223_400x240.jpg"
     }
   ],
   "page": 10,
   "pageSize": 42,
-  "total": 2051,
+  "total": 2052,
   "totalPages": 49,
   "hasMore": true
 }

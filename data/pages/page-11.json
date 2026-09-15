@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-07-23",
+      "copyright": "Staghorn coral off the island of Bonaire, Caribbean Netherlands (© blue-sea.cz/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BadlandsSunset_EN-US5821746223_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BadlandsSunset_EN-US5821746223_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BadlandsSunset_EN-US5821746223_400x240.jpg"
+    },
+    {
       "date": "2025-07-22",
       "copyright": "The moon's surface photographed through a telescope (© Sergey Kuznetsov/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.AcroporaReef_EN-US5567789372_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.FlamingosNamibia_EN-US9397449472_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.FlamingosNamibia_EN-US9397449472_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.FlamingosNamibia_EN-US9397449472_400x240.jpg"
-    },
-    {
-      "date": "2025-06-11",
-      "copyright": "Old City of Dubrovnik in Dalmatia, Croatia (© bluejayphoto/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AerialEverglades_EN-US9045585896_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AerialEverglades_EN-US9045585896_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AerialEverglades_EN-US9045585896_400x240.jpg"
     }
   ],
   "page": 11,
   "pageSize": 42,
-  "total": 2051,
+  "total": 2052,
   "totalPages": 49,
   "hasMore": true
 }
