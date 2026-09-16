@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-08-06",
+      "copyright": "马赛马拉迁徙的角马群横渡马拉河, 肯尼亚 (© Manoj Shah/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MaraCrossing_ZH-CN8816902094_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MaraCrossing_ZH-CN8816902094_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.MaraCrossing_ZH-CN8816902094_400x240.jpg"
+    },
+    {
       "date": "2026-08-05",
       "copyright": "非斯皇宫装饰华丽的大门，摩洛哥 (© cgst26/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.FezMorocco_ZH-CN7662339428_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ThamesSummer_EN-US6783349970_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ThamesSummer_EN-US6783349970_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ThamesSummer_EN-US6783349970_400x240.jpg"
-    },
-    {
-      "date": "2026-06-25",
-      "copyright": "Butterfly pollinating on yellow flower (© lzh/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.GrandPlace_EN-US6561229456_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.GrandPlace_EN-US6561229456_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.GrandPlace_EN-US6561229456_400x240.jpg"
     }
   ],
   "page": 2,
   "pageSize": 42,
-  "total": 2052,
+  "total": 2053,
   "totalPages": 49,
   "hasMore": true
 }

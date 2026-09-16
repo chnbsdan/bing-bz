@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-06-25",
+      "copyright": "Butterfly pollinating on yellow flower (© lzh/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.GrandPlace_EN-US6561229456_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.GrandPlace_EN-US6561229456_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.GrandPlace_EN-US6561229456_400x240.jpg"
+    },
+    {
       "date": "2026-06-24",
       "copyright": "Mount Fuji on Honshu Island, Japan (© phutthiseth thongtae/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BFPollin_EN-US6519187095_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.EndangeredWhales_EN-US0380100553_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.EndangeredWhales_EN-US0380100553_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.EndangeredWhales_EN-US0380100553_400x240.jpg"
-    },
-    {
-      "date": "2026-05-14",
-      "copyright": "Arch and Milky Way, Alabama Hills, Sierra Nevada, California (© Tim Fitzharris/Minden Pictures)",
-      "jpg": "https://cn.bing.com/th?id=OHR.Pitigliano_EN-US1208308627_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.Pitigliano_EN-US1208308627_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.Pitigliano_EN-US1208308627_400x240.jpg"
     }
   ],
   "page": 3,
   "pageSize": 42,
-  "total": 2052,
+  "total": 2053,
   "totalPages": 49,
   "hasMore": true
 }

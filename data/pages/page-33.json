@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-01-12",
+      "copyright": "Polar bear in Svalbard, Norway (© Dennis Stogsdill/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.HohenzollernBurg_EN-US3949412118_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.HohenzollernBurg_EN-US3949412118_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.HohenzollernBurg_EN-US3949412118_400x240.jpg"
+    },
+    {
       "date": "2023-01-11",
       "copyright": "New Year's Eve fireworks, Sydney Harbour Bridge, Australia (© Wendell Teodoro/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.NorwayNYD_EN-US3880728634_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.Waterleidingduinen_EN-US9090200846_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.Waterleidingduinen_EN-US9090200846_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.Waterleidingduinen_EN-US9090200846_400x240.jpg"
-    },
-    {
-      "date": "2022-12-01",
-      "copyright": "'World in Progress II,' a land art painting by Saype, United Nations Headquarters, New York City (© Valentin Flauraud/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.FIFA2022_EN-US9006895256_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.FIFA2022_EN-US9006895256_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.FIFA2022_EN-US9006895256_400x240.jpg"
     }
   ],
   "page": 33,
   "pageSize": 42,
-  "total": 2052,
+  "total": 2053,
   "totalPages": 49,
   "hasMore": true
 }

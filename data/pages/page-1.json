@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-09-17",
+      "copyright": "桑特奈葡萄酒产区葡萄园中的索林风车，伯恩丘，勃艮第，法国 (© Marco Bottigelli/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.Santenay_ZH-CN5676942384_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.Santenay_ZH-CN5676942384_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.Santenay_ZH-CN5676942384_400x240.jpg"
+    },
+    {
       "date": "2026-09-16",
       "copyright": "斯瓦尔巴群岛玩耍的北极熊幼崽，挪威 (© Danny Green/Nature Picture Library)",
       "jpg": "https://cn.bing.com/th?id=OHR.IcyCubs_ZH-CN5287408951_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.LimeKiln_ZH-CN5664152522_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.LimeKiln_ZH-CN5664152522_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.LimeKiln_ZH-CN5664152522_400x240.jpg"
-    },
-    {
-      "date": "2026-08-06",
-      "copyright": "马赛马拉迁徙的角马群横渡马拉河, 肯尼亚 (© Manoj Shah/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MaraCrossing_ZH-CN8816902094_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MaraCrossing_ZH-CN8816902094_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MaraCrossing_ZH-CN8816902094_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2052,
+  "total": 2053,
   "totalPages": 49,
   "hasMore": true
 }

@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2025-07-24",
+      "copyright": "Sunset over Badlands National Park, South Dakota (© Petr Bednarik/Danita Delimont/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.VaticanCity_EN-US5915643866_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.VaticanCity_EN-US5915643866_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.VaticanCity_EN-US5915643866_400x240.jpg"
+    },
+    {
       "date": "2025-07-23",
       "copyright": "Staghorn coral off the island of Bonaire, Caribbean Netherlands (© blue-sea.cz/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.BadlandsSunset_EN-US5821746223_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BigBendChisos_EN-US9433220487_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BigBendChisos_EN-US9433220487_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BigBendChisos_EN-US9433220487_400x240.jpg"
-    },
-    {
-      "date": "2025-06-12",
-      "copyright": "Aerial view of Everglades National Park, Florida (© Robert DelVecchio - OcuDrone/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.FlamingosNamibia_EN-US9397449472_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.FlamingosNamibia_EN-US9397449472_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.FlamingosNamibia_EN-US9397449472_400x240.jpg"
     }
   ],
   "page": 11,
   "pageSize": 42,
-  "total": 2052,
+  "total": 2053,
   "totalPages": 49,
   "hasMore": true
 }

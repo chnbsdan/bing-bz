@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-05-14",
+      "copyright": "Arch and Milky Way, Alabama Hills, Sierra Nevada, California (© Tim Fitzharris/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.Pitigliano_EN-US1208308627_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.Pitigliano_EN-US1208308627_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.Pitigliano_EN-US1208308627_400x240.jpg"
+    },
+    {
       "date": "2026-05-13",
       "copyright": "Atlantic puffins, Wales (© FLPA/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.AlabamaHills_EN-US1154221052_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ArmbrugBridge_EN-US3302230248_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ArmbrugBridge_EN-US3302230248_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ArmbrugBridge_EN-US3302230248_400x240.jpg"
-    },
-    {
-      "date": "2026-04-02",
-      "copyright": "Japanese tree frog in a pink morning glory (© Tetsuya Tanooka/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.WildflowerValley_EN-US6579657743_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.WildflowerValley_EN-US6579657743_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.WildflowerValley_EN-US6579657743_400x240.jpg"
     }
   ],
   "page": 4,
   "pageSize": 42,
-  "total": 2052,
+  "total": 2053,
   "totalPages": 49,
   "hasMore": true
 }

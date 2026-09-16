@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2023-09-21",
+      "copyright": "Przewalski's horses, Hustai National Park, Mongolia (© Ondrej Prosicky/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.MissionRuins_EN-US2486545022_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.MissionRuins_EN-US2486545022_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.MissionRuins_EN-US2486545022_400x240.jpg"
+    },
+    {
       "date": "2023-09-20",
       "copyright": "Temples on Hemakuta Hill, Hampi, Karnataka, India (© Images of india/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.MongoliaHorses_EN-US2400199558_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.GothicRuins_EN-US2341737381_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.GothicRuins_EN-US2341737381_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.GothicRuins_EN-US2341737381_400x240.jpg"
-    },
-    {
-      "date": "2023-08-10",
-      "copyright": "Sandstone butte in Capitol Reef National Park, Utah (© Amazing Aerial Premium/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ZelenciSprings_EN-US2246293953_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ZelenciSprings_EN-US2246293953_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ZelenciSprings_EN-US2246293953_400x240.jpg"
     }
   ],
   "page": 27,
   "pageSize": 42,
-  "total": 2052,
+  "total": 2053,
   "totalPages": 49,
   "hasMore": true
 }
