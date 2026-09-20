@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-09-21",
+      "copyright": "正在梳理皮毛的海獭，蒙特雷湾，加利福尼亚州，美国 (© Suzi Eszterhas/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.GroomingOtter_ZH-CN6969472572_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.GroomingOtter_ZH-CN6969472572_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.GroomingOtter_ZH-CN6969472572_400x240.jpg"
+    },
+    {
       "date": "2026-09-20",
       "copyright": "日落时分的埃菲尔铁塔，巴黎，法国 (© Alexander Spatari/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ParisSunset_ZH-CN6050686638_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ColorfulCop_ZH-CN8015611442_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ColorfulCop_ZH-CN8015611442_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ColorfulCop_ZH-CN8015611442_400x240.jpg"
-    },
-    {
-      "date": "2026-08-10",
-      "copyright": "约书亚树国家公园，加利福尼亚州，美国 (© JJ Landscapes/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SandPath_ZH-CN7820825668_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SandPath_ZH-CN7820825668_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SandPath_ZH-CN7820825668_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2056,
+  "total": 2057,
   "totalPages": 49,
   "hasMore": true
 }
