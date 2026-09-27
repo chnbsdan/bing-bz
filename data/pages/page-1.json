@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-09-28",
+      "copyright": "斋浦尔附近琥珀堡内的 Sattais Katcheri 大厅，拉贾斯坦邦，印度 (© R.M. Nunes/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AmberHall_ZH-CN1223127100_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AmberHall_ZH-CN1223127100_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AmberHall_ZH-CN1223127100_400x240.jpg"
+    },
+    {
       "date": "2026-09-27",
       "copyright": "海笔上的装饰蟹，科莫多国家公园，印度尼西亚 (© Alex Mustard/Nature Picture Library)",
       "jpg": "https://cn.bing.com/th?id=OHR.DecoCrab_ZH-CN0973306994_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.Palmanova_ZH-CN0378401592_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.Palmanova_ZH-CN0378401592_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.Palmanova_ZH-CN0378401592_400x240.jpg"
-    },
-    {
-      "date": "2026-08-17",
-      "copyright": "海葵中的三条眼斑双锯鱼，卡比劳岛，薄荷省，菲律宾 (© Franco Banfi/Nature Picture Library)",
-      "jpg": "https://cn.bing.com/th?id=OHR.CabilaoClowns_ZH-CN0147033898_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.CabilaoClowns_ZH-CN0147033898_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.CabilaoClowns_ZH-CN0147033898_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2063,
+  "total": 2064,
   "totalPages": 50,
   "hasMore": true
 }
