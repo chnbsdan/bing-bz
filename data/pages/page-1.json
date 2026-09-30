@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-09-30",
+      "copyright": "雄性文须雀，诺福克郡，英格兰 (© Andrew Sproule/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.BeardReedling_ZH-CN2750632320_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.BeardReedling_ZH-CN2750632320_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.BeardReedling_ZH-CN2750632320_400x240.jpg"
+    },
+    {
       "date": "2026-09-29",
       "copyright": "卡西洛夫河冰川融水滋养的湛蓝河水，阿拉斯加州，美国 (© jared lloyd/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.KasilofRiver_ZH-CN2394091052_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.LynnCanalOrca_ZH-CN0719217908_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.LynnCanalOrca_ZH-CN0719217908_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.LynnCanalOrca_ZH-CN0719217908_400x240.jpg"
-    },
-    {
-      "date": "2026-08-19",
-      "copyright": "怀特克利夫公园，西温哥华，加拿大 (© Aolin Chen/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.WhyteCliffP_ZH-CN0573407830_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.WhyteCliffP_ZH-CN0573407830_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.WhyteCliffP_ZH-CN0573407830_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2065,
+  "total": 2066,
   "totalPages": 50,
   "hasMore": true
 }
