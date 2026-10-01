@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-10-01",
+      "copyright": "奥姆斯特德观景点的日落，优胜美地国家公园，加利福尼亚州，美国 (© Robb Hirsch/Tandem Stills + Motion)",
+      "jpg": "https://cn.bing.com/th?id=OHR.OlmstedPoint_ZH-CN4182671075_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.OlmstedPoint_ZH-CN4182671075_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.OlmstedPoint_ZH-CN4182671075_400x240.jpg"
+    },
+    {
       "date": "2026-09-30",
       "copyright": "雄性文须雀，诺福克郡，英格兰 (© Andrew Sproule/Shutterstock)",
       "jpg": "https://cn.bing.com/th?id=OHR.BeardReedling_ZH-CN2750632320_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.JulierPass_ZH-CN3064797820_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.JulierPass_ZH-CN3064797820_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.JulierPass_ZH-CN3064797820_400x240.jpg"
-    },
-    {
-      "date": "2026-08-20",
-      "copyright": "林恩运河中浮出水面的虎鲸，奇尔卡特山脉附近，阿拉斯加州，美国 (© John Hyde/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LynnCanalOrca_ZH-CN0719217908_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LynnCanalOrca_ZH-CN0719217908_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.LynnCanalOrca_ZH-CN0719217908_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2066,
+  "total": 2067,
   "totalPages": 50,
   "hasMore": true
 }
