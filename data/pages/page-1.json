@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-10-04",
+      "copyright": "阿尔忒弥斯1号月球火箭，39B发射台，肯尼迪航天中心，佛罗里达州，2022年6月15日 (© EVA MARIE UZCATEGUI/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ArtemisRocket_ZH-CN1768541365_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ArtemisRocket_ZH-CN1768541365_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ArtemisRocket_ZH-CN1768541365_400x240.jpg"
+    },
+    {
       "date": "2026-10-03",
       "copyright": "美国阿拉斯加州克拉克湖国家公园和自然保护区银鲑溪中的棕熊 (© Danny Green/Nature Picture Library)",
       "jpg": "https://cn.bing.com/th?id=OHR.GrizzlySwim_ZH-CN1005455737_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BKBridge_ZH-CN3870511222_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BKBridge_ZH-CN3870511222_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BKBridge_ZH-CN3870511222_400x240.jpg"
-    },
-    {
-      "date": "2026-08-23",
-      "copyright": "在处暑时节的村庄田野与寺庙佛塔，江阴市，江苏省，中国 (© jia yu/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.EndofHeatY26_ZH-CN8936468848_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.EndofHeatY26_ZH-CN8936468848_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.EndofHeatY26_ZH-CN8936468848_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2069,
+  "total": 2070,
   "totalPages": 50,
   "hasMore": true
 }
