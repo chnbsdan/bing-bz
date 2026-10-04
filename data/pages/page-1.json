@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-10-05",
+      "copyright": "南极洲的阿德利企鹅 (© Otto Plantema/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AdelieTeacher_ZH-CN2201820679_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AdelieTeacher_ZH-CN2201820679_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AdelieTeacher_ZH-CN2201820679_400x240.jpg"
+    },
+    {
       "date": "2026-10-04",
       "copyright": "阿尔忒弥斯1号月球火箭，39B发射台，肯尼迪航天中心，佛罗里达州，2022年6月15日 (© EVA MARIE UZCATEGUI/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.ArtemisRocket_ZH-CN1768541365_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.RedwoodPark_ZH-CN9513051062_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.RedwoodPark_ZH-CN9513051062_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.RedwoodPark_ZH-CN9513051062_400x240.jpg"
-    },
-    {
-      "date": "2026-08-24",
-      "copyright": "布鲁克林大桥，纽约市，美国 (© shayes17/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BKBridge_ZH-CN3870511222_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BKBridge_ZH-CN3870511222_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BKBridge_ZH-CN3870511222_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2070,
+  "total": 2071,
   "totalPages": 50,
   "hasMore": true
 }
