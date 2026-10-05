@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-10-06",
+      "copyright": "丹霞地貌，张掖国家地质公园，甘肃省，中国 (© Weiquan Lin/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.DanxiaLandform_ZH-CN2386060246_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.DanxiaLandform_ZH-CN2386060246_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.DanxiaLandform_ZH-CN2386060246_400x240.jpg"
+    },
+    {
       "date": "2026-10-05",
       "copyright": "南极洲的阿德利企鹅 (© Otto Plantema/Minden Pictures)",
       "jpg": "https://cn.bing.com/th?id=OHR.AdelieTeacher_ZH-CN2201820679_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AurorasIceland_ZH-CN9781322454_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AurorasIceland_ZH-CN9781322454_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AurorasIceland_ZH-CN9781322454_400x240.jpg"
-    },
-    {
-      "date": "2026-08-25",
-      "copyright": "红木国家与州立公园的日出，加利福尼亚州，美国 (© HadelProductions/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.RedwoodPark_ZH-CN9513051062_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.RedwoodPark_ZH-CN9513051062_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.RedwoodPark_ZH-CN9513051062_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2071,
+  "total": 2072,
   "totalPages": 50,
   "hasMore": true
 }
