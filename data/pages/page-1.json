@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-10-07",
+      "copyright": "覆满苔藓的岩石，英国格洛斯特郡谜林，迪恩森林，格洛斯特郡，英格兰 (© Fulcanelli_AOS/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.ForestofDean_ZH-CN2654753621_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.ForestofDean_ZH-CN2654753621_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.ForestofDean_ZH-CN2654753621_400x240.jpg"
+    },
+    {
       "date": "2026-10-06",
       "copyright": "丹霞地貌，张掖国家地质公园，甘肃省，中国 (© Weiquan Lin/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.DanxiaLandform_ZH-CN2386060246_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.LakeMagadi_ZH-CN0601527009_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.LakeMagadi_ZH-CN0601527009_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.LakeMagadi_ZH-CN0601527009_400x240.jpg"
-    },
-    {
-      "date": "2026-08-26",
-      "copyright": "基尔丘山上空的极光，冰岛 (© Cavan Images/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AurorasIceland_ZH-CN9781322454_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AurorasIceland_ZH-CN9781322454_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AurorasIceland_ZH-CN9781322454_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2072,
+  "total": 2073,
   "totalPages": 50,
   "hasMore": true
 }
