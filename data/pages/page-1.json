@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-10-10",
+      "copyright": "蒙特雷湾上空的双冠鸬鹚，加利福尼亚州，美国 (© Hiroya Minakuchi/Minden Pictures)",
+      "jpg": "https://cn.bing.com/th?id=OHR.CormorantsFlight_ZH-CN0770863330_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.CormorantsFlight_ZH-CN0770863330_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.CormorantsFlight_ZH-CN0770863330_400x240.jpg"
+    },
+    {
       "date": "2026-10-09",
       "copyright": "桑吉奈尔群岛景观，摄自科西嘉岛，法国 (© Francesco Riccardo Iacomino/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.IlesSanguinaires_ZH-CN3149346035_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.YellowShark_ZH-CN1570569826_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.YellowShark_ZH-CN1570569826_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.YellowShark_ZH-CN1570569826_400x240.jpg"
-    },
-    {
-      "date": "2026-08-29",
-      "copyright": "冲浪者航拍图，圣卡塔琳娜州，巴西 (© Wonderful Nature/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SantaCatarina_ZH-CN4170292043_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SantaCatarina_ZH-CN4170292043_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SantaCatarina_ZH-CN4170292043_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2075,
+  "total": 2076,
   "totalPages": 50,
   "hasMore": true
 }
