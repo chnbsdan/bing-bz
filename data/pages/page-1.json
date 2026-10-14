@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-10-15",
+      "copyright": "弗罗茨瓦夫集市广场景观，摄自女巫桥，弗罗茨瓦夫，波兰 (© Piotr Mitelski/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.WroclawPoland_ZH-CN6042428292_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.WroclawPoland_ZH-CN6042428292_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.WroclawPoland_ZH-CN6042428292_400x240.jpg"
+    },
+    {
       "date": "2026-10-14",
       "copyright": "侏罗纪时期的菊石化石 (© J Nemchinova/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.AmmoniteFossils_ZH-CN5825251327_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.Westerheversand_ZH-CN0517707643_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.Westerheversand_ZH-CN0517707643_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.Westerheversand_ZH-CN0517707643_400x240.jpg"
-    },
-    {
-      "date": "2026-09-03",
-      "copyright": "郊狼丘，朱红悬崖国家纪念区，亚利桑那州，美国 (© James Hager/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AZWilderness_ZH-CN2664566131_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AZWilderness_ZH-CN2664566131_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AZWilderness_ZH-CN2664566131_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2080,
+  "total": 2081,
   "totalPages": 50,
   "hasMore": true
 }
