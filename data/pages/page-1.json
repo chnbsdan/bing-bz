@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-10-18",
+      "copyright": "多巴达恩城堡，兰贝里斯，斯诺登尼亚国家公园，威尔士 (© joe daniel price/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.DolbadarnWales_ZH-CN3649667806_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.DolbadarnWales_ZH-CN3649667806_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.DolbadarnWales_ZH-CN3649667806_400x240.jpg"
+    },
+    {
       "date": "2026-10-17",
       "copyright": "肖维岩洞艺术作品等比例复制品，瓦隆蓬达尔克，法国 (© Audrey Poree/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.ChauvetPaintingsFrance_ZH-CN3150703955_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BambergTownhall_ZH-CN1407954732_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BambergTownhall_ZH-CN1407954732_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BambergTownhall_ZH-CN1407954732_400x240.jpg"
-    },
-    {
-      "date": "2026-09-06",
-      "copyright": "菲安斯湖，格兰屏国家公园，维多利亚州，澳大利亚 (© tracielouise/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.LakeFyans_ZH-CN1067187791_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.LakeFyans_ZH-CN1067187791_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.LakeFyans_ZH-CN1067187791_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2083,
+  "total": 2084,
   "totalPages": 50,
   "hasMore": true
 }
