@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-10-19",
+      "copyright": "大运河，威尼斯，意大利 (© Juan Romero/Cavan Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.VeniceSunrise_ZH-CN5251815339_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.VeniceSunrise_ZH-CN5251815339_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.VeniceSunrise_ZH-CN5251815339_400x240.jpg"
+    },
+    {
       "date": "2026-10-18",
       "copyright": "多巴达恩城堡，兰贝里斯，斯诺登尼亚国家公园，威尔士 (© joe daniel price/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.DolbadarnWales_ZH-CN3649667806_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.BeechEngland_ZH-CN1807343872_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.BeechEngland_ZH-CN1807343872_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.BeechEngland_ZH-CN1807343872_400x240.jpg"
-    },
-    {
-      "date": "2026-09-07",
-      "copyright": "老市政厅，班贝格，德国 (© SCStock/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BambergTownhall_ZH-CN1407954732_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BambergTownhall_ZH-CN1407954732_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BambergTownhall_ZH-CN1407954732_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2084,
+  "total": 2085,
   "totalPages": 50,
   "hasMore": true
 }
