@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-10-23",
+      "copyright": "两只灰狼，黄石国家公园，怀俄明州，美国 (© John Morrison/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.YellowstoneWolves_ZH-CN6767268961_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.YellowstoneWolves_ZH-CN6767268961_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.YellowstoneWolves_ZH-CN6767268961_400x240.jpg"
+    },
+    {
       "date": "2026-10-22",
       "copyright": "内藏山国立公园的秋景，韩国 (© Twenty47studio/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.NaejangsanNP_ZH-CN6538893004_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SardineBait_ZH-CN3256234033_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SardineBait_ZH-CN3256234033_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SardineBait_ZH-CN3256234033_400x240.jpg"
-    },
-    {
-      "date": "2026-09-11",
-      "copyright": "滨海自由城，法国里维埃拉，法国 (© StockByM/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.FrenchRivieraVillage_ZH-CN2888811422_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.FrenchRivieraVillage_ZH-CN2888811422_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.FrenchRivieraVillage_ZH-CN2888811422_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2088,
+  "total": 2089,
   "totalPages": 50,
   "hasMore": true
 }
