@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-10-24",
+      "copyright": "皇家葡萄牙语阅览室，里约热内卢，巴西 (© Antonio Salaverry/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.PortugueseLibrary_ZH-CN7096893027_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.PortugueseLibrary_ZH-CN7096893027_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.PortugueseLibrary_ZH-CN7096893027_400x240.jpg"
+    },
+    {
       "date": "2026-10-23",
       "copyright": "两只灰狼，黄石国家公园，怀俄明州，美国 (© John Morrison/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.YellowstoneWolves_ZH-CN6767268961_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MisurinaPeak_ZH-CN3877105161_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MisurinaPeak_ZH-CN3877105161_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MisurinaPeak_ZH-CN3877105161_400x240.jpg"
-    },
-    {
-      "date": "2026-09-12",
-      "copyright": "墨西哥近海围猎沙丁鱼饵球的加州海狮，太平洋 (© Henley Spiers/Nature Picture Library)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SardineBait_ZH-CN3256234033_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SardineBait_ZH-CN3256234033_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SardineBait_ZH-CN3256234033_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2089,
+  "total": 2090,
   "totalPages": 50,
   "hasMore": true
 }
