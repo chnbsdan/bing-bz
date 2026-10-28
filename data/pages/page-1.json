@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-10-28",
+      "copyright": "库涅季采山城堡，波希米亚，捷克 (© Marek Saroch/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.KuneticeCastle_ZH-CN8895858920_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.KuneticeCastle_ZH-CN8895858920_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.KuneticeCastle_ZH-CN8895858920_400x240.jpg"
+    },
+    {
       "date": "2026-10-27",
       "copyright": "秋叶缤纷的池杉林，乔治亚州，美国 (© Chris Moore/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.PondCypress_ZH-CN9472607734_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.Santenay_ZH-CN5676942384_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.Santenay_ZH-CN5676942384_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.Santenay_ZH-CN5676942384_400x240.jpg"
-    },
-    {
-      "date": "2026-09-16",
-      "copyright": "斯瓦尔巴群岛玩耍的北极熊幼崽，挪威 (© Danny Green/Nature Picture Library)",
-      "jpg": "https://cn.bing.com/th?id=OHR.IcyCubs_ZH-CN5287408951_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.IcyCubs_ZH-CN5287408951_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.IcyCubs_ZH-CN5287408951_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2093,
+  "total": 2094,
   "totalPages": 50,
   "hasMore": true
 }
