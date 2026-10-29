@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-10-29",
+      "copyright": "立石，埃夫伯里，威尔特郡，英格兰 (© George W Johnson/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AveburyStones_ZH-CN9127100951_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AveburyStones_ZH-CN9127100951_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AveburyStones_ZH-CN9127100951_400x240.jpg"
+    },
+    {
       "date": "2026-10-28",
       "copyright": "库涅季采山城堡，波希米亚，捷克 (© Marek Saroch/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.KuneticeCastle_ZH-CN8895858920_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.WinnatsPassPeak_ZH-CN4443458412_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.WinnatsPassPeak_ZH-CN4443458412_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.WinnatsPassPeak_ZH-CN4443458412_400x240.jpg"
-    },
-    {
-      "date": "2026-09-17",
-      "copyright": "桑特奈葡萄酒产区葡萄园中的索林风车，伯恩丘，勃艮第，法国 (© Marco Bottigelli/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.Santenay_ZH-CN5676942384_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.Santenay_ZH-CN5676942384_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.Santenay_ZH-CN5676942384_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2094,
+  "total": 2095,
   "totalPages": 50,
   "hasMore": true
 }
