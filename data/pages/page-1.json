@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-11-03",
+      "copyright": "布莱埃斯湖，法内斯-塞内斯-布莱埃斯湖自然公园，多洛米蒂山脉，意大利 (© leonid_tit/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.AlpineBraies_ZH-CN7307997866_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.AlpineBraies_ZH-CN7307997866_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.AlpineBraies_ZH-CN7307997866_400x240.jpg"
+    },
+    {
       "date": "2026-11-02",
       "copyright": "北极熊和幼崽，哈得孙湾畔，马尼托巴省，加拿大 (© Danita Delimont/Adobe Stock)",
       "jpg": "https://cn.bing.com/th?id=OHR.HudsonBear_ZH-CN6630706907_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AutumnEquinoxY26_ZH-CN7957453091_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AutumnEquinoxY26_ZH-CN7957453091_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AutumnEquinoxY26_ZH-CN7957453091_400x240.jpg"
-    },
-    {
-      "date": "2026-09-22",
-      "copyright": "瓜兹曼山口附近的秋日山杨林，犹他州，美国 (© Danita Delimont/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.FallAspens_ZH-CN7235054933_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.FallAspens_ZH-CN7235054933_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.FallAspens_ZH-CN7235054933_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2099,
+  "total": 2100,
   "totalPages": 50,
   "hasMore": true
 }
