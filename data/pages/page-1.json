@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-11-05",
+      "copyright": "石墙边的木制翻越梯，黑岩，湖区，英格兰 (© Alex Treadway/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.StileCrossing_ZH-CN9811465935_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.StileCrossing_ZH-CN9811465935_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.StileCrossing_ZH-CN9811465935_400x240.jpg"
+    },
+    {
       "date": "2026-11-04",
       "copyright": "五彩落羽杉间划船的人们，宣城，安徽省，中国 (© Jackal Pan/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.AutumnChina_ZH-CN7665959692_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MidAutumn2026_ZH-CN8947536773_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MidAutumn2026_ZH-CN8947536773_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MidAutumn2026_ZH-CN8947536773_400x240.jpg"
-    },
-    {
-      "date": "2026-09-24",
-      "copyright": "黑色熔岩海滩鸟瞰图，埃尔戈尔福，兰萨罗特岛，加那利群岛，西班牙 (© Westend61/Adobe Stock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ElGolfo_ZH-CN8329995759_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ElGolfo_ZH-CN8329995759_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ElGolfo_ZH-CN8329995759_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2101,
+  "total": 2102,
   "totalPages": 51,
   "hasMore": true
 }
