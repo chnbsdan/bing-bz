@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-11-08",
+      "copyright": "排灯节灯笼，孟买，马哈拉施特拉邦，印度 (© Dinodia Photo/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.DiwaliLamps_ZH-CN2462894749_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.DiwaliLamps_ZH-CN2462894749_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.DiwaliLamps_ZH-CN2462894749_400x240.jpg"
+    },
+    {
       "date": "2026-11-07",
       "copyright": "草原上的一头野牛，西奥多·罗斯福国家公园，北达科他州，美国 (© Tandem Stock/Adobe Stock)",
       "jpg": "https://cn.bing.com/th?id=OHR.DakotaBison_ZH-CN2302503868_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AmberHall_ZH-CN1223127100_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AmberHall_ZH-CN1223127100_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AmberHall_ZH-CN1223127100_400x240.jpg"
-    },
-    {
-      "date": "2026-09-27",
-      "copyright": "海笔上的装饰蟹，科莫多国家公园，印度尼西亚 (© Alex Mustard/Nature Picture Library)",
-      "jpg": "https://cn.bing.com/th?id=OHR.DecoCrab_ZH-CN0973306994_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.DecoCrab_ZH-CN0973306994_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.DecoCrab_ZH-CN0973306994_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2104,
+  "total": 2105,
   "totalPages": 51,
   "hasMore": true
 }
