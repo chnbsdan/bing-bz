@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-11-11",
+      "copyright": "大西洋森林，巴西 (© FG Trade/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.Atlantica_ZH-CN6593995386_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.Atlantica_ZH-CN6593995386_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.Atlantica_ZH-CN6593995386_400x240.jpg"
+    },
+    {
       "date": "2026-11-10",
       "copyright": "玫瑰岛航拍图，巴哈马 (© Abstract Aerial Art/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.RoseIsland_ZH-CN6477140814_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.OlmstedPoint_ZH-CN4182671075_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.OlmstedPoint_ZH-CN4182671075_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.OlmstedPoint_ZH-CN4182671075_400x240.jpg"
-    },
-    {
-      "date": "2026-09-30",
-      "copyright": "雄性文须雀，诺福克郡，英格兰 (© Andrew Sproule/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BeardReedling_ZH-CN2750632320_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BeardReedling_ZH-CN2750632320_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BeardReedling_ZH-CN2750632320_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2107,
+  "total": 2108,
   "totalPages": 51,
   "hasMore": true
 }
