@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-11-12",
+      "copyright": "北窗，拱门国家公园，莫阿布，犹他州，美国 (© lightphoto/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.NorthWindow_ZH-CN6734579353_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.NorthWindow_ZH-CN6734579353_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.NorthWindow_ZH-CN6734579353_400x240.jpg"
+    },
+    {
       "date": "2026-11-11",
       "copyright": "大西洋森林，巴西 (© FG Trade/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.Atlantica_ZH-CN6593995386_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ChattoogaRiver_ZH-CN9453791496_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ChattoogaRiver_ZH-CN9453791496_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ChattoogaRiver_ZH-CN9453791496_400x240.jpg"
-    },
-    {
-      "date": "2026-10-01",
-      "copyright": "奥姆斯特德观景点的日落，优胜美地国家公园，加利福尼亚州，美国 (© Robb Hirsch/Tandem Stills + Motion)",
-      "jpg": "https://cn.bing.com/th?id=OHR.OlmstedPoint_ZH-CN4182671075_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.OlmstedPoint_ZH-CN4182671075_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.OlmstedPoint_ZH-CN4182671075_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2108,
+  "total": 2109,
   "totalPages": 51,
   "hasMore": true
 }
