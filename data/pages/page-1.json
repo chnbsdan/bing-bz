@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-11-15",
+      "copyright": "覆霜的红叶杜鹃 (© avoferten/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FirstFrost_ZH-CN2219029557_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FirstFrost_ZH-CN2219029557_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.FirstFrost_ZH-CN2219029557_400x240.jpg"
+    },
+    {
       "date": "2026-11-14",
       "copyright": "中国香港维多利亚港 (© Juan Romero/Cavan Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BlueHK_ZH-CN1382345392_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.AdelieTeacher_ZH-CN2201820679_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.AdelieTeacher_ZH-CN2201820679_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.AdelieTeacher_ZH-CN2201820679_400x240.jpg"
-    },
-    {
-      "date": "2026-10-04",
-      "copyright": "阿尔忒弥斯1号月球火箭，39B发射台，肯尼迪航天中心，佛罗里达州，2022年6月15日 (© EVA MARIE UZCATEGUI/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ArtemisRocket_ZH-CN1768541365_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ArtemisRocket_ZH-CN1768541365_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ArtemisRocket_ZH-CN1768541365_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2111,
+  "total": 2112,
   "totalPages": 51,
   "hasMore": true
 }
