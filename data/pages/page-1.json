@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-11-19",
+      "copyright": "雕塑《知识之躯》，由豪梅·普兰萨创作，位于德国法兰克福的法兰克福歌德大学 (© Todamo/Shutterstock)",
+      "jpg": "https://cn.bing.com/th?id=OHR.KnowledgeSculpture_ZH-CN3168800853_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.KnowledgeSculpture_ZH-CN3168800853_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.KnowledgeSculpture_ZH-CN3168800853_400x240.jpg"
+    },
+    {
       "date": "2026-11-18",
       "copyright": "一对仓鸮 (© Zahoor Salmi/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.BarnOwlsUnite_ZH-CN2930153291_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.IlesSanguinaires_ZH-CN3149346035_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.IlesSanguinaires_ZH-CN3149346035_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.IlesSanguinaires_ZH-CN3149346035_400x240.jpg"
-    },
-    {
-      "date": "2026-10-08",
-      "copyright": "印度洋马约特岛，一只呈防御姿态的章鱼 (© Gabriel Barathieu/Minden Pictures)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MayotteOctopus_ZH-CN2837659998_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MayotteOctopus_ZH-CN2837659998_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MayotteOctopus_ZH-CN2837659998_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2115,
+  "total": 2116,
   "totalPages": 51,
   "hasMore": true
 }
