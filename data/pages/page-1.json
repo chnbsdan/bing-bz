@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-11-22",
+      "copyright": "西班牙坎塔布里亚自治区的圣胡斯塔隐修院与小教堂 (© Tramont_ana/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.JustaHermitage_ZH-CN3751022621_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.JustaHermitage_ZH-CN3751022621_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.JustaHermitage_ZH-CN3751022621_400x240.jpg"
+    },
+    {
       "date": "2026-11-21",
       "copyright": "法国普罗旺斯-阿尔卑斯-蔚蓝海岸大区尼斯 (© Siripong Kaewla-iad/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.RedNice_ZH-CN3518429866_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.MumblesSwansea2026_ZH-CN5419531039_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.MumblesSwansea2026_ZH-CN5419531039_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.MumblesSwansea2026_ZH-CN5419531039_400x240.jpg"
-    },
-    {
-      "date": "2026-10-11",
-      "copyright": "格莱德溪磨坊，巴布科克州立公园，西弗吉尼亚州，美国 (© dszc/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.BabcockSP_ZH-CN5266848536_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.BabcockSP_ZH-CN5266848536_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.BabcockSP_ZH-CN5266848536_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2118,
+  "total": 2119,
   "totalPages": 51,
   "hasMore": true
 }
