@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-11-23",
+      "copyright": "蕨类植物的卷曲嫩叶 (© Reza Saputra/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FibonacciFern_ZH-CN3882237848_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FibonacciFern_ZH-CN3882237848_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.FibonacciFern_ZH-CN3882237848_400x240.jpg"
+    },
+    {
       "date": "2026-11-22",
       "copyright": "西班牙坎塔布里亚自治区的圣胡斯塔隐修院与小教堂 (© Tramont_ana/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.JustaHermitage_ZH-CN3751022621_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.PlitviceAutumn_ZH-CN5646237897_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.PlitviceAutumn_ZH-CN5646237897_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.PlitviceAutumn_ZH-CN5646237897_400x240.jpg"
-    },
-    {
-      "date": "2026-10-12",
-      "copyright": "曼布尔斯码头，斯旺西，威尔士 (© Helen Hotson/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.MumblesSwansea2026_ZH-CN5419531039_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.MumblesSwansea2026_ZH-CN5419531039_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.MumblesSwansea2026_ZH-CN5419531039_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2119,
+  "total": 2120,
   "totalPages": 51,
   "hasMore": true
 }
