@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-11-25",
+      "copyright": "日落观景点，布莱斯峡谷国家公园，犹他州 (© Colin D. Young/Alamy)",
+      "jpg": "https://cn.bing.com/th?id=OHR.SunsetPoint_ZH-CN5737034685_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.SunsetPoint_ZH-CN5737034685_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.SunsetPoint_ZH-CN5737034685_400x240.jpg"
+    },
+    {
       "date": "2026-11-24",
       "copyright": "红松鼠，凯恩戈姆斯国家公园，苏格兰高地 (© Scotland: The Big Picture/Minden Pictures)",
       "jpg": "https://cn.bing.com/th?id=OHR.CairngormsSquirrel_ZH-CN0941302869_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.WroclawPoland_ZH-CN6042428292_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.WroclawPoland_ZH-CN6042428292_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.WroclawPoland_ZH-CN6042428292_400x240.jpg"
-    },
-    {
-      "date": "2026-10-14",
-      "copyright": "侏罗纪时期的菊石化石 (© J Nemchinova/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.AmmoniteFossils_ZH-CN5825251327_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.AmmoniteFossils_ZH-CN5825251327_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.AmmoniteFossils_ZH-CN5825251327_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2121,
+  "total": 2122,
   "totalPages": 51,
   "hasMore": true
 }
