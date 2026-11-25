@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-11-26",
+      "copyright": "怀卢库河上的彩虹瀑布，希洛市，夏威夷州，美国 (© Peter Unger/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.RFHilo_ZH-CN5962114314_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.RFHilo_ZH-CN5962114314_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.RFHilo_ZH-CN5962114314_400x240.jpg"
+    },
+    {
       "date": "2026-11-25",
       "copyright": "日落观景点，布莱斯峡谷国家公园，犹他州 (© Colin D. Young/Alamy)",
       "jpg": "https://cn.bing.com/th?id=OHR.SunsetPoint_ZH-CN5737034685_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.SneffelsAutumn_ZH-CN3002661429_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.SneffelsAutumn_ZH-CN3002661429_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.SneffelsAutumn_ZH-CN3002661429_400x240.jpg"
-    },
-    {
-      "date": "2026-10-15",
-      "copyright": "弗罗茨瓦夫集市广场景观，摄自女巫桥，弗罗茨瓦夫，波兰 (© Piotr Mitelski/Shutterstock)",
-      "jpg": "https://cn.bing.com/th?id=OHR.WroclawPoland_ZH-CN6042428292_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.WroclawPoland_ZH-CN6042428292_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.WroclawPoland_ZH-CN6042428292_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2122,
+  "total": 2123,
   "totalPages": 51,
   "hasMore": true
 }
