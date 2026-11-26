@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-11-27",
+      "copyright": "夕阳下的孤峰，鲍威尔湖脸峡谷，犹他州，美国 (© Jeff Foott/Minden)",
+      "jpg": "https://cn.bing.com/th?id=OHR.FaceCanyon_ZH-CN9505064248_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.FaceCanyon_ZH-CN9505064248_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.FaceCanyon_ZH-CN9505064248_400x240.jpg"
+    },
+    {
       "date": "2026-11-26",
       "copyright": "怀卢库河上的彩虹瀑布，希洛市，夏威夷州，美国 (© Peter Unger/Getty Images)",
       "jpg": "https://cn.bing.com/th?id=OHR.RFHilo_ZH-CN5962114314_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.ChauvetPaintingsFrance_ZH-CN3150703955_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.ChauvetPaintingsFrance_ZH-CN3150703955_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.ChauvetPaintingsFrance_ZH-CN3150703955_400x240.jpg"
-    },
-    {
-      "date": "2026-10-16",
-      "copyright": "斯奈费尔斯山，里奇韦附近的圣胡安山脉，科罗拉多州，美国 (© lightphoto/Getty Images)",
-      "jpg": "https://cn.bing.com/th?id=OHR.SneffelsAutumn_ZH-CN3002661429_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.SneffelsAutumn_ZH-CN3002661429_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.SneffelsAutumn_ZH-CN3002661429_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2123,
+  "total": 2124,
   "totalPages": 51,
   "hasMore": true
 }
