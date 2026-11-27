@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "date": "2026-11-28",
+      "copyright": "捷克布拉格老城区与伏尔塔瓦河 (© Lara_Uhryn/Getty Images)",
+      "jpg": "https://cn.bing.com/th?id=OHR.VltavaPrague_ZH-CN9898139716_UHD.jpg",
+      "webp": "https://cn.bing.com/th?id=OHR.VltavaPrague_ZH-CN9898139716_UHD.jpg",
+      "thumb": "https://cn.bing.com/th?id=OHR.VltavaPrague_ZH-CN9898139716_400x240.jpg"
+    },
+    {
       "date": "2026-11-27",
       "copyright": "夕阳下的孤峰，鲍威尔湖脸峡谷，犹他州，美国 (© Jeff Foott/Minden)",
       "jpg": "https://cn.bing.com/th?id=OHR.FaceCanyon_ZH-CN9505064248_UHD.jpg",
@@ -286,18 +293,11 @@
       "jpg": "https://cn.bing.com/th?id=OHR.DolbadarnWales_ZH-CN3649667806_UHD.jpg",
       "webp": "https://cn.bing.com/th?id=OHR.DolbadarnWales_ZH-CN3649667806_UHD.jpg",
       "thumb": "https://cn.bing.com/th?id=OHR.DolbadarnWales_ZH-CN3649667806_400x240.jpg"
-    },
-    {
-      "date": "2026-10-17",
-      "copyright": "肖维岩洞艺术作品等比例复制品，瓦隆蓬达尔克，法国 (© Audrey Poree/Alamy)",
-      "jpg": "https://cn.bing.com/th?id=OHR.ChauvetPaintingsFrance_ZH-CN3150703955_UHD.jpg",
-      "webp": "https://cn.bing.com/th?id=OHR.ChauvetPaintingsFrance_ZH-CN3150703955_UHD.jpg",
-      "thumb": "https://cn.bing.com/th?id=OHR.ChauvetPaintingsFrance_ZH-CN3150703955_400x240.jpg"
     }
   ],
   "page": 1,
   "pageSize": 42,
-  "total": 2124,
+  "total": 2125,
   "totalPages": 51,
   "hasMore": true
 }
